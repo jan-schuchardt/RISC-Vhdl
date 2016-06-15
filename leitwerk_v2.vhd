@@ -63,7 +63,7 @@ clk_in: in std_logic;
 -- Reset
 rst_in: in std_logic;
 -- Error
-err_out: out std_logic_vector(0 downto 0);
+--err_out: out std_logic_vector(0 downto 0);
 -- Datenleitungen
 alu_data_in: in std_logic_vector(31 downto 0);
 alu_data_out1: out std_logic_vector(31 downto 0);
@@ -92,10 +92,12 @@ architecture leitwerk_1 of leitwerk is
  signal state2: std_logic_vector(2 downto 0);
  signal pc: std_logic_vector(29 downto 0);
  signal ir: std_logic_vector(29 downto 0);
+ signal err_out: std_logic_vector(0 downto 0);
 begin
 process(rst_in, clk_in)
 begin
- if rst_in='1' then
+ if err_out="1" then
+ elsif rst_in='1' then
   HEADER_wait_state_HEADER <= 0;
   state1 <= std_logic_vector(to_unsigned(0,state1'length));
   state2 <= std_logic_vector(to_unsigned(0,state2'length));

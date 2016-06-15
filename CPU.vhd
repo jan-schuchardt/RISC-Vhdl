@@ -60,20 +60,8 @@ signal cu_mmu_work_out, cu_mmu_ack_in : std_logic_vector(0 downto 0);
 --Signals between ALU and Debug unit
 signal alu_debug_data_out: std_logic_vector( 31 downto 0);
 
-
---help signal
-signal read_helper, write_helper  : std_logic;
-signal width_helper : std_logic_vector(1 downto 0);
-
-
  
 begin
-
-
-read_helper <= not cu_mmu_com_out(2);
-write_helper <= cu_mmu_com_out(2);
-width_helper <= cu_mmu_com_out(1 downto 0);
-
 
 
 CU: entity work.leitwerk port map(
@@ -110,17 +98,15 @@ RECHENEINHEIT: entity work.ALU port map(
 	debug_data_out => cpu_debug_out
 );
 
-SPEICHER: entity work.ram_unit port map(
+SPEICHER: entity work.RAM port map(
 	clk =>cpu_clk_in,
 	rst => cpu_rst_in,
-	addr => cu_mmu_adr_out,
+	addr => cu_mmu_adr_out(9 downto 0),
 	data_out => cu_mmu_data_in,
 	data_in => cu_mmu_data_out,
-	width => width_helper,
-	out_ready => cu_mmu_ack_in(0),
-	w => write_helper,
-	r => read_helper
-	
+	ack_out => cu_mmu_ack_in(0),
+	work_in => cu_mmu_work_out(0),
+	cmd => cu_mmu_com_out
 );
 
 
