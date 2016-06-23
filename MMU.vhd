@@ -84,21 +84,16 @@ architecture a1 of RAM is
 			if rst = '1' then
 			
 			--	data <= 0;	
-			test1 <= "10000000100100100111" & "00001" & "01101" & "11";
+			test1 <= "000000000011" & "00001" & "000" & "00001" & "00100" & "11";
 			data(0)<= test1(7 downto 0);
 			data(1)<= test1(15 downto 8);
 			data(2)<= test1(23 downto 16);
 			data(3)<= test1(31 downto 24);
-			test2 <= "00000000100100100100" & "00010" & "01101" & "11";
+			test2 <= "11111100111111111111" & "00000" & "11011" & "11";
 			data(4)<= test2(7 downto 0);
 			data(5)<= test2(15 downto 8);
 			data(6)<= test2(23 downto 16);
 			data(7)<= test2(31 downto 24);
-			test3 <= "0000000" & "00010" & "00001" & "000" & "00001" & "01100" & "11";
-			data(8)<= test3(7 downto 0);
-			data(9)<= test3(15 downto 8);
-			data(10)<= test3(23 downto 16);
-			data(11)<= test3(31 downto 24);
 				--data(0)<= "10101010"; 
 				ack_intern <= '0';
 			end if;

@@ -46,19 +46,24 @@ architecture Behavioral of ALU is
 	signal s_op3: STD_LOGIC_VECTOR(4 downto 0);
 	signal state: STD_LOGIC_VECTOR(3 downto 0);
 	signal acc: UNSIGNED(31 downto 0);
+	signal debug_signal: STD_LOGIC_VECTOR(31 downto 0);
 	
 	
 	begin
 	
-	debug_data_out <= reg_data(1);
+	debug_data_out <= debug_signal;
 
 process (clk_in, rst_in) 
 begin
 
 	if(rst_in = '1') then
-		
+	
+		reg_data(1) <= x"00000000";
+		debug_signal <= x"FFFFFFFF";
 		state <= "0000";
 	elsif rising_edge(clk_in) then
+	
+	debug_signal <= reg_data(1);
 	---- Different operations from here on ----
 	
 	

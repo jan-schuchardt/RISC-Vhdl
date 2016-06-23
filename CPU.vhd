@@ -33,7 +33,9 @@ entity CPU is
 
 	port(
 	cpu_clk_in, cpu_rst_in : in STD_LOGIC;
-	cpu_debug_out : out std_logic_vector(31 downto 0)
+	cpu_slow_in: in STD_LOGIC;
+	cpu_debug_out : out std_logic_vector(31 downto 0);
+	cpu_err_out: out std_logic
 	);
 			 
 end CPU;
@@ -60,13 +62,16 @@ signal cu_mmu_work_out, cu_mmu_ack_in : std_logic_vector(0 downto 0);
 --Signals between ALU and Debug unit
 signal alu_debug_data_out: std_logic_vector( 31 downto 0);
 
+--Signal from and to the clock unit
+signal clock_clk_out: std_logic;
+
  
 begin
 
 
 CU: entity work.leitwerk port map(
 	
-	clk_in => cpu_clk_in,
+	clk_in => clock_clk_out,
 	rst_in => cpu_rst_in,
 	--ALU
 	alu_data_in => cu_alu_data_in,
@@ -82,24 +87,24 @@ CU: entity work.leitwerk port map(
 	mmu_adr_out => cu_mmu_adr_out,
 	mmu_com_out => cu_mmu_com_out,
 	mmu_work_out => cu_mmu_work_out,
-	mmu_ack_in => cu_mmu_ack_in
-	
+	mmu_ack_in => cu_mmu_ack_in,
+	pc_out => cpu_debug_out
 );
 
 RECHENEINHEIT: entity work.ALU port map(
-	clk_in => cpu_clk_in,
+	clk_in => clock_clk_out,
 	rst_in => cpu_rst_in,
 	cu_data_in1 => cu_alu_data_out1,
 	cu_data_in2 => cu_alu_data_out2,
 	cu_adr_in => cu_alu_adr_out3,
 	cu_com_in => cu_alu_com_out,
 	cu_work_in => cu_alu_work_out,
-	cu_data_out => cu_alu_data_in,
-	debug_data_out => cpu_debug_out
+	cu_data_out => cu_alu_data_in
+	--debug_data_out => cpu_debug_out
 );
 
 SPEICHER: entity work.RAM port map(
-	clk =>cpu_clk_in,
+	clk =>clock_clk_out,
 	rst => cpu_rst_in,
 	addr => cu_mmu_adr_out(9 downto 0),
 	data_out => cu_mmu_data_in,
@@ -107,6 +112,14 @@ SPEICHER: entity work.RAM port map(
 	ack_out => cu_mmu_ack_in(0),
 	work_in => cu_mmu_work_out(0),
 	cmd => cu_mmu_com_out
+);
+
+CLOCKER: entity work.ClockDivider port map(
+	clk_in => cpu_clk_in,
+	rst_in => cpu_rst_in,
+	clk_out => clock_clk_out,
+	slow_in => cpu_slow_in
+
 );
 
 

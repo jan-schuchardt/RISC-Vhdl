@@ -31,12 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity toplevel is
     Port ( clk : in  STD_LOGIC;
+			  slow : IN STD_LOGIC;
            rst : in  STD_LOGIC;
            hsync : out  STD_LOGIC;
            vsync : out  STD_LOGIC;
            r : out  STD_LOGIC_VECTOR (3 downto 0);
            g : out  STD_LOGIC_VECTOR (3 downto 0);
-           b : out  STD_LOGIC_VECTOR (3 downto 0));
+           b : out  STD_LOGIC_VECTOR (3 downto 0);
+			  err_out : out std_logic);
 end toplevel;
 
 architecture Behavioral of toplevel is
@@ -45,6 +47,7 @@ COMPONENT vga
 	PORT(
 		clk : IN std_logic;
 		rst : IN std_logic;
+		
 		rgb : IN std_logic_vector(11 downto 0);          
 		x : OUT std_logic_vector(9 downto 0);
 		y : OUT std_logic_vector(9 downto 0);
@@ -76,7 +79,7 @@ COMPONENT vga
 	
 	signal debug:std_logic_vector(31 downto 0);
 	
-	
+	signal clk_cpu : std_logic;
 
 begin
 
@@ -101,14 +104,16 @@ Inst_vga_clk: vga_clk PORT MAP(
 		RST_IN => rst,
 		CLKDV_OUT => clk25,
 		CLKIN_IBUFG_OUT => open,
-		CLK0_OUT => open,
+		CLK0_OUT => clk_cpu,
 		LOCKED_OUT => open
 	);
 
 PROZESSOR: entity work.cpu PORT MAP(
 	cpu_rst_in => rst,
-	cpu_clk_in => clk25,
-	cpu_debug_out => debug
+	cpu_clk_in => clk_cpu, --clk25,
+	cpu_debug_out => debug,
+	cpu_slow_in => slow,
+	cpu_err_out => err_out
 );
 end Behavioral;
 
