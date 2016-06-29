@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: toplevel.prj
 
@@ -98,28 +98,86 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/toplevel is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd".
-WARNING:HDLParsers:3607 - Unit work/toplevel/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd".
-WARNING:HDLParsers:3607 - Unit work/CPU is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
-WARNING:HDLParsers:3607 - Unit work/CPU/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga_clk is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga_clk/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga/behaviour is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/ClockDivider is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
-WARNING:HDLParsers:3607 - Unit work/ClockDivider/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
-WARNING:HDLParsers:3607 - Unit work/leitwerk is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd".
-WARNING:HDLParsers:3607 - Unit work/leitwerk/leitwerk_1 is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd".
-WARNING:HDLParsers:3607 - Unit work/RAM is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
-WARNING:HDLParsers:3607 - Unit work/RAM/a1 is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_parameters_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_s3_dm_iob.vhd" in Library work.
+Architecture arc of Entity ddr_s3_dm_iob is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_s3_dqs_iob.vhd" in Library work.
+Architecture arc of Entity ddr_s3_dqs_iob is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_s3_dq_iob.vhd" in Library work.
+Architecture arc of Entity ddr_s3_dq_iob is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_dqs_delay_0.vhd" in Library work.
+Architecture arc_dqs_delay of Entity ddr_dqs_delay is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_fifo_0_wr_en_0.vhd" in Library work.
+Architecture arc of Entity ddr_fifo_0_wr_en_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_fifo_1_wr_en_0.vhd" in Library work.
+Architecture arc of Entity ddr_fifo_1_wr_en_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_wr_gray_cntr.vhd" in Library work.
+Architecture arc of Entity ddr_wr_gray_cntr is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_rd_gray_cntr.vhd" in Library work.
+Architecture arc of Entity ddr_rd_gray_cntr is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_ram8d_0.vhd" in Library work.
+Architecture arc of Entity ddr_ram8d_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_cal_ctl.vhd" in Library work.
+Architecture arc_cal_ctl of Entity ddr_cal_ctl is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_tap_dly.vhd" in Library work.
+Architecture arc_tap_dly of Entity ddr_tap_dly is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_iobs_0.vhd" in Library work.
+Architecture arc of Entity ddr_infrastructure_iobs_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_iobs_0.vhd" in Library work.
+Architecture arc of Entity ddr_controller_iobs_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_path_iobs_0.vhd" in Library work.
+Architecture arc of Entity ddr_data_path_iobs_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_read_0.vhd" in Library work.
+Architecture arc of Entity ddr_data_read_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_read_controller_0.vhd" in Library work.
+Architecture arc of Entity ddr_data_read_controller_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_write_0.vhd" in Library work.
+Architecture arc of Entity ddr_data_write_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_clk_dcm.vhd" in Library work.
+Architecture arc of Entity ddr_clk_dcm is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_cal_top.vhd" in Library work.
+Architecture arc of Entity ddr_cal_top is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_0.vhd" in Library work.
+Architecture arc of Entity ddr_controller_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_path_0.vhd" in Library work.
+Architecture arc of Entity ddr_data_path_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure.vhd" in Library work.
+Architecture arc of Entity ddr_infrastructure is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_iobs_0.vhd" in Library work.
+Architecture arc of Entity ddr_iobs_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_top_0.vhd" in Library work.
+Architecture arc of Entity ddr_top_0 is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_top.vhd" in Library work.
+Architecture arc of Entity ddr_infrastructure_top is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr.vhd" in Library work.
+Architecture arc_mem_interface_top of Entity ddr is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" in Library work.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 188. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 189. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 190. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 193. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 198. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 205. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 208. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 210. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 248. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 249. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 250. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 253. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 258. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 265. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 268. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 270. Choice to_unsigned is not a locally static expression.
+Architecture behavioral of Entity ramunit is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" in Library work.
 Architecture leitwerk_1 of Entity leitwerk is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" in Library work.
@@ -155,6 +213,62 @@ Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral
 Analyzing hierarchy for entity <RAM> in library <work> (architecture <a1>).
 
 Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ramunit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ddr> in library <work> (architecture <arc_mem_interface_top>).
+
+Analyzing hierarchy for entity <ddr_top_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_infrastructure_top> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_controller_0> in library <work> (architecture <arc>) with generics.
+	COL_WIDTH = 10
+	ROW_WIDTH = 13
+
+Analyzing hierarchy for entity <ddr_data_path_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_infrastructure> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_iobs_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_clk_dcm> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_cal_top> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_data_read_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_data_read_controller_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_data_write_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_infrastructure_iobs_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_controller_iobs_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_data_path_iobs_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_cal_ctl> in library <work> (architecture <arc_cal_ctl>).
+
+Analyzing hierarchy for entity <ddr_tap_dly> in library <work> (architecture <arc_tap_dly>).
+
+Analyzing hierarchy for entity <ddr_rd_gray_cntr> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_ram8d_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_dqs_delay> in library <work> (architecture <arc_dqs_delay>).
+
+Analyzing hierarchy for entity <ddr_dqs_delay> in library <work> (architecture <arc_dqs_delay>).
+
+Analyzing hierarchy for entity <ddr_fifo_0_wr_en_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_fifo_1_wr_en_0> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_wr_gray_cntr> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_s3_dqs_iob> in library <work> (architecture <arc>).
+
+Analyzing hierarchy for entity <ddr_s3_dq_iob> in library <work> (architecture <arc>).
 
 
 =========================================================================
@@ -229,23 +343,497 @@ WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 222: Index value
 Entity <ALU> analyzed. Unit <ALU> generated.
 
 Analyzing Entity <RAM> in library <work> (Architecture <a1>).
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 40: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 71: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 43: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 74: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 47: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 78: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 98: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 98: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 98: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 98: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 INFO:Xst:2679 - Register <test1> in unit <RAM> has a constant value of 00000000001100001000000010010011 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <test2> in unit <RAM> has a constant value of 11111111110111111111000001101111 during circuit operation. The register is replaced by logic.
 Entity <RAM> analyzed. Unit <RAM> generated.
+
+Analyzing Entity <ramunit> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <i_cntrl0_user_input_data> in unit <ramunit> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <ack> in unit <ramunit> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <ramunit> analyzed. Unit <ramunit> generated.
+
+Analyzing Entity <ddr> in library <work> (Architecture <arc_mem_interface_top>).
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr.vhd" line 212: Unconnected output port 'ddr2_dm' of component 'ddr_top_0'.
+Entity <ddr> analyzed. Unit <ddr> generated.
+
+Analyzing Entity <ddr_top_0> in library <work> (Architecture <arc>).
+Entity <ddr_top_0> analyzed. Unit <ddr_top_0> generated.
+
+Analyzing generic Entity <ddr_controller_0> in library <work> (Architecture <arc>).
+	COL_WIDTH = 10
+	ROW_WIDTH = 13
+    Set property "syn_preserve = TRUE" for signal <ba_address_reg1>.
+    Set property "syn_preserve = TRUE" for signal <ba_address_reg2>.
+    Set property "syn_preserve = TRUE" for signal <column_address_reg>.
+    Set property "syn_preserve = TRUE" for signal <row_address_reg>.
+    Set property "syn_preserve = TRUE" for signal <lmr_dll_rst>.
+    Set property "syn_preserve = TRUE" for signal <lmr_dll_set>.
+    Set user-defined property "INIT =  0" for instance <ACK_REG_INST1> in unit <ddr_controller_0>.
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_0.vhd" line 1105: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_0.vhd" line 1132: Mux is complete : default of case is discarded
+    Set user-defined property "INIT =  0" for instance <rst_iob_out> in unit <ddr_controller_0>.
+    Set user-defined property "IOB =  FORCE" for instance <rst_iob_out> in unit <ddr_controller_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:2679 - Register <ddr_odt2> in unit <ddr_controller_0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ddr_controller_0> analyzed. Unit <ddr_controller_0> generated.
+
+Analyzing Entity <ddr_data_path_0> in library <work> (Architecture <arc>).
+Entity <ddr_data_path_0> analyzed. Unit <ddr_data_path_0> generated.
+
+Analyzing Entity <ddr_data_read_0> in library <work> (Architecture <arc>).
+    Set property "syn_preserve = TRUE" for signal <fifo0_rd_addr_r>.
+    Set property "syn_preserve = TRUE" for signal <fifo1_rd_addr_r>.
+Entity <ddr_data_read_0> analyzed. Unit <ddr_data_read_0> generated.
+
+Analyzing Entity <ddr_rd_gray_cntr> in library <work> (Architecture <arc>).
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_rd_gray_cntr.vhd" line 106: Mux is complete : default of case is discarded
+    Set user-defined property "INIT =  0" for instance <bit0> in unit <ddr_rd_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit1> in unit <ddr_rd_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit2> in unit <ddr_rd_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit3> in unit <ddr_rd_gray_cntr>.
+Entity <ddr_rd_gray_cntr> analyzed. Unit <ddr_rd_gray_cntr> generated.
+
+Analyzing Entity <ddr_ram8d_0> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0000" for instance <fifo_bit0> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit1> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit2> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit3> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit4> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit5> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit6> in unit <ddr_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit7> in unit <ddr_ram8d_0>.
+Entity <ddr_ram8d_0> analyzed. Unit <ddr_ram8d_0> generated.
+
+Analyzing Entity <ddr_data_read_controller_0> in library <work> (Architecture <arc>).
+    Set property "buffer_type = none" for signal <dqs_delayed_col0>.
+    Set property "buffer_type = none" for signal <dqs_delayed_col1>.
+    Set user-defined property "syn_preserve =  TRUE" for instance <gen_delay[0].dqs_delay_col0> in unit <ddr_data_read_controller_0>.
+    Set user-defined property "syn_preserve =  TRUE" for instance <gen_delay[0].dqs_delay_col1> in unit <ddr_data_read_controller_0>.
+Entity <ddr_data_read_controller_0> analyzed. Unit <ddr_data_read_controller_0> generated.
+
+Analyzing Entity <ddr_dqs_delay.1> in library <work> (Architecture <arc_dqs_delay>).
+    Set user-defined property "INIT =  F3C0" for instance <one> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  EE22" for instance <two> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  E2E2" for instance <three> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  FF00" for instance <four> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  F3C0" for instance <five> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  E2E2" for instance <six> in unit <ddr_dqs_delay.1>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+Entity <ddr_dqs_delay.1> analyzed. Unit <ddr_dqs_delay.1> generated.
+
+Analyzing Entity <ddr_dqs_delay.2> in library <work> (Architecture <arc_dqs_delay>).
+    Set user-defined property "INIT =  F3C0" for instance <one> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  EE22" for instance <two> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  E2E2" for instance <three> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  FF00" for instance <four> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  F3C0" for instance <five> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+    Set user-defined property "INIT =  E2E2" for instance <six> in unit <ddr_dqs_delay.2>.
+WARNING:Xst:39 - Property "equivalent_register_removal" not applicable on a instance.
+Entity <ddr_dqs_delay.2> analyzed. Unit <ddr_dqs_delay.2> generated.
+
+Analyzing Entity <ddr_fifo_0_wr_en_0> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <delay_ff> in unit <ddr_fifo_0_wr_en_0>.
+Entity <ddr_fifo_0_wr_en_0> analyzed. Unit <ddr_fifo_0_wr_en_0> generated.
+
+Analyzing Entity <ddr_fifo_1_wr_en_0> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <delay_ff_1> in unit <ddr_fifo_1_wr_en_0>.
+Entity <ddr_fifo_1_wr_en_0> analyzed. Unit <ddr_fifo_1_wr_en_0> generated.
+
+Analyzing Entity <ddr_wr_gray_cntr> in library <work> (Architecture <arc>).
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_wr_gray_cntr.vhd" line 98: Mux is complete : default of case is discarded
+    Set user-defined property "INIT =  0" for instance <bit0> in unit <ddr_wr_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit1> in unit <ddr_wr_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit2> in unit <ddr_wr_gray_cntr>.
+    Set user-defined property "INIT =  0" for instance <bit3> in unit <ddr_wr_gray_cntr>.
+Entity <ddr_wr_gray_cntr> analyzed. Unit <ddr_wr_gray_cntr> generated.
+
+Analyzing Entity <ddr_data_write_0> in library <work> (Architecture <arc>).
+    Set property "syn_preserve = TRUE" for signal <write_data0>.
+    Set property "syn_preserve = TRUE" for signal <write_data1>.
+    Set property "syn_preserve = TRUE" for signal <write_data2>.
+    Set property "syn_preserve = TRUE" for signal <write_data3>.
+    Set property "syn_preserve = TRUE" for signal <write_data4>.
+    Set property "syn_preserve = TRUE" for signal <write_data_m0>.
+    Set property "syn_preserve = TRUE" for signal <write_data_m1>.
+    Set property "syn_preserve = TRUE" for signal <write_data_m2>.
+    Set property "syn_preserve = TRUE" for signal <write_data_m3>.
+    Set property "syn_preserve = TRUE" for signal <write_data_m4>.
+    Set property "syn_preserve = TRUE" for signal <write_data90>.
+    Set property "syn_preserve = TRUE" for signal <write_data90_1>.
+    Set property "syn_preserve = TRUE" for signal <write_data90_2>.
+    Set property "syn_preserve = TRUE" for signal <write_data270>.
+    Set property "syn_preserve = TRUE" for signal <write_data270_1>.
+    Set property "syn_preserve = TRUE" for signal <write_data270_2>.
+Entity <ddr_data_write_0> analyzed. Unit <ddr_data_write_0> generated.
+
+Analyzing Entity <ddr_infrastructure> in library <work> (Architecture <arc>).
+Entity <ddr_infrastructure> analyzed. Unit <ddr_infrastructure> generated.
+
+Analyzing Entity <ddr_iobs_0> in library <work> (Architecture <arc>).
+Entity <ddr_iobs_0> analyzed. Unit <ddr_iobs_0> generated.
+
+Analyzing Entity <ddr_infrastructure_iobs_0> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <U_clk_i> in unit <ddr_infrastructure_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r_inst> in unit <ddr_infrastructure_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r_inst> in unit <ddr_infrastructure_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r_inst> in unit <ddr_infrastructure_iobs_0>.
+Entity <ddr_infrastructure_iobs_0> analyzed. Unit <ddr_infrastructure_iobs_0> generated.
+
+Analyzing Entity <ddr_controller_iobs_0> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <iob_web> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <iob_web> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "INIT =  0" for instance <iob_rasb> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <iob_rasb> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "INIT =  0" for instance <iob_casb> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <iob_casb> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r16> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <r16> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r16> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r16> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r17> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <r17> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r17> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r17> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r18> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <r18> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r18> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r18> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r19> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <r19> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r19> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r19> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <iob_cke1> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <iob_cke> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <iob_cke> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <r20> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <r20> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <r20> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <r20> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <iob_odt> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <iob_odt> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ODT_iob_obuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <ODT_iob_obuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ODT_iob_obuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <ODT_iob_obuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[12].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[12].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[12].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[12].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[12].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[12].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[11].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[11].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[11].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[11].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[11].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[11].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[10].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[10].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[10].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[10].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[10].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[10].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[9].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[9].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[9].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[9].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[9].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[9].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[8].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[8].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[8].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[8].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[8].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[8].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[7].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[7].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[7].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[7].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[7].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[7].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[6].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[6].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[6].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[6].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[6].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[6].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[5].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[5].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[5].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[5].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[5].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[5].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[4].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[4].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[4].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[4].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[4].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[4].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[3].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[3].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[3].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[3].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[3].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[3].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[2].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[2].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[2].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[2].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[2].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[2].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[1].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[1].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_addr[0].iob_addr> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_addr[0].iob_addr> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_addr[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_addr[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_addr[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_addr[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_ba[1].iob_ba> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_ba[1].iob_ba> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_ba[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_ba[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_ba[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_ba[1].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "INIT =  0" for instance <gen_ba[0].iob_ba> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOB =  FORCE" for instance <gen_ba[0].iob_ba> in unit <ddr_controller_iobs_0>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <gen_ba[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <gen_ba[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <gen_ba[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <gen_ba[0].r> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <rst_iob_inbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <rst_iob_inbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <rst_iob_inbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <rst_iob_inbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <rst_iob_inbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <rst_iob_outbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "DRIVE =  12" for instance <rst_iob_outbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <rst_iob_outbuf> in unit <ddr_controller_iobs_0>.
+    Set user-defined property "SLEW =  SLOW" for instance <rst_iob_outbuf> in unit <ddr_controller_iobs_0>.
+Entity <ddr_controller_iobs_0> analyzed. Unit <ddr_controller_iobs_0> generated.
+
+Analyzing Entity <ddr_data_path_iobs_0> in library <work> (Architecture <arc>).
+Entity <ddr_data_path_iobs_0> analyzed. Unit <ddr_data_path_iobs_0> generated.
+
+Analyzing Entity <ddr_s3_dqs_iob> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <U1> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IOB =  FORCE" for instance <U1> in unit <ddr_s3_dqs_iob>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "INIT =  0" for instance <U2> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <U3> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <U3> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "SLEW =  SLOW" for instance <U3> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "DIFF_TERM =  FALSE" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "DQS_BIAS =  FALSE" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <U4> in unit <ddr_s3_dqs_iob>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <U4> in unit <ddr_s3_dqs_iob>.
+Entity <ddr_s3_dqs_iob> analyzed. Unit <ddr_s3_dqs_iob> generated.
+
+Analyzing Entity <ddr_s3_dq_iob> in library <work> (Architecture <arc>).
+    Set user-defined property "INIT =  0" for instance <DDR_OUT> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "INIT =  0" for instance <DQ_T> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IOB =  FORCE" for instance <DQ_T> in unit <ddr_s3_dq_iob>.
+WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <DQ_OBUFT> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "DRIVE =  12" for instance <DQ_OBUFT> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <DQ_OBUFT> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "SLEW =  SLOW" for instance <DQ_OBUFT> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <DQ_IBUF> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <DQ_IBUF> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <DQ_IBUF> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <DQ_IBUF> in unit <ddr_s3_dq_iob>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <DQ_IBUF> in unit <ddr_s3_dq_iob>.
+Entity <ddr_s3_dq_iob> analyzed. Unit <ddr_s3_dq_iob> generated.
+
+Analyzing Entity <ddr_infrastructure_top> in library <work> (Architecture <arc>).
+Entity <ddr_infrastructure_top> analyzed. Unit <ddr_infrastructure_top> generated.
+
+Analyzing Entity <ddr_clk_dcm> in library <work> (Architecture <arc>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  10.0000000000000000" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST1> in unit <ddr_clk_dcm>.
+Entity <ddr_clk_dcm> analyzed. Unit <ddr_clk_dcm> generated.
+
+Analyzing Entity <ddr_cal_top> in library <work> (Architecture <arc>).
+Entity <ddr_cal_top> analyzed. Unit <ddr_cal_top> generated.
+
+Analyzing Entity <ddr_cal_ctl> in library <work> (Architecture <arc_cal_ctl>).
+    Set property "syn_keep = TRUE" for signal <cnt>.
+    Set property "syn_keep = TRUE" for signal <cnt1>.
+    Set property "syn_keep = TRUE" for signal <trans_onedtct>.
+    Set property "syn_keep = TRUE" for signal <trans_twodtct>.
+    Set property "syn_keep = TRUE" for signal <phase_cnt>.
+    Set property "syn_keep = TRUE" for signal <tap_dly_reg>.
+    Set property "syn_keep = TRUE" for signal <enb_trans_two_dtct>.
+    Set property "syn_keep = TRUE" for signal <tapfordqs_val>.
+INFO:Xst:1432 - Contents of array <tap_dly_reg> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <tap_dly_reg> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <ddr_cal_ctl> analyzed. Unit <ddr_cal_ctl> generated.
+
+Analyzing Entity <ddr_tap_dly> in library <work> (Architecture <arc_tap_dly>).
+    Set property "syn_preserve = TRUE" for signal <tap>.
+    Set property "syn_preserve = TRUE" for signal <flop1>.
+    Set user-defined property "INIT =  E2E2" for instance <l0> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l1> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l2> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l3> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l4> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l5> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l6> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l7> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l8> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l9> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l10> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l11> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l12> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l13> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l14> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l15> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l16> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l17> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l18> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l19> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l20> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l21> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l22> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l23> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l24> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l25> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l26> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l27> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l28> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l29> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l30> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  E2E2" for instance <l31> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[0].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[1].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[2].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[3].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[4].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[5].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[6].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[7].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[8].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[9].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[10].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[11].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[12].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[13].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[14].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[15].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[16].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[17].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[18].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[19].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[20].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[21].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[22].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[23].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[24].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[25].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[26].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[27].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[28].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[29].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[30].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap1[31].r> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[0].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[1].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[2].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[3].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[4].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[5].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[6].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[7].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[8].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[9].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[10].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[11].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[12].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[13].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[14].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[15].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[16].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[17].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[18].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[19].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[20].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[21].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[22].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[23].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[24].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[25].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[26].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[27].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[28].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[29].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <gen_tap2[30].u> in unit <ddr_tap_dly>.
+    Set user-defined property "INIT =  0" for instance <u31> in unit <ddr_tap_dly>.
+Entity <ddr_tap_dly> analyzed. Unit <ddr_tap_dly> generated.
 
 Analyzing Entity <ClockDivider> in library <work> (Architecture <Behavioral>).
 Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
@@ -256,6 +844,7 @@ Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <ddr_odt_cntrl> in unit <ddr_controller_0> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <vga>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
@@ -390,47 +979,6 @@ INFO:Xst:738 - HDL ADVISOR - 992 flip-flops were inferred for signal <reg_data>.
 Unit <ALU> synthesized.
 
 
-Synthesizing Unit <RAM>.
-    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
-WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 32-bit register for signal <data_out>.
-    Found 1-bit register for signal <ack_intern>.
-    Found 104-bit register for signal <data>.
-    Found 10-bit adder for signal <data$add0000> created at line 67.
-    Found 10-bit adder for signal <data$add0001> created at line 67.
-    Found 10-bit adder for signal <data$add0002> created at line 67.
-    Found 8-bit 4-to-1 multiplexer for signal <data_0$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_1$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_10$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_2$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_5$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_6$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0000> created at line 38.
-    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0001> created at line 50.
-    Found 8-bit 4-to-1 multiplexer for signal <data_9$mux0000> created at line 38.
-    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0000> created at line 67.
-    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0001> created at line 67.
-    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0002> created at line 67.
-    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0003> created at line 67.
-    Summary:
-	inferred 137 D-type flip-flop(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred 184 Multiplexer(s).
-Unit <RAM> synthesized.
-
-
 Synthesizing Unit <ClockDivider>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
     Found 1-bit register for signal <clk_sgn>.
@@ -443,15 +991,487 @@ Synthesizing Unit <ClockDivider>.
 Unit <ClockDivider> synthesized.
 
 
+Synthesizing Unit <ddr_infrastructure>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure.vhd".
+    Found 5-bit register for signal <delay_sel_val1>.
+    Found 1-bit register for signal <rst_calib1_r1>.
+    Found 1-bit register for signal <rst_calib1_r2>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <ddr_infrastructure> synthesized.
+
+
+Synthesizing Unit <ddr_data_write_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_write_0.vhd".
+    Found 1-bit register for signal <write_en_val>.
+    Found 16-bit register for signal <write_data1>.
+    Found 16-bit register for signal <write_data2>.
+    Found 8-bit register for signal <write_data270>.
+    Found 8-bit register for signal <write_data270_1>.
+    Found 8-bit register for signal <write_data270_2>.
+    Found 16-bit register for signal <write_data3>.
+    Found 16-bit register for signal <write_data4>.
+    Found 8-bit register for signal <write_data90>.
+    Found 8-bit register for signal <write_data90_1>.
+    Found 8-bit register for signal <write_data90_2>.
+    Found 2-bit register for signal <write_data_m1>.
+    Found 2-bit register for signal <write_data_m2>.
+    Found 1-bit register for signal <write_data_m270<0>>.
+    Found 1-bit register for signal <write_data_m270_1<0>>.
+    Found 1-bit register for signal <write_data_m270_2<0>>.
+    Found 2-bit register for signal <write_data_m3>.
+    Found 2-bit register for signal <write_data_m4>.
+    Found 1-bit register for signal <write_data_m90<0>>.
+    Found 1-bit register for signal <write_data_m90_1<0>>.
+    Found 1-bit register for signal <write_data_m90_2<0>>.
+    Found 1-bit register for signal <write_en_P1>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <ddr_data_write_0> synthesized.
+
+
+Synthesizing Unit <ddr_cal_ctl>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_cal_ctl.vhd".
+WARNING:Xst:646 - Signal <cnt_val<31:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit register for signal <tapfordqs>.
+    Found 1-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 216.
+    Found 6-bit up counter for signal <cnt>.
+    Found 6-bit up counter for signal <cnt1>.
+    Found 1-bit register for signal <enb_trans_two_dtct>.
+    Found 5-bit comparator less for signal <enb_trans_two_dtct$cmp_lt0000> created at line 145.
+    Found 5-bit up counter for signal <phase_cnt>.
+    Found 1-bit register for signal <reset_r>.
+    Found 32-bit register for signal <tap_dly_reg>.
+    Found 5-bit register for signal <tapfordqs_val>.
+    Found 5-bit comparator greater for signal <tapfordqs_val$cmp_gt0000> created at line 237.
+    Found 5-bit comparator greater for signal <tapfordqs_val$cmp_gt0001> created at line 239.
+    Found 5-bit comparator greater for signal <tapfordqs_val$cmp_gt0002> created at line 241.
+    Found 5-bit comparator greater for signal <tapfordqs_val$cmp_gt0003> created at line 243.
+    Found 1-bit register for signal <trans_onedtct>.
+    Found 1-bit register for signal <trans_twodtct>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <ddr_cal_ctl> synthesized.
+
+
 Synthesizing Unit <vga_clk>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
 Unit <vga_clk> synthesized.
 
 
+Synthesizing Unit <ddr_controller_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_0.vhd".
+WARNING:Xst:1780 - Signal <rp_cnt_value> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <odt_deassert> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <lmr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <init_done_dis> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dqs_reset3_clk0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dqs_enable3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Register <wrburst_end_1> equivalent to <rdburst_end_1> has been removed
+    Register <wrburst_end_2> equivalent to <rdburst_end_2> has been removed
+    Found finite state machine <FSM_4> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 28                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (falling_edge)       |
+    | Reset              | current_state$or0000      (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_5> for signal <init_current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 15                                             |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (falling_edge)       |
+    | Reset              | current_state$or0000      (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init_idle                                      |
+    | Power Up State     | init_idle                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <burst_length>.
+    Found 1-bit register for signal <ar_done>.
+    Found 1-bit register for signal <rst_calib>.
+    Found 1-bit register for signal <read_fifo_rden>.
+    Found 1-bit register for signal <write_enable>.
+    Found 1-bit register for signal <accept_cmd_in>.
+    Found 23-bit register for signal <address_reg>.
+    Found 1-bit register for signal <ar_done_reg>.
+    Found 1-bit register for signal <auto_ref>.
+    Found 1-bit register for signal <auto_ref1>.
+    Found 1-bit register for signal <auto_ref_detect1>.
+    Found 1-bit register for signal <auto_ref_issued>.
+    Found 1-bit register for signal <auto_ref_wait>.
+    Found 1-bit register for signal <auto_ref_wait1>.
+    Found 1-bit register for signal <auto_ref_wait2>.
+    Found 10-bit up counter for signal <autoref_count>.
+    Found 1-bit register for signal <autoref_value>.
+    Found 2-bit register for signal <ba_address_reg1>.
+    Found 2-bit register for signal <ba_address_reg2>.
+    Found 3-bit register for signal <burst_length>.
+    Found 3-bit down counter for signal <cas_count>.
+    Found 3-bit subtractor for signal <cas_count$sub0000> created at line 636.
+    Found 13-bit register for signal <column_address_reg>.
+    Found 8-bit down counter for signal <count6>.
+    Found 13-bit register for signal <ddr_address1>.
+    Found 2-bit register for signal <ddr_ba1>.
+    Found 1-bit register for signal <ddr_casb2>.
+    Found 1-bit register for signal <ddr_rasb2>.
+    Found 1-bit register for signal <ddr_web2>.
+    Found 8-bit down counter for signal <dll_rst_count>.
+    Found 3-bit down counter for signal <dqs_div_cascount>.
+    Found 3-bit register for signal <dqs_div_rdburstcount>.
+    Found 3-bit subtractor for signal <dqs_div_rdburstcount$addsub0000> created at line 1317.
+    Found 1-bit register for signal <dqs_enable1>.
+    Found 1-bit register for signal <dqs_enable2>.
+    Found 1-bit register for signal <dqs_enable_int>.
+    Found 1-bit register for signal <dqs_reset1_clk0>.
+    Found 1-bit register for signal <dqs_reset2_clk0>.
+    Found 1-bit register for signal <dqs_reset_int>.
+    Found 1-bit register for signal <go_to_active>.
+    Found 4-bit up counter for signal <init_count>.
+    Found 1-bit register for signal <init_done>.
+    Found 1-bit register for signal <init_mem>.
+    Found 1-bit register for signal <init_memory>.
+    Found 7-bit down counter for signal <init_pre_count>.
+    Found 5-bit down counter for signal <ras_count>.
+    Found 3-bit down counter for signal <rcd_count>.
+    Found 1-bit register for signal <rdburst_end_1>.
+    Found 1-bit register for signal <rdburst_end_2>.
+    Found 1-bit register for signal <read_cmd1>.
+    Found 1-bit register for signal <read_cmd2>.
+    Found 1-bit register for signal <read_cmd3>.
+    Found 8-bit down counter for signal <rfc_count>.
+    Found 1-bit register for signal <rfc_count_reg>.
+    Found 13-bit register for signal <row_address_reg>.
+    Found 3-bit down counter for signal <rp_count>.
+    Found 1-bit register for signal <rst0_r>.
+    Found 1-bit register for signal <rst180_r>.
+    Found 1-bit register for signal <rst_dqs_div_r>.
+    Found 1-bit register for signal <rst_dqs_div_r1>.
+    Found 3-bit down counter for signal <wr_count>.
+    Found 1-bit register for signal <wrburst_end_3>.
+    Found 3-bit down counter for signal <wrburst_end_cnt>.
+    Found 1-bit register for signal <write_cmd1>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  13 Counter(s).
+	inferred 113 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <ddr_controller_0> synthesized.
+
+
+Synthesizing Unit <ddr_rd_gray_cntr>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_rd_gray_cntr.vhd".
+    Found 16x4-bit ROM for signal <d_in>.
+    Found 1-bit register for signal <reset90_r>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 D-type flip-flop(s).
+Unit <ddr_rd_gray_cntr> synthesized.
+
+
+Synthesizing Unit <ddr_ram8d_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_ram8d_0.vhd".
+Unit <ddr_ram8d_0> synthesized.
+
+
+Synthesizing Unit <ddr_dqs_delay_1>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_dqs_delay_0.vhd".
+Unit <ddr_dqs_delay_1> synthesized.
+
+
+Synthesizing Unit <ddr_dqs_delay_2>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_dqs_delay_0.vhd".
+Unit <ddr_dqs_delay_2> synthesized.
+
+
+Synthesizing Unit <ddr_fifo_0_wr_en_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_fifo_0_wr_en_0.vhd".
+Unit <ddr_fifo_0_wr_en_0> synthesized.
+
+
+Synthesizing Unit <ddr_fifo_1_wr_en_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_fifo_1_wr_en_0.vhd".
+Unit <ddr_fifo_1_wr_en_0> synthesized.
+
+
+Synthesizing Unit <ddr_wr_gray_cntr>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_wr_gray_cntr.vhd".
+    Found 16x4-bit ROM for signal <d_in>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <ddr_wr_gray_cntr> synthesized.
+
+
+Synthesizing Unit <ddr_infrastructure_iobs_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_iobs_0.vhd".
+Unit <ddr_infrastructure_iobs_0> synthesized.
+
+
+Synthesizing Unit <ddr_controller_iobs_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_controller_iobs_0.vhd".
+Unit <ddr_controller_iobs_0> synthesized.
+
+
+Synthesizing Unit <ddr_s3_dqs_iob>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_s3_dqs_iob.vhd".
+Unit <ddr_s3_dqs_iob> synthesized.
+
+
+Synthesizing Unit <ddr_s3_dq_iob>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_s3_dq_iob.vhd".
+Unit <ddr_s3_dq_iob> synthesized.
+
+
+Synthesizing Unit <ddr_clk_dcm>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_clk_dcm.vhd".
+Unit <ddr_clk_dcm> synthesized.
+
+
+Synthesizing Unit <ddr_tap_dly>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_tap_dly.vhd".
+    Found 1-bit xor2 for signal <flop2_xnor_0$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_1$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_10$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_11$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_12$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_13$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_14$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_15$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_16$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_17$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_18$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_19$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_2$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_20$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_21$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_22$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_23$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_24$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_25$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_26$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_27$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_28$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_29$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_3$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_30$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_4$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_5$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_6$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_7$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_8$xor0000>.
+    Found 1-bit xor2 for signal <flop2_xnor_9$xor0000>.
+    Found 1-bit register for signal <reset_r>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ddr_tap_dly> synthesized.
+
+
+Synthesizing Unit <ddr_data_read_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_read_0.vhd".
+    Found 4-bit register for signal <fifo0_rd_addr_r>.
+    Found 4-bit register for signal <fifo1_rd_addr_r>.
+    Found 8-bit register for signal <fifo_0_data_out_r>.
+    Found 8-bit register for signal <fifo_1_data_out_r>.
+    Found 16-bit register for signal <first_sdr_data>.
+    Found 1-bit register for signal <read_fifo_rden_90r1>.
+    Found 1-bit register for signal <read_fifo_rden_90r2>.
+    Found 1-bit register for signal <read_fifo_rden_90r3>.
+    Found 1-bit register for signal <read_fifo_rden_90r4>.
+    Found 1-bit register for signal <read_fifo_rden_90r5>.
+    Found 1-bit register for signal <read_fifo_rden_90r6>.
+    Found 1-bit register for signal <reset90_r>.
+    Summary:
+	inferred  47 D-type flip-flop(s).
+Unit <ddr_data_read_0> synthesized.
+
+
+Synthesizing Unit <ddr_data_read_controller_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_read_controller_0.vhd".
+WARNING:Xst:647 - Input <vio_out_dqs_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <vio_out_dqs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <vio_out_rst_dqs_div_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <vio_out_rst_dqs_div> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <reset_r>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ddr_data_read_controller_0> synthesized.
+
+
+Synthesizing Unit <ddr_data_path_iobs_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_path_iobs_0.vhd".
+WARNING:Xst:647 - Input <data_mask_f<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_mask_r<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <ddr_dm> is never assigned. Tied to value 0.
+Unit <ddr_data_path_iobs_0> synthesized.
+
+
+Synthesizing Unit <ddr_cal_top>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_cal_top.vhd".
+Unit <ddr_cal_top> synthesized.
+
+
+Synthesizing Unit <ddr_infrastructure_top>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_top.vhd".
+WARNING:Xst:647 - Input <sys_clk_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <wait_200us_int> equivalent to <wait_200us> has been removed
+    Found 1-bit register for signal <wait_200us>.
+    Found 16-bit up counter for signal <counter200>.
+    Found 17-bit comparator less for signal <counter200$cmp_lt0000> created at line 183.
+    Found 1-bit register for signal <sys_rst>.
+    Found 1-bit register for signal <sys_rst180>.
+    Found 1-bit register for signal <sys_rst180_1>.
+    Found 1-bit register for signal <sys_rst180_o>.
+    Found 1-bit register for signal <sys_rst90>.
+    Found 1-bit register for signal <sys_rst90_1>.
+    Found 1-bit register for signal <sys_rst90_o>.
+    Found 1-bit register for signal <sys_rst_1>.
+    Found 1-bit register for signal <sys_rst_o>.
+    Found 1-bit register for signal <wait_200us_i>.
+    Found 1-bit register for signal <wait_clk270>.
+    Found 1-bit register for signal <wait_clk90>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <ddr_infrastructure_top> synthesized.
+
+
+Synthesizing Unit <ddr_data_path_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_data_path_0.vhd".
+WARNING:Xst:1780 - Signal <read_valid_data_1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <fifo1_rd_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <fifo0_rd_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <ddr_data_path_0> synthesized.
+
+
+Synthesizing Unit <ddr_iobs_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_iobs_0.vhd".
+Unit <ddr_iobs_0> synthesized.
+
+
+Synthesizing Unit <ddr_top_0>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr_top_0.vhd".
+Unit <ddr_top_0> synthesized.
+
+
+Synthesizing Unit <ddr>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/ddr/user_design/rtl/ddr.vhd".
+WARNING:Xst:653 - Signal <vio_out_rst_dqs_div_en> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <vio_out_rst_dqs_div> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:653 - Signal <vio_out_dqs_en> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <vio_out_dqs> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:1780 - Signal <vio_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dbg_trig> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_trans_twodtct> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_trans_onedtct> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_rst_calib> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_phase_cnt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_enb_trans_two_dtct> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_delay_sel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dbg_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dbg_cnt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <control1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <control0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <ddr> synthesized.
+
+
+Synthesizing Unit <ramunit>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd".
+WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <i_cntrl0_sys_rst_tb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_sys_rst90_tb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_sys_rst180_tb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_rst_dqs_div_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_we_n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_ras_n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_odt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_cs_n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_cke> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_ck_n<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_ck<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_cas_n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_ba> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ddr2_a> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_clk_tb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_clk90_tb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_auto_ref_req> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_cntrl0_ar_done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit 4-to-1 multiplexer for signal <data_out>.
+    Found 11-bit up counter for signal <cmdcounter>.
+    Found 1-bit register for signal <cmdsent>.
+    Found 1-bit register for signal <i_cntrl0_burst_done>.
+    Found 3-bit register for signal <i_cntrl0_user_command_register>.
+    Found 25-bit register for signal <i_cntrl0_user_input_address>.
+    Found 32-bit register for signal <read_data>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  62 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <ramunit> synthesized.
+
+
+Synthesizing Unit <RAM>.
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
+WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <ack_out>.
+    Found 1-bit register for signal <ack_intern>.
+    Found 104-bit register for signal <data>.
+    Found 25-bit adder for signal <data$add0000> created at line 98.
+    Found 25-bit adder for signal <data$add0001> created at line 98.
+    Found 25-bit adder for signal <data$add0002> created at line 98.
+    Found 8-bit 4-to-1 multiplexer for signal <data_0$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_1$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_10$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_2$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_5$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_6$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0000> created at line 69.
+    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0001> created at line 81.
+    Found 8-bit 4-to-1 multiplexer for signal <data_9$mux0000> created at line 69.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0000> created at line 98.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0001> created at line 98.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0002> created at line 98.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0003> created at line 98.
+    Found 3-bit register for signal <i_cmd>.
+    Found 25-bit comparator greater for signal <i_cmd$cmp_gt0000> created at line 59.
+    Summary:
+	inferred 141 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred 184 Multiplexer(s).
+Unit <RAM> synthesized.
+
+
 Synthesizing Unit <CPU>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
 WARNING:Xst:1305 - Output <cpu_err_out> is never assigned. Tied to value 0.
-WARNING:Xst:646 - Signal <cu_mmu_adr_out<31:10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cu_mmu_adr_out<31:25>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <cu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <alu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <alu_debug_data_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -474,35 +1494,58 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  31x32-bit dual-port RAM                               : 1
-# Adders/Subtractors                                   : 6
- 10-bit adder                                          : 3
+# ROMs                                                 : 4
+ 16x4-bit ROM                                          : 4
+# Adders/Subtractors                                   : 8
+ 25-bit adder                                          : 3
+ 3-bit subtractor                                      : 2
  30-bit adder                                          : 1
  32-bit addsub                                         : 1
  5-bit addsub                                          : 1
-# Counters                                             : 3
- 10-bit up counter                                     : 2
+# Counters                                             : 21
+ 10-bit up counter                                     : 3
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 3-bit down counter                                    : 6
  32-bit up counter                                     : 1
-# Registers                                            : 72
- 1-bit register                                        : 9
- 3-bit register                                        : 1
+ 4-bit up counter                                      : 1
+ 5-bit down counter                                    : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 2
+ 7-bit down counter                                    : 1
+ 8-bit down counter                                    : 3
+# Registers                                            : 219
+ 1-bit register                                        : 121
+ 13-bit register                                       : 3
+ 16-bit register                                       : 5
+ 2-bit register                                        : 7
+ 23-bit register                                       : 1
+ 25-bit register                                       : 1
+ 3-bit register                                        : 5
  30-bit register                                       : 2
- 32-bit register                                       : 41
- 5-bit register                                        : 4
+ 32-bit register                                       : 42
+ 4-bit register                                        : 2
+ 5-bit register                                        : 7
  6-bit register                                        : 2
- 8-bit register                                        : 13
-# Comparators                                          : 3
+ 8-bit register                                        : 21
+# Comparators                                          : 10
+ 17-bit comparator less                                : 1
+ 25-bit comparator greater                             : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
-# Multiplexers                                         : 31
- 1-bit 32-to-1 multiplexer                             : 1
+ 5-bit comparator greater                              : 4
+ 5-bit comparator less                                 : 1
+# Multiplexers                                         : 33
+ 1-bit 32-to-1 multiplexer                             : 2
  1-bit 4-to-1 multiplexer                              : 1
- 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 4-to-1 multiplexer                             : 3
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 4-to-1 multiplexer                              : 1
  6-bit 8-to-1 multiplexer                              : 2
  8-bit 13-to-1 multiplexer                             : 4
  8-bit 4-to-1 multiplexer                              : 19
-# Xors                                                 : 2
+# Xors                                                 : 33
+ 1-bit xor2                                            : 31
  32-bit xor2                                           : 2
 
 =========================================================================
@@ -511,6 +1554,34 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <PROZESSOR/SPEICHER/u_ramunit/u_ddr/top_00/controller0/init_current_state/FSM> on signal <init_current_state[1:2]> with user encoding.
+--------------------------------
+ State              | Encoding
+--------------------------------
+ init_idle          | 00
+ init_precharge     | 01
+ init_auto_refresh  | 10
+ init_load_mode_reg | 11
+--------------------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <PROZESSOR/SPEICHER/u_ramunit/u_ddr/top_00/controller0/current_state/FSM> on signal <current_state[1:4]> with gray encoding.
+-------------------------------------
+ State                   | Encoding
+-------------------------------------
+ idle                    | 0000
+ precharge               | 1111
+ auto_refresh            | 0001
+ active                  | 0011
+ first_write             | 0110
+ write_wait              | 0101
+ burst_write             | 1100
+ precharge_after_write   | 0100
+ precharge_after_write_2 | 1101
+ read_wait               | 1110
+ burst_read              | 0111
+ active_wait             | 0010
+-------------------------------------
 Analyzing FSM <FSM_3> for best encoding.
 Optimizing FSM <PROZESSOR/RECHENEINHEIT/state/FSM> on signal <state[1:5]> with one-hot encoding.
 -------------------
@@ -561,21 +1632,122 @@ Optimizing FSM <PROZESSOR/CU/HEADER_wait_state_HEADER/FSM> on signal <HEADER_wai
  00000000000000000000000000000110 | 101
  00000000000000000000000000000111 | 100
 ----------------------------------------------
-WARNING:Xst:2677 - Node <mmu_adr_out_10> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_11> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_12> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_13> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_14> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_15> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_16> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_17> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_18> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_19> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_20> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_21> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_22> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_23> of sequential type is unconnected in block <CU>.
-WARNING:Xst:2677 - Node <mmu_adr_out_24> of sequential type is unconnected in block <CU>.
+WARNING:Xst:1710 - FF/Latch <write_data1_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <column_address_reg_10> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <column_address_reg_11> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <column_address_reg_12> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_21> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_21> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <mmu_adr_out_25> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_26> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_27> of sequential type is unconnected in block <CU>.
@@ -583,6 +1755,129 @@ WARNING:Xst:2677 - Node <mmu_adr_out_28> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <mmu_adr_out_29> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_30> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_31> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <burst_length_0> of sequential type is unconnected in block <controller0>.
+WARNING:Xst:2677 - Node <column_address_reg_10> of sequential type is unconnected in block <controller0>.
+WARNING:Xst:2677 - Node <column_address_reg_11> of sequential type is unconnected in block <controller0>.
+WARNING:Xst:2677 - Node <column_address_reg_12> of sequential type is unconnected in block <controller0>.
+WARNING:Xst:2677 - Node <write_data1_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_8> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_9> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_10> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_12> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_13> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_14> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data1_15> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_8> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_9> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_10> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_12> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_13> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_14> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data2_15> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_8> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_9> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_10> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_12> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_13> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_14> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data3_15> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_8> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_9> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_10> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_12> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_13> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_14> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data4_15> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_21> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_11> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_21> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_1_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_1_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data270_2_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_0> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_1> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_2> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_3> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_4> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_5> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_6> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2677 - Node <write_data90_2_7> of sequential type is unconnected in block <data_write0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data1<15:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data_m1<1:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
+WARNING:Xst:2404 -  FFs/Latches <column_address_reg<12:10>> (without init value) have a constant value of 0 in block <ddr_controller_0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data2<15:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data_m2<1:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data3<15:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
+WARNING:Xst:2404 -  FFs/Latches <write_data_m3<1:0>> (without init value) have a constant value of 0 in block <ddr_data_write_0>.
 
 Synthesizing (advanced) Unit <toplevel>.
 INFO:Xst:3226 - The RAM <Inst_vga/Mram_reg_data> will be implemented as a BLOCK RAM, absorbing the following register(s): <Inst_vga/reg_counter>
@@ -609,6 +1904,7 @@ INFO:Xst:3226 - The RAM <Inst_vga/Mram_reg_data> will be implemented as a BLOCK 
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 Unit <toplevel> synthesized (advanced).
+WARNING:Xst:2677 - Node <burst_length_0> of sequential type is unconnected in block <ddr_controller_0>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -616,29 +1912,46 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  31x32-bit dual-port block RAM                         : 1
-# Adders/Subtractors                                   : 6
+# ROMs                                                 : 4
+ 16x4-bit ROM                                          : 4
+# Adders/Subtractors                                   : 8
+ 3-bit subtractor                                      : 2
  30-bit adder                                          : 1
  32-bit addsub                                         : 1
  4-bit adder                                           : 3
  5-bit addsub                                          : 1
-# Counters                                             : 3
- 10-bit up counter                                     : 2
+# Counters                                             : 21
+ 10-bit up counter                                     : 3
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 3-bit down counter                                    : 6
  32-bit up counter                                     : 1
-# Registers                                            : 1540
- Flip-Flops                                            : 1540
-# Comparators                                          : 3
+ 4-bit up counter                                      : 1
+ 5-bit down counter                                    : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 2
+ 7-bit down counter                                    : 1
+ 8-bit down counter                                    : 3
+# Registers                                            : 2026
+ Flip-Flops                                            : 2026
+# Comparators                                          : 10
+ 17-bit comparator less                                : 1
+ 25-bit comparator greater                             : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
-# Multiplexers                                         : 31
- 1-bit 32-to-1 multiplexer                             : 1
+ 5-bit comparator greater                              : 4
+ 5-bit comparator less                                 : 1
+# Multiplexers                                         : 33
+ 1-bit 32-to-1 multiplexer                             : 2
  1-bit 4-to-1 multiplexer                              : 1
- 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 4-to-1 multiplexer                             : 3
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 4-to-1 multiplexer                              : 1
  6-bit 8-to-1 multiplexer                              : 2
  8-bit 13-to-1 multiplexer                             : 4
  8-bit 4-to-1 multiplexer                              : 19
-# Xors                                                 : 2
+# Xors                                                 : 33
+ 1-bit xor2                                            : 31
  32-bit xor2                                           : 2
 
 =========================================================================
@@ -646,10 +1959,112 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_15> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_14> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_13> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_12> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_11> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_10> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_9> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_8> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_2> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_11> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_21> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_21> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_11> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_2> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_2> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_2> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_7> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_6> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_5> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_4> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_3> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_2> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_1> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_0> (without init value) has a constant value of 0 in block <ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <reset90_r> in Unit <ddr_data_read_0> is equivalent to the following 2 FFs/Latches, which will be removed : <fifo1_rd_addr_inst/reset90_r> <fifo0_rd_addr_inst/reset90_r> 
 
 Optimizing unit <toplevel> ...
 
 Optimizing unit <leitwerk> ...
+
+Optimizing unit <ddr_infrastructure> ...
+
+Optimizing unit <ddr_cal_ctl> ...
+
+Optimizing unit <ddr_controller_0> ...
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ddr_ram8d_0> ...
+
+Optimizing unit <ddr_dqs_delay_2> ...
+
+Optimizing unit <ddr_controller_iobs_0> ...
+
+Optimizing unit <ddr_tap_dly> ...
+
+Optimizing unit <ddr_data_read_0> ...
+
+Optimizing unit <ddr_data_read_controller_0> ...
+
+Optimizing unit <ddr_data_path_iobs_0> ...
+
+Optimizing unit <ddr_infrastructure_top> ...
+
+Optimizing unit <ramunit> ...
 
 Optimizing unit <RAM> ...
 WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_31> of sequential type is unconnected in block <toplevel>.
@@ -659,363 +2074,16 @@ WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_28> of sequential type is unco
 WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_27> of sequential type is unconnected in block <toplevel>.
 WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_26> of sequential type is unconnected in block <toplevel>.
 WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_25> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_24> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_23> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_22> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_21> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_20> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_19> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_18> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_17> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_16> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_15> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_14> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_13> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_12> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_11> of sequential type is unconnected in block <toplevel>.
-WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_10> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/SPEICHER/u_ramunit/u_ddr/top_00/controller0/ar_done> of sequential type is unconnected in block <toplevel>.
 
 Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block toplevel, actual ratio is 51.
-FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_0 has been replicated 1 time(s)
-FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_1 has been replicated 1 time(s)
-FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_2 has been replicated 1 time(s)
-FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_3 has been replicated 1 time(s)
-FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_4 has been replicated 1 time(s)
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 1575
- Flip-Flops                                            : 1575
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Final Report                               *
-=========================================================================
-Final Results
-RTL Top Level Output File Name     : toplevel.ngr
-Top Level Output File Name         : toplevel
-Output Format                      : NGC
-Optimization Goal                  : Speed
-Keep Hierarchy                     : No
-
-Design Statistics
-# IOs                              : 18
-
-Cell Usage :
-# BELS                             : 7084
-#      GND                         : 1
-#      INV                         : 10
-#      LUT1                        : 51
-#      LUT2                        : 249
-#      LUT2_D                      : 30
-#      LUT2_L                      : 32
-#      LUT3                        : 726
-#      LUT3_D                      : 19
-#      LUT3_L                      : 34
-#      LUT4                        : 3807
-#      LUT4_D                      : 222
-#      LUT4_L                      : 634
-#      MUXCY                       : 731
-#      MUXF5                       : 384
-#      MUXF6                       : 36
-#      MUXF7                       : 2
-#      MUXF8                       : 1
-#      VCC                         : 1
-#      XORCY                       : 114
-# FlipFlops/Latches                : 1575
-#      FDC                         : 36
-#      FDCE                        : 230
-#      FDE                         : 1181
-#      FDP                         : 1
-#      FDPE                        : 33
-#      FDR                         : 16
-#      FDRE                        : 44
-#      FDS                         : 1
-#      FDSE                        : 33
-# RAMS                             : 1
-#      RAMB16BWE                   : 1
-# Clock Buffers                    : 3
-#      BUFG                        : 3
-# IO Buffers                       : 18
-#      IBUF                        : 2
-#      IBUFG                       : 1
-#      OBUF                        : 15
-# DCMs                             : 1
-#      DCM_SP                      : 1
-=========================================================================
-
-Device utilization summary:
----------------------------
-
-Selected Device : 3s700afg484-4 
-
- Number of Slices:                     3053  out of   5888    51%  
- Number of Slice Flip Flops:           1575  out of  11776    13%  
- Number of 4 input LUTs:               5814  out of  11776    49%  
- Number of IOs:                          18
- Number of bonded IOBs:                  18  out of    372     4%  
- Number of BRAMs:                         1  out of     20     5%  
- Number of GCLKs:                         3  out of     24    12%  
- Number of DCMs:                          1  out of      8    12%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-TIMING REPORT
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
-------------------------------------------------------+---------------------------------------+-------+
-Clock Signal                                          | Clock buffer(FF name)                 | Load  |
-------------------------------------------------------+---------------------------------------+-------+
-clk                                                   | Inst_vga_clk/DCM_SP_INST:CLKDV        | 30    |
-PROZESSOR/clock_clk_out1(PROZESSOR/CLOCKER/clk_out1:O)| BUFG(*)(PROZESSOR/RECHENEINHEIT/acc_0)| 1513  |
-clk                                                   | Inst_vga_clk/DCM_SP_INST:CLK0         | 33    |
-------------------------------------------------------+---------------------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-
-Asynchronous Control Signals Information:
-----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-rst                                | IBUF                   | 300   |
------------------------------------+------------------------+-------+
-
-Timing Summary:
----------------
-Speed Grade: -4
-
-   Minimum period: 20.240ns (Maximum Frequency: 49.408MHz)
-   Minimum input arrival time before clock: 6.069ns
-   Maximum output required time after clock: 11.508ns
-   Maximum combinational path delay: No path found
-
-Timing Detail:
---------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.049ns (frequency: 110.511MHz)
-  Total number of paths / destination ports: 16232 / 101
--------------------------------------------------------------------------
-Delay:               9.049ns (Levels of Logic = 47)
-  Source:            PROZESSOR/CLOCKER/counter_7 (FF)
-  Destination:       PROZESSOR/CLOCKER/counter_31 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: PROZESSOR/CLOCKER/counter_7 to PROZESSOR/CLOCKER/counter_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.591   0.590  PROZESSOR/CLOCKER/counter_7 (PROZESSOR/CLOCKER/counter_7)
-     LUT1:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11>)
-     MUXCY:CI->O          34   0.141   1.406  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<12> (PROZESSOR/CLOCKER/counter_cmp_ge0000)
-     LUT3:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcount_counter_lut<0> (PROZESSOR/CLOCKER/Mcount_counter_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<0> (PROZESSOR/CLOCKER/Mcount_counter_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<1> (PROZESSOR/CLOCKER/Mcount_counter_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<2> (PROZESSOR/CLOCKER/Mcount_counter_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<3> (PROZESSOR/CLOCKER/Mcount_counter_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<4> (PROZESSOR/CLOCKER/Mcount_counter_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<5> (PROZESSOR/CLOCKER/Mcount_counter_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<6> (PROZESSOR/CLOCKER/Mcount_counter_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<7> (PROZESSOR/CLOCKER/Mcount_counter_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<8> (PROZESSOR/CLOCKER/Mcount_counter_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<9> (PROZESSOR/CLOCKER/Mcount_counter_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<10> (PROZESSOR/CLOCKER/Mcount_counter_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<11> (PROZESSOR/CLOCKER/Mcount_counter_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<12> (PROZESSOR/CLOCKER/Mcount_counter_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<13> (PROZESSOR/CLOCKER/Mcount_counter_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<14> (PROZESSOR/CLOCKER/Mcount_counter_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<15> (PROZESSOR/CLOCKER/Mcount_counter_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<16> (PROZESSOR/CLOCKER/Mcount_counter_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<17> (PROZESSOR/CLOCKER/Mcount_counter_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<18> (PROZESSOR/CLOCKER/Mcount_counter_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<19> (PROZESSOR/CLOCKER/Mcount_counter_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<20> (PROZESSOR/CLOCKER/Mcount_counter_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<21> (PROZESSOR/CLOCKER/Mcount_counter_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<22> (PROZESSOR/CLOCKER/Mcount_counter_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<23> (PROZESSOR/CLOCKER/Mcount_counter_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<24> (PROZESSOR/CLOCKER/Mcount_counter_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<25> (PROZESSOR/CLOCKER/Mcount_counter_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<26> (PROZESSOR/CLOCKER/Mcount_counter_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<27> (PROZESSOR/CLOCKER/Mcount_counter_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<28> (PROZESSOR/CLOCKER/Mcount_counter_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<29> (PROZESSOR/CLOCKER/Mcount_counter_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<30> (PROZESSOR/CLOCKER/Mcount_counter_cy<30>)
-     XORCY:CI->O           1   0.844   0.000  PROZESSOR/CLOCKER/Mcount_counter_xor<31> (PROZESSOR/CLOCKER/Mcount_counter31)
-     FDC:D                     0.252          PROZESSOR/CLOCKER/counter_31
-    ----------------------------------------
-    Total                      9.049ns (7.053ns logic, 1.996ns route)
-                                       (77.9% logic, 22.1% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'PROZESSOR/clock_clk_out1'
-  Clock period: 20.240ns (frequency: 49.408MHz)
-  Total number of paths / destination ports: 10289272 / 2988
--------------------------------------------------------------------------
-Delay:               20.240ns (Levels of Logic = 22)
-  Source:            PROZESSOR/RECHENEINHEIT/s_op2_3_1 (FF)
-  Destination:       PROZESSOR/RECHENEINHEIT/acc_25 (FF)
-  Source Clock:      PROZESSOR/clock_clk_out1 rising
-  Destination Clock: PROZESSOR/clock_clk_out1 rising
-
-  Data Path: PROZESSOR/RECHENEINHEIT/s_op2_3_1 to PROZESSOR/RECHENEINHEIT/acc_25
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              6   0.591   0.812  PROZESSOR/RECHENEINHEIT/s_op2_3_1 (PROZESSOR/RECHENEINHEIT/s_op2_3_1)
-     LUT2_D:I0->O         14   0.648   1.003  PROZESSOR/RECHENEINHEIT/acc_cmp_eq002211 (N367)
-     LUT4:I3->O           32   0.648   1.265  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00201 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq0020)
-     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_lut<5> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_lut<5>)
-     MUXCY:S->O            1   0.632   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<5> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<6> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<7> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<8> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<9> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<10> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<11> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<12> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<12>)
-     MUXCY:CI->O           5   0.269   0.713  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<13> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<13>)
-     LUT3:I1->O          190   0.643   1.344  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<15>1 (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<15>)
-     LUT4_D:I2->O         55   0.648   1.272  PROZESSOR/RECHENEINHEIT/acc_cmp_eq011511 (N333)
-     LUT4:I3->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_cmp_eq0100151_SW4 (N1739)
-     LUT4_D:I3->O         11   0.648   0.936  PROZESSOR/RECHENEINHEIT/acc_cmp_eq01191 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq0119)
-     LUT4:I3->O            1   0.648   0.452  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>765 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>765)
-     LUT4:I2->O            1   0.648   0.452  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>797 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>797)
-     LUT3:I2->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>855_SW0 (N1692)
-     LUT4_L:I3->LO         1   0.648   0.103  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>929 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>929)
-     LUT4:I3->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1141 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1141)
-     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1174 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>)
-     FDE:D                     0.252          PROZESSOR/RECHENEINHEIT/acc_25
-    ----------------------------------------
-    Total                     20.240ns (10.618ns logic, 9.622ns route)
-                                       (52.5% logic, 47.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 34 / 34
--------------------------------------------------------------------------
-Offset:              4.766ns (Levels of Logic = 2)
-  Source:            rst (PAD)
-  Destination:       Inst_vga/y_cnt_0 (FF)
-  Destination Clock: clk rising 0.5X
-
-  Data Path: rst to Inst_vga/y_cnt_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           389   0.849   1.518  rst_IBUF (rst_IBUF)
-     LUT2:I0->O           10   0.648   0.882  Inst_vga/x_cnt_or00001 (Inst_vga/x_cnt_or0000)
-     FDR:R                     0.869          Inst_vga/x_cnt_0
-    ----------------------------------------
-    Total                      4.766ns (2.366ns logic, 2.400ns route)
-                                       (49.6% logic, 50.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'PROZESSOR/clock_clk_out1'
-  Total number of paths / destination ports: 1174 / 1174
--------------------------------------------------------------------------
-Offset:              6.069ns (Levels of Logic = 3)
-  Source:            rst (PAD)
-  Destination:       PROZESSOR/RECHENEINHEIT/reg_data_10_0 (FF)
-  Destination Clock: PROZESSOR/clock_clk_out1 rising
-
-  Data Path: rst to PROZESSOR/RECHENEINHEIT/reg_data_10_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           389   0.849   1.518  rst_IBUF (rst_IBUF)
-     LUT4:I0->O            8   0.648   0.837  PROZESSOR/RECHENEINHEIT/reg_data_16_and000051 (PROZESSOR/RECHENEINHEIT/reg_data_16_and0000_bdd4)
-     LUT4:I1->O           32   0.643   1.262  PROZESSOR/RECHENEINHEIT/reg_data_24_and000011 (PROZESSOR/RECHENEINHEIT/reg_data_24_and0000)
-     FDE:CE                    0.312          PROZESSOR/RECHENEINHEIT/reg_data_24_0
-    ----------------------------------------
-    Total                      6.069ns (2.452ns logic, 3.617ns route)
-                                       (40.4% logic, 59.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 582 / 6
--------------------------------------------------------------------------
-Offset:              11.508ns (Levels of Logic = 9)
-  Source:            Inst_vga/reg_counter_0 (FF)
-  Destination:       b<3> (PAD)
-  Source Clock:      clk rising 0.5X
-
-  Data Path: Inst_vga/reg_counter_0 to b<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              6   0.591   0.812  Inst_vga/reg_counter_0 (Inst_vga/reg_counter_0)
-     LUT4:I0->O            1   0.648   0.000  Inst_vga/pattern_and00001 (Inst_vga/pattern_and00001)
-     MUXF5:I0->O          16   0.276   1.177  Inst_vga/pattern_and0000_f5 (Inst_vga/pattern_and0000)
-     LUT4:I0->O            1   0.648   0.000  Inst_vga/Mmux_currentValue_10 (Inst_vga/Mmux_currentValue_10)
-     MUXF5:I0->O           1   0.276   0.000  Inst_vga/Mmux_currentValue_8_f5 (Inst_vga/Mmux_currentValue_8_f5)
-     MUXF6:I0->O           1   0.291   0.000  Inst_vga/Mmux_currentValue_6_f6 (Inst_vga/Mmux_currentValue_6_f6)
-     MUXF7:I0->O           1   0.291   0.000  Inst_vga/Mmux_currentValue_4_f7 (Inst_vga/Mmux_currentValue_4_f7)
-     MUXF8:I0->O           1   0.291   0.452  Inst_vga/Mmux_currentValue_2_f8 (Inst_vga/currentValue)
-     LUT3:I2->O            4   0.648   0.587  Inst_vga/b_and00001 (b_0_OBUF)
-     OBUF:I->O                 4.520          b_3_OBUF (b<3>)
-    ----------------------------------------
-    Total                     11.508ns (8.480ns logic, 3.028ns route)
-                                       (73.7% logic, 26.3% route)
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 95.00 secs
-Total CPU time to Xst completion: 95.17 secs
- 
+ERROR:Xst:2033 - Port I of Input buffer PROZESSOR/SPEICHER/u_ramunit/u_ddr/top_00/iobs0/controller_iobs0/rst_iob_inbuf is connected to GND
+ERROR:Xst:1847 - Design checking failed
 --> 
 
-Total memory usage is 323684 kilobytes
+Total memory usage is 332580 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   96 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
+Number of warnings :  473 (   0 filtered)
+Number of infos    :   37 (   0 filtered)
 

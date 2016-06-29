@@ -140,7 +140,7 @@ begin
      alu_data_out1 <= ir(29 downto 10) & "000000000000"; alu_data_out2 <= std_logic_vector(to_unsigned(0,alu_data_out2'length)); alu_adr_out3 <= ir(9 downto 5); alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);
@@ -460,7 +460,7 @@ begin
      alu_data_out1 <= std_logic_vector(resize(signed(ir(29 downto 18)),alu_data_out1 ' length)); alu_data_out2 <= std_logic_vector(resize(unsigned(std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out2 ' length))),alu_data_out2 ' length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "1" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out ' length)); mmu_adr_out <= alu_data_in(31 downto 0); mmu_com_out <= "0" & "00"; mmu_work_out <= "1";
@@ -488,7 +488,7 @@ begin
       state2 <= "0100";
      end if;
     when "0100" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
     when "0101" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);

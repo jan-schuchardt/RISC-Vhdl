@@ -106,9 +106,9 @@ RECHENEINHEIT: entity work.ALU port map(
 );
 
 SPEICHER: entity work.RAM port map(
-	clk =>clock_clk_out,
+	clk =>cpu_clk_in,
 	rst => cpu_rst_in,
-	addr => cu_mmu_adr_out(9 downto 0),
+	addr => cu_mmu_adr_out(24 downto 0),
 	data_out => cu_mmu_data_in,
 	data_in => cu_mmu_data_out,
 	ack_out => cu_mmu_ack_in(0),

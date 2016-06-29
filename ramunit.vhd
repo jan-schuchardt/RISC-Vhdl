@@ -120,11 +120,12 @@ end ramunit;
 
 	--
 	
-	signal initsent : unsigned (10 downto 0);  -- counter for init
 	
-	signal readcounter : unsigned (10 downto 0);  -- counter for read
+	signal cmdcounter : unsigned (10 downto 0);  -- cmdcounter for read/write/init
 																 --? 2048 clks should be enough for refresh
-	signal readsent: std_logic;
+	
+	
+	signal cmdsent: std_logic;
 	
 	signal read_data : std_logic_vector(31 downto 0);
 	
@@ -153,10 +154,10 @@ end ramunit;
 			if( rst = '1' ) then 
 					i_cntrl0_user_command_register <= "010";
 					
-					readsent <= '0';
+					cmdsent <= '0';
 					read_data <= "00000000000000000000000000000000";
-					readcounter <= "00000000000";
-					initsent <= "00000000000"; 
+					cmdcounter <= "00000000000";
+					cmdcounter <= "00000000000"; 
 					i_cntrl0_user_input_data <= "0000000000000000"; 
 					i_cntrl0_user_input_address <= "0000000000000000000000000"; 
 					i_cntrl0_burst_done <= '0'; 
@@ -171,56 +172,112 @@ end ramunit;
 							if( cmd(2) = '1') then --write
 							
 							-- todo
+							if ( cmdsent = '0') then 
 							
-							else  --read
-							-- (todo: data width)
+								if ( i_cntrl0_user_cmd_ack = '0') then 
+									i_cntrl0_user_input_address <= addr;
+									i_cntrl0_user_command_register <= "100";
+									cmdsent <= '1';
+									cmdcounter <= "00000000000"; 
+								end if;
 							
-						
-								if( readsent = '0') then 
-								
-									if ( i_cntrl0_user_cmd_ack = '0') then 
-										i_cntrl0_user_input_address <= addr;
-										i_cntrl0_user_command_register <= "110";
-										readsent <= '1';
-										readcounter <= "00000000000"; 
-									end if;
-								else
-								
-										if ( i_cntrl0_user_cmd_ack = '1') then 
-											case readcounter is
-												when to_unsigned(0,readcounter'length) => 
-												when to_unsigned(1,readcounter'length) => 
-												when to_unsigned(2,readcounter'length) => 
+							else
+							
+							if ( i_cntrl0_user_cmd_ack = '1') then 
+											case cmdcounter is
+												when to_unsigned(0,cmdcounter'length) => 
+												when to_unsigned(1,cmdcounter'length) => 
+												when to_unsigned(2,cmdcounter'length) => 
 
 												-- ?values might be too low/high
-												when to_unsigned(3,readcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then -- ?todo: not setting ack in the next step, if data here is not valid
+												when to_unsigned(3,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then -- ?todo: not setting ack in the next step, if data here is not valid
 																	read_data( 31 downto 16) <= i_cntrl0_user_output_data;
 																	
 																	end if;
 																	
-												when to_unsigned(4,readcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then
+												when to_unsigned(4,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then
 																	read_data( 15 downto 0) <= i_cntrl0_user_output_data;
 																	ack <= '1'; 
 																	end if;		
 
 																	i_cntrl0_burst_done <= '1';
 																	
-												when to_unsigned(5,readcounter'length) =>		i_cntrl0_user_command_register <= "000";
+												when to_unsigned(5,cmdcounter'length) =>		i_cntrl0_user_command_register <= "000";
 
 																		
-												when to_unsigned(6,readcounter'length) => 	i_cntrl0_burst_done <= '0'; 				
+												when to_unsigned(6,cmdcounter'length) => 	i_cntrl0_burst_done <= '0'; 				
 																	
-												when to_unsigned(7,readcounter'length) => -- ?ack should be active for longer					
+												when to_unsigned(7,cmdcounter'length) => -- ?ack should be active for longer					
 												when others => 
 												if ( i_cntrl0_user_cmd_ack = '0') then
 												ack <= '0'; 
-												readsent <= '0';
+												cmdsent <= '0';
 												end if; 
 											
 											end case;
 						
-											readcounter <= readcounter+1; -- starts counting after cmd_ack
-											--readsent <= 1;
+											cmdcounter <= cmdcounter+1; -- starts counting after cmd_ack
+											--cmdsent <= 1;
+									
+									
+										
+										end if; 
+							
+							
+							end if; 
+							
+							
+							
+							
+							else  --read
+							-- (todo: data width)
+							
+						
+								if( cmdsent = '0') then 
+								
+									if ( i_cntrl0_user_cmd_ack = '0') then 
+										i_cntrl0_user_input_address <= addr;
+										i_cntrl0_user_command_register <= "110";
+										cmdsent <= '1';
+										cmdcounter <= "00000000000"; 
+									end if;
+								else
+								
+										if ( i_cntrl0_user_cmd_ack = '1') then 
+											case cmdcounter is
+												when to_unsigned(0,cmdcounter'length) => 
+												when to_unsigned(1,cmdcounter'length) => 
+												when to_unsigned(2,cmdcounter'length) => 
+
+												-- ?values might be too low/high
+												when to_unsigned(3,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then -- ?todo: not setting ack in the next step, if data here is not valid
+																	read_data( 31 downto 16) <= i_cntrl0_user_output_data;
+																	
+																	end if;
+																	
+												when to_unsigned(4,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then
+																	read_data( 15 downto 0) <= i_cntrl0_user_output_data;
+																	ack <= '1'; 
+																	end if;		
+
+																	i_cntrl0_burst_done <= '1';
+																	
+												when to_unsigned(5,cmdcounter'length) =>		i_cntrl0_user_command_register <= "000";
+
+																		
+												when to_unsigned(6,cmdcounter'length) => 	i_cntrl0_burst_done <= '0'; 				
+																	
+												when to_unsigned(7,cmdcounter'length) => -- ?ack should be active for longer					
+												when others => 
+												if ( i_cntrl0_user_cmd_ack = '0') then
+												ack <= '0'; 
+												cmdsent <= '0';
+												end if; 
+											
+											end case;
+						
+											cmdcounter <= cmdcounter+1; -- starts counting after cmd_ack
+											--cmdsent <= 1;
 									
 									
 										
@@ -235,9 +292,9 @@ end ramunit;
 
 					else 
 						-- todo: write init-values
-						readcounter <= to_unsigned(0,readcounter'length);
-						initsent <= initsent +1;
-						if( initsent = 0) then
+						cmdcounter <= to_unsigned(0,cmdcounter'length);
+						cmdcounter <= cmdcounter +1;
+						if( cmdcounter = 0) then
 							i_cntrl0_user_command_register <= "101";
 					 
 						else

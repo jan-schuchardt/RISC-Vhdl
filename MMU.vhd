@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity RAM is
     Port(   clk : in std_logic;
             rst: in std_logic;  --reset
-            addr: in std_logic_vector(9 downto 0);
+            addr: in std_logic_vector(24 downto 0);
             cmd: in std_logic_vector(2 downto 0); --bit 2: w:=1, r:=0, bit 0-1: data width (8, 16, prohibted, 32)  
             data_in: in std_logic_vector (31 downto 0);
             data_out: out std_logic_vector(31 downto 0);  
@@ -16,6 +16,23 @@ end entity;
 
 architecture a1 of RAM is
 
+
+	component ramunit
+		port(
+				  clk : in  STD_LOGIC;
+				  rst : in  STD_LOGIC;
+				  addr : in  STD_LOGIC_VECTOR (24 downto 0);
+				  cmd : in  STD_LOGIC_VECTOR (2 downto 0);
+				  data_in : in  STD_LOGIC_VECTOR (31 downto 0);
+				  data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+				  ack_out : out  STD_LOGIC;
+				  work_in : in  STD_LOGIC
+		
+		);
+	end component;
+	
+	
+
 	type blocks is array (0 to 12) of std_logic_vector(7 downto 0);  -- 12 Cells with 32 bit 
 
    signal data: blocks;
@@ -23,15 +40,29 @@ architecture a1 of RAM is
    signal test1: std_logic_vector(31 downto 0);
 	signal test2: std_logic_vector(31 downto 0);
 	signal test3: std_logic_vector(31 downto 0);
+	
+	signal i_cmd: std_logic_vector(2 downto 0);
+	signal i_data_out: std_logic_vector( 31 downto 0);
+	signal i_ack_out: std_logic;
+	
     begin
+	 
+	 
     
-	 ack_out<= ack_intern;
+	
 
 	process(clk) 
 	variable aligned_addr : std_logic_vector(9 downto 0); 
 	begin
 		if rising_edge(clk) then
-													  
+		
+			if( unsigned(addr) > to_unsigned(2047, addr'length) ) then
+			i_cmd <= cmd;
+			data_out <= i_data_out;
+			ack_out <= i_ack_out;
+			
+			else
+			 ack_out<= ack_intern;
 			if work_in = '1' then
 				if cmd(2) ='1' then
 					-- Write operation
@@ -80,7 +111,16 @@ architecture a1 of RAM is
 					
 				end if;
 			end if;
-				  
+	
+			
+			if work_in = '0' then
+				ack_intern <= '0';
+			end if;
+			
+			end if;
+					
+
+						  
 			if rst = '1' then
 			
 			--	data <= 0;	
@@ -98,9 +138,20 @@ architecture a1 of RAM is
 				ack_intern <= '0';
 			end if;
 			
-			if work_in = '0' then
-				ack_intern <= '0';
-			end if;
 		end if;
-	end process  ;     
+		
+	end process  ;    
+
+		u_ramunit: ramunit
+			port map(
+			  clk =>clk,
+           rst =>rst,
+           addr =>addr,
+           cmd =>i_cmd,
+           data_in =>data_in,
+           data_out =>i_data_out,
+           ack_out =>i_ack_out,
+           work_in =>work_in
+			  
+			  );
 end a1;
