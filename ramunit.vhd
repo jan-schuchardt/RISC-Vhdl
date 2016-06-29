@@ -133,7 +133,11 @@ end ramunit;
 	
 		begin
 
-		data_out <= read_data;
+		
+		data_out <= read_data when cmd(1 downto 0) = "11" else
+						"0000000000000000"+read_data(15 downto 0) when cmd(1 downto 0) = "01" else
+						"000000000000000000000000"+read_data(7 downto 0) when cmd(1 downto 0) = "00" else
+						0;
 		ack_out <= ack; 
 
 		i_sys_clk <= clk; 
