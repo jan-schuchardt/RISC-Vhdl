@@ -33,11 +33,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity ramunit is
     Port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
-           addr : in  STD_LOGIC_VECTOR (25 downto 0);
+           addr : in  STD_LOGIC_VECTOR (24 downto 0);
            cmd : in  STD_LOGIC_VECTOR (2 downto 0);
            data_in : in  STD_LOGIC_VECTOR (31 downto 0);
-           data_out : in  STD_LOGIC_VECTOR (31 downto 0);
-           ack_out : in  STD_LOGIC;
+           data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+           ack_out : out  STD_LOGIC;
            work_in : in  STD_LOGIC);
 end ramunit;
 
@@ -46,7 +46,7 @@ end ramunit;
 	component ddr
 	 port(
 			cntrl0_ddr2_dq                : inout std_logic_vector(7 downto 0);
-			cntrl0_ddr2_a                 : out   std_logic_vector(13 downto 0);
+			cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
 			cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
 			cntrl0_ddr2_cke               : out   std_logic;
 			cntrl0_ddr2_cs_n              : out   std_logic;
@@ -73,7 +73,7 @@ end ramunit;
 			cntrl0_sys_rst180_tb          : out   std_logic;
 			cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
 			cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
-			cntrl0_user_input_address     : in    std_logic_vector(25 downto 0);
+			cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
 			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
 			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
 			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
@@ -85,7 +85,7 @@ end ramunit;
 
 	-- intern signals
 	signal		i_cntrl0_ddr2_dq                :  std_logic_vector(7 downto 0);
-	signal      i_cntrl0_ddr2_a                 :    std_logic_vector(13 downto 0);
+	signal      i_cntrl0_ddr2_a                 :    std_logic_vector(12 downto 0);
 	signal 		i_cntrl0_ddr2_ba                :    std_logic_vector(1 downto 0);
 	signal      i_cntrl0_ddr2_cke               :    std_logic;
 	signal      i_cntrl0_ddr2_cs_n              :    std_logic;
@@ -112,7 +112,7 @@ end ramunit;
 	signal      i_cntrl0_sys_rst180_tb          :    std_logic;
 	signal      i_cntrl0_user_output_data       :    std_logic_vector(15 downto 0);
 	signal      i_cntrl0_user_input_data        :     std_logic_vector(15 downto 0);
-	signal      i_cntrl0_user_input_address     :     std_logic_vector(25 downto 0);
+	signal      i_cntrl0_user_input_address     :     std_logic_vector(24 downto 0);
 	signal      i_cntrl0_ddr2_dqs               :  std_logic_vector(0 downto 0);
 	signal      i_cntrl0_ddr2_dqs_n             :  std_logic_vector(0 downto 0);
 	signal      i_cntrl0_ddr2_ck                :    std_logic_vector(0 downto 0);
@@ -135,14 +135,14 @@ end ramunit;
 
 		
 		data_out <= read_data when cmd(1 downto 0) = "11" else
-						"0000000000000000"+read_data(15 downto 0) when cmd(1 downto 0) = "01" else
-						"000000000000000000000000"+read_data(7 downto 0) when cmd(1 downto 0) = "00" else
-						0;
+						"0000000000000000"&read_data(15 downto 0) when cmd(1 downto 0) = "01" else
+						"000000000000000000000000"&read_data(7 downto 0) when cmd(1 downto 0) = "00" else
+						"00000000000000000000000000000000";
 		ack_out <= ack; 
 
 		i_sys_clk <= clk; 
-		i_sys_clk_b <= clk; -- ?better directly
-		i_cntrl0_rst_dqs_div_in <= 0;  -- ?maybe 1
+		i_sys_clkb <= clk; -- ?better directly
+		i_cntrl0_rst_dqs_div_in <= '0';  -- ?maybe 1
 		i_reset_in_n <= not rst;  -- active low
 
 
@@ -150,25 +150,25 @@ end ramunit;
 		process(clk) begin
 			if( falling_edge(clk)) then
 			
-			if( rst = 1 ) then 
+			if( rst = '1' ) then 
 					i_cntrl0_user_command_register <= "010";
 					
-					readsent <= 0;
-					read_data <= 0;
-					readcounter <= 0;
-					initsent <= 0; 
-					i_cntrl0_user_input_data <= 0; 
-					i_cntrl0_user_input_address <= 0; 
-					i_cntrl0_burst_done <= 0; 
+					readsent <= '0';
+					read_data <= "00000000000000000000000000000000";
+					readcounter <= "00000000000";
+					initsent <= "00000000000"; 
+					i_cntrl0_user_input_data <= "0000000000000000"; 
+					i_cntrl0_user_input_address <= "0000000000000000000000000"; 
+					i_cntrl0_burst_done <= '0'; 
 					
 					-- todo: write init-values
 			else
 
-					if( i_cntrl_init_done) then
+					if( i_cntrl0_init_done = '1') then
 
-						if( work_in = 1) then
+						if( work_in = '1') then
 							
-							if( cmd(3) = 1) then --write
+							if( cmd(2) = '1') then --write
 							
 							-- todo
 							
@@ -176,45 +176,45 @@ end ramunit;
 							-- (todo: data width)
 							
 						
-								if( readsent = 0) then 
+								if( readsent = '0') then 
 								
-									if (not i_cntrl0_user_cmd_ack) then 
+									if ( i_cntrl0_user_cmd_ack = '0') then 
 										i_cntrl0_user_input_address <= addr;
 										i_cntrl0_user_command_register <= "110";
-										readsent <= 1;
-										readcounter <= 0; 
+										readsent <= '1';
+										readcounter <= "00000000000"; 
 									end if;
 								else
 								
-										if ( i_cntrl0_user_cmd_ack = 1) then 
+										if ( i_cntrl0_user_cmd_ack = '1') then 
 											case readcounter is
-												when "0" => 
-												when "1" => 
-												when "2" => 
+												when to_unsigned(0,readcounter'length) => 
+												when to_unsigned(1,readcounter'length) => 
+												when to_unsigned(2,readcounter'length) => 
 
 												-- ?values might be too low/high
-												when "3" => 	if (cntrl0_user_data_valid = 1) then -- ?todo: not setting ack in the next step, if data here is not valid
+												when to_unsigned(3,readcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then -- ?todo: not setting ack in the next step, if data here is not valid
 																	read_data( 31 downto 16) <= i_cntrl0_user_output_data;
 																	
 																	end if;
 																	
-												when "4" => 	if (cntrl0_user_data_valid = 1) then
+												when to_unsigned(4,readcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then
 																	read_data( 15 downto 0) <= i_cntrl0_user_output_data;
-																	ack <= 1; 
+																	ack <= '1'; 
 																	end if;		
 
-																	i_cntrl0_burst_done <= 1;
+																	i_cntrl0_burst_done <= '1';
 																	
-												when "5" =>		i_cntrl0_user_command_register <= "000";
+												when to_unsigned(5,readcounter'length) =>		i_cntrl0_user_command_register <= "000";
 
 																		
-												when "6" => 	i_cntrl0_burst_done <= 0; 				
+												when to_unsigned(6,readcounter'length) => 	i_cntrl0_burst_done <= '0'; 				
 																	
-												when "7" => -- ?ack should be active for longer					
+												when to_unsigned(7,readcounter'length) => -- ?ack should be active for longer					
 												when others => 
-												if (not i_cntrl0_user_cmd_ack) then
-												ack <= 0; 
-												readsent <= 0;
+												if ( i_cntrl0_user_cmd_ack = '0') then
+												ack <= '0'; 
+												readsent <= '0';
 												end if; 
 											
 											end case;
@@ -235,7 +235,7 @@ end ramunit;
 
 					else 
 						-- todo: write init-values
-						readcounter <= 0;
+						readcounter <= to_unsigned(0,readcounter'length);
 						initsent <= initsent +1;
 						if( initsent = 0) then
 							i_cntrl0_user_command_register <= "101";
