@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jun 29 12:28:11 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "rst" LOCATE = SITE "V8" LEVEL 1;
+PIN rst_pin<0> = BEL "rst" PINNAME PAD;
+PIN "rst_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "b<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "D7" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "B9" LEVEL 1;
+COMP "b<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "C5" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "D5" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "C6" LEVEL 1;
+COMP "g<3>" LOCATE = SITE "D6" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "B3" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "B8" LEVEL 1;
+COMP "r<3>" LOCATE = SITE "C8" LEVEL 1;
+COMP "slow" LOCATE = SITE "U10" LEVEL 1;
+PIN slow_pin<0> = BEL "slow" PINNAME PAD;
+PIN "slow_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "hsync" LOCATE = SITE "C11" LEVEL 1;
+COMP "vsync" LOCATE = SITE "B11" LEVEL 1;
+SCHEMATIC END;
+

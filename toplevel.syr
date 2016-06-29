@@ -1,0 +1,1006 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "toplevel"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" in Library work.
+Architecture leitwerk_1 of Entity leitwerk is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" in Library work.
+Architecture a1 of Entity ram is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd" in Library work.
+Architecture behavioral of Entity clockdivider is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" in Library work.
+Entity <vga> compiled.
+Entity <vga> (Architecture <behaviour>) compiled.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd" in Library work.
+Architecture behavioral of Entity vga_clk is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" in Library work.
+Architecture behavioral of Entity toplevel is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <toplevel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga> in library <work> (architecture <behaviour>).
+
+Analyzing hierarchy for entity <vga_clk> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CPU> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <leitwerk> in library <work> (architecture <leitwerk_1>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RAM> in library <work> (architecture <a1>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <toplevel> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" line 105: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" line 105: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
+Entity <toplevel> analyzed. Unit <toplevel> generated.
+
+Analyzing Entity <vga> in library <work> (Architecture <behaviour>).
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" line 46: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" line 78: Index value(s) does not match array range, simulation mismatch.
+Entity <vga> analyzed. Unit <vga> generated.
+
+Analyzing Entity <vga_clk> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <vga_clk>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <vga_clk>.
+Entity <vga_clk> analyzed. Unit <vga_clk> generated.
+
+Analyzing Entity <CPU> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd" line 74: Unconnected output port 'err_out' of component 'leitwerk'.
+Entity <CPU> analyzed. Unit <CPU> generated.
+
+Analyzing Entity <leitwerk> in library <work> (Architecture <leitwerk_1>).
+INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 259: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 330: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 404: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 97: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <err>
+Entity <leitwerk> analyzed. Unit <leitwerk> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 96: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 115: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 125: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 136: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 147: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 160: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 171: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 182: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 197: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 222: Index value(s) does not match array range, simulation mismatch.
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <RAM> in library <work> (Architecture <a1>).
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 40: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 43: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 47: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:2679 - Register <test1> in unit <RAM> has a constant value of 00000000001100001000000010010011 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <test2> in unit <RAM> has a constant value of 11111111110111111111000001101111 during circuit operation. The register is replaced by logic.
+Entity <RAM> analyzed. Unit <RAM> generated.
+
+Analyzing Entity <ClockDivider> in library <work> (Architecture <Behavioral>).
+Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd".
+WARNING:Xst:647 - Input <rgb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 31x32-bit dual-port RAM <Mram_reg_data> for signal <reg_data>.
+    Found 1-bit register for signal <h>.
+    Found 1-bit register for signal <v>.
+    Found 1-bit 32-to-1 multiplexer for signal <currentValue>.
+    Found 1-bit register for signal <offs_intX>.
+    Found 1-bit register for signal <offs_intY>.
+    Found 5-bit register for signal <reg_counter>.
+    Found 5-bit addsub for signal <reg_counter$share0000> created at line 95.
+    Found 10-bit up counter for signal <x_cnt>.
+    Found 10-bit up counter for signal <y_cnt>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <vga> synthesized.
+
+
+Synthesizing Unit <leitwerk>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd".
+    Found finite state machine <FSM_0> for signal <HEADER_wait_state_HEADER>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 200                                            |
+    | Inputs             | 14                                             |
+    | Outputs            | 8                                              |
+    | Clock              | clk_in                    (rising_edge)        |
+    | Clock enable       | HEADER_wait_state_HEADER$and0000 (positive)       |
+    | Reset              | rst_in                    (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000000000000000000000000000               |
+    | Power Up State     | 00000000000000000000000000000000               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state1>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 31                                             |
+    | Inputs             | 19                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk_in                    (rising_edge)        |
+    | Clock enable       | err_out<0>                (negative)           |
+    | Reset              | rst_in                    (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <state2>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 117                                            |
+    | Inputs             | 13                                             |
+    | Outputs            | 10                                             |
+    | Clock              | clk_in                    (rising_edge)        |
+    | Clock enable       | HEADER_wait_state_HEADER$and0000 (positive)       |
+    | Reset              | rst_in                    (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit register for signal <alu_adr_out3>.
+    Found 1-bit register for signal <alu_work_out<0>>.
+    Found 1-bit register for signal <mmu_work_out<0>>.
+    Found 3-bit register for signal <mmu_com_out>.
+    Found 6-bit register for signal <alu_com_out>.
+    Found 32-bit register for signal <mmu_adr_out>.
+    Found 32-bit register for signal <alu_data_out1>.
+    Found 32-bit register for signal <alu_data_out2>.
+    Found 32-bit register for signal <mmu_data_out>.
+    Found 5-bit 4-to-1 multiplexer for signal <alu_adr_out3$mux0002> created at line 232.
+    Found 6-bit 4-to-1 multiplexer for signal <alu_com_out$mux0002> created at line 232.
+    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0003> created at line 298.
+    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0005> created at line 350.
+    Found 30-bit adder for signal <alu_data_out1$add0001> created at line 166.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out1$mux0002> created at line 232.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out2$mux0001> created at line 232.
+    Found 1-bit 4-to-1 multiplexer for signal <alu_work_out_0$mux0003> created at line 232.
+    Found 1-bit register for signal <err<0>>.
+    Found 30-bit register for signal <ir>.
+    Found 30-bit register for signal <pc>.
+    Summary:
+	inferred   3 Finite State Machine(s).
+	inferred 205 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  88 Multiplexer(s).
+Unit <leitwerk> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd".
+    Found finite state machine <FSM_3> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk_in                    (rising_edge)        |
+    | Reset              | rst_in                    (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <cu_data_out>.
+    Found 32-bit register for signal <acc>.
+    Found 32-bit comparator less for signal <acc$cmp_lt0000> created at line 190.
+    Found 32-bit comparator less for signal <acc$cmp_lt0001> created at line 197.
+    Found 32-bit addsub for signal <acc$share0000> created at line 106.
+    Found 32-bit xor2 for signal <acc$xor0000> created at line 157.
+    Found 32-bit xor2 for signal <acc$xor0001> created at line 160.
+    Found 5-bit register for signal <debug_adr_signal>.
+    Found 32-bit register for signal <debug_signal>.
+    Found 992-bit register for signal <reg_data>.
+    Found 32-bit register for signal <s_op1>.
+    Found 32-bit register for signal <s_op2>.
+    Found 5-bit register for signal <s_op3>.
+    Found 6-bit register for signal <s_opc>.
+INFO:Xst:738 - HDL ADVISOR - 992 flip-flops were inferred for signal <reg_data>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 1168 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <RAM>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd".
+WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <ack_intern>.
+    Found 104-bit register for signal <data>.
+    Found 10-bit adder for signal <data$add0000> created at line 67.
+    Found 10-bit adder for signal <data$add0001> created at line 67.
+    Found 10-bit adder for signal <data$add0002> created at line 67.
+    Found 8-bit 4-to-1 multiplexer for signal <data_0$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_1$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_10$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_11$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_12$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_2$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_3$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_4$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_5$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_6$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_7$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0000> created at line 38.
+    Found 8-bit 4-to-1 multiplexer for signal <data_8$mux0001> created at line 50.
+    Found 8-bit 4-to-1 multiplexer for signal <data_9$mux0000> created at line 38.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0000> created at line 67.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0001> created at line 67.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0002> created at line 67.
+    Found 8-bit 13-to-1 multiplexer for signal <data_out$varindex0003> created at line 67.
+    Summary:
+	inferred 137 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 184 Multiplexer(s).
+Unit <RAM> synthesized.
+
+
+Synthesizing Unit <ClockDivider>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd".
+    Found 1-bit register for signal <clk_sgn>.
+    Found 32-bit up counter for signal <counter>.
+    Found 32-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 53.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <ClockDivider> synthesized.
+
+
+Synthesizing Unit <vga_clk>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd".
+Unit <vga_clk> synthesized.
+
+
+Synthesizing Unit <CPU>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd".
+WARNING:Xst:1305 - Output <cpu_err_out> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <cu_mmu_adr_out<31:10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <alu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <alu_debug_data_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <CPU> synthesized.
+
+
+Synthesizing Unit <toplevel>.
+    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd".
+WARNING:Xst:646 - Signal <y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <rgb> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <offs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <toplevel> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 31x32-bit dual-port RAM                               : 1
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 3
+ 30-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 5-bit addsub                                          : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+# Registers                                            : 72
+ 1-bit register                                        : 9
+ 3-bit register                                        : 1
+ 30-bit register                                       : 2
+ 32-bit register                                       : 41
+ 5-bit register                                        : 4
+ 6-bit register                                        : 2
+ 8-bit register                                        : 13
+# Comparators                                          : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 2
+# Multiplexers                                         : 31
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 4-to-1 multiplexer                              : 1
+ 6-bit 8-to-1 multiplexer                              : 2
+ 8-bit 13-to-1 multiplexer                             : 4
+ 8-bit 4-to-1 multiplexer                              : 19
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <PROZESSOR/RECHENEINHEIT/state/FSM> on signal <state[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00001
+ 0001  | 10000
+ 0010  | 01000
+ 0011  | 00100
+ 0100  | 00010
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <PROZESSOR/CU/state2/FSM> on signal <state2[1:10]> with one-hot encoding.
+---------------------
+ State | Encoding
+---------------------
+ 0000  | 0000000001
+ 0001  | 0000000010
+ 0010  | 0000000100
+ 0011  | 0000001000
+ 0100  | 0000010000
+ 0101  | 0000100000
+ 0110  | 0001000000
+ 0111  | 0010000000
+ 1000  | 0100000000
+ 1001  | 1000000000
+---------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <PROZESSOR/CU/state1/FSM> on signal <state1[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <PROZESSOR/CU/HEADER_wait_state_HEADER/FSM> on signal <HEADER_wait_state_HEADER[1:3]> with gray encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 000
+ 00000000000000000000000000000001 | 001
+ 00000000000000000000000000000010 | 011
+ 00000000000000000000000000000011 | 010
+ 00000000000000000000000000000100 | 110
+ 00000000000000000000000000000101 | 111
+ 00000000000000000000000000000110 | 101
+ 00000000000000000000000000000111 | 100
+----------------------------------------------
+WARNING:Xst:2677 - Node <mmu_adr_out_10> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_11> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_12> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_13> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_14> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_15> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_16> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_17> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_18> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_19> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_20> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_21> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_22> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_23> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_24> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_25> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_26> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_27> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_28> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_29> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_30> of sequential type is unconnected in block <CU>.
+WARNING:Xst:2677 - Node <mmu_adr_out_31> of sequential type is unconnected in block <CU>.
+
+Synthesizing (advanced) Unit <toplevel>.
+INFO:Xst:3226 - The RAM <Inst_vga/Mram_reg_data> will be implemented as a BLOCK RAM, absorbing the following register(s): <Inst_vga/reg_counter>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk25>         | rise     |
+    |     weA            | connected to signal <Inst_vga/Mram_reg_data_not0000> | high     |
+    |     addrA          | connected to signal <debug_adr>     |          |
+    |     diA            | connected to signal <debug>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk25>         | rise     |
+    |     addrB          | connected to signal <Inst_vga/reg_counter_mux0001> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <toplevel> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 31x32-bit dual-port block RAM                         : 1
+# Adders/Subtractors                                   : 6
+ 30-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 4-bit adder                                           : 3
+ 5-bit addsub                                          : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+# Registers                                            : 1540
+ Flip-Flops                                            : 1540
+# Comparators                                          : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 2
+# Multiplexers                                         : 31
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 4-to-1 multiplexer                              : 1
+ 6-bit 8-to-1 multiplexer                              : 2
+ 8-bit 13-to-1 multiplexer                             : 4
+ 8-bit 4-to-1 multiplexer                              : 19
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <toplevel> ...
+
+Optimizing unit <leitwerk> ...
+
+Optimizing unit <RAM> ...
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_31> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_30> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_29> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_28> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_27> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_26> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_25> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_24> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_23> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_22> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_21> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_20> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_19> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_18> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_17> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_16> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_15> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_14> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_13> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_12> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_11> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/CU/mmu_adr_out_10> of sequential type is unconnected in block <toplevel>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block toplevel, actual ratio is 51.
+FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_0 has been replicated 1 time(s)
+FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_1 has been replicated 1 time(s)
+FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_2 has been replicated 1 time(s)
+FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_3 has been replicated 1 time(s)
+FlipFlop PROZESSOR/RECHENEINHEIT/s_op2_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1575
+ Flip-Flops                                            : 1575
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : toplevel.ngr
+Top Level Output File Name         : toplevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 7084
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 51
+#      LUT2                        : 249
+#      LUT2_D                      : 30
+#      LUT2_L                      : 32
+#      LUT3                        : 726
+#      LUT3_D                      : 19
+#      LUT3_L                      : 34
+#      LUT4                        : 3807
+#      LUT4_D                      : 222
+#      LUT4_L                      : 634
+#      MUXCY                       : 731
+#      MUXF5                       : 384
+#      MUXF6                       : 36
+#      MUXF7                       : 2
+#      MUXF8                       : 1
+#      VCC                         : 1
+#      XORCY                       : 114
+# FlipFlops/Latches                : 1575
+#      FDC                         : 36
+#      FDCE                        : 230
+#      FDE                         : 1181
+#      FDP                         : 1
+#      FDPE                        : 33
+#      FDR                         : 16
+#      FDRE                        : 44
+#      FDS                         : 1
+#      FDSE                        : 33
+# RAMS                             : 1
+#      RAMB16BWE                   : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 18
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 15
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                     3053  out of   5888    51%  
+ Number of Slice Flip Flops:           1575  out of  11776    13%  
+ Number of 4 input LUTs:               5814  out of  11776    49%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    372     4%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------+---------------------------------------+-------+
+Clock Signal                                          | Clock buffer(FF name)                 | Load  |
+------------------------------------------------------+---------------------------------------+-------+
+clk                                                   | Inst_vga_clk/DCM_SP_INST:CLKDV        | 30    |
+PROZESSOR/clock_clk_out1(PROZESSOR/CLOCKER/clk_out1:O)| BUFG(*)(PROZESSOR/RECHENEINHEIT/acc_0)| 1513  |
+clk                                                   | Inst_vga_clk/DCM_SP_INST:CLK0         | 33    |
+------------------------------------------------------+---------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 300   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 20.240ns (Maximum Frequency: 49.408MHz)
+   Minimum input arrival time before clock: 6.069ns
+   Maximum output required time after clock: 11.508ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.049ns (frequency: 110.511MHz)
+  Total number of paths / destination ports: 16232 / 101
+-------------------------------------------------------------------------
+Delay:               9.049ns (Levels of Logic = 47)
+  Source:            PROZESSOR/CLOCKER/counter_7 (FF)
+  Destination:       PROZESSOR/CLOCKER/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PROZESSOR/CLOCKER/counter_7 to PROZESSOR/CLOCKER/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.590  PROZESSOR/CLOCKER/counter_7 (PROZESSOR/CLOCKER/counter_7)
+     LUT1:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11>)
+     MUXCY:CI->O          34   0.141   1.406  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<12> (PROZESSOR/CLOCKER/counter_cmp_ge0000)
+     LUT3:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcount_counter_lut<0> (PROZESSOR/CLOCKER/Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<0> (PROZESSOR/CLOCKER/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<1> (PROZESSOR/CLOCKER/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<2> (PROZESSOR/CLOCKER/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<3> (PROZESSOR/CLOCKER/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<4> (PROZESSOR/CLOCKER/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<5> (PROZESSOR/CLOCKER/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<6> (PROZESSOR/CLOCKER/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<7> (PROZESSOR/CLOCKER/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<8> (PROZESSOR/CLOCKER/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<9> (PROZESSOR/CLOCKER/Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<10> (PROZESSOR/CLOCKER/Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<11> (PROZESSOR/CLOCKER/Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<12> (PROZESSOR/CLOCKER/Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<13> (PROZESSOR/CLOCKER/Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<14> (PROZESSOR/CLOCKER/Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<15> (PROZESSOR/CLOCKER/Mcount_counter_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<16> (PROZESSOR/CLOCKER/Mcount_counter_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<17> (PROZESSOR/CLOCKER/Mcount_counter_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<18> (PROZESSOR/CLOCKER/Mcount_counter_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<19> (PROZESSOR/CLOCKER/Mcount_counter_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<20> (PROZESSOR/CLOCKER/Mcount_counter_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<21> (PROZESSOR/CLOCKER/Mcount_counter_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<22> (PROZESSOR/CLOCKER/Mcount_counter_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<23> (PROZESSOR/CLOCKER/Mcount_counter_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<24> (PROZESSOR/CLOCKER/Mcount_counter_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<25> (PROZESSOR/CLOCKER/Mcount_counter_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<26> (PROZESSOR/CLOCKER/Mcount_counter_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<27> (PROZESSOR/CLOCKER/Mcount_counter_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<28> (PROZESSOR/CLOCKER/Mcount_counter_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<29> (PROZESSOR/CLOCKER/Mcount_counter_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<30> (PROZESSOR/CLOCKER/Mcount_counter_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  PROZESSOR/CLOCKER/Mcount_counter_xor<31> (PROZESSOR/CLOCKER/Mcount_counter31)
+     FDC:D                     0.252          PROZESSOR/CLOCKER/counter_31
+    ----------------------------------------
+    Total                      9.049ns (7.053ns logic, 1.996ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROZESSOR/clock_clk_out1'
+  Clock period: 20.240ns (frequency: 49.408MHz)
+  Total number of paths / destination ports: 10289272 / 2988
+-------------------------------------------------------------------------
+Delay:               20.240ns (Levels of Logic = 22)
+  Source:            PROZESSOR/RECHENEINHEIT/s_op2_3_1 (FF)
+  Destination:       PROZESSOR/RECHENEINHEIT/acc_25 (FF)
+  Source Clock:      PROZESSOR/clock_clk_out1 rising
+  Destination Clock: PROZESSOR/clock_clk_out1 rising
+
+  Data Path: PROZESSOR/RECHENEINHEIT/s_op2_3_1 to PROZESSOR/RECHENEINHEIT/acc_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.591   0.812  PROZESSOR/RECHENEINHEIT/s_op2_3_1 (PROZESSOR/RECHENEINHEIT/s_op2_3_1)
+     LUT2_D:I0->O         14   0.648   1.003  PROZESSOR/RECHENEINHEIT/acc_cmp_eq002211 (N367)
+     LUT4:I3->O           32   0.648   1.265  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00201 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq0020)
+     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_lut<5> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_lut<5>)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<5> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<6> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<7> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<8> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<9> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<10> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<11> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<12> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<12>)
+     MUXCY:CI->O           5   0.269   0.713  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<13> (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<13>)
+     LUT3:I1->O          190   0.643   1.344  PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<15>1 (PROZESSOR/RECHENEINHEIT/acc_varindex0000<4>_wg_cy<15>)
+     LUT4_D:I2->O         55   0.648   1.272  PROZESSOR/RECHENEINHEIT/acc_cmp_eq011511 (N333)
+     LUT4:I3->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_cmp_eq0100151_SW4 (N1739)
+     LUT4_D:I3->O         11   0.648   0.936  PROZESSOR/RECHENEINHEIT/acc_cmp_eq01191 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq0119)
+     LUT4:I3->O            1   0.648   0.452  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>765 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>765)
+     LUT4:I2->O            1   0.648   0.452  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>797 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>797)
+     LUT3:I2->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>855_SW0 (N1692)
+     LUT4_L:I3->LO         1   0.648   0.103  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>929 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>929)
+     LUT4:I3->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1141 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1141)
+     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_mux0006<25>1174 (PROZESSOR/RECHENEINHEIT/acc_mux0006<25>)
+     FDE:D                     0.252          PROZESSOR/RECHENEINHEIT/acc_25
+    ----------------------------------------
+    Total                     20.240ns (10.618ns logic, 9.622ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              4.766ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Inst_vga/y_cnt_0 (FF)
+  Destination Clock: clk rising 0.5X
+
+  Data Path: rst to Inst_vga/y_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           389   0.849   1.518  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           10   0.648   0.882  Inst_vga/x_cnt_or00001 (Inst_vga/x_cnt_or0000)
+     FDR:R                     0.869          Inst_vga/x_cnt_0
+    ----------------------------------------
+    Total                      4.766ns (2.366ns logic, 2.400ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PROZESSOR/clock_clk_out1'
+  Total number of paths / destination ports: 1174 / 1174
+-------------------------------------------------------------------------
+Offset:              6.069ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       PROZESSOR/RECHENEINHEIT/reg_data_10_0 (FF)
+  Destination Clock: PROZESSOR/clock_clk_out1 rising
+
+  Data Path: rst to PROZESSOR/RECHENEINHEIT/reg_data_10_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           389   0.849   1.518  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            8   0.648   0.837  PROZESSOR/RECHENEINHEIT/reg_data_16_and000051 (PROZESSOR/RECHENEINHEIT/reg_data_16_and0000_bdd4)
+     LUT4:I1->O           32   0.643   1.262  PROZESSOR/RECHENEINHEIT/reg_data_24_and000011 (PROZESSOR/RECHENEINHEIT/reg_data_24_and0000)
+     FDE:CE                    0.312          PROZESSOR/RECHENEINHEIT/reg_data_24_0
+    ----------------------------------------
+    Total                      6.069ns (2.452ns logic, 3.617ns route)
+                                       (40.4% logic, 59.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 582 / 6
+-------------------------------------------------------------------------
+Offset:              11.508ns (Levels of Logic = 9)
+  Source:            Inst_vga/reg_counter_0 (FF)
+  Destination:       b<3> (PAD)
+  Source Clock:      clk rising 0.5X
+
+  Data Path: Inst_vga/reg_counter_0 to b<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.591   0.812  Inst_vga/reg_counter_0 (Inst_vga/reg_counter_0)
+     LUT4:I0->O            1   0.648   0.000  Inst_vga/pattern_and00001 (Inst_vga/pattern_and00001)
+     MUXF5:I0->O          16   0.276   1.177  Inst_vga/pattern_and0000_f5 (Inst_vga/pattern_and0000)
+     LUT4:I0->O            1   0.648   0.000  Inst_vga/Mmux_currentValue_10 (Inst_vga/Mmux_currentValue_10)
+     MUXF5:I0->O           1   0.276   0.000  Inst_vga/Mmux_currentValue_8_f5 (Inst_vga/Mmux_currentValue_8_f5)
+     MUXF6:I0->O           1   0.291   0.000  Inst_vga/Mmux_currentValue_6_f6 (Inst_vga/Mmux_currentValue_6_f6)
+     MUXF7:I0->O           1   0.291   0.000  Inst_vga/Mmux_currentValue_4_f7 (Inst_vga/Mmux_currentValue_4_f7)
+     MUXF8:I0->O           1   0.291   0.452  Inst_vga/Mmux_currentValue_2_f8 (Inst_vga/currentValue)
+     LUT3:I2->O            4   0.648   0.587  Inst_vga/b_and00001 (b_0_OBUF)
+     OBUF:I->O                 4.520          b_3_OBUF (b<3>)
+    ----------------------------------------
+    Total                     11.508ns (8.480ns logic, 3.028ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 92.00 secs
+Total CPU time to Xst completion: 91.75 secs
+ 
+--> 
+
+Total memory usage is 320684 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   80 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

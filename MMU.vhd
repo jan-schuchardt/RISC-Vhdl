@@ -89,7 +89,7 @@ architecture a1 of RAM is
 			data(1)<= test1(15 downto 8);
 			data(2)<= test1(23 downto 16);
 			data(3)<= test1(31 downto 24);
-			test2 <= "11111100111111111111" & "00000" & "11011" & "11";
+			test2 <= "11111111110111111111" & "00000" & "11011" & "11";
 			data(4)<= test2(7 downto 0);
 			data(5)<= test2(15 downto 8);
 			data(6)<= test2(23 downto 16);

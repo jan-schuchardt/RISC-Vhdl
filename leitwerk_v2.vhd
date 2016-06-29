@@ -83,8 +83,7 @@ mmu_adr_out: out std_logic_vector(31 downto 0);
 mmu_com_out: out std_logic_vector(2 downto 0);
 -- Synchronisationsleitungen
 mmu_work_out: out std_logic_vector(0 downto 0);
-mmu_ack_in: in std_logic_vector(0 downto 0);
-pc_out : out std_logic_vector(31 downto 0)
+mmu_ack_in: in std_logic_vector(0 downto 0)
 );
 end entity;
 architecture leitwerk_1 of leitwerk is
@@ -114,10 +113,8 @@ begin
   mmu_com_out <= std_logic_vector(to_unsigned(0,mmu_com_out'length));
   mmu_work_out <= std_logic_vector(to_unsigned(0,mmu_work_out'length));
  elsif err="1" then
- pc_out(31 downto 2) <= pc;
 -- NOP
  elsif rising_edge(clk_in) then
- pc_out(31 downto 2) <= pc;
   case state1 is
   when "00" =>
 -- Lesen von Speicherzelle dessen Adresse in pc steht
@@ -143,7 +140,7 @@ begin
      alu_data_out1 <= ir(29 downto 10) & "000000000000"; alu_data_out2 <= std_logic_vector(to_unsigned(0,alu_data_out2'length)); alu_adr_out3 <= ir(9 downto 5); alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);
@@ -156,7 +153,7 @@ begin
      alu_data_out1 <= ir(29 downto 10) & "000000000000"; alu_data_out2 <= std_logic_vector(pc(29 downto 0)) & "00"; alu_adr_out3 <= ir(9 downto 5); alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);
@@ -169,7 +166,7 @@ begin
      alu_data_out1 <= std_logic_vector(unsigned(pc) + 1) & "00"; alu_data_out2 <= std_logic_vector(to_unsigned(0,alu_data_out2'length)); alu_adr_out3 <= ir(9 downto 5); alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state2 <= "0011";
@@ -177,7 +174,7 @@ begin
      alu_data_out1 <= std_logic_vector(resize(signed(ir(29 downto 29) & ir(17 downto 10) & ir(18 downto 18) & ir(28 downto 19) & "0"),alu_data_out1'length)); alu_data_out2 <= std_logic_vector(pc(29 downto 0)) & "00"; alu_adr_out3 <= "00000"; alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0100";
     when "0100" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
     when "0101" =>
      alu_work_out <= "0";
      state2 <= "0000";
@@ -201,7 +198,7 @@ begin
      alu_data_out1 <= std_logic_vector(unsigned(pc) + 1) & "00"; alu_data_out2 <= std_logic_vector(to_unsigned(0,alu_data_out2'length)); alu_adr_out3 <= ir(9 downto 5); alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state2 <= "0100";
@@ -209,7 +206,7 @@ begin
      alu_data_out1 <= std_logic_vector(pc(29 downto 0)) & "00"; alu_data_out2 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out2 ' length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "1" & "0000"; alu_work_out <= "1";
      state2 <= "0101";
     when "0101" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0110"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= 0; state2 <= "0110"; when others => err <= "1"; end case;
     when "0110" =>
      alu_work_out <= "0";
      state2 <= "0111";
@@ -217,7 +214,7 @@ begin
      alu_data_out1 <= alu_data_in(31 downto 0); alu_data_out2 <= std_logic_vector(resize(signed(ir(29 downto 18)),alu_data_out2'length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "0" & "0000"; alu_work_out <= "1";
      state2 <= "1000";
     when "1000" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "1001"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= 0; state2 <= "1001"; when others => err <= "1"; end case;
     when "1001" =>
      alu_work_out <= "0";
      state2 <= "0000";
@@ -243,7 +240,7 @@ begin
      end case;
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      case ir(12 downto 12) is
@@ -283,7 +280,7 @@ begin
      end case;
      state2 <= "0011";
     when "0011" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0100"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0100"; when others => err <= "1"; end case;
     when "0100" =>
      alu_work_out <= "0";
      state2 <= "0000";
@@ -336,7 +333,7 @@ begin
      end case;
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);
@@ -409,7 +406,7 @@ begin
      end case;
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);
@@ -422,7 +419,7 @@ begin
      alu_data_out1 <= std_logic_vector(resize(signed(ir(29 downto 23) & ir(9 downto 5)),alu_data_out1 ' length)); alu_data_out2 <= std_logic_vector(resize(unsigned(std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out2 ' length))),alu_data_out2 ' length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "1" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      mmu_adr_out <= alu_data_in;
@@ -431,7 +428,7 @@ begin
      alu_data_out1 <= std_logic_vector(to_unsigned(0,alu_data_out1 ' length)); alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2 ' length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "1" & "0000"; alu_work_out <= "1";
      state2 <= "0100";
     when "0100" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
     when "0101" =>
      alu_work_out <= "0";
      case ir(12 downto 10) is
@@ -463,7 +460,7 @@ begin
      alu_data_out1 <= std_logic_vector(resize(signed(ir(29 downto 18)),alu_data_out1 ' length)); alu_data_out2 <= std_logic_vector(resize(unsigned(std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out2 ' length))),alu_data_out2 ' length)); alu_adr_out3 <= "00000"; alu_com_out <= "0" & "1" & "0000"; alu_work_out <= "1";
      state2 <= "0001";
     when "0001" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0010"; when others => err <= "1"; end case;
     when "0010" =>
      alu_work_out <= "0";
      mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out ' length)); mmu_adr_out <= alu_data_in(31 downto 0); mmu_com_out <= "0" & "00"; mmu_work_out <= "1";
@@ -491,7 +488,7 @@ begin
       state2 <= "0100";
      end if;
     when "0100" =>
-     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 8 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 9 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
+     HEADER_wait_state_HEADER <= 0; case HEADER_wait_state_HEADER is when 0 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 1 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 2 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 3 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 4 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 5 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 6 => HEADER_wait_state_HEADER <= HEADER_wait_state_HEADER + 1; when 7 => HEADER_wait_state_HEADER <= 0; state2 <= "0101"; when others => err <= "1"; end case;
     when "0101" =>
      alu_work_out <= "0";
      state1 <= std_logic_vector(to_unsigned(0,state1'length)); state2 <= std_logic_vector(to_unsigned(0,state2'length)); pc <= std_logic_vector(unsigned(pc) + 1);

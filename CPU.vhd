@@ -35,6 +35,7 @@ entity CPU is
 	cpu_clk_in, cpu_rst_in : in STD_LOGIC;
 	cpu_slow_in: in STD_LOGIC;
 	cpu_debug_out : out std_logic_vector(31 downto 0);
+	cpu_debug_adr_out: out std_logic_vector(4 downto 0);
 	cpu_err_out: out std_logic
 	);
 			 
@@ -69,6 +70,7 @@ signal clock_clk_out: std_logic;
 begin
 
 
+
 CU: entity work.leitwerk port map(
 	
 	clk_in => clock_clk_out,
@@ -87,8 +89,7 @@ CU: entity work.leitwerk port map(
 	mmu_adr_out => cu_mmu_adr_out,
 	mmu_com_out => cu_mmu_com_out,
 	mmu_work_out => cu_mmu_work_out,
-	mmu_ack_in => cu_mmu_ack_in,
-	pc_out => cpu_debug_out
+	mmu_ack_in => cu_mmu_ack_in
 );
 
 RECHENEINHEIT: entity work.ALU port map(
@@ -99,8 +100,9 @@ RECHENEINHEIT: entity work.ALU port map(
 	cu_adr_in => cu_alu_adr_out3,
 	cu_com_in => cu_alu_com_out,
 	cu_work_in => cu_alu_work_out,
-	cu_data_out => cu_alu_data_in
-	--debug_data_out => cpu_debug_out
+	cu_data_out => cu_alu_data_in,
+	debug_data_out => cpu_debug_out,
+	debug_adr_out => cpu_debug_adr_out
 );
 
 SPEICHER: entity work.RAM port map(

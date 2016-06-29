@@ -57,7 +57,8 @@ COMPONENT vga
 		b : OUT std_logic_vector(3 downto 0);
 		h : OUT std_logic;
 		v : OUT std_logic;
-		reg: in std_logic_vector(31 downto 0)
+		reg_in: in std_logic_vector(31 downto 0);
+		reg_adr_in : in std_logic_vector(4 downto 0)
 		);
 	END COMPONENT;
 	
@@ -78,6 +79,7 @@ COMPONENT vga
 	signal offs : std_logic;
 	
 	signal debug:std_logic_vector(31 downto 0);
+	signal debug_adr: std_logic_vector(4 downto 0);
 	
 	signal clk_cpu : std_logic;
 
@@ -96,7 +98,8 @@ Inst_vga: vga PORT MAP(
 		b => b,
 		h => hsync,
 		v => vsync,
-		reg => debug
+		reg_in => debug,
+		reg_adr_in => debug_adr
 	);
 	
 Inst_vga_clk: vga_clk PORT MAP(
@@ -112,6 +115,7 @@ PROZESSOR: entity work.cpu PORT MAP(
 	cpu_rst_in => rst,
 	cpu_clk_in => clk_cpu, --clk25,
 	cpu_debug_out => debug,
+	cpu_debug_adr_out => debug_adr,
 	cpu_slow_in => slow,
 	cpu_err_out => err_out
 );

@@ -50,7 +50,7 @@ begin
 		clk_sgn <= '0';
 		counter <= (others => '0');
 	elsif rising_edge(clk_in) then
-		if counter >= x"17D7840" then
+		if counter >= x"989680" then
 			counter <= (others => '0');
 			clk_sgn <= not clk_sgn;
 		else

@@ -30,7 +30,8 @@ entity ALU is
 	
 	--out
 	cu_data_out: out std_logic_vector(31 downto 0);
-	debug_data_out:out std_logic_vector(31 downto 0)
+	debug_data_out:out std_logic_vector(31 downto 0);
+	debug_adr_out: out std_logic_vector(4 downto 0)
 	);
 	
 end ALU;
@@ -47,11 +48,13 @@ architecture Behavioral of ALU is
 	signal state: STD_LOGIC_VECTOR(3 downto 0);
 	signal acc: UNSIGNED(31 downto 0);
 	signal debug_signal: STD_LOGIC_VECTOR(31 downto 0);
+	signal debug_adr_signal: STD_LOGIC_VECTOR(4 downto 0);
 	
 	
 	begin
 	
 	debug_data_out <= debug_signal;
+	debug_adr_out <= debug_adr_signal;
 
 process (clk_in, rst_in) 
 begin
@@ -63,7 +66,6 @@ begin
 		state <= "0000";
 	elsif rising_edge(clk_in) then
 	
-	debug_signal <= reg_data(1);
 	---- Different operations from here on ----
 	
 	
@@ -218,18 +220,32 @@ begin
 			
 					if s_op3 /= std_logic_vector(to_unsigned(0,s_op3'length)) then
 								reg_data(to_integer(unsigned(s_op3)))<= std_logic_vector(acc); 
-								
 								cu_data_out <= std_logic_vector(acc);
+								
+					else
+						cu_data_out <= std_logic_vector(acc);
 					end if;
+					
+					
 
 			
-			state <= "0000";
+			state <= "0100";
 		end if;
 		
-		
+		--state4: wait
+		if(state = "0100") then
+			
+			debug_signal <= std_logic_vector(acc);
+			debug_adr_signal <= s_op3;
+			
+			state <= "0000";
+			
+			
 	
-	
+		end if;
 	end if;
+	
+	
 end process;
 
 	

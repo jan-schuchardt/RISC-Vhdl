@@ -8,7 +8,8 @@ entity vga is
             rst     : in std_logic;
 
             rgb    : in std_logic_vector(11 downto 0);
-				reg : in std_logic_vector(31 downto 0);
+				reg_in : in std_logic_vector(31 downto 0);
+				reg_adr_in: in std_logic_vector(4 downto 0);
 
             x        : out std_logic_vector(9 downto 0);
             y        : out std_logic_vector(9 downto 0);
@@ -34,9 +35,15 @@ signal offs_int  : std_logic;
 signal pattern: std_logic_vector(31 downto 0);
 signal currentValue: std_logic;
 
+
+
+type regs is array (1 to 31) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
+signal reg_data : regs;
+signal reg_counter: std_logic_vector(4 downto 0);
+
 begin
 
-pattern <= reg;
+pattern <= reg_data(to_integer(unsigned(reg_counter))) when reg_counter /= "00000" else x"00000000";
 
 offs_int <= offs_intX or offs_intY;
 offs <= offs_int;
@@ -62,8 +69,20 @@ sync_proc_x : process(clk, rst)
 begin
 
     if rising_edge(clk) then
+	 
+	 
+	 
+	 
+	 
+			if reg_adr_in /= std_logic_vector(to_unsigned(0,reg_adr_in'length)) then
+								reg_data(to_integer(unsigned(reg_adr_in)))<= std_logic_vector(reg_in); 
+					end if;
+	 
+	 
 
         if rst = '1' then
+		  
+				reg_counter <= "00000";
             x_cnt <= (others => '0');
 
             offs_intX <= '0';
@@ -74,8 +93,22 @@ begin
             x_cnt <= x_cnt + 1;
 
             case to_integer(x_cnt) is
-
+				
+					when 160 | 320 | 480  => 
+					
+						
+							reg_counter <= std_logic_vector(unsigned(reg_counter) +1) ;
+						
                 when 639 =>
+					 if(y_cnt = 60 or y_cnt = 120 or y_cnt = 180 or y_cnt = 240 or y_cnt = 300 or y_cnt = 360 or y_cnt = 420) then
+						reg_counter <= std_logic_vector(unsigned(reg_counter) +1) ;
+					elsif y_cnt = 520 then
+						reg_counter <= "00000";
+					else
+						reg_counter <= std_logic_vector(unsigned(reg_counter) -3);
+					
+						
+					 end if;
                     offs_intX <= '1';
 
                 when 655 =>
@@ -123,7 +156,9 @@ begin
                     v <= '1';
 
                 when 520 =>
+							
 						  y_cnt <= (others => '0');
+						  
                     offs_intY <= '0';
 
                 when others => NULL;
