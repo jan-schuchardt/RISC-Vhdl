@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: toplevel.prj
 
@@ -104,22 +104,37 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/toplevel is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd".
+WARNING:HDLParsers:3607 - Unit work/toplevel/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd".
+WARNING:HDLParsers:3607 - Unit work/CPU is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
+WARNING:HDLParsers:3607 - Unit work/CPU/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
+WARNING:HDLParsers:3607 - Unit work/vga_clk is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
+WARNING:HDLParsers:3607 - Unit work/vga_clk/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
+WARNING:HDLParsers:3607 - Unit work/vga is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
+WARNING:HDLParsers:3607 - Unit work/vga/behaviour is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
+WARNING:HDLParsers:3607 - Unit work/ALU is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd".
+WARNING:HDLParsers:3607 - Unit work/ALU/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd".
+WARNING:HDLParsers:3607 - Unit work/ClockDivider is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
+WARNING:HDLParsers:3607 - Unit work/ClockDivider/Behavioral is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
+WARNING:HDLParsers:3607 - Unit work/leitwerk is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd".
+WARNING:HDLParsers:3607 - Unit work/leitwerk/leitwerk_1 is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd".
+WARNING:HDLParsers:3607 - Unit work/RAM is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
+WARNING:HDLParsers:3607 - Unit work/RAM/a1 is now defined in a different file.  It was defined in "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" in Library work.
 Architecture leitwerk_1 of Entity leitwerk is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" in Library work.
 Architecture a1 of Entity ram is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd" in Library work.
 Architecture behavioral of Entity clockdivider is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" in Library work.
-Entity <vga> compiled.
-Entity <vga> (Architecture <behaviour>) compiled.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd" in Library work.
+Architecture behaviour of Entity vga is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd" in Library work.
 Architecture behavioral of Entity vga_clk is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" in Library work.
 Architecture behavioral of Entity cpu is up to date.
-Compiling vhdl file "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" in Library work.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" in Library work.
 Architecture behavioral of Entity toplevel is up to date.
 
 =========================================================================
@@ -146,13 +161,13 @@ Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <B
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <toplevel> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" line 105: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'vga_clk'.
-WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd" line 105: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 105: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 105: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
 Entity <toplevel> analyzed. Unit <toplevel> generated.
 
 Analyzing Entity <vga> in library <work> (Architecture <behaviour>).
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" line 46: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd" line 78: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd" line 46: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd" line 78: Index value(s) does not match array range, simulation mismatch.
 Entity <vga> analyzed. Unit <vga> generated.
 
 Analyzing Entity <vga_clk> in library <work> (Architecture <behavioral>).
@@ -178,55 +193,55 @@ Analyzing Entity <vga_clk> in library <work> (Architecture <behavioral>).
 Entity <vga_clk> analyzed. Unit <vga_clk> generated.
 
 Analyzing Entity <CPU> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:753 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd" line 74: Unconnected output port 'err_out' of component 'leitwerk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 74: Unconnected output port 'err_out' of component 'leitwerk'.
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <leitwerk> in library <work> (Architecture <leitwerk_1>).
-INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 259: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 330: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 404: Mux is complete : default of case is discarded
-WARNING:Xst:819 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd" line 97: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 259: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 275: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 330: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 404: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" line 97: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <err>
 Entity <leitwerk> analyzed. Unit <leitwerk> generated.
 
 Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 96: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 96: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 115: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 115: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 125: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 125: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 136: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 136: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 147: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 147: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 160: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 160: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 171: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 171: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 182: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 182: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 197: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 197: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd" line 222: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd" line 222: Index value(s) does not match array range, simulation mismatch.
 Entity <ALU> analyzed. Unit <ALU> generated.
 
 Analyzing Entity <RAM> in library <work> (Architecture <a1>).
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 40: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 40: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 43: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 43: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 47: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 47: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd" line 67: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 INFO:Xst:2679 - Register <test1> in unit <RAM> has a constant value of 00000000001100001000000010010011 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <test2> in unit <RAM> has a constant value of 11111111110111111111000001101111 during circuit operation. The register is replaced by logic.
@@ -243,7 +258,7 @@ Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <vga>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/vga.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd".
 WARNING:Xst:647 - Input <rgb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 31x32-bit dual-port RAM <Mram_reg_data> for signal <reg_data>.
     Found 1-bit register for signal <h>.
@@ -265,7 +280,7 @@ Unit <vga> synthesized.
 
 
 Synthesizing Unit <leitwerk>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/leitwerk_v2.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd".
     Found finite state machine <FSM_0> for signal <HEADER_wait_state_HEADER>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
@@ -338,7 +353,7 @@ Unit <leitwerk> synthesized.
 
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ALU.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd".
     Found finite state machine <FSM_3> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -376,7 +391,7 @@ Unit <ALU> synthesized.
 
 
 Synthesizing Unit <RAM>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/MMU.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
 WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -417,7 +432,7 @@ Unit <RAM> synthesized.
 
 
 Synthesizing Unit <ClockDivider>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ClockDivider.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd".
     Found 1-bit register for signal <clk_sgn>.
     Found 32-bit up counter for signal <counter>.
     Found 32-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 53.
@@ -429,12 +444,12 @@ Unit <ClockDivider> synthesized.
 
 
 Synthesizing Unit <vga_clk>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/ipcore_dir/vga_clk.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
 Unit <vga_clk> synthesized.
 
 
 Synthesizing Unit <CPU>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/CPU.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd".
 WARNING:Xst:1305 - Output <cpu_err_out> is never assigned. Tied to value 0.
 WARNING:Xst:646 - Signal <cu_mmu_adr_out<31:10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <cu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -444,7 +459,7 @@ Unit <CPU> synthesized.
 
 
 Synthesizing Unit <toplevel>.
-    Related source file is "C:/Users/jan/Downloads/NEUUU/Testprojekt/toplevel.vhd".
+    Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd".
 WARNING:Xst:646 - Signal <y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <rgb> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
@@ -993,14 +1008,14 @@ Offset:              11.508ns (Levels of Logic = 9)
 =========================================================================
 
 
-Total REAL time to Xst completion: 92.00 secs
-Total CPU time to Xst completion: 91.75 secs
+Total REAL time to Xst completion: 95.00 secs
+Total CPU time to Xst completion: 95.17 secs
  
 --> 
 
-Total memory usage is 320684 kilobytes
+Total memory usage is 323684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   80 (   0 filtered)
+Number of warnings :   96 (   0 filtered)
 Number of infos    :   26 (   0 filtered)
 
