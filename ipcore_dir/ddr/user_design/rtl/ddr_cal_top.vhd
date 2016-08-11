@@ -78,7 +78,7 @@ architecture arc of ddr_cal_top is
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
 
   ATTRIBUTE X_CORE_INFO of arc : ARCHITECTURE  IS "mig_v3_61_ddr2_sp3, Coregen 12.4";
-  ATTRIBUTE CORE_GENERATION_INFO of arc : ARCHITECTURE IS "ddr2_sp3,mig_v3_61,{component_name=ddr2_sp3, data_width=8, memory_width=8, clk_width=1, bank_address=2, row_address=13, column_address=10, no_of_cs=1, cke_width=1, registered=0, data_mask=1, mask_enable=0, load_mode_register=0010100110010, ext_load_mode_register=0000000000000, language=VHDL, synthesis_tool=ISE, interface_type=DDR2_SDRAM, no_of_controllers=1}";
+  ATTRIBUTE CORE_GENERATION_INFO of arc : ARCHITECTURE IS "ddr2_sp3,mig_v3_61,{component_name=ddr2_sp3, data_width=8, memory_width=8, clk_width=1, bank_address=2, row_address=13, column_address=10, no_of_cs=1, cke_width=1, registered=0, data_mask=1, mask_enable=1, load_mode_register=0010100110010, ext_load_mode_register=0000000000000, language=VHDL, synthesis_tool=ISE, interface_type=DDR2_SDRAM, no_of_controllers=1}";
 
   component ddr_cal_ctl
     port (

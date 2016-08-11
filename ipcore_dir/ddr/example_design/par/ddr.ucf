@@ -1,7 +1,7 @@
 ##############################################################################################################
 ##
 ##  Xilinx, Inc. 2016            www.xilinx.com  
-##  Mi 29. Jun 16:34:59 2016
+##  Do 11. Aug 13:47:17 2016
 ##
 ##  
 ##############################################################################################################
@@ -19,7 +19,7 @@
 ##                    Supported Part Numbers: MT47H32M16BN-5E;MT47H32M16CC-5E;MT47H32M16FN-5E;MT47H32M16GC-5E
 ##                    Design:                 with Test bench
 ##                    DCM Used:               Enabled
-##                    Data Mask:              Disabled
+##                    Data Mask:              Enabled
 ##                    Reserved pins:
 ##                           Bank 0: E12,C8,B8,D6,C6,D5,C5,B9,D7,C7,C11,B11
 
@@ -320,6 +320,7 @@ NET  "cntrl0_ddr2_ras_n"                        IOSTANDARD = SSTL18_II;
 NET  "cntrl0_ddr2_cas_n"                        IOSTANDARD = SSTL18_II;
 NET  "cntrl0_ddr2_we_n"                         IOSTANDARD = SSTL18_II;
 NET  "cntrl0_ddr2_odt"                          IOSTANDARD = SSTL18_II;
+NET  "cntrl0_ddr2_dm[*]"                        IOSTANDARD = SSTL18_II;
 NET  "cntrl0_rst_dqs_div_in"                    IOSTANDARD = SSTL18_II;
 NET  "cntrl0_rst_dqs_div_out"                   IOSTANDARD = SSTL18_II;
 NET  "sys_clkb"                                 IOSTANDARD = LVDS_25;
@@ -345,6 +346,7 @@ NET  "sys_clk"                                    LOC = "D11" ;     #bank 0
 ##############################################################################################################
 NET  "cntrl0_ddr2_ck[0]"                          LOC = "E20" ;     #bank 1
 NET  "cntrl0_ddr2_ck_n[0]"                          LOC = "F20" ;     #bank 1
+NET  "cntrl0_ddr2_dm[0]"                          LOC = "P20" ;     #bank 1
 NET  "cntrl0_ddr2_a[12]"                          LOC = "J18" ;     #bank 1
 NET  "cntrl0_ddr2_a[11]"                          LOC = "H19" ;     #bank 1
 NET  "cntrl0_ddr2_a[10]"                          LOC = "G19" ;     #bank 1

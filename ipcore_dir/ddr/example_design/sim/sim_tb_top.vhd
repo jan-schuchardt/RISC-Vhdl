@@ -101,7 +101,7 @@ architecture arch of sim_tb_top is
       cntrl0_ddr2_dq               : inout std_logic_vector((DATA_WIDTH-1) downto 0);
       cntrl0_ddr2_dqs              : inout std_logic_vector((DATA_STROBE_WIDTH-1) downto 0);
       cntrl0_ddr2_dqs_n            : inout std_logic_vector((DATA_STROBE_WIDTH-1) downto 0);
-      
+            cntrl0_ddr2_dm               : out   std_logic_vector((DATA_MASK_WIDTH-1) downto 0);
       
       cntrl0_led_error_output1     : out   std_logic;
 	  cntrl0_data_valid_out        : out   std_logic;
@@ -256,6 +256,7 @@ begin
       cntrl0_ddr2_cs_n             => ddr2_cs_n_fpga,
       cntrl0_ddr2_cke              => ddr2_cke_fpga,
       cntrl0_ddr2_odt              => ddr2_odt_fpga,
+      cntrl0_ddr2_dm               => ddr2_dm_fpga,
       cntrl0_ddr2_dq               => ddr2_dq_fpga,
       cntrl0_ddr2_dqs              => ddr2_dqs_fpga,
       cntrl0_ddr2_dqs_n            => ddr2_dqs_n_fpga,
@@ -286,6 +287,7 @@ begin
   ddr2_clk_sdram      <= TRANSPORT ddr2_clk_fpga     after TPROP_PCB_CTRL;
   ddr2_clk_n_sdram    <= TRANSPORT ddr2_clk_n_fpga   after TPROP_PCB_CTRL;
   ddr2_reset_n_sdram  <= TRANSPORT ddr2_reset_n_fpga after TPROP_PCB_CTRL;
+  ddr2_dm_sdram       <= TRANSPORT ddr2_dm_fpga      after TPROP_PCB_DATA;
 
   dq_delay: for i in 0 to DATA_WIDTH - 1 generate
     u_delay_dq: WireDelay
@@ -374,7 +376,7 @@ begin
 -- if the memory part is Registered DIMM
 -----------------------------------------------------------------------------
       gen_bytes : for i in 0 to (DATA_STROBE_WIDTH/2 - 1) generate
-        ddr2_dm_sdram((2*(i+1))-1 downto i*2) <= (others => '0');
+        
         u_mem0 : ddr2_model
           port map (
             ck      => ddr2_clk_sdram(CLK_WIDTH*i/DATA_STROBE_WIDTH),
@@ -412,7 +414,7 @@ begin
 -- the case with data mask and strobe.
 -----------------------------------------------------------------------------
     gen_bytes : for i in 0 to (DATA_WIDTH/16 - 1) generate
-      ddr2_dm_sdram((2*(i+1))-1 downto i*2) <= (others => '0');
+      
       u_mem0 : ddr2_model
         port map (
                       ck      => ddr2_clk_sdram(i),
@@ -487,8 +489,8 @@ begin
     dq_vector(15 downto 8) <= dq_vector(7 downto 0);
     dqs_vector(1)          <= dqs_vector(0);
     dqs_n_vector(1)        <= dqs_n_vector(0);
+    ddr2_dm_8_16 <= ddr2_dm_sdram(DATA_MASK_WIDTH - 1) & ddr2_dm_sdram(DATA_MASK_WIDTH - 1);
     
-    ddr2_dm_8_16 <= "00";
 
     u_mem1     : ddr2_model
       port map (
@@ -515,7 +517,7 @@ begin
 -- if the data width is multiple of 16
 -----------------------------------------------------------------------------
       gen_bytes : for i in 0 to ((DATA_STROBE_WIDTH/2) - 1) generate
-        ddr2_dm_sdram((2*(i+1))-1 downto i*2) <= (others => '0');
+        
         u_mem0 : ddr2_model
           port map (
                         ck      => ddr2_clk_sdram(i),
@@ -547,7 +549,7 @@ begin
 -- if the memory part is Registered DIMM
 -----------------------------------------------------------------------------
       gen_bytes : for i in 0 to (DATA_STROBE_WIDTH - 1) generate
-        ddr2_dm_sdram(i) <= '0';
+        
         u_mem0 : ddr2_model
           port map (
             ck      => ddr2_clk_sdram(CLK_WIDTH*i/DATA_STROBE_WIDTH),
@@ -573,7 +575,7 @@ begin
 -- if the memory part is component or unbuffered DIMM
 -----------------------------------------------------------------------------
       gen_bytes: for i in 0 to DATA_STROBE_WIDTH - 1 generate
-        ddr2_dm_sdram(i) <= '0';
+        
         u_mem0 : ddr2_model
           port map (
                         ck      => ddr2_clk_sdram(i),
@@ -605,7 +607,7 @@ begin
 -- if the memory part is Registered DIMM
 -----------------------------------------------------------------------------
       gen_bytes : for i in 0 to (DATA_STROBE_WIDTH - 1) generate
-        ddr2_dm_sdram(i/2) <= '0';
+        
         u_mem0 : ddr2_model
           port map (
             ck      => ddr2_clk_sdram(CLK_WIDTH*i/DATA_STROBE_WIDTH),
@@ -631,7 +633,7 @@ begin
 -- if the memory part is component or unbuffered DIMM
 -----------------------------------------------------------------------------
       gen_bytes: for i in 0 to DATA_STROBE_WIDTH - 1 generate
-        ddr2_dm_sdram(i/2) <= '0';
+        
         u_mem0 : ddr2_model
           port map (
                         ck      => ddr2_clk_sdram(i),

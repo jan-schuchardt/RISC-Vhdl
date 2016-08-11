@@ -36,7 +36,42 @@ entity CPU is
 	cpu_slow_in: in STD_LOGIC;
 	cpu_debug_out : out std_logic_vector(31 downto 0);
 	cpu_debug_adr_out: out std_logic_vector(4 downto 0);
-	cpu_err_out: out std_logic
+	cpu_err_out: out std_logic;
+	
+				  -- ddr2
+			cntrl0_ddr2_dq                : inout std_logic_vector(7 downto 0);
+			cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
+			cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
+			cntrl0_ddr2_cke               : out   std_logic;
+			cntrl0_ddr2_cs_n              : out   std_logic;
+			cntrl0_ddr2_ras_n             : out   std_logic;
+			cntrl0_ddr2_cas_n             : out   std_logic;
+			cntrl0_ddr2_we_n              : out   std_logic;
+			cntrl0_ddr2_odt               : out   std_logic;
+			cntrl0_rst_dqs_div_in         : in    std_logic;
+			cntrl0_rst_dqs_div_out        : out   std_logic;
+			--sys_clkb                      : in    std_logic;
+			--sys_clk                       : in    std_logic;
+			--reset_in_n                    : in    std_logic;
+			--cntrl0_burst_done             : in    std_logic;
+			--cntrl0_init_done              : out   std_logic;
+			--cntrl0_ar_done                : out   std_logic;
+			--cntrl0_user_data_valid        : out   std_logic;
+			cntrl0_auto_ref_req           : out   std_logic;
+			--cntrl0_user_cmd_ack           : out   std_logic;
+			--cntrl0_user_command_register  : in    std_logic_vector(2 downto 0);
+			cntrl0_clk_tb                 : out   std_logic;
+			cntrl0_clk90_tb               : out   std_logic;
+			cntrl0_sys_rst_tb             : out   std_logic;
+			cntrl0_sys_rst90_tb           : out   std_logic;
+			cntrl0_sys_rst180_tb          : out   std_logic;
+			--cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
+			--cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
+			--cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
+			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
+			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
+			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
+			cntrl0_ddr2_ck_n              : out   std_logic_vector(0 downto 0)
 	);
 			 
 end CPU;
@@ -113,7 +148,43 @@ SPEICHER: entity work.RAM port map(
 	data_in => cu_mmu_data_out,
 	ack_out => cu_mmu_ack_in(0),
 	work_in => cu_mmu_work_out(0),
-	cmd => cu_mmu_com_out
+	cmd => cu_mmu_com_out,
+	
+			  -- ddr2
+			cntrl0_ddr2_dq                => cntrl0_ddr2_dq ,
+			cntrl0_ddr2_a                 => cntrl0_ddr2_a,
+			cntrl0_ddr2_ba                => cntrl0_ddr2_ba,
+			cntrl0_ddr2_cke               => cntrl0_ddr2_cke,
+			cntrl0_ddr2_cs_n              => cntrl0_ddr2_cs_n,
+			cntrl0_ddr2_ras_n             => cntrl0_ddr2_ras_n,
+			cntrl0_ddr2_cas_n             => cntrl0_ddr2_cas_n,
+			cntrl0_ddr2_we_n              => cntrl0_ddr2_we_n,
+			cntrl0_ddr2_odt               => cntrl0_ddr2_odt,
+			cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
+			cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
+			--sys_clkb                      =>,
+			--sys_clk                       =>,
+			--reset_in_n                    =>,
+			--cntrl0_burst_done             =>,
+			--cntrl0_init_done              =>,
+			--cntrl0_ar_done                =>,
+			--cntrl0_user_data_valid        =>,
+			cntrl0_auto_ref_req           => cntrl0_auto_ref_req,
+			--cntrl0_user_cmd_ack           =>,
+			--cntrl0_user_command_register  =>,
+			cntrl0_clk_tb                 => cntrl0_clk_tb,
+			cntrl0_clk90_tb               => cntrl0_clk90_tb,
+			cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
+			cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
+			cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
+			--cntrl0_user_output_data       =>,
+			--cntrl0_user_input_data        =>,
+			--cntrl0_user_input_address     =>,
+			cntrl0_ddr2_dqs               => cntrl0_ddr2_dqs,
+			cntrl0_ddr2_dqs_n             => cntrl0_ddr2_dqs_n,
+			cntrl0_ddr2_ck                => cntrl0_ddr2_ck,
+			cntrl0_ddr2_ck_n              => cntrl0_ddr2_ck_n
+			  
 );
 
 CLOCKER: entity work.ClockDivider port map(

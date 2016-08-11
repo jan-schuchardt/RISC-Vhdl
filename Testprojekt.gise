@@ -22,6 +22,13 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Testprojekt.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CPU.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CPU.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="CPU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAM.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RAM.xst"/>
     <file xil_pn:fileType="FILE_CMD" xil_pn:name="_impact.cmd"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="_impact.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
@@ -32,6 +39,10 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/u_ddr_readme.txt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ramunit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ramunit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ramunit.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="toplevel.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="toplevel.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="toplevel.bld"/>
@@ -89,36 +100,36 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1467212688" xil_pn:in_ck="-7186897585493265983" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3430780916950217851" xil_pn:start_ts="1467212687">
+    <transform xil_pn:end_ts="1470923810" xil_pn:in_ck="-5111959669438722443" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3430780916950217851" xil_pn:start_ts="1470923809">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_cal_ctl.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_cal_top.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_clk_dcm.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_controller_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_controller_iobs_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_data_path_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_data_path_iobs_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_data_read_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_data_read_controller_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_data_write_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_dqs_delay_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_fifo_0_wr_en_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_fifo_1_wr_en_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_infrastructure.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_iobs_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_infrastructure_top.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_iobs_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_parameters_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_ram8d_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_rd_gray_cntr.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_s3_dm_iob.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_s3_dq_iob.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_s3_dqs_iob.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_tap_dly.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_top_0.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ddr/user_design/rtl/ddr_wr_gray_cntr.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_cal_ctl.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_cal_top.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_clk_dcm.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_controller_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_controller_iobs_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_data_path_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_data_path_iobs_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_data_read_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_data_read_controller_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_data_write_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_dqs_delay_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_fifo_0_wr_en_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_fifo_1_wr_en_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_infrastructure.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_infrastructure_iobs_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_infrastructure_top.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_iobs_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_parameters_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_ram8d_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_rd_gray_cntr.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_s3_dm_iob.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_s3_dq_iob.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_s3_dqs_iob.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_tap_dly.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_top_0.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/u_ddr/user_design/rtl/u_ddr_wr_gray_cntr.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1467210331" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1467210331">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -136,10 +147,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1467216257" xil_pn:in_ck="8842966120252864082" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6620952605556615586" xil_pn:start_ts="1467216187">
+    <transform xil_pn:end_ts="1470924013" xil_pn:in_ck="3605497860042589578" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6620952605556615586" xil_pn:start_ts="1470923944">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="toplevel.lso"/>
       <outfile xil_pn:name="toplevel.ngc"/>
@@ -157,68 +173,56 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1467210436" xil_pn:in_ck="-3084008263336870448" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1843841104300231122" xil_pn:start_ts="1467210429">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="toplevel.bld"/>
-      <outfile xil_pn:name="toplevel.ngd"/>
-      <outfile xil_pn:name="toplevel_ngdbuild.xrpt"/>
-    </transform>
-    <transform xil_pn:end_ts="1467210448" xil_pn:in_ck="-3084008263336870447" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5706167834589782188" xil_pn:start_ts="1467210436">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="toplevel.pcf"/>
-      <outfile xil_pn:name="toplevel_map.map"/>
-      <outfile xil_pn:name="toplevel_map.mrp"/>
-      <outfile xil_pn:name="toplevel_map.ncd"/>
-      <outfile xil_pn:name="toplevel_map.ngm"/>
-      <outfile xil_pn:name="toplevel_map.xrpt"/>
-      <outfile xil_pn:name="toplevel_summary.xml"/>
-      <outfile xil_pn:name="toplevel_usage.xml"/>
-    </transform>
-    <transform xil_pn:end_ts="1467210652" xil_pn:in_ck="8890343607435857258" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6973808786348774276" xil_pn:start_ts="1467210448">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="toplevel.ncd"/>
-      <outfile xil_pn:name="toplevel.pad"/>
-      <outfile xil_pn:name="toplevel.par"/>
-      <outfile xil_pn:name="toplevel.ptwx"/>
-      <outfile xil_pn:name="toplevel.unroutes"/>
-      <outfile xil_pn:name="toplevel.xpi"/>
-      <outfile xil_pn:name="toplevel_pad.csv"/>
-      <outfile xil_pn:name="toplevel_pad.txt"/>
-      <outfile xil_pn:name="toplevel_par.xrpt"/>
-    </transform>
-    <transform xil_pn:end_ts="1467196319" xil_pn:in_ck="6038244062278944814" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1467196292">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1467210448" xil_pn:in_ck="-3084008263336870447" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5706167834589782188" xil_pn:start_ts="1467210436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1467210652" xil_pn:in_ck="8890343607435857258" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6973808786348774276" xil_pn:start_ts="1467210448">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1467196319" xil_pn:in_ck="6038244062278944814" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1467196292">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
-      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="toplevel.bgn"/>
-      <outfile xil_pn:name="toplevel.bit"/>
-      <outfile xil_pn:name="toplevel.drc"/>
-      <outfile xil_pn:name="toplevel.ut"/>
-      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
     <transform xil_pn:end_ts="1465987984" xil_pn:in_ck="6038244062278931960" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="3725548802311211136" xil_pn:start_ts="1465987983">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -230,11 +234,13 @@
     </transform>
     <transform xil_pn:end_ts="1467210652" xil_pn:in_ck="-3084008263336870579" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1467210645">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="toplevel.twr"/>
-      <outfile xil_pn:name="toplevel.twx"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

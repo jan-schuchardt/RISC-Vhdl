@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/riege/gpgit/RISC-Vhdl/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/riege/gpgit/RISC-Vhdl/xst"
+elaborate
+-ifn CPU.prj
+-ifmt mixed

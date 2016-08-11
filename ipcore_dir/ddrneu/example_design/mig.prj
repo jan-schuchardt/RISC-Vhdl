@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project NoOfControllers="1" >
+    <SelectedPins>A2-0,E6-0,F7-0,B4-0,A4-0,D8-0,E9-0,A5-0,B6-0,A6-0,A7-0,E10-0,D10-0,A8-0,A9-0,C10-0,A10-0,E11-0,D11-0,A11-0,A12-0,C12-0,A13-0,B13-0,C13-0,D13-0,E13-0,F13-0,A14-0,B15-0,A16-0,C15-0,D15-0,A17-0,B17-0,E14-0,C14-0,C16-0,D16-0,C17-0,D17-0,A19-0,A18-0,C18-0,C19-0,D18-0,E17-0,G17-1,G18-1,B21-1,B22-1,C21-1,C22-1,D20-1,D21-1,D22-1,E22-1,F18-1,F19-1,F20-1,E20-1,H19-1,J18-1,G20-1,G19-1,F21-1,F22-1,H20-1,H21-1,K18-1,K17-1,G22-1,H22-1,J20-1,J21-1,L19-1,L18-1,J22-1,K22-1,K19-1,K20-1,M20-1,M18-1,L20-1,L21-1,L22-1,M22-1,N17-1,N18-1,N19-1,N20-1,N21-1,N22-1,P18-1,R19-1,P20-1,R22-1,R21-1,T19-1,R20-1,T22-1,T20-1,U19-1,U20-1,U21-1,U22-1,V22-1,W22-1,V20-1,V19-1,W21-1,Y22-1,T18-1,T17-1,W20-1,W19-1,Y21-1,AA22-1,AA20-2,AB20-2,AA21-2,AB21-2,AA19-2,AB19-2,V16-2,W16-2,V15-2,V14-2,AB18-2,AB17-2,Y17-2,AA17-2,Y16-2,AB16-2,U13-2,V13-2,Y15-2,W15-2,AA15-2,AB15-2,Y14-2,W13-2,AB14-2,AA14-2,Y13-2,AB13-2,U12-2,V12-2,AB12-2,AA12-2,Y12-2,W12-2,V11-2,U11-2,AB11-2,Y11-2,AB10-2,AA10-2,AB9-2,Y9-2,Y10-2,V10-2,AB8-2,AA8-2,Y8-2,W8-2,AB7-2,Y7-2,W9-2,V9-2,AB6-2,AA6-2,Y6-2,W7-2,AB5-2,AB4-2,Y5-2,W6-2,Y4-2,W4-2,W5-2,V6-2,AA2-3,AA1-3,Y2-3,Y1-3,W3-3,V4-3,W2-3,W1-3,U4-3,U3-3,U5-3,T5-3,V3-3,V1-3,U2-3,U1-3,T3-3,T4-3,R5-3,R4-3,R3-3,R2-3,R1-3,N4-3,M5-3,P5-3,P3-3,P2-3,P1-3,N3-3,M4-3,M3-3,M2-3,M1-3,L1-3,K1-3,L3-3,L5-3,K2-3,K3-3,K4-3,K5-3,J3-3,H1-3,H2-3,H3-3,H4-3,G1-3,G3-3,F1-3,F2-3,J5-3,K6-3,H6-3,H5-3,G4-3,F3-3,E3-3,F4-3,E1-3,D1-3,G5-3,G6-3,E4-3,D3-3,C2-3,B1-3,D2-3,C1-3</SelectedPins>
+    <ReservedPins>E12-0,C8-0,B8-0,D6-0,C6-0,D5-0,C5-0,B9-0,D7-0,C7-0,C11-0,B11-0</ReservedPins>
+    <DCM>1</DCM>
+    <ModuleName>ddrneu</ModuleName>
+    <Class>Class II</Class>
+    <DataClass>Class II</DataClass>
+    <Debug_En>Disable</Debug_En>
+    <TargetFPGA>xc3s700a-fg484/-4</TargetFPGA>
+    <Version>3.6.1</Version>
+    <SystemClock>Differential</SystemClock>
+    <Controller number="0" >
+        <MemoryDevice>DDR2_SDRAM/Components/MT47H32M16XX-5E</MemoryDevice>
+        <Clocking>Local clocking</Clocking>
+        <TimePeriod>7519</TimePeriod>
+        <DataWidth>8</DataWidth>
+        <DataMask>1</DataMask>
+        <CustomPart>FALSE</CustomPart>
+        <NewPartName></NewPartName>
+        <RowAddress>13</RowAddress>
+        <ColAddress>10</ColAddress>
+        <BankAddress>2</BankAddress>
+        <TimingParameters>
+            <Parameters tdsa="400" tdsb="150" tis="600" tdqsq="350" tqhs="450" twr="15" tdha="400" trfc="105" trp="15" tdhb="275" tih="600" tras="40" />
+        </TimingParameters>
+        <WritePipeLine>4</WritePipeLine>
+        <BankSelection>
+            <Bank Control="1" SysClk="1" Data="0" name="0" Address="0" wasso="47" />
+            <Bank Control="0" SysClk="0" Data="1" name="1" Address="1" wasso="71" />
+        </BankSelection>
+        <mrBurstLength name="Burst Length" >4(010)</mrBurstLength>
+        <mrBurstType name="Burst Type" >sequential(0)</mrBurstType>
+        <mrCasLatency name="CAS Latency" >3(011)</mrCasLatency>
+        <mrMode name="Mode" >normal(0)</mrMode>
+        <mrDllReset name="DLL Reset" >yes(1)</mrDllReset>
+        <mrPdMode name="PD Mode" >fast exit(0)</mrPdMode>
+        <mrWriteRecovery name="Write Recovery" >3(010)</mrWriteRecovery>
+        <emrDllEnable name="DLL Enable" >Enable-Normal(0)</emrDllEnable>
+        <emrOutputDriveStrength name="Output Drive Strength" >Fullstrength(0)</emrOutputDriveStrength>
+        <emrRTT name="RTT (nominal) - ODT" >RTT Disabled(00)</emrRTT>
+        <emrPosted name="Additive Latency (AL)" >0(000)</emrPosted>
+        <emrOCD name="OCD Operation" >OCD Exit(000)</emrOCD>
+        <emrDQS name="DQS# Enable" >Enable(0)</emrDQS>
+        <emrRDQS name="RDQS Enable" >Disable(0)</emrRDQS>
+        <emrOutputs name="Outputs" >Enable(0)</emrOutputs>
+        <PortInterface>NATIVE</PortInterface>
+    </Controller>
+</Project>
