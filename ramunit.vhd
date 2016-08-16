@@ -54,24 +54,7 @@ entity ramunit is
 			cntrl0_ddr2_odt               : out   std_logic;
 			cntrl0_rst_dqs_div_in         : in    std_logic;
 			cntrl0_rst_dqs_div_out        : out   std_logic;
-			--sys_clkb                      : in    std_logic;
-			--sys_clk                       : in    std_logic;
-			--reset_in_n                    : in    std_logic;
-			--cntrl0_burst_done             : in    std_logic;
-			--cntrl0_init_done              : out   std_logic;
-			--cntrl0_ar_done                : out   std_logic;
-			--cntrl0_user_data_valid        : out   std_logic;
-			cntrl0_auto_ref_req           : out   std_logic;
-			--cntrl0_user_cmd_ack           : out   std_logic;
-			--cntrl0_user_command_register  : in    std_logic_vector(2 downto 0);
-			cntrl0_clk_tb                 : out   std_logic;
-			cntrl0_clk90_tb               : out   std_logic;
-			cntrl0_sys_rst_tb             : out   std_logic;
-			cntrl0_sys_rst90_tb           : out   std_logic;
-			cntrl0_sys_rst180_tb          : out   std_logic;
-			--cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
-			--cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
-			--cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
+		
 			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
 			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
 			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
@@ -80,7 +63,7 @@ entity ramunit is
 			  );
 end ramunit;
 
-	architecture Behavioral of ramunit is
+bbbbbbb	architecture Behavioral of ramunit is
 
 --	component ddr
 --	 port(
