@@ -35,11 +35,11 @@ entity RAM is
 			--cntrl0_auto_ref_req           : out   std_logic;
 			--cntrl0_user_cmd_ack           : out   std_logic;
 			--cntrl0_user_command_register  : in    std_logic_vector(2 downto 0);
-			cntrl0_clk_tb                 : out   std_logic;
-			cntrl0_clk90_tb               : out   std_logic;
-			cntrl0_sys_rst_tb             : out   std_logic;
-			cntrl0_sys_rst90_tb           : out   std_logic;
-			cntrl0_sys_rst180_tb          : out   std_logic;
+--			cntrl0_clk_tb                 : out   std_logic;
+--			cntrl0_clk90_tb               : out   std_logic;
+--			cntrl0_sys_rst_tb             : out   std_logic;
+--			cntrl0_sys_rst90_tb           : out   std_logic;
+--			cntrl0_sys_rst180_tb          : out   std_logic;
 			--cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
 			--cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
 			--cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);

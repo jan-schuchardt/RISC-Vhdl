@@ -63,7 +63,7 @@ entity ramunit is
 			  );
 end ramunit;
 
-bbbbbbb	architecture Behavioral of ramunit is
+architecture Behavioral of ramunit is
 
 --	component ddr
 --	 port(
@@ -421,11 +421,11 @@ end component;
 				cntrl0_auto_ref_req           => i_cntrl0_auto_ref_req,
 				cntrl0_user_cmd_ack           => i_cntrl0_user_cmd_ack,
 				cntrl0_user_command_register  => i_cntrl0_user_command_register,
-				cntrl0_clk_tb                 => cntrl0_clk_tb,
-				cntrl0_clk90_tb               => cntrl0_clk90_tb,
-				cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
-				cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
-				cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
+--				cntrl0_clk_tb                 => cntrl0_clk_tb,
+--				cntrl0_clk90_tb               => cntrl0_clk90_tb,
+--				cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
+--				cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
+--				cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
 				cntrl0_user_output_data       => i_cntrl0_user_output_data,
 				cntrl0_user_input_data        => i_cntrl0_user_input_data,
 				cntrl0_user_input_address     => i_cntrl0_user_input_address,

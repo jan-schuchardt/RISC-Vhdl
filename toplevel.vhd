@@ -50,8 +50,8 @@ entity toplevel is
 			SD_CAS             : out   std_logic;
 			SD_WE              : out   std_logic;
 			SD_ODT               : out   std_logic;
-			cntrl0_rst_dqs_div_in         : in    std_logic;
-			cntrl0_rst_dqs_div_out        : out   std_logic;
+			LOOP_IN         : in    std_logic;
+			LOOP_OUT        : out   std_logic;
 			--sys_clkb                      : in    std_logic;
 			--sys_clk                       : in    std_logic;
 			--reset_in_n                    : in    std_logic;
@@ -72,7 +72,7 @@ entity toplevel is
 			--cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
 			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
 			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
-			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
+			SD_CK_P                : out   std_logic_vector(0 downto 0);
 			SD_CK_N              : out   std_logic_vector(0 downto 0)
 			  
 			  );
@@ -166,8 +166,8 @@ PROZESSOR: entity work.cpu PORT MAP(
 			cntrl0_ddr2_cas_n             => SD_CAS,
 			cntrl0_ddr2_we_n              => SD_WE,
 			cntrl0_ddr2_odt               => SD_ODT,
-			cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
-			cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
+			cntrl0_rst_dqs_div_in         => LOOP_IN,
+			cntrl0_rst_dqs_div_out        => LOOP_OUT,
 			--sys_clkb                      =>,
 			--sys_clk                       =>,
 			--reset_in_n                    =>,

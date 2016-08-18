@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -161,22 +161,20 @@ Architecture arc of Entity u_ddr_infrastructure_top is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/u_ddr/user_design/rtl/u_ddr.vhd" in Library work.
 Architecture arc_mem_interface_top of Entity u_ddr is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" in Library work.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 269. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 255. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 256. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 259. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 262. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 266. Choice to_unsigned is not a locally static expression.
 WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 270. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 271. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 274. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 279. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 286. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 289. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 291. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 329. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 330. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 331. Choice to_unsigned is not a locally static expression.
 WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 334. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 335. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 336. Choice to_unsigned is not a locally static expression.
 WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 339. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 346. Choice to_unsigned is not a locally static expression.
-WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 349. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 344. Choice to_unsigned is not a locally static expression.
 WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 351. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 354. Choice to_unsigned is not a locally static expression.
+WARNING:HDLParsers:817 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" Line 356. Choice to_unsigned is not a locally static expression.
 Architecture behavioral of Entity ramunit is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd" in Library work.
 Architecture leitwerk_1 of Entity leitwerk is up to date.
@@ -309,6 +307,11 @@ Entity <vga_clk> analyzed. Unit <vga_clk> generated.
 
 Analyzing Entity <CPU> in library <work> (Architecture <Behavioral>).
 WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 109: Unconnected output port 'err_out' of component 'leitwerk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_clk_tb' of component 'RAM'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_clk90_tb' of component 'RAM'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst_tb' of component 'RAM'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst90_tb' of component 'RAM'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst180_tb' of component 'RAM'.
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <leitwerk> in library <work> (Architecture <leitwerk_1>).
@@ -363,7 +366,11 @@ INFO:Xst:2679 - Register <test2> in unit <RAM> has a constant value of 111111111
 Entity <RAM> analyzed. Unit <RAM> generated.
 
 Analyzing Entity <ramunit> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <i_cntrl0_user_input_data> in unit <ramunit> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" line 401: Unconnected output port 'cntrl0_clk_tb' of component 'u_ddr'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" line 401: Unconnected output port 'cntrl0_clk90_tb' of component 'u_ddr'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" line 401: Unconnected output port 'cntrl0_sys_rst_tb' of component 'u_ddr'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" line 401: Unconnected output port 'cntrl0_sys_rst90_tb' of component 'u_ddr'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd" line 401: Unconnected output port 'cntrl0_sys_rst180_tb' of component 'u_ddr'.
 INFO:Xst:2679 - Register <ack> in unit <ramunit> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <ramunit> analyzed. Unit <ramunit> generated.
 
@@ -1392,8 +1399,6 @@ Unit <u_ddr> synthesized.
 Synthesizing Unit <ramunit>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd".
 WARNING:Xst:647 - Input <cntrl0_rst_dqs_div_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <cntrl0_auto_ref_req> is never assigned. Tied to value 0.
 WARNING:Xst:646 - Signal <i_cntrl0_auto_ref_req> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <i_cntrl0_ar_done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit 4-to-1 multiplexer for signal <data_out>.
@@ -1402,16 +1407,22 @@ WARNING:Xst:646 - Signal <i_cntrl0_ar_done> is assigned but never used. This unc
     Found 1-bit register for signal <i_cntrl0_burst_done>.
     Found 3-bit register for signal <i_cntrl0_user_command_register>.
     Found 25-bit register for signal <i_cntrl0_user_input_address>.
+    Found 16-bit register for signal <i_cntrl0_user_input_data>.
     Found 32-bit register for signal <read_data>.
     Summary:
 	inferred   1 Counter(s).
-	inferred  62 D-type flip-flop(s).
+	inferred  78 D-type flip-flop(s).
 	inferred  32 Multiplexer(s).
 Unit <ramunit> synthesized.
 
 
 Synthesizing Unit <RAM>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
+WARNING:Xst:1305 - Output <cntrl0_clk_tb> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <cntrl0_sys_rst_tb> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <cntrl0_sys_rst180_tb> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <cntrl0_clk90_tb> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <cntrl0_sys_rst90_tb> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1501,10 +1512,10 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 219
+# Registers                                            : 220
  1-bit register                                        : 121
  13-bit register                                       : 3
- 16-bit register                                       : 5
+ 16-bit register                                       : 6
  2-bit register                                        : 7
  23-bit register                                       : 1
  25-bit register                                       : 1
@@ -1619,122 +1630,10 @@ Optimizing FSM <PROZESSOR/CU/HEADER_wait_state_HEADER/FSM> on signal <HEADER_wai
  00000000000000000000000000000110 | 101
  00000000000000000000000000000111 | 100
 ----------------------------------------------
-WARNING:Xst:1710 - FF/Latch <write_data1_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <column_address_reg_10> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <column_address_reg_11> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <column_address_reg_12> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <write_data1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data3_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_15> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_14> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_13> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_12> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_10> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_9> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_8> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_21> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_21> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_7> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_6> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_5> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_4> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <mmu_adr_out_25> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_26> of sequential type is unconnected in block <CU>.
 WARNING:Xst:2677 - Node <mmu_adr_out_27> of sequential type is unconnected in block <CU>.
@@ -1746,124 +1645,9 @@ WARNING:Xst:2677 - Node <burst_length_0> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <column_address_reg_10> of sequential type is unconnected in block <controller0>.
 WARNING:Xst:2677 - Node <column_address_reg_11> of sequential type is unconnected in block <controller0>.
 WARNING:Xst:2677 - Node <column_address_reg_12> of sequential type is unconnected in block <controller0>.
-WARNING:Xst:2677 - Node <write_data1_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_8> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_9> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_10> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_12> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_13> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_14> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data1_15> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_8> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_9> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_10> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_12> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_13> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_14> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data2_15> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_8> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_9> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_10> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_12> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_13> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_14> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data3_15> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_8> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_9> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_10> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_12> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_13> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_14> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data4_15> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_21> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_11> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_21> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_1_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_1_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data270_2_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_0> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_1> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_2> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_3> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_4> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_5> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_6> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2677 - Node <write_data90_2_7> of sequential type is unconnected in block <data_write0>.
-WARNING:Xst:2404 -  FFs/Latches <write_data1<15:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
 WARNING:Xst:2404 -  FFs/Latches <write_data_m1<1:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
 WARNING:Xst:2404 -  FFs/Latches <column_address_reg<12:10>> (without init value) have a constant value of 0 in block <u_ddr_controller_0>.
-WARNING:Xst:2404 -  FFs/Latches <write_data2<15:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
 WARNING:Xst:2404 -  FFs/Latches <write_data_m2<1:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
-WARNING:Xst:2404 -  FFs/Latches <write_data3<15:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
 WARNING:Xst:2404 -  FFs/Latches <write_data_m3<1:0>> (without init value) have a constant value of 0 in block <u_ddr_data_write_0>.
 
 Synthesizing (advanced) Unit <toplevel>.
@@ -1919,8 +1703,8 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 2026
- Flip-Flops                                            : 2026
+# Registers                                            : 2090
+ Flip-Flops                                            : 2090
 # Comparators                                          : 10
  17-bit comparator less                                : 1
  25-bit comparator greater                             : 1
@@ -1946,78 +1730,14 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_15> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_14> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_13> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_12> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_11> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_10> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_9> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_8> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_2> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data4_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_11> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_21> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_21> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_11> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_2> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_1_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_2> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_1_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_2> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data90_2_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_7> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_6> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_5> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_4> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_3> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_2> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_1> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data270_2_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_0> (without init value) has a constant value of 0 in block <u_ddr_data_write_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <u_ddr_controller_0>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <reset90_r> in Unit <u_ddr_data_read_0> is equivalent to the following 2 FFs/Latches, which will be removed : <fifo1_rd_addr_inst/reset90_r> <fifo0_rd_addr_inst/reset90_r> 
 
@@ -2026,6 +1746,8 @@ Optimizing unit <toplevel> ...
 Optimizing unit <leitwerk> ...
 
 Optimizing unit <u_ddr_infrastructure> ...
+
+Optimizing unit <u_ddr_data_write_0> ...
 
 Optimizing unit <u_ddr_cal_ctl> ...
 
@@ -2068,9 +1790,9 @@ ERROR:Xst:2033 - Port I of Input buffer PROZESSOR/SPEICHER/u_ramunit/u_u_ddr/top
 ERROR:Xst:1847 - Design checking failed
 --> 
 
-Total memory usage is 328448 kilobytes
+Total memory usage is 332596 kilobytes
 
 Number of errors   :    2 (   0 filtered)
-Number of warnings :  459 (   0 filtered)
-Number of infos    :   37 (   0 filtered)
+Number of warnings :  179 (   0 filtered)
+Number of infos    :   36 (   0 filtered)
 
