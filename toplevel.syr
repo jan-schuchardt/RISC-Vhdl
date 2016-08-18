@@ -274,8 +274,8 @@ Analyzing hierarchy for entity <u_ddr_s3_dq_iob> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <toplevel> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 142: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'vga_clk'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 142: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 158: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd" line 158: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
 Entity <toplevel> analyzed. Unit <toplevel> generated.
 
 Analyzing Entity <vga> in library <work> (Architecture <behaviour>).
@@ -307,11 +307,6 @@ Entity <vga_clk> analyzed. Unit <vga_clk> generated.
 
 Analyzing Entity <CPU> in library <work> (Architecture <Behavioral>).
 WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 109: Unconnected output port 'err_out' of component 'leitwerk'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_clk_tb' of component 'RAM'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_clk90_tb' of component 'RAM'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst_tb' of component 'RAM'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst90_tb' of component 'RAM'.
-WARNING:Xst:753 - "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd" line 143: Unconnected output port 'cntrl0_sys_rst180_tb' of component 'RAM'.
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <leitwerk> in library <work> (Architecture <leitwerk_1>).
@@ -1418,11 +1413,6 @@ Unit <ramunit> synthesized.
 
 Synthesizing Unit <RAM>.
     Related source file is "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd".
-WARNING:Xst:1305 - Output <cntrl0_clk_tb> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <cntrl0_sys_rst_tb> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <cntrl0_sys_rst180_tb> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <cntrl0_clk90_tb> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <cntrl0_sys_rst90_tb> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <test3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1482,6 +1472,7 @@ WARNING:Xst:646 - Signal <y> is assigned but never used. This unconnected signal
 WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <rgb> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
 WARNING:Xst:646 - Signal <offs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <nullsetzer> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <toplevel> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -1790,9 +1781,9 @@ ERROR:Xst:2033 - Port I of Input buffer PROZESSOR/SPEICHER/u_ramunit/u_u_ddr/top
 ERROR:Xst:1847 - Design checking failed
 --> 
 
-Total memory usage is 332596 kilobytes
+Total memory usage is 333108 kilobytes
 
 Number of errors   :    2 (   0 filtered)
-Number of warnings :  179 (   0 filtered)
+Number of warnings :  170 (   0 filtered)
 Number of infos    :   36 (   0 filtered)
 

@@ -47,10 +47,10 @@
 <msg type="warning" file="HDLParsers" num="817" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/ramunit.vhd</arg>&quot; Line <arg fmt="%d" index="2">356</arg>. Choice <arg fmt="%s" index="3">to_unsigned</arg> is not a locally static expression.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">142</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">158</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">142</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">158</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Index value(s) does not match array range, simulation mismatch.
@@ -60,21 +60,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">109</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">err_out</arg>&apos; of component &apos;<arg fmt="%s" index="4">leitwerk</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_clk_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">RAM</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_clk90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">RAM</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">RAM</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">RAM</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">RAM</arg>&apos;.
 </msg>
 
 <msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v2.vhd</arg>&quot; line <arg fmt="%d" index="2">259</arg>: Mux is complete : default of case is discarded
@@ -468,21 +453,6 @@
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">i_cntrl0_ar_done</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">cntrl0_clk_tb</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">cntrl0_sys_rst_tb</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">cntrl0_sys_rst180_tb</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">cntrl0_clk90_tb</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">cntrl0_sys_rst90_tb</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
 <msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">test3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
@@ -517,6 +487,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">offs</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">nullsetzer</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.

@@ -42,8 +42,8 @@ entity toplevel is
 			  
 			    -- ddr2
 			SD_DQ            : inout std_logic_vector(7 downto 0);
-			SD_A                 : out   std_logic_vector(12 downto 0);
-			SD_BA               : out   std_logic_vector(1 downto 0);
+			SD_A                 : out   std_logic_vector(15 downto 0);
+			SD_BA               : out   std_logic_vector(2 downto 0);
 			SD_CKE               : out   std_logic;
 			SD_CS              : out   std_logic;
 			SD_RAS             : out   std_logic;
@@ -70,15 +70,25 @@ entity toplevel is
 			--cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
 			--cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
 			--cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
-			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
-			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
+--			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);------
+--			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
 			SD_CK_P                : out   std_logic_vector(0 downto 0);
-			SD_CK_N              : out   std_logic_vector(0 downto 0)
+			SD_CK_N              : out   std_logic_vector(0 downto 0);
+			  
+			  
+			  SD_LDQS_N : inout std_logic;
+			  SD_UDQS_N : inout std_logic;
+			  SD_LDQS_P : inout std_logic;
+			  SD_UDQS_P: inout std_logic
+
+			  
 			  
 			  );
 end toplevel;
 
 architecture Behavioral of toplevel is
+ signal nullsetzer : std_logic;
+
 
 COMPONENT vga
 	PORT(
@@ -122,6 +132,12 @@ COMPONENT vga
 
 begin
 
+SD_BA(2) <= '0'; -- BenchAddr: nur 2 Bits generiert, oberes 0 setzen?
+nullsetzer <= '0';
+SD_A(15 downto 13) <= "000"; --Obere 3 Bit der Adresse sind 0
+SD_UDQS_N <= '0'; --upper 0 setzen
+SD_UDQS_P <= '0';			  
+			
 
 Inst_vga: vga PORT MAP(
 		clk => clk25,
@@ -158,8 +174,8 @@ PROZESSOR: entity work.cpu PORT MAP(
 	
 		  -- ddr2
 			cntrl0_ddr2_dq                => SD_DQ ,
-			cntrl0_ddr2_a                 => SD_A,
-			cntrl0_ddr2_ba                => SD_BA,
+			cntrl0_ddr2_a                 => SD_A(12 downto 0),
+			cntrl0_ddr2_ba                => SD_BA(1 downto 0),
 			cntrl0_ddr2_cke               => SD_CKE,
 			cntrl0_ddr2_cs_n              => SD_CS,
 			cntrl0_ddr2_ras_n             => SD_RAS,
@@ -186,10 +202,13 @@ PROZESSOR: entity work.cpu PORT MAP(
 			--cntrl0_user_output_data       =>,
 			--cntrl0_user_input_data        =>,
 			--cntrl0_user_input_address     =>,
-			cntrl0_ddr2_dqs               => cntrl0_ddr2_dqs,
-			cntrl0_ddr2_dqs_n             => cntrl0_ddr2_dqs_n,
+			cntrl0_ddr2_dqs(0)               => SD_LDQS_P,
+			cntrl0_ddr2_dqs_n(0)             => SD_LDQS_N,
 			cntrl0_ddr2_ck                => SD_CK_P,
 			cntrl0_ddr2_ck_n              => SD_CK_N
+			
+			 
+			 
 			  
 );
 end Behavioral;
