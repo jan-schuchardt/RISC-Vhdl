@@ -11,8 +11,8 @@ def compile_bitfield(bfrom, bto, value, base):
 	return base | value
 
 def le_encode(bitfield):
-	return [int(bitfield & 0xFF), int(rshift(bitfield, 8) & 0xFF), \
-	int(rshift(bitfield, 16) & 0xFF), int(rshift(bitfield, 24) & 0xFF)]
+	return [hex(int(bitfield & 0xFF)), hex(int(rshift(bitfield, 8) & 0xFF)), \
+	hex(int(rshift(bitfield, 16) & 0xFF)), hex(int(rshift(bitfield, 24) & 0xFF))]
 
 def compile_r(opcode, rd, funct3, rs1, rs2, funct7):
 	n = compile_bitfield(0, 7, opcode, 0)
@@ -50,6 +50,12 @@ def compile_sb(opcode, imm1, funct3, rs1, rs2, imm2):
 	n = compile_bitfield(20, 25, rs2, n)
 	return compile_bitfield(25, 32, imm2, n)
 	
+def compile_uj(opcode, rd, imm9, imm11):
+	n = compile_bitfield(0, 7, opcode, 0)
+	n = compile_bitfield(7, 12, rd, n)
+	n = compile_bitfield(12, 21, imm9, n)
+	return compile_bitfield(21, 32, imm11, n)
+	
 def compile_i_s(opcode, rd, funct3, rs1, imml5, immu7):
 	imm = imml5 & 0x1F
 	imm = imm | ((immu7 & 0x7F) << 5)
@@ -60,4 +66,11 @@ def sb_imm_split(imm):
 	imm1 = imm1 | ((rshift(imm, 1) & 0xF)<<1)
 	imm2 = (rshift(imm, 5) & 0x3F)
 	imm2 = imm2 | ((rshift(imm, 12) & 1)<<6)
+	return (int(imm1), int(imm2))
+	
+def uj_imm_split(imm):
+	imm2 = rshift(imm, 1) & 0x3FF
+	imm2 = int(imm2 | (rshift(imm & 0x4000000, 10)))
+	imm1 = rshift(imm, 12) & 0xFF
+	imm1 = imm1 | (rshift(imm, 3) & 0x100)
 	return (int(imm1), int(imm2))

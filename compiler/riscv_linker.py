@@ -44,7 +44,8 @@ def link_jal(line, tokens, symbols, off):
 		try:
 			rd = token_to_reg(tokens[1])
 			imm = pc_relative_symbol(tokens[2], off, symbols) / 2
-			return iformat.le_encode(iformat.compile_u(0x6F, rd, imm))
+			imms = iformat.uj_imm_split(int(imm))
+			return iformat.le_encode(iformat.compile_uj(0x6F, rd, imms[0], imms[1]))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
 	else:
@@ -72,10 +73,11 @@ def link_cbranch(line, tokens, symbols, off, funct3):
 		try:
 			rs1 = token_to_reg(tokens[1])
 			rs2 = token_to_reg(tokens[2])
-			imm = pc_relative_symbol(tokens[3], off, symbols) / 2
+			imm = int(pc_relative_symbol(tokens[3], off, symbols) / 2)
 			imms = iformat.sb_imm_split(imm)
 			return iformat.le_encode(iformat.compile_sb(0x63, imms[0], funct3, rs1, rs2, imms[1]))
-		except:
+		except Exception as e:
+			print(e)
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
 	else:
 		print("Missing tokens in line "+str(line)+" : "+str(tokens))
