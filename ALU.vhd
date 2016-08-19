@@ -84,8 +84,8 @@ begin
 	
 		--reg_bank1(1) <= x"00000000";
 		--reg_bank2(1) <= x"00000000";
-		debug_signal <= x"FFFFFFFF";
-		debug_adr_signal <= "00001";
+		--debug_signal <= x"FFFFFFFF";
+		--debug_adr_signal <= "00001";
 		--ram_wea <= "0";
 		state <= "0000";
 	elsif rising_edge(clk_in) then

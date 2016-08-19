@@ -93,7 +93,7 @@ signal cu_alu_work_out: std_logic;
 --Signals between control unit and MMU 
 signal cu_mmu_data_in, cu_mmu_data_out, cu_mmu_adr_out: std_logic_vector(31 downto 0);
 signal cu_mmu_com_out:std_logic_vector(2 downto 0);
-signal cu_mmu_work_out, cu_mmu_ack_in : std_logic_vector(0 downto 0);
+signal cu_mmu_work_out, cu_mmu_ack_in : std_logic;
 
 --Signals between ALU and Debug unit
 signal alu_debug_data_out: std_logic_vector( 31 downto 0);
@@ -114,9 +114,9 @@ CU: entity work.leitwerk port map(
 	alu_data_in => cu_alu_data_in,
 	alu_data_out1 => cu_alu_data_out1,
 	alu_data_out2 => cu_alu_data_out2,
-	alu_adr_out3 => cu_alu_adr_out3,
+	alu_adr_out => cu_alu_adr_out3,
 	alu_com_out => cu_alu_com_out,
-	alu_work_out(0) => cu_alu_work_out,
+	alu_work_out => cu_alu_work_out,
 	
 	--MMU
 	mmu_data_in => cu_mmu_data_in,
@@ -146,8 +146,8 @@ SPEICHER: entity work.RAM port map(
 	addr => cu_mmu_adr_out(24 downto 0),
 	data_out => cu_mmu_data_in,
 	data_in => cu_mmu_data_out,
-	ack_out => cu_mmu_ack_in(0),
-	work_in => cu_mmu_work_out(0),
+	ack_out => cu_mmu_ack_in,
+	work_in => cu_mmu_work_out,
 	cmd => cu_mmu_com_out,
 	
 			  -- ddr2

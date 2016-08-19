@@ -5,5 +5,34 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="NgdBuild" num="889" delta="old" >Pad net &apos;<arg fmt="%s" index="1">clk_cpu</arg>&apos; is not connected to an external port in this design.  A new port &apos;<arg fmt="%s" index="2">clk_cpu</arg>&apos; has been added and is connected to this signal.
+</msg>
+
+<msg type="error" file="NgdBuild" num="770" delta="old" ><arg fmt="%s" index="1">IBUFGDS</arg> &apos;<arg fmt="%s" index="2">PROZESSOR/SPEICHER/u_ramunit/u_u_ddr/infrastructure_top0/DIFF_ENDED_CLKS_INST.SYS_CLK_INST</arg>&apos; and <arg fmt="%s" index="3">BUFG</arg> &apos;<arg fmt="%s" index="4">Inst_vga_clk/CLK0_BUFG_INST</arg>&apos; on net &apos;<arg fmt="%s" index="5">clk_cpu</arg>&apos; are lined up in series. Buffers of the same direction cannot be placed in series.
+</msg>
+
+<msg type="error" file="NgdBuild" num="924" delta="old" ><arg fmt="%s" index="1">input</arg> pad net &apos;<arg fmt="%s" index="2">clk_cpu</arg>&apos; is driving non-buffer primitives<arg fmt="%s" index="3">:
+  pin C on block PROZESSOR/CLOCKER/clk_sgn with type FDCE,
+  pin C on block PROZESSOR/CLOCKER/counter_0 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_1 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_2 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_3 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_4 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_5 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_6 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_7 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_8 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_9 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_10 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_11 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_12 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_13 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_14 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_15 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_16 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_17 with type FDC,
+  pin C on block PROZESSOR/CLOCKER/counter_18 with type FDC</arg>
+</msg>
+
 </messages>
 

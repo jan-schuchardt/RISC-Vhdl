@@ -157,10 +157,10 @@ end component;
 --	signal      i_cntrl0_ddr2_cas_n             :    std_logic;
 --	signal      i_cntrl0_ddr2_we_n              :    std_logic;
 --	signal      i_cntrl0_ddr2_odt               :    std_logic;
-	signal      i_cntrl0_rst_dqs_div_in         :     std_logic;
+--	signal      i_cntrl0_rst_dqs_div_in         :     std_logic;
 --	signal      i_cntrl0_rst_dqs_div_out        :    std_logic;
-	signal      i_sys_clkb                      :     std_logic;
-	signal      i_sys_clk                       :     std_logic;
+--	signal      i_sys_clkb                      :     std_logic;
+--	signal      i_sys_clk                       :     std_logic;
 	signal      i_reset_in_n                    :     std_logic;
 	signal      i_cntrl0_burst_done             :     std_logic;
 	signal      i_cntrl0_init_done              :    std_logic;
@@ -205,9 +205,9 @@ end component;
 						"00000000000000000000000000000000";
 		ack_out <= ack; 
 
-		i_sys_clk <= clk; 
-		i_sys_clkb <= clk; -- ?better directly
-		i_cntrl0_rst_dqs_div_in <= '0';  -- ?maybe 1
+--		i_sys_clk <= clk; 
+--		i_sys_clkb <= clk; -- ?better directly
+--		i_cntrl0_rst_dqs_div_in <= '0';  -- ?maybe 1
 		i_reset_in_n <=  not rst;  -- active low
 
 
@@ -409,10 +409,10 @@ end component;
 				cntrl0_ddr2_cas_n             => cntrl0_ddr2_cas_n,
 				cntrl0_ddr2_we_n              => cntrl0_ddr2_we_n,
 				cntrl0_ddr2_odt               => cntrl0_ddr2_odt,
-				cntrl0_rst_dqs_div_in         => i_cntrl0_rst_dqs_div_in,
+				cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
 				cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
-				sys_clkb                      => i_sys_clkb,
-				sys_clk                       => i_sys_clk,
+				sys_clkb                      => clk,
+				sys_clk                       => clk,
 				reset_in_n                    => i_reset_in_n,
 				cntrl0_burst_done             => i_cntrl0_burst_done,
 				cntrl0_init_done              => i_cntrl0_init_done,

@@ -133,7 +133,6 @@ COMPONENT vga
 begin
 
 SD_BA(2) <= '0'; -- BenchAddr: nur 2 Bits generiert, oberes 0 setzen?
-nullsetzer <= '0';
 SD_A(15 downto 13) <= "000"; --Obere 3 Bit der Adresse sind 0
 SD_UDQS_N <= '0'; --upper 0 setzen
 SD_UDQS_P <= '0';			  

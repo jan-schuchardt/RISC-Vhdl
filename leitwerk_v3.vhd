@@ -42,7 +42,6 @@ begin
   ir <= "000000000000000000000000011011";
   pc <= std_logic_vector(to_unsigned(0,pc'length));
   mmu_work_out <= '0';
-  err_out <= '0';
   alu_data_out1 <= std_logic_vector(to_unsigned(0,alu_data_out1'length));
   alu_work_out <= '0';
   alu_data_out2 <= std_logic_vector(to_unsigned(0,alu_data_out2'length));
