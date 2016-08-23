@@ -18,51 +18,59 @@ NET "B<1>" LOC = "D7" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "B<0>" LOC = "C7" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "HSYNC" LOC = "C11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "VSYNC" LOC = "B11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#
 
-NET "SD_A<15>" LOC = "W3" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<14>" LOC = "V4" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<13>" LOC = "V3" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<12>" LOC = "Y2" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<11>" LOC = "V1" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<10>" LOC = "T3" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<9>" LOC = "W2" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<8>" LOC = "W1" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<7>" LOC = "Y1" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<6>" LOC = "U1" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<5>" LOC = "U4" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<4>" LOC = "U2" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<3>" LOC = "U3" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<2>" LOC = "R1" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<1>" LOC = "T4" | IOSTANDARD = SSTL18_II ;
-NET "SD_A<0>" LOC = "R2" | IOSTANDARD = SSTL18_II ;
 
-NET "SD_DQ<7>" LOC = "H2" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<6>" LOC = "K4" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<5>" LOC = "L1" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<4>" LOC = "L5" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<3>" LOC = "L3" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<2>" LOC = "K1" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<1>" LOC = "K5" | IOSTANDARD = SSTL18_II ;
-NET "SD_DQ<0>" LOC = "H1" | IOSTANDARD = SSTL18_II ;
+NET  "cntrl0_ddr2_a[*]"                                     IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_ba[*]"                                    IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_ck[*]"                                    IOSTANDARD = DIFF_SSTL18_I;
+NET  "cntrl0_ddr2_ck_n[*]"                                  IOSTANDARD = DIFF_SSTL18_I;
+NET  "cntrl0_ddr2_cke"                                      IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_cs_n"                                     IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_ras_n"                                    IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_cas_n"                                    IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_we_n"                                     IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_odt"                                      IOSTANDARD = SSTL18_I;
+NET  "cntrl0_ddr2_dm[*]"                                    IOSTANDARD = SSTL18_I;
+NET  "cntrl0_rst_dqs_div_in"                                IOSTANDARD = SSTL18_I; 
+NET  "cntrl0_rst_dqs_div_out"                               IOSTANDARD = SSTL18_I; 
+NET  "cntrl0_ddr2_dq[*]"                                    IOSTANDARD = SSTL18_I; 
+NET  "cntrl0_ddr2_dqs[*]"                                   IOSTANDARD = DIFF_SSTL18_I; 
+NET  "cntrl0_ddr2_dqs_n[*]"                                 IOSTANDARD = DIFF_SSTL18_I; 
 
-NET "SD_BA<2>" LOC = "P5" | IOSTANDARD = SSTL18_II ;#?
-NET "SD_BA<1>" LOC = "R3" | IOSTANDARD = SSTL18_II ;
-NET "SD_BA<0>" LOC = "P3" | IOSTANDARD = SSTL18_II ;
+####################################################################################################################
+# Banks 2
+# Pin Location Constraints for System clock signals
+####################################################################################################################
+#NET  "sys_clk_in"	LOC = "V12"; # on board clock
+#NET  "sys_clk_in"	LOC = "U12"; #external clock	
 
-NET "SD_RAS" LOC = "M3" | IOSTANDARD = SSTL18_II ; 
-NET "SD_CAS" LOC = "M4" | IOSTANDARD = SSTL18_II ;
-NET "SD_WE" LOC = "N4" | IOSTANDARD = SSTL18_II ;
-NET "SD_CK_N<0>" LOC = "M2" | IOSTANDARD = SSTL18_II ;
-NET "SD_CK_P<0>" LOC = "M1" | IOSTANDARD = SSTL18_II ;
-NET "SD_CKE" LOC = "N3" | IOSTANDARD = SSTL18_II ;
-NET "SD_CS" LOC = "M5" | IOSTANDARD = SSTL18_II ;
-#NET "SD_UDM" LOC = "E3" | IOSTANDARD = SSTL18_II ;
-NET "SD_UDQS_N" LOC = "J5" | IOSTANDARD = SSTL18_II ;
-NET "SD_UDQS_P" LOC = "K6" | IOSTANDARD = SSTL18_II ;
-#NET "SD_LDM" LOC = "J3" | IOSTANDARD = SSTL18_II ;
-NET "SD_LDQS_N" LOC = "K2" | IOSTANDARD = SSTL18_II ;
-NET "SD_LDQS_P" LOC = "K3" | IOSTANDARD = SSTL18_II ;
-NET "SD_ODT" LOC = "P1" | IOSTANDARD = SSTL18_II ;
-NET "LOOP_IN" LOC = "H4" | IOSTANDARD = SSTL18_II ;
-NET "LOOP_OUT" LOC = "H3" | IOSTANDARD = SSTL18_II ;
-
+####################################################################################################################
+# Banks 3
+# Pin Location Constraints for Clock,Masks, Address, and Controls 
+ ####################################################################################################################
+NET  "cntrl0_ddr2_ck[0]"        LOC = "M1" ;
+NET  "cntrl0_ddr2_ck_n[0]"      LOC = "M2" ;
+NET  "cntrl0_ddr2_dm[0]"        LOC = "J3" ;
+NET  "cntrl0_ddr2_dm[1]"        LOC = "E3" ;
+NET  "cntrl0_ddr2_a[0]"		LOC = "R2" ;
+NET  "cntrl0_ddr2_a[1]"		LOC = "T4" ;
+NET  "cntrl0_ddr2_a[2]"		LOC = "R1" ;
+NET  "cntrl0_ddr2_a[3]"		LOC = "U3" ;
+NET  "cntrl0_ddr2_a[4]"		LOC = "U2" ;
+NET  "cntrl0_ddr2_a[5]"		LOC = "U4" ;
+NET  "cntrl0_ddr2_a[6]"		LOC = "U1" ;
+NET  "cntrl0_ddr2_a[7]"		LOC = "Y1" ;
+NET  "cntrl0_ddr2_a[8]"		LOC = "W1" ;
+NET  "cntrl0_ddr2_a[9]"		LOC = "W2" ;
+NET  "cntrl0_ddr2_a[10]"	LOC = "T3" ;
+NET  "cntrl0_ddr2_a[11]"	LOC = "V1" ;
+NET  "cntrl0_ddr2_a[12]"	LOC = "Y2" ;
+NET  "cntrl0_ddr2_ba[0]"	LOC = "P3" ;
+NET  "cntrl0_ddr2_ba[1]"	LOC = "R3" ;
+NET  "cntrl0_ddr2_cke"		LOC = "N3" ;
+NET  "cntrl0_ddr2_cs_n"		LOC = "M5" ;
+NET  "cntrl0_ddr2_ras_n"	LOC = "M3" ;
+NET  "cntrl0_ddr2_cas_n"	LOC = "M4" ;
+NET  "cntrl0_ddr2_we_n"		LOC = "N4" ;
+NET  "cntrl0_ddr2_odt"		LOC = "P1" ;

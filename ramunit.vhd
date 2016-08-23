@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity ramunit is
-    Port ( clk : in  STD_LOGIC;
+    Port ( --clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
            addr : in  STD_LOGIC_VECTOR (24 downto 0);
            cmd : in  STD_LOGIC_VECTOR (2 downto 0);
@@ -43,23 +43,56 @@ entity ramunit is
 			  
 			  
 			  -- ddr2
-			cntrl0_ddr2_dq                : inout std_logic_vector(7 downto 0);
-			cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
-			cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
-			cntrl0_ddr2_cke               : out   std_logic;
-			cntrl0_ddr2_cs_n              : out   std_logic;
-			cntrl0_ddr2_ras_n             : out   std_logic;
-			cntrl0_ddr2_cas_n             : out   std_logic;
-			cntrl0_ddr2_we_n              : out   std_logic;
-			cntrl0_ddr2_odt               : out   std_logic;
-			cntrl0_rst_dqs_div_in         : in    std_logic;
-			cntrl0_rst_dqs_div_out        : out   std_logic;
-		
-			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
-			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
-			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
-			cntrl0_ddr2_ck_n              : out   std_logic_vector(0 downto 0)
 			  
+			  clk130: in STD_LOGIC;
+			  
+--			cntrl0_ddr2_dq                : inout std_logic_vector(7 downto 0);
+--			cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
+--			cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
+--			cntrl0_ddr2_cke               : out   std_logic;
+--			cntrl0_ddr2_cs_n              : out   std_logic;
+--			cntrl0_ddr2_ras_n             : out   std_logic;
+--			cntrl0_ddr2_cas_n             : out   std_logic;
+--			cntrl0_ddr2_we_n              : out   std_logic;
+--			cntrl0_ddr2_odt               : out   std_logic;
+--			cntrl0_rst_dqs_div_in         : in    std_logic;
+--			cntrl0_rst_dqs_div_out        : out   std_logic;
+--		
+--			cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
+--			cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
+--			cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
+--			cntrl0_ddr2_ck_n              : out   std_logic_vector(0 downto 0)
+			  
+		cntrl0_ddr2_dq                : inout std_logic_vector(15 downto 0);
+      cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
+      cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
+      cntrl0_ddr2_cke               : out   std_logic;
+      cntrl0_ddr2_cs_n              : out   std_logic;
+      cntrl0_ddr2_ras_n             : out   std_logic;
+      cntrl0_ddr2_cas_n             : out   std_logic;
+      cntrl0_ddr2_we_n              : out   std_logic;
+      cntrl0_ddr2_odt               : out   std_logic;
+      cntrl0_ddr2_dm                : out   std_logic_vector(1 downto 0);
+      cntrl0_rst_dqs_div_in         : in    std_logic;
+      cntrl0_rst_dqs_div_out        : out   std_logic;
+      cntrl0_burst_done             : in    std_logic;
+      cntrl0_init_done              : out   std_logic;
+      cntrl0_ar_done                : out   std_logic;
+      cntrl0_auto_ref_req           : out   std_logic;
+      
+      cntrl0_clk_tb                 : out   std_logic;
+      cntrl0_clk90_tb               : out   std_logic;
+      cntrl0_sys_rst_tb             : out   std_logic;
+      cntrl0_sys_rst90_tb           : out   std_logic;
+      cntrl0_sys_rst180_tb          : out   std_logic;
+    
+      cntrl0_ddr2_dqs               : inout std_logic_vector(1 downto 0);
+      cntrl0_ddr2_dqs_n             : inout std_logic_vector(1 downto 0);
+      cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
+      cntrl0_ddr2_ck_n              : out   std_logic_vector(0 downto 0)			  
+			  
+			  
+			
 			  );
 end ramunit;
 
@@ -106,9 +139,9 @@ architecture Behavioral of ramunit is
 
 
 
-component u_ddr
+component DDR2_Ram_Core
  port(
-      cntrl0_ddr2_dq                : inout std_logic_vector(7 downto 0);
+      cntrl0_ddr2_dq                : inout std_logic_vector(15 downto 0);
       cntrl0_ddr2_a                 : out   std_logic_vector(12 downto 0);
       cntrl0_ddr2_ba                : out   std_logic_vector(1 downto 0);
       cntrl0_ddr2_cke               : out   std_logic;
@@ -117,10 +150,10 @@ component u_ddr
       cntrl0_ddr2_cas_n             : out   std_logic;
       cntrl0_ddr2_we_n              : out   std_logic;
       cntrl0_ddr2_odt               : out   std_logic;
+      cntrl0_ddr2_dm                : out   std_logic_vector(1 downto 0);
       cntrl0_rst_dqs_div_in         : in    std_logic;
       cntrl0_rst_dqs_div_out        : out   std_logic;
-      sys_clkb                      : in    std_logic;
-      sys_clk                       : in    std_logic;
+      sys_clk_in                    : in    std_logic;
       reset_in_n                    : in    std_logic;
       cntrl0_burst_done             : in    std_logic;
       cntrl0_init_done              : out   std_logic;
@@ -134,11 +167,12 @@ component u_ddr
       cntrl0_sys_rst_tb             : out   std_logic;
       cntrl0_sys_rst90_tb           : out   std_logic;
       cntrl0_sys_rst180_tb          : out   std_logic;
-      cntrl0_user_output_data       : out   std_logic_vector(15 downto 0);
-      cntrl0_user_input_data        : in    std_logic_vector(15 downto 0);
+      cntrl0_user_output_data       : out   std_logic_vector(31 downto 0);
+      cntrl0_user_input_data        : in    std_logic_vector(31 downto 0);
+      cntrl0_user_data_mask         : in    std_logic_vector(3 downto 0);
       cntrl0_user_input_address     : in    std_logic_vector(24 downto 0);
-      cntrl0_ddr2_dqs               : inout std_logic_vector(0 downto 0);
-      cntrl0_ddr2_dqs_n             : inout std_logic_vector(0 downto 0);
+      cntrl0_ddr2_dqs               : inout std_logic_vector(1 downto 0);
+      cntrl0_ddr2_dqs_n             : inout std_logic_vector(1 downto 0);
       cntrl0_ddr2_ck                : out   std_logic_vector(0 downto 0);
       cntrl0_ddr2_ck_n              : out   std_logic_vector(0 downto 0)
 
@@ -174,13 +208,15 @@ end component;
 --	signal      i_cntrl0_sys_rst_tb             :    std_logic;
 --	signal      i_cntrl0_sys_rst90_tb           :    std_logic;
 --	signal      i_cntrl0_sys_rst180_tb          :    std_logic;
-	signal      i_cntrl0_user_output_data       :    std_logic_vector(15 downto 0);
-	signal      i_cntrl0_user_input_data        :     std_logic_vector(15 downto 0);
+	signal      i_cntrl0_user_output_data       :    std_logic_vector(31 downto 0);
+	signal      i_cntrl0_user_input_data        :     std_logic_vector(31 downto 0);
 	signal      i_cntrl0_user_input_address     :     std_logic_vector(24 downto 0);
 --	signal      i_cntrl0_ddr2_dqs               :  std_logic_vector(0 downto 0);
 --	signal      i_cntrl0_ddr2_dqs_n             :  std_logic_vector(0 downto 0);
 --	signal      i_cntrl0_ddr2_ck                :    std_logic_vector(0 downto 0);
 --	signal      i_cntrl0_ddr2_ck_n              :    std_logic_vector(0 downto 0);
+
+signal i_cntrl0_user_data_mask: STD_LOGIC_VECTOR(3 downto 0);
 
 	--
 	
@@ -199,6 +235,9 @@ end component;
 		begin
 
 		
+		i_cntrl0_user_data_mask <= "0000";
+		
+		
 		data_out <= read_data when cmd(1 downto 0) = "11" else
 						"0000000000000000"&read_data(15 downto 0) when cmd(1 downto 0) = "01" else
 						"000000000000000000000000"&read_data(7 downto 0) when cmd(1 downto 0) = "00" else
@@ -212,8 +251,8 @@ end component;
 
 
 
-		process(clk) begin
-			if( falling_edge(clk)) then
+		process(clk130) begin
+			if( falling_edge(clk130)) then
 			
 			if( rst = '1' ) then 
 					i_cntrl0_user_command_register <= "010";
@@ -222,7 +261,7 @@ end component;
 					read_data <= "00000000000000000000000000000000";
 					cmdcounter <= "00000000000";
 					cmdcounter <= "00000000000"; 
-					i_cntrl0_user_input_data <= "0000000000000000"; 
+					i_cntrl0_user_input_data <= "00000000000000000000000000000000"; 
 					i_cntrl0_user_input_address <= "0000000000000000000000000"; 
 					i_cntrl0_burst_done <= '0'; 
 					
@@ -337,12 +376,12 @@ end component;
 
 												-- ?values might be too low/high
 												when to_unsigned(3,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then -- ?todo: not setting ack in the next step, if data here is not valid
-																	read_data( 31 downto 16) <= i_cntrl0_user_output_data;
+																	read_data( 31 downto 0) <= i_cntrl0_user_output_data;
 																	
 																	end if;
 																	
 												when to_unsigned(4,cmdcounter'length) => 	if (i_cntrl0_user_data_valid = '1') then
-																	read_data( 15 downto 0) <= i_cntrl0_user_output_data;
+																	read_data( 31 downto 0) <= i_cntrl0_user_output_data;
 																	ack <= '1'; 
 																	end if;		
 
@@ -398,41 +437,78 @@ end component;
 
 
 
-		u_u_ddr : u_ddr
+		Ram_Core : DDR2_Ram_Core
 				 port map (
-				cntrl0_ddr2_dq                => cntrl0_ddr2_dq,
-				cntrl0_ddr2_a                 => cntrl0_ddr2_a,
-				cntrl0_ddr2_ba                => cntrl0_ddr2_ba,
-				cntrl0_ddr2_cke               => cntrl0_ddr2_cke,
-				cntrl0_ddr2_cs_n              => cntrl0_ddr2_cs_n,
-				cntrl0_ddr2_ras_n             => cntrl0_ddr2_ras_n,
-				cntrl0_ddr2_cas_n             => cntrl0_ddr2_cas_n,
-				cntrl0_ddr2_we_n              => cntrl0_ddr2_we_n,
-				cntrl0_ddr2_odt               => cntrl0_ddr2_odt,
-				cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
-				cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
-				sys_clkb                      => clk,
-				sys_clk                       => clk,
-				reset_in_n                    => i_reset_in_n,
-				cntrl0_burst_done             => i_cntrl0_burst_done,
-				cntrl0_init_done              => i_cntrl0_init_done,
-				cntrl0_ar_done                => i_cntrl0_ar_done,
-				cntrl0_user_data_valid        => i_cntrl0_user_data_valid,
-				cntrl0_auto_ref_req           => i_cntrl0_auto_ref_req,
-				cntrl0_user_cmd_ack           => i_cntrl0_user_cmd_ack,
-				cntrl0_user_command_register  => i_cntrl0_user_command_register,
---				cntrl0_clk_tb                 => cntrl0_clk_tb,
---				cntrl0_clk90_tb               => cntrl0_clk90_tb,
---				cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
---				cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
---				cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
-				cntrl0_user_output_data       => i_cntrl0_user_output_data,
-				cntrl0_user_input_data        => i_cntrl0_user_input_data,
-				cntrl0_user_input_address     => i_cntrl0_user_input_address,
-				cntrl0_ddr2_dqs               => cntrl0_ddr2_dqs,
-				cntrl0_ddr2_dqs_n             => cntrl0_ddr2_dqs_n,
-				cntrl0_ddr2_ck                => cntrl0_ddr2_ck,
-				cntrl0_ddr2_ck_n              => cntrl0_ddr2_ck_n		
+				 
+		cntrl0_ddr2_dq                => cntrl0_ddr2_dq,
+      cntrl0_ddr2_a                 => cntrl0_ddr2_a,
+      cntrl0_ddr2_ba                => cntrl0_ddr2_ba,
+      cntrl0_ddr2_cke               => cntrl0_ddr2_cke,
+      cntrl0_ddr2_cs_n              => cntrl0_ddr2_cs_n,
+      cntrl0_ddr2_ras_n             => cntrl0_ddr2_ras_n,
+      cntrl0_ddr2_cas_n             => cntrl0_ddr2_cas_n,
+      cntrl0_ddr2_we_n              => cntrl0_ddr2_we_n,
+      cntrl0_ddr2_odt               => cntrl0_ddr2_odt,
+      cntrl0_ddr2_dm                => cntrl0_ddr2_dm,
+      cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
+      cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
+      sys_clk_in                    => clk130,
+      reset_in_n                    => rst,
+      cntrl0_burst_done             => cntrl0_burst_done,
+      cntrl0_init_done              => cntrl0_init_done,
+      cntrl0_ar_done                => cntrl0_ar_done,
+      cntrl0_user_data_valid        => i_cntrl0_user_data_valid,
+      cntrl0_auto_ref_req           => cntrl0_auto_ref_req,
+      cntrl0_user_cmd_ack           => i_cntrl0_user_cmd_ack,
+      cntrl0_user_command_register  => i_cntrl0_user_command_register,
+      cntrl0_clk_tb                 => cntrl0_clk_tb,
+      cntrl0_clk90_tb               => cntrl0_clk90_tb,
+      cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
+      cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
+      cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
+      cntrl0_user_output_data       => i_cntrl0_user_output_data,
+      cntrl0_user_input_data        => i_cntrl0_user_input_data,
+      cntrl0_user_data_mask         => i_cntrl0_user_data_mask,
+      cntrl0_user_input_address     => i_cntrl0_user_input_address,
+      cntrl0_ddr2_dqs               => cntrl0_ddr2_dqs,
+      cntrl0_ddr2_dqs_n             => cntrl0_ddr2_dqs_n,
+      cntrl0_ddr2_ck                => cntrl0_ddr2_ck,
+      cntrl0_ddr2_ck_n              => cntrl0_ddr2_ck_n
+				 
+				 
+--				cntrl0_ddr2_dq                => cntrl0_ddr2_dq,
+--				cntrl0_ddr2_a                 => cntrl0_ddr2_a,
+--				cntrl0_ddr2_ba                => cntrl0_ddr2_ba,
+--				cntrl0_ddr2_cke               => cntrl0_ddr2_cke,
+--				cntrl0_ddr2_cs_n              => cntrl0_ddr2_cs_n,
+--				cntrl0_ddr2_ras_n             => cntrl0_ddr2_ras_n,
+--				cntrl0_ddr2_cas_n             => cntrl0_ddr2_cas_n,
+--				cntrl0_ddr2_we_n              => cntrl0_ddr2_we_n,
+--				cntrl0_ddr2_odt               => cntrl0_ddr2_odt,
+--				cntrl0_rst_dqs_div_in         => cntrl0_rst_dqs_div_in,
+--				cntrl0_rst_dqs_div_out        => cntrl0_rst_dqs_div_out,
+--				sys_clkb                      => clk,
+--				sys_clk                       => clk,
+--				reset_in_n                    => i_reset_in_n,
+--				cntrl0_burst_done             => i_cntrl0_burst_done,
+--				cntrl0_init_done              => i_cntrl0_init_done,
+--				cntrl0_ar_done                => i_cntrl0_ar_done,
+--				cntrl0_user_data_valid        => i_cntrl0_user_data_valid,
+--				cntrl0_auto_ref_req           => i_cntrl0_auto_ref_req,
+--				cntrl0_user_cmd_ack           => i_cntrl0_user_cmd_ack,
+--				cntrl0_user_command_register  => i_cntrl0_user_command_register,
+----				cntrl0_clk_tb                 => cntrl0_clk_tb,
+----				cntrl0_clk90_tb               => cntrl0_clk90_tb,
+----				cntrl0_sys_rst_tb             => cntrl0_sys_rst_tb,
+----				cntrl0_sys_rst90_tb           => cntrl0_sys_rst90_tb,
+----				cntrl0_sys_rst180_tb          => cntrl0_sys_rst180_tb,
+--				cntrl0_user_output_data       => i_cntrl0_user_output_data,
+--				cntrl0_user_input_data        => i_cntrl0_user_input_data,
+--				cntrl0_user_input_address     => i_cntrl0_user_input_address,
+--				cntrl0_ddr2_dqs               => cntrl0_ddr2_dqs,
+--				cntrl0_ddr2_dqs_n             => cntrl0_ddr2_dqs_n,
+--				cntrl0_ddr2_ck                => cntrl0_ddr2_ck,
+--				cntrl0_ddr2_ck_n              => cntrl0_ddr2_ck_n		
 				);
 
 
