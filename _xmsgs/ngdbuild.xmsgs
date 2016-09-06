@@ -25,7 +25,7 @@
   pin C on block PROZESSOR/SPEICHER/u_ramunit/i_cntrl0_user_command_register_1 with type FDSE_1</arg>
 </msg>
 
-<msg type="error" file="NgdBuild" num="462" delta="new" ><arg fmt="%s" index="1">input</arg> pad net &apos;<arg fmt="%s" index="2">clk</arg>&apos; drives multiple buffers<arg fmt="%s" index="3">:
+<msg type="error" file="NgdBuild" num="462" delta="old" ><arg fmt="%s" index="1">input</arg> pad net &apos;<arg fmt="%s" index="2">clk</arg>&apos; drives multiple buffers<arg fmt="%s" index="3">:
   pin I on block INST_DCM/CLKIN_IBUFG_INST with type IBUFG,
   pin I on block Inst_vga_clk/CLKIN_IBUFG_INST with type IBUFG</arg>
 </msg>

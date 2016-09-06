@@ -118,11 +118,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1471954778" xil_pn:in_ck="-2018571657362248521" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7886228353999244881" xil_pn:start_ts="1471954661">
+    <transform xil_pn:end_ts="1471955380" xil_pn:in_ck="-2018571657362248521" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6620952605556615586" xil_pn:start_ts="1471955216">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="toplevel.lso"/>
@@ -141,11 +140,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1471954783" xil_pn:in_ck="-3084008263336870448" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1843841104300231122" xil_pn:start_ts="1471954778">
+    <transform xil_pn:end_ts="1472394432" xil_pn:in_ck="-3084008263336870448" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1843841104300231122" xil_pn:start_ts="1472394425">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="toplevel.bld"/>
@@ -157,7 +155,6 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>

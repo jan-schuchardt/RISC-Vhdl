@@ -426,3 +426,4 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -p xc3s700a-fg484-
 xst -intstyle ise -ifn "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.xst" -ofn "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.syr" 
 xst -intstyle ise -ifn "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.xst" -ofn "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  

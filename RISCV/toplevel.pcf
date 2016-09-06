@@ -1,0 +1,672 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Sep 06 11:45:08 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "cntrl0_ddr2_dqs_n<0>" LOCATE = SITE "K2" LEVEL 1;
+COMP "cntrl0_ddr2_dqs_n<1>" LOCATE = SITE "J5" LEVEL 1;
+COMP "clk_50mhz" LOCATE = SITE "E12" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "D7" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "B9" LEVEL 1;
+COMP "b<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "C5" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "D5" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "C6" LEVEL 1;
+COMP "g<3>" LOCATE = SITE "D6" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "B3" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "B8" LEVEL 1;
+COMP "r<3>" LOCATE = SITE "C8" LEVEL 1;
+COMP "slow" LOCATE = SITE "U10" LEVEL 1;
+PIN slow_pin<0> = BEL "slow" PINNAME PAD;
+PIN "slow_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "cntrl0_ddr2_dq<10>" LOCATE = SITE "G1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<11>" LOCATE = SITE "H6" LEVEL 1;
+COMP "cntrl0_ddr2_dq<12>" LOCATE = SITE "H5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<13>" LOCATE = SITE "F1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<14>" LOCATE = SITE "G3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<15>" LOCATE = SITE "F3" LEVEL 1;
+COMP "cntrl0_ddr2_dqs<0>" LOCATE = SITE "K3" LEVEL 1;
+COMP "cntrl0_ddr2_dqs<1>" LOCATE = SITE "K6" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "W21" LEVEL 1;
+COMP "hsync" LOCATE = SITE "C11" LEVEL 1;
+COMP "reset" LOCATE = SITE "V8" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "vsync" LOCATE = SITE "B11" LEVEL 1;
+COMP "cntrl0_ddr2_cke" LOCATE = SITE "N3" LEVEL 1;
+COMP "cntrl0_ddr2_odt" LOCATE = SITE "P1" LEVEL 1;
+COMP "cntrl0_ddr2_ck_n<0>" LOCATE = SITE "M2" LEVEL 1;
+COMP "cntrl0_ddr2_a<10>" LOCATE = SITE "T3" LEVEL 1;
+COMP "cntrl0_ddr2_a<11>" LOCATE = SITE "V1" LEVEL 1;
+COMP "cntrl0_ddr2_a<12>" LOCATE = SITE "Y2" LEVEL 1;
+COMP "cntrl0_ddr2_ba<0>" LOCATE = SITE "P3" LEVEL 1;
+COMP "cntrl0_ddr2_ba<1>" LOCATE = SITE "R3" LEVEL 1;
+COMP "cntrl0_ddr2_ck<0>" LOCATE = SITE "M1" LEVEL 1;
+COMP "cntrl0_ddr2_dm<0>" LOCATE = SITE "J3" LEVEL 1;
+COMP "cntrl0_ddr2_dm<1>" LOCATE = SITE "E3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<0>" LOCATE = SITE "H1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<1>" LOCATE = SITE "K5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<2>" LOCATE = SITE "K1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<3>" LOCATE = SITE "L3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<4>" LOCATE = SITE "L5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<5>" LOCATE = SITE "L1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<6>" LOCATE = SITE "K4" LEVEL 1;
+COMP "cntrl0_ddr2_dq<7>" LOCATE = SITE "H2" LEVEL 1;
+COMP "cntrl0_ddr2_dq<8>" LOCATE = SITE "F2" LEVEL 1;
+COMP "cntrl0_ddr2_dq<9>" LOCATE = SITE "G4" LEVEL 1;
+COMP "cntrl0_rst_dqs_div_out" LOCATE = SITE "H3" LEVEL 1;
+COMP "cntrl0_ddr2_cas_n" LOCATE = SITE "M4" LEVEL 1;
+COMP "cntrl0_ddr2_ras_n" LOCATE = SITE "M3" LEVEL 1;
+COMP "cntrl0_ddr2_a<0>" LOCATE = SITE "R2" LEVEL 1;
+COMP "cntrl0_ddr2_a<1>" LOCATE = SITE "T4" LEVEL 1;
+COMP "cntrl0_ddr2_a<2>" LOCATE = SITE "R1" LEVEL 1;
+COMP "cntrl0_ddr2_a<3>" LOCATE = SITE "U3" LEVEL 1;
+COMP "cntrl0_ddr2_a<4>" LOCATE = SITE "U2" LEVEL 1;
+COMP "cntrl0_ddr2_a<5>" LOCATE = SITE "U4" LEVEL 1;
+COMP "cntrl0_ddr2_a<6>" LOCATE = SITE "U1" LEVEL 1;
+COMP "cntrl0_ddr2_a<7>" LOCATE = SITE "Y1" LEVEL 1;
+COMP "cntrl0_ddr2_a<8>" LOCATE = SITE "W1" LEVEL 1;
+COMP "cntrl0_ddr2_a<9>" LOCATE = SITE "W2" LEVEL 1;
+COMP "cntrl0_ddr2_cs_n" LOCATE = SITE "M5" LEVEL 1;
+COMP "cntrl0_ddr2_we_n" LOCATE = SITE "N4" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/controller0/rst_dqs_div_r" LOCATE = SITE
+        "SLICE_X4Y66" LEVEL 1;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF1"
+        PINNAME CK;
+TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
+        "INST_Clock_VHDL/clk1Hz" BEL "INST_Clock_VHDL/v_cnt1_0" BEL
+        "INST_Clock_VHDL/v_cnt1_1" BEL "INST_Clock_VHDL/v_cnt1_2" BEL
+        "INST_Clock_VHDL/v_cnt1_3" BEL "INST_Clock_VHDL/v_cnt1_4" BEL
+        "INST_Clock_VHDL/v_cnt1_5" BEL "INST_Clock_VHDL/v_cnt1_6" BEL
+        "INST_Clock_VHDL/v_cnt1_7" BEL "INST_Clock_VHDL/v_cnt1_8" BEL
+        "INST_Clock_VHDL/v_cnt1_9" BEL "INST_Clock_VHDL/v_cnt1_10" BEL
+        "INST_Clock_VHDL/v_cnt1_11" BEL "INST_Clock_VHDL/v_cnt1_12" BEL
+        "INST_Clock_VHDL/v_cnt1_13" BEL "INST_Clock_VHDL/v_cnt1_14" BEL
+        "INST_Clock_VHDL/v_cnt1_15" BEL "INST_Clock_VHDL/v_cnt1_16" BEL
+        "INST_Clock_VHDL/v_cnt1_17" BEL "INST_Clock_VHDL/v_cnt1_18" BEL
+        "INST_Clock_VHDL/v_cnt1_19" BEL "INST_Clock_VHDL/v_cnt1_20" BEL
+        "INST_Clock_VHDL/v_cnt1_21" BEL "INST_Clock_VHDL/v_cnt1_22" BEL
+        "INST_Clock_VHDL/v_cnt1_23" BEL "INST_Clock_VHDL/v_cnt1_24" BEL
+        "INST_Clock_VHDL/v_cnt1_25" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_current_state_FSM_FFd2"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_current_state_FSM_FFd1"
+        BEL "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_7" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_6" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/cas_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/cas_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/cas_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ras_count_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ras_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ras_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ras_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ras_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rp_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rp_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rp_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_7" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_6" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wr_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wr_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wr_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_6" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_pre_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_7" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_6" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/count6_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wrburst_end_cnt_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wrburst_end_cnt_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wrburst_end_cnt_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_9" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_8" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_7" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_6" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_count_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_div_cascount_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_div_cascount_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_div_cascount_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rst_iob_out" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset1_clk0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset_int" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref_wait2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref_wait1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_memory" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/wrburst_end_3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref_wait" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_reg" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref_issued" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_9" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_5" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rdburst_end_2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_rasb2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_web2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_div_rdburstcount_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_div_rdburstcount_0" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable_int" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_mem" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_casb2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_ba1_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/burst_length_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rst_dqs_div_r" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/auto_ref_detect1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/autoref_value" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rdburst_end_1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rst0_r" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/init_done" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ar_done_reg" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/rst180_r" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_ba[0].iob_ba"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_ba[1].iob_ba"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[1].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[4].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[5].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[7].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[8].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[9].iob_addr"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[10].iob_addr"
+        BEL "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_cke" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_cke1" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_casb" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_rasb" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_web" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_17" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_16" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_14" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_13" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_15" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_11" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_10" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_12" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_8" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_7" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_9" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_6" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_5" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_3" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_2" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_4" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_0" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_counter_1" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/v_main_command_register_1" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/command_register_1" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_15" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_14" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_13" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_12" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_11" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_10" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_9" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_8" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_7" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_6" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_5" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_4" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_3" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_2" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_1" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/counter200_0" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst_1" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst_o" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us_i" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd3" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd1" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_10" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_8" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/write_enable" BEL
+        "INST_DDR2_RAM_CORE/top_00/controller0/ddr_ba1_0" BEL
+        "INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd7" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_CLK0.GCLKMUX"
+        BEL "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_CLK0" BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1/N"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/N/FF1_pins<1>"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF1_pins<1>"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U1/N"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/N/FF1_pins<1>"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U1"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U2/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/N/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/infrastructure_iobs0/U_clk_i/ODDR2/FF1_pins<1>";
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0"
+        PINNAME CK;
+PIN
+        INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1_pins<1>
+        = BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1"
+        PINNAME CK;
+TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = BEL
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val" BEL
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1" PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF0_pins<1>"
+        PIN
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR_DM0_OUT/ODDR2/FF1_pins<1>"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DQ_T"
+        BEL
+        "INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DQ_T"
+        BEL "INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270" BEL
+        "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_CLK90.GCLKMUX"
+        BEL "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_CLK90";
+PIN INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP_pins<3> =
+        BEL "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP"
+        PINNAME CLKIN;
+TIMEGRP SYS_CLK = PIN
+        "INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP_pins<3>";
+TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5187 ns HIGH 50%;
+TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK
+        HIGH 50%;
+TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK
+        PHASE 1.879675 ns HIGH 50%;
+SCHEMATIC END;
+

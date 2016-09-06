@@ -1,0 +1,749 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf
+ddr2_pinning.ucf -ucf pinning.ucf
+
+Design file:              toplevel.ncd
+Physical constraint file: toplevel.pcf
+Device,package,speed:     xc3s700a,fg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5187 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.800ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5187 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2.718ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 2.400ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+Slack: 2.718ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 7.518ns
+  High pulse: 3.759ns
+  High pulse limit: 2.400ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+Slack: 3.519ns (period - min period limit)
+  Period: 7.518ns
+  Min period limit: 3.999ns (250.063MHz) (Tdcmpc)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = 
+PERIOD TIMEGRP         
+"INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK         
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3024 paths analyzed, 683 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.233ns.
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/controller0/init_done (SLICE_X4Y4.SR), 13 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.285ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_6 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/init_done (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      7.237ns (Levels of Logic = 3)
+  Clock Path Skew:      0.004ns (0.009 - 0.005)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_6 to INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y7.XQ        Tcko                  0.591   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count<6>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_6
+    SLICE_X4Y6.G4        net (fanout=2)        1.612   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count<6>
+    SLICE_X4Y6.Y         Tilo                  0.707   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not0000
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not00004
+    SLICE_X4Y9.F1        net (fanout=2)        0.543   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not00004
+    SLICE_X4Y9.X         Tilo                  0.692   N80
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042_SW0
+    SLICE_X4Y5.G4        net (fanout=1)        0.363   N80
+    SLICE_X4Y5.Y         Tilo                  0.707   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not000012
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042
+    SLICE_X4Y4.SR        net (fanout=1)        1.155   INST_DDR2_RAM_CORE/top_00/controller0/init_done_or0000
+    SLICE_X4Y4.CLK       Tsrck                 0.867   INST_DDR2_RAM_CORE/top_00/controller0/init_done
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    -------------------------------------------------  ---------------------------
+    Total                                      7.237ns (3.564ns logic, 3.673ns route)
+                                                       (49.2% logic, 50.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.452ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/init_count_1 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/init_done (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.958ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.108ns (0.225 - 0.333)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/init_count_1 to INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y22.XQ       Tcko                  0.591   INST_DDR2_RAM_CORE/top_00/controller0/init_count<1>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_count_1
+    SLICE_X4Y9.G1        net (fanout=12)       1.833   INST_DDR2_RAM_CORE/top_00/controller0/init_count<1>
+    SLICE_X4Y9.Y         Tilo                  0.707   N80
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000030
+    SLICE_X4Y9.F3        net (fanout=1)        0.043   INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000030/O
+    SLICE_X4Y9.X         Tilo                  0.692   N80
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042_SW0
+    SLICE_X4Y5.G4        net (fanout=1)        0.363   N80
+    SLICE_X4Y5.Y         Tilo                  0.707   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not000012
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042
+    SLICE_X4Y4.SR        net (fanout=1)        1.155   INST_DDR2_RAM_CORE/top_00/controller0/init_done_or0000
+    SLICE_X4Y4.CLK       Tsrck                 0.867   INST_DDR2_RAM_CORE/top_00/controller0/init_done
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    -------------------------------------------------  ---------------------------
+    Total                                      6.958ns (3.564ns logic, 3.394ns route)
+                                                       (51.2% logic, 48.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.457ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/init_count_2 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/init_done (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.965ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.096ns (0.225 - 0.321)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/init_count_2 to INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y16.YQ       Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/controller0/init_count<3>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_count_2
+    SLICE_X4Y9.G4        net (fanout=14)       1.755   INST_DDR2_RAM_CORE/top_00/controller0/init_count<2>
+    SLICE_X4Y9.Y         Tilo                  0.707   N80
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000030
+    SLICE_X4Y9.F3        net (fanout=1)        0.043   INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000030/O
+    SLICE_X4Y9.X         Tilo                  0.692   N80
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042_SW0
+    SLICE_X4Y5.G4        net (fanout=1)        0.363   N80
+    SLICE_X4Y5.Y         Tilo                  0.707   INST_DDR2_RAM_CORE/top_00/controller0/dll_rst_count_not000012
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done_or000042
+    SLICE_X4Y4.SR        net (fanout=1)        1.155   INST_DDR2_RAM_CORE/top_00/controller0/init_done_or0000
+    SLICE_X4Y4.CLK       Tsrck                 0.867   INST_DDR2_RAM_CORE/top_00/controller0/init_done
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/init_done
+    -------------------------------------------------  ---------------------------
+    Total                                      6.965ns (3.649ns logic, 3.316ns route)
+                                                       (52.4% logic, 47.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2 (SLICE_X25Y42.BY), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/rst180_r (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.984ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.014ns (0.466 - 0.480)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/rst180_r to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y13.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+    SLICE_X11Y40.F3      net (fanout=65)       3.820   INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.984ns (2.107ns logic, 4.877ns route)
+                                                       (30.2% logic, 69.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.534ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      4.903ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.081ns (0.605 - 0.686)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4 to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y50.XQ      Tcko                  0.591   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+    SLICE_X11Y40.F1      net (fanout=25)       1.824   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.903ns (2.022ns logic, 2.881ns route)
+                                                       (41.2% logic, 58.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.781ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      4.671ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.066ns (0.605 - 0.671)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2 to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y53.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+    SLICE_X11Y40.F2      net (fanout=18)       1.507   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.671ns (2.107ns logic, 2.564ns route)
+                                                       (45.1% logic, 54.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3 (SLICE_X25Y42.BY), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/rst180_r (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.984ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.014ns (0.466 - 0.480)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/rst180_r to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y13.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+    SLICE_X11Y40.F3      net (fanout=65)       3.820   INST_DDR2_RAM_CORE/top_00/controller0/rst180_r
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.984ns (2.107ns logic, 4.877ns route)
+                                                       (30.2% logic, 69.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.534ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      4.903ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.081ns (0.605 - 0.686)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4 to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y50.XQ      Tcko                  0.591   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+    SLICE_X11Y40.F1      net (fanout=25)       1.824   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd4
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.903ns (2.022ns logic, 2.881ns route)
+                                                       (41.2% logic, 58.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.781ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      4.671ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.066ns (0.605 - 0.671)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 11.277ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2 to INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y53.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+    SLICE_X11Y40.F2      net (fanout=18)       1.507   INST_DDR2_RAM_CORE/top_00/controller0/current_state_FSM_FFd2
+    SLICE_X11Y40.X       Tilo                  0.643   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst1
+    SLICE_X25Y42.BY      net (fanout=2)        1.057   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_cst
+    SLICE_X25Y42.CLK     Tsrck                 0.788   INST_DDR2_RAM_CORE/top_00/controller0/rfc_count<2>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/rfc_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.671ns (2.107ns logic, 2.564ns route)
+                                                       (45.1% logic, 54.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK
+        HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1 (K3.T1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.857ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.941ns (Levels of Logic = 0)
+  Clock Path Skew:      0.084ns (0.316 - 0.232)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2 to INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y54.XQ       Tcko                  0.473   INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+    K3.T1                net (fanout=4)        0.633   INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+    K3.OTCLK1            Tiockt      (-Th)     0.165   cntrl0_ddr2_dqs<0>
+                                                       INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.941ns (0.308ns logic, 0.633ns route)
+                                                       (32.7% logic, 67.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2 (SLICE_X5Y54.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.896ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable1 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.896ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable1 to INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y54.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable1
+    SLICE_X5Y54.BX       net (fanout=1)        0.343   INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable1
+    SLICE_X5Y54.CLK      Tckdi       (-Th)    -0.089   INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dqs_enable2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.896ns (0.553ns logic, 0.343ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1 (SLICE_X17Y13.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.932ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o (FF)
+  Destination:          INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.965ns (Levels of Logic = 0)
+  Clock Path Skew:      0.033ns (0.250 - 0.217)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 3.759ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o to INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y13.YQ      Tcko                  0.464   INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o
+    SLICE_X17Y13.BY      net (fanout=1)        0.361   INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_o
+    SLICE_X17Y13.CLK     Tckdi       (-Th)    -0.140   INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/sys_rst180_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.965ns (0.604ns logic, 0.361ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6/SR
+  Location pin: SLICE_X14Y5.SR
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/user_rst
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 7.518ns
+  High pulse: 3.759ns
+  High pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6/SR
+  Location pin: SLICE_X14Y5.SR
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/user_rst
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd6/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/v_main_command_register_1/SR
+  Location pin: SLICE_X14Y5.SR
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/user_rst
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm 
+= PERIOD TIMEGRP         
+"INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK         
+PHASE 1.879675 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 19 paths analyzed, 19 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.516ns.
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val (SLICE_X1Y65.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     2.278ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      1.441ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.040ns (0.245 - 0.285)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1 to INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y64.YQ       Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+    SLICE_X1Y65.BY       net (fanout=1)        0.451   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+    SLICE_X1Y65.CLK      Tdick                 0.314   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    -------------------------------------------------  ---------------------------
+    Total                                      1.441ns (0.990ns logic, 0.451ns route)
+                                                       (68.7% logic, 31.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1 (SLICE_X2Y64.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.001ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/write_enable (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1 (FF)
+  Requirement:          5.638ns
+  Data Path Delay:      2.327ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.310ns (1.458 - 1.768)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk90_tb rising at 9.397ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/write_enable to INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y50.YQ       Tcko                  0.580   INST_DDR2_RAM_CORE/top_00/controller0/write_enable
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/write_enable
+    SLICE_X2Y64.BY       net (fanout=1)        1.361   INST_DDR2_RAM_CORE/top_00/controller0/write_enable
+    SLICE_X2Y64.CLK      Tdick                 0.386   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.327ns (0.966ns logic, 1.361ns route)
+                                                       (41.5% logic, 58.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270 (SLICE_X18Y12.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.590ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us (FF)
+  Destination:          INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270 (FF)
+  Requirement:          5.638ns
+  Data Path Delay:      1.747ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.301ns (1.438 - 1.739)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us to INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y14.YQ      Tcko                  0.580   INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us
+    SLICE_X18Y12.BY      net (fanout=4)        0.781   INST_DDR2_RAM_CORE/infrastructure_top0/wait_200us
+    SLICE_X18Y12.CLK     Tdick                 0.386   INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/wait_clk270
+    -------------------------------------------------  ---------------------------
+    Total                                      1.747ns (0.966ns logic, 0.781ns route)
+                                                       (55.3% logic, 44.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK
+        PHASE 1.879675 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T (H1.T1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.705ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.766ns (Levels of Logic = 0)
+  Clock Path Skew:      0.061ns (0.306 - 0.245)
+  Source Clock:         clk90_tb falling at 5.638ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val to INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y65.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    H1.T1                net (fanout=16)       0.467   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    H1.OTCLK1            Tiockt      (-Th)     0.165   cntrl0_ddr2_dq<0>
+                                                       INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T
+    -------------------------------------------------  ---------------------------
+    Total                                      0.766ns (0.299ns logic, 0.467ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T (H2.T1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.900ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.961ns (Levels of Logic = 0)
+  Clock Path Skew:      0.061ns (0.306 - 0.245)
+  Source Clock:         clk90_tb falling at 5.638ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val to INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y65.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    H2.T1                net (fanout=16)       0.662   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    H2.OTCLK1            Tiockt      (-Th)     0.165   cntrl0_ddr2_dq<7>
+                                                       INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T
+    -------------------------------------------------  ---------------------------
+    Total                                      0.961ns (0.299ns logic, 0.662ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T (F2.T1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.062ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.145ns (Levels of Logic = 0)
+  Clock Path Skew:      0.083ns (0.328 - 0.245)
+  Source Clock:         clk90_tb falling at 5.638ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val to INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y65.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    F2.T1                net (fanout=16)       0.846   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val
+    F2.OTCLK1            Tiockt      (-Th)     0.165   cntrl0_ddr2_dq<8>
+                                                       INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T
+    -------------------------------------------------  ---------------------------
+    Total                                      1.145ns (0.299ns logic, 0.846ns route)
+                                                       (26.1% logic, 73.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK
+        PHASE 1.879675 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 5.916ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 0.801ns (Tcl)
+  Physical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CLK
+  Logical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CK
+  Location pin: SLICE_X2Y64.CLK
+  Clock network: clk90_tb
+--------------------------------------------------------------------------------
+Slack: 5.916ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 7.518ns
+  High pulse: 3.759ns
+  High pulse limit: 0.801ns (Tch)
+  Physical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CLK
+  Logical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CK
+  Location pin: SLICE_X2Y64.CLK
+  Clock network: clk90_tb
+--------------------------------------------------------------------------------
+Slack: 5.916ns (period - min period limit)
+  Period: 7.518ns
+  Min period limit: 1.602ns (624.220MHz) (Tcp)
+  Physical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CLK
+  Logical resource: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_P1/CK
+  Location pin: SLICE_X2Y64.CLK
+  Clock network: clk90_tb
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_SYS_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_SYS_CLK                     |      7.519ns|      4.800ns|      7.233ns|            0|            0|            0|         3043|
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|      7.233ns|          N/A|            0|            0|         3024|            0|
+| ucture_top0_clk_dcm0_clk0dcm  |             |             |             |             |             |             |             |
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|      3.516ns|          N/A|            0|            0|           19|            0|
+| ucture_top0_clk_dcm0_clk90dcm |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLKB_130M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLKB_130M      |    5.963|    2.735|    2.183|    7.233|
+clk_50mhz      |    5.963|    2.735|    2.183|    7.233|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_50mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLKB_130M      |    5.963|    2.735|    2.183|    7.233|
+clk_50mhz      |    5.963|    2.735|    2.183|    7.233|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3043 paths, 0 nets, and 1120 connections
+
+Design statistics:
+   Minimum period:   7.233ns{1}   (Maximum frequency: 138.255MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Sep 06 11:46:06 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 157 MB
+
+
+

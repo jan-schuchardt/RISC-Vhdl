@@ -1,0 +1,260 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Map Application Log File for Design 'toplevel'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off
+-c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+Target Device  : xc3s700a
+Target Package : fg484
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Tue Sep 06 11:44:57 2016
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal cntrl0_rst_dqs_div_in connected to top level port
+   cntrl0_rst_dqs_div_in has been removed.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=460 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/dqs_div_rst" has been discarded, because the net
+   was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<0>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<1>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<2>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<3>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<0>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<0>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<1>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<2>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<3>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<4>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<5>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<6>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<7>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<1>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<4>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<5>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<6>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<7>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col0/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=580 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<0>" has been discarded, because
+   the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col0/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col0/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col0/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col0/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col1/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col1/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col1/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col1/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_
+   delay_col1/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=580 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<1>" has been discarded, because
+   the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=200 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delay
+   ed/delay5" has been discarded, because the net was optimized out of the
+   design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div" has
+   been discarded, because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=200 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delay
+   ed/delay3" has been discarded, because the net was optimized out of the
+   design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=200 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delay
+   ed/delay4" has been discarded, because the net was optimized out of the
+   design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=200 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delay
+   ed/delay1" has been discarded, because the net was optimized out of the
+   design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=200 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delay
+   ed/delay2" has been discarded, because the net was optimized out of the
+   design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=400 pS" on net
+   "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<7>" has been
+   discarded, because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=400 pS" on net
+   "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<15>" has been
+   discarded, because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=400 pS" on net
+   "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<23>" has been
+   discarded, because the net was optimized out of the design.
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   53
+Logic Utilization:
+  Number of Slice Flip Flops:           212 out of  11,776    1%
+  Number of 4 input LUTs:               252 out of  11,776    2%
+Logic Distribution:
+  Number of occupied Slices:            217 out of   5,888    3%
+    Number of Slices containing only related logic:     217 out of     217 100%
+    Number of Slices containing unrelated logic:          0 out of     217   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         328 out of  11,776    2%
+    Number used as logic:               252
+    Number used as a route-thru:         76
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 72 out of     372   19%
+    IOB Flip Flops:                      14
+    IOB Master Pads:                      3
+    IOB Slave Pads:                       3
+  Number of ODDR2s used:                 24
+    Number of DDR_ALIGNMENT = NONE       24
+    Number of DDR_ALIGNMENT = C0          0
+    Number of DDR_ALIGNMENT = C1          0
+  Number of BUFGMUXs:                     6 out of      24   25%
+  Number of DCMs:                         3 out of       8   37%
+
+Average Fanout of Non-Clock Nets:                3.05
+
+Peak Memory Usage:  260 MB
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion:   5 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "toplevel_map.mrp" for details.
