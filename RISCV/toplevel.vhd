@@ -41,7 +41,7 @@ port (
     cntrl0_ddr2_ck_n    : out std_logic_vector(0 downto 0) := (others => '0');
     cntrl0_ddr2_cke     : out std_logic := '0';
     cntrl0_ddr2_cs_n    : out std_logic := '0';
-    cntrl0_ddr2_ras_n   : out std_logic := '0';
+    cntrl0_ddr2_ras_n   : out std_logic := '0'; 
     cntrl0_ddr2_cas_n   : out std_logic := '0';
     cntrl0_ddr2_we_n    : out std_logic := '0';
     cntrl0_ddr2_odt     : out std_logic := '0';

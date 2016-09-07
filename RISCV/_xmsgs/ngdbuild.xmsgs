@@ -19,8 +19,5 @@
 <msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">DCM_SP</arg> to <arg fmt="%s" index="4">7.518700</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_SYS_CLK&quot; = PERIOD &quot;SYS_CLK&quot;  7.5187  ns HIGH 50 %;&gt; [ddr2_pinning.ucf(43)]</arg>).
 </msg>
 
-<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/ACK_REG_INST1</arg>&apos; has unconnected output pin
-</msg>
-
 </messages>
 

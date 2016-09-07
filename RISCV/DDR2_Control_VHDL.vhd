@@ -79,10 +79,11 @@ entity DDR2_Control_VHDL is
 		clk90_in : in std_logic;
 
 		maddr   : in std_logic_vector(15 downto 0);
-		mdata_i : in std_logic_vector(7 downto 0);
-		data_out : out std_logic_vector(7 downto 0);
+		mdata_i : in std_logic_vector(63 downto 0);
+		data_out : out std_logic_vector(63 downto 0);
 		mwe	  : in std_logic;
 		mrd    : in std_logic;
+		valid : out std_logic;
 
 		
 		init_done : in std_logic;
@@ -213,7 +214,10 @@ architecture Verhalten of DDR2_Control_VHDL is
 	signal m_rd : std_logic;	
 	signal m_we : std_logic;	
 	
+	signal i_valid : std_logic;
+	
 begin
+valid <= i_valid;
 
 synchro : process (clk_in)
 	begin
@@ -374,15 +378,23 @@ synchro : process (clk_in)
 --					Was pressed -
 				-----------------------------------------------------						
 				when M8_NOP =>
+					i_valid <='1';
+				
 					-- warte auf Taste fuer READ oder WRITE
 					v_write_en <= '0';
 					v_read_en <= '0';					
 					if mwe_r = '1' and v_write_busy = '0' and auto_ref_req = '0' then
 						-- write start (only if not busy and no refresh cycle)
 						STATE_M <= M9_WRITE_INIT;
+						
+						i_valid <='0';
+						
 					elsif mrd_r = '1' and v_read_busy = '0' and auto_ref_req = '0' then
 						-- read restart (only if not busy and no refresh cycle)
 						STATE_M <= M11_READ_INIT;
+						
+						i_valid <='0';
+						
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
 --					if risingedge_in(1)='1' and v_ROW < 255 then
@@ -465,7 +477,7 @@ synchro : process (clk_in)
 			   -----------------------------------------------------
 				-- WRITE : Write a value to the RAM
 				-----------------------------------------------------	
-				v_write_data <= x"00000000000000" & mdata_i; -- CONST_DATA;				
+				v_write_data <=  mdata_i; -- CONST_DATA;				
 				input_adress <=  "00000" & maddr(15 downto 8) & maddr(7 downto 0) & "0000"; --v_ROW & v_COL & v_BANK;
 				command_register <= v_write_command_register;
 				burst_done <= v_write_burst_done;				
@@ -500,7 +512,7 @@ synchro : process (clk_in)
 			data_out <= (others => '0');
 		elsif falling_edge(clk_in) and v_read_busy='0' then
 		
-			data_out <= v_read_data(7 downto 0);
+			data_out <= v_read_data(63 downto 0);
 		 
 		
 --			if debounce_in(7 downto 5)="000" then data_out <= v_read_data(7 downto 0);
