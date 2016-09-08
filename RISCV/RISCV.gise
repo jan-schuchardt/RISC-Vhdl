@@ -97,11 +97,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473329586" xil_pn:in_ck="-9059017031380954581" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-6963579774529594070" xil_pn:start_ts="1473329331">
+    <transform xil_pn:end_ts="1473368498" xil_pn:in_ck="-9059017031380954581" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-87436762023442658" xil_pn:start_ts="1473368236">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="toplevel.lso"/>
       <outfile xil_pn:name="toplevel.ngc"/>
@@ -122,7 +121,8 @@
     <transform xil_pn:end_ts="1473329597" xil_pn:in_ck="-1788400850979450790" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3731912545339796026" xil_pn:start_ts="1473329586">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="toplevel.bld"/>

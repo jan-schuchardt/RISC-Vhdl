@@ -117,28 +117,29 @@ END COMPONENT;
 -- DDR2 Control --
 COMPONENT MMU is
 PORT (
-    reset_in : in std_logic;
-    clk_in : in std_logic;
-    clk90_in : in std_logic;
+		--Clocking and reset ports
+		reset_in : in std_logic;
+		clk_in : in std_logic;
+		clk90_in : in std_logic;
 
-   
-    mmu_data_in: out std_logic_vector(31 downto 0);
-	 mmu_data_out: in std_logic_vector(31 downto 0);
-	 mmu_adr_out: in std_logic_vector(31 downto 0);
-	 mmu_com_out: in std_logic_vector(2 downto 0);
-	 mmu_work_out : in std_logic;
-	 mmu_ack_in : out std_logic;
-
-
-    init_done : in std_logic;
-    command_register : out std_logic_vector(2 downto 0);
-    input_adress : out std_logic_vector(24 downto 0);
-    input_data : out std_logic_vector(31 downto 0);
-    output_data : in std_logic_vector(31 downto 0);
-    cmd_ack : in std_logic;
-    data_valid : in std_logic;
-    burst_done : out std_logic;
-    auto_ref_req : in std_logic
+		--Ports connected to CPU
+		data_out: out std_logic_vector(31 downto 0);
+		data_in: in std_logic_vector(31 downto 0);
+		addr_in: in std_logic_vector(31 downto 0);
+		cmd_in: in std_logic_vector(2 downto 0);
+		work_in : in std_logic;
+		ack_out : out std_logic;
+		
+		--Ports connected to DRR2_RAM_CORE
+		init_done : in std_logic;
+		command_register : out std_logic_vector(2 downto 0);
+		input_adress : out std_logic_vector(24 downto 0);
+		input_data : out std_logic_vector(31 downto 0);
+		output_data : in std_logic_vector(31 downto 0);
+		cmd_ack : in std_logic;
+		data_valid : in std_logic;
+		burst_done : out std_logic;
+		auto_ref_req : in std_logic
 );
 END COMPONENT MMU;
 
@@ -224,14 +225,14 @@ signal ddr2_led : std_logic;
 signal CLK_130M : std_logic;
 signal CLKB_130M : std_logic;
 signal CLK50M : std_logic;
-	
-	
+
+-- Signals to connect CPU with MMU (declaration follows MMUs interface)
 signal 	 mmu_data_in:  std_logic_vector(31 downto 0);
 signal	 mmu_data_out:  std_logic_vector(31 downto 0);
-signal	 mmu_adr_out:  std_logic_vector(31 downto 0);
-signal	 mmu_com_out:  std_logic_vector(2 downto 0);
-signal	 mmu_work_out :  std_logic;
-signal	 mmu_ack_in :  std_logic;	
+signal	 mmu_addr_in:  std_logic_vector(31 downto 0);
+signal	 mmu_cmd_in:  std_logic_vector(2 downto 0);
+signal	 mmu_work_in :  std_logic;
+signal	 mmu_ack_out :  std_logic;	
 	
 begin
 
@@ -307,19 +308,15 @@ PROZESSOR: entity work.cpu PORT MAP(
 	cpu_slow_in => slow,
 	cpu_err_out => err_out,		
 
-    mmu_data_in =>mmu_data_in,
-	 mmu_data_out =>mmu_data_out,
-	 mmu_adr_out =>mmu_adr_out,
-	 mmu_com_out =>mmu_com_out,
-	 mmu_work_out =>mmu_work_out,
-	 mmu_ack_in =>mmu_ack_in
+    mmu_data_in =>mmu_data_out,
+	 mmu_data_out =>mmu_data_in,
+	 mmu_adr_out =>mmu_addr_in,
+	 mmu_com_out =>mmu_cmd_in,
+	 mmu_work_out =>mmu_work_in,
+	 mmu_ack_in =>mmu_ack_out
 	 
 		
-);  
-
-
-
-
+); 
   
 -----------------------------------------------------------------------------
 -- DDR2
@@ -331,35 +328,29 @@ we_rise <= '0';
  	
 INST_MMU : MMU
 PORT MAP (
-    reset_in => Reset,
-    clk_in => clk_tb,
-    clk90_in => clk90_tb,
+	reset_in => Reset,
+	clk_in => clk_tb,
+	clk90_in => clk90_tb,
+	
+	--Connecting CPU signals to MMU
+	data_out =>mmu_data_out,
+	data_in =>mmu_data_in,
+	addr_in =>mmu_addr_in,
+	cmd_in =>mmu_cmd_in,
+	work_in =>mmu_work_in,
+	ack_out =>mmu_ack_out,
 
---    maddr   => maddr,
---    mdata_i => cpu_ram_d_from_cv_s,
---    data_out => SDRAM_DO,
---    mwe	  => we_rise,
---    mrd     => rd_rise,
+	-- ddr2	
+	init_done => v_init_done, --in
+	command_register => user_command_register, --out
+	input_adress => user_input_address, --out
+	input_data => user_input_data, --out 
+	output_data => user_output_data, --in
+	cmd_ack => user_cmd_ack, --in
+	data_valid => user_data_valid, --in
+	burst_done => burst_done, --out
+	auto_ref_req => auto_ref_req --in
 
- -- vom Prozessor
-	   mmu_data_in =>mmu_data_in,
-	 mmu_data_out =>mmu_data_out,
-	 mmu_adr_out =>mmu_adr_out,
-	 mmu_com_out =>mmu_com_out,
-	 mmu_work_out =>mmu_work_out,
-	 mmu_ack_in =>mmu_ack_in,
-
-    -- ddr2	
-    init_done => v_init_done, --in
-    command_register => user_command_register, --out
-    input_adress => user_input_address, --out
-    input_data => user_input_data, --out 
-    output_data => user_output_data, --in
-    cmd_ack => user_cmd_ack, --in
-    data_valid => user_data_valid, --in
-    burst_done => burst_done, --out
-    auto_ref_req => auto_ref_req --in
-	 
 	
 );
 		  

@@ -33,74 +33,43 @@ use ieee.numeric_std.all;
 entity BLOCKRAM is
 port(
 		clk : in std_logic;
-		reset_in : in std_logic;
-		mmu_adr_out   : in std_logic_vector(4 downto 0);
-		mmu_data_out : in std_logic_vector(31 downto 0);
-		mmu_data_in : out std_logic_vector(31 downto 0);
-		mask : in std_logic_vector(1 downto 0);
-		mwe	  : in std_logic;
-		mrd    : in std_logic;
-		valid : out std_logic
+		rst : in std_logic;
+		addr_in : in std_logic_vector(10 downto 0); --11 Bit Adress enables 2048 8-Bit cells
+		data_in : in std_logic_vector(7 downto 0);
+		data_out: out std_logic_vector(7 downto 0);
+		write_enable : in std_logic;
+		read_enable : in std_logic
 );
 
 end BLOCKRAM;
 
 architecture Behavioral of BLOCKRAM is
 
-
+	type mem_t is array (0 to 2047) of std_logic_vector(7 downto 0);  -- 32 Cells with 8 bit 
+	signal cells : mem_t:= (others => (others => '0'));
+	signal test1: std_logic_vector(31 downto 0); -- Singal used for init
 	
-
-	type blocks is array (0 to 31) of std_logic_vector(7 downto 0);  -- 32 Cells with 8 bit 
-	signal blockram : blocks:= (others => (others => '0'));
-	signal test1: std_logic_vector(31 downto 0);
+	attribute ram_style: string;
+	attribute ram_style of cells : signal is "block";
 	
 begin
-
-process(clk) begin
-
-if rising_edge(clk) then
-	if reset_in = '1' then
-	
---	blockram <= (others => (others => '0'));
-	
-	test1 <= "000000000011" & "00001" & "000" & "00001" & "00100" & "11";
-	blockram(0)<= test1(7 downto 0);
-	blockram(1)<= test1(15 downto 8);
-	blockram(2)<= test1(23 downto 16);
-	blockram(3)<= test1(31 downto 24);
-	
-	
-else
-		if mrd = '1' then 
-		mmu_data_in<=std_logic_vector'(blockram(to_integer(unsigned(mmu_adr_out)+3)) & blockram(to_integer(unsigned(mmu_adr_out)+2))
-			& blockram(to_integer(unsigned(mmu_adr_out)+1)) & blockram(to_integer(unsigned(mmu_adr_out)+0)));
-			valid <= '1';
-									
-		elsif mwe = '1' then
-			case mask(1 downto 0) is  -- edge case: adress 2047 no 32 bit read/write
-				when "00" => --8 bit access
-					blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-				when "01" => --16 bit access
-					
-					blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-					blockram(to_integer(unsigned(mmu_adr_out)) + 1)<= mmu_data_out(15 downto 8);
-				when "11" => --32 bit access
-					
-					blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-					blockram(to_integer(unsigned(mmu_adr_out)) + 1)<= mmu_data_out(15 downto 8);
-					blockram(to_integer(unsigned(mmu_adr_out)) + 2)<= mmu_data_out(23 downto 16);
-					blockram(to_integer(unsigned(mmu_adr_out)) + 3)<= mmu_data_out(31 downto 24);
-				when others => NULL;
-			end case;
-				valid <= '1';
-				
-		else
+	process(clk) begin
 		
-			valid <= '0';
+		if rising_edge(clk) then
+		
+			if rst = '0' then
+			--No reset -> standard dual-port usage
+				if write_enable = '1'then
+					cells(to_integer(unsigned(addr_in))) <= data_in;
+				end if;
+				data_out <= cells(to_integer(unsigned(addr_in)));	
+			end if;
+			
 		end if;
-	end if;
-end if;
-end process;
+			
+	end process;
 
 end Behavioral;
+
+
 
