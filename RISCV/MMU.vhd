@@ -63,6 +63,21 @@ end MMU;
 architecture Behavioral of MMU is
 
 
+component BLOCKRAM is
+Port(
+		clk : in std_logic;
+		reset_in : in std_logic;
+		mmu_adr_out   : in std_logic_vector(4 downto 0);
+		mmu_data_out : in std_logic_vector(31 downto 0);
+		mmu_data_in : out std_logic_vector(31 downto 0);
+		mask : in std_logic_vector(1 downto 0);
+		mwe	  : in std_logic;
+		mrd    : in std_logic;
+		valid : out std_logic
+);
+
+end Component Blockram;
+
 -- DDR2 Control --
 COMPONENT DDR2_Control_VHDL is
 PORT (
@@ -101,12 +116,13 @@ END COMPONENT DDR2_Control_VHDL;
 	signal i_busy : std_logic;
 	signal i_ackwait : unsigned(1 downto 0);	  
 	
-	signal blockram_acc : std_logic;
 	
-
-	type blocks is array (0 to 2047) of std_logic_vector(7 downto 0);  -- 2048 Cells with 8 bit 
-	signal blockram : blocks;
-
+	
+	signal i_blockram_data : std_logic_vector(31 downto 0);
+	signal i_blockram_mwe : std_logic;
+	signal i_blockram_mrd : std_logic;
+	signal i_blockram_valid : std_logic;
+	signal i_block_acc: std_logic;
 
 begin
 
@@ -132,7 +148,9 @@ process(clk_in) begin
 					mmu_ack_in <= '0';					
 					i_ackwait <= to_unsigned(2,i_ackwait'length);
 					
-					if(  unsigned(mmu_adr_out) > to_unsigned(2047,mmu_adr_out'length) ) then
+					if(  unsigned(mmu_adr_out) > to_unsigned(31,mmu_adr_out'length) ) then
+						i_block_acc <= '0';
+						
 						if mmu_com_out(2) = '0' then
 							i_mrd <= '1';
 							i_mwe <= '0';					
@@ -143,28 +161,17 @@ process(clk_in) begin
 						end if;	
 						
 					else
-						if mmu_com_out(2) = '0' then 
-							mmu_data_in<=std_logic_vector'(blockram(to_integer(unsigned(mmu_adr_out)+3)) & blockram(to_integer(unsigned(mmu_adr_out)+2))
-								& blockram(to_integer(unsigned(mmu_adr_out)+1)) & blockram(to_integer(unsigned(mmu_adr_out)+0)));
-							
-						else
-							case mmu_com_out(1 downto 0) is  -- edge case: adress 2047 no 32 bit read/write
-								when "00" => --8 bit access
-									blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-								when "01" => --16 bit access
-									
-									blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-									blockram(to_integer(unsigned(mmu_adr_out)) + 1)<= mmu_data_out(15 downto 8);
-								when "11" => --32 bit access
-									
-									blockram(to_integer(unsigned(mmu_adr_out)))<= mmu_data_out(7 downto 0);
-									blockram(to_integer(unsigned(mmu_adr_out)) + 1)<= mmu_data_out(15 downto 8);
-									blockram(to_integer(unsigned(mmu_adr_out)) + 2)<= mmu_data_out(23 downto 16);
-									blockram(to_integer(unsigned(mmu_adr_out)) + 3)<= mmu_data_out(31 downto 24);
-								when others => NULL;
-							end case;
-							
-						end if;
+						i_block_acc <= '1';
+						if mmu_com_out(2) = '0' then
+							i_blockram_mrd <= '1';
+							i_blockram_mwe <= '0';					
+						else 
+							i_blockram_mrd <= '0';
+							i_blockram_mwe <= '1';	
+							--i_mdata_i(31 downto 0) <= 	mmu_data_out;
+						end if;	
+						
+						
 					end if;
 					
 				
@@ -172,13 +179,28 @@ process(clk_in) begin
 					if not i_ackwait = to_unsigned(0,i_ackwait'length) then
 						i_ackwait <= i_ackwait - 1;
 						
-					else
-						if i_valid = '1' then
-							mmu_ack_in <= '1';
-							i_busy <= '0';
-							mmu_data_in <= i_data_out(31 downto 0);
+						i_mrd <= '0';
+						i_mwe <= '0';	
+						i_blockram_mrd <= '0';
+						i_blockram_mwe <= '0';
 						
-						end if;
+					else
+						if i_block_acc = '0' then
+							if i_valid = '1' then
+								mmu_ack_in <= '1';
+								i_busy <= '0';
+								mmu_data_in <= i_data_out(31 downto 0);
+							
+							end if;
+						else
+							if i_blockram_valid = '1' then
+								mmu_ack_in <= '1';
+								i_busy <= '0';
+								mmu_data_in <= i_blockram_data;
+							
+							end if;
+						
+						end if;	
 						
 					end if;
 				
@@ -215,6 +237,22 @@ PORT MAP (
     burst_done => burst_done, --out
     auto_ref_req => auto_ref_req --in
 );
+
+INST_BLOCKRAM : BLOCKRAM
+PORT MAP (
+		clk => clk_in,
+		reset_in => reset_in,
+		mmu_adr_out  => mmu_adr_out(4 downto 0),
+		mmu_data_out => mmu_data_out,
+		mmu_data_in => i_blockram_data,
+		mask => mmu_com_out(1 downto 0),
+		mwe	=> i_blockram_mwe,
+		mrd    => i_blockram_mrd,
+		valid => i_blockram_valid
+);
+
+
+
 
 end Behavioral;
 

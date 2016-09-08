@@ -8,7 +8,7 @@
 <msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">63</arg> IOs, <arg fmt="%d" index="2">62</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
 </msg>
 
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">clk_tb</arg> may have excessive skew because 
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">clk_tb</arg> may have excessive skew because 
    <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
 </msg>
 
@@ -16,7 +16,7 @@
    <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
 </msg>
 
-<msg type="warning" file="Par" num="468" delta="new" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+<msg type="warning" file="Par" num="468" delta="old" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
 Review the timing report using Timing Analyzer (In ISE select &quot;Post-Place &amp;
 Route Static Timing Report&quot;). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
