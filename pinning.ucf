@@ -1,7 +1,7 @@
-NET "CLK" LOC = "E12" | IOSTANDARD = LVCMOS33 ;
+NET "CLK_50MHZ" LOC = "E12" | IOSTANDARD = LVCMOS33 ;
+NET "CLKB_130M"  IOSTANDARD = LVCMOS33 ;
 
-
-NET "RST" LOC = "V8" | IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE ;
+NET "RESET" LOC = "V8" | IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE  | PULLDOWN ;
 NET "SLOW" LOC = "U10" | IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE ;
 
 NET "R<3>" LOC = "C8" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
@@ -18,59 +18,12 @@ NET "B<1>" LOC = "D7" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "B<0>" LOC = "C7" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "HSYNC" LOC = "C11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 NET "VSYNC" LOC = "B11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
-#
 
-
-NET  "cntrl0_ddr2_a[*]"                                     IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_ba[*]"                                    IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_ck[*]"                                    IOSTANDARD = DIFF_SSTL18_I;
-NET  "cntrl0_ddr2_ck_n[*]"                                  IOSTANDARD = DIFF_SSTL18_I;
-NET  "cntrl0_ddr2_cke"                                      IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_cs_n"                                     IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_ras_n"                                    IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_cas_n"                                    IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_we_n"                                     IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_odt"                                      IOSTANDARD = SSTL18_I;
-NET  "cntrl0_ddr2_dm[*]"                                    IOSTANDARD = SSTL18_I;
-NET  "cntrl0_rst_dqs_div_in"                                IOSTANDARD = SSTL18_I; 
-NET  "cntrl0_rst_dqs_div_out"                               IOSTANDARD = SSTL18_I; 
-NET  "cntrl0_ddr2_dq[*]"                                    IOSTANDARD = SSTL18_I; 
-NET  "cntrl0_ddr2_dqs[*]"                                   IOSTANDARD = DIFF_SSTL18_I; 
-NET  "cntrl0_ddr2_dqs_n[*]"                                 IOSTANDARD = DIFF_SSTL18_I; 
-
-####################################################################################################################
-# Banks 2
-# Pin Location Constraints for System clock signals
-####################################################################################################################
-#NET  "sys_clk_in"	LOC = "V12"; # on board clock
-#NET  "sys_clk_in"	LOC = "U12"; #external clock	
-
-####################################################################################################################
-# Banks 3
-# Pin Location Constraints for Clock,Masks, Address, and Controls 
- ####################################################################################################################
-NET  "cntrl0_ddr2_ck[0]"        LOC = "M1" ;
-NET  "cntrl0_ddr2_ck_n[0]"      LOC = "M2" ;
-NET  "cntrl0_ddr2_dm[0]"        LOC = "J3" ;
-NET  "cntrl0_ddr2_dm[1]"        LOC = "E3" ;
-NET  "cntrl0_ddr2_a[0]"		LOC = "R2" ;
-NET  "cntrl0_ddr2_a[1]"		LOC = "T4" ;
-NET  "cntrl0_ddr2_a[2]"		LOC = "R1" ;
-NET  "cntrl0_ddr2_a[3]"		LOC = "U3" ;
-NET  "cntrl0_ddr2_a[4]"		LOC = "U2" ;
-NET  "cntrl0_ddr2_a[5]"		LOC = "U4" ;
-NET  "cntrl0_ddr2_a[6]"		LOC = "U1" ;
-NET  "cntrl0_ddr2_a[7]"		LOC = "Y1" ;
-NET  "cntrl0_ddr2_a[8]"		LOC = "W1" ;
-NET  "cntrl0_ddr2_a[9]"		LOC = "W2" ;
-NET  "cntrl0_ddr2_a[10]"	LOC = "T3" ;
-NET  "cntrl0_ddr2_a[11]"	LOC = "V1" ;
-NET  "cntrl0_ddr2_a[12]"	LOC = "Y2" ;
-NET  "cntrl0_ddr2_ba[0]"	LOC = "P3" ;
-NET  "cntrl0_ddr2_ba[1]"	LOC = "R3" ;
-NET  "cntrl0_ddr2_cke"		LOC = "N3" ;
-NET  "cntrl0_ddr2_cs_n"		LOC = "M5" ;
-NET  "cntrl0_ddr2_ras_n"	LOC = "M3" ;
-NET  "cntrl0_ddr2_cas_n"	LOC = "M4" ;
-NET  "cntrl0_ddr2_we_n"		LOC = "N4" ;
-NET  "cntrl0_ddr2_odt"		LOC = "P1" ;
+NET "LEDS<7>" LOC = "W21" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<6>" LOC = "Y22" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<5>" LOC = "V20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<4>" LOC = "V19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<3>" LOC = "U19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<2>" LOC = "U20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<1>" LOC = "T19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+NET "LEDS<0>" LOC = "R20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;

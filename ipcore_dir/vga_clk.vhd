@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : vga_clk.vhd
--- /___/   /\     Timestamp : 04/20/2016 11:58:22
+-- /___/   /\     Timestamp : 08/31/2016 16:25:22
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-st C:\Users\Florian\Documents\Uni\ERA\RISCV\Testprojekt\ipcore_dir\.\vga_clk.xaw C:\Users\Florian\Documents\Uni\ERA\RISCV\Testprojekt\ipcore_dir\.\vga_clk
+--Command: xaw2vhdl-st C:\Users\Florian\Documents\Uni\ERA\RISCV\RISCV_FPGA\RISCV\ipcore_dir\.\vga_clk.xaw C:\Users\Florian\Documents\Uni\ERA\RISCV\RISCV_FPGA\RISCV\ipcore_dir\.\vga_clk
 --Design Name: vga_clk
 --Device: xc3s700a-5fg484
 --
@@ -26,31 +26,24 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity vga_clk is
-   port ( CLKIN_IN        : in    std_logic; 
-          RST_IN          : in    std_logic; 
-          CLKDV_OUT       : out   std_logic; 
-          CLKIN_IBUFG_OUT : out   std_logic; 
-          CLK0_OUT        : out   std_logic; 
-          LOCKED_OUT      : out   std_logic);
+   port ( CLKIN_IN   : in    std_logic; 
+          RST_IN     : in    std_logic; 
+          CLKDV_OUT  : out   std_logic; 
+          CLK0_OUT   : out   std_logic; 
+          LOCKED_OUT : out   std_logic);
 end vga_clk;
 
 architecture BEHAVIORAL of vga_clk is
-   signal CLKDV_BUF       : std_logic;
-   signal CLKFB_IN        : std_logic;
-   signal CLKIN_IBUFG     : std_logic;
-   signal CLK0_BUF        : std_logic;
-   signal GND_BIT         : std_logic;
+   signal CLKDV_BUF  : std_logic;
+   signal CLKFB_IN   : std_logic;
+   signal CLK0_BUF   : std_logic;
+   signal GND_BIT    : std_logic;
 begin
    GND_BIT <= '0';
-   CLKIN_IBUFG_OUT <= CLKIN_IBUFG;
    CLK0_OUT <= CLKFB_IN;
    CLKDV_BUFG_INST : BUFG
       port map (I=>CLKDV_BUF,
                 O=>CLKDV_OUT);
-   
-   CLKIN_IBUFG_INST : IBUFG
-      port map (I=>CLKIN_IN,
-                O=>CLKIN_IBUFG);
    
    CLK0_BUFG_INST : BUFG
       port map (I=>CLK0_BUF,
@@ -72,7 +65,7 @@ begin
             PHASE_SHIFT => 0,
             STARTUP_WAIT => FALSE)
       port map (CLKFB=>CLKFB_IN,
-                CLKIN=>CLKIN_IBUFG,
+                CLKIN=>CLKIN_IN,
                 DSSEN=>GND_BIT,
                 PSCLK=>GND_BIT,
                 PSEN=>GND_BIT,

@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Mapping Report File for Design 'toplevel'
 
 Design Information
@@ -9,37 +9,60 @@ Target Device  : xc3s700a
 Target Package : fg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed Jun 29 16:27:17 2016
+Mapped Date    : Thu Sep 08 12:19:06 2016
+ERROR:Pack:18 - The design is too large for the given device and package. 
+   Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device.
+
+   NOTE: An NCD file will still be generated to allow you to examine the mapped
+   design.  This file is intended for evaluation use only, and will not process
+   successfully through PAR.
+
+   This mapped NCD file can be used to evaluate how the design's logic has been
+   mapped into FPGA logic resources.  It can also be used to analyze
+   preliminary, logic-level (pre-route) timing with one of the Xilinx static
+   timing analysis tools (TRCE or Timing Analyzer).
 
 Design Summary
 --------------
-Number of errors:      0
-Number of warnings:   18
+Number of errors:      2
+Number of warnings:   16
 Logic Utilization:
-  Number of Slice Flip Flops:         1,575 out of  11,776   13%
-  Number of 4 input LUTs:             5,765 out of  11,776   48%
+  Number of Slice Flip Flops:         2,682 out of  11,776   22%
+  Number of 4 input LUTs:            10,670 out of  11,776   90%
 Logic Distribution:
-  Number of occupied Slices:          3,618 out of   5,888   61%
-    Number of Slices containing only related logic:   3,618 out of   3,618 100%
-    Number of Slices containing unrelated logic:          0 out of   3,618   0%
+  Number of occupied Slices:          5,933 out of   5,888  100% (OVERMAPPED)
+    Number of Slices containing only related logic:   5,933 out of   5,933 100%
+    Number of Slices containing unrelated logic:          0 out of   5,933   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       5,850 out of  11,776   49%
-    Number used as logic:             5,765
-    Number used as a route-thru:         85
+  Total Number of 4 input LUTs:      10,917 out of  11,776   92%
+    Number used as logic:            10,541
+    Number used as a route-thru:        247
+    Number used for Dual Port RAMs:      64
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      65
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 18 out of     372    4%
-  Number of BUFGMUXs:                     3 out of      24   12%
-  Number of DCMs:                         1 out of       8   12%
-  Number of RAMB16BWEs:                   1 out of      20    5%
+  Number of bonded IOBs:                 73 out of     372   19%
+    IOB Flip Flops:                      18
+    IOB Master Pads:                      3
+    IOB Slave Pads:                       3
+  Number of ODDR2s used:                 24
+    Number of DDR_ALIGNMENT = NONE       24
+    Number of DDR_ALIGNMENT = C0          0
+    Number of DDR_ALIGNMENT = C1          0
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         3 out of       8   37%
+  Number of RAMB16BWEs:                   2 out of      20   10%
 
-Average Fanout of Non-Clock Nets:                3.96
+  Number of RPM macros:            1
+Average Fanout of Non-Clock Nets:                3.89
 
-Peak Memory Usage:  280 MB
-Total REAL time to MAP completion:  8 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  387 MB
+Total REAL time to MAP completion:  14 secs 
+Total CPU time to MAP completion:   14 secs 
 
 NOTES:
 
@@ -77,9 +100,28 @@ Section 13 - Utilization by Hierarchy
 
 Section 1 - Errors
 ------------------
+ERROR:Pack:2310 - Too many comps of type "SLICEL" found to fit this device.
+ERROR:Pack:18 - The design is too large for the given device and package. 
+   Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device.
+
+   NOTE: An NCD file will still be generated to allow you to examine the mapped
+   design.  This file is intended for evaluation use only, and will not process
+   successfully through PAR.
+
+   This mapped NCD file can be used to evaluate how the design's logic has been
+   mapped into FPGA logic resources.  It can also be used to analyze
+   preliminary, logic-level (pre-route) timing with one of the Xilinx static
+   timing analysis tools (TRCE or Timing Analyzer).
 
 Section 2 - Warnings
 --------------------
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_clk_tb/INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_C
+   LK0" (output signal=clk_tb) has a mix of clock and non-clock loads. The
+   non-clock loads are:
+   Pin I0 of INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/l0
 WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
    symbol "physical_group_clk_cpu/Inst_vga_clk/CLK0_BUFG_INST" (output
    signal=clk_cpu) has a mix of clock and non-clock loads. The non-clock loads
@@ -90,83 +132,127 @@ WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
    	PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<12>
    	PROZESSOR/CLOCKER/Mcount_counter_cy<0>
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_10 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_31 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_0.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_10 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_32 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_1.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_101 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_0.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_33 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_2.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_102 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_1.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_34 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_3.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_103 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_2.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_35 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_4.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_104 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_3.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_36 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_5.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_105 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_4.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_37 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5_6.  There is
+   a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_106 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<5>111 failed
+   to merge with F5 multiplexer
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<4>11_f5. 
+   There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
 WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0002_107 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0000_9_f5_6.  There is a
+   INST_MMU/INST_BLOCKRAM/Mmux_blockram_15_mux0001_3 failed to merge with F5
+   multiplexer INST_MMU/INST_BLOCKRAM/Mmux_blockram_11_mux0001_2_f5.  There is a
    conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_101 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_0.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_102 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_1.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_103 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_2.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_104 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_3.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_105 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_4.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_106 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator
-   PROZESSOR/SPEICHER/Mmux_data_out_varindex0001_107 failed to merge with F5
-   multiplexer PROZESSOR/SPEICHER/Mmux_data_out_varindex0003_9_f5_6.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   0/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 31 more times for the
+   following (max. 5 shown):
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   1/SPO,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   2/SPO,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   3/SPO,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   4/SPO,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit
+   5/SPO
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp clk133/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   1 block(s) removed
+  75 block(s) optimized away
+   1 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "clk133/CLK2X_BUFG_INST" (CKBUF) removed.
+ The signal "clk133/CLK2X_BUF" is loadless and has been removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
+FDSE 		INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val_0
+   optimized to 1
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_de
+lay_col0/XST_VCC
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_de
+lay_col1/XST_VCC
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_de
+lay_col0/XST_VCC
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_de
+lay_col1/XST_VCC
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[11].iob_addr
+   optimized to 0
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[12].iob_addr
+   optimized to 0
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_odt
+   optimized to 0
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -180,28 +266,104 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLKB_130M                          | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | b<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | b<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | b<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | b<3>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
-| clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
-| err_out                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| clk_50mhz                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| cntrl0_ddr2_a<0>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<1>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<2>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<3>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<4>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<5>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<6>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<7>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<8>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<9>                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<10>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<11>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a<12>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ba<0>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ba<1>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cas_n                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ck<0>                  | DIFFM            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ck_n<0>                | DIFFS            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cke                    | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cs_n                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dm<0>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dm<1>                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dq<0>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<1>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<2>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<3>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<4>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<5>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<6>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<7>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<8>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<9>                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<10>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<11>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<12>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<13>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<14>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq<15>                 | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs<0>                 | DIFFM            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs<1>                 | DIFFM            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs_n<0>               | DIFFS            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs_n<1>               | DIFFS            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_odt                    | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ras_n                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_we_n                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_rst_dqs_div_in              | IBUF             | INPUT     | SSTL18_I             |       |          |         |              |          | 0 / 0    |                  |
+| cntrl0_rst_dqs_div_out             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
 | g<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | g<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | g<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | g<3>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| leds<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<4>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<5>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<6>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds<7>                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
 | r<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | r<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | r<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 | r<3>                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
-| rst                                | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| reset                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
 | slow                               | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
 | vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
 ----------------
+delay_calibration_chain                 
 
 Section 8 - Guide Report
 ------------------------
@@ -220,9 +382,17 @@ Partition Implementation Status
 Area Group Information
 ----------------------
 
-  No area groups were found in this design.
+Area Group "cal_ctl"
+  No COMPRESSION specified for Area Group "cal_ctl"
+  RANGE: SLICE_X26Y8:SLICE_X37Y21
+  Area Group Logic Utilization:
+  Number of Slice Flip Flops:               94 out of    336   27%
+  Logic Distribution:
+    Number of occupied Slices:              67 out of    168   39%
+      Number of Slices containing only related logic:     67 out of     67 100%
+  Total Number of 4 input LUTs:             82 out of    336   24%
+    Number used as logic:                   82
 
-----------------------
 
 Section 10 - Timing Report
 --------------------------
