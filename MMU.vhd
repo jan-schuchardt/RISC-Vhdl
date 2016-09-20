@@ -338,7 +338,7 @@ architecture Behavioral of MMU is
 							
 								br_addr_in <= std_logic_vector(unsigned(br_addr_in) + 1);
 								ram_access_cnt <= ram_access_cnt - 1;
-								br_data_buffer(7 downto 0) <= br_data_buffer(15 downto 8); --next byte will be written
+								br_data_buffer(24 downto 0) <= br_data_buffer(31 downto 8); --next byte will be written
 								ram_access_addr_increment <= '0';
 								br_write_enable <= '0'; -- no write during increment
 							
