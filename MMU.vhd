@@ -165,7 +165,9 @@ architecture Behavioral of MMU is
 							ddr2_read_enable <= '0';
 							ddr2_write_enable <= '0';
 							if ram_access_addr_increment = '0' then
-							
+								
+								ram_access_addr_increment <= '1'; 
+								
 								case to_integer(ram_access_cnt) is --writing 8-bit values into bram
 								
 									when 0 => br_data_in <= x"00";
@@ -178,7 +180,8 @@ architecture Behavioral of MMU is
 								br_addr_in <= std_logic_vector(ram_access_cnt);
 								br_write_enable <= '1';
 							
-							else
+							else								
+								ram_access_addr_increment <= '0'; 
 								--Wait for bram to sync before we can access again / we exit the init if all bytes were written
 								if ram_access_cnt = 3 then
 									MMU_STATE <= MMU_IDLE;
@@ -217,7 +220,7 @@ architecture Behavioral of MMU is
 										br_data_buffer <= data_in;
 									else
 									
-										--DDR2SDRAM write access -> DDR2 Control is modified that it always negates the lower 2 bits, so 64 bit mid aligned data is prefetched
+										--DDR2SDRAM write access -> DDR2 Control is modified that it always nullifies the lower 2 bits, so 64 bit mid aligned data is prefetched
 										ddr2_read_enable <= '1';
 										ddr2_write_enable <= '0';
 										MMU_STATE <= MMU_SDRAM_WRITE_PREFETCH;
@@ -317,7 +320,7 @@ architecture Behavioral of MMU is
 								when others => NULL;	
 							end case;
 							
-							
+							MMU_STATE <= MMU_SDRAM_WRITE_BACK;
 						
 						when MMU_SDRAM_WRITE_BACK =>
 							ddr2_data_in <= ddr2_data_buffer;
@@ -338,11 +341,12 @@ architecture Behavioral of MMU is
 							
 								br_addr_in <= std_logic_vector(unsigned(br_addr_in) + 1);
 								ram_access_cnt <= ram_access_cnt - 1;
-								br_data_buffer(24 downto 0) <= br_data_buffer(31 downto 8); --next byte will be written
+								br_data_buffer(23 downto 0) <= br_data_buffer(31 downto 8); --next byte will be written
 								ram_access_addr_increment <= '0';
 								br_write_enable <= '0'; -- no write during increment
 							
 							else
+								ram_access_addr_increment <= '1';
 								if ram_access_cnt = 0 then
 									--Write done, return to idle state / this costs an extra frame which is required for sync with BRAM
 									MMU_STATE <= MMU_IDLE;
@@ -367,6 +371,8 @@ architecture Behavioral of MMU is
 								br_write_enable <= '0'; -- always read
 							
 							else
+								ram_access_addr_increment <= '1';
+
 								if ram_access_cnt = 0 then
 									--Write done, return to idle state / this costs an extra frame which is required for sync with BRAM
 									MMU_STATE <= MMU_IDLE;
