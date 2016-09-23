@@ -104,18 +104,19 @@ begin
 			
 			--First operand
 			--Immediate
-				if cu_com_in(5) = '0' then
-					s_op1 <= cu_data_in1;
+			if cu_com_in(5) = '0' then
+				s_op1 <= cu_data_in1;
 				--Register
-				elsif cu_com_in(5) = '1' then
+			elsif cu_com_in(5) = '1' then
 					--s_op1 <= x"00000000";
 					
-					if cu_data_in1 /= std_logic_vector(to_unsigned(0,cu_data_in1'length)) then
-							ram_douta <= reg_data1(to_integer(unsigned(cu_data_in1)));
-							
-					end if;
-				
+				if cu_data_in1 /= std_logic_vector(to_unsigned(0,cu_data_in1'length)) then
+						ram_douta <= reg_data1(to_integer(unsigned(cu_data_in1)));
+				else
+						ram_douta <= x"0000";
 				end if;
+				
+			end if;
 				
 			--second operand
 			if cu_com_in(4) = '0' then
@@ -124,6 +125,7 @@ begin
 				--s_op1 <= x"00000000";
 					if cu_data_in2 /= std_logic_vector(to_unsigned(0,cu_data_in2'length)) then
 						ram_doutb <= reg_data2(to_integer(unsigned(cu_data_in2)));
+					else	ram_doutb <= x"0000";
 					end if;
 			end if;
 			
