@@ -207,17 +207,17 @@ architecture Behavioral of MMU is
 							if work_in = '1' then
 							
 								ack_out <= '0'; --CPU has to wait until MMU has finished rw-cycle
-								case cmd_in(1 downto 0) is --determination of length for operation (only used by bram, but calculated anyways)
-									when "00" => ram_access_cnt <= to_unsigned(1, ram_access_cnt'length);
-									when "01" => ram_access_cnt <= to_unsigned(2, ram_access_cnt'length);
-									when "11" => ram_access_cnt <= to_unsigned(4, ram_access_cnt'length);
-									when others => ram_access_cnt <= to_unsigned(0, ram_access_cnt'length);
-								end case;
 								
 								--MMU starts working
 								if cmd_in(2) = '1' then
-									
 									--Write cycle
+									case cmd_in(1 downto 0) is --determination of length for operation (only used by bram, but calculated anyways)
+										when "00" => ram_access_cnt <= to_unsigned(1, ram_access_cnt'length);
+										when "01" => ram_access_cnt <= to_unsigned(2, ram_access_cnt'length);
+										when "11" => ram_access_cnt <= to_unsigned(4, ram_access_cnt'length);
+										when others => ram_access_cnt <= to_unsigned(0, ram_access_cnt'length);
+									end case;
+									
 									if unsigned(addr_in) < to_unsigned(2048, addr_in'length) then
 										
 										--Set base adress and also remaining bytes to write
@@ -237,10 +237,11 @@ architecture Behavioral of MMU is
 								else
 								
 									--Read cylce
+									ram_access_cnt <= to_unsigned(4,ram_access_cnt'length);
 									if unsigned(addr_in) < to_unsigned(2048, addr_in'length) then
 										
 										--Set base adress and also remaining bytes to write
-										br_addr_in <= std_logic_vector(unsigned(addr_in(10 downto 0)) - 1 + unsigned(ram_access_cnt));
+										br_addr_in <= std_logic_vector(unsigned(addr_in(10 downto 0)) + 3);
 										MMU_STATE <= MMU_BRAM_READ;
 										ram_access_addr_increment <= '0'; --no increment requested in first place
 										br_data_buffer <= (others => '0');
