@@ -139,7 +139,9 @@ PORT (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic
+		auto_ref_req : in std_logic;
+		
+		debug_out : out std_logic_vector(31 downto 0)
 );
 END COMPONENT MMU;
 
@@ -303,8 +305,8 @@ Inst_vga_clk: vga_clk PORT MAP(
 PROZESSOR: entity work.cpu PORT MAP(
 	cpu_rst_in => reset,
 	cpu_clk_in => clk_cpu, --clk25,
-	cpu_debug_out => debug,
-	cpu_debug_adr_out => debug_adr,
+--	cpu_debug_out => debug,
+--	cpu_debug_adr_out => debug_adr,
 	cpu_slow_in => slow,
 	cpu_err_out => err_out,		
 
@@ -349,10 +351,11 @@ PORT MAP (
 	cmd_ack => user_cmd_ack, --in
 	data_valid => user_data_valid, --in
 	burst_done => burst_done, --out
-	auto_ref_req => auto_ref_req --in
+	auto_ref_req => auto_ref_req, --in
 
-	
+	debug_out => debug
 );
+		  debug_adr <= "000100";
 		  
 INST_DDR2_RAM_CORE : DDR2_Ram_Core
 PORT MAP (

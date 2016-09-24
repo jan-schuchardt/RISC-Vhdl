@@ -55,7 +55,9 @@ port (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic
+		auto_ref_req : in std_logic;
+		
+		debug_out : out std_logic_vector(31 downto 0)
 	);
 
 end MMU;
@@ -146,7 +148,7 @@ architecture Behavioral of MMU is
 	begin
 	
 		process(clk_in) begin
-		
+			
 			if rising_edge(clk_in) then
 			
 				if reset_in = '1' then
@@ -161,6 +163,7 @@ architecture Behavioral of MMU is
 					case MMU_STATE is
 					
 						when MMU_INIT =>
+												debug_out <= "00001" & "00000000000000000000000000" & ram_access_addr_increment;
 							--State to initialize BRAM with values
 							ddr2_read_enable <= '0';
 							ddr2_write_enable <= '0';
@@ -193,7 +196,7 @@ architecture Behavioral of MMU is
 								--Wait for bram to sync before we can access again / we exit the init if all bytes were written
 								if ram_access_cnt = 11 then
 									MMU_STATE <= MMU_IDLE;
-									--ack_out <= '1'; --we tell the CPU that we are ready
+									ack_out <= '1'; --we tell the CPU that we are ready
 								else
 									--Write into next cell
 									ram_access_cnt <= ram_access_cnt + 1;
@@ -204,7 +207,7 @@ architecture Behavioral of MMU is
 							end if;
 							
 						when MMU_IDLE =>
-							
+							debug_out <= "00010" & "00000000000000000000000000" & ram_access_addr_increment;
 							if work_in = '1' then
 							
 								ack_out <= '0'; --CPU has to wait until MMU has finished rw-cycle
@@ -368,7 +371,7 @@ architecture Behavioral of MMU is
 							end if;
 							
 						when MMU_BRAM_READ =>
-						
+						debug_out <= "00011" & "00000000000000000000000000" & ram_access_addr_increment;
 							-- Read cylce
 							if ram_access_addr_increment = '1' then
 							
