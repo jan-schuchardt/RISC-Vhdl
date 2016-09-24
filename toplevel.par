@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-A22T2C9::  Sat Sep 24 15:55:32 2016
+DESKTOP-A22T2C9::  Sat Sep 24 16:15:30 2016
 
 par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
 
@@ -54,11 +54,11 @@ Design Summary Report:
    Number of BUFGMUXs                        7 out of 24     29%
    Number of DCMs                            3 out of 8      37%
    Number of RAMB16BWEs                      3 out of 20     15%
-   Number of Slices                       4799 out of 5888   81%
-      Number of SLICEMs                     85 out of 2944    2%
+   Number of Slices                       4842 out of 5888   82%
+      Number of SLICEMs                     87 out of 2944    2%
 
-   Number of LOCed Slices                   65 out of 4799    1%
-      Number of LOCed SLICEMs               43 out of 85     50%
+   Number of LOCed Slices                   65 out of 4842    1%
+      Number of LOCed SLICEMs               43 out of 87     49%
 
 
 
@@ -68,56 +68,56 @@ Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
 Starting initial Timing Analysis.  REAL time: 2 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 2 secs 
+Total REAL time at the beginning of Placer: 3 secs 
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:20c8ce) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:a1433826) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 63 IOs, 62 are locked and 1 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:20c8ce) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:a1433826) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:20c8ce) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:a1433826) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 ......
-Phase 4.2  Initial Clock and IO Placement (Checksum:97a9c599) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:74db972e) REAL time: 5 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:97a9c599) REAL time: 5 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:74db972e) REAL time: 5 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:97a9c599) REAL time: 5 secs 
+Phase 6.36  Local Placement Optimization (Checksum:74db972e) REAL time: 5 secs 
 
 Phase 7.8  Global Placement
-............................
-.............................................
-........................
-...............................................................................................
-.................................................
-..................................................................
-.......
-............
-Phase 7.8  Global Placement (Checksum:a50509a6) REAL time: 13 secs 
+.........................
+...............................................................................
+.........................................
+..........................................................................................................
+......................................................
+.........................................................................
+........
+................
+Phase 7.8  Global Placement (Checksum:2c4a58e5) REAL time: 14 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:a50509a6) REAL time: 13 secs 
+Phase 8.5  Local Placement Optimization (Checksum:2c4a58e5) REAL time: 14 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:8f30ef3e) REAL time: 18 secs 
+Phase 9.18  Placement Optimization (Checksum:5ea2ba4b) REAL time: 19 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:8f30ef3e) REAL time: 18 secs 
+Phase 10.5  Local Placement Optimization (Checksum:5ea2ba4b) REAL time: 19 secs 
 
-Total REAL time to Placer completion: 18 secs 
-Total CPU  time to Placer completion: 18 secs 
+Total REAL time to Placer completion: 19 secs 
+Total CPU  time to Placer completion: 19 secs 
 Writing design to file toplevel.ncd
 
 
@@ -125,32 +125,34 @@ Writing design to file toplevel.ncd
 Starting Router
 
 
-Phase  1  : 36035 unrouted;      REAL time: 24 secs 
+Phase  1  : 36455 unrouted;      REAL time: 25 secs 
 
-Phase  2  : 34454 unrouted;      REAL time: 24 secs 
+Phase  2  : 34865 unrouted;      REAL time: 26 secs 
 
-Phase  3  : 12752 unrouted;      REAL time: 27 secs 
+Phase  3  : 12786 unrouted;      REAL time: 29 secs 
 
-Phase  4  : 13305 unrouted; (Setup:156595, Hold:0, Component Switching Limit:0)     REAL time: 29 secs 
+Phase  4  : 13287 unrouted; (Setup:70189, Hold:0, Component Switching Limit:0)     REAL time: 31 secs 
 
-Phase  5  : 0 unrouted; (Setup:189227, Hold:0, Component Switching Limit:0)     REAL time: 39 secs 
+Phase  5  : 0 unrouted; (Setup:95404, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
 
 Updating file: toplevel.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:189227, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
+Phase  6  : 0 unrouted; (Setup:95404, Hold:0, Component Switching Limit:0)     REAL time: 44 secs 
 
-Phase  7  : 0 unrouted; (Setup:189227, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 54 secs 
+Phase  7  : 0 unrouted; (Setup:95404, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 6 secs 
 
-Phase  8  : 0 unrouted; (Setup:189227, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 55 secs 
+Phase  8  : 0 unrouted; (Setup:95404, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 18 secs 
 
-Phase  9  : 0 unrouted; (Setup:170833, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 55 secs 
+Phase  9  : 0 unrouted; (Setup:95404, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 19 secs 
+
+Phase 10  : 0 unrouted; (Setup:77947, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 19 secs 
 WARNING:Route:455 - CLK Net:clk_tb may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:clk_cpu may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 mins 55 secs 
-Total CPU time to Router completion: 2 mins 55 secs 
+Total REAL time to Router completion: 4 mins 19 secs 
+Total CPU time to Router completion: 4 mins 18 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -168,16 +170,16 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|              clk_tb |  BUFGMUX_X2Y1| No   |  541 |  0.218     |  1.196      |
+|              clk_tb |  BUFGMUX_X2Y1| No   |  541 |  0.248     |  1.228      |
 +---------------------+--------------+------+------+------------+-------------+
-|               clk25 | BUFGMUX_X2Y10| No   |   24 |  0.054     |  1.052      |
+|            clk90_tb |  BUFGMUX_X1Y0| No   |  180 |  0.200     |  1.174      |
++---------------------+--------------+------+------+------------+-------------+
+|               clk25 | BUFGMUX_X2Y10| No   |   38 |  0.067     |  1.061      |
++---------------------+--------------+------+------+------------+-------------+
+|             clk_cpu | BUFGMUX_X1Y11| No   |   19 |  0.036     |  1.032      |
 +---------------------+--------------+------+------+------------+-------------+
 |PROZESSOR/clock_clk_ |              |      |      |            |             |
-|                 out |  BUFGMUX_X1Y1| No   |  341 |  0.166     |  1.142      |
-+---------------------+--------------+------+------+------------+-------------+
-|            clk90_tb |  BUFGMUX_X1Y0| No   |  180 |  0.156     |  1.137      |
-+---------------------+--------------+------+------+------------+-------------+
-|             clk_cpu | BUFGMUX_X1Y11| No   |   19 |  0.114     |  1.136      |
+|                 out |  BUFGMUX_X1Y1| No   |  339 |  0.185     |  1.164      |
 +---------------------+--------------+------+------+------------+-------------+
 |INST_DDR2_RAM_CORE/t |              |      |      |            |             |
 |op_00/data_path0/dqs |              |      |      |            |             |
@@ -204,7 +206,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 170833 (Setup: 170833, Hold: 0, Component Switching Limit: 0)
+Timing Score: 77947 (Setup: 77947, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -232,8 +234,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_INST_DDR2_RAM_CORE_infrastructure_top0 | SETUP       |    -1.961ns|    11.440ns|     211|      170311
-  _clk_dcm0_clk0dcm = PERIOD TIMEGRP        | HOLD        |     0.622ns|            |       0|           0
+* TS_INST_DDR2_RAM_CORE_infrastructure_top0 | SETUP       |    -1.871ns|    10.197ns|     184|       77346
+  _clk_dcm0_clk0dcm = PERIOD TIMEGRP        | HOLD        |     0.682ns|            |       0|           0
     "INST_DDR2_RAM_CORE_infrastructure_top0 |             |            |            |        |            
   _clk_dcm0_clk0dcm" TS_SYS_CLK         HIG |             |            |            |        |            
   H 50%                                     |             |            |            |        |            
@@ -253,8 +255,10 @@ Asterisk (*) preceding a constraint indicates it was not met.
   v_delayed/delay2"         MAXDELAY = 0.2  |             |            |            |        |            
   ns                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-* NET "INST_DDR2_RAM_CORE/top_00/dqs_div_rs | MAXDELAY    |    -0.038ns|     0.498ns|       1|          38
-  t" MAXDELAY = 0.46 ns                     |             |            |            |        |            
+* NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |    -0.117ns|     0.307ns|       1|         117
+  ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
+  1].dqs_delay_col1/delay4"         MAXDELA |             |            |            |        |            
+  Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET "INST_DDR2_RAM_CORE/infrastructure_to | MAXDELAY    |     0.002ns|     0.398ns|       0|           0
   p0/cal_top0/tap_dly0/tap<23>"         MAX |             |            |            |        |            
@@ -275,11 +279,6 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.004ns|     0.186ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  1].dqs_delay_col0/delay2"         MAXDELA |             |            |            |        |            
-  Y = 0.19 ns                               |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.004ns|     0.186ns|       0|           0
-  ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
   0].dqs_delay_col0/delay2"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -288,12 +287,17 @@ Asterisk (*) preceding a constraint indicates it was not met.
   0].dqs_delay_col1/delay2"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/dqs_int_de | MAXDELAY    |     0.023ns|     0.557ns|       0|           0
-  lay_in<1>" MAXDELAY = 0.58 ns             |             |            |            |        |            
+  NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.004ns|     0.186ns|       0|           0
+  ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
+  1].dqs_delay_col0/delay2"         MAXDELA |             |            |            |        |            
+  Y = 0.19 ns                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/dqs_div_rs | MAXDELAY    |     0.008ns|     0.452ns|       0|           0
+  t" MAXDELAY = 0.46 ns                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.025ns|     0.165ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  0].dqs_delay_col0/delay1"         MAXDELA |             |            |            |        |            
+  1].dqs_delay_col0/delay1"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.025ns|     0.165ns|       0|           0
@@ -303,12 +307,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.025ns|     0.165ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  1].dqs_delay_col0/delay1"         MAXDELA |             |            |            |        |            
+  1].dqs_delay_col1/delay1"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.025ns|     0.165ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  1].dqs_delay_col1/delay1"         MAXDELA |             |            |            |        |            
+  0].dqs_delay_col0/delay1"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.035ns|     0.155ns|       0|           0
@@ -318,12 +322,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.035ns|     0.155ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  0].dqs_delay_col1/delay5"         MAXDELA |             |            |            |        |            
+  1].dqs_delay_col1/delay5"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.035ns|     0.155ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  1].dqs_delay_col1/delay5"         MAXDELA |             |            |            |        |            
+  0].dqs_delay_col1/delay5"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.035ns|     0.155ns|       0|           0
@@ -336,13 +340,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   v_delayed/delay3"         MAXDELAY = 0.2  |             |            |            |        |            
   ns                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/dqs_int_de | MAXDELAY    |     0.048ns|     0.532ns|       0|           0
-  lay_in<0>" MAXDELAY = 0.58 ns             |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/dqs_int_de | MAXDELAY    |     0.056ns|     0.524ns|       0|           0
+  lay_in<1>" MAXDELAY = 0.58 ns             |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.069ns|     0.121ns|       0|           0
-  ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  0].dqs_delay_col0/delay3"         MAXDELA |             |            |            |        |            
-  Y = 0.19 ns                               |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/dqs_int_de | MAXDELAY    |     0.058ns|     0.522ns|       0|           0
+  lay_in<0>" MAXDELAY = 0.58 ns             |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.069ns|     0.121ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
@@ -351,7 +353,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.069ns|     0.121ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  0].dqs_delay_col1/delay3"         MAXDELA |             |            |            |        |            
+  0].dqs_delay_col0/delay3"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.069ns|     0.121ns|       0|           0
@@ -359,9 +361,9 @@ Asterisk (*) preceding a constraint indicates it was not met.
   1].dqs_delay_col0/delay3"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.085ns|     0.105ns|       0|           0
+  NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.069ns|     0.121ns|       0|           0
   ta_path0/data_read_controller0/gen_delay[ |             |            |            |        |            
-  1].dqs_delay_col1/delay4"         MAXDELA |             |            |            |        |            
+  0].dqs_delay_col1/delay3"         MAXDELA |             |            |            |        |            
   Y = 0.19 ns                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "INST_DDR2_RAM_CORE/top_00/da | MAXDELAY    |     0.085ns|     0.105ns|       0|           0
@@ -384,97 +386,97 @@ Asterisk (*) preceding a constraint indicates it was not met.
   v_delayed/delay1"         MAXDELAY = 0.2  |             |            |            |        |            
   ns                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     0.726ns|     2.281ns|       0|           0
-  /fifo_1_wr_en<1>" MAXDELAY = 3.007        |             |            |            |        |            
-    ns                                      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_INST_DDR2_RAM_CORE_infrastructure_top0 | SETUP       |     0.838ns|     6.680ns|       0|           0
-  _clk_dcm0_clk90dcm = PERIOD TIMEGRP       | HOLD        |     0.734ns|            |       0|           0
+  TS_INST_DDR2_RAM_CORE_infrastructure_top0 | SETUP       |     1.094ns|     6.338ns|       0|           0
+  _clk_dcm0_clk90dcm = PERIOD TIMEGRP       | HOLD        |     0.708ns|            |       0|           0
      "INST_DDR2_RAM_CORE_infrastructure_top |             |            |            |        |            
   0_clk_dcm0_clk90dcm" TS_SYS_CLK         P |             |            |            |        |            
   HASE 1.879675 ns HIGH 50%                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.325ns|     1.682ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.290ns|     1.717ns|       0|           0
   /fifo_0_wr_en<0>" MAXDELAY = 3.007        |             |            |            |        |            
     ns                                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.364ns|     1.643ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.500ns|     1.507ns|       0|           0
+  /fifo_1_wr_en<1>" MAXDELAY = 3.007        |             |            |            |        |            
+    ns                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.699ns|     1.308ns|       0|           0
+  /fifo_1_wr_en<0>" MAXDELAY = 3.007        |             |            |            |        |            
+    ns                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.816ns|     1.191ns|       0|           0
   /data_read_controller0/rst_dqs_div"       |             |            |            |        |            
      MAXDELAY = 3.007 ns                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.705ns|     1.302ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.982ns|     1.025ns|       0|           0
   /fifo_0_wr_en<1>" MAXDELAY = 3.007        |             |            |            |        |            
-    ns                                      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     1.709ns|     1.298ns|       0|           0
-  /fifo_1_wr_en<0>" MAXDELAY = 3.007        |             |            |            |        |            
     ns                                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5 | MINLOWPULSE |     2.718ns|     4.800ns|       0|           0
   187 ns HIGH 50%                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.169ns|     2.221ns|       0|           0
-  /fifo_1_wr_addr<0>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.348ns|     2.042ns|       0|           0
-  /fifo_0_wr_addr<7>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.459ns|     1.931ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.264ns|     2.126ns|       0|           0
   /fifo_1_wr_addr<2>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.470ns|     1.920ns|       0|           0
-  /fifo_0_wr_addr<4>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.502ns|     1.888ns|       0|           0
-  /fifo_1_wr_addr<6>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.526ns|     1.864ns|       0|           0
-  /fifo_1_wr_addr<5>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.618ns|     1.772ns|       0|           0
-  /fifo_0_wr_addr<0>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.640ns|     1.750ns|       0|           0
-  /fifo_1_wr_addr<7>" MAXDELAY = 6.39       |             |            |            |        |            
-     ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.689ns|     1.701ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.286ns|     2.104ns|       0|           0
   /fifo_0_wr_addr<1>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.796ns|     1.594ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.446ns|     1.944ns|       0|           0
+  /fifo_1_wr_addr<0>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.498ns|     1.892ns|       0|           0
+  /fifo_0_wr_addr<4>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.573ns|     1.817ns|       0|           0
+  /fifo_0_wr_addr<6>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.582ns|     1.808ns|       0|           0
+  /fifo_0_wr_addr<0>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.626ns|     1.764ns|       0|           0
   /fifo_0_wr_addr<2>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.811ns|     1.579ns|       0|           0
-  /fifo_0_wr_addr<5>" MAXDELAY = 6.39       |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.631ns|     1.759ns|       0|           0
+  /fifo_1_wr_addr<4>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.837ns|     1.553ns|       0|           0
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.649ns|     1.741ns|       0|           0
   /fifo_0_wr_addr<3>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.863ns|     1.527ns|       0|           0
-  /fifo_1_wr_addr<4>" MAXDELAY = 6.39       |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.747ns|     1.643ns|       0|           0
+  /fifo_1_wr_addr<1>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.845ns|     1.545ns|       0|           0
+  /fifo_0_wr_addr<7>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.856ns|     1.534ns|       0|           0
+  /fifo_1_wr_addr<5>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.880ns|     1.510ns|       0|           0
   /fifo_1_wr_addr<3>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     5.066ns|     1.324ns|       0|           0
-  /fifo_1_wr_addr<1>" MAXDELAY = 6.39       |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.902ns|     1.488ns|       0|           0
+  /fifo_1_wr_addr<6>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     5.202ns|     1.188ns|       0|           0
-  /fifo_0_wr_addr<6>" MAXDELAY = 6.39       |             |            |            |        |            
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     4.916ns|     1.474ns|       0|           0
+  /fifo_0_wr_addr<5>" MAXDELAY = 6.39       |             |            |            |        |            
+     ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "INST_DDR2_RAM_CORE/top_00/data_path0 | MAXDELAY    |     5.052ns|     1.338ns|       0|           0
+  /fifo_1_wr_addr<7>" MAXDELAY = 6.39       |             |            |            |        |            
      ns                                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
@@ -489,10 +491,10 @@ Derived Constraints for TS_SYS_CLK
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_SYS_CLK                     |      7.519ns|      4.800ns|     11.440ns|            0|          211|            0|        12232|
-| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|     11.440ns|          N/A|          211|            0|        11167|            0|
+|TS_SYS_CLK                     |      7.519ns|      4.800ns|     10.197ns|            0|          184|            0|        12371|
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|     10.197ns|          N/A|          184|            0|        11306|            0|
 | ucture_top0_clk_dcm0_clk0dcm  |             |             |             |             |             |             |             |
-| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|      6.680ns|          N/A|            0|            0|         1065|            0|
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|      6.338ns|          N/A|            0|            0|         1065|            0|
 | ucture_top0_clk_dcm0_clk90dcm |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -503,14 +505,14 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 2 mins 58 secs 
-Total CPU time to PAR completion: 2 mins 56 secs 
+Total REAL time to PAR completion: 4 mins 21 secs 
+Total CPU time to PAR completion: 4 mins 20 secs 
 
-Peak Memory Usage:  307 MB
+Peak Memory Usage:  305 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 215 errors found.
+Timing: Completed - 188 errors found.
 
 Number of error messages: 0
 Number of warning messages: 3

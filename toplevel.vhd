@@ -139,9 +139,7 @@ PORT (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic;
-		
-		debug_out : out std_logic_vector(31 downto 0)
+		auto_ref_req : in std_logic
 );
 END COMPONENT MMU;
 
@@ -351,12 +349,11 @@ PORT MAP (
 	cmd_ack => user_cmd_ack, --in
 	data_valid => user_data_valid, --in
 	burst_done => burst_done, --out
-	auto_ref_req => auto_ref_req, --in
+	auto_ref_req => auto_ref_req --in
 
-	debug_out => debug
 );
 		  debug_adr <= "000100";
-		  
+debug <= mmu_data_out;	  
 INST_DDR2_RAM_CORE : DDR2_Ram_Core
 PORT MAP (
     sys_clk_in => CLKB_130M,

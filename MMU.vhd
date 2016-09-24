@@ -55,9 +55,7 @@ port (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic;
-		
-		debug_out : out std_logic_vector(31 downto 0)
+		auto_ref_req : in std_logic
 	);
 
 end MMU;
@@ -163,7 +161,6 @@ architecture Behavioral of MMU is
 					case MMU_STATE is
 					
 						when MMU_INIT =>
-												debug_out <= "00001" & "00000000000000000000000000" & ram_access_addr_increment;
 							--State to initialize BRAM with values
 							ddr2_read_enable <= '0';
 							ddr2_write_enable <= '0';
@@ -207,7 +204,6 @@ architecture Behavioral of MMU is
 							end if;
 							
 						when MMU_IDLE =>
-							debug_out <= "00010" & "00000000000000000000000000" & ram_access_addr_increment;
 							if work_in = '1' then
 							
 								ack_out <= '0'; --CPU has to wait until MMU has finished rw-cycle
@@ -371,7 +367,6 @@ architecture Behavioral of MMU is
 							end if;
 							
 						when MMU_BRAM_READ =>
-						debug_out <= "00011" & "00000000000000000000000000" & ram_access_addr_increment;
 							-- Read cylce
 							if ram_access_addr_increment = '1' then
 							
