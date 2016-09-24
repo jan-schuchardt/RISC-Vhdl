@@ -171,11 +171,11 @@ architecture Behavioral of MMU is
 								case to_integer(ram_access_cnt) is --writing 8-bit values into bram
 								
 									when 0 => br_data_in <= x"13";
-									when 1 => br_data_in <= x"0";
+									when 1 => br_data_in <= x"00";
 									when 2 => br_data_in <= x"50";
-									when 3 => br_data_in <= x"0";
+									when 3 => br_data_in <= x"00";
 									when 4 => br_data_in <= x"93";
-									when 5 => br_data_in <= x"0";
+									when 5 => br_data_in <= x"00";
 									when 6 => br_data_in <= x"A0";
 									when 7 => br_data_in <= x"AA";
 									when 8 => br_data_in <= x"13";

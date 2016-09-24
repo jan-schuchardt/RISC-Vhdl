@@ -5,7 +5,7 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p
 xc3s700a-fg484-4 toplevel.ngc toplevel.ngd
 
-Reading NGO file "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.ngc" ...
+Reading NGO file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.ngc" ...
 Gathering constraint information from source properties...
 Done.
 INFO:NgdBuild:889 - Pad net 'CLKB_130M' is not connected to an external port in
@@ -49,10 +49,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 220664 kilobytes
+Total memory usage is 221112 kilobytes
 
 Writing NGD file "toplevel.ngd" ...
-Total REAL time to NGDBUILD completion:  8 sec
-Total CPU time to NGDBUILD completion:   7 sec
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "toplevel.bld"...

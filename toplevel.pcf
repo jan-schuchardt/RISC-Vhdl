@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Sep 22 16:23:27 2016
+// Written by: Map P.20131013 on Sat Sep 24 15:10:11 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -197,6 +197,9 @@ COMP "cntrl0_ddr2_dq<3>" LOCATE = SITE "L3" LEVEL 1;
 COMP "cntrl0_ddr2_dq<4>" LOCATE = SITE "L5" LEVEL 1;
 COMP "cntrl0_ddr2_dq<5>" LOCATE = SITE "L1" LEVEL 1;
 COMP "cntrl0_ddr2_dq<6>" LOCATE = SITE "K4" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
+        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
 COMP "cntrl0_ddr2_dq<7>" LOCATE = SITE "H2" LEVEL 1;
 COMP "cntrl0_ddr2_dq<8>" LOCATE = SITE "F2" LEVEL 1;
 COMP "cntrl0_ddr2_dq<9>" LOCATE = SITE "G4" LEVEL 1;
@@ -207,6 +210,9 @@ COMP "cntrl0_ddr2_a<0>" LOCATE = SITE "R2" LEVEL 1;
 COMP "cntrl0_ddr2_a<1>" LOCATE = SITE "T4" LEVEL 1;
 COMP "cntrl0_ddr2_a<2>" LOCATE = SITE "R1" LEVEL 1;
 COMP "cntrl0_ddr2_a<3>" LOCATE = SITE "U3" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
+        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
 COMP "cntrl0_ddr2_a<4>" LOCATE = SITE "U2" LEVEL 1;
 COMP "cntrl0_ddr2_a<5>" LOCATE = SITE "U4" LEVEL 1;
 COMP "cntrl0_ddr2_a<6>" LOCATE = SITE "U1" LEVEL 1;
@@ -215,12 +221,6 @@ COMP "cntrl0_ddr2_a<8>" LOCATE = SITE "W1" LEVEL 1;
 COMP "cntrl0_ddr2_a<9>" LOCATE = SITE "W2" LEVEL 1;
 COMP "cntrl0_ddr2_cs_n" LOCATE = SITE "M5" LEVEL 1;
 COMP "cntrl0_ddr2_we_n" LOCATE = SITE "N4" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
-        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
-        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
 COMP
         "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5"
         LOCATE = SITE "SLICE_X3Y55" LEVEL 1;
@@ -268,7 +268,7 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<19>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<29>"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<4>"
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<3>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<3>"
         COMP
@@ -282,7 +282,7 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<2>"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<3>"
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<4>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/reset_r"
         COMP
@@ -781,7 +781,8 @@ TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
         BEL
         "INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/r_command_register_1"
         BEL "INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_counter_0"
-        BEL "INST_MMU/MMU_STATE_FSM_FFd9" BEL "INST_MMU/MMU_STATE_FSM_FFd7"
+        BEL "INST_MMU/MMU_STATE_FSM_FFd8" BEL "INST_MMU/MMU_STATE_FSM_FFd9"
+        BEL "INST_MMU/MMU_STATE_FSM_FFd7" BEL "INST_MMU/MMU_STATE_FSM_FFd6"
         BEL "INST_MMU/MMU_STATE_FSM_FFd3" BEL "INST_MMU/MMU_STATE_FSM_FFd5"
         BEL "INST_MMU/MMU_STATE_FSM_FFd4" BEL "INST_MMU/MMU_STATE_FSM_FFd2"
         BEL "INST_MMU/ddr2_data_in_63" BEL "INST_MMU/ddr2_data_in_62" BEL
@@ -1169,11 +1170,11 @@ TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_1" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/write_enable" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/ddr_ba1_0" BEL
-        "INST_MMU/MMU_STATE_FSM_FFd8" BEL "INST_MMU/MMU_STATE_FSM_FFd6" BEL
-        "INST_MMU/ram_access_cnt_2" BEL "INST_MMU/ram_access_cnt_1" BEL
-        "INST_MMU/ram_access_cnt_0" BEL "INST_MMU/ack_out" BEL
+        "INST_MMU/MMU_STATE_FSM_FFd10" BEL "INST_MMU/ram_access_cnt_2" BEL
+        "INST_MMU/ram_access_cnt_1" BEL "INST_MMU/ram_access_cnt_0" BEL
+        "INST_MMU/ack_out" BEL
         "INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd7" BEL
-        "INST_MMU/MMU_STATE_FSM_FFd10" BEL "INST_MMU/MMU_STATE_FSM_FFd1" BEL
+        "INST_MMU/MMU_STATE_FSM_FFd1" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_read_fifo_rden/SRL16E"
         BEL "INST_DDR2_RAM_CORE/top_00/controller0/read_fifo_rden" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_column_address_reg_9/SRL16E"
