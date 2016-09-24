@@ -170,8 +170,8 @@ architecture Behavioral of MMU is
 								
 								case to_integer(ram_access_cnt) is --writing 8-bit values into bram
 								
-									when 0 => br_data_in <= x"93";
-									when 1 => br_data_in <= x"00";
+									when 0 => br_data_in <= x"FF";
+									when 1 => br_data_in <= x"FF";
 									when 2 => br_data_in <= x"80";
 									when 3 => br_data_in <= x"88";
 									when 4 => br_data_in <= x"93";
@@ -196,8 +196,7 @@ architecture Behavioral of MMU is
 									ack_out <= '1'; --we tell the CPU that we are ready
 								else
 									--Write into next cell
-									ram_access_cnt <= ram_access_cnt + 1;
-									
+									ram_access_cnt <= ram_access_cnt + 1;	
 								end if;
 								br_write_enable <= '0';
 								
@@ -385,6 +384,7 @@ architecture Behavioral of MMU is
 									MMU_STATE <= MMU_IDLE;
 									ack_out <= '1';
 									data_out <= br_data_buffer;
+									hbr_data_buffer(7 downto 0) <= br_data_out; --we can expect that the address was assinged a frame before (either by addr_increment or IDLE state), so the data must be valid
 								else
 									br_write_enable <= '0'; --always read
 									br_data_buffer(7 downto 0) <= br_data_out; --we can expect that the address was assinged a frame before (either by addr_increment or IDLE state), so the data must be valid

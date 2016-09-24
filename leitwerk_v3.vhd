@@ -18,7 +18,8 @@ port(
  mmu_ack_in: in std_logic;
  mmu_com_out: out std_logic_vector(2 downto 0);
  mmu_adr_out: out std_logic_vector(31 downto 0);
- mmu_data_out: out std_logic_vector(31 downto 0)
+ mmu_data_out: out std_logic_vector(31 downto 0);
+ pc_out: out std_logic_vector(31 downto 0)
 );
 end entity;
 
@@ -58,7 +59,8 @@ begin
 	when "0000" =>
 	if mmu_ack_in = '1' then
 mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
-mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
+--mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
+mmu_adr_out  <= std_logic_vector(to_unsigned(4,mmu_adr_out'length));
 mmu_com_out  <= "0" & "00";
 mmu_work_out <= '1';
     state <= "0001";
@@ -72,6 +74,7 @@ mmu_work_out <= '1';
       err <= "1";
      end if;
      ir(29 downto 0) <= mmu_data_in(31 downto 2);
+	  pc <= std_logic_vector(unsigned(pc) + 1);
      state <= "0000";
     end if;
    when others =>
@@ -839,4 +842,5 @@ mmu_work_out <= '1';
  end if;
 end process;
 err_out <= err(0);
+pc_out(31 downto 2) <= pc;
 end architecture;

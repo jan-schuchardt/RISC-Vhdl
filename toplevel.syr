@@ -164,7 +164,8 @@ Architecture behavioral of Entity blockram is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/DDR2_Control_VHDL.vhd" in Library work.
 Architecture verhalten of Entity ddr2_control_vhdl is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" in Library work.
-Architecture leitwerk_1 of Entity leitwerk is up to date.
+Entity <leitwerk> compiled.
+Entity <leitwerk> (Architecture <leitwerk_1>) compiled.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/ClockDivider.vhd" in Library work.
@@ -184,8 +185,7 @@ Architecture behavioral of Entity mmu is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/DDR2_Ram_Core.vhd" in Library work.
 Architecture arc_mem_interface_top of Entity ddr2_ram_core is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/toplevel.vhd" in Library work.
-Entity <toplevel> compiled.
-Entity <toplevel> (Architecture <behaviour>) compiled.
+Architecture behaviour of Entity toplevel is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -348,16 +348,17 @@ Analyzing Entity <vga_clk> in library <work> (Architecture <behavioral>).
 Entity <vga_clk> analyzed. Unit <vga_clk> generated.
 
 Analyzing Entity <CPU> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd" line 84: Unconnected output port 'err_out' of component 'leitwerk'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd" line 109: Unconnected output port 'debug_data_out' of component 'ALU'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd" line 109: Unconnected output port 'debug_adr_out' of component 'ALU'.
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <leitwerk> in library <work> (Architecture <leitwerk_1>).
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 424: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 457: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 457: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 662: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 757: Mux is complete : default of case is discarded
-WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 34: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 427: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 460: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 460: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 665: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 760: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd" line 35: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <err>
 Entity <leitwerk> analyzed. Unit <leitwerk> generated.
 
@@ -994,6 +995,7 @@ Unit <vga> synthesized.
 
 Synthesizing Unit <leitwerk>.
     Related source file is "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/leitwerk_v3.vhd".
+WARNING:Xst:1305 - Output <pc_out<1:0>> is never assigned. Tied to value 00.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 12                                             |
@@ -1017,24 +1019,24 @@ Synthesizing Unit <leitwerk>.
     Found 32-bit register for signal <alu_data_out2>.
     Found 5-bit register for signal <alu_adr_out>.
     Found 32-bit register for signal <mmu_data_out>.
-    Found 5-bit 4-to-1 multiplexer for signal <alu_adr_out$mux0004> created at line 364.
-    Found 6-bit 4-to-1 multiplexer for signal <alu_com_out$mux0002> created at line 364.
-    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0003> created at line 574.
-    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0006> created at line 696.
+    Found 5-bit 4-to-1 multiplexer for signal <alu_adr_out$mux0004> created at line 367.
+    Found 6-bit 4-to-1 multiplexer for signal <alu_com_out$mux0002> created at line 367.
+    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0003> created at line 577.
+    Found 6-bit 8-to-1 multiplexer for signal <alu_com_out$mux0006> created at line 699.
     Found 32-bit 4-to-1 multiplexer for signal <alu_data_out1$mux0005>.
-    Found 32-bit 8-to-1 multiplexer for signal <alu_data_out1$mux0006> created at line 177.
-    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out1$mux0007> created at line 364.
-    Found 32-bit 8-to-1 multiplexer for signal <alu_data_out1$mux0008> created at line 696.
+    Found 32-bit 8-to-1 multiplexer for signal <alu_data_out1$mux0006> created at line 180.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out1$mux0007> created at line 367.
+    Found 32-bit 8-to-1 multiplexer for signal <alu_data_out1$mux0008> created at line 699.
     Found 32-bit 4-to-1 multiplexer for signal <alu_data_out1$mux0009>.
     Found 32-bit 4-to-1 multiplexer for signal <alu_data_out2$mux0004>.
-    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out2$mux0005> created at line 364.
-    Found 1-bit 4-to-1 multiplexer for signal <alu_work_out$mux0004> created at line 364.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_data_out2$mux0005> created at line 367.
+    Found 1-bit 4-to-1 multiplexer for signal <alu_work_out$mux0004> created at line 367.
     Found 64-bit up counter for signal <cycle_ctr>.
     Found 1-bit register for signal <err<0>>.
     Found 64-bit register for signal <instr_ctr>.
-    Found 64-bit adder for signal <instr_ctr$share0000> created at line 81.
+    Found 64-bit adder for signal <instr_ctr$share0000> created at line 84.
     Found 30-bit register for signal <ir>.
-    Found 30-bit adder for signal <mmu_adr_out$add0001> created at line 92.
+    Found 30-bit adder for signal <mmu_adr_out$add0001> created at line 95.
     Found 30-bit register for signal <pc>.
     Found 64-bit up counter for signal <time_ctr>.
     Summary:
@@ -1283,7 +1285,6 @@ Unit <vga_clk> synthesized.
 
 Synthesizing Unit <CPU>.
     Related source file is "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd".
-WARNING:Xst:1305 - Output <cpu_err_out> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <cu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <alu_err_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <alu_debug_data_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1582,7 +1583,7 @@ WARNING:Xst:653 - Signal <br_read_enable> is used but never assigned. This sourc
     Found 64-bit register for signal <ddr2_data_in>.
     Found 1-bit register for signal <ddr2_read_enable>.
     Found 1-bit register for signal <ddr2_write_enable>.
-    Found 32-bit comparator less for signal <MMU_STATE$cmp_lt0000> created at line 221.
+    Found 32-bit comparator less for signal <MMU_STATE$cmp_lt0000> created at line 220.
     Found 1-bit register for signal <ram_access_addr_increment>.
     Found 11-bit register for signal <ram_access_cnt>.
     Found 11-bit addsub for signal <ram_access_cnt$share0000> created at line 161.
@@ -2234,3 +2235,859 @@ Optimizing unit <vga> ...
 Optimizing unit <leitwerk> ...
 
 Optimizing unit <ALU> ...
+
+Optimizing unit <DDR2_Write_VHDL> ...
+
+Optimizing unit <DDR2_Read_VHDL> ...
+
+Optimizing unit <DDR2_Ram_Core_infrastructure> ...
+
+Optimizing unit <DDR2_Ram_Core_data_write_0> ...
+
+Optimizing unit <DDR2_Ram_Core_cal_ctl> ...
+
+Optimizing unit <DDR2_Ram_Core_controller_0> ...
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <DDR2_Ram_Core_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <DDR2_Ram_Core_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <DDR2_Ram_Core_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a constant value of 0 in block <DDR2_Ram_Core_controller_0>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <DDR2_Ram_Core_ram8d_0> ...
+
+Optimizing unit <DDR2_Ram_Core_dqs_delay_2> ...
+
+Optimizing unit <DDR2_Ram_Core_controller_iobs_0> ...
+
+Optimizing unit <DDR2_Ram_Core_tap_dly> ...
+
+Optimizing unit <DDR2_Control_VHDL> ...
+
+Optimizing unit <DDR2_Ram_Core_data_read_0> ...
+
+Optimizing unit <DDR2_Ram_Core_data_read_controller_0> ...
+
+Optimizing unit <DDR2_Ram_Core_data_path_iobs_0> ...
+
+Optimizing unit <MMU> ...
+
+Optimizing unit <DDR2_Ram_Core_infrastructure_top> ...
+WARNING:Xst:1710 - FF/Latch <INST_MMU/INST_DDR2_Control_VHDL/command_register_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg1_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg1_1> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_14> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_15> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_16> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_17> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_18> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_19> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_20> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_21> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/address_reg_22> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_11> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_12> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg2_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg2_1> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_4> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_5> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_6> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_7> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_8> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_9> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_10> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_11> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_12> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_adr_signal_4> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_adr_signal_3> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_adr_signal_2> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_adr_signal_1> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_adr_signal_0> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_31> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_30> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_29> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_28> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_27> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_26> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_25> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_24> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_23> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_22> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_21> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_20> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_19> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_18> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_17> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_16> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_15> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_14> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_13> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_12> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_11> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_10> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_9> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_8> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_7> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_6> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_5> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_4> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_3> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_2> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_1> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <PROZESSOR/RECHENEINHEIT/debug_signal_0> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/ar_done> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_12> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_11> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_10> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_9> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_8> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_7> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_6> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_5> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_4> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg2_1> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg2_0> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg1_1> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <INST_DDR2_RAM_CORE/top_00/controller0/ba_address_reg1_0> of sequential type is unconnected in block <toplevel>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/reset_r> in Unit <toplevel> is equivalent to the following FF/Latch, which will be removed : <INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/reset_r> 
+INFO:Xst:2261 - The FF/Latch <INST_DDR2_RAM_CORE/top_00/controller0/rst0_r> in Unit <toplevel> is equivalent to the following FF/Latch, which will be removed : <INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/reset_r> 
+Found area constraint ratio of 100 (+ 5) on block toplevel, actual ratio is 82.
+
+Final Macro Processing ...
+
+Processing Unit <toplevel> :
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_15>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_14>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_13>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_12>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_11>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_10>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_9>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_8>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_7>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_6>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_5>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_4>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_3>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_2>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_1>.
+	Found 7-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_0>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_15>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_14>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_13>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_12>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_11>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_10>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_9>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_8>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_7>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_6>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_5>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_4>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_3>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_2>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_1>.
+	Found 3-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2_0>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_31>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_30>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_29>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_28>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_27>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_26>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_25>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_24>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_23>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_22>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_21>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_20>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_19>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_18>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_17>.
+	Found 4-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_16>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/read_fifo_rden>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_9>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_8>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_7>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_6>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_5>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_4>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_3>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_2>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_1>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg_0>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_3>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_2>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_1>.
+	Found 2-bit shift register for signal <INST_DDR2_RAM_CORE/top_00/controller0/row_address_reg_0>.
+Unit <toplevel> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1596
+ Flip-Flops                                            : 1596
+# Shift Registers                                      : 63
+ 2-bit shift register                                  : 15
+ 3-bit shift register                                  : 16
+ 4-bit shift register                                  : 16
+ 7-bit shift register                                  : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : toplevel.ngr
+Top Level Output File Name         : toplevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 72
+
+Cell Usage :
+# BELS                             : 9780
+#      BUF                         : 1
+#      GND                         : 1
+#      INV                         : 87
+#      LUT1                        : 236
+#      LUT2                        : 366
+#      LUT2_D                      : 19
+#      LUT2_L                      : 43
+#      LUT3                        : 766
+#      LUT3_D                      : 87
+#      LUT3_L                      : 92
+#      LUT4                        : 5407
+#      LUT4_D                      : 196
+#      LUT4_L                      : 1394
+#      MUXCY                       : 496
+#      MUXF5                       : 205
+#      MUXF6                       : 12
+#      MUXF7                       : 6
+#      MUXF8                       : 3
+#      VCC                         : 5
+#      XORCY                       : 358
+# FlipFlops/Latches                : 1680
+#      FD                          : 133
+#      FD_1                        : 52
+#      FDC                         : 72
+#      FDC_1                       : 24
+#      FDCE                        : 439
+#      FDCE_1                      : 64
+#      FDDRRSE                     : 21
+#      FDE                         : 359
+#      FDE_1                       : 6
+#      FDP                         : 1
+#      FDP_1                       : 2
+#      FDPE                        : 9
+#      FDPE_1                      : 1
+#      FDR                         : 194
+#      FDR_1                       : 92
+#      FDRE                        : 152
+#      FDRE_1                      : 2
+#      FDRS                        : 7
+#      FDRS_1                      : 13
+#      FDRSE                       : 13
+#      FDRSE_1                     : 4
+#      FDS                         : 9
+#      FDS_1                       : 6
+#      FDSE                        : 5
+# RAMS                             : 35
+#      RAM16X1D                    : 32
+#      RAMB16BWE                   : 3
+# Shift Registers                  : 63
+#      SRL16                       : 32
+#      SRL16_1                     : 31
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 89
+#      IBUF                        : 19
+#      IBUFDS                      : 2
+#      IBUFG                       : 2
+#      OBUF                        : 47
+#      OBUFDS                      : 1
+#      OBUFT                       : 16
+#      OBUFTDS                     : 2
+# DCMs                             : 3
+#      DCM                         : 1
+#      DCM_SP                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                     4652  out of   5888    79%  
+ Number of Slice Flip Flops:           1680  out of  11776    14%  
+ Number of 4 input LUTs:               8820  out of  11776    74%  
+    Number used as logic:              8693
+    Number used as Shift registers:      63
+    Number used as RAMs:                 64
+ Number of IOs:                          72
+ Number of bonded IOBs:                  72  out of    372    19%  
+ Number of BRAMs:                         3  out of     20    15%  
+ Number of GCLKs:                         8  out of     24    33%  
+ Number of DCMs:                          3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                                | Clock buffer(FF name)                                                                                                            | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------+
+CLKB_130M(clk_obuf:O)                                                                                                                                                                       | INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1:CLK0(*)(INST_Clock_VHDL/clk1Hz)                                        | 804   |
+clk_50mhz                                                                                                                                                                                   | clk133/DCM_SP_INST:CLK0+Inst_vga_clk/DCM_SP_INST:CLK0                                                                            | 33    |
+clk_50mhz                                                                                                                                                                                   | clk133/DCM_SP_INST:CLK0+Inst_vga_clk/DCM_SP_INST:CLKDV                                                                           | 69    |
+PROZESSOR/clock_clk_out1(PROZESSOR/CLOCKER/clk_out1:O)                                                                                                                                      | BUFG(*)(PROZESSOR/CU/state_FSM_FFd10)                                                                                            | 488   |
+CLKB_130M(clk_obuf:O)                                                                                                                                                                       | INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1:CLK90(*)(INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_en_val)| 353   |
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out(INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/one:O)| NONE(*)(INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0)                                          | 13    |
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out(INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/one:O)| NONE(*)(INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1)                                          | 13    |
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out(INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/one:O)| NONE(*)(INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0)                                          | 13    |
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out(INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/one:O)| NONE(*)(INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1)                                          | 13    |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                              | Buffer(FF name)                                                                                         | Load  |
+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------+
+reset_IBUF_1(reset_IBUF_1:O)                                                                | NONE(PROZESSOR/CU/alu_data_out1_12)                                                                     | 332   |
+reset                                                                                       | IBUF                                                                                                    | 260   |
+INST_DDR2_RAM_CORE/top_00/controller0/rst0_r(INST_DDR2_RAM_CORE/top_00/controller0/rst0_r:Q)| NONE(INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_0_wr_addr_inst/bit0)| 20    |
+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 16.378ns (Maximum Frequency: 61.058MHz)
+   Minimum input arrival time before clock: 10.649ns
+   Maximum output required time after clock: 13.701ns
+   Maximum combinational path delay: 5.816ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLKB_130M'
+  Clock period: 10.983ns (frequency: 91.049MHz)
+  Total number of paths / destination ports: 12057 / 1909
+-------------------------------------------------------------------------
+Delay:               5.492ns (Levels of Logic = 3)
+  Source:            INST_MMU/INST_DDR2_Control_VHDL/i_valid (FF)
+  Destination:       INST_MMU/ddr2_data_buffer_29 (FF)
+  Source Clock:      CLKB_130M falling
+  Destination Clock: CLKB_130M rising
+
+  Data Path: INST_MMU/INST_DDR2_Control_VHDL/i_valid to INST_MMU/ddr2_data_buffer_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q           22   0.591   1.307  INST_MMU/INST_DDR2_Control_VHDL/i_valid (INST_MMU/INST_DDR2_Control_VHDL/i_valid)
+     LUT2:I0->O           33   0.648   1.266  INST_MMU/MMU_STATE_FSM_FFd3-In1 (INST_MMU/MMU_STATE_FSM_FFd3-In)
+     LUT4_L:I3->LO         1   0.648   0.132  INST_MMU/ddr2_data_buffer_31_mux000026 (INST_MMU/ddr2_data_buffer_31_mux000026)
+     LUT4:I2->O            1   0.648   0.000  INST_MMU/ddr2_data_buffer_31_mux000074 (INST_MMU/ddr2_data_buffer_31_mux0000)
+     FDE:D                     0.252          INST_MMU/ddr2_data_buffer_31
+    ----------------------------------------
+    Total                      5.492ns (2.787ns logic, 2.705ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50mhz'
+  Clock period: 9.049ns (frequency: 110.511MHz)
+  Total number of paths / destination ports: 15957 / 129
+-------------------------------------------------------------------------
+Delay:               9.049ns (Levels of Logic = 47)
+  Source:            PROZESSOR/CLOCKER/counter_7 (FF)
+  Destination:       PROZESSOR/CLOCKER/counter_31 (FF)
+  Source Clock:      clk_50mhz rising
+  Destination Clock: clk_50mhz rising
+
+  Data Path: PROZESSOR/CLOCKER/counter_7 to PROZESSOR/CLOCKER/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.590  PROZESSOR/CLOCKER/counter_7 (PROZESSOR/CLOCKER/counter_7)
+     LUT1:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11> (PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<11>)
+     MUXCY:CI->O          34   0.141   1.406  PROZESSOR/CLOCKER/Mcompar_counter_cmp_ge0000_cy<12> (PROZESSOR/CLOCKER/counter_cmp_ge0000)
+     LUT3:I0->O            1   0.648   0.000  PROZESSOR/CLOCKER/Mcount_counter_lut<0> (PROZESSOR/CLOCKER/Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<0> (PROZESSOR/CLOCKER/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<1> (PROZESSOR/CLOCKER/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<2> (PROZESSOR/CLOCKER/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<3> (PROZESSOR/CLOCKER/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<4> (PROZESSOR/CLOCKER/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<5> (PROZESSOR/CLOCKER/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<6> (PROZESSOR/CLOCKER/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<7> (PROZESSOR/CLOCKER/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<8> (PROZESSOR/CLOCKER/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<9> (PROZESSOR/CLOCKER/Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<10> (PROZESSOR/CLOCKER/Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<11> (PROZESSOR/CLOCKER/Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<12> (PROZESSOR/CLOCKER/Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<13> (PROZESSOR/CLOCKER/Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<14> (PROZESSOR/CLOCKER/Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<15> (PROZESSOR/CLOCKER/Mcount_counter_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<16> (PROZESSOR/CLOCKER/Mcount_counter_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<17> (PROZESSOR/CLOCKER/Mcount_counter_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<18> (PROZESSOR/CLOCKER/Mcount_counter_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<19> (PROZESSOR/CLOCKER/Mcount_counter_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<20> (PROZESSOR/CLOCKER/Mcount_counter_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<21> (PROZESSOR/CLOCKER/Mcount_counter_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<22> (PROZESSOR/CLOCKER/Mcount_counter_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<23> (PROZESSOR/CLOCKER/Mcount_counter_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<24> (PROZESSOR/CLOCKER/Mcount_counter_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<25> (PROZESSOR/CLOCKER/Mcount_counter_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<26> (PROZESSOR/CLOCKER/Mcount_counter_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<27> (PROZESSOR/CLOCKER/Mcount_counter_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<28> (PROZESSOR/CLOCKER/Mcount_counter_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<29> (PROZESSOR/CLOCKER/Mcount_counter_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  PROZESSOR/CLOCKER/Mcount_counter_cy<30> (PROZESSOR/CLOCKER/Mcount_counter_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  PROZESSOR/CLOCKER/Mcount_counter_xor<31> (PROZESSOR/CLOCKER/Mcount_counter31)
+     FDC:D                     0.252          PROZESSOR/CLOCKER/counter_31
+    ----------------------------------------
+    Total                      9.049ns (7.053ns logic, 1.996ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROZESSOR/clock_clk_out1'
+  Clock period: 16.378ns (frequency: 61.058MHz)
+  Total number of paths / destination ports: 353142 / 1066
+-------------------------------------------------------------------------
+Delay:               16.378ns (Levels of Logic = 17)
+  Source:            PROZESSOR/RECHENEINHEIT/s_op2_24 (FF)
+  Destination:       PROZESSOR/RECHENEINHEIT/acc_31 (FF)
+  Source Clock:      PROZESSOR/clock_clk_out1 rising
+  Destination Clock: PROZESSOR/clock_clk_out1 rising
+
+  Data Path: PROZESSOR/RECHENEINHEIT/s_op2_24 to PROZESSOR/RECHENEINHEIT/acc_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.591   0.963  PROZESSOR/RECHENEINHEIT/s_op2_24 (PROZESSOR/RECHENEINHEIT/s_op2_24)
+     LUT3:I0->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_lut<0> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<0> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<1> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<2> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<3> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<3>)
+     MUXCY:CI->O           1   0.269   0.452  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<4> (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<4>)
+     LUT3_D:I2->O         74   0.648   1.355  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<6>1 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321_wg_cy<6>)
+     LUT2:I1->O            8   0.643   0.760  PROZESSOR/RECHENEINHEIT/acc_cmp_eq003221 (PROZESSOR/RECHENEINHEIT/N365)
+     LUT4:I3->O          105   0.648   1.288  PROZESSOR/RECHENEINHEIT/acc_cmp_eq00321 (PROZESSOR/RECHENEINHEIT/acc_cmp_eq0032)
+     LUT4_L:I3->LO         1   0.648   0.243  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>1794 (PROZESSOR/RECHENEINHEIT/acc_mux0035<31>1794)
+     LUT4:I0->O            3   0.648   0.611  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>1818_SW0 (N1707)
+     LUT4:I1->O            1   0.643   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>1842 (PROZESSOR/RECHENEINHEIT/acc_mux0035<31>1842)
+     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2001_SW1_F (N2131)
+     MUXF5:I0->O           1   0.276   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2001_SW1 (N1934)
+     LUT4_L:I3->LO         1   0.648   0.103  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2082 (PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2082)
+     LUT4:I3->O            1   0.648   0.423  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2121 (PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2121)
+     LUT4:I3->O            1   0.648   0.000  PROZESSOR/RECHENEINHEIT/acc_mux0035<31>2163 (PROZESSOR/RECHENEINHEIT/acc_mux0035<31>)
+     FDE:D                     0.252          PROZESSOR/RECHENEINHEIT/acc_31
+    ----------------------------------------
+    Total                     16.378ns (9.333ns logic, 7.045ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out'
+  Clock period: 6.788ns (frequency: 147.319MHz)
+  Total number of paths / destination ports: 43 / 32
+-------------------------------------------------------------------------
+Delay:               3.394ns (Levels of Logic = 1)
+  Source:            INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff (FF)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0 (RAM)
+  Source Clock:      INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out falling
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out rising
+
+  Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.611  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/din_delay)
+     LUT2:I1->O           12   0.643   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+    ----------------------------------------
+    Total                      3.394ns (1.822ns logic, 1.572ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
+  Clock period: 6.566ns (frequency: 152.300MHz)
+  Total number of paths / destination ports: 39 / 28
+-------------------------------------------------------------------------
+Delay:               3.283ns (Levels of Logic = 1)
+  Source:            INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 (FF)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1 (RAM)
+  Source Clock:      INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out falling
+
+  Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.500  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/din_delay)
+     LUT2:I1->O           12   0.643   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<0>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1
+    ----------------------------------------
+    Total                      3.283ns (1.822ns logic, 1.461ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
+  Clock period: 6.788ns (frequency: 147.319MHz)
+  Total number of paths / destination ports: 43 / 32
+-------------------------------------------------------------------------
+Delay:               3.394ns (Levels of Logic = 1)
+  Source:            INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff (FF)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0 (RAM)
+  Source Clock:      INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out falling
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
+
+  Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.611  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/din_delay)
+     LUT2:I1->O           12   0.643   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
+    ----------------------------------------
+    Total                      3.394ns (1.822ns logic, 1.572ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
+  Clock period: 6.566ns (frequency: 152.300MHz)
+  Total number of paths / destination ports: 39 / 28
+-------------------------------------------------------------------------
+Delay:               3.283ns (Levels of Logic = 1)
+  Source:            INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 (FF)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1 (RAM)
+  Source Clock:      INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out falling
+
+  Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.500  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/din_delay)
+     LUT2:I1->O           12   0.643   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<1>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1
+    ----------------------------------------
+    Total                      3.283ns (1.822ns logic, 1.461ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50mhz'
+  Total number of paths / destination ports: 69 / 69
+-------------------------------------------------------------------------
+Offset:              5.571ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       Inst_vga/bit_counter_4 (FF)
+  Destination Clock: clk_50mhz rising 0.5X
+
+  Data Path: reset to Inst_vga/bit_counter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           335   0.849   1.361  reset_IBUF (INST_DDR2_RAM_CORE/infrastructure_top0/user_rst)
+     LUT4:I3->O            3   0.648   0.563  Inst_vga/reg_counterx_or0000 (Inst_vga/reg_counterx_or0000)
+     LUT3:I2->O            5   0.648   0.633  Inst_vga/bit_counter_or00001 (Inst_vga/bit_counter_or0000)
+     FDRE:R                    0.869          Inst_vga/bit_counter_0
+    ----------------------------------------
+    Total                      5.571ns (3.014ns logic, 2.557ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PROZESSOR/clock_clk_out1'
+  Total number of paths / destination ports: 149 / 149
+-------------------------------------------------------------------------
+Offset:              8.318ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       PROZESSOR/RECHENEINHEIT/s_op2_31 (FF)
+  Destination Clock: PROZESSOR/clock_clk_out1 rising
+
+  Data Path: reset to PROZESSOR/RECHENEINHEIT/s_op2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           335   0.849   1.358  reset_IBUF (INST_DDR2_RAM_CORE/infrastructure_top0/user_rst)
+     BUF:I->O            336   0.648   1.501  reset_IBUF_1 (reset_IBUF_1)
+     LUT4:I0->O           15   0.648   1.097  PROZESSOR/RECHENEINHEIT/ram_douta_and000011 (PROZESSOR/RECHENEINHEIT/s_op3_and0000)
+     LUT2:I1->O           32   0.643   1.262  PROZESSOR/RECHENEINHEIT/s_op2_and00001 (PROZESSOR/RECHENEINHEIT/s_op2_and0000)
+     FDE:CE                    0.312          PROZESSOR/RECHENEINHEIT/s_op2_0
+    ----------------------------------------
+    Total                      8.318ns (3.100ns logic, 5.218ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out'
+  Total number of paths / destination ports: 62 / 17
+-------------------------------------------------------------------------
+Offset:              10.649ns (Levels of Logic = 8)
+  Source:            cntrl0_rst_dqs_div_in (PAD)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0 (RAM)
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out rising
+
+  Data Path: cntrl0_rst_dqs_div_in to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.672  INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/rst_iob_inbuf (INST_DDR2_RAM_CORE/top_00/dqs_div_rst)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/four (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/three (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay2)
+     LUT4:I2->O            1   0.648   0.423  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/six (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/two (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/five (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay5)
+     LUT4:I2->O            6   0.648   0.812  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/one (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div)
+     LUT2:I0->O           12   0.648   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+    ----------------------------------------
+    Total                     10.649ns (5.973ns logic, 4.676ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
+  Total number of paths / destination ports: 38 / 13
+-------------------------------------------------------------------------
+Offset:              10.649ns (Levels of Logic = 8)
+  Source:            cntrl0_rst_dqs_div_in (PAD)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1 (RAM)
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
+
+  Data Path: cntrl0_rst_dqs_div_in to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.672  INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/rst_iob_inbuf (INST_DDR2_RAM_CORE/top_00/dqs_div_rst)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/four (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/three (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay2)
+     LUT4:I2->O            1   0.648   0.423  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/six (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/two (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/five (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay5)
+     LUT4:I2->O            6   0.648   0.812  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/one (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div)
+     LUT2:I0->O           12   0.648   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1
+    ----------------------------------------
+    Total                     10.649ns (5.973ns logic, 4.676ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
+  Total number of paths / destination ports: 62 / 17
+-------------------------------------------------------------------------
+Offset:              10.649ns (Levels of Logic = 8)
+  Source:            cntrl0_rst_dqs_div_in (PAD)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0 (RAM)
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
+
+  Data Path: cntrl0_rst_dqs_div_in to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.672  INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/rst_iob_inbuf (INST_DDR2_RAM_CORE/top_00/dqs_div_rst)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/four (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/three (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay2)
+     LUT4:I2->O            1   0.648   0.423  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/six (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/two (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/five (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay5)
+     LUT4:I2->O            6   0.648   0.812  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/one (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div)
+     LUT2:I0->O           12   0.648   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
+    ----------------------------------------
+    Total                     10.649ns (5.973ns logic, 4.676ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
+  Total number of paths / destination ports: 38 / 13
+-------------------------------------------------------------------------
+Offset:              10.649ns (Levels of Logic = 8)
+  Source:            cntrl0_rst_dqs_div_in (PAD)
+  Destination:       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1 (RAM)
+  Destination Clock: INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
+
+  Data Path: cntrl0_rst_dqs_div_in to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.672  INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/rst_iob_inbuf (INST_DDR2_RAM_CORE/top_00/dqs_div_rst)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/four (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/three (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay2)
+     LUT4:I2->O            1   0.648   0.423  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/six (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3)
+     LUT4:I3->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/two (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4)
+     LUT4:I2->O            1   0.648   0.452  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/five (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay5)
+     LUT4:I2->O            6   0.648   0.812  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/one (INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div)
+     LUT2:I0->O           12   0.648   0.961  INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/dout1 (INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>)
+     RAM16X1D:WE               0.588          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1
+    ----------------------------------------
+    Total                     10.649ns (5.973ns logic, 4.676ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKB_130M'
+  Total number of paths / destination ports: 270 / 270
+-------------------------------------------------------------------------
+Offset:              4.867ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       INST_DDR2_RAM_CORE/infrastructure_top0/counter200_15 (FF)
+  Destination Clock: CLKB_130M rising
+
+  Data Path: reset to INST_DDR2_RAM_CORE/infrastructure_top0/counter200_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           335   0.849   1.438  reset_IBUF (INST_DDR2_RAM_CORE/infrastructure_top0/user_rst)
+     LUT2:I1->O           18   0.643   1.068  INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/fpga_rst1 (INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/fpga_rst)
+     FDRE:R                    0.869          INST_DDR2_RAM_CORE/infrastructure_top0/counter200_0
+    ----------------------------------------
+    Total                      4.867ns (2.361ns logic, 2.506ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50mhz'
+  Total number of paths / destination ports: 670 / 10
+-------------------------------------------------------------------------
+Offset:              13.701ns (Levels of Logic = 10)
+  Source:            Inst_vga/reg_countery_0 (FF)
+  Destination:       b<3> (PAD)
+  Source Clock:      clk_50mhz rising 0.5X
+
+  Data Path: Inst_vga/reg_countery_0 to b<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            11   0.591   1.013  Inst_vga/reg_countery_0 (Inst_vga/reg_countery_0)
+     LUT3:I1->O            1   0.643   0.423  Inst_vga/currentreg_10_mux00031_SW0 (N270)
+     LUT4:I3->O           31   0.648   1.265  Inst_vga/currentreg_10_mux00031 (Inst_vga/N2)
+     LUT4:I3->O            1   0.648   0.000  Inst_vga/Mmux__varindex0000_104 (Inst_vga/Mmux__varindex0000_104)
+     MUXF5:I1->O           1   0.276   0.000  Inst_vga/Mmux__varindex0000_9_f5_2 (Inst_vga/Mmux__varindex0000_9_f53)
+     MUXF6:I1->O           1   0.291   0.000  Inst_vga/Mmux__varindex0000_8_f6_1 (Inst_vga/Mmux__varindex0000_8_f62)
+     MUXF7:I1->O           1   0.291   0.000  Inst_vga/Mmux__varindex0000_7_f7_0 (Inst_vga/Mmux__varindex0000_7_f71)
+     MUXF8:I1->O           1   0.291   0.500  Inst_vga/Mmux__varindex0000_6_f8 (Inst_vga/Mmux__varindex0000_6_f8)
+     LUT3:I1->O            2   0.643   0.590  Inst_vga/bit_counter<4>1 (Inst_vga/_varindex0000)
+     LUT4:I0->O            1   0.648   0.420  Inst_vga/r_and00001 (r_3_OBUF)
+     OBUF:I->O                 4.520          r_3_OBUF (r<3>)
+    ----------------------------------------
+    Total                     13.701ns (9.490ns logic, 4.211ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKB_130M'
+  Total number of paths / destination ports: 62 / 46
+-------------------------------------------------------------------------
+Offset:              5.558ns (Levels of Logic = 1)
+  Source:            INST_Clock_VHDL/clk1Hz (FF)
+  Destination:       leds<0> (PAD)
+  Source Clock:      CLKB_130M rising
+
+  Data Path: INST_Clock_VHDL/clk1Hz to leds<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.447  INST_Clock_VHDL/clk1Hz (INST_Clock_VHDL/clk1Hz)
+     OBUF:I->O                 4.520          leds_0_OBUF (leds<0>)
+    ----------------------------------------
+    Total                      5.558ns (5.111ns logic, 0.447ns route)
+                                       (92.0% logic, 8.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PROZESSOR/clock_clk_out1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.819ns (Levels of Logic = 1)
+  Source:            PROZESSOR/CU/err_0 (FF)
+  Destination:       leds<2> (PAD)
+  Source Clock:      PROZESSOR/clock_clk_out1 rising
+
+  Data Path: PROZESSOR/CU/err_0 to leds<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.591   0.708  PROZESSOR/CU/err_0 (PROZESSOR/CU/err_0)
+     OBUF:I->O                 4.520          leds_2_OBUF (leds<2>)
+    ----------------------------------------
+    Total                      5.819ns (5.111ns logic, 0.708ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               5.816ns (Levels of Logic = 2)
+  Source:            slow (PAD)
+  Destination:       leds<1> (PAD)
+
+  Data Path: slow to leds<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.849   0.447  slow_IBUF (leds_1_OBUF)
+     OBUF:I->O                 4.520          leds_1_OBUF (leds<1>)
+    ----------------------------------------
+    Total                      5.816ns (5.369ns logic, 0.447ns route)
+                                       (92.3% logic, 7.7% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0.
+WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1.
+WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0.
+WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1.
+
+
+Total REAL time to Xst completion: 148.00 secs
+Total CPU time to Xst completion: 148.51 secs
+ 
+--> 
+
+Total memory usage is 377528 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  360 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
+

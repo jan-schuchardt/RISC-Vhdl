@@ -1,14 +1,10 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Sep 24 16:56:24 2016
+Sat Sep 24 17:53:37 2016
 
 drc -z toplevel.ncd toplevel.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1> is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<0> is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
@@ -19,6 +15,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1> is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance

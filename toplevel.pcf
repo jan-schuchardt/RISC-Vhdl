@@ -1,144 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Sep 24 16:52:40 2016
+// Written by: Map P.20131013 on Sat Sep 24 17:49:36 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/din_delay"
-        LOCATE = SITE "SLICE_X3Y72" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<0>"
-        LOCATE = SITE "SLICE_X2Y62" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<1>"
-        LOCATE = SITE "SLICE_X0Y58" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<2>"
-        LOCATE = SITE "SLICE_X0Y50" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<3>"
-        LOCATE = SITE "SLICE_X2Y52" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<4>"
-        LOCATE = SITE "SLICE_X0Y52" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<5>"
-        LOCATE = SITE "SLICE_X2Y50" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<6>"
-        LOCATE = SITE "SLICE_X2Y58" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<7>"
-        LOCATE = SITE "SLICE_X0Y62" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/din_delay"
-        LOCATE = SITE "SLICE_X3Y53" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<0>"
-        LOCATE = SITE "SLICE_X2Y63" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<1>"
-        LOCATE = SITE "SLICE_X0Y59" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<2>"
-        LOCATE = SITE "SLICE_X0Y51" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<3>"
-        LOCATE = SITE "SLICE_X2Y53" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<4>"
-        LOCATE = SITE "SLICE_X0Y53" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<5>"
-        LOCATE = SITE "SLICE_X2Y51" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<6>"
-        LOCATE = SITE "SLICE_X2Y59" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<7>"
-        LOCATE = SITE "SLICE_X0Y63" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<8>"
-        LOCATE = SITE "SLICE_X0Y71" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<9>"
-        LOCATE = SITE "SLICE_X2Y79" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<10>"
-        LOCATE = SITE "SLICE_X2Y69" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<11>"
-        LOCATE = SITE "SLICE_X2Y77" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<12>"
-        LOCATE = SITE "SLICE_X0Y77" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<13>"
-        LOCATE = SITE "SLICE_X2Y71" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<14>"
-        LOCATE = SITE "SLICE_X0Y69" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<15>"
-        LOCATE = SITE "SLICE_X0Y79" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay5"
-        LOCATE = SITE "SLICE_X3Y75" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5"
-        LOCATE = SITE "SLICE_X1Y75" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<8>"
-        LOCATE = SITE "SLICE_X0Y70" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<9>"
-        LOCATE = SITE "SLICE_X2Y78" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<10>"
-        LOCATE = SITE "SLICE_X2Y68" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<11>"
-        LOCATE = SITE "SLICE_X2Y76" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<12>"
-        LOCATE = SITE "SLICE_X0Y76" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<13>"
-        LOCATE = SITE "SLICE_X2Y70" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<14>"
-        LOCATE = SITE "SLICE_X0Y68" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<15>"
-        LOCATE = SITE "SLICE_X0Y78" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/controller0/rst_dqs_div_r" LOCATE = SITE
-        "SLICE_X4Y66" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/din_delay"
-        LOCATE = SITE "SLICE_X1Y72" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3"
-        LOCATE = SITE "SLICE_X1Y67" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4"
-        LOCATE = SITE "SLICE_X0Y66" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3"
-        LOCATE = SITE "SLICE_X3Y74" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3"
-        LOCATE = SITE "SLICE_X1Y74" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1"
-        LOCATE = SITE "SLICE_X0Y54" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/infrastructure0/delay_sel_val1<4>" LOCATE =
-        SITE "SLICE_X0Y55" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<1>" LOCATE = SITE
-        "SLICE_X1Y50" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1"
-        LOCATE = SITE "SLICE_X0Y74" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<1>" LOCATE = SITE
-        "SLICE_X0Y75" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div"
-        LOCATE = SITE "SLICE_X0Y67" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<7>" LOCATE = SITE
-        "SLICE_X1Y70" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<3>" LOCATE = SITE
-        "SLICE_X1Y49" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1"
-        LOCATE = SITE "SLICE_X1Y66" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<5>" LOCATE = SITE
-        "SLICE_X1Y69" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/infrastructure0/delay_sel_val1<1>" LOCATE =
-        SITE "SLICE_X2Y54" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/infrastructure0/delay_sel_val1<3>" LOCATE =
-        SITE "SLICE_X2Y55" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<3>" LOCATE = SITE
-        "SLICE_X3Y50" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1"
-        LOCATE = SITE "SLICE_X2Y74" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1>" LOCATE = SITE
-        "SLICE_X2Y75" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<7>" LOCATE = SITE
-        "SLICE_X3Y70" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<1>" LOCATE = SITE
-        "SLICE_X3Y49" LEVEL 1;
-COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<5>" LOCATE = SITE
-        "SLICE_X3Y69" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/din_delay"
-        LOCATE = SITE "SLICE_X1Y53" LEVEL 1;
 COMP "cntrl0_ddr2_dqs_n<0>" LOCATE = SITE "K2" LEVEL 1;
 COMP "cntrl0_ddr2_dqs_n<1>" LOCATE = SITE "J5" LEVEL 1;
 COMP "clk_50mhz" LOCATE = SITE "E12" LEVEL 1;
@@ -169,9 +33,6 @@ COMP "cntrl0_rst_dqs_div_in" LOCATE = SITE "H4" LEVEL 1;
 COMP "leds<0>" LOCATE = SITE "R20" LEVEL 1;
 COMP "leds<1>" LOCATE = SITE "T19" LEVEL 1;
 COMP "leds<2>" LOCATE = SITE "U20" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
-        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
 COMP "leds<3>" LOCATE = SITE "U19" LEVEL 1;
 COMP "leds<4>" LOCATE = SITE "V19" LEVEL 1;
 COMP "leds<5>" LOCATE = SITE "V20" LEVEL 1;
@@ -186,9 +47,6 @@ COMP "cntrl0_ddr2_cke" LOCATE = SITE "N3" LEVEL 1;
 COMP "cntrl0_ddr2_odt" LOCATE = SITE "P1" LEVEL 1;
 COMP "cntrl0_ddr2_ck_n<0>" LOCATE = SITE "M2" LEVEL 1;
 COMP "cntrl0_ddr2_a<10>" LOCATE = SITE "T3" LEVEL 1;
-COMP
-        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
-        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
 COMP "cntrl0_ddr2_a<11>" LOCATE = SITE "V1" LEVEL 1;
 COMP "cntrl0_ddr2_a<12>" LOCATE = SITE "Y2" LEVEL 1;
 COMP "cntrl0_ddr2_ba<0>" LOCATE = SITE "P3" LEVEL 1;
@@ -221,6 +79,149 @@ COMP "cntrl0_ddr2_a<8>" LOCATE = SITE "W1" LEVEL 1;
 COMP "cntrl0_ddr2_a<9>" LOCATE = SITE "W2" LEVEL 1;
 COMP "cntrl0_ddr2_cs_n" LOCATE = SITE "M5" LEVEL 1;
 COMP "cntrl0_ddr2_we_n" LOCATE = SITE "N4" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<0>"
+        LOCATE = SITE "SLICE_X2Y62" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<1>"
+        LOCATE = SITE "SLICE_X0Y58" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<2>"
+        LOCATE = SITE "SLICE_X0Y50" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<3>"
+        LOCATE = SITE "SLICE_X2Y52" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<4>"
+        LOCATE = SITE "SLICE_X0Y52" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<5>"
+        LOCATE = SITE "SLICE_X2Y50" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<6>"
+        LOCATE = SITE "SLICE_X2Y58" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<7>"
+        LOCATE = SITE "SLICE_X0Y62" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<8>"
+        LOCATE = SITE "SLICE_X0Y71" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<9>"
+        LOCATE = SITE "SLICE_X2Y79" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<10>"
+        LOCATE = SITE "SLICE_X2Y69" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<11>"
+        LOCATE = SITE "SLICE_X2Y77" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<12>"
+        LOCATE = SITE "SLICE_X0Y77" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<13>"
+        LOCATE = SITE "SLICE_X2Y71" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<14>"
+        LOCATE = SITE "SLICE_X0Y69" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<15>"
+        LOCATE = SITE "SLICE_X0Y79" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<8>"
+        LOCATE = SITE "SLICE_X0Y70" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<9>"
+        LOCATE = SITE "SLICE_X2Y78" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<10>"
+        LOCATE = SITE "SLICE_X2Y68" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<11>"
+        LOCATE = SITE "SLICE_X2Y76" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<12>"
+        LOCATE = SITE "SLICE_X0Y76" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<13>"
+        LOCATE = SITE "SLICE_X2Y70" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<14>"
+        LOCATE = SITE "SLICE_X0Y68" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<15>"
+        LOCATE = SITE "SLICE_X0Y78" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/controller0/rst_dqs_div_r" LOCATE = SITE
+        "SLICE_X4Y66" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/din_delay"
+        LOCATE = SITE "SLICE_X3Y72" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/din_delay"
+        LOCATE = SITE "SLICE_X3Y53" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<0>"
+        LOCATE = SITE "SLICE_X2Y63" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<1>"
+        LOCATE = SITE "SLICE_X0Y59" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<2>"
+        LOCATE = SITE "SLICE_X0Y51" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<3>"
+        LOCATE = SITE "SLICE_X2Y53" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<4>"
+        LOCATE = SITE "SLICE_X0Y53" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<5>"
+        LOCATE = SITE "SLICE_X2Y51" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<6>"
+        LOCATE = SITE "SLICE_X2Y59" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_1_data_out<7>"
+        LOCATE = SITE "SLICE_X0Y63" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay5"
+        LOCATE = SITE "SLICE_X3Y75" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5"
+        LOCATE = SITE "SLICE_X1Y75" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/din_delay"
+        LOCATE = SITE "SLICE_X1Y72" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3"
+        LOCATE = SITE "SLICE_X1Y67" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4"
+        LOCATE = SITE "SLICE_X0Y66" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3"
+        LOCATE = SITE "SLICE_X3Y74" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3"
+        LOCATE = SITE "SLICE_X1Y74" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/din_delay"
+        LOCATE = SITE "SLICE_X1Y53" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1"
+        LOCATE = SITE "SLICE_X0Y54" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<0>" LOCATE = SITE
+        "SLICE_X0Y55" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<1>" LOCATE = SITE
+        "SLICE_X1Y50" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1"
+        LOCATE = SITE "SLICE_X0Y74" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<1>" LOCATE = SITE
+        "SLICE_X0Y75" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div"
+        LOCATE = SITE "SLICE_X0Y67" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<7>" LOCATE = SITE
+        "SLICE_X1Y70" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<3>" LOCATE = SITE
+        "SLICE_X1Y49" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1"
+        LOCATE = SITE "SLICE_X1Y66" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<5>" LOCATE = SITE
+        "SLICE_X1Y69" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1"
+        LOCATE = SITE "SLICE_X2Y54" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<0>" LOCATE = SITE
+        "SLICE_X2Y55" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<3>" LOCATE = SITE
+        "SLICE_X3Y50" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1"
+        LOCATE = SITE "SLICE_X2Y74" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1>" LOCATE = SITE
+        "SLICE_X2Y75" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<7>" LOCATE = SITE
+        "SLICE_X3Y70" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<1>" LOCATE = SITE
+        "SLICE_X3Y49" LEVEL 1;
+COMP "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<5>" LOCATE = SITE
+        "SLICE_X3Y69" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
+        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
+COMP
+        "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
+        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
 COMP
         "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5"
         LOCATE = SITE "SLICE_X3Y55" LEVEL 1;
@@ -228,11 +229,9 @@ COMP
         "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5"
         LOCATE = SITE "SLICE_X1Y55" LEVEL 1;
 COMPGRP cal_ctl.SLICE = COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_onedtct"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_or0000"
-        COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<5>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<4>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct"
         COMP
@@ -251,6 +250,11 @@ COMPGRP cal_ctl.SLICE = COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<0>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<4>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/enb_trans_two_dtct_or0000"
+        COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt<1>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<0>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt<3>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt<5>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<1>"
@@ -272,21 +276,16 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<19>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<29>"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<3>"
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<4>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<3>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/enb_trans_two_dtct_or0000"
-        COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt<1>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt<4>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<0>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1_or0000"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<2>"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<4>"
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<3>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/reset_r"
         COMP
@@ -316,6 +315,18 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val<1>"
         COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<1>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<3>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<4>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt_and0000"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_onedtct"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_or0000"
+        COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_5_f5"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f5"
@@ -330,17 +341,7 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f52"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<1>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<3>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs<4>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<4>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt_and0000";
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5";
 COMPGRP "cal_ctl.SLICE" LOCATE = SITE "SLICE_X26Y8:SLICE_X37Y21" LEVEL 4;
 MACRO "delay_calibration_chain" LOCATE = SITE "SLICE_X28Y16" LEVEL 1;
 PIN INST_MMU/INST_BLOCKRAM/Mram_cells_pins<11> = BEL
