@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: toplevel.prj
 
@@ -104,87 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/toplevel is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd".
-WARNING:HDLParsers:3607 - Unit work/toplevel/behaviour is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/toplevel.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd".
-WARNING:HDLParsers:3607 - Unit work/clk133m_dcm is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/clk133m_dcm.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/clk133m_dcm/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/clk133m_dcm.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/Clock_VHDL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/Clock_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/Clock_VHDL/Verhalten is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/Clock_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/CPU is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd".
-WARNING:HDLParsers:3607 - Unit work/CPU/Behavioral is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/CPU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core/arc_mem_interface_top is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga_clk is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga_clk/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ipcore_dir/vga_clk.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd".
-WARNING:HDLParsers:3607 - Unit work/MMU is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd".
-WARNING:HDLParsers:3607 - Unit work/MMU/Behavioral is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/MMU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd".
-WARNING:HDLParsers:3607 - Unit work/vga/behaviour is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/vga.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU/Behavioral is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ALU.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/BLOCKRAM is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/BLOCKRAM.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd".
-WARNING:HDLParsers:3607 - Unit work/BLOCKRAM/Behavioral is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/BLOCKRAM.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd".
-WARNING:HDLParsers:3607 - Unit work/ClockDivider is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd".
-WARNING:HDLParsers:3607 - Unit work/ClockDivider/Behavioral is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/ClockDivider.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Control_VHDL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Control_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Control_VHDL/Verhalten is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Control_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure_top is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure_top/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_top_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_top_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/leitwerk is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v3.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/leitwerk_v3.vhd".
-WARNING:HDLParsers:3607 - Unit work/leitwerk/leitwerk_1 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/leitwerk_v3.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/leitwerk_v3.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_cal_top is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_cal_top/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_clk_dcm is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_clk_dcm/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_controller_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_controller_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_path_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_path_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_iobs_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_iobs_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Read_VHDL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Read_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Read_VHDL/Verhalten is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Read_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Write_VHDL is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Write_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Write_VHDL/Verhalten is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Write_VHDL.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_cal_ctl is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_cal_ctl/arc_cal_ctl is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_controller_iobs_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_controller_iobs_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_path_iobs_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_path_iobs_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_read_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_read_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_read_controller_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_read_controller_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_write_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_data_write_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure_iobs_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_infrastructure_iobs_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_tap_dly is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_tap_dly/arc_tap_dly is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_dqs_delay is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_dqs_delay/arc_dqs_delay is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_fifo_0_wr_en_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_fifo_0_wr_en_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_fifo_1_wr_en_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_fifo_1_wr_en_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_ram8d_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_ram8d_0/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_rd_gray_cntr is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_rd_gray_cntr/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dm_iob is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dm_iob/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dqs_iob is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dqs_iob/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dq_iob is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_s3_dq_iob/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_wr_gray_cntr is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_wr_gray_cntr/arc is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd".
-WARNING:HDLParsers:3607 - Unit work/DDR2_Ram_Core_parameters_0 is now defined in a different file.  It was defined in "C:/Users/riege/gpgit/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd", and is now defined in "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd".
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd" in Library work.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_s3_dm_iob is up to date.
@@ -245,16 +164,31 @@ Architecture behavioral of Entity blockram is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd" in Library work.
 Architecture verhalten of Entity ddr2_control_vhdl is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/leitwerk_v3.vhd" in Library work.
-Entity <leitwerk> compiled.
-Entity <leitwerk> (Architecture <leitwerk_1>) compiled.
+Architecture leitwerk_1 of Entity leitwerk is up to date.
 Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd" in Library work.
-ERROR:HDLParsers:3384 - "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd" Line 116. Size mismatch.  String literal "0000000000000000" is of size 16 but is expected to be of size 32.
-ERROR:HDLParsers:3384 - "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd" Line 128. Size mismatch.  String literal "0000000000000000" is of size 16 but is expected to be of size 32.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd" in Library work.
+Architecture behavioral of Entity clockdivider is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd" in Library work.
+Architecture verhalten of Entity clock_vhdl is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd" in Library work.
+Architecture behavioral of Entity clk133m_dcm is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd" in Library work.
+Architecture behaviour of Entity vga is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd" in Library work.
+Architecture behavioral of Entity vga_clk is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+Compiling vhdl file "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd" in Library work.
+ERROR:HDLParsers:3384 - "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd" Line 174. Size mismatch.  String literal "0000" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd" Line 176. Size mismatch.  String literal "0000" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd" Line 178. Size mismatch.  String literal "0000" is of size 4 but is expected to be of size 8.
 --> 
 
-Total memory usage is 302760 kilobytes
+Total memory usage is 303976 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :   81 (   0 filtered)
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

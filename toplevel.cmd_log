@@ -170,3 +170,4 @@ map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o topleve
 par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
 xst -intstyle ise -ifn "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.xst" -ofn "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.xst" -ofn "C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.syr" 
