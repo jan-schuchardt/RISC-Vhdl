@@ -191,9 +191,9 @@ architecture Behavioral of MMU is
 							else								
 								ram_access_addr_increment <= '0'; 
 								--Wait for bram to sync before we can access again / we exit the init if all bytes were written
-								if ram_access_cnt = 3 then
+								if ram_access_cnt = 11 then
 									MMU_STATE <= MMU_IDLE;
-									ack_out <= '1'; --we tell the CPU that we are ready
+									--ack_out <= '1'; --we tell the CPU that we are ready
 								else
 									--Write into next cell
 									ram_access_cnt <= ram_access_cnt + 1;
