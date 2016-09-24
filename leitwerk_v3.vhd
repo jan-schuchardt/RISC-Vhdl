@@ -39,7 +39,7 @@ begin
   state <= std_logic_vector(to_unsigned(0,state'length));
   err <= std_logic_vector(to_unsigned(0,err'length));
   time_ctr <= std_logic_vector(to_unsigned(0,time_ctr'length));
-  ir <= "000000000000000000000000011011";
+  ir <= "000000000000000000000000000000";
   pc <= std_logic_vector(to_unsigned(0,pc'length));
   mmu_work_out <= '0';
   alu_data_out1 <= std_logic_vector(to_unsigned(0,alu_data_out1'length));
@@ -53,6 +53,31 @@ begin
  elsif err="1" then
 
  elsif rising_edge(clk_in) then
+  if ir = "000000000000000000000000000000" then
+   case state is
+	when "0000" =>
+	if mmu_ack_in = '1' then
+mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
+mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
+mmu_com_out  <= "0" & "00";
+mmu_work_out <= '1';
+    state <= "0001";
+	end if;
+   when "0001" =>
+    mmu_work_out <= '0';
+	 state <= "0010";
+   when "0010" =>
+    if mmu_ack_in='1' then
+     if mmu_data_in(1 downto 0)/="11" then
+      err <= "1";
+     end if;
+     ir(29 downto 0) <= mmu_data_in(31 downto 2);
+     state <= "0000";
+    end if;
+   when others =>
+    err <= "1";
+   end case;
+  else
   case ir(4 downto 0) is
 -- LOAD
   when "00000" =>
@@ -808,6 +833,7 @@ mmu_work_out <= '1';
   when others =>
    err <= "1";
   end case;
+  end if;
   cycle_ctr <= std_logic_vector(unsigned(cycle_ctr) + 1);
   time_ctr <= std_logic_vector(unsigned(time_ctr) + 1);
  end if;

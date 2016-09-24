@@ -113,7 +113,7 @@ begin
 				if cu_data_in1 /= std_logic_vector(to_unsigned(0,cu_data_in1'length)) then
 						ram_douta <= reg_data1(to_integer(unsigned(cu_data_in1)));
 				else
-						ram_douta <= x"0000";
+						ram_douta <= x"00000000";
 				end if;
 				
 			end if;
@@ -125,7 +125,7 @@ begin
 				--s_op1 <= x"00000000";
 					if cu_data_in2 /= std_logic_vector(to_unsigned(0,cu_data_in2'length)) then
 						ram_doutb <= reg_data2(to_integer(unsigned(cu_data_in2)));
-					else	ram_doutb <= x"0000";
+					else	ram_doutb <= x"00000000";
 					end if;
 			end if;
 			
