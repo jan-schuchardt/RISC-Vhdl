@@ -370,25 +370,25 @@ architecture Behavioral of MMU is
 							-- Read cylce
 							if ram_access_addr_increment = '1' then
 							
-								br_addr_in <= std_logic_vector(unsigned(br_addr_in) - 1); --as we recieve base_addr + size - 1 as first adress we subtract (we recieve MSB first)
-								ram_access_cnt <= ram_access_cnt - 1;
-								br_data_buffer(31 downto 8) <= br_data_buffer(23 downto 0); --lshift information read so far by eight
-								ram_access_addr_increment <= '0';
-								br_write_enable <= '0'; -- always read
-							
-							else
-								ram_access_addr_increment <= '1';
-
 								if ram_access_cnt = 0 then
 									--Write done, return to idle state / this costs an extra frame which is required for sync with BRAM
 									MMU_STATE <= MMU_IDLE;
 									ack_out <= '1';
 									data_out <= br_data_buffer;
-									hbr_data_buffer(7 downto 0) <= br_data_out; --we can expect that the address was assinged a frame before (either by addr_increment or IDLE state), so the data must be valid
 								else
-									br_write_enable <= '0'; --always read
-									br_data_buffer(7 downto 0) <= br_data_out; --we can expect that the address was assinged a frame before (either by addr_increment or IDLE state), so the data must be valid
+									br_addr_in <= std_logic_vector(unsigned(br_addr_in) - 1); --as we recieve base_addr + size - 1 as first adress we subtract (we recieve MSB first)
+									ram_access_cnt <= ram_access_cnt - 1;
+									br_data_buffer(31 downto 8) <= br_data_buffer(23 downto 0); --lshift information read so far by eight
+									ram_access_addr_increment <= '0';
 								end if;
+								
+								br_write_enable <= '0'; -- always read
+							
+							else
+								--Now we read the next 8 bit
+								ram_access_addr_increment <= '1';
+								br_write_enable <= '0'; --always read
+								br_data_buffer(7 downto 0) <= br_data_out; --we can expect that the address was assinged a frame before (either by addr_increment or IDLE state), so the data must be valid
 							
 							end if;
 						

@@ -1,84 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Sep 24 17:49:36 2016
+// Written by: Map P.20131013 on Sun Sep 25 17:30:30 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "cntrl0_ddr2_dqs_n<0>" LOCATE = SITE "K2" LEVEL 1;
-COMP "cntrl0_ddr2_dqs_n<1>" LOCATE = SITE "J5" LEVEL 1;
-COMP "clk_50mhz" LOCATE = SITE "E12" LEVEL 1;
-COMP "b<0>" LOCATE = SITE "C7" LEVEL 1;
-COMP "b<1>" LOCATE = SITE "D7" LEVEL 1;
-COMP "b<2>" LOCATE = SITE "B9" LEVEL 1;
-COMP "b<3>" LOCATE = SITE "C9" LEVEL 1;
-COMP "g<0>" LOCATE = SITE "C5" LEVEL 1;
-COMP "g<1>" LOCATE = SITE "D5" LEVEL 1;
-COMP "g<2>" LOCATE = SITE "C6" LEVEL 1;
-COMP "g<3>" LOCATE = SITE "D6" LEVEL 1;
-COMP "r<0>" LOCATE = SITE "A3" LEVEL 1;
-COMP "r<1>" LOCATE = SITE "B3" LEVEL 1;
-COMP "r<2>" LOCATE = SITE "B8" LEVEL 1;
-COMP "r<3>" LOCATE = SITE "C8" LEVEL 1;
-COMP "slow" LOCATE = SITE "U10" LEVEL 1;
-PIN slow_pin<0> = BEL "slow" PINNAME PAD;
-PIN "slow_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "cntrl0_ddr2_dq<10>" LOCATE = SITE "G1" LEVEL 1;
-COMP "cntrl0_ddr2_dq<11>" LOCATE = SITE "H6" LEVEL 1;
-COMP "cntrl0_ddr2_dq<12>" LOCATE = SITE "H5" LEVEL 1;
-COMP "cntrl0_ddr2_dq<13>" LOCATE = SITE "F1" LEVEL 1;
-COMP "cntrl0_ddr2_dq<14>" LOCATE = SITE "G3" LEVEL 1;
-COMP "cntrl0_ddr2_dq<15>" LOCATE = SITE "F3" LEVEL 1;
-COMP "cntrl0_ddr2_dqs<0>" LOCATE = SITE "K3" LEVEL 1;
-COMP "cntrl0_ddr2_dqs<1>" LOCATE = SITE "K6" LEVEL 1;
-COMP "cntrl0_rst_dqs_div_in" LOCATE = SITE "H4" LEVEL 1;
-COMP "leds<0>" LOCATE = SITE "R20" LEVEL 1;
-COMP "leds<1>" LOCATE = SITE "T19" LEVEL 1;
-COMP "leds<2>" LOCATE = SITE "U20" LEVEL 1;
-COMP "leds<3>" LOCATE = SITE "U19" LEVEL 1;
-COMP "leds<4>" LOCATE = SITE "V19" LEVEL 1;
-COMP "leds<5>" LOCATE = SITE "V20" LEVEL 1;
-COMP "leds<6>" LOCATE = SITE "Y22" LEVEL 1;
-COMP "leds<7>" LOCATE = SITE "W21" LEVEL 1;
-COMP "hsync" LOCATE = SITE "C11" LEVEL 1;
-COMP "reset" LOCATE = SITE "V8" LEVEL 1;
-PIN reset_pin<0> = BEL "reset" PINNAME PAD;
-PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "vsync" LOCATE = SITE "B11" LEVEL 1;
-COMP "cntrl0_ddr2_cke" LOCATE = SITE "N3" LEVEL 1;
-COMP "cntrl0_ddr2_odt" LOCATE = SITE "P1" LEVEL 1;
-COMP "cntrl0_ddr2_ck_n<0>" LOCATE = SITE "M2" LEVEL 1;
-COMP "cntrl0_ddr2_a<10>" LOCATE = SITE "T3" LEVEL 1;
-COMP "cntrl0_ddr2_a<11>" LOCATE = SITE "V1" LEVEL 1;
-COMP "cntrl0_ddr2_a<12>" LOCATE = SITE "Y2" LEVEL 1;
-COMP "cntrl0_ddr2_ba<0>" LOCATE = SITE "P3" LEVEL 1;
-COMP "cntrl0_ddr2_ba<1>" LOCATE = SITE "R3" LEVEL 1;
-COMP "cntrl0_ddr2_ck<0>" LOCATE = SITE "M1" LEVEL 1;
-COMP "cntrl0_ddr2_dm<0>" LOCATE = SITE "J3" LEVEL 1;
-COMP "cntrl0_ddr2_dm<1>" LOCATE = SITE "E3" LEVEL 1;
-COMP "cntrl0_ddr2_dq<0>" LOCATE = SITE "H1" LEVEL 1;
-COMP "cntrl0_ddr2_dq<1>" LOCATE = SITE "K5" LEVEL 1;
-COMP "cntrl0_ddr2_dq<2>" LOCATE = SITE "K1" LEVEL 1;
-COMP "cntrl0_ddr2_dq<3>" LOCATE = SITE "L3" LEVEL 1;
-COMP "cntrl0_ddr2_dq<4>" LOCATE = SITE "L5" LEVEL 1;
-COMP "cntrl0_ddr2_dq<5>" LOCATE = SITE "L1" LEVEL 1;
-COMP "cntrl0_ddr2_dq<6>" LOCATE = SITE "K4" LEVEL 1;
-COMP "cntrl0_ddr2_dq<7>" LOCATE = SITE "H2" LEVEL 1;
-COMP "cntrl0_ddr2_dq<8>" LOCATE = SITE "F2" LEVEL 1;
-COMP "cntrl0_ddr2_dq<9>" LOCATE = SITE "G4" LEVEL 1;
-COMP "cntrl0_rst_dqs_div_out" LOCATE = SITE "H3" LEVEL 1;
-COMP "cntrl0_ddr2_cas_n" LOCATE = SITE "M4" LEVEL 1;
-COMP "cntrl0_ddr2_ras_n" LOCATE = SITE "M3" LEVEL 1;
-COMP "cntrl0_ddr2_a<0>" LOCATE = SITE "R2" LEVEL 1;
-COMP "cntrl0_ddr2_a<1>" LOCATE = SITE "T4" LEVEL 1;
-COMP "cntrl0_ddr2_a<2>" LOCATE = SITE "R1" LEVEL 1;
-COMP "cntrl0_ddr2_a<3>" LOCATE = SITE "U3" LEVEL 1;
-COMP "cntrl0_ddr2_a<4>" LOCATE = SITE "U2" LEVEL 1;
-COMP "cntrl0_ddr2_a<5>" LOCATE = SITE "U4" LEVEL 1;
-COMP "cntrl0_ddr2_a<6>" LOCATE = SITE "U1" LEVEL 1;
-COMP "cntrl0_ddr2_a<7>" LOCATE = SITE "Y1" LEVEL 1;
-COMP "cntrl0_ddr2_a<8>" LOCATE = SITE "W1" LEVEL 1;
-COMP "cntrl0_ddr2_a<9>" LOCATE = SITE "W2" LEVEL 1;
-COMP "cntrl0_ddr2_cs_n" LOCATE = SITE "M5" LEVEL 1;
-COMP "cntrl0_ddr2_we_n" LOCATE = SITE "N4" LEVEL 1;
 COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<0>"
         LOCATE = SITE "SLICE_X2Y62" LEVEL 1;
 COMP "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out<1>"
@@ -228,19 +152,83 @@ COMP
 COMP
         "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5"
         LOCATE = SITE "SLICE_X1Y55" LEVEL 1;
+COMP "cntrl0_ddr2_dqs_n<0>" LOCATE = SITE "K2" LEVEL 1;
+COMP "cntrl0_ddr2_dqs_n<1>" LOCATE = SITE "J5" LEVEL 1;
+COMP "clk_50mhz" LOCATE = SITE "E12" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "D7" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "B9" LEVEL 1;
+COMP "b<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "C5" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "D5" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "C6" LEVEL 1;
+COMP "g<3>" LOCATE = SITE "D6" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "B3" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "B8" LEVEL 1;
+COMP "r<3>" LOCATE = SITE "C8" LEVEL 1;
+COMP "slow" LOCATE = SITE "U10" LEVEL 1;
+PIN slow_pin<0> = BEL "slow" PINNAME PAD;
+PIN "slow_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "cntrl0_ddr2_dq<10>" LOCATE = SITE "G1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<11>" LOCATE = SITE "H6" LEVEL 1;
+COMP "cntrl0_ddr2_dq<12>" LOCATE = SITE "H5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<13>" LOCATE = SITE "F1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<14>" LOCATE = SITE "G3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<15>" LOCATE = SITE "F3" LEVEL 1;
+COMP "cntrl0_ddr2_dqs<0>" LOCATE = SITE "K3" LEVEL 1;
+COMP "cntrl0_ddr2_dqs<1>" LOCATE = SITE "K6" LEVEL 1;
+COMP "cntrl0_rst_dqs_div_in" LOCATE = SITE "H4" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "W21" LEVEL 1;
+COMP "hsync" LOCATE = SITE "C11" LEVEL 1;
+COMP "reset" LOCATE = SITE "V8" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "vsync" LOCATE = SITE "B11" LEVEL 1;
+COMP "cntrl0_ddr2_cke" LOCATE = SITE "N3" LEVEL 1;
+COMP "cntrl0_ddr2_odt" LOCATE = SITE "P1" LEVEL 1;
+COMP "cntrl0_ddr2_ck_n<0>" LOCATE = SITE "M2" LEVEL 1;
+COMP "cntrl0_ddr2_a<10>" LOCATE = SITE "T3" LEVEL 1;
+COMP "cntrl0_ddr2_a<11>" LOCATE = SITE "V1" LEVEL 1;
+COMP "cntrl0_ddr2_a<12>" LOCATE = SITE "Y2" LEVEL 1;
+COMP "cntrl0_ddr2_ba<0>" LOCATE = SITE "P3" LEVEL 1;
+COMP "cntrl0_ddr2_ba<1>" LOCATE = SITE "R3" LEVEL 1;
+COMP "cntrl0_ddr2_ck<0>" LOCATE = SITE "M1" LEVEL 1;
+COMP "cntrl0_ddr2_dm<0>" LOCATE = SITE "J3" LEVEL 1;
+COMP "cntrl0_ddr2_dm<1>" LOCATE = SITE "E3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<0>" LOCATE = SITE "H1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<1>" LOCATE = SITE "K5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<2>" LOCATE = SITE "K1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<3>" LOCATE = SITE "L3" LEVEL 1;
+COMP "cntrl0_ddr2_dq<4>" LOCATE = SITE "L5" LEVEL 1;
+COMP "cntrl0_ddr2_dq<5>" LOCATE = SITE "L1" LEVEL 1;
+COMP "cntrl0_ddr2_dq<6>" LOCATE = SITE "K4" LEVEL 1;
+COMP "cntrl0_ddr2_dq<7>" LOCATE = SITE "H2" LEVEL 1;
+COMP "cntrl0_ddr2_dq<8>" LOCATE = SITE "F2" LEVEL 1;
+COMP "cntrl0_ddr2_dq<9>" LOCATE = SITE "G4" LEVEL 1;
+COMP "cntrl0_rst_dqs_div_out" LOCATE = SITE "H3" LEVEL 1;
+COMP "cntrl0_ddr2_cas_n" LOCATE = SITE "M4" LEVEL 1;
+COMP "cntrl0_ddr2_ras_n" LOCATE = SITE "M3" LEVEL 1;
+COMP "cntrl0_ddr2_a<0>" LOCATE = SITE "R2" LEVEL 1;
+COMP "cntrl0_ddr2_a<1>" LOCATE = SITE "T4" LEVEL 1;
+COMP "cntrl0_ddr2_a<2>" LOCATE = SITE "R1" LEVEL 1;
+COMP "cntrl0_ddr2_a<3>" LOCATE = SITE "U3" LEVEL 1;
+COMP "cntrl0_ddr2_a<4>" LOCATE = SITE "U2" LEVEL 1;
+COMP "cntrl0_ddr2_a<5>" LOCATE = SITE "U4" LEVEL 1;
+COMP "cntrl0_ddr2_a<6>" LOCATE = SITE "U1" LEVEL 1;
+COMP "cntrl0_ddr2_a<7>" LOCATE = SITE "Y1" LEVEL 1;
+COMP "cntrl0_ddr2_a<8>" LOCATE = SITE "W1" LEVEL 1;
+COMP "cntrl0_ddr2_a<9>" LOCATE = SITE "W2" LEVEL 1;
+COMP "cntrl0_ddr2_cs_n" LOCATE = SITE "M5" LEVEL 1;
+COMP "cntrl0_ddr2_we_n" LOCATE = SITE "N4" LEVEL 1;
 COMPGRP cal_ctl.SLICE = COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<5>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<4>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<1>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<3>"
-        COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<5>"
-        COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<7>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<9>"
@@ -264,6 +252,8 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<9>"
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<3>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/cnt1<5>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<11>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<21>"
         COMP "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<13>"
@@ -341,7 +331,17 @@ COMPGRP cal_ctl.SLICE = COMP
         COMP
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f52"
         COMP
-        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5";
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt<4>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<1>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<3>"
+        COMP
+        "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<5>";
 COMPGRP "cal_ctl.SLICE" LOCATE = SITE "SLICE_X26Y8:SLICE_X37Y21" LEVEL 4;
 MACRO "delay_calibration_chain" LOCATE = SITE "SLICE_X28Y16" LEVEL 1;
 PIN INST_MMU/INST_BLOCKRAM/Mram_cells_pins<11> = BEL
@@ -782,8 +782,7 @@ TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
         BEL
         "INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/r_command_register_1"
         BEL "INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_counter_0"
-        BEL "INST_MMU/MMU_STATE_FSM_FFd8" BEL "INST_MMU/MMU_STATE_FSM_FFd9"
-        BEL "INST_MMU/MMU_STATE_FSM_FFd7" BEL "INST_MMU/MMU_STATE_FSM_FFd6"
+        BEL "INST_MMU/MMU_STATE_FSM_FFd9" BEL "INST_MMU/MMU_STATE_FSM_FFd7"
         BEL "INST_MMU/MMU_STATE_FSM_FFd3" BEL "INST_MMU/MMU_STATE_FSM_FFd5"
         BEL "INST_MMU/MMU_STATE_FSM_FFd4" BEL "INST_MMU/MMU_STATE_FSM_FFd2"
         BEL "INST_MMU/ddr2_data_in_63" BEL "INST_MMU/ddr2_data_in_62" BEL
@@ -895,9 +894,8 @@ TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
         "INST_MMU/ddr2_data_buffer_14" BEL "INST_MMU/data_out_11" BEL
         "INST_MMU/ddr2_data_buffer_13" BEL "INST_MMU/data_out_10" BEL
         "INST_MMU/data_out_1" BEL "INST_MMU/ddr2_data_buffer_12" BEL
-        "INST_MMU/data_out_0" BEL "INST_MMU/ram_access_addr_increment" BEL
-        "INST_MMU/ddr2_data_buffer_11" BEL "INST_MMU/ddr2_read_enable" BEL
-        "INST_MMU/ddr2_data_buffer_10" BEL
+        "INST_MMU/data_out_0" BEL "INST_MMU/ddr2_data_buffer_11" BEL
+        "INST_MMU/ddr2_read_enable" BEL "INST_MMU/ddr2_data_buffer_10" BEL
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/reset_r" BEL
         "INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/gen_tap1[0].r"
         BEL
@@ -1171,8 +1169,10 @@ TIMEGRP INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/ddr_address1_1" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/write_enable" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/ddr_ba1_0" BEL
+        "INST_MMU/MMU_STATE_FSM_FFd8" BEL "INST_MMU/MMU_STATE_FSM_FFd6" BEL
         "INST_MMU/ram_access_cnt_2" BEL "INST_MMU/ram_access_cnt_1" BEL
-        "INST_MMU/ram_access_cnt_0" BEL "INST_MMU/ack_out" BEL
+        "INST_MMU/ram_access_cnt_0" BEL "INST_MMU/ram_access_addr_increment"
+        BEL "INST_MMU/ack_out" BEL
         "INST_MMU/INST_DDR2_Control_VHDL/STATE_M_FSM_FFd7" BEL
         "INST_MMU/MMU_STATE_FSM_FFd10" BEL "INST_MMU/MMU_STATE_FSM_FFd1" BEL
         "INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_read_fifo_rden/SRL16E"
