@@ -81,7 +81,7 @@ begin
 
 
 
-CU: entity work.leitwerk port map(
+CU: entity work.CU port map(
 	
 	clk_in => clock_clk_out,
 	rst_in => cpu_rst_in,
@@ -102,9 +102,7 @@ CU: entity work.leitwerk port map(
 	mmu_ack_in => mmu_ack_in,
 	
 	err_out => cpu_err_out,
-	pc_out => cpu_debug_out
 );
-cpu_debug_adr_out <= "000100";
 
 RECHENEINHEIT: entity work.ALU port map(
 	clk_in => clock_clk_out,
@@ -115,8 +113,8 @@ RECHENEINHEIT: entity work.ALU port map(
 	cu_com_in => cu_alu_com_out,
 	cu_work_in => cu_alu_work_out,
 	cu_data_out => cu_alu_data_in
---	debug_data_out => cpu_debug_out,
---	debug_adr_out => cpu_debug_adr_out
+	debug_data_out => cpu_debug_out,
+	debug_adr_out => cpu_debug_adr_out
 );
 
 CLOCKER: entity work.ClockDivider port map(
