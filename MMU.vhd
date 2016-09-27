@@ -170,18 +170,127 @@ architecture Behavioral of MMU is
 								
 								case to_integer(ram_access_cnt) is --writing 8-bit values into bram
 								
-									when 0 => br_data_in <= x"FF";
-									when 1 => br_data_in <= x"FF";
-									when 2 => br_data_in <= x"80";
-									when 3 => br_data_in <= x"88";
-									when 4 => br_data_in <= x"93";
-									when 5 => br_data_in <= x"00";
-									when 6 => br_data_in <= x"80";
-									when 7 => br_data_in <= x"88";
-									when 8 => br_data_in <= x"13";
-									when 9 => br_data_in <= x"E1";
-									when 10 => br_data_in <= x"50";
-									when 11 => br_data_in <= x"55";
+									when 0 => 
+br_data_in <= std_logic_vector(to_unsigned(147, br_data_in'length));
+when 1 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 2 => 
+br_data_in <= std_logic_vector(to_unsigned(160, br_data_in'length));
+when 3 => 
+br_data_in <= std_logic_vector(to_unsigned(170, br_data_in'length));
+when 4 => 
+br_data_in <= std_logic_vector(to_unsigned(19, br_data_in'length));
+when 5 => 
+br_data_in <= std_logic_vector(to_unsigned(225, br_data_in'length));
+when 6 => 
+br_data_in <= std_logic_vector(to_unsigned(80, br_data_in'length));
+when 7 => 
+br_data_in <= std_logic_vector(to_unsigned(85, br_data_in'length));
+when 8 => 
+br_data_in <= std_logic_vector(to_unsigned(147, br_data_in'length));
+when 9 => 
+br_data_in <= std_logic_vector(to_unsigned(113, br_data_in'length));
+when 10 => 
+br_data_in <= std_logic_vector(to_unsigned(161, br_data_in'length));
+when 11 => 
+br_data_in <= std_logic_vector(to_unsigned(170, br_data_in'length));
+when 12 => 
+br_data_in <= std_logic_vector(to_unsigned(19, br_data_in'length));
+when 13 => 
+br_data_in <= std_logic_vector(to_unsigned(194, br_data_in'length));
+when 14 => 
+br_data_in <= std_logic_vector(to_unsigned(161, br_data_in'length));
+when 15 => 
+br_data_in <= std_logic_vector(to_unsigned(90, br_data_in'length));
+when 16 => 
+br_data_in <= std_logic_vector(to_unsigned(147, br_data_in'length));
+when 17 => 
+br_data_in <= std_logic_vector(to_unsigned(66, br_data_in'length));
+when 18 => 
+br_data_in <= std_logic_vector(to_unsigned(242, br_data_in'length));
+when 19 => 
+br_data_in <= std_logic_vector(to_unsigned(15, br_data_in'length));
+when 20 => 
+br_data_in <= std_logic_vector(to_unsigned(147, br_data_in'length));
+when 21 => 
+br_data_in <= std_logic_vector(to_unsigned(211, br_data_in'length));
+when 22 => 
+br_data_in <= std_logic_vector(to_unsigned(34, br_data_in'length));
+when 23 => 
+br_data_in <= std_logic_vector(to_unsigned(64, br_data_in'length));
+when 24 => 
+br_data_in <= std_logic_vector(to_unsigned(19, br_data_in'length));
+when 25 => 
+br_data_in <= std_logic_vector(to_unsigned(212, br_data_in'length));
+when 26 => 
+br_data_in <= std_logic_vector(to_unsigned(51, br_data_in'length));
+when 27 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 28 => 
+br_data_in <= std_logic_vector(to_unsigned(147, br_data_in'length));
+when 29 => 
+br_data_in <= std_logic_vector(to_unsigned(20, br_data_in'length));
+when 30 => 
+br_data_in <= std_logic_vector(to_unsigned(36, br_data_in'length));
+when 31 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 32 => 
+br_data_in <= std_logic_vector(to_unsigned(51, br_data_in'length));
+when 33 => 
+br_data_in <= std_logic_vector(to_unsigned(133, br_data_in'length));
+when 34 => 
+br_data_in <= std_logic_vector(to_unsigned(50, br_data_in'length));
+when 35 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 36 => 
+br_data_in <= std_logic_vector(to_unsigned(179, br_data_in'length));
+when 37 => 
+br_data_in <= std_logic_vector(to_unsigned(133, br_data_in'length));
+when 38 => 
+br_data_in <= std_logic_vector(to_unsigned(32, br_data_in'length));
+when 39 => 
+br_data_in <= std_logic_vector(to_unsigned(64, br_data_in'length));
+when 40 => 
+br_data_in <= std_logic_vector(to_unsigned(55, br_data_in'length));
+when 41 => 
+br_data_in <= std_logic_vector(to_unsigned(38, br_data_in'length));
+when 42 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 43 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 44 => 
+br_data_in <= std_logic_vector(to_unsigned(183, br_data_in'length));
+when 45 => 
+br_data_in <= std_logic_vector(to_unsigned(54, br_data_in'length));
+when 46 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 47 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 48 => 
+br_data_in <= std_logic_vector(to_unsigned(51, br_data_in'length));
+when 49 => 
+br_data_in <= std_logic_vector(to_unsigned(215, br_data_in'length));
+when 50 => 
+br_data_in <= std_logic_vector(to_unsigned(197, br_data_in'length));
+when 51 => 
+br_data_in <= std_logic_vector(to_unsigned(64, br_data_in'length));
+when 52 => 
+br_data_in <= std_logic_vector(to_unsigned(179, br_data_in'length));
+when 53 => 
+br_data_in <= std_logic_vector(to_unsigned(215, br_data_in'length));
+when 54 => 
+br_data_in <= std_logic_vector(to_unsigned(213, br_data_in'length));
+when 55 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+when 56 => 
+br_data_in <= std_logic_vector(to_unsigned(51, br_data_in'length));
+when 57 => 
+br_data_in <= std_logic_vector(to_unsigned(152, br_data_in'length));
+when 58 => 
+br_data_in <= std_logic_vector(to_unsigned(197, br_data_in'length));
+when 59 => 
+br_data_in <= std_logic_vector(to_unsigned(0, br_data_in'length));
+
 									when others =>NULL; -- init for bram finished
 								
 								end case;
@@ -191,7 +300,7 @@ architecture Behavioral of MMU is
 							else								
 								ram_access_addr_increment <= '0'; 
 								--Wait for bram to sync before we can access again / we exit the init if all bytes were written
-								if ram_access_cnt = 11 then
+								if ram_access_cnt = 59 then
 									MMU_STATE <= MMU_IDLE;
 									ack_out <= '1'; --we tell the CPU that we are ready
 								else

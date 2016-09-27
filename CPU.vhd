@@ -101,7 +101,7 @@ CU: entity work.CU port map(
 	mmu_work_out => mmu_work_out,
 	mmu_ack_in => mmu_ack_in,
 	
-	err_out => cpu_err_out,
+	err_out => cpu_err_out
 );
 
 RECHENEINHEIT: entity work.ALU port map(
@@ -112,7 +112,7 @@ RECHENEINHEIT: entity work.ALU port map(
 	cu_adr_in => cu_alu_adr_out3,
 	cu_com_in => cu_alu_com_out,
 	cu_work_in => cu_alu_work_out,
-	cu_data_out => cu_alu_data_in
+	cu_data_out => cu_alu_data_in,
 	debug_data_out => cpu_debug_out,
 	debug_adr_out => cpu_debug_adr_out
 );

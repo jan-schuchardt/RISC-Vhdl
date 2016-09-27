@@ -216,40 +216,43 @@ begin
 				
 				
 				if s_opc(5)='0' and s_opc(4)='0' then
-					acc <= std_logic_vector( unsigned(s_op1) sll to_integer(unsigned(s_op2)));
+					acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(s_op2))));
 				elsif s_opc(5)='0' and s_opc(4)='1' then
-					acc <= std_logic_vector( unsigned(s_op1) sll to_integer(unsigned(ram_doutb)));
+					acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(ram_doutb))));
 				elsif s_opc(5)='1' and s_opc(4)='0' then
-					acc <= std_logic_vector( unsigned(ram_douta) sll to_integer(unsigned(s_op2)));
+					acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(s_op2))));
 				else
-					acc <= std_logic_vector( unsigned(ram_douta) sll to_integer(unsigned(ram_doutb)));
+					acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(ram_doutb))));
 				end if;
 				
 			--Shift Logical Right
 			when "0110" =>
 			
 				if s_opc(5)='0' and s_opc(4)='0' then
-					acc <= std_logic_vector(unsigned(s_op1) srl to_integer(unsigned(s_op2)));
+					acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(s_op2))));
 				elsif s_opc(5)='0' and s_opc(4)='1' then
-					acc <= std_logic_vector( unsigned(s_op1) srl to_integer(unsigned(ram_doutb)));
+					acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(ram_doutb))));
 				elsif s_opc(5)='1' and s_opc(4)='0' then
-					acc <= std_logic_vector( unsigned(ram_douta) srl to_integer(unsigned(s_op2)));
+					acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(s_op2))));
 				else
-					acc <= std_logic_vector( unsigned(ram_douta) srl to_integer(unsigned(ram_doutb)));
+					acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(ram_doutb))));
 				end if;
 				
 			--Shift arithmetic right
 			when "0111" =>
 			
+				
 				if s_opc(5)='0' and s_opc(4)='0' then
-					acc <= std_logic_vector( unsigned(s_op1) srl to_integer(unsigned(s_op2)));
+					acc <= to_stdlogicvector(to_bitvector(s_op1) sra to_integer(unsigned(s_op2)));
+						
 				elsif s_opc(5)='0' and s_opc(4)='1' then
-					acc <= std_logic_vector( unsigned(s_op1) srl to_integer(unsigned(ram_doutb)));
+					acc <= to_stdlogicvector(to_bitvector(s_op1) sra to_integer(unsigned(ram_doutb)));
 				elsif s_opc(5)='1' and s_opc(4)='0' then
-					acc <= std_logic_vector( unsigned(ram_douta) srl to_integer(unsigned(s_op2)));
+					acc <= to_stdlogicvector(to_bitvector(ram_doutb) sra to_integer(unsigned(s_op2)));
 				else
-					acc <= std_logic_vector( unsigned(ram_douta) srl to_integer(unsigned(ram_doutb)));
+					acc <= to_stdlogicvector(to_bitvector(ram_douta) sra to_integer(unsigned(ram_doutb)));
 				end if;
+					
 			
 				
 				

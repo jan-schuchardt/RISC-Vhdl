@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'toplevel'
 
 Design Information
@@ -9,23 +9,23 @@ Target Device  : xc3s700a
 Target Package : fg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Sun Sep 25 17:30:23 2016
+Mapped Date    : Tue Sep 27 15:36:18 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    8
 Logic Utilization:
-  Number of Slice Flip Flops:         1,619 out of  11,776   13%
-  Number of 4 input LUTs:             8,497 out of  11,776   72%
+  Number of Slice Flip Flops:         2,653 out of  11,776   22%
+  Number of 4 input LUTs:             9,383 out of  11,776   79%
 Logic Distribution:
-  Number of occupied Slices:          4,804 out of   5,888   81%
-    Number of Slices containing only related logic:   4,804 out of   4,804 100%
-    Number of Slices containing unrelated logic:          0 out of   4,804   0%
+  Number of occupied Slices:          5,886 out of   5,888   99%
+    Number of Slices containing only related logic:   5,886 out of   5,886 100%
+    Number of Slices containing unrelated logic:          0 out of   5,886   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       8,737 out of  11,776   74%
-    Number used as logic:             8,370
-    Number used as a route-thru:        240
+  Total Number of 4 input LUTs:       9,621 out of  11,776   81%
+    Number used as logic:             9,256
+    Number used as a route-thru:        238
     Number used for Dual Port RAMs:      64
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      63
@@ -46,9 +46,9 @@ Logic Distribution:
   Number of RAMB16BWEs:                   3 out of      20   15%
 
   Number of RPM macros:            1
-Average Fanout of Non-Clock Nets:                3.79
+Average Fanout of Non-Clock Nets:                3.71
 
-Peak Memory Usage:  373 MB
+Peak Memory Usage:  291 MB
 Total REAL time to MAP completion:  8 secs 
 Total CPU time to MAP completion:   8 secs 
 
@@ -113,6 +113,10 @@ WARNING:Pack:266 - The function generator
    There is a conflict for the FXMUX.  The design will exhibit suboptimal
    timing.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<0> is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
@@ -122,10 +126,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1<1> is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0<1> is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 
@@ -331,8 +331,8 @@ Area Group "cal_ctl"
   Area Group Logic Utilization:
   Number of Slice Flip Flops:               94 out of    336   27%
   Logic Distribution:
-    Number of occupied Slices:              67 out of    168   39%
-      Number of Slices containing only related logic:     67 out of     67 100%
+    Number of occupied Slices:              66 out of    168   39%
+      Number of Slices containing only related logic:     66 out of     66 100%
   Total Number of 4 input LUTs:             82 out of    336   24%
     Number used as logic:                   82
 

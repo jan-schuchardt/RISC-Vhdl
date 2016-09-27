@@ -1,6 +1,5 @@
 
 
-ADDI x0, x0, 5
 ADDI x1, x0, 0xAAA
 ORI  x2, x1, 0x555
 ANDI x3, x2, 0xAAA

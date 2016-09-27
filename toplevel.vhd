@@ -303,8 +303,8 @@ Inst_vga_clk: vga_clk PORT MAP(
 PROZESSOR: entity work.cpu PORT MAP(
 	cpu_rst_in => reset,
 	cpu_clk_in => clk_cpu, --clk25,
---	cpu_debug_out => debug,
---	cpu_debug_adr_out => debug_adr,
+	cpu_debug_out => debug,
+	cpu_debug_adr_out => debug_adr,
 	cpu_slow_in => slow,
 	cpu_err_out => err_out,		
 
@@ -352,8 +352,8 @@ PORT MAP (
 	auto_ref_req => auto_ref_req --in
 
 );
-		  debug_adr <= "000100";
-debug <= mmu_data_out;	  
+--debug_adr <= "000100";
+--debug <= mmu_data_out;	  
 INST_DDR2_RAM_CORE : DDR2_Ram_Core
 PORT MAP (
     sys_clk_in => CLKB_130M,
