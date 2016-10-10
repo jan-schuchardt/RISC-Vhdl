@@ -43,7 +43,7 @@ architecture Behavioral of ALU is
 	--signal reg_bank2: regs;
 	
 	signal s_op1, s_op2: STD_LOGIC_VECTOR(31 downto 0);
-	signal s_opc: STD_LOGIC_VECTOR(5 downto 0);
+	signal s_opc: STD_LOGIC_VECTOR(6 downto 0);
 	signal s_op3: STD_LOGIC_VECTOR(4 downto 0);
 	signal state: STD_LOGIC_VECTOR(3 downto 0);
 	signal acc: STD_LOGIC_VECTOR(31 downto 0);
@@ -58,6 +58,8 @@ architecture Behavioral of ALU is
 	 signal ram_dinb: std_logic_vector(31 downto 0);
 	 signal ram_douta: std_logic_vector(31 downto 0);
 		 signal ram_doutb: std_logic_vector(31 downto 0);
+		 
+	signal mult_result: std_logic_vector(63 downto 0);
 
 
 
@@ -145,7 +147,7 @@ begin
 					acc <= std_logic_vector(unsigned(s_op1) + unsigned(s_op2));
 				elsif s_opc(6)='0' and s_opc(5)='1' then
 					acc <= std_logic_vector(unsigned(s_op1) + unsigned(ram_doutb));
-				elsif s_opc(6)='1' and s_opc(4)='5' then
+				elsif s_opc(6)='1' and s_opc(5)='0' then
 					acc <= std_logic_vector(unsigned(ram_douta) + unsigned(s_op2));
 				else
 					acc <= std_logic_vector(unsigned(ram_douta) + unsigned(ram_doutb));
@@ -313,6 +315,42 @@ begin
 				end if;
 				
 				
+			when "01010" | "01101"=>
+			--Multiply lower / Multiply upper unsigned unsigned
+			if s_opc(6)='0' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(unsigned(s_op1) * unsigned(s_op2));
+				elsif s_opc(6)='0' and s_opc(5)='1' then
+					mult_result <= std_logic_vector(unsigned(s_op1) * unsigned(ram_doutb));
+				elsif s_opc(6)='1' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(unsigned(ram_douta) * unsigned(ram_doutb));
+				else
+					mult_result <= std_logic_vector(unsigned(ram_douta) * unsigned(ram_doutb));
+				end if;
+			
+			when "01011"=>
+			--Multiply upper signed signed
+			if s_opc(6)='0' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(signed(s_op1) * signed(s_op2));
+				elsif s_opc(6)='0' and s_opc(5)='1' then
+					mult_result <= std_logic_vector(signed(s_op1) * signed(ram_doutb));
+				elsif s_opc(6)='1' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(signed(ram_douta) * signed(s_op2));
+				else
+					mult_result <= std_logic_vector(signed(ram_douta) * signed(ram_doutb));
+				end if;
+			
+			when "01100"=>
+			--Multiply upper signed unsigned
+			if s_opc(6)='0' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(signed(s_op1) * abs(signed(s_op2)));
+				elsif s_opc(6)='0' and s_opc(5)='1' then
+					mult_result <= std_logic_vector(signed(s_op1) * abs(signed(ram_doutb)));
+				elsif s_opc(6)='1' and s_opc(5)='0' then
+					mult_result <= std_logic_vector(signed(ram_douta) * abs(signed(s_op2)));
+				else
+					mult_result <= std_logic_vector(signed(ram_douta) * abs(signed(ram_doutb)));
+				end if;
+				
 			when others =>
 			
 			
@@ -329,19 +367,45 @@ begin
 		if(state = "0010") then
 			
 			
+					
+					
 					if s_op3 /= std_logic_vector(to_unsigned(0,s_op3'length)) then
 						
-						reg_data1(to_integer(unsigned(s_op3)))<= std_logic_vector(acc);
-						reg_data2(to_integer(unsigned(s_op3)))<= std_logic_vector(acc);
+						--Multiply lower
+						if s_opc="01010" then
+							reg_data1(to_integer(unsigned(s_op3)))<= mult_result(31 downto 0);
+							reg_data2(to_integer(unsigned(s_op3)))<= mult_result(31 downto 0);
+							
+							debug_signal <= mult_result(31 downto 0);
+						--Multiply other
+						elsif s_opc="01011" or s_opc="01100" or s_opc="01101" then
+							reg_data1(to_integer(unsigned(s_op3)))<= mult_result(63 downto 32);
+							reg_data2(to_integer(unsigned(s_op3)))<= mult_result(63 downto 32);
+							
+							debug_signal <= mult_result(63 downto 32);
+						else
+						--Other operations
+							reg_data1(to_integer(unsigned(s_op3)))<= acc;
+							reg_data2(to_integer(unsigned(s_op3)))<= acc;
+							
+							debug_signal <= acc;
+						end if;
 						
-						debug_signal <= acc;
 						debug_adr_signal <= "0" & s_op3;
 						
 					end if;
 					
-					cu_data_out <= acc;
-					
-					
+					--Multiply lower
+						if s_opc="01010" then						
+							cu_data_out <= mult_result(31 downto 0);
+						--Multiply other
+						elsif s_opc="01011" or s_opc="01100" or s_opc="01101" then
+							cu_data_out <= mult_result(63 downto 32);
+						else
+						--Other operations
+							cu_data_out <= acc;
+						end if;
+				
 					
 					
 
