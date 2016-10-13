@@ -157,15 +157,15 @@ def link_sx(line, tokens, symbols, off, funct3):
 
 def link_sb(line, tokens, symbols, off):
 	#SB rd, rs, imm
-	return link_lx(line, tokens, symbols, off, 0)
+	return link_sx(line, tokens, symbols, off, 0)
 	
 def link_sh(line, tokens, symbols, off):
 	#SH rd, rs, imm
-	return link_lx(line, tokens, symbols, off, 1)
+	return link_sx(line, tokens, symbols, off, 1)
 	
 def link_sw(line, tokens, symbols, off):
 	#SW rd, rs, imm
-	return link_lx(line, tokens, symbols, off, 2)
+	return link_sx(line, tokens, symbols, off, 2)
 	
 def link_xi(line, tokens, symbols, off, funct3):
 	#XI rd, rs, imm
@@ -330,6 +330,7 @@ inst_dict = { \
 def linker(symbols, object):
 	print(symbols)
 	bytecode = []
+	comment_list = []
 	for obj in object:
 		
 		line = obj[0]
@@ -339,8 +340,9 @@ def linker(symbols, object):
 			tokens[0] = tokens[0].lower()
 			if(tokens[0] in inst_dict):
 				bytecode = bytecode + inst_dict[tokens[0]](line, tokens, symbols, off)
+				comment_list.append("--"+" ".join(tokens))
 			else:
 				print("Unkown mnemoric "+tokens[0])
 		#print("processing line "+str(line)+" : "+str(tokens))
 	#print(bytecode)
-	return bytecode
+	return (bytecode, comment_list)
