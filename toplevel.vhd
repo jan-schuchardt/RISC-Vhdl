@@ -81,7 +81,9 @@ PORT(
     h : OUT std_logic;
     v : OUT std_logic;
     reg_in: in std_logic_vector(31 downto 0);
-    reg_adr_in : in std_logic_vector(5 downto 0)
+    reg_adr_in : in std_logic_vector(5 downto 0);
+    pc_in : in std_logic_vector(31 downto 0);
+    ir_in : in std_logic_vector(31 downto 0)
     );
 END COMPONENT;
 
@@ -377,4 +379,4 @@ PORT MAP (
     cntrl0_rst_dqs_div_in => cntrl0_rst_dqs_div_in,
     cntrl0_rst_dqs_div_out => cntrl0_rst_dqs_div_out);	 
 
-end behaviour;
+end architecture;

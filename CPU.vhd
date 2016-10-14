@@ -34,7 +34,7 @@ signal cu_alu_data_in   : std_logic_vector(31 downto 0);
 signal cu_alu_data_out1 : std_logic_vector(31 downto 0);
 signal cu_alu_data_out2 : std_logic_vector(31 downto 0);
 signal cu_alu_adr_out   : std_logic_vector(4 downto 0);
-signal cu_alu_com_out   : std_logic_vector(5 downto 0);
+signal cu_alu_com_out   : std_logic_vector(6 downto 0);
 signal cu_alu_work_out  : std_logic;
 
 -- signal from and to the CDU
@@ -69,13 +69,13 @@ CU: entity work.CU port map(
 );
 
 ALU: entity work.ALU port map(
-	clk_in => clock_clk_out,
+	clk_in => clk_alu_cu,
 	rst_in => cpu_rst_in,
 
 	-- CU
 	cu_data_in1 => cu_alu_data_out1,
 	cu_data_in2 => cu_alu_data_out2,
-	cu_adr_in   => cu_alu_adr_out3,
+	cu_adr_in   => cu_alu_adr_out,
 	cu_com_in   => cu_alu_com_out,
 	cu_work_in  => cu_alu_work_out,
 	cu_data_out => cu_alu_data_in,
