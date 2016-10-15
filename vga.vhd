@@ -2,39 +2,37 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-
 entity vga is
-    port(   clk     : in std_logic;
-            rst     : in std_logic;
+port(
+	clk : in std_logic;
+	rst : in std_logic;
 
-            rgb    : in std_logic_vector(11 downto 0);
+	rgb : in std_logic_vector(11 downto 0);
 
-            x        : out std_logic_vector(9 downto 0);
-            y        : out std_logic_vector(9 downto 0);
-            offs    : out std_logic;
+	x    : out std_logic_vector(9 downto 0);
+	y    : out std_logic_vector(9 downto 0);
+	offs : out std_logic;
 
-            r        : out std_logic_vector(3 downto 0);
-            g        : out std_logic_vector(3 downto 0);
-            b        : out std_logic_vector(3 downto 0);
-            h        : out std_logic;
-            v        : out std_logic;
-				
-				reg_in 	: in std_logic_vector(31 downto 0);
-				reg_adr_in : in std_logic_vector(5 downto 0)
-         );
-end vga;
+	r : out std_logic_vector(3 downto 0);
+	g : out std_logic_vector(3 downto 0);
+	b : out std_logic_vector(3 downto 0);
+	h : out std_logic;
+	v : out std_logic;
+
+	reg_in     : in std_logic_vector(31 downto 0);
+	reg_adr_in : in std_logic_vector(5 downto 0);
+	pc_in      : in std_logic_vector(31 downto 0);
+	ir_in      : in std_logic_vector(31 downto 0)
+);
+end entity;
 
 
 architecture behaviour of vga is
-
-
-
 
 signal x_cnt : unsigned(9 downto 0) := (others => '0');
 signal y_cnt : unsigned(9 downto 0) := (others => '0');
 
 type regbank is array (0 to 3) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
-
 
 type  regarray is array(0 to 16) of regbank;
 signal regs : regarray;

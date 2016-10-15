@@ -9,8 +9,8 @@ def parse_string(string):
 	for line in lines:
 		parse_line(line, symbols, object, line_nr)
 		line_nr += 1
-	bytes = linker.linker(symbols, object)
-	return bytes
+	return linker.linker(symbols, object)
+
 	
 def parse_line(line, symbols, object, line_nr):
 	"""parse a single line"""
