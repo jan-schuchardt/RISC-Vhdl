@@ -302,3 +302,35 @@ map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o topleve
 par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
 xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.xst" -ofn "C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c2f6afc5b188d25ec088/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf pinning.ucf -ucf ddr2_pinning.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 

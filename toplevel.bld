@@ -6,7 +6,8 @@ ise -dd _ngo -nt timestamp -uc pinning.ucf -uc ddr2_pinning.ucf -p
 xc3s700a-fg484-4 toplevel.ngc toplevel.ngd
 
 Reading NGO file
-"C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/toplevel.ngc" ...
+"C:/Users/jan/Documents/VHDL-Projects/5.7Backup2/RISC-Vhdl-1843deae29babcd5f699c
+2f6afc5b188d25ec088/toplevel.ngc" ...
 Gathering constraint information from source properties...
 Done.
 INFO:NgdBuild:889 - Pad net 'CLKB_130M' is not connected to an external port in
@@ -50,10 +51,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 171976 kilobytes
+Total memory usage is 172936 kilobytes
 
 Writing NGD file "toplevel.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "toplevel.bld"...
