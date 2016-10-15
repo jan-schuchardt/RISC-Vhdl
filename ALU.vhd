@@ -60,6 +60,7 @@ architecture Behavioral of ALU is
 		 signal ram_doutb: std_logic_vector(31 downto 0);
 		 
 	signal mult_result: std_logic_vector(63 downto 0);
+	signal shift_ar: std_logic;
 
 
 
@@ -102,6 +103,7 @@ begin
 			s_op3 <= cu_adr_in;
 			s_opc <= cu_com_in;
 			ram_wea <= "0";
+			shift_ar <= '0';
 			
 			
 			--First operand
@@ -214,46 +216,95 @@ begin
 			
 			--Shift Logical Left			
 			when "00101" =>
-			
 				
-				
-				if s_opc(6)='0' and s_opc(5)='0' then
-					acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(s_op2))));
-				elsif s_opc(6)='0' and s_opc(5)='1' then
-					acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(ram_doutb))));
-				elsif s_opc(6)='1' and s_opc(5)='0' then
-					acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(s_op2))));
-				else
-					acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(ram_doutb))));
-				end if;
+					if s_opc(6)='0' and s_opc(5)='0' then
+						if s_op2(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(s_op2(4 downto 0)))));
+						end if;
+					elsif s_opc(6)='0' and s_opc(5)='1' then
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_left(unsigned(s_op1), to_integer(unsigned(ram_doutb(4 downto 0)))));
+						end if;
+					elsif s_opc(6)='1' and s_opc(5)='0' then
+						if s_op2(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(s_op2(4 downto 0)))));
+						end if;
+					else
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_left(unsigned(ram_douta), to_integer(unsigned(ram_doutb(4 downto 0)))));
+						end if;
+					end if;
 				
 			--Shift Logical Right
 			when "00110" =>
 			
 				if s_opc(6)='0' and s_opc(5)='0' then
-					acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(s_op2))));
-				elsif s_opc(6)='0' and s_opc(5)='1' then
-					acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(ram_doutb))));
-				elsif s_opc(6)='1' and s_opc(5)='0' then
-					acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(s_op2))));
-				else
-					acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(ram_doutb))));
-				end if;
+						if s_op2(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(s_op2(4 downto 0)))));
+						end if;
+					elsif s_opc(6)='0' and s_opc(5)='1' then
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(ram_doutb(4 downto 0)))));
+						end if;
+					elsif s_opc(6)='1' and s_opc(5)='0' then
+						if s_op2(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(s_op2(4 downto 0)))));
+						end if;
+					else
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(ram_doutb(4 downto 0)))));
+						end if;
+					end if;
 				
 			--Shift arithmetic right
 			when "00111" =>
 			
 				
 				if s_opc(6)='0' and s_opc(5)='0' then
-					acc <= to_stdlogicvector(to_bitvector(s_op1) sra to_integer(unsigned(s_op2)));
-						
-				elsif s_opc(6)='0' and s_opc(5)='1' then
-					acc <= to_stdlogicvector(to_bitvector(s_op1) sra to_integer(unsigned(ram_doutb)));
-				elsif s_opc(6)='1' and s_opc(5)='0' then
-					acc <= to_stdlogicvector(to_bitvector(ram_doutb) sra to_integer(unsigned(s_op2)));
-				else
-					acc <= to_stdlogicvector(to_bitvector(ram_douta) sra to_integer(unsigned(ram_doutb)));
-				end if;
+						if s_op2(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(s_op2(4 downto 0)))));
+							shift_ar <= s_op1(31);
+						end if;
+					elsif s_opc(6)='0' and s_opc(5)='1' then
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= s_op1;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(s_op1), to_integer(unsigned(ram_doutb(4 downto 0)))));
+							shift_ar <= s_op1(31);
+						end if;
+					elsif s_opc(6)='1' and s_opc(5)='0' then
+						if s_op2(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(s_op2(4 downto 0)))));
+							shift_ar <= ram_douta(31);
+						end if;
+					else
+						if ram_doutb(4 downto 0)="00000" then
+							acc <= ram_douta;
+						else
+							acc <= std_logic_vector(shift_right(unsigned(ram_douta), to_integer(unsigned(ram_doutb(4 downto 0)))));
+							shift_ar <= ram_douta(31);
+						end if;
+					end if;
 					
 			
 				
@@ -266,13 +317,13 @@ begin
 					else
 						acc <= x"00000000";
 					end if;
-				elsif s_opc(6)='0' and s_opc(5)='0' then
+				elsif s_opc(6)='0' and s_opc(5)='1' then
 					if signed(s_op1) < signed(ram_doutb) then
 						acc <= x"00000001";
 					else
 						acc <= x"00000000";
 					end if;
-				elsif s_opc(6)='0' and s_opc(5)='0' then
+				elsif s_opc(6)='1' and s_opc(5)='0' then
 					if signed(ram_douta) < signed(s_op2) then
 						acc <= x"00000001";
 					else
@@ -294,13 +345,13 @@ begin
 					else
 						acc <= x"00000000";
 					end if;
-				elsif s_opc(6)='0' and s_opc(5)='0' then
+				elsif s_opc(6)='0' and s_opc(5)='1' then
 					if unsigned(s_op1) < unsigned(ram_doutb) then
 						acc <= x"00000001";
 					else
 						acc <= x"00000000";
 					end if;
-				elsif s_opc(6)='0' and s_opc(5)='0' then
+				elsif s_opc(6)='1' and s_opc(5)='0' then
 					if unsigned(ram_douta) < unsigned(s_op2) then
 						acc <= x"00000001";
 					else
@@ -328,12 +379,12 @@ begin
 				end if;
 			
 			when "01011"=>
-			--Multiply upper signed signed
+		--Multiply upper signed signed
 			if s_opc(6)='0' and s_opc(5)='0' then
 					mult_result <= std_logic_vector(signed(s_op1) * signed(s_op2));
 				elsif s_opc(6)='0' and s_opc(5)='1' then
 					mult_result <= std_logic_vector(signed(s_op1) * signed(ram_doutb));
-				elsif s_opc(6)='1' and s_opc(5)='0' then
+			   elsif s_opc(6)='1' and s_opc(5)='0' then
 					mult_result <= std_logic_vector(signed(ram_douta) * signed(s_op2));
 				else
 					mult_result <= std_logic_vector(signed(ram_douta) * signed(ram_doutb));
@@ -371,14 +422,21 @@ begin
 					
 					if s_op3 /= std_logic_vector(to_unsigned(0,s_op3'length)) then
 						
+						
+						if s_opc(4 downto 0) ="00111" and shift_ar='1' then
+							if s_opc(4) = '0' then
+								acc <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+							else
+								acc <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(ram_doutb(4 downto 0))) downto 0)), acc'length));
+							end if;
 						--Multiply lower
-						if s_opc="01010" then
+						elsif s_opc(4 downto 0)="01010" then
 							reg_data1(to_integer(unsigned(s_op3)))<= mult_result(31 downto 0);
 							reg_data2(to_integer(unsigned(s_op3)))<= mult_result(31 downto 0);
 							
 							debug_signal <= mult_result(31 downto 0);
 						--Multiply other
-						elsif s_opc="01011" or s_opc="01100" or s_opc="01101" then
+						elsif s_opc(4 downto 0)="01011" or s_opc="01100" or s_opc="01101" then
 							reg_data1(to_integer(unsigned(s_op3)))<= mult_result(63 downto 32);
 							reg_data2(to_integer(unsigned(s_op3)))<= mult_result(63 downto 32);
 							
