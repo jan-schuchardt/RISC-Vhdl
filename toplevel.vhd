@@ -1,69 +1,49 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    11:51:36 04/20/2016 
--- Design Name: 
--- Module Name:    toplevel - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
-library IEEE;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-library UNISIM;
-use UNISIM.Vcomponents.all;
+library unisim;
+use unisim.vcomponents.all;
 
 entity toplevel is
 port (
-    -- Clocks --
-    clk_50mhz   : in   std_logic;
-    
-    -- User Interface --
-    reset       : in    std_logic;
-    slow        : in    std_logic;
-    leds        : out   std_logic_vector(7 downto 0) ;
+	-- Clocks --
+	clk_50mhz : in std_logic;
 
-    -- DDR2 SDRAM-Port-Pins --
-    cntrl0_ddr2_a       : out std_logic_vector(12 downto 0) := (others => '0');
-    cntrl0_ddr2_ba      : out std_logic_vector(1 downto 0) := (others => '0');
-    cntrl0_ddr2_ck      : out std_logic_vector(0 downto 0) := (others => '0');
-    cntrl0_ddr2_ck_n    : out std_logic_vector(0 downto 0) := (others => '0');
-    cntrl0_ddr2_cke     : out std_logic := '0';
-    cntrl0_ddr2_cs_n    : out std_logic := '0';
-    cntrl0_ddr2_ras_n   : out std_logic := '0'; 
-    cntrl0_ddr2_cas_n   : out std_logic := '0';
-    cntrl0_ddr2_we_n    : out std_logic := '0';
-    cntrl0_ddr2_odt     : out std_logic := '0';
-    cntrl0_ddr2_dm      : out std_logic_vector(1 downto 0) := (others => '0');
-    cntrl0_ddr2_dqs_n   : inout std_logic_vector(1 downto 0) := (others => '0');
-    cntrl0_ddr2_dqs     : inout std_logic_vector(1 downto 0) := (others => '0');
-    cntrl0_ddr2_dq      : inout std_logic_vector(15 downto 0) := (others => '0');
-    cntrl0_rst_dqs_div_in   : in std_logic;
-    cntrl0_rst_dqs_div_out  : out std_logic;	
-  
-    -- VGA --
-    r           : out   std_logic_vector(3 downto 0);
-    g           : out   std_logic_vector(3 downto 0);
-    b           : out   std_logic_vector(3 downto 0);
-    hsync       : out   std_logic;
-    vsync       : out   std_logic
-  );
+	-- User Interface --
+	reset : in  std_logic;
+	slow  : in  std_logic;
+	leds  : out std_logic_vector(7 downto 0) ;
+
+	-- DDR2 SDRAM-Port-Pins --
+	cntrl0_ddr2_a          : out   std_logic_vector(12 downto 0) := (others => '0');
+	cntrl0_ddr2_ba         : out   std_logic_vector(1 downto 0) := (others => '0');
+	cntrl0_ddr2_ck         : out   std_logic_vector(0 downto 0) := (others => '0');
+	cntrl0_ddr2_ck_n       : out   std_logic_vector(0 downto 0) := (others => '0');
+	cntrl0_ddr2_cke        : out   std_logic := '0';
+	cntrl0_ddr2_cs_n       : out   std_logic := '0';
+	cntrl0_ddr2_ras_n      : out   std_logic := '0'; 
+	cntrl0_ddr2_cas_n      : out   std_logic := '0';
+	cntrl0_ddr2_we_n       : out   std_logic := '0';
+	cntrl0_ddr2_odt        : out   std_logic := '0';
+	cntrl0_ddr2_dm         : out   std_logic_vector(1 downto 0) := (others => '0');
+	cntrl0_ddr2_dqs_n      : inout std_logic_vector(1 downto 0) := (others => '0');
+	cntrl0_ddr2_dqs        : inout std_logic_vector(1 downto 0) := (others => '0');
+	cntrl0_ddr2_dq         : inout std_logic_vector(15 downto 0) := (others => '0');
+	cntrl0_rst_dqs_div_in  : in    std_logic;
+	cntrl0_rst_dqs_div_out : out   std_logic;	
+
+	-- VGA --
+	r     : out std_logic_vector(3 downto 0);
+	g     : out std_logic_vector(3 downto 0);
+	b     : out std_logic_vector(3 downto 0);
+	hsync : out std_logic;
+	vsync : out std_logic
+);
 end toplevel;
 
 
-architecture behaviour of toplevel is
-
+architecture toplevel_1 of toplevel is
 ----------------------------------------------------
 -- Components                                     --
 ----------------------------------------------------
@@ -101,7 +81,9 @@ PORT(
     h : OUT std_logic;
     v : OUT std_logic;
     reg_in: in std_logic_vector(31 downto 0);
-    reg_adr_in : in std_logic_vector(5 downto 0)
+    reg_adr_in : in std_logic_vector(5 downto 0);
+    pc_in : in std_logic_vector(31 downto 0);
+    ir_in : in std_logic_vector(31 downto 0)
     );
 END COMPONENT;
 
@@ -191,9 +173,11 @@ signal x, y : std_logic_vector(9 downto 0);
 signal offs : std_logic;
 
 -- CPU ----------------------------------------------------------
-signal debug :std_logic_vector(31 downto 0);
+signal debug     : std_logic_vector(31 downto 0);
 signal debug_adr : std_logic_vector(5 downto 0);
-signal err_out : std_logic;
+signal debug_pc  : std_logic_vector(31 downto 0);
+signal debug_ir  : std_logic_vector(31 downto 0);
+signal err_out   : std_logic;
 
 signal clk_cpu : std_logic;
 
@@ -285,7 +269,9 @@ Inst_vga: vga PORT MAP(
     h => hsync,
     v => vsync,
     reg_in => debug,
-    reg_adr_in => debug_adr
+    reg_adr_in => debug_adr,
+    pc_in => debug_pc,
+    ir_in => debug_ir
 );
 	
 Inst_vga_clk: vga_clk PORT MAP(
@@ -299,21 +285,23 @@ Inst_vga_clk: vga_clk PORT MAP(
 -----------------------------------------------------------------------------
 -- Prozessor
 -----------------------------------------------------------------------------
-
-PROZESSOR: entity work.cpu PORT MAP(
-	cpu_rst_in => reset,
-	cpu_clk_in => clk_cpu, --clk25,
-	cpu_debug_out => debug,
-	cpu_debug_adr_out => debug_adr,
+CPU: entity work.cpu PORT MAP(
+	cpu_rst_in  => reset,
+	cpu_clk_in  => clk_cpu, --clk25,
 	cpu_slow_in => slow,
 	cpu_err_out => err_out,		
 
-    mmu_data_in =>mmu_data_out,
-	 mmu_data_out =>mmu_data_in,
-	 mmu_adr_out =>mmu_addr_in,
-	 mmu_com_out =>mmu_cmd_in,
-	 mmu_work_out =>mmu_work_in,
-	 mmu_ack_in =>mmu_ack_out
+	cpu_debug_data_out => debug,
+	cpu_debug_adr_out  => debug_adr,
+	cpu_debug_pc_out   => debug_pc,
+	cpu_debug_ir_out   => debug_ir,
+
+	cpu_mmu_data_in  => mmu_data_out,
+	cpu_mmu_data_out => mmu_data_in,
+	cpu_mmu_adr_out  => mmu_addr_in,
+	cpu_mmu_com_out  => mmu_cmd_in,
+	cpu_mmu_work_out => mmu_work_in,
+	cpu_mmu_ack_in   => mmu_ack_out
 	 
 		
 ); 
@@ -391,4 +379,4 @@ PORT MAP (
     cntrl0_rst_dqs_div_in => cntrl0_rst_dqs_div_in,
     cntrl0_rst_dqs_div_out => cntrl0_rst_dqs_div_out);	 
 
-end behaviour;
+end architecture;
