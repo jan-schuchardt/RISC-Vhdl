@@ -185,6 +185,13 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="87"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="32"/>
     </file>
+    <file xil_pn:name="ipcore_dir/dividerUnsigned.ngc" xil_pn:type="FILE_NGC">
+      <association xil_pn:name="Implementation" xil_pn:seqID="117"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/dividerUnsigned.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="118"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="118"/>
+    </file>
   </files>
 
   <properties>

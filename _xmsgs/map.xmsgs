@@ -8,7 +8,7 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">31</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">33</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1/SPO,
 INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit2/SPO,
 INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit3/SPO,
@@ -33,10 +33,22 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 	<arg fmt="%s" index="2">PROZESSOR/CLOCKER/Mcount_counter_cy&lt;0&gt;</arg>
 </msg>
 
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">PROZESSOR/RECHENEINHEIT/Sh506_SW1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">PROZESSOR/RECHENEINHEIT/Sh506_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">PROZESSOR/RECHENEINHEIT/Sh507_SW1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">PROZESSOR/RECHENEINHEIT/Sh507_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">PROZESSOR/RECHENEINHEIT/Sh678_SW0</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">PROZESSOR/RECHENEINHEIT/Sh676_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">PROZESSOR/RECHENEINHEIT/Sh679_SW0</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">PROZESSOR/RECHENEINHEIT/Sh677_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;5&gt;111</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;4&gt;11_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0&lt;1&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1&lt;1&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
@@ -45,7 +57,10 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0&lt;1&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">PROZESSOR/RECHENEINHEIT/division_flank_counter_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
 <msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clk133/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.

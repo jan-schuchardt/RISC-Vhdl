@@ -38,6 +38,16 @@ end ALU;
 
 architecture Behavioral of ALU is
 
+	component dividerUnsigned is
+   port(
+    rfd : out STD_LOGIC; 
+    clk : in STD_LOGIC := 'X'; 
+    dividend : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    quotient : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    divisor : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    fractional : out STD_LOGIC_VECTOR ( 31 downto 0 ) 
+  ); end component dividerUnsigned;
+
 	
 
 	--signal reg_bank2: regs;
@@ -58,6 +68,12 @@ architecture Behavioral of ALU is
 	 signal ram_dinb: std_logic_vector(31 downto 0);
 	 signal ram_douta: std_logic_vector(31 downto 0);
 		 signal ram_doutb: std_logic_vector(31 downto 0);
+	signal alu_dividend: std_logic_vector(31 downto 0);
+	signal alu_divisor: std_logic_vector(31 downto 0);
+	signal alu_remainderU: std_logic_vector(31 downto 0);
+	signal alu_quotientU: std_logic_vector(31 downto 0);
+	signal alu_rfdU: std_logic;
+	signal division_flank_counter: std_logic_vector(1 downto 0);
 		 
 	signal mult_result: std_logic_vector(63 downto 0);
 	signal shift_ar: std_logic;
@@ -67,9 +83,23 @@ architecture Behavioral of ALU is
 	type regs is array (1 to 31) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
 		signal reg_data1: regs;
 		signal reg_data2: regs;
-
+		
+	
 	
 	begin
+	
+	divunsigned: dividerUnsigned port map(
+	 rfd => alu_rfdU,
+    clk => clk_in,
+    dividend => alu_dividend,
+    quotient => alu_quotientU, 
+    divisor => alu_divisor,
+    fractional => alu_remainderU
+	
+	);
+
+	
+	
 	
 	debug_data_out <= debug_signal;
 	debug_adr_out <= debug_adr_signal;
@@ -84,7 +114,7 @@ process (clk_in, rst_in)
 begin
 
 	if(rst_in = '1') then
-
+		division_flank_counter <= "00";
 		--reg_bank1(1) <= x"00000000";
 		--reg_bank2(1) <= x"00000000";
 		--debug_signal <= x"FFFFFFFF";
@@ -402,6 +432,15 @@ begin
 					mult_result <= std_logic_vector(signed(ram_douta) * abs(signed(ram_doutb)));
 				end if;
 				
+				
+			--Division signed
+			when "01110" | "10000" =>
+				state <= "0011";
+			
+			--Division unsigned
+			when "01111" | "10001" =>
+				state <= "0101";
+				
 			when others =>
 			
 			
@@ -409,8 +448,13 @@ begin
 			end case;
 			
 			
-			
-			state <= "0010";
+			if s_opc(4 downto 0) /= "01110"
+				and s_opc(4 downto 0) /= "10000"
+				and s_opc(4 downto 0) /= "01111"
+				and s_opc(4 downto 0) /= "10001" then
+				
+				state <= "0010";
+			end if;
 			
 			
 		end if;
@@ -425,9 +469,13 @@ begin
 						
 						if s_opc(4 downto 0) ="00111" and shift_ar='1' then
 							if s_opc(4) = '0' then
-								acc <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+								reg_data1(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+								debug_signal <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+								reg_data2(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
 							else
-								acc <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(ram_doutb(4 downto 0))) downto 0)), acc'length));
+								reg_data1(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(ram_doutb(4 downto 0))) downto 0)), acc'length));
+								debug_signal <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+								reg_data2(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
 							end if;
 						--Multiply lower
 						elsif s_opc(4 downto 0)="01010" then
@@ -459,6 +507,8 @@ begin
 						--Multiply other
 						elsif s_opc="01011" or s_opc="01100" or s_opc="01101" then
 							cu_data_out <= mult_result(63 downto 32);
+						elsif s_opc(4 downto 0) ="00111" and shift_ar='1' then
+							cu_data_out <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
 						else
 						--Other operations
 							cu_data_out <= acc;
@@ -473,6 +523,47 @@ begin
 
 		
 	end if;
+	
+	--state 4 Division Unsigned, step 1
+	if state = "0101" then
+		if alu_rfdU = '1' then
+			if s_opc(6)='0' and s_opc(5)='0' then
+						alu_dividend <= s_op1;
+						alu_divisor <= s_op2;
+					elsif s_opc(6)='0' and s_opc(5)='1' then
+						alu_dividend <= s_op1;
+						alu_divisor <= ram_doutb;
+					elsif s_opc(6)='1' and s_opc(5)='0' then
+						alu_dividend <= ram_douta;
+						alu_divisor <= s_op2;
+					else
+						alu_dividend <= ram_douta;
+						alu_divisor <= ram_doutb;
+				end if;
+				division_flank_counter <= "00";
+				state <= "0100";
+		end if;
+	end if;
+	
+	--state 5 Division Unsigned, step 2
+	if state = "0110" then
+		if division_flank_counter = "00" and alu_rfdU = '0' then
+			division_flank_counter <= "01";
+		elsif division_flank_counter = "01" and alu_rfdU = '1' then
+			division_flank_counter <= "10";
+		elsif division_flank_counter = "10" and alu_rfdU = '0' then
+			division_flank_counter <= "11";
+		elsif division_flank_counter = "11" then
+			if s_opc(4 downto 0) = "01111" then
+				acc <= alu_quotientU;
+			else
+				acc <= alu_remainderU;
+			end if;
+			
+			state <= "0010";
+		end if;
+	end if;
+		
 	
 	
 end process;
