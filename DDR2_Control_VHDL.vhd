@@ -83,8 +83,7 @@ entity DDR2_Control_VHDL is
 		data_out : out std_logic_vector(63 downto 0);
 		mwe	  : in std_logic;
 		mrd    : in std_logic;
-		valid : out std_logic;
-
+		valid : out std_logic; --@Domi: Signal to tell when the DDR2Control is in a work-ready state
 		
 		init_done : in std_logic;
 		command_register : out std_logic_vector(2 downto 0);
@@ -214,10 +213,7 @@ architecture Verhalten of DDR2_Control_VHDL is
 	signal m_rd : std_logic;	
 	signal m_we : std_logic;	
 	
-	signal i_valid : std_logic;
-	
 begin
-valid <= i_valid;
 
 synchro : process (clk_in)
 	begin
@@ -290,6 +286,7 @@ synchro : process (clk_in)
 			v_ROW <= (others => '0');	
 			v_COL <= (others => '0');
 			v_BANK <= (others => '0');
+			valid <= '0';
 --			v_array_pos	<= 0;
 		elsif falling_edge(clk_in) then
 			case STATE_M is
@@ -378,23 +375,19 @@ synchro : process (clk_in)
 --					Was pressed -
 				-----------------------------------------------------						
 				when M8_NOP =>
-					i_valid <='1';
-				
 					-- warte auf Taste fuer READ oder WRITE
 					v_write_en <= '0';
-					v_read_en <= '0';					
+					v_read_en <= '0';
 					if mwe_r = '1' and v_write_busy = '0' and auto_ref_req = '0' then
 						-- write start (only if not busy and no refresh cycle)
+						valid <= '0';	--@Domi: tell the MMU that we started a read cycle and the data is not valid yet
 						STATE_M <= M9_WRITE_INIT;
-						
-						i_valid <='0';
-						
 					elsif mrd_r = '1' and v_read_busy = '0' and auto_ref_req = '0' then
 						-- read restart (only if not busy and no refresh cycle)
+						valid <= '0'; --@Domi: tell the MMU that we started a write cycle and the data is not valid yet
 						STATE_M <= M11_READ_INIT;
-						
-						i_valid <='0';
-						
+					else --@Domi: when we do not request anything we have a state where data is valid
+						valid <= '1'; --@Domi: see above
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
 --					if risingedge_in(1)='1' and v_ROW < 255 then
@@ -477,8 +470,8 @@ synchro : process (clk_in)
 			   -----------------------------------------------------
 				-- WRITE : Write a value to the RAM
 				-----------------------------------------------------	
-				v_write_data <=  mdata_i; -- CONST_DATA;				
-				input_adress <=  "000000000" & maddr(15 downto 8) & maddr(7 downto 2) & "00"; --v_ROW & v_COL & v_BANK;
+				v_write_data <= mdata_i; -- CONST_DATA; @Domi: Edited so that we can have full 64-bit access				
+				input_adress <=  "00000" & maddr(15 downto 8) & maddr(7 downto 0) & "0000"; --v_ROW & v_COL & v_BANK;
 				command_register <= v_write_command_register;
 				burst_done <= v_write_burst_done;				
 			elsif STATE_M=M11_READ_INIT or STATE_M=M12_READING then
@@ -486,7 +479,7 @@ synchro : process (clk_in)
 				-- READ : Read a value from RAM
 				-----------------------------------------------------
 				v_write_data <= (others => '0'); 				
-				input_adress <=  "000000000" & maddr(15 downto 8) & maddr(7 downto 2) & "00";--input_adress <= v_ROW & v_COL & v_BANK;
+				input_adress <=  "00000" & maddr(15 downto 8) & maddr(7 downto 0) & "0000";--input_adress <= v_ROW & v_COL & v_BANK;
 				command_register <= v_read_command_register;
 				burst_done <= v_read_burst_done;				
 			else
@@ -512,7 +505,7 @@ synchro : process (clk_in)
 			data_out <= (others => '0');
 		elsif falling_edge(clk_in) and v_read_busy='0' then
 		
-			data_out <= v_read_data(63 downto 0);
+			data_out <= v_read_data; --@Domi: edited so we have full access to 64-bit read values
 		 
 		
 --			if debounce_in(7 downto 5)="000" then data_out <= v_read_data(7 downto 0);
