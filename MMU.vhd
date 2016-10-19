@@ -70,7 +70,7 @@ architecture Behavioral of MMU is
 	Port(
 			clk : in std_logic;
 			rst : in std_logic;
-			addr_in : in std_logic_vector(10 downto 0); --11 Bit Adress enables 2048 8-Bit cells
+			addr_in : in std_logic_vector(10 downto 0); --11 Bit Adress enables 2048 8-Bit cells, but now: 256 64-Bit cells
 			data_in : in std_logic_vector(63 downto 0);
 			data_out: out std_logic_vector(63 downto 0);
 			write_enable : in std_logic
@@ -256,7 +256,7 @@ architecture Behavioral of MMU is
 								MMU_STATE <= MMU_IDLE;
 							else
 								--Todo apply the the right size to the right position
-								data_buf(31 downto 0) <= data_in_buf; --This prophylactic solution always writes 32 bit to the lowest position (which results in data loss)
+								data_buf(31 downto 0) <= data_in_buf; --This provisional solution always writes 32 bit to the lowest position (which results in data loss)
 								MMU_STATE <= MMU_WRITE_BACK;
 							end if;
 							
@@ -304,7 +304,7 @@ architecture Behavioral of MMU is
 							MMU_STATE <= MMU_IDLE;
 							
 						when MMU_SDRAM_WRITE_FIRST =>
-							--after the first write was send, we wait for data valid as a confirmation
+							--after the first write was sent, we wait for data valid as confirmation
 							if ddr2_data_valid = '1' then
 								
 								if addr_in_buf(2) = '1' and not addr_in_buf(1 downto 0) = "00" then

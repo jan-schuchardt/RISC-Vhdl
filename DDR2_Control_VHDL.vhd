@@ -79,7 +79,7 @@ entity DDR2_Control_VHDL is
 		clk90_in : in std_logic;
 
 		maddr   : in std_logic_vector(15 downto 0);
-		mdata_i : in std_logic_vector(63 downto 0);
+		mdata_i : in std_logic_vector(63 downto 0); --@domifranz
 		data_out : out std_logic_vector(63 downto 0);
 		mwe	  : in std_logic;
 		mrd    : in std_logic;

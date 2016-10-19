@@ -78,7 +78,7 @@ architecture Behavioral of BLOCKRAM is
 		--NOP
 		"0000000000000000000000000000000000000000110001011001100000110011",
 
-others=>(others=>'0')
+	others=>(others=>'0')
 
 
 	
