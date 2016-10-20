@@ -11,20 +11,22 @@
          <ClosedNode>/toplevel - behaviour C:|Users|Florian|Documents|Uni|ERA|RISCV|RISCV_FPGA|RISCV|toplevel.vhd/INST_DDR2_RAM_CORE - DDR2_Ram_Core - arc_mem_interface_top</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CPU - CPU - Behavioral (C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd)</SelectedItem>
+         <SelectedItem>CPU - CPU - CPU_1 (C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000041f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000041f0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CPU - CPU - Behavioral (C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd)</CurrentItem>
+      <CurrentItem>CPU - CPU - CPU_1 (C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
-         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
