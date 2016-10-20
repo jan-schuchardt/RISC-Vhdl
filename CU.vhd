@@ -621,60 +621,6 @@ mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
 mmu_adr_out  <= std_logic_vector(unsigned(pc) + 1) & "00";
 mmu_com_out  <= "0" & "00";
 mmu_work_out <= '1';
-if ir(29 downto 23)="0000001" then
-case ir(12 downto 10) is
-when "000" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01010";
-alu_work_out  <= '1';
-when "001" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01011";
-alu_work_out  <= '1';
-when "010" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01100";
-alu_work_out  <= '1';
-when "011" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01101";
-alu_work_out  <= '1';
-when "100" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01110";
-alu_work_out  <= '1';
-when "101" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "01111";
-alu_work_out  <= '1';
-when "110" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "10000";
-alu_work_out  <= '1';
-when "111" =>
-alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
-alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
-alu_adr_out   <= ir(9 downto 5);
-alu_com_out   <= "1" & "1" & "10001";
-alu_work_out  <= '1';
-when others =>
- err <= "1";
-end case;
-else
 case ir(12 downto 10) is
 when "000" =>
 if ir(29 downto 23)="0000000" then
@@ -769,7 +715,6 @@ end if;
 when others =>
  err <= "1";
 end case;
-end if;
      state <= "0001";
     when "0001" =>
      alu_work_out <= '0';

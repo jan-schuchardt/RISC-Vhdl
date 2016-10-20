@@ -1,0 +1,1814 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf
+pinning.ucf -ucf ddr2_pinning.ucf
+
+Design file:              toplevel.ncd
+Physical constraint file: toplevel.pcf
+Device,package,speed:     xc3s700a,fg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/dqs_div_rst" MAXDELAY = 0.46 
+ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.452ns.
+--------------------------------------------------------------------------------
+Slack:                  0.008ns INST_DDR2_RAM_CORE/top_00/dqs_div_rst
+Report:    0.452ns delay meets   0.460ns timing constraint by 0.008ns
+From                              To                                Delay(ns)
+H4.I                              SLICE_X1Y67.G2                        0.452  
+H4.I                              SLICE_X0Y66.F3                        0.390  
+H4.I                              SLICE_X0Y67.F4                        0.432  
+H4.I                              SLICE_X0Y67.G4                        0.429  
+H4.I                              SLICE_X1Y66.F3                        0.404  
+H4.I                              SLICE_X1Y66.G2                        0.452  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>" 
+MAXDELAY = 3.007         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.394ns.
+--------------------------------------------------------------------------------
+Slack:                  1.613ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<0>
+Report:    1.394ns delay meets   3.007ns timing constraint by 1.613ns
+From                              To                                Delay(ns)
+SLICE_X3Y53.X                     SLICE_X2Y62.SR                        0.575  
+SLICE_X3Y53.X                     SLICE_X0Y58.SR                        0.827  
+SLICE_X3Y53.X                     SLICE_X0Y50.SR                        1.301  
+SLICE_X3Y53.X                     SLICE_X2Y52.SR                        0.465  
+SLICE_X3Y53.X                     SLICE_X0Y52.SR                        1.259  
+SLICE_X3Y53.X                     SLICE_X2Y50.SR                        0.533  
+SLICE_X3Y53.X                     SLICE_X2Y58.SR                        0.565  
+SLICE_X3Y53.X                     SLICE_X0Y62.SR                        1.120  
+SLICE_X3Y53.X                     SLICE_X1Y50.CE                        1.033  
+SLICE_X3Y53.X                     SLICE_X1Y49.CE                        1.394  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<0>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   2.038ns.
+--------------------------------------------------------------------------------
+Slack:                  4.352ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<0>
+Report:    2.038ns delay meets   6.390ns timing constraint by 4.352ns
+From                              To                                Delay(ns)
+SLICE_X1Y50.YQ                    SLICE_X2Y62.G1                        1.769  
+SLICE_X1Y50.YQ                    SLICE_X0Y58.G1                        1.752  
+SLICE_X1Y50.YQ                    SLICE_X0Y50.G1                        0.708  
+SLICE_X1Y50.YQ                    SLICE_X2Y52.G1                        1.152  
+SLICE_X1Y50.YQ                    SLICE_X0Y52.G1                        0.561  
+SLICE_X1Y50.YQ                    SLICE_X2Y50.G1                        0.708  
+SLICE_X1Y50.YQ                    SLICE_X2Y58.G1                        2.038  
+SLICE_X1Y50.YQ                    SLICE_X0Y62.G1                        1.761  
+SLICE_X1Y50.YQ                    SLICE_X1Y50.F4                        0.587  
+SLICE_X1Y50.YQ                    SLICE_X1Y49.F4                        0.524  
+SLICE_X1Y50.YQ                    SLICE_X1Y49.G4                        0.526  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<1>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.750ns.
+--------------------------------------------------------------------------------
+Slack:                  4.640ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<1>
+Report:    1.750ns delay meets   6.390ns timing constraint by 4.640ns
+From                              To                                Delay(ns)
+SLICE_X1Y50.XQ                    SLICE_X2Y62.G2                        1.211  
+SLICE_X1Y50.XQ                    SLICE_X0Y58.G2                        1.745  
+SLICE_X1Y50.XQ                    SLICE_X0Y50.G2                        0.707  
+SLICE_X1Y50.XQ                    SLICE_X2Y52.G2                        0.708  
+SLICE_X1Y50.XQ                    SLICE_X0Y52.G2                        0.708  
+SLICE_X1Y50.XQ                    SLICE_X2Y50.G2                        0.643  
+SLICE_X1Y50.XQ                    SLICE_X2Y58.G2                        1.750  
+SLICE_X1Y50.XQ                    SLICE_X0Y62.G2                        1.206  
+SLICE_X1Y50.XQ                    SLICE_X1Y50.F3                        0.629  
+SLICE_X1Y50.XQ                    SLICE_X1Y50.G3                        0.661  
+SLICE_X1Y50.XQ                    SLICE_X1Y49.F1                        0.715  
+SLICE_X1Y50.XQ                    SLICE_X1Y49.G1                        0.728  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<2>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   2.260ns.
+--------------------------------------------------------------------------------
+Slack:                  4.130ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<2>
+Report:    2.260ns delay meets   6.390ns timing constraint by 4.130ns
+From                              To                                Delay(ns)
+SLICE_X1Y49.YQ                    SLICE_X2Y62.G3                        1.722  
+SLICE_X1Y49.YQ                    SLICE_X0Y58.G3                        1.441  
+SLICE_X1Y49.YQ                    SLICE_X0Y50.G3                        0.538  
+SLICE_X1Y49.YQ                    SLICE_X2Y52.G3                        2.260  
+SLICE_X1Y49.YQ                    SLICE_X0Y52.G3                        1.710  
+SLICE_X1Y49.YQ                    SLICE_X2Y50.G3                        2.260  
+SLICE_X1Y49.YQ                    SLICE_X2Y58.G3                        1.718  
+SLICE_X1Y49.YQ                    SLICE_X0Y62.G3                        1.450  
+SLICE_X1Y49.YQ                    SLICE_X1Y50.F2                        0.617  
+SLICE_X1Y49.YQ                    SLICE_X1Y50.G4                        0.449  
+SLICE_X1Y49.YQ                    SLICE_X1Y49.F2                        1.366  
+SLICE_X1Y49.YQ                    SLICE_X1Y49.G2                        1.348  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<3>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.560ns.
+--------------------------------------------------------------------------------
+Slack:                  4.830ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<3>
+Report:    1.560ns delay meets   6.390ns timing constraint by 4.830ns
+From                              To                                Delay(ns)
+SLICE_X1Y49.XQ                    SLICE_X2Y62.G4                        1.291  
+SLICE_X1Y49.XQ                    SLICE_X0Y58.G4                        1.284  
+SLICE_X1Y49.XQ                    SLICE_X0Y50.G4                        0.667  
+SLICE_X1Y49.XQ                    SLICE_X2Y52.G4                        0.845  
+SLICE_X1Y49.XQ                    SLICE_X0Y52.G4                        0.940  
+SLICE_X1Y49.XQ                    SLICE_X2Y50.G4                        0.576  
+SLICE_X1Y49.XQ                    SLICE_X2Y58.G4                        1.560  
+SLICE_X1Y49.XQ                    SLICE_X0Y62.G4                        1.472  
+SLICE_X1Y49.XQ                    SLICE_X1Y50.F1                        0.734  
+SLICE_X1Y49.XQ                    SLICE_X1Y50.G1                        0.747  
+SLICE_X1Y49.XQ                    SLICE_X1Y49.F3                        0.493  
+SLICE_X1Y49.XQ                    SLICE_X1Y49.G3                        0.525  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<0>" 
+MAXDELAY = 3.007         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.728ns.
+--------------------------------------------------------------------------------
+Slack:                  1.279ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<0>
+Report:    1.728ns delay meets   3.007ns timing constraint by 1.279ns
+From                              To                                Delay(ns)
+SLICE_X3Y52.X                     SLICE_X2Y63.SR                        1.329  
+SLICE_X3Y52.X                     SLICE_X0Y59.SR                        1.728  
+SLICE_X3Y52.X                     SLICE_X0Y51.SR                        0.840  
+SLICE_X3Y52.X                     SLICE_X2Y53.SR                        1.445  
+SLICE_X3Y52.X                     SLICE_X0Y53.SR                        1.420  
+SLICE_X3Y52.X                     SLICE_X2Y51.SR                        1.167  
+SLICE_X3Y52.X                     SLICE_X2Y59.SR                        0.861  
+SLICE_X3Y52.X                     SLICE_X0Y63.SR                        1.325  
+SLICE_X3Y52.X                     SLICE_X3Y50.CE                        0.896  
+SLICE_X3Y52.X                     SLICE_X3Y49.CE                        0.858  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<0>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.890ns.
+--------------------------------------------------------------------------------
+Slack:                  4.500ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<0>
+Report:    1.890ns delay meets   6.390ns timing constraint by 4.500ns
+From                              To                                Delay(ns)
+SLICE_X3Y49.YQ                    SLICE_X2Y63.G1                        1.275  
+SLICE_X3Y49.YQ                    SLICE_X0Y59.G1                        1.890  
+SLICE_X3Y49.YQ                    SLICE_X0Y51.G1                        1.440  
+SLICE_X3Y49.YQ                    SLICE_X2Y53.G1                        0.895  
+SLICE_X3Y49.YQ                    SLICE_X0Y53.G1                        1.172  
+SLICE_X3Y49.YQ                    SLICE_X2Y51.G1                        0.727  
+SLICE_X3Y49.YQ                    SLICE_X2Y59.G1                        1.885  
+SLICE_X3Y49.YQ                    SLICE_X0Y63.G1                        1.289  
+SLICE_X3Y49.YQ                    SLICE_X3Y50.F4                        0.606  
+SLICE_X3Y49.YQ                    SLICE_X3Y50.G4                        0.608  
+SLICE_X3Y49.YQ                    SLICE_X3Y49.F1                        0.736  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<1>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.683ns.
+--------------------------------------------------------------------------------
+Slack:                  4.707ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<1>
+Report:    1.683ns delay meets   6.390ns timing constraint by 4.707ns
+From                              To                                Delay(ns)
+SLICE_X3Y49.XQ                    SLICE_X2Y63.G2                        1.154  
+SLICE_X3Y49.XQ                    SLICE_X0Y59.G2                        1.149  
+SLICE_X3Y49.XQ                    SLICE_X0Y51.G2                        0.524  
+SLICE_X3Y49.XQ                    SLICE_X2Y53.G2                        1.046  
+SLICE_X3Y49.XQ                    SLICE_X0Y53.G2                        0.793  
+SLICE_X3Y49.XQ                    SLICE_X2Y51.G2                        1.433  
+SLICE_X3Y49.XQ                    SLICE_X2Y59.G2                        1.683  
+SLICE_X3Y49.XQ                    SLICE_X0Y63.G2                        1.147  
+SLICE_X3Y49.XQ                    SLICE_X3Y50.F3                        1.355  
+SLICE_X3Y49.XQ                    SLICE_X3Y50.G3                        1.387  
+SLICE_X3Y49.XQ                    SLICE_X3Y49.F4                        0.475  
+SLICE_X3Y49.XQ                    SLICE_X3Y49.G4                        0.477  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<2>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.652ns.
+--------------------------------------------------------------------------------
+Slack:                  4.738ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<2>
+Report:    1.652ns delay meets   6.390ns timing constraint by 4.738ns
+From                              To                                Delay(ns)
+SLICE_X3Y50.YQ                    SLICE_X2Y63.G3                        1.652  
+SLICE_X3Y50.YQ                    SLICE_X0Y59.G3                        1.361  
+SLICE_X3Y50.YQ                    SLICE_X0Y51.G3                        0.726  
+SLICE_X3Y50.YQ                    SLICE_X2Y53.G3                        0.828  
+SLICE_X3Y50.YQ                    SLICE_X0Y53.G3                        1.283  
+SLICE_X3Y50.YQ                    SLICE_X2Y51.G3                        0.726  
+SLICE_X3Y50.YQ                    SLICE_X2Y59.G3                        1.634  
+SLICE_X3Y50.YQ                    SLICE_X0Y63.G3                        1.631  
+SLICE_X3Y50.YQ                    SLICE_X3Y50.F2                        0.805  
+SLICE_X3Y50.YQ                    SLICE_X3Y50.G2                        0.787  
+SLICE_X3Y50.YQ                    SLICE_X3Y49.F2                        0.716  
+SLICE_X3Y50.YQ                    SLICE_X3Y49.G2                        0.698  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<3>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.712ns.
+--------------------------------------------------------------------------------
+Slack:                  4.678ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<3>
+Report:    1.712ns delay meets   6.390ns timing constraint by 4.678ns
+From                              To                                Delay(ns)
+SLICE_X3Y50.XQ                    SLICE_X2Y63.G4                        1.712  
+SLICE_X3Y50.XQ                    SLICE_X0Y59.G4                        1.430  
+SLICE_X3Y50.XQ                    SLICE_X0Y51.G4                        0.555  
+SLICE_X3Y50.XQ                    SLICE_X2Y53.G4                        0.619  
+SLICE_X3Y50.XQ                    SLICE_X0Y53.G4                        0.619  
+SLICE_X3Y50.XQ                    SLICE_X2Y51.G4                        0.795  
+SLICE_X3Y50.XQ                    SLICE_X2Y59.G4                        1.700  
+SLICE_X3Y50.XQ                    SLICE_X0Y63.G4                        1.254  
+SLICE_X3Y50.XQ                    SLICE_X3Y50.F1                        0.862  
+SLICE_X3Y50.XQ                    SLICE_X3Y50.G1                        0.875  
+SLICE_X3Y50.XQ                    SLICE_X3Y49.F3                        0.516  
+SLICE_X3Y50.XQ                    SLICE_X3Y49.G3                        0.548  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>" 
+MAXDELAY = 3.007         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.609ns.
+--------------------------------------------------------------------------------
+Slack:                  1.398ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en<1>
+Report:    1.609ns delay meets   3.007ns timing constraint by 1.398ns
+From                              To                                Delay(ns)
+SLICE_X3Y72.X                     SLICE_X0Y70.SR                        0.651  
+SLICE_X3Y72.X                     SLICE_X2Y78.SR                        0.782  
+SLICE_X3Y72.X                     SLICE_X2Y68.SR                        0.781  
+SLICE_X3Y72.X                     SLICE_X2Y76.SR                        0.777  
+SLICE_X3Y72.X                     SLICE_X0Y76.SR                        1.609  
+SLICE_X3Y72.X                     SLICE_X2Y70.SR                        0.775  
+SLICE_X3Y72.X                     SLICE_X0Y68.SR                        0.919  
+SLICE_X3Y72.X                     SLICE_X0Y78.SR                        1.044  
+SLICE_X3Y72.X                     SLICE_X1Y70.CE                        0.666  
+SLICE_X3Y72.X                     SLICE_X1Y69.CE                        1.200  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<4>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.816ns.
+--------------------------------------------------------------------------------
+Slack:                  4.574ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<4>
+Report:    1.816ns delay meets   6.390ns timing constraint by 4.574ns
+From                              To                                Delay(ns)
+SLICE_X1Y69.YQ                    SLICE_X0Y70.G1                        0.604  
+SLICE_X1Y69.YQ                    SLICE_X2Y78.G1                        1.539  
+SLICE_X1Y69.YQ                    SLICE_X2Y68.G1                        0.752  
+SLICE_X1Y69.YQ                    SLICE_X2Y76.G1                        1.414  
+SLICE_X1Y69.YQ                    SLICE_X0Y76.G1                        1.816  
+SLICE_X1Y69.YQ                    SLICE_X2Y70.G1                        1.145  
+SLICE_X1Y69.YQ                    SLICE_X0Y68.G1                        0.752  
+SLICE_X1Y69.YQ                    SLICE_X0Y78.G1                        1.547  
+SLICE_X1Y69.YQ                    SLICE_X1Y70.F3                        0.607  
+SLICE_X1Y69.YQ                    SLICE_X1Y70.G3                        0.639  
+SLICE_X1Y69.YQ                    SLICE_X1Y69.F4                        0.631  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<5>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.392ns.
+--------------------------------------------------------------------------------
+Slack:                  4.998ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<5>
+Report:    1.392ns delay meets   6.390ns timing constraint by 4.998ns
+From                              To                                Delay(ns)
+SLICE_X1Y69.XQ                    SLICE_X0Y70.G2                        0.763  
+SLICE_X1Y69.XQ                    SLICE_X2Y78.G2                        1.123  
+SLICE_X1Y69.XQ                    SLICE_X2Y68.G2                        0.960  
+SLICE_X1Y69.XQ                    SLICE_X2Y76.G2                        1.297  
+SLICE_X1Y69.XQ                    SLICE_X0Y76.G2                        1.123  
+SLICE_X1Y69.XQ                    SLICE_X2Y70.G2                        1.035  
+SLICE_X1Y69.XQ                    SLICE_X0Y68.G2                        0.960  
+SLICE_X1Y69.XQ                    SLICE_X0Y78.G2                        1.392  
+SLICE_X1Y69.XQ                    SLICE_X1Y70.F1                        0.640  
+SLICE_X1Y69.XQ                    SLICE_X1Y70.G1                        0.653  
+SLICE_X1Y69.XQ                    SLICE_X1Y69.F1                        0.723  
+SLICE_X1Y69.XQ                    SLICE_X1Y69.G1                        0.736  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<6>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.689ns.
+--------------------------------------------------------------------------------
+Slack:                  4.701ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<6>
+Report:    1.689ns delay meets   6.390ns timing constraint by 4.701ns
+From                              To                                Delay(ns)
+SLICE_X1Y70.YQ                    SLICE_X0Y70.G3                        0.542  
+SLICE_X1Y70.YQ                    SLICE_X2Y78.G3                        1.155  
+SLICE_X1Y70.YQ                    SLICE_X2Y68.G3                        0.764  
+SLICE_X1Y70.YQ                    SLICE_X2Y76.G3                        1.144  
+SLICE_X1Y70.YQ                    SLICE_X0Y76.G3                        1.151  
+SLICE_X1Y70.YQ                    SLICE_X2Y70.G3                        0.537  
+SLICE_X1Y70.YQ                    SLICE_X0Y68.G3                        1.450  
+SLICE_X1Y70.YQ                    SLICE_X0Y78.G3                        1.689  
+SLICE_X1Y70.YQ                    SLICE_X1Y70.F2                        0.621  
+SLICE_X1Y70.YQ                    SLICE_X1Y70.G2                        0.603  
+SLICE_X1Y70.YQ                    SLICE_X1Y69.F2                        1.529  
+SLICE_X1Y70.YQ                    SLICE_X1Y69.G2                        1.511  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<7>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.973ns.
+--------------------------------------------------------------------------------
+Slack:                  4.417ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr<7>
+Report:    1.973ns delay meets   6.390ns timing constraint by 4.417ns
+From                              To                                Delay(ns)
+SLICE_X1Y70.XQ                    SLICE_X0Y70.G4                        1.705  
+SLICE_X1Y70.XQ                    SLICE_X2Y78.G4                        1.705  
+SLICE_X1Y70.XQ                    SLICE_X2Y68.G4                        0.819  
+SLICE_X1Y70.XQ                    SLICE_X2Y76.G4                        1.973  
+SLICE_X1Y70.XQ                    SLICE_X0Y76.G4                        1.435  
+SLICE_X1Y70.XQ                    SLICE_X2Y70.G4                        1.088  
+SLICE_X1Y70.XQ                    SLICE_X0Y68.G4                        0.494  
+SLICE_X1Y70.XQ                    SLICE_X0Y78.G4                        1.435  
+SLICE_X1Y70.XQ                    SLICE_X1Y70.F4                        0.519  
+SLICE_X1Y70.XQ                    SLICE_X1Y70.G4                        0.521  
+SLICE_X1Y70.XQ                    SLICE_X1Y69.F3                        0.479  
+SLICE_X1Y70.XQ                    SLICE_X1Y69.G4                        0.458  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<1>" 
+MAXDELAY = 3.007         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.461ns.
+--------------------------------------------------------------------------------
+Slack:                  1.546ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en<1>
+Report:    1.461ns delay meets   3.007ns timing constraint by 1.546ns
+From                              To                                Delay(ns)
+SLICE_X0Y73.X                     SLICE_X0Y71.SR                        0.911  
+SLICE_X0Y73.X                     SLICE_X2Y79.SR                        0.751  
+SLICE_X0Y73.X                     SLICE_X2Y69.SR                        0.884  
+SLICE_X0Y73.X                     SLICE_X2Y77.SR                        0.746  
+SLICE_X0Y73.X                     SLICE_X0Y77.SR                        0.726  
+SLICE_X0Y73.X                     SLICE_X2Y71.SR                        0.917  
+SLICE_X0Y73.X                     SLICE_X0Y69.SR                        0.878  
+SLICE_X0Y73.X                     SLICE_X0Y79.SR                        0.730  
+SLICE_X0Y73.X                     SLICE_X3Y70.CE                        1.461  
+SLICE_X0Y73.X                     SLICE_X3Y69.CE                        1.428  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<4>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.751ns.
+--------------------------------------------------------------------------------
+Slack:                  4.639ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<4>
+Report:    1.751ns delay meets   6.390ns timing constraint by 4.639ns
+From                              To                                Delay(ns)
+SLICE_X3Y69.YQ                    SLICE_X0Y71.G1                        1.751  
+SLICE_X3Y69.YQ                    SLICE_X2Y79.G1                        1.148  
+SLICE_X3Y69.YQ                    SLICE_X2Y69.G1                        0.663  
+SLICE_X3Y69.YQ                    SLICE_X2Y77.G1                        1.148  
+SLICE_X3Y69.YQ                    SLICE_X0Y77.G1                        1.209  
+SLICE_X3Y69.YQ                    SLICE_X2Y71.G1                        0.659  
+SLICE_X3Y69.YQ                    SLICE_X0Y69.G1                        1.751  
+SLICE_X3Y69.YQ                    SLICE_X0Y79.G1                        1.209  
+SLICE_X3Y69.YQ                    SLICE_X3Y70.F4                        0.538  
+SLICE_X3Y69.YQ                    SLICE_X3Y70.G4                        0.540  
+SLICE_X3Y69.YQ                    SLICE_X3Y69.F4                        0.542  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<5>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.318ns.
+--------------------------------------------------------------------------------
+Slack:                  5.072ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<5>
+Report:    1.318ns delay meets   6.390ns timing constraint by 5.072ns
+From                              To                                Delay(ns)
+SLICE_X3Y69.XQ                    SLICE_X0Y71.G2                        0.697  
+SLICE_X3Y69.XQ                    SLICE_X2Y79.G2                        1.228  
+SLICE_X3Y69.XQ                    SLICE_X2Y69.G2                        0.701  
+SLICE_X3Y69.XQ                    SLICE_X2Y77.G2                        1.228  
+SLICE_X3Y69.XQ                    SLICE_X0Y77.G2                        1.318  
+SLICE_X3Y69.XQ                    SLICE_X2Y71.G2                        0.708  
+SLICE_X3Y69.XQ                    SLICE_X0Y69.G2                        0.701  
+SLICE_X3Y69.XQ                    SLICE_X0Y79.G2                        1.300  
+SLICE_X3Y69.XQ                    SLICE_X3Y70.F2                        0.694  
+SLICE_X3Y69.XQ                    SLICE_X3Y70.G2                        0.676  
+SLICE_X3Y69.XQ                    SLICE_X3Y69.F1                        0.796  
+SLICE_X3Y69.XQ                    SLICE_X3Y69.G1                        0.809  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<6>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.431ns.
+--------------------------------------------------------------------------------
+Slack:                  4.959ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<6>
+Report:    1.431ns delay meets   6.390ns timing constraint by 4.959ns
+From                              To                                Delay(ns)
+SLICE_X3Y70.YQ                    SLICE_X0Y71.G3                        0.618  
+SLICE_X3Y70.YQ                    SLICE_X2Y79.G3                        1.431  
+SLICE_X3Y70.YQ                    SLICE_X2Y69.G3                        0.699  
+SLICE_X3Y70.YQ                    SLICE_X2Y77.G3                        1.233  
+SLICE_X3Y70.YQ                    SLICE_X0Y77.G3                        1.238  
+SLICE_X3Y70.YQ                    SLICE_X2Y71.G3                        0.618  
+SLICE_X3Y70.YQ                    SLICE_X0Y69.G3                        0.618  
+SLICE_X3Y70.YQ                    SLICE_X0Y79.G3                        1.159  
+SLICE_X3Y70.YQ                    SLICE_X3Y70.F3                        0.617  
+SLICE_X3Y70.YQ                    SLICE_X3Y70.G3                        0.649  
+SLICE_X3Y70.YQ                    SLICE_X3Y69.F2                        0.778  
+SLICE_X3Y70.YQ                    SLICE_X3Y69.G2                        0.760  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<7>" 
+MAXDELAY = 6.39         ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.346ns.
+--------------------------------------------------------------------------------
+Slack:                  5.044ns INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr<7>
+Report:    1.346ns delay meets   6.390ns timing constraint by 5.044ns
+From                              To                                Delay(ns)
+SLICE_X3Y70.XQ                    SLICE_X0Y71.G4                        0.963  
+SLICE_X3Y70.XQ                    SLICE_X2Y79.G4                        1.160  
+SLICE_X3Y70.XQ                    SLICE_X2Y69.G4                        0.500  
+SLICE_X3Y70.XQ                    SLICE_X2Y77.G4                        0.788  
+SLICE_X3Y70.XQ                    SLICE_X0Y77.G4                        1.079  
+SLICE_X3Y70.XQ                    SLICE_X2Y71.G4                        0.691  
+SLICE_X3Y70.XQ                    SLICE_X0Y69.G4                        1.235  
+SLICE_X3Y70.XQ                    SLICE_X0Y79.G4                        1.346  
+SLICE_X3Y70.XQ                    SLICE_X3Y70.F1                        0.758  
+SLICE_X3Y70.XQ                    SLICE_X3Y70.G1                        0.771  
+SLICE_X3Y70.XQ                    SLICE_X3Y69.F3                        0.479  
+SLICE_X3Y70.XQ                    SLICE_X3Y69.G3                        0.511  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col0/delay5"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.155ns.
+--------------------------------------------------------------------------------
+Slack:                  0.035ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5
+Report:    0.155ns delay meets   0.190ns timing constraint by 0.035ns
+From                              To                                Delay(ns)
+SLICE_X3Y55.Y                     SLICE_X2Y55.F1                        0.155  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<0>" MAXDELAY 
+= 0.58 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.524ns.
+--------------------------------------------------------------------------------
+Slack:                  0.056ns INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<0>
+Report:    0.524ns delay meets   0.580ns timing constraint by 0.056ns
+From                              To                                Delay(ns)
+K3.I                              SLICE_X3Y54.G2                        0.524  
+K3.I                              SLICE_X1Y54.G3                        0.510  
+K3.I                              SLICE_X3Y55.G2                        0.524  
+K3.I                              SLICE_X1Y55.G3                        0.510  
+K3.I                              SLICE_X0Y54.F3                        0.448  
+K3.I                              SLICE_X0Y54.G3                        0.448  
+K3.I                              SLICE_X0Y55.F4                        0.458  
+K3.I                              SLICE_X0Y55.G3                        0.449  
+K3.I                              SLICE_X2Y54.F4                        0.427  
+K3.I                              SLICE_X2Y54.G3                        0.463  
+K3.I                              SLICE_X2Y55.F4                        0.427  
+K3.I                              SLICE_X2Y55.G3                        0.463  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col0/delay3"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.121ns.
+--------------------------------------------------------------------------------
+Slack:                  0.069ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3
+Report:    0.121ns delay meets   0.190ns timing constraint by 0.069ns
+From                              To                                Delay(ns)
+SLICE_X3Y54.Y                     SLICE_X2Y55.G2                        0.121  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col0/delay4"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 1 failing net detected.
+ 1 timing error detected.
+ Maximum net delay is   0.363ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.173ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay4
+Error:      0.363ns delay exceeds   0.190ns timing constraint by 0.173ns
+From                              To                                Delay(ns)
+SLICE_X2Y55.Y                     SLICE_X3Y55.G4                        0.363  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col0/delay1"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.165ns.
+--------------------------------------------------------------------------------
+Slack:                  0.025ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1
+Report:    0.165ns delay meets   0.190ns timing constraint by 0.025ns
+From                              To                                Delay(ns)
+SLICE_X2Y54.X                     SLICE_X2Y54.G1                        0.165  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col0/delay2"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.186ns.
+--------------------------------------------------------------------------------
+Slack:                  0.004ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay2
+Report:    0.186ns delay meets   0.190ns timing constraint by 0.004ns
+From                              To                                Delay(ns)
+SLICE_X2Y54.Y                     SLICE_X3Y54.G1                        0.186  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col1/delay5"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.155ns.
+--------------------------------------------------------------------------------
+Slack:                  0.035ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5
+Report:    0.155ns delay meets   0.190ns timing constraint by 0.035ns
+From                              To                                Delay(ns)
+SLICE_X1Y55.Y                     SLICE_X0Y55.F1                        0.155  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col1/delay3"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.121ns.
+--------------------------------------------------------------------------------
+Slack:                  0.069ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3
+Report:    0.121ns delay meets   0.190ns timing constraint by 0.069ns
+From                              To                                Delay(ns)
+SLICE_X1Y54.Y                     SLICE_X0Y55.G2                        0.121  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col1/delay4"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.105ns.
+--------------------------------------------------------------------------------
+Slack:                  0.085ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay4
+Report:    0.105ns delay meets   0.190ns timing constraint by 0.085ns
+From                              To                                Delay(ns)
+SLICE_X0Y55.Y                     SLICE_X1Y55.G2                        0.105  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col1/delay1"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.165ns.
+--------------------------------------------------------------------------------
+Slack:                  0.025ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1
+Report:    0.165ns delay meets   0.190ns timing constraint by 0.025ns
+From                              To                                Delay(ns)
+SLICE_X0Y54.X                     SLICE_X0Y54.G1                        0.165  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[0].dqs_delay_col1/delay2"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.186ns.
+--------------------------------------------------------------------------------
+Slack:                  0.004ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay2
+Report:    0.186ns delay meets   0.190ns timing constraint by 0.004ns
+From                              To                                Delay(ns)
+SLICE_X0Y54.Y                     SLICE_X1Y54.G1                        0.186  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col0/delay5"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.155ns.
+--------------------------------------------------------------------------------
+Slack:                  0.035ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay5
+Report:    0.155ns delay meets   0.190ns timing constraint by 0.035ns
+From                              To                                Delay(ns)
+SLICE_X3Y75.Y                     SLICE_X2Y75.F1                        0.155  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<1>" MAXDELAY 
+= 0.58 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.557ns.
+--------------------------------------------------------------------------------
+Slack:                  0.023ns INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in<1>
+Report:    0.557ns delay meets   0.580ns timing constraint by 0.023ns
+From                              To                                Delay(ns)
+K6.I                              SLICE_X3Y75.G2                        0.512  
+K6.I                              SLICE_X1Y75.G1                        0.557  
+K6.I                              SLICE_X3Y74.G2                        0.512  
+K6.I                              SLICE_X1Y74.G3                        0.450  
+K6.I                              SLICE_X0Y74.F3                        0.437  
+K6.I                              SLICE_X0Y74.G4                        0.477  
+K6.I                              SLICE_X0Y75.F3                        0.437  
+K6.I                              SLICE_X0Y75.G3                        0.436  
+K6.I                              SLICE_X2Y74.F4                        0.439  
+K6.I                              SLICE_X2Y74.G3                        0.451  
+K6.I                              SLICE_X2Y75.F4                        0.439  
+K6.I                              SLICE_X2Y75.G3                        0.451  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col0/delay3"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.121ns.
+--------------------------------------------------------------------------------
+Slack:                  0.069ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3
+Report:    0.121ns delay meets   0.190ns timing constraint by 0.069ns
+From                              To                                Delay(ns)
+SLICE_X3Y74.Y                     SLICE_X2Y75.G2                        0.121  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col0/delay4"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 1 failing net detected.
+ 1 timing error detected.
+ Maximum net delay is   0.341ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.151ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay4
+Error:      0.341ns delay exceeds   0.190ns timing constraint by 0.151ns
+From                              To                                Delay(ns)
+SLICE_X2Y75.Y                     SLICE_X3Y75.G4                        0.341  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col0/delay1"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.165ns.
+--------------------------------------------------------------------------------
+Slack:                  0.025ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1
+Report:    0.165ns delay meets   0.190ns timing constraint by 0.025ns
+From                              To                                Delay(ns)
+SLICE_X2Y74.X                     SLICE_X2Y74.G1                        0.165  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col0/delay2"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.186ns.
+--------------------------------------------------------------------------------
+Slack:                  0.004ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay2
+Report:    0.186ns delay meets   0.190ns timing constraint by 0.004ns
+From                              To                                Delay(ns)
+SLICE_X2Y74.Y                     SLICE_X3Y74.G1                        0.186  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col1/delay5"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.155ns.
+--------------------------------------------------------------------------------
+Slack:                  0.035ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5
+Report:    0.155ns delay meets   0.190ns timing constraint by 0.035ns
+From                              To                                Delay(ns)
+SLICE_X1Y75.Y                     SLICE_X0Y75.F1                        0.155  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col1/delay3"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.121ns.
+--------------------------------------------------------------------------------
+Slack:                  0.069ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3
+Report:    0.121ns delay meets   0.190ns timing constraint by 0.069ns
+From                              To                                Delay(ns)
+SLICE_X1Y74.Y                     SLICE_X0Y75.G2                        0.121  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col1/delay4"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.105ns.
+--------------------------------------------------------------------------------
+Slack:                  0.085ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay4
+Report:    0.105ns delay meets   0.190ns timing constraint by 0.085ns
+From                              To                                Delay(ns)
+SLICE_X0Y75.Y                     SLICE_X1Y75.G2                        0.105  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col1/delay1"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.165ns.
+--------------------------------------------------------------------------------
+Slack:                  0.025ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1
+Report:    0.165ns delay meets   0.190ns timing constraint by 0.025ns
+From                              To                                Delay(ns)
+SLICE_X0Y74.X                     SLICE_X0Y74.G1                        0.165  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/
+gen_delay[1].dqs_delay_col1/delay2"         MAXDELAY = 0.19 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.186ns.
+--------------------------------------------------------------------------------
+Slack:                  0.004ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay2
+Report:    0.186ns delay meets   0.190ns timing constraint by 0.004ns
+From                              To                                Delay(ns)
+SLICE_X0Y74.Y                     SLICE_X1Y74.G1                        0.186  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/
+delay5"         MAXDELAY = 0.2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.074ns.
+--------------------------------------------------------------------------------
+Slack:                  0.126ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay5
+Report:    0.074ns delay meets   0.200ns timing constraint by 0.126ns
+From                              To                                Delay(ns)
+SLICE_X1Y66.Y                     SLICE_X0Y67.F2                        0.074  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div"        
+ MAXDELAY = 3.007 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.643ns.
+--------------------------------------------------------------------------------
+Slack:                  1.364ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div
+Report:    1.643ns delay meets   3.007ns timing constraint by 1.364ns
+From                              To                                Delay(ns)
+SLICE_X0Y67.X                     SLICE_X3Y72.F1                        1.238  
+SLICE_X0Y67.X                     SLICE_X3Y72.G1                        1.251  
+SLICE_X0Y67.X                     SLICE_X3Y53.F1                        1.153  
+SLICE_X0Y67.X                     SLICE_X3Y53.G1                        1.166  
+SLICE_X0Y67.X                     SLICE_X1Y72.BY                        0.722  
+SLICE_X0Y67.X                     SLICE_X1Y53.BY                        1.643  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/
+delay3"         MAXDELAY = 0.2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.155ns.
+--------------------------------------------------------------------------------
+Slack:                  0.045ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3
+Report:    0.155ns delay meets   0.200ns timing constraint by 0.045ns
+From                              To                                Delay(ns)
+SLICE_X1Y67.Y                     SLICE_X0Y66.F1                        0.155  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/
+delay4"         MAXDELAY = 0.2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.046ns.
+--------------------------------------------------------------------------------
+Slack:                  0.154ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4
+Report:    0.046ns delay meets   0.200ns timing constraint by 0.154ns
+From                              To                                Delay(ns)
+SLICE_X0Y66.X                     SLICE_X1Y66.G4                        0.046  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/
+delay1"         MAXDELAY = 0.2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.044ns.
+--------------------------------------------------------------------------------
+Slack:                  0.156ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay1
+Report:    0.044ns delay meets   0.200ns timing constraint by 0.156ns
+From                              To                                Delay(ns)
+SLICE_X1Y66.X                     SLICE_X0Y67.G3                        0.044  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/
+delay2"         MAXDELAY = 0.2 ns;
+
+ 1 net analyzed, 1 failing net detected.
+ 1 timing error detected.
+ Maximum net delay is   0.307ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.107ns INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay2
+Error:      0.307ns delay exceeds   0.200ns timing constraint by 0.107ns
+From                              To                                Delay(ns)
+SLICE_X0Y67.Y                     SLICE_X1Y67.G4                        0.307  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<7>" MAXDELAY      
+   = 0.4 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.398ns.
+--------------------------------------------------------------------------------
+Slack:                  0.002ns INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<7>
+Report:    0.398ns delay meets   0.400ns timing constraint by 0.002ns
+From                              To                                Delay(ns)
+SLICE_X29Y23.X                    SLICE_X28Y20.G2                       0.398  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<15>"         
+MAXDELAY = 0.4 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.398ns.
+--------------------------------------------------------------------------------
+Slack:                  0.002ns INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<15>
+Report:    0.398ns delay meets   0.400ns timing constraint by 0.002ns
+From                              To                                Delay(ns)
+SLICE_X29Y21.X                    SLICE_X28Y18.G2                       0.398  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<23>"         
+MAXDELAY = 0.4 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.398ns.
+--------------------------------------------------------------------------------
+Slack:                  0.002ns INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/tap<23>
+Report:    0.398ns delay meets   0.400ns timing constraint by 0.002ns
+From                              To                                Delay(ns)
+SLICE_X29Y19.X                    SLICE_X28Y16.G2                       0.398  
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5187 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.800ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_SYS_CLK = PERIOD TIMEGRP "SYS_CLK" 7.5187 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2.718ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 2.400ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+Slack: 2.718ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 7.518ns
+  High pulse: 3.759ns
+  High pulse limit: 2.400ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+Slack: 3.519ns (period - min period limit)
+  Period: 7.518ns
+  Min period limit: 3.999ns (250.063MHz) (Tdcmpc)
+  Physical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Logical resource: INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/DCM_INST1/DCM_SP/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: INST_DDR2_RAM_CORE/infrastructure_top0/sys_clk_ibuf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = 
+PERIOD TIMEGRP         
+"INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK         
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 10282 paths analyzed, 3276 endpoints analyzed, 244 failing endpoints
+ 244 timing errors detected. (244 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.570ns.
+--------------------------------------------------------------------------------
+
+Paths for end point INST_MMU/data_buf_3 (SLICE_X14Y10.F4), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.526ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/INST_DDR2_Control_VHDL/valid (FF)
+  Destination:          INST_MMU/data_buf_3 (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      6.259ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.026ns (0.247 - 0.273)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/INST_DDR2_Control_VHDL/valid to INST_MMU/data_buf_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y8.XQ       Tcko                  0.591   INST_MMU/INST_DDR2_Control_VHDL/valid
+                                                       INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.BX      net (fanout=142)      2.087   INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.X       Tbxx                  0.756   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X14Y10.G4      net (fanout=32)       1.256   INST_MMU/N4
+    SLICE_X14Y10.Y       Tilo                  0.707   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000_SW0
+    SLICE_X14Y10.F4      net (fanout=1)        0.060   N545
+    SLICE_X14Y10.CLK     Tfck                  0.802   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000
+                                                       INST_MMU/data_buf_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.259ns (2.856ns logic, 3.403ns route)
+                                                       (45.6% logic, 54.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.500ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/write_mode (FF)
+  Destination:          INST_MMU/data_buf_3 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      5.900ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.118ns (0.247 - 0.365)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/write_mode to INST_MMU/data_buf_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y13.YQ      Tcko                  0.676   INST_MMU/write_mode
+                                                       INST_MMU/write_mode
+    SLICE_X15Y17.G4      net (fanout=4)        1.475   INST_MMU/write_mode
+    SLICE_X15Y17.X       Tif5x                 0.924   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001_F
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X14Y10.G4      net (fanout=32)       1.256   INST_MMU/N4
+    SLICE_X14Y10.Y       Tilo                  0.707   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000_SW0
+    SLICE_X14Y10.F4      net (fanout=1)        0.060   N545
+    SLICE_X14Y10.CLK     Tfck                  0.802   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000
+                                                       INST_MMU/data_buf_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.900ns (3.109ns logic, 2.791ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.502ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/write_mode (FF)
+  Destination:          INST_MMU/data_buf_3 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      5.898ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.118ns (0.247 - 0.365)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/write_mode to INST_MMU/data_buf_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y13.YQ      Tcko                  0.676   INST_MMU/write_mode
+                                                       INST_MMU/write_mode
+    SLICE_X15Y17.F4      net (fanout=4)        1.473   INST_MMU/write_mode
+    SLICE_X15Y17.X       Tif5x                 0.924   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001_G
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X14Y10.G4      net (fanout=32)       1.256   INST_MMU/N4
+    SLICE_X14Y10.Y       Tilo                  0.707   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000_SW0
+    SLICE_X14Y10.F4      net (fanout=1)        0.060   N545
+    SLICE_X14Y10.CLK     Tfck                  0.802   INST_MMU/data_buf<3>
+                                                       INST_MMU/data_buf_3_mux0000
+                                                       INST_MMU/data_buf_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.898ns (3.109ns logic, 2.789ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_MMU/data_buf_28 (SLICE_X14Y11.F3), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.505ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/INST_DDR2_Control_VHDL/valid (FF)
+  Destination:          INST_MMU/data_buf_28 (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      6.238ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.026ns (0.247 - 0.273)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/INST_DDR2_Control_VHDL/valid to INST_MMU/data_buf_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y8.XQ       Tcko                  0.591   INST_MMU/INST_DDR2_Control_VHDL/valid
+                                                       INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.BX      net (fanout=142)      2.087   INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.X       Tbxx                  0.756   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X14Y11.G4      net (fanout=32)       1.252   INST_MMU/N4
+    SLICE_X14Y11.Y       Tilo                  0.707   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000_SW0
+    SLICE_X14Y11.F3      net (fanout=1)        0.043   N571
+    SLICE_X14Y11.CLK     Tfck                  0.802   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000
+                                                       INST_MMU/data_buf_28
+    -------------------------------------------------  ---------------------------
+    Total                                      6.238ns (2.856ns logic, 3.382ns route)
+                                                       (45.8% logic, 54.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.021ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/INST_BLOCKRAM/Mram_cells1 (RAM)
+  Destination:          INST_MMU/data_buf_28 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.426ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.071ns (0.456 - 0.527)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/INST_BLOCKRAM/Mram_cells1 to INST_MMU/data_buf_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y2.DOA28    Trcko_DORA            2.489   INST_MMU/INST_BLOCKRAM/Mram_cells1
+                                                       INST_MMU/INST_BLOCKRAM/Mram_cells1
+    SLICE_X14Y11.G2      net (fanout=3)        2.385   INST_MMU/br_data_out<28>
+    SLICE_X14Y11.Y       Tilo                  0.707   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000_SW0
+    SLICE_X14Y11.F3      net (fanout=1)        0.043   N571
+    SLICE_X14Y11.CLK     Tfck                  0.802   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000
+                                                       INST_MMU/data_buf_28
+    -------------------------------------------------  ---------------------------
+    Total                                      6.426ns (3.998ns logic, 2.428ns route)
+                                                       (62.2% logic, 37.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.521ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/write_mode (FF)
+  Destination:          INST_MMU/data_buf_28 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      5.879ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.118ns (0.247 - 0.365)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/write_mode to INST_MMU/data_buf_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y13.YQ      Tcko                  0.676   INST_MMU/write_mode
+                                                       INST_MMU/write_mode
+    SLICE_X15Y17.G4      net (fanout=4)        1.475   INST_MMU/write_mode
+    SLICE_X15Y17.X       Tif5x                 0.924   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001_F
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X14Y11.G4      net (fanout=32)       1.252   INST_MMU/N4
+    SLICE_X14Y11.Y       Tilo                  0.707   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000_SW0
+    SLICE_X14Y11.F3      net (fanout=1)        0.043   N571
+    SLICE_X14Y11.CLK     Tfck                  0.802   INST_MMU/data_buf<28>
+                                                       INST_MMU/data_buf_28_mux0000
+                                                       INST_MMU/data_buf_28
+    -------------------------------------------------  ---------------------------
+    Total                                      5.879ns (3.109ns logic, 2.770ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_MMU/data_buf_7 (SLICE_X18Y14.F4), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.493ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/INST_DDR2_Control_VHDL/valid (FF)
+  Destination:          INST_MMU/data_buf_7 (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      6.312ns (Levels of Logic = 3)
+  Clock Path Skew:      0.060ns (0.072 - 0.012)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/INST_DDR2_Control_VHDL/valid to INST_MMU/data_buf_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y8.XQ       Tcko                  0.591   INST_MMU/INST_DDR2_Control_VHDL/valid
+                                                       INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.BX      net (fanout=142)      2.087   INST_MMU/INST_DDR2_Control_VHDL/valid
+    SLICE_X15Y17.X       Tbxx                  0.756   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X18Y14.G3      net (fanout=32)       1.309   INST_MMU/N4
+    SLICE_X18Y14.Y       Tilo                  0.707   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000_SW0
+    SLICE_X18Y14.F4      net (fanout=1)        0.060   N489
+    SLICE_X18Y14.CLK     Tfck                  0.802   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000
+                                                       INST_MMU/data_buf_7
+    -------------------------------------------------  ---------------------------
+    Total                                      6.312ns (2.856ns logic, 3.456ns route)
+                                                       (45.2% logic, 54.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.302ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/INST_BLOCKRAM/Mram_cells1 (RAM)
+  Destination:          INST_MMU/data_buf_7 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      6.192ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.503 - 0.527)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/INST_BLOCKRAM/Mram_cells1 to INST_MMU/data_buf_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y2.DOA7     Trcko_DORA            2.489   INST_MMU/INST_BLOCKRAM/Mram_cells1
+                                                       INST_MMU/INST_BLOCKRAM/Mram_cells1
+    SLICE_X18Y14.G2      net (fanout=3)        2.134   INST_MMU/br_data_out<7>
+    SLICE_X18Y14.Y       Tilo                  0.707   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000_SW0
+    SLICE_X18Y14.F4      net (fanout=1)        0.060   N489
+    SLICE_X18Y14.CLK     Tfck                  0.802   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000
+                                                       INST_MMU/data_buf_7
+    -------------------------------------------------  ---------------------------
+    Total                                      6.192ns (3.998ns logic, 2.194ns route)
+                                                       (64.6% logic, 35.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.494ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_MMU/write_mode (FF)
+  Destination:          INST_MMU/data_buf_7 (FF)
+  Requirement:          7.518ns
+  Data Path Delay:      5.953ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.071ns (0.294 - 0.365)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 7.518ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_MMU/write_mode to INST_MMU/data_buf_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y13.YQ      Tcko                  0.676   INST_MMU/write_mode
+                                                       INST_MMU/write_mode
+    SLICE_X15Y17.G4      net (fanout=4)        1.475   INST_MMU/write_mode
+    SLICE_X15Y17.X       Tif5x                 0.924   INST_MMU/N4
+                                                       INST_MMU/data_buf_0_mux00001_F
+                                                       INST_MMU/data_buf_0_mux00001
+    SLICE_X18Y14.G3      net (fanout=32)       1.309   INST_MMU/N4
+    SLICE_X18Y14.Y       Tilo                  0.707   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000_SW0
+    SLICE_X18Y14.F4      net (fanout=1)        0.060   N489
+    SLICE_X18Y14.CLK     Tfck                  0.802   INST_MMU/data_buf<7>
+                                                       INST_MMU/data_buf_7_mux0000
+                                                       INST_MMU/data_buf_7
+    -------------------------------------------------  ---------------------------
+    Total                                      5.953ns (3.109ns logic, 2.844ns route)
+                                                       (52.2% logic, 47.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK
+        HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_column_address_reg_3/SRL16E (SLICE_X20Y19.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.651ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_MMU/INST_DDR2_Control_VHDL/input_adress_5 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_column_address_reg_3/SRL16E (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.670ns (Levels of Logic = 1)
+  Clock Path Skew:      0.019ns (0.125 - 0.106)
+  Source Clock:         clk_tb falling at 3.759ns
+  Destination Clock:    clk_tb falling at 3.759ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_MMU/INST_DDR2_Control_VHDL/input_adress_5 to INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_column_address_reg_3/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y19.XQ      Tcko                  0.473   INST_MMU/INST_DDR2_Control_VHDL/input_adress<5>
+                                                       INST_MMU/INST_DDR2_Control_VHDL/input_adress_5
+    SLICE_X20Y19.BX      net (fanout=1)        0.343   INST_MMU/INST_DDR2_Control_VHDL/input_adress<5>
+    SLICE_X20Y19.CLK     Tdh         (-Th)     0.146   INST_DDR2_RAM_CORE/top_00/controller0/column_address_reg<3>
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/Mshreg_column_address_reg_3/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      0.670ns (0.327ns logic, 0.343ns route)
+                                                       (48.8% logic, 51.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0 (K3.O1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.727ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.772ns (Levels of Logic = 0)
+  Clock Path Skew:      0.045ns (0.316 - 0.271)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0 to INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y52.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0
+                                                       INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0
+    K3.O1                net (fanout=4)        0.320   INST_DDR2_RAM_CORE/top_00/controller0/dqs_reset2_clk0
+    K3.OTCLK1            Tiocko      (-Th)     0.012   cntrl0_ddr2_dqs<0>
+                                                       INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dqs_iob_inst/U2/ODDR2/FF0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.772ns (0.452ns logic, 0.320ns route)
+                                                       (58.5% logic, 41.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg_15 (SLICE_X33Y18.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.794ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/gen_tap2[15].u (FF)
+  Destination:          INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.956ns (Levels of Logic = 0)
+  Clock Path Skew:      0.162ns (0.850 - 0.688)
+  Source Clock:         clk_tb rising at 0.000ns
+  Destination Clock:    clk_tb rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/gen_tap2[15].u to INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y19.XQ      Tcko                  0.505   INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<15>
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/gen_tap2[15].u
+    SLICE_X33Y18.BX      net (fanout=1)        0.362   INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/flop2_val<15>
+    SLICE_X33Y18.CLK     Tckdi       (-Th)    -0.089   INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<15>
+                                                       INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.956ns (0.594ns logic, 0.362ns route)
+                                                       (62.1% logic, 37.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk0dcm" TS_SYS_CLK
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 3.947ns (period - min period limit)
+  Period: 7.518ns
+  Min period limit: 3.571ns (280.034MHz) ()
+  Physical resource: INST_MMU/INST_BLOCKRAM/Mram_cells1/CLKA
+  Logical resource: INST_MMU/INST_BLOCKRAM/Mram_cells1/CLKA
+  Location pin: RAMB16_X0Y2.CLKA
+  Clock network: clk_tb
+--------------------------------------------------------------------------------
+Slack: 3.947ns (period - min period limit)
+  Period: 7.518ns
+  Min period limit: 3.571ns (280.034MHz) ()
+  Physical resource: INST_MMU/INST_BLOCKRAM/Mram_cells2/CLKA
+  Logical resource: INST_MMU/INST_BLOCKRAM/Mram_cells2/CLKA
+  Location pin: RAMB16_X0Y1.CLKA
+  Clock network: clk_tb
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/r_burst_done/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/r_burst_done/SR
+  Location pin: SLICE_X8Y27.SR
+  Clock network: reset_IBUF_1
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm 
+= PERIOD TIMEGRP         
+"INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK         
+PHASE 1.879675 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1065 paths analyzed, 553 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.240ns.
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_10/SRL16E (SLICE_X0Y65.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_26 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_10/SRL16E (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      3.571ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.049ns (0.590 - 0.639)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_26 to INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_10/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y40.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<27>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_26
+    SLICE_X0Y65.BY       net (fanout=1)        2.720   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<26>
+    SLICE_X0Y65.CLK      Tds                   0.175   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2<11>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_10/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      3.571ns (0.851ns logic, 2.720ns route)
+                                                       (23.8% logic, 76.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_11/SRL16E (SLICE_X0Y65.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.683ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_27 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_11/SRL16E (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      3.027ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.049ns (0.590 - 0.639)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_27 to INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_11/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y40.XQ      Tcko                  0.631   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<27>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_27
+    SLICE_X0Y65.BX       net (fanout=1)        2.246   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<27>
+    SLICE_X0Y65.CLK      Tds                   0.150   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2<11>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_11/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      3.027ns (0.781ns logic, 2.246ns route)
+                                                       (25.8% logic, 74.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_8/SRL16E (SLICE_X10Y58.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.862ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_24 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_8/SRL16E (FF)
+  Requirement:          3.759ns
+  Data Path Delay:      2.783ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.114ns (0.541 - 0.655)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb falling at 5.638ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_24 to INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_8/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y43.YQ      Tcko                  0.676   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<25>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4_24
+    SLICE_X10Y58.BY      net (fanout=1)        1.932   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data4<24>
+    SLICE_X10Y58.CLK     Tds                   0.175   INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data270_2<9>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/Mshreg_write_data270_2_8/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      2.783ns (0.851ns logic, 1.932ns route)
+                                                       (30.6% logic, 69.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK
+        PHASE 1.879675 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2 (SLICE_X9Y42.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.896ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r1 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.896ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb rising at 1.879ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r1 to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y42.YQ       Tcko                  0.464   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r1
+    SLICE_X9Y42.BX       net (fanout=1)        0.343   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r1
+    SLICE_X9Y42.CLK      Tckdi       (-Th)    -0.089   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.896ns (0.553ns logic, 0.343ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_7 (SLICE_X7Y32.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.910ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data_7 (FF)
+  Destination:          INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.940ns (Levels of Logic = 0)
+  Clock Path Skew:      0.030ns (0.256 - 0.226)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb rising at 1.879ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data_7 to INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y33.XQ       Tcko                  0.473   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data<7>
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data_7
+    SLICE_X7Y32.BX       net (fanout=2)        0.378   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data<7>
+    SLICE_X7Y32.CLK      Tckdi       (-Th)    -0.089   INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb<7>
+                                                       INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.940ns (0.562ns logic, 0.378ns route)
+                                                       (59.8% logic, 40.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r3 (SLICE_X6Y42.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.930ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2 (FF)
+  Destination:          INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.007ns (Levels of Logic = 0)
+  Clock Path Skew:      0.077ns (0.303 - 0.226)
+  Source Clock:         clk90_tb rising at 1.879ns
+  Destination Clock:    clk90_tb rising at 1.879ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2 to INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y42.XQ       Tcko                  0.473   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+    SLICE_X6Y42.BY       net (fanout=1)        0.361   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r2
+    SLICE_X6Y42.CLK      Tckdi       (-Th)    -0.173   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r4
+                                                       INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/read_fifo_rden_90r3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.007ns (0.646ns logic, 0.361ns route)
+                                                       (64.2% logic, 35.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD TIMEGRP
+        "INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm" TS_SYS_CLK
+        PHASE 1.879675 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb<3>/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_3/SR
+  Location pin: SLICE_X8Y22.SR
+  Clock network: reset_IBUF_1
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 7.518ns
+  High pulse: 3.759ns
+  High pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb<3>/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_3/SR
+  Location pin: SLICE_X8Y22.SR
+  Clock network: reset_IBUF_1
+--------------------------------------------------------------------------------
+Slack: 4.314ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 7.518ns
+  Low pulse: 3.759ns
+  Low pulse limit: 1.602ns (Trpw)
+  Physical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb<3>/SR
+  Logical resource: INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_2/SR
+  Location pin: SLICE_X8Y22.SR
+  Clock network: reset_IBUF_1
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_SYS_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_SYS_CLK                     |      7.519ns|      4.800ns|     12.570ns|            0|          244|            0|        11347|
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|     12.570ns|          N/A|          244|            0|        10282|            0|
+| ucture_top0_clk_dcm0_clk0dcm  |             |             |             |             |             |             |             |
+| TS_INST_DDR2_RAM_CORE_infrastr|      7.519ns|      7.240ns|          N/A|            0|            0|         1065|            0|
+| ucture_top0_clk_dcm0_clk90dcm |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+4 constraints not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLKB_130M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLKB_130M      |    7.385|    6.285|    3.620|    7.063|
+clk_50mhz      |    7.385|    6.285|    3.620|    7.063|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_50mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLKB_130M      |    7.385|    6.285|    3.620|    7.063|
+clk_50mhz      |    7.385|    6.285|    3.620|    7.063|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 247  Score: 305938  (Setup/Max: 305938, Hold: 0)
+
+Constraints cover 11347 paths, 52 nets, and 6994 connections
+
+Design statistics:
+   Minimum period:  12.570ns{1}   (Maximum frequency:  79.554MHz)
+   Maximum net delay:   2.260ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Oct 20 11:39:25 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 190 MB
+
+
+

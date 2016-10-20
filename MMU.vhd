@@ -145,7 +145,11 @@ architecture Behavioral of MMU is
 			
 			if rising_edge(clk_in) then
 			
-				if reset_in = '0' then
+				if reset_in = '1' then
+				
+					ack_out <= '1';
+					
+				else
 				
 					case MMU_STATE is
 					

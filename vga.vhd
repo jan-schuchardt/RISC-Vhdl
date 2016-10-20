@@ -2,37 +2,41 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+
 entity vga is
-port(
-	clk : in std_logic;
-	rst : in std_logic;
+    port(   clk     : in std_logic;
+            rst     : in std_logic;
 
-	rgb : in std_logic_vector(11 downto 0);
+            rgb    : in std_logic_vector(11 downto 0);
 
-	x    : out std_logic_vector(9 downto 0);
-	y    : out std_logic_vector(9 downto 0);
-	offs : out std_logic;
+            x        : out std_logic_vector(9 downto 0);
+            y        : out std_logic_vector(9 downto 0);
+            offs    : out std_logic;
 
-	r : out std_logic_vector(3 downto 0);
-	g : out std_logic_vector(3 downto 0);
-	b : out std_logic_vector(3 downto 0);
-	h : out std_logic;
-	v : out std_logic;
-
-	reg_in     : in std_logic_vector(31 downto 0);
-	reg_adr_in : in std_logic_vector(5 downto 0);
-	pc_in      : in std_logic_vector(31 downto 0);
-	ir_in      : in std_logic_vector(31 downto 0)
-);
-end entity;
+            r        : out std_logic_vector(3 downto 0);
+            g        : out std_logic_vector(3 downto 0);
+            b        : out std_logic_vector(3 downto 0);
+            h        : out std_logic;
+            v        : out std_logic;
+				
+				reg_data_in : in std_logic_vector(31 downto 0);
+				reg_adr_in  : in std_logic_vector(5 downto 0);
+				pc_in       : in std_logic_vector(31 downto 0);
+				ir_in       :  in std_logic_vector(31 downto 0)
+         );
+end vga;
 
 
 architecture behaviour of vga is
+
+
+
 
 signal x_cnt : unsigned(9 downto 0) := (others => '0');
 signal y_cnt : unsigned(9 downto 0) := (others => '0');
 
 type regbank is array (0 to 3) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
+
 
 type  regarray is array(0 to 16) of regbank;
 signal regs : regarray;
@@ -52,8 +56,8 @@ begin
 offs_int <= offs_intX or offs_intY;
 offs <= offs_int;
 
-currentreg <= pc_in when reg_countery = "001010" and reg_counterx = "000001" else
-              ir_in when reg_countery = "001010" and reg_counterx = "000010" else
+currentreg <= pc_in when reg_countery = "01010" and reg_counterx = "00001" else
+              ir_in when reg_countery = "01010" and reg_counterx = "00010" else
               regs(to_integer(reg_countery))(to_integer(reg_counterx));
 
 x <=  std_logic_vector(x_cnt) when offs_int = '0' else
@@ -165,7 +169,7 @@ if rising_edge(clk) then
 		reg_countery <= (others => '0');
 		bit_counter <= (others => '0');
 		
-		regs <= (others => (others=> (others=>'0')));
+--		regs <= (others => (others=> (others=>'0')));
 		
 --		             0123456789ABCDEF0123456789ABCDEF
 --		regs(1)(1) <= "10011111111111111111111110111101";
@@ -176,7 +180,7 @@ if rising_edge(clk) then
 --		regs(1)(0) <= "10011111111111111111111111111101";
 --		regs(16)(0) <= "00000000000000000000000000000000";
 	else
-		regs(to_integer(unsigned(reg_adr_in(5 downto 2))))(to_integer(unsigned(reg_adr_in(1 downto 0)))) <= reg_in;
+		regs(to_integer(unsigned(reg_adr_in(5 downto 2))))(to_integer(unsigned(reg_adr_in(1 downto 0)))) <= reg_data_in;
 	
 		if x_cnt = 513 and y_cnt = 257 then
 			reg_countery <= (others => '0');

@@ -1,0 +1,15 @@
+ADDI x1, x0, 0x7FF
+ADDI x1, x1, 0x001
+LUI x10, 0xFFFFF
+ADDI x10, x10, 0xFFF
+LUI x11, 0xAAAAA
+ADDI x11, x11, 0xAAA
+LB x9, x0, 0x000
+LW x12, x0, 0x000
+LW x4, x1, 0x000
+LW x5, x1, 0x008
+LW x6, x1, 0x000
+SW x1, x10, 0x000
+SW x1, x11, 0x008
+LW x7, x1, 0x000
+LW x8, x1, 0x008
