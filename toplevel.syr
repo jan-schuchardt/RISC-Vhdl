@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: toplevel.prj
 
@@ -107,87 +107,87 @@ Cores Search Directories           : {"../../V6/RISC-VHDL/ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_parameters_0.vhd" in Library work.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dm_iob.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_parameters_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dm_iob.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_s3_dm_iob is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dqs_iob.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dqs_iob.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_s3_dqs_iob is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dq_iob.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dq_iob.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_s3_dq_iob is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_dqs_delay_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_dqs_delay_0.vhd" in Library work.
 Architecture arc_dqs_delay of Entity ddr2_ram_core_dqs_delay is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_fifo_0_wr_en_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_0_wr_en_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_fifo_0_wr_en_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_fifo_1_wr_en_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_1_wr_en_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_fifo_1_wr_en_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_wr_gray_cntr.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_wr_gray_cntr is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_rd_gray_cntr.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_rd_gray_cntr is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_ram8d_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_ram8d_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_ram8d_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_cal_ctl.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_ctl.vhd" in Library work.
 Architecture arc_cal_ctl of Entity ddr2_ram_core_cal_ctl is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_tap_dly.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_tap_dly.vhd" in Library work.
 Architecture arc_tap_dly of Entity ddr2_ram_core_tap_dly is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure_iobs_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_iobs_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_infrastructure_iobs_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_iobs_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_iobs_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_controller_iobs_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_path_iobs_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_iobs_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_data_path_iobs_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_read_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_data_read_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_read_controller_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_controller_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_data_read_controller_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_write_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_write_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_data_write_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_clk_dcm.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_clk_dcm.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_clk_dcm is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_cal_top.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_top.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_cal_top is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_controller_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_path_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_data_path_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_infrastructure is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_iobs_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_iobs_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_iobs_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Write_VHDL.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Write_VHDL.vhd" in Library work.
 Architecture verhalten of Entity ddr2_write_vhdl is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Read_VHDL.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Read_VHDL.vhd" in Library work.
 Architecture verhalten of Entity ddr2_read_vhdl is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_top_0.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_top_0.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_top_0 is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure_top.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_top.vhd" in Library work.
 Architecture arc of Entity ddr2_ram_core_infrastructure_top is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/BLOCKRAM.vhd" in Library work.
-Architecture behavioral of Entity blockram is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Control_VHDL.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/BLOCKRAM.vhd" in Library work.
+Entity <blockram> compiled.
+Entity <blockram> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd" in Library work.
 Architecture verhalten of Entity ddr2_control_vhdl is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" in Library work.
 Architecture cu_1 of Entity cu is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ClockDivider.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ClockDivider.vhd" in Library work.
 Architecture behavioral of Entity clockdivider is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/Clock_VHDL.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/Clock_VHDL.vhd" in Library work.
 Architecture verhalten of Entity clock_vhdl is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/clk133m_dcm.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/clk133m_dcm.vhd" in Library work.
 Architecture behavioral of Entity clk133m_dcm is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/vga.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd" in Library work.
 Architecture behaviour of Entity vga is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ipcore_dir/vga_clk.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ipcore_dir/vga_clk.vhd" in Library work.
 Architecture behavioral of Entity vga_clk is up to date.
 Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd" in Library work.
 Architecture cpu_1 of Entity cpu is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/MMU.vhd" in Library work.
-Entity <mmu> compiled.
-Entity <mmu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd" in Library work.
+Architecture behavioral of Entity mmu is up to date.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core.vhd" in Library work.
 Architecture arc_mem_interface_top of Entity ddr2_ram_core is up to date.
-Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" in Library work.
+Compiling vhdl file "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" in Library work.
 Architecture behaviour of Entity toplevel is up to date.
 
 =========================================================================
@@ -282,17 +282,17 @@ Analyzing hierarchy for entity <DDR2_Ram_Core_s3_dq_iob> in library <work> (arch
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <toplevel> in library <work> (Architecture <behaviour>).
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 262: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clk133m_dcm'.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 262: Unconnected output port 'CLK2X_OUT' of component 'clk133m_dcm'.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 262: Unconnected output port 'LOCKED_OUT' of component 'clk133m_dcm'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 262: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clk133m_dcm'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 262: Unconnected output port 'CLK2X_OUT' of component 'clk133m_dcm'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 262: Unconnected output port 'LOCKED_OUT' of component 'clk133m_dcm'.
     Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <clk_obuf> in unit <toplevel>.
     Set user-defined property "DRIVE =  12" for instance <clk_obuf> in unit <toplevel>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <clk_obuf> in unit <toplevel>.
     Set user-defined property "SLEW =  SLOW" for instance <clk_obuf> in unit <toplevel>.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 296: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst_tb' of component 'DDR2_Ram_Core'.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst90_tb' of component 'DDR2_Ram_Core'.
-WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst180_tb' of component 'DDR2_Ram_Core'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 296: Unconnected output port 'LOCKED_OUT' of component 'vga_clk'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst_tb' of component 'DDR2_Ram_Core'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst90_tb' of component 'DDR2_Ram_Core'.
+WARNING:Xst:753 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd" line 362: Unconnected output port 'cntrl0_sys_rst180_tb' of component 'DDR2_Ram_Core'.
 Entity <toplevel> analyzed. Unit <toplevel> generated.
 
 Analyzing Entity <Clock_VHDL> in library <work> (Architecture <verhalten>).
@@ -321,9 +321,9 @@ Analyzing Entity <clk133m_dcm> in library <work> (Architecture <behavioral>).
 Entity <clk133m_dcm> analyzed. Unit <clk133m_dcm> generated.
 
 Analyzing Entity <vga> in library <work> (Architecture <behaviour>).
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/vga.vhd" line 59: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/vga.vhd" line 59: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/vga.vhd" line 183: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd" line 59: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd" line 59: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd" line 183: Index value(s) does not match array range, simulation mismatch.
 Entity <vga> analyzed. Unit <vga> generated.
 
 Analyzing Entity <vga_clk> in library <work> (Architecture <behavioral>).
@@ -348,38 +348,38 @@ Analyzing Entity <CPU> in library <work> (Architecture <CPU_1>).
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <CU> in library <work> (Architecture <CU_1>).
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 474: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 507: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 507: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 712: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 807: Mux is complete : default of case is discarded
-WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd" line 36: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 474: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 507: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 507: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 712: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 807: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd" line 36: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <err>
 Entity <CU> analyzed. Unit <CU> generated.
 
 Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:2211 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 91: Instantiating black box module <dividerUnsigned>.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 148: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:2211 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 91: Instantiating black box module <dividerUnsigned>.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 148: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data1> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 161: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 161: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1607 - Contents of array <reg_data2> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 472: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 474: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 476: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 478: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 482: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 483: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 485: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 485: Size of operands are different : result is <false>.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 488: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 489: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 494: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 495: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 505: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 505: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 505: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 505: Size of operands are different : result is <false>.
-WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd" line 113: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 472: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 474: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 476: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 478: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 482: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 483: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 485: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 485: Size of operands are different : result is <false>.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 488: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 489: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 494: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 495: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 505: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 505: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 505: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 505: Size of operands are different : result is <false>.
+WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd" line 113: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <state>, <alu_rfdU>, <s_opc>, <s_op1>, <s_op2>, <ram_doutb>, <ram_douta>, <division_flank_counter>, <alu_quotientU>, <alu_remainderU>
 INFO:Xst:2679 - Register <ram_wea> in unit <ALU> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <ALU> analyzed. Unit <ALU> generated.
@@ -388,7 +388,7 @@ Analyzing Entity <ClockDivider> in library <work> (Architecture <Behavioral>).
 Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
 
 Analyzing Entity <MMU> in library <work> (Architecture <behavioral>).
-WARNING:Xst:1610 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/MMU.vhd" line 200: Width mismatch. <br_addr_in> has a width of 11 bits but assigned expression is 32-bit wide.
+WARNING:Xst:1610 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd" line 200: Width mismatch. <br_addr_in> has a width of 11 bits but assigned expression is 32-bit wide.
 Entity <MMU> analyzed. Unit <MMU> generated.
 
 Analyzing Entity <BLOCKRAM> in library <work> (Architecture <behavioral>).
@@ -396,7 +396,7 @@ Analyzing Entity <BLOCKRAM> in library <work> (Architecture <behavioral>).
 Entity <BLOCKRAM> analyzed. Unit <BLOCKRAM> generated.
 
 Analyzing Entity <DDR2_Control_VHDL> in library <work> (Architecture <verhalten>).
-WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Control_VHDL.vhd" line 218: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd" line 218: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <m_rd>, <m_we>, <mrd>, <mwe>
 INFO:Xst:2679 - Register <v_ROW> in unit <DDR2_Control_VHDL> has a constant value of 0000000000000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <v_COL> in unit <DDR2_Control_VHDL> has a constant value of 0000000000 during circuit operation. The register is replaced by logic.
@@ -425,8 +425,8 @@ Analyzing generic Entity <DDR2_Ram_Core_controller_0> in library <work> (Archite
     Set property "syn_preserve = TRUE" for signal <lmr_dll_rst>.
     Set property "syn_preserve = TRUE" for signal <lmr_dll_set>.
     Set user-defined property "INIT =  0" for instance <ACK_REG_INST1> in unit <DDR2_Ram_Core_controller_0>.
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_0.vhd" line 1105: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_0.vhd" line 1132: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd" line 1105: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd" line 1132: Mux is complete : default of case is discarded
     Set user-defined property "INIT =  0" for instance <rst_iob_out> in unit <DDR2_Ram_Core_controller_0>.
     Set user-defined property "IOB =  FORCE" for instance <rst_iob_out> in unit <DDR2_Ram_Core_controller_0>.
 WARNING:Xst:37 - Detected unknown constraint/property "syn_useioff". This constraint/property is not supported by the current software release and will be ignored.
@@ -442,7 +442,7 @@ Analyzing Entity <DDR2_Ram_Core_data_read_0> in library <work> (Architecture <ar
 Entity <DDR2_Ram_Core_data_read_0> analyzed. Unit <DDR2_Ram_Core_data_read_0> generated.
 
 Analyzing Entity <DDR2_Ram_Core_rd_gray_cntr> in library <work> (Architecture <arc>).
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_rd_gray_cntr.vhd" line 106: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd" line 106: Mux is complete : default of case is discarded
     Set user-defined property "INIT =  0" for instance <bit0> in unit <DDR2_Ram_Core_rd_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit1> in unit <DDR2_Ram_Core_rd_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit2> in unit <DDR2_Ram_Core_rd_gray_cntr>.
@@ -508,7 +508,7 @@ Analyzing Entity <DDR2_Ram_Core_fifo_1_wr_en_0> in library <work> (Architecture 
 Entity <DDR2_Ram_Core_fifo_1_wr_en_0> analyzed. Unit <DDR2_Ram_Core_fifo_1_wr_en_0> generated.
 
 Analyzing Entity <DDR2_Ram_Core_wr_gray_cntr> in library <work> (Architecture <arc>).
-INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_wr_gray_cntr.vhd" line 98: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd" line 98: Mux is complete : default of case is discarded
     Set user-defined property "INIT =  0" for instance <bit0> in unit <DDR2_Ram_Core_wr_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit1> in unit <DDR2_Ram_Core_wr_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit2> in unit <DDR2_Ram_Core_wr_gray_cntr>.
@@ -900,7 +900,7 @@ Performing bidirectional port resolution...
 INFO:Xst:2679 - Register <ddr_odt_cntrl> in unit <DDR2_Ram_Core_controller_0> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <Clock_VHDL>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/Clock_VHDL.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/Clock_VHDL.vhd".
     Found 1-bit register for signal <clk1Hz>.
     Found 26-bit comparator greatequal for signal <clk1Hz$cmp_ge0000> created at line 46.
     Found 26-bit up counter for signal <v_cnt1>.
@@ -912,7 +912,7 @@ Unit <Clock_VHDL> synthesized.
 
 
 Synthesizing Unit <vga>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/vga.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd".
 WARNING:Xst:647 - Input <rgb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1781 - Signal <regs<16>> is used but never assigned. Tied to default value.
     Found 1-bit register for signal <h>.
@@ -960,7 +960,7 @@ Unit <vga> synthesized.
 
 
 Synthesizing Unit <CU>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/CU.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 15                                             |
@@ -1013,7 +1013,7 @@ Unit <CU> synthesized.
 
 
 Synthesizing Unit <ClockDivider>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ClockDivider.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ClockDivider.vhd".
     Found 1-bit register for signal <clk_sgn>.
     Found 32-bit up counter for signal <counter>.
     Found 32-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 53.
@@ -1025,7 +1025,7 @@ Unit <ClockDivider> synthesized.
 
 
 Synthesizing Unit <BLOCKRAM>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/BLOCKRAM.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/BLOCKRAM.vhd".
 WARNING:Xst:647 - Input <addr_in<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <test1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 256x64-bit single-port RAM <Mram_cells> for signal <cells>.
@@ -1037,7 +1037,7 @@ Unit <BLOCKRAM> synthesized.
 
 
 Synthesizing Unit <DDR2_Write_VHDL>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Write_VHDL.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Write_VHDL.vhd".
     Found finite state machine <FSM_1> for signal <STATE_WA>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
@@ -1079,7 +1079,7 @@ Unit <DDR2_Write_VHDL> synthesized.
 
 
 Synthesizing Unit <DDR2_Read_VHDL>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Read_VHDL.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Read_VHDL.vhd".
     Found finite state machine <FSM_3> for signal <STATE_RA>.
     -----------------------------------------------------------------------
     | States             | 6                                              |
@@ -1120,7 +1120,7 @@ Unit <DDR2_Read_VHDL> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_infrastructure>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure.vhd".
     Found 5-bit register for signal <delay_sel_val1>.
     Found 1-bit register for signal <rst_calib1_r1>.
     Found 1-bit register for signal <rst_calib1_r2>.
@@ -1130,7 +1130,7 @@ Unit <DDR2_Ram_Core_infrastructure> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_data_write_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_write_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_write_0.vhd".
     Found 1-bit register for signal <write_en_val>.
     Found 32-bit register for signal <write_data1>.
     Found 32-bit register for signal <write_data2>.
@@ -1159,7 +1159,7 @@ Unit <DDR2_Ram_Core_data_write_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_cal_ctl>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_cal_ctl.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_ctl.vhd".
 WARNING:Xst:646 - Signal <cnt_val<31:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 5-bit register for signal <tapfordqs>.
     Found 1-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 216.
@@ -1186,17 +1186,17 @@ Unit <DDR2_Ram_Core_cal_ctl> synthesized.
 
 
 Synthesizing Unit <clk133m_dcm>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/clk133m_dcm.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/clk133m_dcm.vhd".
 Unit <clk133m_dcm> synthesized.
 
 
 Synthesizing Unit <vga_clk>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ipcore_dir/vga_clk.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ipcore_dir/vga_clk.vhd".
 Unit <vga_clk> synthesized.
 
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/ALU.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd".
 WARNING:Xst:1780 - Signal <ram_web> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ram_wea<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <ram_dinb> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1396,7 +1396,7 @@ Unit <ALU> synthesized.
 
 
 Synthesizing Unit <DDR2_Control_VHDL>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Control_VHDL.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd".
 WARNING:Xst:646 - Signal <v_ROW> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <v_COL> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <v_BANK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1437,7 +1437,7 @@ Unit <DDR2_Control_VHDL> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_controller_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd".
 WARNING:Xst:1780 - Signal <rp_cnt_value> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <odt_deassert> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <lmr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1547,7 +1547,7 @@ Unit <DDR2_Ram_Core_controller_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_rd_gray_cntr>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_rd_gray_cntr.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd".
     Found 16x4-bit ROM for signal <d_in>.
     Found 1-bit register for signal <reset90_r>.
     Summary:
@@ -1557,32 +1557,32 @@ Unit <DDR2_Ram_Core_rd_gray_cntr> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_ram8d_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_ram8d_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_ram8d_0.vhd".
 Unit <DDR2_Ram_Core_ram8d_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_dqs_delay_1>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_dqs_delay_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_dqs_delay_0.vhd".
 Unit <DDR2_Ram_Core_dqs_delay_1> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_dqs_delay_2>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_dqs_delay_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_dqs_delay_0.vhd".
 Unit <DDR2_Ram_Core_dqs_delay_2> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_fifo_0_wr_en_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_fifo_0_wr_en_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_0_wr_en_0.vhd".
 Unit <DDR2_Ram_Core_fifo_0_wr_en_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_fifo_1_wr_en_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_fifo_1_wr_en_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_1_wr_en_0.vhd".
 Unit <DDR2_Ram_Core_fifo_1_wr_en_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_wr_gray_cntr>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_wr_gray_cntr.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd".
     Found 16x4-bit ROM for signal <d_in>.
     Summary:
 	inferred   1 ROM(s).
@@ -1590,37 +1590,37 @@ Unit <DDR2_Ram_Core_wr_gray_cntr> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_infrastructure_iobs_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure_iobs_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_iobs_0.vhd".
 Unit <DDR2_Ram_Core_infrastructure_iobs_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_controller_iobs_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_controller_iobs_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_iobs_0.vhd".
 Unit <DDR2_Ram_Core_controller_iobs_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_s3_dm_iob>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dm_iob.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dm_iob.vhd".
 Unit <DDR2_Ram_Core_s3_dm_iob> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_s3_dqs_iob>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dqs_iob.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dqs_iob.vhd".
 Unit <DDR2_Ram_Core_s3_dqs_iob> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_s3_dq_iob>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_s3_dq_iob.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dq_iob.vhd".
 Unit <DDR2_Ram_Core_s3_dq_iob> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_clk_dcm>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_clk_dcm.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_clk_dcm.vhd".
 Unit <DDR2_Ram_Core_clk_dcm> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_tap_dly>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_tap_dly.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_tap_dly.vhd".
     Found 1-bit xor2 for signal <flop2_xnor_0$xor0000>.
     Found 1-bit xor2 for signal <flop2_xnor_1$xor0000>.
     Found 1-bit xor2 for signal <flop2_xnor_10$xor0000>.
@@ -1664,7 +1664,7 @@ Unit <CPU> synthesized.
 
 
 Synthesizing Unit <MMU>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/MMU.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd".
 WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cmd_in<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <data_in_buf> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
@@ -1705,7 +1705,7 @@ Unit <MMU> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_data_read_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_read_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_0.vhd".
     Found 8-bit register for signal <fifo0_rd_addr_r>.
     Found 8-bit register for signal <fifo1_rd_addr_r>.
     Found 16-bit register for signal <fifo_0_data_out_r>.
@@ -1724,7 +1724,7 @@ Unit <DDR2_Ram_Core_data_read_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_data_read_controller_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_read_controller_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_controller_0.vhd".
 WARNING:Xst:647 - Input <vio_out_dqs_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <vio_out_dqs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <vio_out_rst_dqs_div_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1736,17 +1736,17 @@ Unit <DDR2_Ram_Core_data_read_controller_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_data_path_iobs_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_path_iobs_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_iobs_0.vhd".
 Unit <DDR2_Ram_Core_data_path_iobs_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_cal_top>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_cal_top.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_top.vhd".
 Unit <DDR2_Ram_Core_cal_top> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_infrastructure_top>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_infrastructure_top.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_top.vhd".
 WARNING:Xst:647 - Input <sys_clkb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sys_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Register <wait_200us_int> equivalent to <wait_200us> has been removed
@@ -1773,7 +1773,7 @@ Unit <DDR2_Ram_Core_infrastructure_top> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_data_path_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_data_path_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_0.vhd".
 WARNING:Xst:1780 - Signal <read_valid_data_1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <fifo1_rd_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <fifo0_rd_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1781,17 +1781,17 @@ Unit <DDR2_Ram_Core_data_path_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_iobs_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_iobs_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_iobs_0.vhd".
 Unit <DDR2_Ram_Core_iobs_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core_top_0>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core_top_0.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_top_0.vhd".
 Unit <DDR2_Ram_Core_top_0> synthesized.
 
 
 Synthesizing Unit <DDR2_Ram_Core>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/DDR2_Ram_Core.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core.vhd".
 WARNING:Xst:653 - Signal <vio_out_rst_dqs_div_en> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:653 - Signal <vio_out_rst_dqs_div> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
 WARNING:Xst:653 - Signal <vio_out_dqs_en> is used but never assigned. This sourceless signal will be automatically connected to value 0.
@@ -1812,7 +1812,7 @@ Unit <DDR2_Ram_Core> synthesized.
 
 
 Synthesizing Unit <toplevel>.
-    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b7912b3150567be71f67/toplevel.vhd".
+    Related source file is "C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd".
 WARNING:Xst:646 - Signal <y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <we_rise> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -5493,8 +5493,8 @@ WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_D
 WARNING:Xst:616 - Invalid property "syn_preserve TRUE": Did not attach to INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1.
 
 
-Total REAL time to Xst completion: 116.00 secs
-Total CPU time to Xst completion: 115.42 secs
+Total REAL time to Xst completion: 97.00 secs
+Total CPU time to Xst completion: 97.22 secs
  
 --> 
 

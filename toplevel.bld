@@ -6,8 +6,7 @@ ise -dd _ngo -sd ../../V6/RISC-VHDL/ipcore_dir -nt timestamp -uc pinning.ucf -uc
 ddr2_pinning.ucf -p xc3s700a-fg484-4 toplevel.ngc toplevel.ngd
 
 Reading NGO file
-"C:/Users/jan/Documents/VHDL-Projects/V5.8Backup/RISC-Vhdl-82ddc391642c00756247b
-7912b3150567be71f67/toplevel.ngc" ...
+"C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.ngc" ...
 Loading design module "../../V6/RISC-VHDL/ipcore_dir/dividerUnsigned.ngc"...
 Gathering constraint information from source properties...
 Done.
@@ -52,7 +51,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 172040 kilobytes
+Total memory usage is 172168 kilobytes
 
 Writing NGD file "toplevel.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

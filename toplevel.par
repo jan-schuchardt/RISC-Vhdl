@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-A22T2C9::  Thu Oct 20 11:35:07 2016
+DESKTOP-A22T2C9::  Thu Oct 20 12:30:09 2016
 
 par -w -intstyle ise -ol high -t 1 toplevel_map.ncd toplevel.ncd toplevel.pcf 
 
@@ -117,8 +117,8 @@ Phase 9.18  Placement Optimization (Checksum:80bf634) REAL time: 22 secs
 Phase 10.5  Local Placement Optimization
 Phase 10.5  Local Placement Optimization (Checksum:80bf634) REAL time: 22 secs 
 
-Total REAL time to Placer completion: 23 secs 
-Total CPU  time to Placer completion: 23 secs 
+Total REAL time to Placer completion: 22 secs 
+Total CPU  time to Placer completion: 22 secs 
 Writing design to file toplevel.ncd
 
 
@@ -128,9 +128,9 @@ Starting Router
 
 Phase  1  : 33019 unrouted;      REAL time: 28 secs 
 
-Phase  2  : 30284 unrouted;      REAL time: 29 secs 
+Phase  2  : 30284 unrouted;      REAL time: 28 secs 
 
-Phase  3  : 9555 unrouted;      REAL time: 32 secs 
+Phase  3  : 9555 unrouted;      REAL time: 31 secs 
 
 Phase  4  : 9795 unrouted; (Setup:339841, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
 
@@ -138,13 +138,13 @@ Phase  5  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     
 
 Updating file: toplevel.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
+Phase  6  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
 
-Phase  7  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 4 secs 
+Phase  7  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 50 secs 
 
-Phase  8  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 5 secs 
+Phase  8  : 0 unrouted; (Setup:330880, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 50 secs 
 
-Phase  9  : 0 unrouted; (Setup:305938, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 5 secs 
+Phase  9  : 0 unrouted; (Setup:305938, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 50 secs 
 WARNING:Route:455 - CLK Net:clk_tb may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:clk_cpu may have excessive skew because 
@@ -152,8 +152,8 @@ WARNING:Route:455 - CLK Net:clk_cpu may have excessive skew because
 WARNING:Route:455 - CLK Net:CPU/ALU/division_flank_counter_not0001 may have excessive skew because 
       4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 4 mins 5 secs 
-Total CPU time to Router completion: 4 mins 4 secs 
+Total REAL time to Router completion: 3 mins 50 secs 
+Total CPU time to Router completion: 3 mins 50 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -510,10 +510,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 4 mins 7 secs 
-Total CPU time to PAR completion: 4 mins 5 secs 
+Total REAL time to PAR completion: 3 mins 52 secs 
+Total CPU time to PAR completion: 3 mins 52 secs 
 
-Peak Memory Usage:  313 MB
+Peak Memory Usage:  309 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
