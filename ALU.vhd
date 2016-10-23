@@ -38,15 +38,27 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-	component dividerUnsigned is
+	component divUnsigned is
    port(
+	 sclr: in STD_LOGIC;
     rfd : out STD_LOGIC; 
     clk : in STD_LOGIC := 'X'; 
     dividend : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
     quotient : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
     divisor : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
     fractional : out STD_LOGIC_VECTOR ( 31 downto 0 ) 
-  ); end component dividerUnsigned;
+  ); end component divUnsigned;
+  
+  component divSigned is
+   port(
+	 sclr: in STD_LOGIC;
+    rfd : out STD_LOGIC; 
+    clk : in STD_LOGIC := 'X'; 
+    dividend : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    quotient : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    divisor : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    fractional : out STD_LOGIC_VECTOR ( 31 downto 0 ) 
+  ); end component divSigned;
 
 	
 
@@ -68,12 +80,24 @@ architecture Behavioral of ALU is
 	 signal ram_dinb: std_logic_vector(31 downto 0);
 	 signal ram_douta: std_logic_vector(31 downto 0);
 		 signal ram_doutb: std_logic_vector(31 downto 0);
+		 
+		 
+		 
 	signal alu_dividend: std_logic_vector(31 downto 0);
 	signal alu_divisor: std_logic_vector(31 downto 0);
 	signal alu_remainderU: std_logic_vector(31 downto 0);
 	signal alu_quotientU: std_logic_vector(31 downto 0);
+	signal alu_remainder: std_logic_vector(31 downto 0);
+	signal alu_quotient: std_logic_vector(31 downto 0);
 	signal alu_rfdU: std_logic;
+	signal alu_rfd: std_logic;
 	signal division_flank_counter: std_logic_vector(1 downto 0);
+	signal division_cntr_U:unsigned(7 downto 0);
+	signal division_cntr:unsigned(7 downto 0);
+	signal division_cntr_U_out:std_logic_vector(31 downto 0);
+	signal division_cntr_out:std_logic_vector(31 downto 0);
+	signal division_sclr:std_logic;
+	signal zero : std_logic_vector(31 downto 0);
 		 
 	signal mult_result: std_logic_vector(63 downto 0);
 	signal shift_ar: std_logic;
@@ -88,19 +112,31 @@ architecture Behavioral of ALU is
 	
 	begin
 	
-	divunsigned: dividerUnsigned port map(
+	dividerUnsigned: divUnsigned port map(
 	 rfd => alu_rfdU,
     clk => clk_in,
     dividend => alu_dividend,
     quotient => alu_quotientU, 
     divisor => alu_divisor,
-    fractional => alu_remainderU
+    fractional => alu_remainderU,
+	 sclr => division_sclr
 	
 	);
-
 	
+	dividerSigned: divSigned port map(
+	 rfd => alu_rfd,
+    clk => clk_in,
+    dividend => alu_dividend,
+    quotient => alu_quotient, 
+    divisor => alu_divisor,
+    fractional => alu_remainder,
+	 sclr => division_sclr
 	
+	);
 	
+	zero <= x"00000000";
+	division_cntr_U_out <= x"000000" & std_logic_vector(division_cntr_U);
+	division_cntr_out <= x"000000" & std_logic_vector(division_cntr);
 	debug_data_out <= debug_signal;
 	debug_adr_out <= debug_adr_signal;
 	
@@ -115,6 +151,10 @@ begin
 
 	if(rst_in = '1') then
 		division_flank_counter <= "00";
+		
+		division_sclr <='1';
+		division_cntr_u <= "00100011"; --35
+		division_cntr <= "00100101"; --37
 		--reg_bank1(1) <= x"00000000";
 		--reg_bank2(1) <= x"00000000";
 		--debug_signal <= x"FFFFFFFF";
@@ -122,14 +162,31 @@ begin
 		--ram_wea <= "0";
 		state <= "0000";
 	elsif rising_edge(clk_in) then
-	
+		
+		if division_cntr_u = "00000000" then
+			division_cntr_u <= "00001000";
+		elsif division_cntr_u = x"01" and state = "0001" then
+			division_cntr_u <= division_cntr_u +7;
+		else
+			division_cntr_u <= division_cntr_u -1;
+		end if;
+		
+		if division_cntr = "00000000" then
+			division_cntr <= "00001000";
+		elsif division_cntr = x"01" and state = "0001" then
+			division_cntr <= division_cntr +7;
+		else
+			division_cntr <= division_cntr -1;
+		end if;
+		
+		
 	---- Different operations from here on ----
 	
 	
 	--state 0 : Get command from control unit + get operands from registers
 		if(state = "0000" and cu_work_in = '1') then
 			
-			
+			division_sclr <= '0';
 			s_op3 <= cu_adr_in;
 			s_opc <= cu_com_in;
 			ram_wea <= "0";
@@ -435,11 +492,15 @@ begin
 				
 			--Division signed
 			when "01110" | "10000" =>
-				state <= "0011";
+				state <= "0111";
+				cu_data_out <= division_cntr_out;
+				
 			
 			--Division unsigned
 			when "01111" | "10001" =>
 				state <= "0101";
+				cu_data_out <= division_cntr_U_out;
+				
 				
 			when others =>
 			
@@ -509,12 +570,20 @@ begin
 							cu_data_out <= mult_result(63 downto 32);
 						elsif s_opc(4 downto 0) ="00111" and shift_ar='1' then
 							cu_data_out <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+						elsif s_opc(4 downto 0) = "01111"
+							or s_opc(4 downto 0) = "10001"
+							or s_opc(4 downto 0) = "01111"
+							or s_opc(4 downto 0) = "10001"
+							then
+						
+						
 						else
 						--Other operations
 							cu_data_out <= acc;
 						end if;
 				
 					
+			
 					
 
 			
@@ -559,6 +628,54 @@ begin
 			else
 				acc <= alu_remainderU;
 			end if;
+			
+			cu_data_out <=x"00000000";
+			
+			
+			
+			state <= "0010";
+		end if;
+	end if;
+	
+	--state 6 Division signed, step 1
+	if state = "0101" then
+		if alu_rfd = '1' then
+			if s_opc(6)='0' and s_opc(5)='0' then
+						alu_dividend <= s_op1;
+						alu_divisor <= s_op2;
+					elsif s_opc(6)='0' and s_opc(5)='1' then
+						alu_dividend <= s_op1;
+						alu_divisor <= ram_doutb;
+					elsif s_opc(6)='1' and s_opc(5)='0' then
+						alu_dividend <= ram_douta;
+						alu_divisor <= s_op2;
+					else
+						alu_dividend <= ram_douta;
+						alu_divisor <= ram_doutb;
+				end if;
+				division_flank_counter <= "00";
+				state <= "0100";
+		end if;
+	end if;
+	
+	--state 7 Division signed, step 2
+	if state = "0110" then
+		if division_flank_counter = "00" and alu_rfd = '0' then
+			division_flank_counter <= "01";
+		elsif division_flank_counter = "01" and alu_rfd = '1' then
+			division_flank_counter <= "10";
+		elsif division_flank_counter = "10" and alu_rfd = '0' then
+			division_flank_counter <= "11";
+		elsif division_flank_counter = "11" then
+			if s_opc(4 downto 0) = "01111" then
+				acc <= alu_quotient;
+			else
+				acc <= alu_remainder;
+			end if;
+			
+			cu_data_out <=x"00000000";
+			
+			
 			
 			state <= "0010";
 		end if;
