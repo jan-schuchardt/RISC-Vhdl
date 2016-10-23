@@ -42,7 +42,7 @@ begin
   err <= std_logic_vector(to_unsigned(0,err'length));
   time_ctr <= std_logic_vector(to_unsigned(0,time_ctr'length));
   ir <= std_logic_vector(to_unsigned(0,ir'length));
-  pc <= std_logic_vector(to_unsigned(0,pc'length));
+  pc <= std_logic_vector(to_unsigned(10,pc'length));
   mmu_work_out <= '0';
   alu_data_out1 <= std_logic_vector(to_unsigned(0,alu_data_out1'length));
   alu_work_out <= '0';
@@ -58,12 +58,14 @@ begin
   if state >= "1100" then
    case state is
    when "1100" =>
-    if mmu_ack_in = '1' then
+    if pc = std_logic_vector(to_unsigned(0,pc'length)) then
      mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
      mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
      mmu_com_out  <= "0" & "00";
      mmu_work_out <= '1';
      state <= "1101";
+    else
+     pc <= std_logic_vector(unsigned(pc) + 1);
     end if;
    when "1101" =>
     mmu_work_out <= '0';
@@ -621,6 +623,60 @@ mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
 mmu_adr_out  <= std_logic_vector(unsigned(pc) + 1) & "00";
 mmu_com_out  <= "0" & "00";
 mmu_work_out <= '1';
+if ir(29 downto 23)="0000001" then
+case ir(12 downto 10) is
+when "000" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01010";
+alu_work_out  <= '1';
+when "001" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01011";
+alu_work_out  <= '1';
+when "010" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01100";
+alu_work_out  <= '1';
+when "011" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01101";
+alu_work_out  <= '1';
+when "100" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01110";
+alu_work_out  <= '1';
+when "101" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "01111";
+alu_work_out  <= '1';
+when "110" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "10000";
+alu_work_out  <= '1';
+when "111" =>
+alu_data_out1 <= std_logic_vector(resize(unsigned(ir(17 downto 13)),alu_data_out1'length));
+alu_data_out2 <= std_logic_vector(resize(unsigned(ir(22 downto 18)),alu_data_out2'length));
+alu_adr_out   <= ir(9 downto 5);
+alu_com_out   <= "1" & "1" & "10001";
+alu_work_out  <= '1';
+when others =>
+ err <= "1";
+end case;
+else
 case ir(12 downto 10) is
 when "000" =>
 if ir(29 downto 23)="0000000" then
@@ -715,13 +771,16 @@ end if;
 when others =>
  err <= "1";
 end case;
+end if;
      state <= "0001";
     when "0001" =>
      alu_work_out <= '0';
      mmu_work_out <= '0';
      state <= "0010";
     when "0010" =>
+if ir(29 downto 23)/="0000001" or ir(12 downto 12)/="1" or alu_data_in=std_logic_vector(to_unsigned(0,alu_data_in'length)) then
      state <= "0011";
+end if;
     when "0011" =>
      if mmu_ack_in='1' then
       if mmu_data_in(1 downto 0)/="11" then
