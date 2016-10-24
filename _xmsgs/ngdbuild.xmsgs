@@ -5,6 +5,9 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="NgdBuild" num="889" delta="new" >Pad net &apos;<arg fmt="%s" index="1">CLK50M</arg>&apos; is not connected to an external port in this design.  A new port &apos;<arg fmt="%s" index="2">CLK50M</arg>&apos; has been added and is connected to this signal.
+</msg>
+
 <msg type="info" file="NgdBuild" num="889" delta="old" >Pad net &apos;<arg fmt="%s" index="1">CLKB_130M</arg>&apos; is not connected to an external port in this design.  A new port &apos;<arg fmt="%s" index="2">CLKB_130M</arg>&apos; has been added and is connected to this signal.
 </msg>
 
@@ -17,6 +20,13 @@
 </msg>
 
 <msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">DCM_SP</arg> to <arg fmt="%s" index="4">7.518700</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_SYS_CLK&quot; = PERIOD &quot;SYS_CLK&quot;  7.5187  ns HIGH 50 %;&gt; [ddr2_pinning.ucf(43)]</arg>).
+</msg>
+
+<msg type="error" file="NgdBuild" num="770" delta="new" ><arg fmt="%s" index="1">IBUFG</arg> &apos;<arg fmt="%s" index="2">Inst_vga_clk/CLKIN_IBUFG_INST</arg>&apos; and <arg fmt="%s" index="3">BUFG</arg> &apos;<arg fmt="%s" index="4">clk133/CLK0_BUFG_INST</arg>&apos; on net &apos;<arg fmt="%s" index="5">CLK50M</arg>&apos; are lined up in series. Buffers of the same direction cannot be placed in series.
+</msg>
+
+<msg type="error" file="NgdBuild" num="924" delta="new" ><arg fmt="%s" index="1">input</arg> pad net &apos;<arg fmt="%s" index="2">CLK50M</arg>&apos; is driving non-buffer primitives<arg fmt="%s" index="3">:
+  pin O on block clk133/CLK0_BUFG_INST with type BUFG</arg>
 </msg>
 
 </messages>
