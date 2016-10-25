@@ -248,6 +248,38 @@ def link_rtor(line, tokens, symbols, off, funct3, funct7):
 		print("Missing tokens in line "+str(line)+" : "+str(tokens))
 		raise
 
+def link_mul(line, tokens, symbol, off):
+	#MUL rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0, 0x1)
+	
+def link_mulh(line, tokens, symbol, off):
+	#MULH rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x1, 0x1)
+	
+def link_mulhsu(line, tokens, symbol, off):
+	#MULHSU rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x2, 0x1)
+	
+def link_mulhu(line, tokens, symbol, off):
+	#MULH rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x3, 0x1)
+		
+def link_div(line, tokens, symbol, off):
+	#DIV rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x4, 0x1)
+			
+def link_divu(line, tokens, symbol, off):
+	#DIVU rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x5, 0x1)
+	
+def link_rem(line, tokens, symbol, off):
+	#REM rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x6, 0x1)
+	
+def link_remu(line, tokens, symbol, off):
+	#REMU rd, rs1, rs2
+	return link_rtor(line, tokens, symbol, off, 0x7, 0x1)
+		
 def link_add(line, tokens, symbols, off):
 	#ADD rd, rs1, rs2
 	return link_rtor(line, tokens, symbols, off, 0, 0)
@@ -327,6 +359,14 @@ inst_dict = { \
 	"sra":link_sra, \
 	"or":link_or, \
 	"and":link_and, \
+	"mul":link_mul, \
+	"mulh":link_mulh, \
+	"mulhsu":link_mulhsu, \
+	"mulhu":link_mulhu, \
+	"div":link_div, \
+	"divu":link_divu, \
+	"rem":link_rem, \
+	"remu":link_remu, \
 	"dummy":None
 }
 
