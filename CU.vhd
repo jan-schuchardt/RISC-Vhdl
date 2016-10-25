@@ -42,7 +42,7 @@ begin
   err <= std_logic_vector(to_unsigned(0,err'length));
   time_ctr <= std_logic_vector(to_unsigned(0,time_ctr'length));
   ir <= std_logic_vector(to_unsigned(0,ir'length));
-  pc <= std_logic_vector(to_unsigned(10,pc'length));
+  pc <= std_logic_vector(to_unsigned(1073741800,pc'length));
   mmu_work_out <= '0';
   alu_data_out1 <= std_logic_vector(to_unsigned(0,alu_data_out1'length));
   alu_work_out <= '0';

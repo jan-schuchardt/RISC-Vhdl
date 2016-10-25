@@ -92,10 +92,6 @@ architecture Behavioral of ALU is
 	signal alu_rfdU: std_logic;
 	signal alu_rfd: std_logic;
 	signal division_flank_counter: std_logic_vector(1 downto 0);
-	signal division_cntr_U:unsigned(7 downto 0);
-	signal division_cntr:unsigned(7 downto 0);
-	signal division_cntr_U_out:std_logic_vector(31 downto 0);
-	signal division_cntr_out:std_logic_vector(31 downto 0);
 	signal division_sclr:std_logic;
 	signal zero : std_logic_vector(31 downto 0);
 		 
@@ -135,8 +131,6 @@ architecture Behavioral of ALU is
 	);
 	
 	zero <= x"00000000";
-	division_cntr_U_out <= x"000000" & std_logic_vector(division_cntr_U);
-	division_cntr_out <= x"000000" & std_logic_vector(division_cntr);
 	debug_data_out <= debug_signal;
 	debug_adr_out <= debug_adr_signal;
 	
@@ -153,8 +147,7 @@ begin
 		division_flank_counter <= "00";
 		
 		division_sclr <='1';
-		division_cntr_u <= "00100011"; --35
-		division_cntr <= "00100101"; --37
+
 		--reg_bank1(1) <= x"00000000";
 		--reg_bank2(1) <= x"00000000";
 		--debug_signal <= x"FFFFFFFF";
@@ -162,22 +155,7 @@ begin
 		--ram_wea <= "0";
 		state <= "0000";
 	elsif rising_edge(clk_in) then
-		
-		if division_cntr_u = "00000000" then
-			division_cntr_u <= "00001000";
-		elsif division_cntr_u = x"01" and state = "0001" then
-			division_cntr_u <= division_cntr_u +7;
-		else
-			division_cntr_u <= division_cntr_u -1;
-		end if;
-		
-		if division_cntr = "00000000" then
-			division_cntr <= "00001000";
-		elsif division_cntr = x"01" and state = "0001" then
-			division_cntr <= division_cntr +7;
-		else
-			division_cntr <= division_cntr -1;
-		end if;
+	
 		
 		
 	---- Different operations from here on ----
@@ -492,15 +470,15 @@ begin
 				
 			--Division signed
 			when "01110" | "10000" =>
-				state <= "0111";
-				cu_data_out <= division_cntr_out;
+				state <= "0101";
+				
+				cu_data_out <= x"00000539";
 				
 			
 			--Division unsigned
 			when "01111" | "10001" =>
-				state <= "0101";
-				cu_data_out <= division_cntr_U_out;
-				
+				state <= "0011";
+				cu_data_out <= x"0000053A";				
 				
 			when others =>
 			
@@ -558,7 +536,7 @@ begin
 							debug_signal <= acc;
 						end if;
 						
-						debug_adr_signal <= "0" & s_op3;
+					debug_adr_signal <= "0" & s_op3;
 						
 					end if;
 					
@@ -572,10 +550,11 @@ begin
 							cu_data_out <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
 						elsif s_opc(4 downto 0) = "01111"
 							or s_opc(4 downto 0) = "10001"
-							or s_opc(4 downto 0) = "01111"
-							or s_opc(4 downto 0) = "10001"
+							or s_opc(4 downto 0) = "01110"
+							or s_opc(4 downto 0) = "10000"
 							then
-						
+								cu_data_out <= (others => '0');
+								
 						
 						else
 						--Other operations
@@ -594,7 +573,7 @@ begin
 	end if;
 	
 	--state 4 Division Unsigned, step 1
-	if state = "0101" then
+	if state = "0011" then
 		if alu_rfdU = '1' then
 			if s_opc(6)='0' and s_opc(5)='0' then
 						alu_dividend <= s_op1;
@@ -615,7 +594,7 @@ begin
 	end if;
 	
 	--state 5 Division Unsigned, step 2
-	if state = "0110" then
+	if state = "0100" then
 		if division_flank_counter = "00" and alu_rfdU = '0' then
 			division_flank_counter <= "01";
 		elsif division_flank_counter = "01" and alu_rfdU = '1' then
@@ -629,7 +608,6 @@ begin
 				acc <= alu_remainderU;
 			end if;
 			
-			cu_data_out <=x"00000000";
 			
 			
 			
@@ -654,7 +632,7 @@ begin
 						alu_divisor <= ram_doutb;
 				end if;
 				division_flank_counter <= "00";
-				state <= "0100";
+				state <= "0110";
 		end if;
 	end if;
 	
@@ -672,8 +650,7 @@ begin
 			else
 				acc <= alu_remainder;
 			end if;
-			
-			cu_data_out <=x"00000000";
+
 			
 			
 			
@@ -684,9 +661,6 @@ begin
 	
 	
 end process;
-
-
-
 
 	
 	--test <= '1' when reg_data(1) = "00101010101010101010000000000000" else '0';

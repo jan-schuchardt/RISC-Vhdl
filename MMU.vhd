@@ -157,7 +157,7 @@ architecture Behavioral of MMU is
 						
 							--we wait for work_in input
 							if work_in = '1' then
-							
+								data_in_buf <= data_in;
 								ack_out <= '0'; --CPU has to wait until MMU has finished
 								addr_in_buf <= addr_in; --Buffer the adress in any case
 								
@@ -304,8 +304,10 @@ architecture Behavioral of MMU is
 						when MMU_BRAM_WRITE_SECOND =>
 							--Return to idle state of mmu after we have written the next 64 bit cell
 							br_write_enable <= '0';
-							ack_out <= '1';
-							MMU_STATE <= MMU_IDLE;
+							if ddr2_data_valid = '1' then
+								ack_out <= '1';
+								MMU_STATE <= MMU_IDLE;
+							end if;
 							
 						when MMU_SDRAM_WRITE_FIRST =>
 							--after the first write was sent, we wait for data valid as confirmation

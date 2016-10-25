@@ -1,0 +1,2 @@
+ADDI x1, x0, 0x3
+ADDI x2, x0, 0x4
