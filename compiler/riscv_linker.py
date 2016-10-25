@@ -6,11 +6,14 @@ def token_to_reg(regstr):
 	return int(m.groups()[0])
 		
 def pc_relative_symbol(symbol, off, symbols):
-	if symbol in symbols:
-		return symbols[symbol]-off #+4 ???
-	else:
-		print(symbol+" not in symbol table")
-		raise
+	try:
+		return int(symbol, 0)
+	except:
+		if symbol in symbols:
+			return symbols[symbol]-off #+4 ???
+		else:
+			print(symbol+" not in symbol table")
+			raise
 
 def link_lui(line, tokens, symbols, off):
 	#LUI rd, imm
