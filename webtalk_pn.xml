@@ -3,11 +3,19 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pn" timeStamp="Tue Oct 25 12:04:28 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="E20563DC72D043B4BFFAF457D5545ED1" type="project"/>
 <property name="ProjectIteration" value="50" type="project"/>
 <property name="ProjectFile" value="C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/RISCV.xise" type="project"/>
+=======
+<application name="pn" timeStamp="Mon Oct 24 22:27:34 2016">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="E20563DC72D043B4BFFAF457D5545ED1" type="project"/>
+<property name="ProjectIteration" value="42" type="project"/>
+<property name="ProjectFile" value="D:/RiscV/RISC-Vhdl/RISCV.xise" type="project"/>
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <property name="ProjectCreationTimestamp" value="2016-09-08T13:12:15" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -27,7 +35,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
-<property name="PROP_CompxlibEdkSimLib" value="true" type="process"/>
 <property name="PROP_DevFamily" value="Spartan3A and Spartan3AN" type="design"/>
 <property name="PROP_DevDevice" value="xc3s700a" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan3a" type="design"/>

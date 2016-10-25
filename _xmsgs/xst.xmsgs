@@ -5,6 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<<<<<<< HEAD
 <msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">262</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
 </msg>
 
@@ -64,17 +65,329 @@
 </msg>
 
 <msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">183</arg>: Index value(s) does not match array range, simulation mismatch.
+=======
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/toplevel</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/toplevel/behaviour</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/toplevel.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk133m_dcm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/clk133m_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk133m_dcm/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/clk133m_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Clock_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/Clock_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Clock_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/Clock_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CPU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/CPU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CPU/CPU_1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V6/RISC-VHDL/CPU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/CPU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core/arc_mem_interface_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MMU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/MMU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MMU/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/MMU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/vga.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga/behaviour</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/vga.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/vga.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga_clk</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ipcore_dir/vga_clk.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/vga_clk.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga_clk/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ipcore_dir/vga_clk.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/vga_clk.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/BLOCKRAM</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/BLOCKRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/BLOCKRAM/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/BLOCKRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ClockDivider</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ClockDivider.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/ClockDivider.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ClockDivider/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ClockDivider.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/ClockDivider.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CU/CU_1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/CU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Control_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Control_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_top/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_top_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_top_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_top_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_top_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_top/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_clk_dcm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_clk_dcm/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Read_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Read_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Read_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Read_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Write_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Write_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Write_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Write_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_ctl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_ctl/arc_cal_ctl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_controller_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_controller_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_write_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_write_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_tap_dly</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_tap_dly/arc_tap_dly</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_dqs_delay</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_dqs_delay/arc_dqs_delay</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_0_wr_en_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_0_wr_en_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_1_wr_en_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_1_wr_en_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_ram8d_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_ram8d_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_rd_gray_cntr</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_rd_gray_cntr/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dm_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dm_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dqs_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dqs_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dq_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dq_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_wr_gray_cntr</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_wr_gray_cntr/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_parameters_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_parameters_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">262</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">262</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK2X_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">262</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">296</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">296</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">362</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">362</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">362</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">59</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">59</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">183</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">476</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">509</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">509</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">675</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">768</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">866</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;err&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">115</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divUnsigned</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divSigned</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">205</arg>: Index value(s) does not match array range, simulation mismatch.
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">reg_data1</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">196</arg>: Index value(s) does not match array range, simulation mismatch.
+=======
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">218</arg>: Index value(s) does not match array range, simulation mismatch.
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">reg_data2</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
@@ -124,16 +437,74 @@
 </msg>
 
 <msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+=======
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">533</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">537</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">539</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">543</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">544</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">546</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">546</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">549</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">550</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">555</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">556</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">566</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">566</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">566</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">566</arg>: Size of operands are different : result is &lt;false&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">149</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <arg fmt="%s" index="3">&lt;state&gt;, &lt;alu_rfdU&gt;, &lt;s_opc&gt;, &lt;s_op1&gt;, &lt;s_op2&gt;, &lt;ram_doutb&gt;, &lt;ram_douta&gt;, &lt;division_flank_counter&gt;, &lt;alu_quotientU&gt;, &lt;alu_remainderU&gt;, &lt;alu_rfd&gt;, &lt;alu_quotient&gt;, &lt;alu_remainder&gt;</arg>
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ram_wea</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ALU</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/MMU.vhd</arg>&quot; line <arg fmt="%d" index="2">200</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">br_addr_in</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
 </msg>
 
 <msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">218</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+=======
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/MMU.vhd</arg>&quot; line <arg fmt="%d" index="2">200</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">br_addr_in</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">218</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <arg fmt="%s" index="3">&lt;m_rd&gt;, &lt;m_we&gt;, &lt;mrd&gt;, &lt;mwe&gt;</arg>
 </msg>
 
@@ -146,22 +517,19 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">v_BANK</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Control_VHDL</arg>&gt; has a constant value of <arg fmt="%s" index="3">00</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ddr_odt2</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_controller_0</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ddr_odt2</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_controller_0</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
-</msg>
-
-<msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
@@ -197,6 +565,10 @@
 <msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
+</msg>
+
+<<<<<<< HEAD
 <msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/jan/Documents/VHDL-Projects/V8/RISC-VHDL/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
 </msg>
 
@@ -264,6 +636,75 @@
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+=======
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RiscV/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 </msg>
 
 <msg type="info" file="Xst" num="1432" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">tap_dly_reg</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
@@ -311,10 +752,17 @@
 <msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ram_addra</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">alu_divisor</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+=======
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">alu_remainderU</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">alu_quotientU</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">division_flank_counter</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -323,6 +771,15 @@
 <msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
+<<<<<<< HEAD
+=======
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">alu_divisor</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">alu_dividend</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
@@ -4127,6 +4584,15 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">write_data_m4_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_data_write_0</arg>&gt;.
 </msg>
 
+<<<<<<< HEAD
+=======
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <msg type="info" file="Xst" num="2146" delta="new" >In block &lt;<arg fmt="%s" index="1">CU</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">time_ctr</arg>&gt; </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">r_command_register_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DDR2_Read_VHDL</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -4147,6 +4613,24 @@
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">dqs_div_rdburstcount_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DDR2_Ram_Core_controller_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<<<<<<< HEAD
+=======
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">state_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ALU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">division_flank_counter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">division_flank_counter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">division_flank_counter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">division_flank_counter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+</msg>
+
+>>>>>>> 71eaf709ad8f5bdf05c8f87d6a0ea04a646b5253
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Inst_vga/regs&lt;13&gt;_2_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
