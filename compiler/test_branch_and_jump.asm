@@ -1,6 +1,6 @@
 .start
 LUI x20, 0xAAAAA
-AUIPC x29, start
+AUIPC x29, 0x0
 ADDI x1, x0, 0x3
 ADDI x2, x0, 0x5
 ADD x3, x0, x0
@@ -12,8 +12,8 @@ ADD x8, x0, x0
 ADD x9, x0, x0
 ADD x10, x0, x0
 ADD x31, x0, x0
-AUIPC x21, start
-AUIPC x30, start
+AUIPC x21, 0x123
+AUIPC x30, 0x0
 ADDI x30, x0, 0x10
 .loop1
 BNE x3, x0, is_not_zero
@@ -51,11 +51,11 @@ JAL x31, end4
 .lt2
 ADD x10, x10, x2
 .end4
-JALR x30, -0x10
+JALR x25, x30, -0x10
 .equal
 BLT x3, x4, end5
 BGE x3, x4, end6
 JAL x31, end5
 .end6
-JALR x29, 0x0
+JALR x25, x29, 0x0
 .end5
