@@ -137,7 +137,7 @@ architecture Behavioral of ALU is
 	debug_adr_out <= debug_adr_signal;
 	
 	debug2(0) <= alu_rfd;
-	debug2(3 downto 1) <= division_flank_counter;
+	debug2(3 downto 1) <= division_flank_counter(2 downto 0);
 	debug2(7 downto 4) <= state;	
 	--debug_data_out <= x"10101010";
 	--debug_adr_out <= "00001";
@@ -149,7 +149,7 @@ process (clk_in, rst_in)
 begin
 
 	if(rst_in = '1') then
-		division_flank_counter <= "000";
+		division_flank_counter <= "0000";
 		--division_sclr <='1';
 
 		--reg_bank1(1) <= x"00000000";
@@ -648,7 +648,7 @@ begin
 			else
 				acc <= alu_remainder;
 			end if;	
-			division_flank_counter <= "000";
+			division_flank_counter <= "0000";
 			state <= "0010";
 		end if;
 	end if;

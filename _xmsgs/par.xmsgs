@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Place" num="834" delta="new" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">63</arg> IOs, <arg fmt="%d" index="2">62</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
+<msg type="warning" file="Place" num="1019" delta="new" >A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB / clock site pair. The clock component &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/infrastructure_top0/user_rst_BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">BUFGMUX_X0Y2</arg>&gt;. The IO component &lt;<arg fmt="%s" index="3">reset</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">IPAD279</arg>&gt;.  This will not allow the use of the fast path between the IO and the Clock buffer. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">reset.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">clk_tb</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">clk_cpu</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/infrastructure_top0/user_rst</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">4</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="ParHelpers" num="79" delta="new" >
+The following Clock signals are not routed on the dedicated
+global clock routing resources. This will usually result in
+longer delays and higher skew for the clock load pins. This could
+be the result of incorrect clock placement, more than 8 clocks
+feeding logic in a single quadrant of the device, or incorrect
+logic partitioning into the quadrant(s). Check the timing report
+to verify the delay and skew for this net
+</msg>
+
+<msg type="warning" file="Par" num="468" delta="new" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+Review the timing report using Timing Analyzer (In ISE select &quot;Post-Place &amp;
+Route Static Timing Report&quot;). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+Try the Design Goal and Strategies for Timing Performance(In ISE select Project -&gt; Design Goals &amp; Strategies) to ensure the best options are set in the tools for timing closure.
+
+</msg>
+
+</messages>
+
