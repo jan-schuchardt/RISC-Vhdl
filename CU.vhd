@@ -949,5 +949,5 @@ mmu_work_out <= '1';
 end process;
 err_out <= err(0);
 pc_out <= pc(29 downto 0) & "00";
-ir_out <= ir(29 downto 0) & "11";
+ir_out <= alu_data_in;--ir(29 downto 0) & "11";
 end architecture;

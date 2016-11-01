@@ -236,6 +236,11 @@ signal	 mmu_addr_in:  std_logic_vector(31 downto 0);
 signal	 mmu_cmd_in:  std_logic_vector(2 downto 0);
 signal	 mmu_work_in :  std_logic;
 signal	 mmu_ack_out :  std_logic;	
+
+
+
+
+signal debug2signal:  std_logic_vector(7 downto 0);
 	
 begin
 
@@ -244,11 +249,14 @@ begin
 -----------------------------------------------------------------------------
 reset_n <= not reset;
 
-leds(7 downto 3) <= (others => '0');
-leds(2) <= err_out;
-leds(1) <= slow;
-leds(0) <= ddr2_led;
-  
+leds <= debug2signal;
+
+
+--leds(7 downto 3) <= (others => '0');
+--leds(2) <= err_out;
+--leds(1) <= slow;
+--leds(0) <= ddr2_led;
+--  
 -----------------------------------------------------------------------------
 -- Clock Generator
 -----------------------------------------------------------------------------
@@ -320,7 +328,9 @@ CPU: entity work.cpu PORT MAP(
 	 cpu_mmu_adr_out  => mmu_addr_in,
 	 cpu_mmu_com_out  => mmu_cmd_in,
 	 cpu_mmu_work_out => mmu_work_in,
-	 cpu_mmu_ack_in   => mmu_ack_out
+	 cpu_mmu_ack_in   => mmu_ack_out,
+	 
+	 debug2 => debug2signal
 ); 
   
 -----------------------------------------------------------------------------
@@ -395,5 +405,7 @@ PORT MAP (
     cntrl0_ddr2_odt => cntrl0_ddr2_odt,		
     cntrl0_rst_dqs_div_in => cntrl0_rst_dqs_div_in,
     cntrl0_rst_dqs_div_out => cntrl0_rst_dqs_div_out);	 
+
+
 
 end behaviour;

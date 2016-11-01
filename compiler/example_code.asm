@@ -19,6 +19,3 @@ LUI x13, 0x3
 SRA x14, x11, x12
 SRL x15, x11, x13
 SLL x16, x11, x12
-AUIPC x17, 4
-DIV x18, x19, x20
-MUL x21, x22, x23

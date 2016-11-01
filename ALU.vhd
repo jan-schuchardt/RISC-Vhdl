@@ -31,7 +31,9 @@ entity ALU is
 	--out
 	cu_data_out: out std_logic_vector(31 downto 0);
 	debug_data_out:out std_logic_vector(31 downto 0);
-	debug_adr_out: out std_logic_vector(5 downto 0)
+	debug_adr_out: out std_logic_vector(5 downto 0);
+	
+	debug2: out std_logic_vector(7 downto 0)
 	);
 	
 end ALU;
@@ -91,7 +93,7 @@ architecture Behavioral of ALU is
 	signal alu_quotient: std_logic_vector(31 downto 0);
 	signal alu_rfdU: std_logic;
 	signal alu_rfd: std_logic;
-	signal division_flank_counter: std_logic_vector(1 downto 0);
+	signal division_flank_counter: std_logic_vector(3 downto 0);
 	signal division_sclr:std_logic;
 	signal zero : std_logic_vector(31 downto 0);
 		 
@@ -115,7 +117,7 @@ architecture Behavioral of ALU is
     quotient => alu_quotientU, 
     divisor => alu_divisor,
     fractional => alu_remainderU,
-	 sclr => division_sclr
+	 sclr => '0'
 	
 	);
 	
@@ -126,7 +128,7 @@ architecture Behavioral of ALU is
     quotient => alu_quotient, 
     divisor => alu_divisor,
     fractional => alu_remainder,
-	 sclr => division_sclr
+	 sclr => '0'
 	
 	);
 	
@@ -134,6 +136,9 @@ architecture Behavioral of ALU is
 	debug_data_out <= debug_signal;
 	debug_adr_out <= debug_adr_signal;
 	
+	debug2(0) <= alu_rfd;
+	debug2(3 downto 1) <= division_flank_counter;
+	debug2(7 downto 4) <= state;	
 	--debug_data_out <= x"10101010";
 	--debug_adr_out <= "00001";
 	
@@ -144,9 +149,8 @@ process (clk_in, rst_in)
 begin
 
 	if(rst_in = '1') then
-		division_flank_counter <= "00";
-		
-		division_sclr <='1';
+		division_flank_counter <= "000";
+		--division_sclr <='1';
 
 		--reg_bank1(1) <= x"00000000";
 		--reg_bank2(1) <= x"00000000";
@@ -164,7 +168,7 @@ begin
 	--state 0 : Get command from control unit + get operands from registers
 		if(state = "0000" and cu_work_in = '1') then
 			
-			division_sclr <= '0';
+			--division_sclr <= '0';
 			s_op3 <= cu_adr_in;
 			s_opc <= cu_com_in;
 			ram_wea <= "0";
@@ -469,16 +473,27 @@ begin
 				
 				
 			--Division signed
-			when "01110" | "10000" =>
+			when "01110" =>
 				state <= "0101";
 				
-				cu_data_out <= x"00000539";
+				cu_data_out <= x"00000100";
 				
+				
+			when "10000" =>
+			
+				state <= "0101";
+				
+				cu_data_out <= x"00000200";
 			
 			--Division unsigned
-			when "01111" | "10001" =>
+			when "01111"=>
 				state <= "0011";
-				cu_data_out <= x"0000053A";				
+				cu_data_out <= x"00000300";	
+
+			when "10001" =>
+			
+				state <= "0011";
+				cu_data_out <= x"00000400";	
 				
 			when others =>
 			
@@ -572,88 +587,68 @@ begin
 		
 	end if;
 	
-	--state 4 Division Unsigned, step 1
-	if state = "0011" then
-		if alu_rfdU = '1' then
-			if s_opc(6)='0' and s_opc(5)='0' then
-						alu_dividend <= s_op1;
-						alu_divisor <= s_op2;
-					elsif s_opc(6)='0' and s_opc(5)='1' then
-						alu_dividend <= s_op1;
-						alu_divisor <= ram_doutb;
-					elsif s_opc(6)='1' and s_opc(5)='0' then
-						alu_dividend <= ram_douta;
-						alu_divisor <= s_op2;
-					else
-						alu_dividend <= ram_douta;
-						alu_divisor <= ram_doutb;
-				end if;
-				division_flank_counter <= "00";
-				state <= "0100";
-		end if;
-	end if;
+--	--state 4 Division Unsigned, step 1
+--	if state = "0011" then
+--		if alu_rfdU = '1' then
+--			if s_opc(6)='0' and s_opc(5)='0' then
+--						alu_dividend <= s_op1;
+--						alu_divisor <= s_op2;
+--					elsif s_opc(6)='0' and s_opc(5)='1' then
+--						alu_dividend <= s_op1;
+--						alu_divisor <= ram_doutb;
+--					elsif s_opc(6)='1' and s_opc(5)='0' then
+--						alu_dividend <= ram_douta;
+--						alu_divisor <= s_op2;
+--					else
+--						alu_dividend <= ram_douta;
+--						alu_divisor <= ram_doutb;
+--				end if;
+--				division_flank_counter <= "000";
+--				state <= "0100";
+--		end if;
+--	end if;
+--	
+--	--state 5 Division Unsigned, step 2
+--	if state = "0100" then
+--		if division_flank_counter = "000" and alu_rfdU = '0' then
+--			division_flank_counter <= "001";
+--		elsif division_flank_counter = "001" and alu_rfdU = '1' then
+--			division_flank_counter <= "010";
+--		elsif division_flank_counter = "010" and alu_rfdU = '0' then
+--			division_flank_counter <= "011";
+--		elsif division_flank_counter = "011" then
+--			if s_opc(4 downto 0) = "01111" then
+--				acc <= alu_quotientU;
+--			else
+--				acc <= alu_remainderU;
+--			end if;
+--			
+--			
+--			
+--			
+--			state <= "0010";
+--		end if;
+--	end if;
 	
-	--state 5 Division Unsigned, step 2
-	if state = "0100" then
-		if division_flank_counter = "00" and alu_rfdU = '0' then
-			division_flank_counter <= "01";
-		elsif division_flank_counter = "01" and alu_rfdU = '1' then
-			division_flank_counter <= "10";
-		elsif division_flank_counter = "10" and alu_rfdU = '0' then
-			division_flank_counter <= "11";
-		elsif division_flank_counter = "11" then
-			if s_opc(4 downto 0) = "01111" then
-				acc <= alu_quotientU;
-			else
-				acc <= alu_remainderU;
-			end if;
-			
-			
-			
-			
-			state <= "0010";
-		end if;
-	end if;
-	
-	--state 6 Division signed, step 1
+	--state 6 Division signed
 	if state = "0101" then
-		if alu_rfd = '1' then
-			if s_opc(6)='0' and s_opc(5)='0' then
-						alu_dividend <= s_op1;
-						alu_divisor <= s_op2;
-					elsif s_opc(6)='0' and s_opc(5)='1' then
-						alu_dividend <= s_op1;
-						alu_divisor <= ram_doutb;
-					elsif s_opc(6)='1' and s_opc(5)='0' then
-						alu_dividend <= ram_douta;
-						alu_divisor <= s_op2;
-					else
-						alu_dividend <= ram_douta;
-						alu_divisor <= ram_doutb;
-				end if;
-				division_flank_counter <= "00";
-				state <= "0110";
-		end if;
-	end if;
-	
-	--state 7 Division signed, step 2
-	if state = "0110" then
-		if division_flank_counter = "00" and alu_rfd = '0' then
-			division_flank_counter <= "01";
-		elsif division_flank_counter = "01" and alu_rfd = '1' then
-			division_flank_counter <= "10";
-		elsif division_flank_counter = "10" and alu_rfd = '0' then
-			division_flank_counter <= "11";
-		elsif division_flank_counter = "11" then
-			if s_opc(4 downto 0) = "01111" then
+		alu_dividend <= ram_douta;
+		alu_divisor <= ram_doutb;
+		if division_flank_counter = "0000" and alu_rfd = '1' then
+			division_flank_counter <= "0001";
+		elsif division_flank_counter = "0001" and alu_rfd = '0' then
+			division_flank_counter <= "0010";
+		elsif division_flank_counter = "0010" and alu_rfd = '1' then
+			division_flank_counter <= "0011";
+		elsif division_flank_counter = "0011" and alu_rfd = '0' then
+			division_flank_counter <= "0100";
+		elsif division_flank_counter = "0100" then
+			if s_opc(4 downto 0) = "01110" then
 				acc <= alu_quotient;
 			else
 				acc <= alu_remainder;
-			end if;
-
-			
-			
-			
+			end if;	
+			division_flank_counter <= "000";
 			state <= "0010";
 		end if;
 	end if;
