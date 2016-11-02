@@ -123,6 +123,7 @@ architecture Behavioral of MMU is
 	signal data_buf : std_logic_vector(127 downto 0); --Buffers two 64-Bit values read from bram with every read access
 	signal addr_in_buf : std_logic_vector(31 downto 0); --Signal to buffer an address for access cycles
 	signal write_mode : std_logic := '0'; --Signal to buffer if the MMU is in write mode
+	signal access_size : std_logic_vector(1 downto 0); --encoding follows cpu specification ("00" => 1, "01"=> 2, "11" => 3
 	
 	--Intern signals to be conncted to bram
 	signal br_data_in : std_logic_vector(63 downto 0);
@@ -187,6 +188,8 @@ architecture Behavioral of MMU is
 									write_mode <= '0';
 								end if;
 								
+								--Buffer the access size
+								access_size <= cmd_in(1 downto 0);
 							
 							end if;
 						
@@ -260,7 +263,54 @@ architecture Behavioral of MMU is
 								MMU_STATE <= MMU_IDLE;
 							else
 								--Todo apply the the right size to the right position
-								data_buf(31 downto 0) <= data_in_buf; --This provisional solution always writes 32 bit to the lowest position (which results in data loss)
+								case access_size is
+								
+									--8-Bit access
+									when "00" =>
+										case addr_in_buf(2 downto 0) is
+											when "000" => data_buf(7 downto 0) <= data_in_buf(7 downto 0);
+											when "001" => data_buf(15 downto 8) <= data_in_buf(7 downto 0);
+											when "010" => data_buf(23 downto 16) <= data_in_buf(7 downto 0);
+											when "011" => data_buf(31 downto 24) <= data_in_buf(7 downto 0);
+											when "100" => data_buf(39 downto 32) <= data_in_buf(7 downto 0);
+											when "101" => data_buf(47 downto 40) <= data_in_buf(7 downto 0);
+											when "110" => data_buf(55 downto 48) <= data_in_buf(7 downto 0);
+											when "111" => data_buf(63 downto 56) <= data_in_buf(7 downto 0);
+											when others =>NULL;
+										end case;
+										
+									--16-Bit access	
+									when "01" =>
+										case addr_in_buf(2 downto 0) is
+											when "000" => data_buf(15 downto 0) <= data_in_buf(15 downto 0);
+											when "001" => data_buf(23 downto 8) <= data_in_buf(15 downto 0);
+											when "010" => data_buf(31 downto 16) <= data_in_buf(15 downto 0);
+											when "011" => data_buf(39 downto 24) <= data_in_buf(15 downto 0);
+											when "100" => data_buf(47 downto 32) <= data_in_buf(15 downto 0);
+											when "101" => data_buf(55 downto 40) <= data_in_buf(15 downto 0);
+											when "110" => data_buf(63 downto 48) <= data_in_buf(15 downto 0);
+											when "111" => data_buf(71 downto 56) <= data_in_buf(15 downto 0);
+											when others =>NULL;
+										end case;
+										
+									--32-Bit access	
+									when "11" =>
+										case addr_in_buf(2 downto 0) is
+											when "000" => data_buf(31 downto 0) <= data_in_buf(31 downto 0);
+											when "001" => data_buf(39 downto 8) <= data_in_buf(31 downto 0);
+											when "010" => data_buf(47 downto 16) <= data_in_buf(31 downto 0);
+											when "011" => data_buf(55 downto 24) <= data_in_buf(31 downto 0);
+											when "100" => data_buf(63 downto 32) <= data_in_buf(31 downto 0);
+											when "101" => data_buf(71 downto 40) <= data_in_buf(31 downto 0);
+											when "110" => data_buf(79 downto 48) <= data_in_buf(31 downto 0);
+											when "111" => data_buf(87 downto 56) <= data_in_buf(31 downto 0);
+											when others =>NULL;
+										end case;
+										
+									when others=>NULL;	
+										
+								end case;
+								--data_buf(31 downto 0) <= data_in_buf; --This provisional solution always writes 32 bit to the lowest position (which results in data loss)
 								MMU_STATE <= MMU_WRITE_BACK;
 							end if;
 							
