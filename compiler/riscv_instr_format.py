@@ -61,3 +61,9 @@ def sb_imm_split(imm):
 	imm2 = (rshift(imm, 5) & 0x3F)
 	imm2 = imm2 | ((rshift(imm, 12) & 1)<<6)
 	return (int(imm1), int(imm2))
+	
+def jal_imm_split(imm):
+	imm_o = int(imm/2)
+	imm = compile_bitfield(19, 9, imm_o & 0x3FF, imm_o)
+	bit_eleven = rshift(imm_o & 0x400, 10)
+	imm = compile_bitfield()

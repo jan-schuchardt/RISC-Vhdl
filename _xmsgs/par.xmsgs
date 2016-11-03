@@ -19,20 +19,6 @@
    <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
 </msg>
 
-<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/infrastructure_top0/user_rst</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">4</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="ParHelpers" num="79" delta="old" >
-The following Clock signals are not routed on the dedicated
-global clock routing resources. This will usually result in
-longer delays and higher skew for the clock load pins. This could
-be the result of incorrect clock placement, more than 8 clocks
-feeding logic in a single quadrant of the device, or incorrect
-logic partitioning into the quadrant(s). Check the timing report
-to verify the delay and skew for this net
-</msg>
-
 <msg type="warning" file="Par" num="468" delta="old" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
 Review the timing report using Timing Analyzer (In ISE select &quot;Post-Place &amp;

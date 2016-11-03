@@ -6,6 +6,7 @@ def token_to_reg(regstr):
 	return int(m.groups()[0])
 		
 def pc_relative_symbol(symbol, off, symbols):
+	print(off)
 	try:
 		return int(symbol, 0)
 	except:
@@ -46,7 +47,7 @@ def link_jal(line, tokens, symbols, off):
 	if(len(tokens) == 3):
 		try:
 			rd = token_to_reg(tokens[1])
-			imm = int(pc_relative_symbol(tokens[2], off, symbols) / 2)
+			imm = int(pc_relative_symbol(tokens[2], off, symbols) / 1)
 			return iformat.le_encode(iformat.compile_u(0x6F, rd, imm))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
@@ -75,7 +76,7 @@ def link_cbranch(line, tokens, symbols, off, funct3):
 		try:
 			rs1 = token_to_reg(tokens[1])
 			rs2 = token_to_reg(tokens[2])
-			imm = int(pc_relative_symbol(tokens[3], off, symbols) / 2)
+			imm = int(pc_relative_symbol(tokens[3], off, symbols) / 1)
 			imms = iformat.sb_imm_split(imm)
 			return iformat.le_encode(iformat.compile_sb(0x63, imms[0], funct3, rs1, rs2, imms[1]))
 		except:

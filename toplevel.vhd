@@ -249,13 +249,13 @@ begin
 -----------------------------------------------------------------------------
 reset_n <= not reset;
 
-leds <= debug2signal;
+--leds <= debug2signal;
 
 
---leds(7 downto 3) <= (others => '0');
---leds(2) <= err_out;
---leds(1) <= slow;
---leds(0) <= ddr2_led;
+leds(7 downto 3) <= (others => '0');
+leds(2) <= err_out;
+leds(1) <= slow;
+leds(0) <= ddr2_led;
 --  
 -----------------------------------------------------------------------------
 -- Clock Generator
