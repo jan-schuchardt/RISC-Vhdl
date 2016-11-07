@@ -48,7 +48,7 @@ def link_jal(line, tokens, symbols, off):
 		try:
 			rd = token_to_reg(tokens[1])
 			imm = int(pc_relative_symbol(tokens[2], off, symbols) / 1)
-			return iformat.le_encode(iformat.compile_u(0x6F, rd, imm))
+			return iformat.le_encode(iformat.compile_u(0x6F, rd, iformat.jal_imm_split(imm)))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
 	else:
