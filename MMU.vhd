@@ -120,7 +120,7 @@ architecture Behavioral of MMU is
 	signal MMU_STATE : MMU_STATE_T := MMU_IDLE;
 	
 	signal data_in_buf : std_logic_vector(31 downto 0); --Buffer for the write input data from CPU
-	signal data_buf : std_logic_vector(63 downto 0); --Buffers two 64-Bit values read from bram with every read access
+	signal data_buf : std_logic_vector(63 downto 0); --Buffers two 32-Bit values read from bram with every read access
 	signal addr_in_buf : std_logic_vector(31 downto 0); --Signal to buffer an address for access cycles
 	signal write_mode : std_logic := '0'; --Signal to buffer if the MMU is in write mode
 	signal access_size : std_logic_vector(1 downto 0); --encoding follows cpu specification ("00" => 1, "01"=> 2, "11" => 3
