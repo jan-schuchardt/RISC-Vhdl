@@ -41,315 +41,315 @@ FL C:/Users/jan/Documents/VHDL-Projects/Swag/risc-vhdl/MMU.vhd 2016/11/01.22:48:
 FL C:/Users/jan/Documents/VHDL-Projects/Swag/risc-vhdl/toplevel.vhd 2016/11/01.22:48:18 P.20131013
 FL C:/Users/jan/Documents/VHDL-Projects/Swag/risc-vhdl/vga.vhd 2016/11/01.22:48:18 P.20131013
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd 2016/11/03.08:33:01 P.20131013
-EN work/ALU 1478606252 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd \
+EN work/ALU 1478631438 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/ALU/Behavioral 1478606253 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd EN work/ALU 1478606252 \
+AR work/ALU/Behavioral 1478631439 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd EN work/ALU 1478631438 \
       CP divUnsigned CP divSigned
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd 2016/11/08.12:56:25 P.20131013
-EN work/BLOCKRAM 1478606246 \
+EN work/BLOCKRAM 1478631432 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/BLOCKRAM/Behavioral 1478606247 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd EN work/BLOCKRAM 1478606246
+AR work/BLOCKRAM/Behavioral 1478631433 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd EN work/BLOCKRAM 1478631432
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd 2016/09/24.13:53:17 P.20131013
-EN work/clk133m_dcm 1478606258 \
+EN work/clk133m_dcm 1478631444 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/clk133m_dcm/BEHAVIORAL 1478606259 \
+AR work/clk133m_dcm/BEHAVIORAL 1478631445 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd \
-      EN work/clk133m_dcm 1478606258 CP BUFG CP IBUFG CP DCM_SP
+      EN work/clk133m_dcm 1478631444 CP BUFG CP IBUFG CP DCM_SP
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd 2016/09/24.13:53:17 P.20131013
-EN work/ClockDivider 1478606254 \
+EN work/ClockDivider 1478631440 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/ClockDivider/Behavioral 1478606255 \
+AR work/ClockDivider/Behavioral 1478631441 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd \
-      EN work/ClockDivider 1478606254
+      EN work/ClockDivider 1478631440
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd 2016/09/24.13:53:17 P.20131013
-EN work/Clock_VHDL 1478606256 \
+EN work/Clock_VHDL 1478631442 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Clock_VHDL/Verhalten 1478606257 \
+AR work/Clock_VHDL/Verhalten 1478631443 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd \
-      EN work/Clock_VHDL 1478606256
+      EN work/Clock_VHDL 1478631442
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd 2016/11/03.08:33:01 P.20131013
-EN work/CPU 1478606264 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd \
+EN work/CPU 1478631450 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/CPU/CPU_1 1478606265 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd EN work/CPU 1478606264 \
+AR work/CPU/CPU_1 1478631451 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd EN work/CPU 1478631450 \
       CP work/CU CP work/ALU CP work/ClockDivider
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd 2016/11/03.16:42:19 P.20131013
-EN work/CU 1478606250 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd \
+EN work/CU 1478631436 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/CU/CU_1 1478606251 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd EN work/CU 1478606250
+AR work/CU/CU_1 1478631437 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd EN work/CU 1478631436
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd 2016/10/19.17:46:05 P.20131013
-EN work/DDR2_Control_VHDL 1478606248 \
+EN work/DDR2_Control_VHDL 1478631434 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Control_VHDL/Verhalten 1478606249 \
+AR work/DDR2_Control_VHDL/Verhalten 1478631435 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd \
-      EN work/DDR2_Control_VHDL 1478606248 CP DDR2_Write_VHDL CP DDR2_Read_VHDL
+      EN work/DDR2_Control_VHDL 1478631434 CP DDR2_Write_VHDL CP DDR2_Read_VHDL
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core 1478606268 \
+EN work/DDR2_Ram_Core 1478631454 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd LB UNISIM \
       PB ieee/std_logic_1164 1381692176 PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core/arc_mem_interface_top 1478606269 \
+AR work/DDR2_Ram_Core/arc_mem_interface_top 1478631455 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd \
-      EN work/DDR2_Ram_Core 1478606268 CP DDR2_Ram_Core_top_0 \
+      EN work/DDR2_Ram_Core 1478631454 CP DDR2_Ram_Core_top_0 \
       CP DDR2_Ram_Core_infrastructure_top
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_cal_ctl 1478606210 \
+EN work/DDR2_Ram_Core_cal_ctl 1478631396 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_cal_ctl/arc_cal_ctl 1478606211 \
+AR work/DDR2_Ram_Core_cal_ctl/arc_cal_ctl 1478631397 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd \
-      EN work/DDR2_Ram_Core_cal_ctl 1478606210
+      EN work/DDR2_Ram_Core_cal_ctl 1478631396
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_cal_top 1478606228 \
+EN work/DDR2_Ram_Core_cal_top 1478631414 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_cal_top/arc 1478606229 \
+AR work/DDR2_Ram_Core_cal_top/arc 1478631415 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd \
-      EN work/DDR2_Ram_Core_cal_top 1478606228 CP DDR2_Ram_Core_cal_ctl \
+      EN work/DDR2_Ram_Core_cal_top 1478631414 CP DDR2_Ram_Core_cal_ctl \
       CP DDR2_Ram_Core_tap_dly
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_clk_dcm 1478606226 \
+EN work/DDR2_Ram_Core_clk_dcm 1478631412 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_clk_dcm/arc 1478606227 \
+AR work/DDR2_Ram_Core_clk_dcm/arc 1478631413 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd \
-      EN work/DDR2_Ram_Core_clk_dcm 1478606226 CP DCM CP BUFG
+      EN work/DDR2_Ram_Core_clk_dcm 1478631412 CP DCM CP BUFG
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_controller_0 1478606230 \
+EN work/DDR2_Ram_Core_controller_0 1478631416 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_controller_0/arc 1478606231 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_controller_0/arc 1478631417 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd \
-      EN work/DDR2_Ram_Core_controller_0 1478606230 CP FD
+      EN work/DDR2_Ram_Core_controller_0 1478631416 CP FD
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_controller_iobs_0 1478606216 \
+EN work/DDR2_Ram_Core_controller_iobs_0 1478631402 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_controller_iobs_0/arc 1478606217 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_controller_iobs_0/arc 1478631403 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd \
-      EN work/DDR2_Ram_Core_controller_iobs_0 1478606216 CP FD CP OBUF CP label \
+      EN work/DDR2_Ram_Core_controller_iobs_0 1478631402 CP FD CP OBUF CP label \
       CP IBUF
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_data_path_0 1478606232 \
+EN work/DDR2_Ram_Core_data_path_0 1478631418 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_data_path_0/arc 1478606233 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_data_path_0/arc 1478631419 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd \
-      EN work/DDR2_Ram_Core_data_path_0 1478606232 CP DDR2_Ram_Core_data_read_0 \
+      EN work/DDR2_Ram_Core_data_path_0 1478631418 CP DDR2_Ram_Core_data_read_0 \
       CP DDR2_Ram_Core_data_read_controller_0 CP DDR2_Ram_Core_data_write_0
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_data_path_iobs_0 1478606218 \
+EN work/DDR2_Ram_Core_data_path_iobs_0 1478631404 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       LB UNISIM PH unisim/VCOMPONENTS 1381692182 \
-      PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_data_path_iobs_0/arc 1478606219 \
+      PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_data_path_iobs_0/arc 1478631405 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd \
-      EN work/DDR2_Ram_Core_data_path_iobs_0 1478606218 \
+      EN work/DDR2_Ram_Core_data_path_iobs_0 1478631404 \
       CP DDR2_Ram_Core_s3_dm_iob CP DDR2_Ram_Core_s3_dqs_iob \
       CP DDR2_Ram_Core_s3_dq_iob
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_data_read_0 1478606220 \
+EN work/DDR2_Ram_Core_data_read_0 1478631406 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_data_read_0/arc 1478606221 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_data_read_0/arc 1478631407 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd \
-      EN work/DDR2_Ram_Core_data_read_0 1478606220 CP DDR2_Ram_Core_rd_gray_cntr \
+      EN work/DDR2_Ram_Core_data_read_0 1478631406 CP DDR2_Ram_Core_rd_gray_cntr \
       CP DDR2_Ram_Core_ram8d_0
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_data_read_controller_0 1478606222 \
+EN work/DDR2_Ram_Core_data_read_controller_0 1478631408 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_data_read_controller_0/arc 1478606223 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_data_read_controller_0/arc 1478631409 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd \
-      EN work/DDR2_Ram_Core_data_read_controller_0 1478606222 \
+      EN work/DDR2_Ram_Core_data_read_controller_0 1478631408 \
       CP DDR2_Ram_Core_dqs_delay CP label CP DDR2_Ram_Core_fifo_0_wr_en_0 \
       CP DDR2_Ram_Core_fifo_1_wr_en_0 CP DDR2_Ram_Core_wr_gray_cntr
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_data_write_0 1478606224 \
+EN work/DDR2_Ram_Core_data_write_0 1478631410 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       LB UNISIM PH unisim/VCOMPONENTS 1381692182 \
-      PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_data_write_0/arc 1478606225 \
+      PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_data_write_0/arc 1478631411 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd \
-      EN work/DDR2_Ram_Core_data_write_0 1478606224
+      EN work/DDR2_Ram_Core_data_write_0 1478631410
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_dqs_delay 1478606198 \
+EN work/DDR2_Ram_Core_dqs_delay 1478631384 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_dqs_delay/arc_dqs_delay 1478606199 \
+AR work/DDR2_Ram_Core_dqs_delay/arc_dqs_delay 1478631385 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd \
-      EN work/DDR2_Ram_Core_dqs_delay 1478606198 CP LUT4
+      EN work/DDR2_Ram_Core_dqs_delay 1478631384 CP LUT4
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_fifo_0_wr_en_0 1478606200 \
+EN work/DDR2_Ram_Core_fifo_0_wr_en_0 1478631386 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_fifo_0_wr_en_0/arc 1478606201 \
+AR work/DDR2_Ram_Core_fifo_0_wr_en_0/arc 1478631387 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd \
-      EN work/DDR2_Ram_Core_fifo_0_wr_en_0 1478606200 CP FDCE
+      EN work/DDR2_Ram_Core_fifo_0_wr_en_0 1478631386 CP FDCE
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_fifo_1_wr_en_0 1478606202 \
+EN work/DDR2_Ram_Core_fifo_1_wr_en_0 1478631388 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_fifo_1_wr_en_0/arc 1478606203 \
+AR work/DDR2_Ram_Core_fifo_1_wr_en_0/arc 1478631389 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd \
-      EN work/DDR2_Ram_Core_fifo_1_wr_en_0 1478606202 CP FDCE
+      EN work/DDR2_Ram_Core_fifo_1_wr_en_0 1478631388 CP FDCE
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_infrastructure 1478606234 \
+EN work/DDR2_Ram_Core_infrastructure 1478631420 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_infrastructure/arc 1478606235 \
+AR work/DDR2_Ram_Core_infrastructure/arc 1478631421 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd \
-      EN work/DDR2_Ram_Core_infrastructure 1478606234
+      EN work/DDR2_Ram_Core_infrastructure 1478631420
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_infrastructure_iobs_0 1478606214 \
+EN work/DDR2_Ram_Core_infrastructure_iobs_0 1478631400 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_infrastructure_iobs_0/arc 1478606215 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_infrastructure_iobs_0/arc 1478631401 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd \
-      EN work/DDR2_Ram_Core_infrastructure_iobs_0 1478606214 CP FDDRRSE CP OBUFDS
+      EN work/DDR2_Ram_Core_infrastructure_iobs_0 1478631400 CP FDDRRSE CP OBUFDS
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_infrastructure_top 1478606244 \
+EN work/DDR2_Ram_Core_infrastructure_top 1478631430 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_infrastructure_top/arc 1478606245 \
+      PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_infrastructure_top/arc 1478631431 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd \
-      EN work/DDR2_Ram_Core_infrastructure_top 1478606244 CP IBUFGDS_LVDS_25 \
+      EN work/DDR2_Ram_Core_infrastructure_top 1478631430 CP IBUFGDS_LVDS_25 \
       CP IBUFG CP DDR2_Ram_Core_clk_dcm CP DDR2_Ram_Core_cal_top
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_iobs_0 1478606236 \
+EN work/DDR2_Ram_Core_iobs_0 1478631422 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PH work/DDR2_Ram_Core_parameters_0 1478606191 LB UNISIM \
+      PH work/DDR2_Ram_Core_parameters_0 1478631377 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_iobs_0/arc 1478606237 \
+AR work/DDR2_Ram_Core_iobs_0/arc 1478631423 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd \
-      EN work/DDR2_Ram_Core_iobs_0 1478606236 \
+      EN work/DDR2_Ram_Core_iobs_0 1478631422 \
       CP DDR2_Ram_Core_infrastructure_iobs_0 CP DDR2_Ram_Core_controller_iobs_0 \
       CP DDR2_Ram_Core_data_path_iobs_0
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd 2016/09/24.13:53:17 P.20131013
-PH work/DDR2_Ram_Core_parameters_0 1478606191 \
+PH work/DDR2_Ram_Core_parameters_0 1478631377 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PH unisim/VCOMPONENTS 1381692182
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_ram8d_0 1478606208 \
+EN work/DDR2_Ram_Core_ram8d_0 1478631394 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 PH unisim/VCOMPONENTS 1381692182 \
-      PH work/DDR2_Ram_Core_parameters_0 1478606191
-AR work/DDR2_Ram_Core_ram8d_0/arc 1478606209 \
+      PH work/DDR2_Ram_Core_parameters_0 1478631377
+AR work/DDR2_Ram_Core_ram8d_0/arc 1478631395 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd \
-      EN work/DDR2_Ram_Core_ram8d_0 1478606208 CP RAM16X1D
+      EN work/DDR2_Ram_Core_ram8d_0 1478631394 CP RAM16X1D
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_rd_gray_cntr 1478606206 \
+EN work/DDR2_Ram_Core_rd_gray_cntr 1478631392 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_rd_gray_cntr/arc 1478606207 \
+AR work/DDR2_Ram_Core_rd_gray_cntr/arc 1478631393 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd \
-      EN work/DDR2_Ram_Core_rd_gray_cntr 1478606206 CP FDRE
+      EN work/DDR2_Ram_Core_rd_gray_cntr 1478631392 CP FDRE
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_s3_dm_iob 1478606192 \
+EN work/DDR2_Ram_Core_s3_dm_iob 1478631378 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_s3_dm_iob/arc 1478606193 \
+AR work/DDR2_Ram_Core_s3_dm_iob/arc 1478631379 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd \
-      EN work/DDR2_Ram_Core_s3_dm_iob 1478606192 CP FDDRRSE CP OBUF
+      EN work/DDR2_Ram_Core_s3_dm_iob 1478631378 CP FDDRRSE CP OBUF
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_s3_dqs_iob 1478606194 \
+EN work/DDR2_Ram_Core_s3_dqs_iob 1478631380 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd \
       PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_s3_dqs_iob/arc 1478606195 \
+AR work/DDR2_Ram_Core_s3_dqs_iob/arc 1478631381 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd \
-      EN work/DDR2_Ram_Core_s3_dqs_iob 1478606194 CP FD CP FDDRRSE CP OBUFTDS \
+      EN work/DDR2_Ram_Core_s3_dqs_iob 1478631380 CP FD CP FDDRRSE CP OBUFTDS \
       CP IBUFDS
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_s3_dq_iob 1478606196 \
+EN work/DDR2_Ram_Core_s3_dq_iob 1478631382 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_s3_dq_iob/arc 1478606197 \
+AR work/DDR2_Ram_Core_s3_dq_iob/arc 1478631383 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd \
-      EN work/DDR2_Ram_Core_s3_dq_iob 1478606196 CP FDDRRSE CP FD CP OBUFT CP IBUF
+      EN work/DDR2_Ram_Core_s3_dq_iob 1478631382 CP FDDRRSE CP FD CP OBUFT CP IBUF
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_tap_dly 1478606212 \
+EN work/DDR2_Ram_Core_tap_dly 1478631398 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_tap_dly/arc_tap_dly 1478606213 \
+AR work/DDR2_Ram_Core_tap_dly/arc_tap_dly 1478631399 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd \
-      EN work/DDR2_Ram_Core_tap_dly 1478606212 CP LUT4 CP FDR
+      EN work/DDR2_Ram_Core_tap_dly 1478631398 CP LUT4 CP FDR
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_top_0 1478606242 \
+EN work/DDR2_Ram_Core_top_0 1478631428 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 \
-      PH work/DDR2_Ram_Core_parameters_0 1478606191 PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_top_0/arc 1478606243 \
+      PH work/DDR2_Ram_Core_parameters_0 1478631377 PH unisim/VCOMPONENTS 1381692182
+AR work/DDR2_Ram_Core_top_0/arc 1478631429 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd \
-      EN work/DDR2_Ram_Core_top_0 1478606242 CP DDR2_Ram_Core_controller_0 \
+      EN work/DDR2_Ram_Core_top_0 1478631428 CP DDR2_Ram_Core_controller_0 \
       CP DDR2_Ram_Core_data_path_0 CP DDR2_Ram_Core_infrastructure \
       CP DDR2_Ram_Core_iobs_0
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Ram_Core_wr_gray_cntr 1478606204 \
+EN work/DDR2_Ram_Core_wr_gray_cntr 1478631390 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_wr_gray_cntr/arc 1478606205 \
+AR work/DDR2_Ram_Core_wr_gray_cntr/arc 1478631391 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd \
-      EN work/DDR2_Ram_Core_wr_gray_cntr 1478606204 CP FDCE
+      EN work/DDR2_Ram_Core_wr_gray_cntr 1478631390 CP FDCE
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Read_VHDL 1478606240 \
+EN work/DDR2_Read_VHDL 1478631426 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Read_VHDL/Verhalten 1478606241 \
+AR work/DDR2_Read_VHDL/Verhalten 1478631427 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd \
-      EN work/DDR2_Read_VHDL 1478606240
+      EN work/DDR2_Read_VHDL 1478631426
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd 2016/09/24.13:53:17 P.20131013
-EN work/DDR2_Write_VHDL 1478606238 \
+EN work/DDR2_Write_VHDL 1478631424 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Write_VHDL/Verhalten 1478606239 \
+AR work/DDR2_Write_VHDL/Verhalten 1478631425 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd \
-      EN work/DDR2_Write_VHDL 1478606238
+      EN work/DDR2_Write_VHDL 1478631424
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd 2016/09/24.13:53:17 P.20131013
-EN work/vga_clk 1478606262 \
+EN work/vga_clk 1478631448 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/vga_clk/BEHAVIORAL 1478606263 \
+AR work/vga_clk/BEHAVIORAL 1478631449 \
       FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd \
-      EN work/vga_clk 1478606262 CP BUFG CP DCM_SP
+      EN work/vga_clk 1478631448 CP BUFG CP DCM_SP
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd 2016/11/08.11:49:47 P.20131013
-EN work/MMU 1478606266 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd \
+EN work/MMU 1478631452 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/MMU/Behavioral 1478606267 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd EN work/MMU 1478606266 \
+AR work/MMU/Behavioral 1478631453 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd EN work/MMU 1478631452 \
       CP BLOCKRAM CP DDR2_Control_VHDL
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd 2016/11/03.16:42:19 P.20131013
 EN work/toplevel 1478606270 \
@@ -361,10 +361,10 @@ AR work/toplevel/behaviour 1478606271 \
       CP Clock_VHDL CP clk133m_dcm CP OBUF CP vga CP vga_clk CP work/cpu CP MMU \
       CP DDR2_Ram_Core
 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd 2016/11/03.08:33:02 P.20131013
-EN work/vga 1478606260 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd \
+EN work/vga 1478631446 FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/vga/behaviour 1478606261 \
-      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd EN work/vga 1478606260
+AR work/vga/behaviour 1478631447 \
+      FL C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd EN work/vga 1478631446
 FL D:/RiscV/RISC-Vhdl/ALU.vhd 2016/11/01.23:41:15 P.20131013
 FL D:/RiscV/RISC-Vhdl/BLOCKRAM.vhd 2016/11/07.17:49:33 P.20131013
 FL D:/RiscV/RISC-Vhdl/clk133m_dcm.vhd 2016/10/20.16:31:07 P.20131013

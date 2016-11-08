@@ -157,7 +157,7 @@ PORT (
     cntrl0_ddr2_odt : out std_logic;
     cntrl0_ddr2_dm : out std_logic_vector(1 downto 0);
     cntrl0_rst_dqs_div_in : in std_logic;
-    cntrl0_rst_dqs_div_outf : out std_logic;		
+    cntrl0_rst_dqs_div_out : out std_logic;		
     sys_clk_in : in std_logic;
     reset_in_n : in std_logic;
     cntrl0_burst_done : in std_logic;
