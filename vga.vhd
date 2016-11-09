@@ -22,12 +22,19 @@ entity vga is
 				reg_data_in : in std_logic_vector(31 downto 0);
 				reg_adr_in  : in std_logic_vector(5 downto 0);
 				pc_in       : in std_logic_vector(31 downto 0);
-				ir_in       :  in std_logic_vector(31 downto 0)
+				ir_in       :  in std_logic_vector(31 downto 0);
+				
+				debug_on	: in std_logic; --debug : regs else ascii				
+				x_out        : out std_logic_vector(9 downto 0);
+            y_out        : out std_logic_vector(9 downto 0);
+				pixel		: in std_logic
+				
+				
          );
 end vga;
 
 
-architecture behaviour of vga is
+ architecture behaviour of vga is
 
 
 
@@ -60,22 +67,29 @@ currentreg <= pc_in when reg_countery = "01010" and reg_counterx = "00001" else
               ir_in when reg_countery = "01010" and reg_counterx = "00010" else
               regs(to_integer(reg_countery))(to_integer(reg_counterx));
 
+x_out<=std_logic_vector(x_cnt) when offs_int = '0' else
+        (others => '0');
+y_out <=  std_logic_vector(y_cnt) when offs_int = '0' else
+        (others => '0');		  
+
 x <=  std_logic_vector(x_cnt) when offs_int = '0' else
         (others => '0');
 y <=  std_logic_vector(y_cnt) when offs_int = '0' else
         (others => '0');
 			
 			--rot, wenn gerade Zeile und ungerade Spalte oder ungerade Spalte und gerade Zeile
-r <=     "1111" when offs_int = '0' and reg_counterx(0) /= reg_countery(0) and currentreg(to_integer(bit_counter)) = '1' else
+r <=     "1111" when debug_on='0' and pixel ='1'
+			else "1111" when offs_int = '0' and reg_counterx(0) /= reg_countery(0) and currentreg(to_integer(bit_counter)) = '1' else
 			"0111" when offs_int = '0' and reg_counterx(0) /= reg_countery(0) and currentreg(to_integer(bit_counter)) = '0' else
         (others => '0');
 		  
 g <=     --std_logic_vector(x_cnt(8 downto 5)) when offs_int = '0' else
-			
+			"1111" when debug_on='0' and pixel = '1' else
         (others => '0');
 		  
 			--blau wenn gerade Zeile und gerade Spalte oder ungerade Zeile und ungerade Spalte
-b <=     "1111" when offs_int = '0' and reg_counterx(0) = reg_countery(0) and currentreg(to_integer(bit_counter)) = '1' else
+b <=     "1111" when debug_on='0' and pixel ='1' else
+			"1111" when offs_int = '0' and reg_counterx(0) = reg_countery(0) and currentreg(to_integer(bit_counter)) = '1' else
 			"0111" when offs_int = '0' and reg_counterx(0) = reg_countery(0) and currentreg(to_integer(bit_counter)) = '0' else
         (others => '0');
 
