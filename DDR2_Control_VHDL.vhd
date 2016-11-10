@@ -520,6 +520,4 @@ synchro : process (clk_in)
 			-------------------------------------------			
 		end if;
 	end process P_DataOut;
-
 end Verhalten;
-
