@@ -94,7 +94,7 @@ component ASCIIUNIT
            x_in : in  std_logic_vector(9 downto 0);
            y_in : in  std_logic_vector(9 downto 0);
            pixel_out : out  STD_LOGIC;
-           addr_out : out  STD_LOGIC_VECTOR(10 downto 0)
+           addr_out : out  STD_LOGIC_VECTOR(9 downto 0)
 			  );
 end component;
 
@@ -161,7 +161,10 @@ PORT (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic
+		auto_ref_req : in std_logic;
+		
+		char_out: out std_logic_vector(7 downto 0);	
+		char_addr_in : in std_logic_vector( 9 downto 0)
 );
 END COMPONENT MMU;
 
@@ -263,7 +266,7 @@ signal ascii_char_in : std_logic_vector(7 downto 0);
    signal        ascii_x_in :  std_logic_vector(9 downto 0);
    signal        ascii_y_in :  std_logic_vector(9 downto 0);
    signal        ascii_pixel_out :  STD_LOGIC;
-   signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
+   signal        ascii_addr_out :  STD_LOGIC_VECTOR(9 downto 0);
 	
 	
 
@@ -411,7 +414,12 @@ PORT MAP (
 	cmd_ack => user_cmd_ack, --in
 	data_valid => user_data_valid, --in
 	burst_done => burst_done, --out
-	auto_ref_req => auto_ref_req --in
+	auto_ref_req => auto_ref_req, --in
+	
+	
+		
+	char_out =>	ascii_char_in,
+	char_addr_in => ascii_addr_out
 
 );
 --debug_adr <= "000100";

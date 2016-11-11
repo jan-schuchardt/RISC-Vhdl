@@ -55,7 +55,10 @@ port (
 		cmd_ack : in std_logic;
 		data_valid : in std_logic;
 		burst_done : out std_logic;
-		auto_ref_req : in std_logic
+		auto_ref_req : in std_logic;
+		
+		char_out: out std_logic_vector(7 downto 0);	
+		char_addr_in : in std_logic_vector( 9 downto 0)
 	);
 
 end MMU;
@@ -64,6 +67,23 @@ end MMU;
 
 
 architecture Behavioral of MMU is
+
+	-- CHARRAM Control --
+	component CHARRAM is
+	port(
+		clk : in std_logic;
+		rst : in std_logic;
+		addr_in : in std_logic_vector(9 downto 0); --10 bit for adressing 8-bit cells
+		data_in : in std_logic_vector(31 downto 0);
+		data_out: out std_logic_vector(31 downto 0);
+			
+		write_enable : in std_logic;
+		
+		char_out: out std_logic_vector(7 downto 0);	
+		char_addr_in : in std_logic_vector( 9 downto 0)
+	);
+	end component CHARRAM;
+
 
 	-- BLOCKRAM Control --
 	component BLOCKRAM is
@@ -74,6 +94,7 @@ architecture Behavioral of MMU is
 			data_in : in std_logic_vector(31 downto 0);
 			data_out: out std_logic_vector(31 downto 0);
 			write_enable : in std_logic
+		
 	);
 	end Component BLOCKRAM;
 
@@ -105,6 +126,10 @@ architecture Behavioral of MMU is
 	END COMPONENT DDR2_Control_VHDL;
 
 	type MMU_STATE_T is (
+			MMU_CRAM_READ_FIRST,
+			MMU_CRAM_READ_SECOND,			
+			MMU_CRAM_WRITE_FIRST,
+			MMU_CRAM_WRITE_SECOND,			
 			MMU_BRAM_READ_FIRST,
 			MMU_BRAM_READ_SECOND,
 			MMU_READ_DONE,
@@ -126,6 +151,15 @@ architecture Behavioral of MMU is
 	signal access_size : std_logic_vector(1 downto 0); --encoding follows cpu specification ("00" => 1, "01"=> 2, "11" => 3
 	signal skip_cycle : std_logic := '0'; --If "1" then it is set to 0 and the cycle is skipped (for sync with every single RAM component)
 	
+	--Intern signals to be conncted to asram
+
+	signal cr_addr_in :  std_logic_vector(9 downto 0);
+	signal cr_data_in : std_logic_vector(31 downto 0);
+	signal cr_data_out :	std_logic_vector(31 downto 0);
+	signal cr_write_enable : std_logic := '0';
+	
+
+	
 	--Intern signals to be conncted to bram
 	signal br_data_in : std_logic_vector(31 downto 0);
 	signal br_data_out : std_logic_vector(31 downto 0);
@@ -143,7 +177,10 @@ architecture Behavioral of MMU is
 	
 	begin
 	
+	
+	
 		process(clk_in) begin
+--		i_char_addr_in <= char_addr_in;
 			
 			if rising_edge(clk_in) then
 			
@@ -152,12 +189,14 @@ architecture Behavioral of MMU is
 					ack_out <= '1';
 					skip_cycle <= '0';
 					
+					
 				elsif skip_cycle = '1' then
 				
 					skip_cycle <= '0'; --Skipping an entire clock cycle
 					ddr2_read_enable <= '0';
 					ddr2_write_enable <= '0';
 					br_write_enable <= '0'; --Prevent additional data write during skipped cycle
+					cr_write_enable <= '0';
 				
 				else
 					
@@ -188,6 +227,12 @@ architecture Behavioral of MMU is
 										MMU_STATE <= MMU_SDRAM_READ_FIRST;
 										skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
 									
+									when "0010" =>
+										--Prefix 0x02 : CRAM access
+										cr_addr_in <= addr_in(9 downto 0); --unaligned access
+										MMU_STATE <= MMU_CRAM_READ_FIRST;
+										skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
+									
 									when others => NULL;
 										
 								end case;
@@ -204,6 +249,22 @@ architecture Behavioral of MMU is
 							
 							end if;
 						
+						
+						when MMU_CRAM_READ_FIRST =>
+						data_buf(31 downto 0) <= cr_data_out;
+						if addr_in_buf(1 downto 0) /= "00" then
+								--Read a second word from BRAM to get the missing parts (addr_in_buf(2 downto 0) > 4)
+								MMU_STATE <= MMU_CRAM_READ_SECOND;
+								br_addr_in <= std_logic_vector(unsigned(addr_in_buf(10 downto 2)) + 1); --Read next 32-Bit word
+								skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
+							else
+								MMU_STATE <= MMU_READ_DONE;
+							end if;
+							
+						when MMU_CRAM_READ_SECOND =>
+							--Reading the second 64-Bit word in this state
+							data_buf(63 downto 32) <= br_data_out;
+							MMU_STATE <= MMU_READ_DONE;	
 						
 						when MMU_BRAM_READ_FIRST =>
 							--Reading the first 64-Bit word in this state
@@ -330,10 +391,43 @@ architecture Behavioral of MMU is
 									ddr2_write_enable <= '1';
 									skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
 									MMU_STATE <= MMU_SDRAM_WRITE_FIRST;
+									
+								when "0010" =>
+									--CRAM write
+									cr_addr_in <= addr_in_buf(11 downto 2);
+									cr_data_in <= data_buf(31 downto 0);
+									cr_write_enable <= '1';
+									skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
+									MMU_STATE <= MMU_CRAM_WRITE_FIRST;	
 								
 								when others => NULL;
 								
 							end case;
+							
+						when MMU_CRAM_WRITE_FIRST =>
+							--After the first write command was sent to bram
+							if addr_in_buf(1 downto 0) /= "00" then
+								--Write back the second read 32-bit value
+								cr_addr_in <= std_logic_vector(unsigned(addr_in_buf(10 downto 2)) + 1);
+								cr_data_in <= data_buf(63 downto 32);
+								cr_write_enable <= '1';
+								skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
+								MMU_STATE <= MMU_CRAM_WRITE_SECOND;
+							else
+								cr_write_enable <= '0';
+								ack_out <= '1';
+								MMU_STATE <= MMU_IDLE;
+							
+							end if;	
+							
+							
+						when MMU_CRAM_WRITE_SECOND =>
+							--Return to idle state of mmu after we have written the next 32 bit cell
+							cr_write_enable <= '0';
+							if ddr2_data_valid = '1' then
+								ack_out <= '1';
+								MMU_STATE <= MMU_IDLE;
+							end if;	
 							
 						when MMU_BRAM_WRITE_FIRST =>
 							--After the first write command was sent to bram
@@ -403,7 +497,6 @@ architecture Behavioral of MMU is
 		
 		end process;
 		
-		
 		--Instanciate Blockram 
 		INST_BLOCKRAM : BLOCKRAM
 		PORT MAP (
@@ -414,6 +507,26 @@ architecture Behavioral of MMU is
 				data_out => br_data_out,
 				write_enable => br_write_enable
 		);
+		
+		--Instanciate CHARRAM
+		
+		INST_CHARRAM : CHARRAM
+		PORT MAP (
+		
+		clk => clk_in,
+		rst => reset_in,
+		addr_in => cr_addr_in,		
+		data_in => cr_data_in,
+		data_out => cr_data_out,
+			
+		write_enable => cr_write_enable,
+		char_addr_in => char_addr_in,
+		char_out => char_out
+		
+		);
+		
+		
+		
 		
 		INST_DDR2_Control_VHDL : DDR2_Control_VHDL
 		PORT MAP (
