@@ -274,9 +274,7 @@ signal ascii_char_in : std_logic_vector(7 downto 0);
 signal debug2signal:  std_logic_vector(7 downto 0);
 	
 begin
--------------------------------
---testing ascii
-ascii_char_in <= "00000000";
+
 
 -----------------------------------------------------------------------------
 -- Reset & LEDs
