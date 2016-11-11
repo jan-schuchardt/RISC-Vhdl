@@ -530,40 +530,62 @@ begin
    wait for 100 fs;
 
 	rst <= '0';
-   ---------------------------------------------------------
-   -- ifsert stimulus here
-   ---------------------------------------------------------
-
-	data_in <= "10101010101010101010101010101010";
-	addr_in <= "00000000000000000000000000000000";
-	cmd <= "100";
-	work_in <= '1';
-
-   -- Test case 1
-   -- ... Asignaciones a seniales de entrada ...
-wait for 100 fs;
-   wait until ack_out = '1';
+	 wait for 100 fs;
 	work_in <= '0';
-	cmd <= "000";
+	cmd <= "100";
+addr_in <= "00000000000000000000000000001001";
+	data_in <= "10101010101010101010101010101111";
+wait for 100 fs;
+work_in <= '1';
+wait for 100 fs;
+	wait until ack_out ='1';
+wait for 100 fs;
 
-	  wait for 100 fs;
-	work_in <= '1';
-
-
-   -- assert (<condition>) report "Error case 1" severity error;
-
-   -- Test case 2
-   -- ... Asignaciones a seniales de entrada ...
-   wait for 100 fs;
+ wait for 100 fs;
+	work_in <= '0';
+	cmd <= "011";
+addr_in <= "00000000000000000000000000001001";
+	data_in <= "10101010101010101010101010101111";
+wait for 100 fs;
+work_in <= '1';
+wait for 100 fs;
 	wait until ack_out ='1';
    wait for 100 fs;
 
+ wait for 100 fs;
 	work_in <= '0';
-
-
-
-
+	cmd <= "100";
+addr_in <= "00000000000000000000000000001001";
+	data_in <= "10101010101010101010101010101111";
 wait for 100 fs;
+work_in <= '1';
+wait for 100 fs;
+	wait until ack_out ='1';
+   wait for 100 fs;
+
+ wait for 100 fs;
+	work_in <= '0';
+	cmd <= "000";
+addr_in <= "00000000000000000000000000001001";
+	data_in <= "10101010101010101010101010101111";
+wait for 100 fs;
+work_in <= '1';
+wait for 100 fs;
+	wait until ack_out ='1';
+   wait for 100 fs;
+
+ wait for 100 fs;
+	work_in <= '0';
+	cmd <= "100";
+addr_in <= "00000000000000000000000000001001";
+	data_in <= "10101010101010101010101010101111";
+wait for 100 fs;
+work_in <= '1';
+wait for 100 fs;
+	wait until ack_out ='1';
+   wait for 100 fs;
+
+
    -- assert (<condition>) report "Error case 2" severity error;
 
    -- Stop clock

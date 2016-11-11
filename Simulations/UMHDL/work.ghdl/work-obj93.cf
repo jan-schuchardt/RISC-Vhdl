@@ -1,9 +1,17 @@
 v 3
-file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\MMU\" "MMU.vhd" "20161108223856.000" "20161109120533.302":
-  entity mmu at 20( 482) + 0 on 117;
-  architecture behavioral of mmu at 66( 1689) + 0 on 118;
-file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\MMU\" "MMU_tb.vhd" "20161108224146.000" "20161109120533.382":
-  entity mmu_tb at 15( 367) + 0 on 119;
-  architecture testbench of mmu_tb at 45( 1319) + 0 on 120;
-  entity blockram at 598( 17577) + 0 on 121;
-  architecture behavioral of blockram at 623( 18230) + 0 on 122;
+file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\Ascii\" "Ascii_tb.vhd" "20161110215442.000" "20161110225442.327":
+  entity ascii_tb at 15( 385) + 0 on 215;
+  architecture testbench of ascii_tb at 22( 547) + 0 on 216;
+  entity charmap at 220( 4712) + 0 on 217;
+  architecture behavioral of charmap at 241( 5254) + 0 on 218;
+file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\MMU\" "MMU_tb.vhd" "20161109122756.000" "20161109220845.076":
+  entity mmu_tb at 15( 367) + 0 on 201;
+  architecture testbench of mmu_tb at 45( 1319) + 0 on 202;
+  entity blockram at 624( 18234) + 0 on 203;
+  architecture behavioral of blockram at 649( 18887) + 0 on 204;
+file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\MMU\" "MMU.vhd" "20161108223856.000" "20161109220844.981":
+  entity mmu at 20( 482) + 0 on 199;
+  architecture behavioral of mmu at 66( 1689) + 0 on 200;
+file "C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\Simulations\UMHDL\Ascii\" "Ascii.vhd" "20161110214010.000" "20161110225442.222":
+  entity ascii at 15( 382) + 0 on 213;
+  architecture arq1 of ascii at 23( 542) + 0 on 214;

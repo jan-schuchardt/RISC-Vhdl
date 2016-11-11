@@ -67,7 +67,7 @@ currentreg <= pc_in when reg_countery = "01010" and reg_counterx = "00001" else
               ir_in when reg_countery = "01010" and reg_counterx = "00010" else
               regs(to_integer(reg_countery))(to_integer(reg_counterx));
 
-x_out<=std_logic_vector(x_cnt) when offs_int = '0' else
+x_out<= std_logic_vector(x_cnt) when offs_int = '0' else
         (others => '0');
 y_out <=  std_logic_vector(y_cnt) when offs_int = '0' else
         (others => '0');		  

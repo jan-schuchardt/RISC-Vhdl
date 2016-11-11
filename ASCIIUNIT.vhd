@@ -42,24 +42,53 @@ end ASCIIUNIT;
 
 architecture Behavioral of ASCIIUNIT is
 
+Component charmap is
+Port ( addr : in  STD_LOGIC_vector( 7 downto 0);
+           clk : in  STD_LOGIC;
+           data : out  STD_LOGIC_vector (63 downto 0)
+			  );
+			  
+			  end component charmap;
+
+
 signal curr_char : std_logic_vector(7 downto 0);
-signal curr_char_pixels: std_logic_vector(25 downto 0);
-signal curr_addr: unsigned(10 downto 0);
+--signal curr_char_pixels: std_logic_vector(25 downto 0);
+signal curr_addr: unsigned (1023 downto 0);
+signal curr_bitfield : std_logic_vector(63 downto 0);
+signal curr_pixel : std_logic;
+
+
 
 
 begin
 --testing
-pixel_out <= '1' when x_in = y_in; 
+pixel_out <= curr_pixel; 
+
+
+curr_char <="00000000"; --char_in
+
+--curr_bitfield <= "00000000"& --A  
+--					"01111110"&
+--					"01100110"&
+--					"01100110"&
+--					"01111110"&
+--					"01100110"&
+--					"01100110"&
+--					"00000000";
 
 process (clk)
 begin
 
 if (rising_edge (clk) ) then
+	curr_addr <= unsigned(y_in(9 downto 3) & "000000") + unsigned(x_in(9 downto 3)); -- (y/8)*64 + x/8
  
-	--curr_addr <= (unsigned(x_in) / unsigned(6));
+ 
+	curr_pixel <= curr_bitfield( to_integer(unsigned(x_in(2 downto 0)) + unsigned(y_in(2 downto 0)&"000"))); -- x + y*8
+	
+	--curr_addr <= (integer(x_in) mod integer(6));
 
-	--if ( unsigned(x_in) / unsigned(6) = unsigned(0) ) then
-	--end if;
+--	if ( integer(x_in) / 8 = integer(0) ) then
+--	end if;
 	
 	--todo:logic
 	--todo: 
@@ -70,6 +99,14 @@ end if;
 
 end process;
 
+
+inst_charmap : CHARMAP 
+port map
+(
+	addr => curr_char,
+	clk => clk,
+	data => curr_bitfield
+);
 
 
 end Behavioral;
