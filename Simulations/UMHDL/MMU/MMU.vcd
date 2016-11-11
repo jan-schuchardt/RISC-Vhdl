@@ -1,0 +1,581 @@
+$date
+  Wed Nov 09 22:08:45 2016
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$comment mmu_state is not handled $end
+$var reg 32 ! data_in_buf[31:0] $end
+$var reg 64 " data_buf[63:0] $end
+$var reg 32 # addr_in_buf[31:0] $end
+$var reg 1 $ write_mode $end
+$var reg 2 % access_size[1:0] $end
+$var reg 32 & br_data_in[31:0] $end
+$var reg 32 ' br_data_out[31:0] $end
+$var reg 1 ( br_write_enable $end
+$var reg 9 ) br_addr_in[8:0] $end
+$var reg 16 * ddr2_addr_in[15:0] $end
+$var reg 64 + ddr2_data_in[63:0] $end
+$var reg 64 , ddr2_data_out[63:0] $end
+$var reg 1 - ddr2_write_enable $end
+$var reg 1 . ddr2_read_enable $end
+$var reg 1 / ddr2_data_valid $end
+$var reg 1 0 clk $end
+$var reg 1 1 clock_on $end
+$var reg 1 2 rst $end
+$var reg 1 3 clk90_in $end
+$var reg 32 4 data_out[31:0] $end
+$var reg 32 5 data_in[31:0] $end
+$var reg 32 6 addr_in[31:0] $end
+$var reg 3 7 cmd[2:0] $end
+$var reg 1 8 work_in $end
+$var reg 1 9 ack_out $end
+$var reg 1 : init_done $end
+$var reg 3 ; command_register[2:0] $end
+$var reg 25 < input_adress[24:0] $end
+$var reg 32 = input_data[31:0] $end
+$var reg 32 > output_data[31:0] $end
+$var reg 1 ? cmd_ack $end
+$var reg 1 @ data_valid $end
+$var reg 1 A burst_done $end
+$var reg 1 B auto_ref_req $end
+$var reg 1 C clk_in $end
+$var reg 1 D reset_in $end
+$var reg 3 E cmd_in[2:0] $end
+$scope module inst_blockram $end
+$var reg 1 F clk $end
+$var reg 1 G rst $end
+$var reg 9 H addr_in[8:0] $end
+$var reg 32 I data_in[31:0] $end
+$var reg 32 J data_out[31:0] $end
+$var reg 1 K write_enable $end
+$comment cells is not handled $end
+$upscope $end
+$scope module inst_ddr2_control_vhdl $end
+$upscope $end
+$enddefinitions $end
+#0
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU !
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU "
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU #
+0$
+bUU %
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU &
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU '
+0(
+bUUUUUUUUU )
+bUUUUUUUUUUUUUUUU *
+b0000000000000000000000000000000000000000000000000000000000000000 +
+b0000000000000000000000000000000000000000000000000000000000000000 ,
+0-
+0.
+U/
+00
+11
+12
+U3
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU 4
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU 5
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU 6
+bUUU 7
+U8
+U9
+U:
+bUUU ;
+bUUUUUUUUUUUUUUUUUUUUUUUUU <
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU =
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU >
+U?
+U@
+UA
+UB
+0C
+1D
+bUUU E
+0F
+1G
+bUUUUUUUUU H
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU I
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU J
+0K
+#25
+10
+19
+1C
+1F
+#50
+00
+0C
+0F
+#75
+10
+1C
+1F
+#100
+00
+02
+0C
+0D
+0F
+0G
+#125
+b00100000000000000000000010010011 '
+10
+1C
+1F
+b00100000000000000000000010010011 J
+#150
+00
+0C
+0F
+#175
+10
+1C
+1F
+#200
+00
+b10101010101010101010101010101111 5
+b00000000000000000000000000001001 6
+b100 7
+08
+0C
+b100 E
+0F
+#225
+10
+1C
+1F
+#250
+00
+0C
+0F
+#275
+10
+1C
+1F
+#300
+00
+18
+0C
+0F
+#325
+b10101010101010101010101010101111 !
+b00000000000000000000000000001001 #
+1$
+b00 %
+b000000010 )
+10
+09
+1C
+1F
+b000000010 H
+#350
+00
+0C
+0F
+#375
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU00100000000000000000000010010011 "
+b11111111111100010000000100010011 '
+10
+1C
+1F
+b11111111111100010000000100010011 J
+#400
+00
+0C
+0F
+#425
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU00100000000000001010111110010011 "
+10
+1C
+1F
+#450
+00
+0C
+0F
+#475
+b00100000000000001010111110010011 &
+1(
+10
+1C
+1F
+b00100000000000001010111110010011 I
+1K
+#500
+00
+0C
+0F
+#525
+0(
+10
+19
+1C
+1F
+0K
+#550
+00
+0C
+0F
+#575
+b00100000000000001010111110010011 '
+10
+09
+1C
+1F
+b00100000000000001010111110010011 J
+#600
+00
+0C
+0F
+#625
+10
+1C
+1F
+#650
+00
+0C
+0F
+#675
+10
+1C
+1F
+#700
+00
+0C
+0F
+#725
+1(
+10
+b011 7
+08
+1C
+b011 E
+1F
+1K
+#750
+00
+0C
+0F
+#775
+0(
+10
+19
+1C
+1F
+0K
+#800
+00
+0C
+0F
+#825
+0$
+b11 %
+10
+18
+09
+1C
+1F
+#850
+00
+0C
+0F
+#875
+10
+1C
+1F
+#900
+00
+0C
+0F
+#925
+10
+bUUUUUUUU001000000000000010101111 4
+19
+1C
+1F
+#950
+00
+0C
+0F
+#975
+10
+09
+1C
+1F
+#1000
+00
+0C
+0F
+#1025
+10
+1C
+1F
+#1050
+00
+0C
+0F
+#1075
+10
+19
+1C
+1F
+#1100
+00
+0C
+0F
+#1125
+10
+b100 7
+08
+1C
+b100 E
+1F
+#1150
+00
+0C
+0F
+#1175
+10
+1C
+1F
+#1200
+00
+0C
+0F
+#1225
+1$
+b00 %
+10
+18
+09
+1C
+1F
+#1250
+00
+0C
+0F
+#1275
+10
+1C
+1F
+#1300
+00
+0C
+0F
+#1325
+10
+1C
+1F
+#1350
+00
+0C
+0F
+#1375
+1(
+10
+1C
+1F
+1K
+#1400
+00
+0C
+0F
+#1425
+0(
+10
+19
+1C
+1F
+0K
+#1450
+00
+0C
+0F
+#1475
+10
+09
+1C
+1F
+#1500
+00
+0C
+0F
+#1525
+10
+1C
+1F
+#1550
+00
+0C
+0F
+#1575
+10
+1C
+1F
+#1600
+00
+0C
+0F
+#1625
+1(
+10
+b000 7
+08
+1C
+b000 E
+1F
+1K
+#1650
+00
+0C
+0F
+#1675
+0(
+10
+19
+1C
+1F
+0K
+#1700
+00
+0C
+0F
+#1725
+0$
+10
+18
+09
+1C
+1F
+#1750
+00
+0C
+0F
+#1775
+10
+1C
+1F
+#1800
+00
+0C
+0F
+#1825
+10
+19
+1C
+1F
+#1850
+00
+0C
+0F
+#1875
+10
+09
+1C
+1F
+#1900
+00
+0C
+0F
+#1925
+10
+1C
+1F
+#1950
+00
+0C
+0F
+#1975
+10
+19
+1C
+1F
+#2000
+00
+0C
+0F
+#2025
+10
+b100 7
+08
+1C
+b100 E
+1F
+#2050
+00
+0C
+0F
+#2075
+10
+1C
+1F
+#2100
+00
+0C
+0F
+#2125
+1$
+10
+18
+09
+1C
+1F
+#2150
+00
+0C
+0F
+#2175
+10
+1C
+1F
+#2200
+00
+0C
+0F
+#2225
+10
+1C
+1F
+#2250
+00
+0C
+0F
+#2275
+1(
+10
+1C
+1F
+1K
+#2300
+00
+0C
+0F
+#2325
+0(
+10
+19
+1C
+1F
+0K
+#2350
+00
+0C
+0F
+#2375
+10
+09
+1C
+1F
+#2400
+00
+0C
+0F
+#2425
+10
+01
+1C
+1F
+#2450

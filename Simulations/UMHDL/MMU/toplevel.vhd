@@ -33,7 +33,6 @@ port (
     reset       : in    std_logic;
     slow        : in    std_logic;
     leds        : out   std_logic_vector(7 downto 0) ;
-	 debug_en : in std_logic;
 
     -- DDR2 SDRAM-Port-Pins --
     cntrl0_ddr2_a       : out std_logic_vector(12 downto 0) := (others => '0');
@@ -86,19 +85,6 @@ port ( CLKIN_IN        : in    std_logic;
     LOCKED_OUT      : out   std_logic);
 end component clk133m_dcm;
 
-
-component ASCIIUNIT
-    Port ( 
-				clk: in std_logic;
-				char_in : in  STD_LOGIC_VECTOR(7 downto 0);
-           x_in : in  std_logic_vector(9 downto 0);
-           y_in : in  std_logic_vector(9 downto 0);
-           pixel_out : out  STD_LOGIC;
-           addr_out : out  STD_LOGIC_VECTOR(10 downto 0)
-			  );
-end component;
-
-
 -- VGA --
 COMPONENT vga
 PORT(
@@ -117,14 +103,7 @@ PORT(
     reg_data_in : in std_logic_vector(31 downto 0);
     reg_adr_in  : in std_logic_vector(5 downto 0);
 	 pc_in : in std_logic_vector(31 downto 0);
-	 ir_in : in std_logic_vector(31 downto 0);
-	 
-	 debug_on	: in std_logic; --debug : regs else ascii				
-	 x_out        : out std_logic_vector(9 downto 0);
-    y_out        : out std_logic_vector(9 downto 0);
-	 pixel		: in std_logic
-	 
-	 );
+	 ir_in : in std_logic_vector(31 downto 0));
 END COMPONENT;
 
 COMPONENT vga_clk
@@ -258,22 +237,12 @@ signal	 mmu_cmd_in:  std_logic_vector(2 downto 0);
 signal	 mmu_work_in :  std_logic;
 signal	 mmu_ack_out :  std_logic;	
 
-signal ascii_char_in : std_logic_vector(7 downto 0);
 
-   signal        ascii_x_in :  std_logic_vector(9 downto 0);
-   signal        ascii_y_in :  std_logic_vector(9 downto 0);
-   signal        ascii_pixel_out :  STD_LOGIC;
-   signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
-	
-	
 
 
 signal debug2signal:  std_logic_vector(7 downto 0);
 	
 begin
--------------------------------
---testing ascii
-ascii_char_in <= "00000000";
 
 -----------------------------------------------------------------------------
 -- Reset & LEDs
@@ -310,17 +279,6 @@ port map(
          
 clk_obuf : OBUF port map ( I => CLK_130M, O => CLKB_130M ); 
   
-  
- inst_asciiunit : ASCIIUNIT PORT MAP(
-			clk => clk25,
-         char_in => ascii_char_in,
-           x_in => ascii_x_in,
-           y_in => ascii_y_in,
-           pixel_out => ascii_pixel_out,
-           addr_out => ascii_addr_out
-			  );
-  
-  
 -----------------------------------------------------------------------------
 -- VGA
 -----------------------------------------------------------------------------
@@ -340,12 +298,7 @@ Inst_vga: vga PORT MAP(
     reg_data_in => debug,
     reg_adr_in => debug_adr,
 	 pc_in => pc,
-	 ir_in => ir,
-	 
-	 debug_on => debug_en,
-    x_out   => ascii_x_in,
-    y_out   => ascii_y_in,
-	 pixel   => ascii_pixel_out
+	 ir_in => ir
 );
 	
 Inst_vga_clk: vga_clk PORT MAP(
