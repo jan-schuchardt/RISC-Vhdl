@@ -33,7 +33,7 @@ entity CHARRAM is
 port(
 		clk : in std_logic;
 		rst : in std_logic;
-		addr_in : in std_logic_vector(9 downto 0); --10 bit for adressing 8-bit cells
+		addr_in : in std_logic_vector(6 downto 0); --10 bit for adressing 8-bit cells
 		data_in : in std_logic_vector(31 downto 0);
 		data_out: out std_logic_vector(31 downto 0);
 			
@@ -47,11 +47,15 @@ end CHARRAM;
 
 architecture Behavioral of CHARRAM is
 
-type mem_t is array (0 to 1023) of std_logic_vector(7 downto 0);  -- 1024 cells with 8 bit
+
+
+
+type mem_t is array (0 to 127) of std_logic_vector(31 downto 0);  -- 128 cells with 32 bit / 1024 with 8 bit
 	signal cells : mem_t:= (
 
 
-"00000001","00000001","00000001","00000001","00000000", "00000001", "00000000",
+"00000001"&"00000001"&"00000001"&"00000001",
+"00000000"& "00000001"& "00000000"&"00000001",
 
 others=>(others=>'0')
 	
@@ -74,18 +78,38 @@ begin
 			if rst = '0' then
 			--No reset -> standard dual-port usage
 				if write_enable = '1'then
-					cells(to_integer(unsigned(addr_in))) <= data_in(31 downto 24);
-					cells(to_integer(unsigned(addr_in)+1)) <= data_in(23 downto 16);
-					cells(to_integer(unsigned(addr_in)+2)) <= data_in(15 downto 8);
-					cells(to_integer(unsigned(addr_in)+3)) <= data_in(7 downto 0);
+					cells(to_integer(unsigned(addr_in))) <= data_in;
+					--cells(to_integer(unsigned(addr_in)+1)) <= data_in(23 downto 16);
+					--cells(to_integer(unsigned(addr_in)+2)) <= data_in(15 downto 8);
+					--cells(to_integer(unsigned(addr_in)+3)) <= data_in(7 downto 0);
 				end if;
-				data_out(31 downto 24) <= cells(to_integer(unsigned(addr_in)));
-				data_out(23 downto 16) <= cells(to_integer(unsigned(addr_in)+1));
-				data_out(15 downto 8) <= cells(to_integer(unsigned(addr_in)+2));
-				data_out(7 downto 0) <= cells(to_integer(unsigned(addr_in)+3));
+				--data_out(31 downto 24) <= cells(to_integer(unsigned(addr_in)));
+				--data_out(23 downto 16) <= cells(to_integer(unsigned(addr_in)+1));
+				--data_out(15 downto 8) <= cells(to_integer(unsigned(addr_in)+2));
+				data_out <= cells(to_integer(unsigned(addr_in)));
 				
-				char_out <= cells(to_integer(unsigned(char_addr_in)));
-			
+				
+				case char_addr_in(1 downto 0) is
+				
+				when "00" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0);--right order?
+				
+				when "01" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8);
+				
+				when "10" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16);
+				
+				when "11" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24);
+				
+					when others => NULL;
+				
+				
+				
+				end case;
+				
+--				char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0) when char_addr_in(1 downto 0) = "00" else
+--								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8) when char_addr_in(1 downto 0) = "01" else
+--								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16) when char_addr_in(1 downto 0) = "10" else
+--								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24) when char_addr_in(1 downto 0) = "11";
+				--char_out_tmp <= cells(to_integer(unsigned(char_addr_in)));
 			
 			end if;
 						

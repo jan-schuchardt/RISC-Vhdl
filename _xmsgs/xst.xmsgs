@@ -129,7 +129,31 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ram_wea</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ALU</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd</arg>&quot; line <arg fmt="%d" index="2">411</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">cr_addr_in</arg>&gt; has a width of <arg fmt="%d" index="4">10</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd</arg>&quot; line <arg fmt="%d" index="2">411</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">cr_addr_in</arg>&gt; has a width of <arg fmt="%d" index="4">7</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">cells</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot; line <arg fmt="%d" index="2">96</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">cells</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">cells</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">cells</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
 <msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">218</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
@@ -281,9 +305,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">cells</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="info" file="Xst" num="738" delta="new" >HDL ADVISOR - <arg fmt="%d" index="1">8192</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">cells</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cnt_val&lt;31:5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -3841,6 +3862,15 @@
 <msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">write_data_m90_2_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">data_write0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_out_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mmu_adr_out_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CU</arg>&gt;.
 </msg>
 
@@ -4198,6 +4228,9 @@
 <msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_reg_data1</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
 <msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_reg_data2</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="3211" delta="new" >Cannot use block RAM resources for signal &lt;<arg fmt="%s" index="1">Mram_cells</arg>&gt;. Please check that the RAM contents is read synchronously.
+</msg>
 
 <msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">INST_BLOCKRAM/Mram_cells</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
@@ -7608,18 +7641,6 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
@@ -7881,9 +7902,6 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/rst0_r</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/reset_r&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2254" delta="new" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">toplevel</arg>&gt;, final ratio is <arg fmt="%i" index="2">490</arg>.
-</msg>
-
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk00000003</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00000737&gt; </arg>
 </msg>
 
@@ -7948,9 +7966,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000189</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk00000003</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk0000052f&gt; &lt;blk00000532&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

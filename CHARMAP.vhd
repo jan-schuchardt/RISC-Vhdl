@@ -40,7 +40,7 @@ end CHARMAP;
 
 architecture Behavioral of CHARMAP is
 
-type mem_t is array (0 to 255) of std_logic_vector(63 downto 0);  -- 512 cells with 32 bit
+type mem_t is array (0 to 255) of std_logic_vector(63 downto 0);  -- 256 cells with 64 bit
 	signal cells : mem_t:= (
 					"00000000"& --A
 					"01111110"&
@@ -59,6 +59,24 @@ type mem_t is array (0 to 255) of std_logic_vector(63 downto 0);  -- 512 cells w
 					"01111100"&
 					"01100110"&
 					"01111100"&
+					"00000000",
+					
+					"11111111"& --Full
+					"11111111"& 
+					"11111111"& 
+					"11111111"& 
+					"11111111"& 
+					"11111111"&
+					"11111111"&					 
+					"11111111",
+					
+					"00000000"& --Empty
+					"00000000"& 
+					"00000000"& 
+					"00000000"& 
+					"00000000"& 
+					"00000000"& 
+					"00000000"& 
 					"00000000",
 					
 					others=>(others=>'0')
