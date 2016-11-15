@@ -58,7 +58,7 @@ port (
 		auto_ref_req : in std_logic;
 		
 		char_out: out std_logic_vector(7 downto 0);	
-		char_addr_in : in std_logic_vector( 9 downto 0)
+		char_addr_in : in std_logic_vector( 10 downto 0)
 	);
 
 end MMU;
@@ -73,14 +73,14 @@ architecture Behavioral of MMU is
 	port(
 		clk : in std_logic;
 		rst : in std_logic;
-		addr_in : in std_logic_vector(6 downto 0); --7 bit for adressing 128 32-bit cells
+		addr_in : in std_logic_vector(8 downto 0); --9 bit for adressing 512 32-bit cells
 		data_in : in std_logic_vector(31 downto 0);
 		data_out: out std_logic_vector(31 downto 0);
 			
 		write_enable : in std_logic;
 		
 		char_out: out std_logic_vector(7 downto 0);	
-		char_addr_in : in std_logic_vector( 9 downto 0)
+		char_addr_in : in std_logic_vector( 10 downto 0)
 	);
 	end component CHARRAM;
 
@@ -153,7 +153,7 @@ architecture Behavioral of MMU is
 	
 	--Intern signals to be conncted to asram
 
-	signal cr_addr_in :  std_logic_vector(6 downto 0);
+	signal cr_addr_in :  std_logic_vector(8 downto 0);
 	signal cr_data_in : std_logic_vector(31 downto 0);
 	signal cr_data_out :	std_logic_vector(31 downto 0);
 	signal cr_write_enable : std_logic := '0';
@@ -229,7 +229,7 @@ architecture Behavioral of MMU is
 									
 									when "0010" =>
 										--Prefix 0x02 : CRAM access
-										cr_addr_in <= addr_in(8 downto 2); --4 aligned access
+										cr_addr_in <= addr_in(10 downto 2); --4 aligned access
 										MMU_STATE <= MMU_CRAM_READ_FIRST;
 										skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
 									
@@ -394,7 +394,7 @@ architecture Behavioral of MMU is
 									
 								when "0010" =>
 									--charram write
-									cr_addr_in <= addr_in_buf(8 downto 2);
+									cr_addr_in <= addr_in_buf(10 downto 2);
 									cr_data_in <= data_buf(31 downto 0);
 									cr_write_enable <= '1';
 									skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)

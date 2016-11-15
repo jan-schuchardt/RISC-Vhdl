@@ -36,7 +36,7 @@ entity ASCIIUNIT is
            x_in : in  std_logic_vector(9 downto 0);
            y_in : in  std_logic_vector(9 downto 0);
            pixel_out : out  STD_LOGIC;
-           addr_out : out  STD_LOGIC_VECTOR(9 downto 0)
+           addr_out : out  STD_LOGIC_VECTOR(10 downto 0)
 			  );
 end ASCIIUNIT;
 
@@ -52,7 +52,7 @@ Port ( addr : in  STD_LOGIC_vector( 7 downto 0);
 
 
 signal curr_char : std_logic_vector(7 downto 0);
-signal curr_addr: unsigned (1023 downto 0);
+signal curr_addr: unsigned (2047 downto 0);
 signal curr_bitfield : std_logic_vector(0 to 63);
 signal curr_pixel : std_logic;
 --signal curr_addr_out : std_logic_vector(9 downto 0) :="0000000000";
@@ -67,7 +67,7 @@ pixel_out <= curr_pixel;
 --curr_char <="00000000"; --char_in
 
 
-curr_char <= "00000001" when y_in(5) = '1' and x_in(4) = '1' else "00000000";--testing  should be <= char_in
+curr_char <= char_in; --"00000001" when y_in(5) = '1' and x_in(4) = '1' else "00000000";--testing  should be <= char_in
 
 
 process (clk)
