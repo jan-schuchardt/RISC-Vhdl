@@ -17,6 +17,10 @@ LW x5, x1, 20
 LW x6, x1, 24
 LW x7, x1, 28
 
+SW x1, x2, 16
+SW x1, x2, 20
+SW x1, x2, 24
+SW x1, x2, 28
 
 SW x1, x0, 16
 

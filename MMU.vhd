@@ -180,7 +180,7 @@ architecture Behavioral of MMU is
 	
 	
 		process(clk_in) begin
---		i_char_addr_in <= char_addr_in;
+
 			
 			if rising_edge(clk_in) then
 			

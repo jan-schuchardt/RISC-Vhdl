@@ -79,25 +79,19 @@ begin
 			--No reset -> standard dual-port usage
 				if write_enable = '1'then
 					cells(to_integer(unsigned(addr_in))) <= data_in;
-					--cells(to_integer(unsigned(addr_in)+1)) <= data_in(23 downto 16);
-					--cells(to_integer(unsigned(addr_in)+2)) <= data_in(15 downto 8);
-					--cells(to_integer(unsigned(addr_in)+3)) <= data_in(7 downto 0);
 				end if;
-				--data_out(31 downto 24) <= cells(to_integer(unsigned(addr_in)));
-				--data_out(23 downto 16) <= cells(to_integer(unsigned(addr_in)+1));
-				--data_out(15 downto 8) <= cells(to_integer(unsigned(addr_in)+2));
 				data_out <= cells(to_integer(unsigned(addr_in)));
 				
 				
 				case char_addr_in(1 downto 0) is
 				
-				when "00" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24);--right order?
+				when "00" => char_out <= cells(to_integer(unsigned(char_addr_in (10 downto 2))))(31 downto 24);--right order?
 				
-				when "01" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16);
+				when "01" => char_out <= cells(to_integer(unsigned(char_addr_in (10 downto 2))))(23 downto 16);
 				
-				when "10" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8);
+				when "10" => char_out <= cells(to_integer(unsigned(char_addr_in (10 downto 2))))(15 downto 8);
 				
-				when "11" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0);
+				when "11" => char_out <= cells(to_integer(unsigned(char_addr_in (10 downto 2))))(7 downto 0);
 				
 					when others => NULL;
 				
@@ -105,11 +99,6 @@ begin
 				
 				end case;
 				
---				char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0) when char_addr_in(1 downto 0) = "00" else
---								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8) when char_addr_in(1 downto 0) = "01" else
---								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16) when char_addr_in(1 downto 0) = "10" else
---								cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24) when char_addr_in(1 downto 0) = "11";
-				--char_out_tmp <= cells(to_integer(unsigned(char_addr_in)));
 			
 			end if;
 						

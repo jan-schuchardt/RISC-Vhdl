@@ -56,6 +56,7 @@ signal curr_addr: unsigned (2047 downto 0);
 signal curr_bitfield : std_logic_vector(0 to 63);
 signal curr_pixel : std_logic;
 --signal curr_addr_out : std_logic_vector(9 downto 0) :="0000000000";
+signal const : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 
 
 
@@ -76,7 +77,7 @@ begin
 if (rising_edge (clk) ) then
 
 	
-	addr_out <= std_logic_vector(unsigned(y_in(9 downto 3) & "000000") + unsigned(x_in(9 downto 3))); -- (y/8)*64 + x/8
+	addr_out <= std_logic_vector(((unsigned(y_in(9 downto 3) & "000000") + unsigned(x_in(9 downto 3)))+unsigned(const))); -- (y/8)*64 + x/8 -1
  
  
 	curr_pixel <= curr_bitfield( to_integer( unsigned(x_in(2 downto 0)) + unsigned(y_in(2 downto 0)&"000"))); -- x + y*8
