@@ -45,7 +45,9 @@ end BLOCKRAM;
 architecture Behavioral of BLOCKRAM is
 
 	type mem_t is array (0 to 511) of std_logic_vector(31 downto 0);  -- 512 cells with 32 bit
-	signal cells : mem_t:= (--lui x1, 0x10000
+	signal cells : mem_t:= (
+	
+	--lui x1, 0x10000
 "00010000000000000000000010110111",
 
 --addi x1, x1, 0x100
