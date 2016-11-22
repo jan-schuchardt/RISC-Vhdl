@@ -38,7 +38,7 @@ begin
  if rst_in='1' then
   instr_ctr <= std_logic_vector(to_unsigned(0,instr_ctr'length));
   cycle_ctr <= std_logic_vector(to_unsigned(0,cycle_ctr'length));
-  state <= "1100";
+  state <= "1101";
   err <= std_logic_vector(to_unsigned(0,err'length));
   time_ctr <= std_logic_vector(to_unsigned(0,time_ctr'length));
   ir <= std_logic_vector(to_unsigned(0,ir'length));
@@ -55,22 +55,22 @@ begin
  elsif err="1" then
 
  elsif rising_edge(clk_in) then
-  if state >= "1100" then
+  if state >= "1101" then
    case state is
-   when "1100" =>
+   when "1101" =>
     if pc = std_logic_vector(to_unsigned(0,pc'length)) then
      mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
      mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
      mmu_com_out  <= "0" & "00";
      mmu_work_out <= '1';
-     state <= "1101";
+     state <= "1110";
     else
      pc <= std_logic_vector(unsigned(pc) + 1);
     end if;
-   when "1101" =>
-    mmu_work_out <= '0';
-    state <= "1110";
    when "1110" =>
+    mmu_work_out <= '0';
+    state <= "1111";
+   when "1111" =>
     if mmu_ack_in='1' then
      if mmu_data_in(1 downto 0)/="11" then
       err <= "1";
@@ -344,6 +344,8 @@ mmu_work_out <= '1';
 end if;
     when "1011" =>
      mmu_work_out <= '0';
+     state <= "1100";
+    when "1100" =>
      if mmu_ack_in='1' then
       if mmu_data_in(1 downto 0)/="11" then
        err <= "1";
