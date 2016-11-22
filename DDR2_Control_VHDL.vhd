@@ -83,7 +83,9 @@ entity DDR2_Control_VHDL is
 		data_out : out std_logic_vector(63 downto 0);
 		mwe	  : in std_logic;
 		mrd    : in std_logic;
-		valid : out std_logic; --@Domi: Signal to tell when the DDR2Control is in a work-ready state
+		ready : out std_logic; --@Domi: Signal to tell when the DDR2Control is in a work-ready state
+		write_done : out std_logic;
+		read_done : out std_logic;
 		
 		init_done : in std_logic;
 		command_register : out std_logic_vector(2 downto 0);
@@ -286,7 +288,9 @@ synchro : process (clk_in)
 			v_ROW <= (others => '0');	
 			v_COL <= (others => '0');
 			v_BANK <= (others => '0');
-			valid <= '0';
+			ready <= '0'; --@Domi
+			write_done <= '0'; --@Domi
+			read_done <= '0'; --@Domi
 --			v_array_pos	<= 0;
 		elsif falling_edge(clk_in) then
 			case STATE_M is
@@ -380,14 +384,16 @@ synchro : process (clk_in)
 					v_read_en <= '0';
 					if mwe_r = '1' and v_write_busy = '0' and auto_ref_req = '0' then
 						-- write start (only if not busy and no refresh cycle)
-						valid <= '0';	--@Domi: tell the MMU that we started a read cycle and the data is not valid yet
+						ready <= '0';	--@Domi: tell the MMU that we started a read cycle and the data is not valid yet
+						write_done <= '0'; --@Domi
 						STATE_M <= M9_WRITE_INIT;
 					elsif mrd_r = '1' and v_read_busy = '0' and auto_ref_req = '0' then
 						-- read restart (only if not busy and no refresh cycle)
-						valid <= '0'; --@Domi: tell the MMU that we started a write cycle and the data is not valid yet
+						ready <= '0'; --@Domi: tell the MMU that we started a write cycle and the data is not valid yet
+						read_done <= '0'; --@Domi
 						STATE_M <= M11_READ_INIT;
 					else --@Domi: when we do not request anything we have a state where data is valid
-						valid <= '1'; --@Domi: see above
+						ready <= '1'; --@Domi: see above
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
 --					if risingedge_in(1)='1' and v_ROW < 255 then
@@ -415,6 +421,7 @@ synchro : process (clk_in)
 				when M10_WRITING =>								
 					-- wait to finish writing
 					if v_write_busy = '0' then
+						write_done <= '1'; --@Domi
 						STATE_M <= M8_NOP;
 					end if;
 			   -----------------------------------------------------
@@ -433,7 +440,8 @@ synchro : process (clk_in)
 					end if;
 				when M12_READING =>
 					-- wait to finish reading
-					if v_read_busy = '0' then						
+					if v_read_busy = '0' then
+						read_done <= '1';	--@Domi						
 						STATE_M <= M8_NOP;
 					end if;									
 				when others =>

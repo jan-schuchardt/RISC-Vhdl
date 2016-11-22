@@ -33,9 +33,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 	<arg fmt="%s" index="2">CPU/CDU/Mcount_counter_cy&lt;0&gt;</arg>
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">INST_MMU/data_buf_16_mux00001211</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">INST_MMU/MMU_STATE_FSM_FFd10-In_SW0_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
-</msg>
-
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;5&gt;111</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;4&gt;11_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 

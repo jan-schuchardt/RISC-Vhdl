@@ -110,8 +110,9 @@ architecture Behavioral of MMU is
 		 data_out : out std_logic_vector(63 downto 0);
 		 mwe	  : in std_logic;
 		 mrd    : in std_logic;
-		 valid : out std_logic;
-		 
+		 ready : out std_logic;
+		 write_done : out std_logic;
+		 read_done : out std_logic;
 
 		 init_done : in std_logic;
 		 command_register : out std_logic_vector(2 downto 0);
@@ -140,6 +141,7 @@ architecture Behavioral of MMU is
 			MMU_BRAM_WRITE_SECOND,
 			MMU_SDRAM_WRITE_FIRST,
 			MMU_SDRAM_WRITE_SECOND,
+			MMU_RESET,
 			MMU_IDLE
 		);
 	signal MMU_STATE : MMU_STATE_T := MMU_IDLE;
@@ -172,7 +174,9 @@ architecture Behavioral of MMU is
 	signal ddr2_data_out : std_logic_vector(63 downto 0) := (others => '0');
 	signal ddr2_write_enable : std_logic := '0';
 	signal ddr2_read_enable : std_logic := '0';
-	signal ddr2_data_valid : std_logic;
+	signal ddr2_ready : std_logic;
+	signal ddr2_write_done : std_logic;
+	signal ddr2_read_done : std_logic;
 	
 	
 	begin
@@ -186,8 +190,9 @@ architecture Behavioral of MMU is
 			
 				if reset_in = '1' then
 				
-					ack_out <= '1';
+					ack_out <= '0';
 					skip_cycle <= '0';
+					MMU_STATE <= MMU_RESET;
 					
 					
 				elsif skip_cycle = '1' then
@@ -202,6 +207,13 @@ architecture Behavioral of MMU is
 					
 				
 					case MMU_STATE is
+					
+						when MMU_RESET =>
+							-- ensure that we can handle ddr2 requests after a reset
+							if ddr2_ready = '1' then
+								ack_out <= '1';
+								MMU_STATE <= MMU_IDLE;
+							end if;
 					
 						when MMU_IDLE =>
 						
@@ -285,9 +297,7 @@ architecture Behavioral of MMU is
 							
 						when MMU_SDRAM_READ_FIRST =>
 							--Wait for the first 64-Bit cell read form ddr2sdram
-							if ddr2_data_valid = '0' then
-								ddr2_read_enable <= '0'; --wait for the ddr2ram to finish until we read next
-							else
+							if ddr2_read_done = '1' and ddr2_ready = '1' then
 								data_buf(31 downto 0) <= ddr2_data_out(31 downto 0);
 								if addr_in_buf(1 downto 0) /= "00" then
 									--We need to read a second 32-bit cell
@@ -296,7 +306,7 @@ architecture Behavioral of MMU is
 									skip_cycle <= '1'; --Skip the next cycle for sync (data might take one cycle longer)
 									MMU_STATE <= MMU_SDRAM_READ_SECOND;
 								else
-									ddr2_read_enable <= '0';
+									ddr2_read_enable <= '0'; --not neccessarily needed because the skipped cycle forces a '0' onto re
 									MMU_STATE <= MMU_READ_DONE;
 								end if;
 							
@@ -304,8 +314,7 @@ architecture Behavioral of MMU is
 							
 						when MMU_SDRAM_READ_SECOND =>
 						
-							ddr2_read_enable <= '0';
-							if ddr2_data_valid = '1' then
+							if ddr2_read_done = '1' and ddr2_ready = '1' then
 							
 								data_buf(63 downto 32) <= ddr2_data_out(31 downto 0);
 								MMU_STATE <= MMU_READ_DONE;	
@@ -319,18 +328,20 @@ architecture Behavioral of MMU is
 						
 							--Jump back into idle mode or intro write back depending on the mode of the mmu
 							if write_mode = '0' then
-								--Since we always have 32-bit as read size we use a case statement
-								case addr_in_buf(1 downto 0) is
-								
-									when "00" => data_out <= data_buf(31 downto 0);
-									when "01" => data_out <= data_buf(39 downto 8);
-									when "10" => data_out <= data_buf(47 downto 16);
-									when "11" => data_out <= data_buf(55 downto 24);
-									when others => NULL;
-			
-								end case;
-								ack_out <= '1';
-								MMU_STATE <= MMU_IDLE;
+								if ddr2_ready = '1' then
+									--Since we always have 32-bit as read size we use a case statement
+									case addr_in_buf(1 downto 0) is
+									
+										when "00" => data_out <= data_buf(31 downto 0);
+										when "01" => data_out <= data_buf(39 downto 8);
+										when "10" => data_out <= data_buf(47 downto 16);
+										when "11" => data_out <= data_buf(55 downto 24);
+										when others => NULL;
+				
+									end case;
+									ack_out <= '1';
+									MMU_STATE <= MMU_IDLE;
+								end if;
 							else
 								--Todo apply the the right size to the right position
 								case access_size is
@@ -424,7 +435,7 @@ architecture Behavioral of MMU is
 						when MMU_CRAM_WRITE_SECOND =>
 							--Return to idle state of mmu after we have written the next 32 bit cell
 							cr_write_enable <= '0';
-							if ddr2_data_valid = '1' then
+							if ddr2_ready = '1' then
 								ack_out <= '1';
 								MMU_STATE <= MMU_IDLE;
 							end if;	
@@ -448,14 +459,14 @@ architecture Behavioral of MMU is
 						when MMU_BRAM_WRITE_SECOND =>
 							--Return to idle state of mmu after we have written the next 32 bit cell
 							br_write_enable <= '0';
-							if ddr2_data_valid = '1' then
+							if ddr2_ready = '1' then
 								ack_out <= '1';
 								MMU_STATE <= MMU_IDLE;
 							end if;
 							
 						when MMU_SDRAM_WRITE_FIRST =>
 							--after the first write was sent, we wait for data valid as confirmation
-							if ddr2_data_valid = '1' then
+							if ddr2_ready = '1' and ddr2_write_done = '1' then
 								
 								if addr_in_buf(1 downto 0) /= "00" then
 									--Write the second 32-bit cell due the address was at a border of cells
@@ -466,21 +477,21 @@ architecture Behavioral of MMU is
 									MMU_STATE <= MMU_SDRAM_WRITE_SECOND;
 								else
 								
-									ddr2_write_enable <= '0';
+									ddr2_write_enable <= '0'; --not neccessariliy needed because skipped cylce forces '0' to we
 									ack_out <= '1';
 									MMU_STATE <= MMU_IDLE;
 								end if;
 								
 							else
-								ddr2_write_enable <= '0'; --Wait for the write to finish
+								ddr2_write_enable <= '0'; --Wait for the write to finish / not neccessariliy needed because skipped cylce forces '0' to we
 						
 							end if;
 						
 						
 						when MMU_SDRAM_WRITE_SECOND =>
 							--Wait until the second 64-bit cell was written
-							ddr2_write_enable <= '0';
-							if ddr2_data_valid = '1' then
+							ddr2_write_enable <= '0'; --not neccessariliy needed because skipped cylce forces '0' to we
+							if ddr2_ready = '1' and ddr2_read_done = '1' then
 							
 								ack_out <= '1';
 								MMU_STATE <= MMU_IDLE;
@@ -539,7 +550,9 @@ architecture Behavioral of MMU is
 			 data_out => ddr2_data_out,
 			 mwe	  => ddr2_write_enable,
 			 mrd     => ddr2_read_enable,
-			 valid => ddr2_data_valid,
+			 ready => ddr2_ready,
+			 write_done => ddr2_write_done,
+			 read_done => ddr2_read_done,
 
 			 -- ddr2	
 			 init_done => init_done, --in
