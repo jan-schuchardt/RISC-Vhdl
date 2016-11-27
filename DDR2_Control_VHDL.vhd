@@ -79,13 +79,14 @@ entity DDR2_Control_VHDL is
 		clk90_in : in std_logic;
 
 		maddr   : in std_logic_vector(15 downto 0);
-		mdata_i : in std_logic_vector(63 downto 0); --@domifranz
-		data_out : out std_logic_vector(63 downto 0);
+		mdata_i : in std_logic_vector(7 downto 0);
+		data_out : out std_logic_vector(7 downto 0);
 		mwe	  : in std_logic;
 		mrd    : in std_logic;
-		ready : out std_logic; --@Domi: Signal to tell when the DDR2Control is in a work-ready state
-		write_done : out std_logic;
-		read_done : out std_logic;
+		
+		--@domi: signals to confirm:
+		uidle : out std_logic; --ddr2 is ready to take cmd
+		ucmd_ack : out std_logic; --ddr2 accepted cmd
 		
 		init_done : in std_logic;
 		command_register : out std_logic_vector(2 downto 0);
@@ -213,9 +214,11 @@ architecture Verhalten of DDR2_Control_VHDL is
 	signal mrd_r : std_logic;	
 	signal mwe_r : std_logic;	
 	signal m_rd : std_logic;	
-	signal m_we : std_logic;	
+	signal m_we : std_logic;
 	
 begin
+
+uidle <= '1' when STATE_M <= M8_NOP else '0';
 
 synchro : process (clk_in)
 	begin
@@ -288,9 +291,6 @@ synchro : process (clk_in)
 			v_ROW <= (others => '0');	
 			v_COL <= (others => '0');
 			v_BANK <= (others => '0');
-			ready <= '0'; --@Domi
-			write_done <= '0'; --@Domi
-			read_done <= '0'; --@Domi
 --			v_array_pos	<= 0;
 		elsif falling_edge(clk_in) then
 			case STATE_M is
@@ -316,6 +316,7 @@ synchro : process (clk_in)
 					v_main_command_register <= "000"; -- NOP
 					if (init_done = '1') then
 						-- The RAM is now ready
+						ucmd_ack <= '0'; --@domi
 						STATE_M <= M8_NOP; -- M3_AUTO_WRITE_START;	
 					end if;
 			   -----------------------------------------------------
@@ -381,19 +382,17 @@ synchro : process (clk_in)
 				when M8_NOP =>
 					-- warte auf Taste fuer READ oder WRITE
 					v_write_en <= '0';
-					v_read_en <= '0';
+					v_read_en <= '0';					
 					if mwe_r = '1' and v_write_busy = '0' and auto_ref_req = '0' then
 						-- write start (only if not busy and no refresh cycle)
-						ready <= '0';	--@Domi: tell the MMU that we started a read cycle and the data is not valid yet
-						write_done <= '0'; --@Domi
 						STATE_M <= M9_WRITE_INIT;
+						ucmd_ack <= '1'; --@domi
 					elsif mrd_r = '1' and v_read_busy = '0' and auto_ref_req = '0' then
 						-- read restart (only if not busy and no refresh cycle)
-						ready <= '0'; --@Domi: tell the MMU that we started a write cycle and the data is not valid yet
-						read_done <= '0'; --@Domi
 						STATE_M <= M11_READ_INIT;
-					else --@Domi: when we do not request anything we have a state where data is valid
-						ready <= '1'; --@Domi: see above
+						ucmd_ack <= '1'; --@domi
+					else
+						ucmd_ack <= '0'; --@domi
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
 --					if risingedge_in(1)='1' and v_ROW < 255 then
@@ -421,7 +420,6 @@ synchro : process (clk_in)
 				when M10_WRITING =>								
 					-- wait to finish writing
 					if v_write_busy = '0' then
-						write_done <= '1'; --@Domi
 						STATE_M <= M8_NOP;
 					end if;
 			   -----------------------------------------------------
@@ -440,8 +438,7 @@ synchro : process (clk_in)
 					end if;
 				when M12_READING =>
 					-- wait to finish reading
-					if v_read_busy = '0' then
-						read_done <= '1';	--@Domi						
+					if v_read_busy = '0' then						
 						STATE_M <= M8_NOP;
 					end if;									
 				when others =>
@@ -478,7 +475,7 @@ synchro : process (clk_in)
 			   -----------------------------------------------------
 				-- WRITE : Write a value to the RAM
 				-----------------------------------------------------	
-				v_write_data <= mdata_i; -- CONST_DATA; @Domi: Edited so that we can have full 64-bit access				
+				v_write_data <= x"00000000000000" & mdata_i; -- CONST_DATA;				
 				input_adress <=  "00000" & maddr(15 downto 8) & maddr(7 downto 0) & "0000"; --v_ROW & v_COL & v_BANK;
 				command_register <= v_write_command_register;
 				burst_done <= v_write_burst_done;				
@@ -513,7 +510,7 @@ synchro : process (clk_in)
 			data_out <= (others => '0');
 		elsif falling_edge(clk_in) and v_read_busy='0' then
 		
-			data_out <= v_read_data; --@Domi: edited so we have full access to 64-bit read values
+			data_out <= v_read_data(7 downto 0);
 		 
 		
 --			if debounce_in(7 downto 5)="000" then data_out <= v_read_data(7 downto 0);
@@ -528,4 +525,6 @@ synchro : process (clk_in)
 			-------------------------------------------			
 		end if;
 	end process P_DataOut;
+
 end Verhalten;
+
