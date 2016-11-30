@@ -328,21 +328,21 @@ architecture Behavioral of MMU is
 										br_write_enable <= '1';
 										br_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
 										
-									when "0001" => read_data (31 downto 24) <= ddr2_data_out(7 downto 0);
+									when "0001" => 
 										ddr2_data_in (7 downto 0) <= data_in_buf(7 downto 0);
 										br_write_enable <= '1';
 										ddr2_addr_in(15 downto 0) <= addr_in_buf(15 downto 0);
 									
-									when "0010" => read_data (31 downto 24) <= cr_data_out(7 downto 0);
+									when "0010" => 
 										cr_data_in(7 downto 0) <= data_in_buf(7 downto 0);
 										cr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
 										cr_write_enable <= '1';
 									
 									when others => NULL;
-									
-									MMU_STATE <= MMU_WAITING;
 								
 								end case;
+									
+								MMU_STATE <= MMU_WAITING;
 							
 							end if;
 						

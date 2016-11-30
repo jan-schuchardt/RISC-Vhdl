@@ -1,12 +1,4 @@
-LUI x1, 0x10000
-ADDI x1, x1, 0x100
-
-LUI x28, 0x20000
-LUI x29, 0x03010
-ADDI x29, x29, 0x204
-
-SW x28, x29, 20
-
+LUI x1, 0x00000
 
 ADDI x2, x0, 0
 ADDI x2, x2, 0xFFF
@@ -17,10 +9,6 @@ LW x5, x1, 20
 LW x6, x1, 24
 LW x7, x1, 28
 
-SW x1, x2, 16
-SW x1, x2, 20
-SW x1, x2, 24
-SW x1, x2, 28
 
 SW x1, x0, 16
 
