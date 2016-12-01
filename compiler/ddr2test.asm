@@ -1,11 +1,20 @@
 LUI x1, 0x10000
 ADDI x1, x1, 0x100
 
-LUI x28, 0x20000
-LUI x29, 0x03010
-ADDI x29, x29, 0x204
 
-SW x28, x29, 20
+
+ADDI x30, x0, 0x100
+LUI x28, 0x20000
+
+
+.mar0
+
+ADDI x29, x29, 0x001
+ADDI x28, x28, 0x001
+SB x28, x29, 0
+BNE x29, x30, mar0
+
+
 
 
 ADDI x2, x0, 0
