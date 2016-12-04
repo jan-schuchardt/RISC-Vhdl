@@ -58,7 +58,11 @@ port (
 		auto_ref_req : in std_logic;
 		
 		char_out: out std_logic_vector(7 downto 0);	
-		char_addr_in : in std_logic_vector( 10 downto 0)
+		char_addr_in : in std_logic_vector( 10 downto 0);
+		
+		mmu_state_out : out std_logic_vector(31 downto 0);
+		ddr2_cntrl_state_out : out std_logic_vector(31 downto 0)
+		
 	);
 
 end MMU;
@@ -112,6 +116,7 @@ architecture Behavioral of MMU is
 				mrd    : in std_logic;
 				uidle : out std_logic;
 				ucmd_ack : out std_logic;
+				state_out : out std_logic_vector(31 downto 0);
 				
 				init_done : in std_logic;
 				command_register : out std_logic_vector(2 downto 0);
@@ -172,7 +177,6 @@ architecture Behavioral of MMU is
 	begin
 	
 	
-	
 		process(clk_in) begin
 
 			
@@ -191,8 +195,9 @@ architecture Behavioral of MMU is
 					
 				
 					case MMU_STATE is
-					
+						
 						when MMU_RESET =>
+							mmu_state_out <= x"11111111";
 							-- ensure that we can handle ddr2 requests after a reset
 							if ddr2_ready = '1' then
 								ack_out <= '1';
@@ -201,6 +206,7 @@ architecture Behavioral of MMU is
 					
 						when MMU_IDLE =>
 						
+							mmu_state_out <= x"22222222";
 							--we wait for work_in input
 							if work_in = '1' then
 								data_in_buf <= data_in;
@@ -263,6 +269,7 @@ architecture Behavioral of MMU is
 						
 						when MMU_WAITING =>
 						
+							mmu_state_out <= x"33333333";
 							if ddr2_ack = '1' or ddr2_accessed = '0' then
 								--Remove all signals that enable access to any RAM
 								ddr2_read_enable <= '0';
@@ -287,7 +294,7 @@ architecture Behavioral of MMU is
 							end if;
 						
 						when MMU_READ_NEXT =>
-							
+							mmu_state_out <= x"44444444";
 							case addr_in_buf(31 downto 28) is
 							
 								when "0000" => read_data (31 downto 24) <= br_data_out(7 downto 0);
@@ -314,7 +321,7 @@ architecture Behavioral of MMU is
 							end if;
 							
 						when MMU_WRITE_NEXT =>
-						
+							mmu_state_out <= x"55555555";
 							if access_remaining = 0 then
 							
 								MMU_STATE <= MMU_WRITE_DONE;
@@ -347,16 +354,18 @@ architecture Behavioral of MMU is
 							end if;
 						
 						when MMU_READ_DONE =>
+							mmu_state_out <= x"66666666";
 							ack_out <= '1';
 							data_out <= read_data;
 							MMU_STATE <= MMU_IDLE;
 						
 						when MMU_WRITE_DONE =>
+							mmu_state_out <= x"77777777";
 							ack_out <= '1';
 							MMU_STATE <= MMU_IDLE;
 
 							
-						when others => NULL;
+						when others => mmu_state_out <= x"00000000"; NULL;
 				
 					end case;
 				
@@ -410,6 +419,7 @@ architecture Behavioral of MMU is
 			 mrd     => ddr2_read_enable,
 			 uidle => ddr2_ready,
 			 ucmd_ack => ddr2_ack,
+			 state_out => ddr2_cntrl_state_out,
 
 			 -- ddr2	
 			 init_done => init_done, --in

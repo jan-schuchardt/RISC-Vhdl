@@ -87,6 +87,7 @@ entity DDR2_Control_VHDL is
 		--@domi: signals to confirm:
 		uidle : out std_logic; --ddr2 is ready to take cmd
 		ucmd_ack : out std_logic; --ddr2 accepted cmd
+		state_out : out std_logic_vector(31 downto 0);
 		
 		init_done : in std_logic;
 		command_register : out std_logic_vector(2 downto 0);
@@ -301,6 +302,7 @@ synchro : process (clk_in)
 --				- And waited for the Init Done signal from RAM
 				-----------------------------------------------------
 				when M1_START_UP =>
+					state_out <= x"11111111";
 					-- Wait 1ms after reset ready to RAM
 					-- IMPORTANT! this is so in the Data Sheet
 					if v_counter = 0 then					
@@ -312,6 +314,7 @@ synchro : process (clk_in)
 						v_counter <= v_counter - 1;
 					end if;	
 				when M2_WAIT_4_DONE =>
+					state_out <= x"22222222";
 					-- Waiting for Init Done signal from RAM
 					v_main_command_register <= "000"; -- NOP
 					if (init_done = '1') then
@@ -380,6 +383,8 @@ synchro : process (clk_in)
 --					Was pressed -
 				-----------------------------------------------------						
 				when M8_NOP =>
+					
+					state_out <= x"33333333";
 					-- warte auf Taste fuer READ oder WRITE
 					v_write_en <= '0';
 					v_read_en <= '0';					
@@ -391,7 +396,7 @@ synchro : process (clk_in)
 						-- read restart (only if not busy and no refresh cycle)
 						STATE_M <= M11_READ_INIT;
 						ucmd_ack <= '1'; --@domi
-					else
+					elsif mwe_r = '1' and mrd_r = '1' then
 						ucmd_ack <= '0'; --@domi
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
@@ -407,7 +412,9 @@ synchro : process (clk_in)
 --				- A fixed data value is in the current address
 --				- Written to RAM
 				-----------------------------------------------------						
-				when M9_WRITE_INIT =>					
+				when M9_WRITE_INIT =>
+					
+					state_out <= x"44444444";
 					-- Wait until ready for writing
 					if v_write_busy = '0' and v_write_en='0' then
 						-- to write data release
@@ -417,7 +424,9 @@ synchro : process (clk_in)
 						v_write_en <= '0';
 						STATE_M <= M10_WRITING;
 					end if;
-				when M10_WRITING =>								
+				when M10_WRITING =>
+					
+					state_out <= x"55555555";
 					-- wait to finish writing
 					if v_write_busy = '0' then
 						STATE_M <= M8_NOP;
@@ -426,7 +435,9 @@ synchro : process (clk_in)
 --				- READ: Read a value from RAM:
 --				- The current address is read from RAM
 				-----------------------------------------------------						
-				when M11_READ_INIT =>					
+				when M11_READ_INIT =>	
+					
+					state_out <= x"66666666";
 					-- wait until ready for reading
 					if v_read_busy = '0' and v_read_en='0' then 
 						-- Share to read data
@@ -437,6 +448,8 @@ synchro : process (clk_in)
 						STATE_M <= M12_READING;
 					end if;
 				when M12_READING =>
+					
+					state_out <= x"77777777";
 					-- wait to finish reading
 					if v_read_busy = '0' then						
 						STATE_M <= M8_NOP;

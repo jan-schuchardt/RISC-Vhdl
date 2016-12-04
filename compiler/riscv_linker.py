@@ -75,7 +75,7 @@ def link_cbranch(line, tokens, symbols, off, funct3):
 		try:
 			rs1 = token_to_reg(tokens[1])
 			rs2 = token_to_reg(tokens[2])
-			imm = int(pc_relative_symbol(tokens[3], off, symbols) / 2)
+			imm = int(pc_relative_symbol(tokens[3], off, symbols) / 1)
 			imms = iformat.sb_imm_split(imm)
 			return iformat.le_encode(iformat.compile_sb(0x63, imms[0], funct3, rs1, rs2, imms[1]))
 		except:
