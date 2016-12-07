@@ -132,6 +132,7 @@ architecture Behavioral of MMU is
 
 	type MMU_STATE_T is (
 			MMU_WAITING,
+			MMU_DATA_VALID,
 			MMU_READ_NEXT,
 			MMU_READ_DONE,
 			MMU_WRITE_NEXT,
@@ -276,20 +277,25 @@ architecture Behavioral of MMU is
 								ddr2_write_enable <= '0';
 								br_write_enable <= '0';
 								cr_write_enable <= '0';
+								MMU_STATE <= MMU_DATA_VALID;
 								
-								if ddr2_ready = '1' then
-			
-									--RShift so far recieved data by 8 and place new recieved data on top (due to LE encoding)
-									read_data(23 downto 0) <= read_data(31 downto 8);
-									data_in_buf(23 downto 0) <= data_in_buf(31 downto 8);
-									
-									access_remaining <= access_remaining - 1;
-									addr_in_buf <= std_logic_vector(unsigned(addr_in_buf(31 downto 0))+1); --Ready the next adress to read/write from
-									if write_mode = '1' then
-										MMU_STATE <= MMU_WRITE_NEXT;
-									else
-										MMU_STATE <= MMU_READ_NEXT;
-									end if;
+							end if;
+							
+						
+						when MMU_DATA_VALID =>
+					
+							if ddr2_ready = '1' then
+		
+								--RShift so far recieved data by 8 and place new recieved data on top (due to LE encoding)
+								read_data(23 downto 0) <= read_data(31 downto 8);
+								data_in_buf(23 downto 0) <= data_in_buf(31 downto 8);
+								
+								access_remaining <= access_remaining - 1;
+								addr_in_buf <= std_logic_vector(unsigned(addr_in_buf(31 downto 0))+1); --Ready the next adress to read/write from
+								if write_mode = '1' then
+									MMU_STATE <= MMU_WRITE_NEXT;
+								else
+									MMU_STATE <= MMU_READ_NEXT;
 								end if;
 							end if;
 						
