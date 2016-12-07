@@ -219,8 +219,6 @@ architecture Verhalten of DDR2_Control_VHDL is
 	
 begin
 
-uidle <= '1' when STATE_M <= M8_NOP else '0';
-
 synchro : process (clk_in)
 	begin
 		mrd_r <= m_rd;
@@ -392,12 +390,17 @@ synchro : process (clk_in)
 						-- write start (only if not busy and no refresh cycle)
 						STATE_M <= M9_WRITE_INIT;
 						ucmd_ack <= '1'; --@domi
+						uidle <= '0';
 					elsif mrd_r = '1' and v_read_busy = '0' and auto_ref_req = '0' then
 						-- read restart (only if not busy and no refresh cycle)
 						STATE_M <= M11_READ_INIT;
 						ucmd_ack <= '1'; --@domi
-					elsif mwe_r = '1' and mrd_r = '1' then
+						uidle <= '0';
+					elsif mwe_r = '1' or mrd_r = '1' then
 						ucmd_ack <= '0'; --@domi
+						uidle <= '0';
+					else	
+						uidle <= '1';
 					end if;					
 					-- warte auf Taste fuer Adr-Up oder Adr-Down								
 --					if risingedge_in(1)='1' and v_ROW < 255 then

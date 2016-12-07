@@ -17,16 +17,16 @@ LW x7, x1, 12
 SW x1, x2, 0
 
 LW x8, x1, 0
-LW x9, x1, 0
-LW x10, x1, 0
-LW x11, x1, 0
+LW x9, x1, 4
+LW x10, x1, 8
+LW x11, x1, 12
 
 SW x1, x2, 5
 
 LW x12, x1, 0
-LW x13, x1, 0
-LW x14, x1, 0
-LW x15, x1, 0
+LW x13, x1, 4
+LW x14, x1, 8
+LW x15, x1, 12
 
 SH x1, x3, 8
 
@@ -38,14 +38,18 @@ LW x19, x1, 12
 SH x1, x3, 11
 
 LW x20, x1, 0
-LW x21, x1, 0
-LW x22, x1, 0
-LW x23, x1, 0
+LW x21, x1, 4
+LW x22, x1, 8
+LW x23, x1, 12
 
 SB x1, x3, 14
 
 LW x24, x1, 0
-LW x25, x1, 0 
-LW x26, x1, 0
-LW x27, x1, 0
+LW x25, x1, 4
+LW x26, x1, 8
+LW x27, x1, 12
 
+DW 5
+DW 0xA336
+DW -4
+DW 0xFFFFF

@@ -337,7 +337,7 @@ architecture Behavioral of MMU is
 										
 									when "0001" => 
 										ddr2_data_in (7 downto 0) <= data_in_buf(7 downto 0);
-										br_write_enable <= '1';
+										ddr2_write_enable <= '1';
 										ddr2_addr_in(15 downto 0) <= addr_in_buf(15 downto 0);
 									
 									when "0010" => 
