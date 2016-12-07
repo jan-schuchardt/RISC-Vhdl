@@ -85,13 +85,13 @@ begin
 				
 				case char_addr_in(1 downto 0) is
 				
-				when "00" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24);--right order?  should be 10 NOT 9
+				when "00" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0);--right order?  should be 10 NOT 9
 				
-				when "01" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16);
+				when "01" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8);
 				
-				when "10" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(15 downto 8);
+				when "10" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(23 downto 16);
 				
-				when "11" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(7 downto 0);
+				when "11" => char_out <= cells(to_integer(unsigned(char_addr_in (9 downto 2))))(31 downto 24);
 				
 					when others => NULL;
 				
