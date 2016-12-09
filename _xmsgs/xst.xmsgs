@@ -5,140 +5,131 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_11088_10&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_11088_16&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK2X_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_11088_36&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK2X_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot; line <arg fmt="%d" index="2">82</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">addr_out</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">13</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot; line <arg fmt="%d" index="2">82</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">addr_out</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">13</arg>-bit wide.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">478</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">478</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">677</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">770</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">868</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">677</arg>: Mux is complete : default of case is discarded
-</msg>
-
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">770</arg>: Mux is complete : default of case is discarded
-</msg>
-
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">868</arg>: Mux is complete : default of case is discarded
-</msg>
-
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;err&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">107</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divUnsigned</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">107</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divUnsigned</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">117</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divSigned</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">117</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divSigned</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">166</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">166</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">reg_data1</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">179</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">179</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">reg_data2</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">499</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">499</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">501</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">501</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">503</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">503</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">505</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">505</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">509</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">509</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">510</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">510</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">516</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">516</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">521</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">521</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">522</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">522</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">532</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ram_wea</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ALU</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;m_rd&gt;, &lt;m_we&gt;, &lt;mrd&gt;, &lt;mwe&gt;</arg>
 </msg>
 
@@ -151,10 +142,10 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">v_BANK</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Control_VHDL</arg>&gt; has a constant value of <arg fmt="%s" index="3">00</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
@@ -163,7 +154,7 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ddr_odt2</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_controller_0</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
@@ -202,7 +193,7 @@
 <msg type="warning" file="Xst" num="39" delta="new" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/NeuerOrdner/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
@@ -287,9 +278,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">cells</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">char_addr_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cnt_val&lt;31:5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -4387,6 +4375,81 @@
 <msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">write_data_m270_2_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">data_write0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_asciiunit</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">v_data_lsb_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">INST_DDR2_Read_VHDL</arg>&gt;.
 </msg>
 
@@ -5213,92 +5276,92 @@
 
 <msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_reg_data2</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
-<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">INST_BLOCKRAM/Mram_cells</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">INST_CHARRAM/Mram_cells</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
 <msg type="info" file="Xst" num="3044" delta="new" >The ROM &lt;<arg fmt="%s" index="1">Mrom__varindex0000</arg>&gt; will be implemented as a read-only BLOCK RAM, absorbing the register: &lt;<arg fmt="%s" index="2">data</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="3225" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mrom__varindex0000</arg>&gt; will be implemented as BLOCK RAM
 </msg>
 
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">INST_MMU/INST_CHARRAM/Mram_cells</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">INST_MMU/INST_BLOCKRAM/Mram_cells</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">burst_length_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_controller_0</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">temp_x_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ASCIIUNIT</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">w_command_register_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DDR2_Write_VHDL</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -5520,28 +5583,28 @@
 <msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">v_write_data_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DDR2_Control_VHDL</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">mmu_state_out_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MMU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INST_MMU/mmu_state_out_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">toplevel</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">reset90_r</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_data_read_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fifo1_rd_addr_inst/reset90_r&gt; &lt;fifo0_rd_addr_inst/reset90_r&gt; </arg>
@@ -9413,58 +9476,172 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/ar_done</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/addr_out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_asciiunit/temp_x_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/first_sdr_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
@@ -9609,174 +9786,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo_0_data_out_r_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_lsb_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_MMU/INST_DDR2_Control_VHDL/INST_DDR2_Read_VHDL/v_data_msb_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/data_write0/write_data90_2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">toplevel</arg>&gt;.

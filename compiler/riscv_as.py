@@ -42,7 +42,7 @@ def parse_file(infile, outfile):
 			out += comments[int(i/4)]+"\n"+current_cache+"\n\n"
 			current_cache = ""
 	out += "others=>(others=>'0')\n"
-	
+	print(outfile)
 	o = open(outfile, "w+")
 	o.write(out)
 	o.close()
