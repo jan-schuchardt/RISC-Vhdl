@@ -164,7 +164,10 @@ PORT (
 		auto_ref_req : in std_logic;
 		
 		char_out: out std_logic_vector(7 downto 0);	
-		char_addr_in : in std_logic_vector( 10 downto 0)
+		char_addr_in : in std_logic_vector( 10 downto 0);
+		
+		mmu_state_out : out std_logic_vector(31 downto 0);
+		ddr2_cntrl_state_out : out std_logic_vector(31 downto 0)
 );
 END COMPONENT MMU;
 
@@ -259,7 +262,9 @@ signal	 mmu_data_out:  std_logic_vector(31 downto 0);
 signal	 mmu_addr_in:  std_logic_vector(31 downto 0);
 signal	 mmu_cmd_in:  std_logic_vector(2 downto 0);
 signal	 mmu_work_in :  std_logic;
-signal	 mmu_ack_out :  std_logic;	
+signal	 mmu_ack_out :  std_logic;
+signal	 mmu_state_out : std_logic_vector(31 downto 0);
+signal 	 mmu_ddr2_state_out : std_logic_vector(31 downto 0);
 
 signal ascii_char_in : std_logic_vector(7 downto 0);
 
@@ -268,6 +273,7 @@ signal ascii_char_in : std_logic_vector(7 downto 0);
    signal        ascii_pixel_out :  STD_LOGIC;
    signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
 	
+
 	
 
 
@@ -340,8 +346,8 @@ Inst_vga: vga PORT MAP(
     v => vsync,
     reg_data_in => debug,
     reg_adr_in => debug_adr,
-	 pc_in => pc,
-	 ir_in => ir,
+	 pc_in => mmu_ddr2_state_out,
+	 ir_in => mmu_state_out,
 	 
 	 debug_on => debug_en,
     x_out   => ascii_x_in,
@@ -417,7 +423,10 @@ PORT MAP (
 	
 		
 	char_out =>	ascii_char_in,
-	char_addr_in => ascii_addr_out
+	char_addr_in => ascii_addr_out,
+	mmu_state_out => mmu_state_out,
+	ddr2_cntrl_state_out => mmu_ddr2_state_out
+
 
 );
 --debug_adr <= "000100";

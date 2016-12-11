@@ -35,12 +35,14 @@ def parse_file(infile, outfile):
 	current_cache = ""
 	
 	for i in range (0, len(bytes)):
-		current_cache = '{0:08b}'.format(bytes[i]) + current_cache
+		
+	
+		current_cache = current_cache + "\""+'{0:08b}'.format(bytes[i]) + "\","
 		if i % 4 == 3:
-			out += comments[int(i/4)]+"\n\""+current_cache+"\",\n\n"
+			out += comments[int(i/4)]+"\n"+current_cache+"\n\n"
 			current_cache = ""
 	out += "others=>(others=>'0')\n"
-	
+	print(outfile)
 	o = open(outfile, "w+")
 	o.write(out)
 	o.close()

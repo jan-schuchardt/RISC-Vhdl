@@ -4,7 +4,9 @@ import re
 def token_to_reg(regstr):
 	m = re.search('x([0-9]+),*', regstr)
 	return int(m.groups()[0])
-		
+
+
+
 def pc_relative_symbol(symbol, off, symbols):
 	try:
 		return int(symbol, 0)
@@ -14,6 +16,19 @@ def pc_relative_symbol(symbol, off, symbols):
 		else:
 			print(symbol+" not in symbol table")
 			raise
+
+def link_dw(line, tokens, symbols, off):
+	#DW imm32
+	if len(tokens) == 2:
+		try:
+			imm = int(tokens[1], 0)
+			return iformat.le_encode(imm)
+		except:
+			print("Unable to parse line "+str(line)+" : "+str(tokens))
+
+	else:
+		print("Missing tokens in line "+str(line)+" : "+str(tokens))
+		raise
 
 def link_lui(line, tokens, symbols, off):
 	#LUI rd, imm
@@ -367,6 +382,7 @@ inst_dict = { \
 	"divu":link_divu, \
 	"rem":link_rem, \
 	"remu":link_remu, \
+	"dw":link_dw, \
 	"dummy":None
 }
 
