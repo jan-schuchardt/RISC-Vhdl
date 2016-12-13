@@ -93,6 +93,7 @@ architecture Behavioral of ALU is
 		 
 	signal mult_result: std_logic_vector(63 downto 0);
 	signal shift_ar: std_logic;
+	signal ones : unsigned(31 downto 0);
 
 
 
@@ -131,6 +132,8 @@ architecture Behavioral of ALU is
 	debug2(0) <= alu_rfd;
 	debug2(3 downto 1) <= std_logic_vector(division_flank_counter(2 downto 0));
 	debug2(7 downto 4) <= state;	
+	
+	ones <= x"FFFFFFFF";
 	
 process (clk_in, rst_in) 
 begin
@@ -323,7 +326,7 @@ begin
 			--Shift arithmetic right
 			when "00111" =>
 			
-				
+			
 				if s_opc(6)='0' and s_opc(5)='0' then
 						if s_op2(4 downto 0)="00000" then
 							acc <= s_op1;
@@ -496,13 +499,13 @@ begin
 				
 				if s_opc(4 downto 0) ="00111" and shift_ar='1' then
 					if s_opc(4) = '0' then
-						reg_data1(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+						reg_data1(to_integer(unsigned(s_op3))) <= acc or std_logic_vector(shift_left(ones, 32-to_integer(unsigned(s_op2(4 downto 0)))));
 						debug_signal <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
-						reg_data2(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+						reg_data2(to_integer(unsigned(s_op3))) <= acc or std_logic_vector(shift_left(ones, 32-to_integer(unsigned(s_op2(4 downto 0)))));
 					else
-						reg_data1(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(ram_doutb(4 downto 0))) downto 0)), acc'length));
+						reg_data1(to_integer(unsigned(s_op3))) <= acc or std_logic_vector(shift_left(ones, 32-to_integer(unsigned(ram_doutb(4 downto 0)))));
 						debug_signal <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
-						reg_data2(to_integer(unsigned(s_op3))) <= std_logic_vector(resize(signed(acc(31-to_integer(unsigned(s_op2(4 downto 0))) downto 0)), acc'length));
+						reg_data2(to_integer(unsigned(s_op3))) <= acc or std_logic_vector(shift_left(ones, 32-to_integer(unsigned(ram_doutb(4 downto 0)))));
 					end if;
 				--Multiply lower
 				elsif s_opc(4 downto 0)="01010" then
