@@ -79,7 +79,7 @@ begin
 				end if;
 				data_out <= cells(to_integer(unsigned(addr_in)));
 				
-				char_out <= cells(to_integer(unsigned(char_addr_in)));
+				char_out <= cells(to_integer(unsigned(addr_in)));
 				
 				
 				
