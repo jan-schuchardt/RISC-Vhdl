@@ -5,8 +5,9 @@ SLL x16, x11, x12
 AUIPC x17, 4
 DIV x18, x19, x20
 
+.test
 
-ADDi x1, x0, 0
+ADDi x1, x0, test
 LUI x1, 0x00000 //praefix
 
 ADDI x2, x0, 0x666

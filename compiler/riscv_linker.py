@@ -17,11 +17,20 @@ def pc_relative_symbol(symbol, off, symbols):
 			print(symbol+" not in symbol table")
 			raise
 
+def token_to_int(token, base, symbols, off):
+	try:
+		return int(token, base)
+	except:
+		try: return symbols[token]
+		except: 
+			print("Token "+token+" could neither be converted to int nor was found in symbol table")
+			raise
+
 def link_dw(line, tokens, symbols, off):
 	#DW imm32
 	if len(tokens) == 2:
 		try:
-			imm = int(tokens[1], 0)
+			imm = token_to_int(tokens[1], 0, symbols, off)
 			return iformat.le_encode(imm)
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
@@ -35,7 +44,7 @@ def link_lui(line, tokens, symbols, off):
 	if(len(tokens) == 3):
 		try:
 			rd = token_to_reg(tokens[1])
-			imm = int(tokens[2], 0)
+			imm = token_to_int(tokens[2], 0, symbols, off)
 			return iformat.le_encode(iformat.compile_u(0x37, rd, imm))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
@@ -129,7 +138,7 @@ def link_lx(line, tokens, symbols, off, funct3):
 		try:
 			rd = token_to_reg(tokens[1])
 			rs = token_to_reg(tokens[2])
-			imm = int(tokens[3], 0)
+			imm = token_to_int(tokens[3], 0, symbols, off)
 			return iformat.le_encode(iformat.compile_i(0x3, rd, funct3, rs, imm))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
@@ -163,7 +172,7 @@ def link_sx(line, tokens, symbols, off, funct3):
 		try:
 			rs1 = token_to_reg(tokens[1])
 			rs2 = token_to_reg(tokens[2])
-			imm = int(tokens[3], 0)
+			imm = token_to_int(tokens[3], 0, symbols, off)
 			imm1 = int(imm & 0x1F)
 			imm2 = int(iformat.rshift(imm, 5) & 0x7F)
 			return iformat.le_encode(iformat.compile_s(0x23, imm1, funct3, rs1, rs2, imm2))
@@ -191,10 +200,11 @@ def link_xi(line, tokens, symbols, off, funct3):
 		try:
 			rd = token_to_reg(tokens[1])
 			rs = token_to_reg(tokens[2])
-			imm = int(tokens[3], 0)
+			imm = token_to_int(tokens[3], 0, symbols, off)
 			return iformat.le_encode(iformat.compile_i(0x13, rd, funct3, rs, imm))
 		except:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
+			raise
 	else:
 		print("Missing tokens in line "+str(line)+" : "+str(tokens))
 		raise
@@ -229,7 +239,7 @@ def link_shift(line, tokens, symbols, off, funct3, immu7):
 		try:
 			rd = token_to_reg(tokens[1])
 			rs = token_to_reg(tokens[2])
-			imm = int(tokens[3], 0)
+			imm = token_to_int(tokens[3], 0, symbols, off)
 			return iformat.le_encode(iformat.compile_i_s(0x13, rd, funct3, rs, imm, immu7))
 		except Exception as e:
 			print("Unable to parse line "+str(line)+" : "+str(tokens))
@@ -387,7 +397,7 @@ inst_dict = { \
 }
 
 def linker(symbols, object):
-	print(symbols)
+	print("Symbol table : "+str(symbols))
 	bytecode = []
 	comment_list = []
 	for obj in object:
