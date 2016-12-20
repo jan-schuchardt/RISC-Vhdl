@@ -5,263 +5,392 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_7&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/toplevel</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/toplevel.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_8&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/toplevel/behaviour</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/toplevel.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_9&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ASCIIUNIT</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_10&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ASCIIUNIT/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_11&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk133m_dcm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_12&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk133m_dcm/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/clk133m_dcm.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_13&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Clock_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_14&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Clock_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/Clock_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_15&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CPU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CPU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_16&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CPU/CPU_1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CPU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CPU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_17&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_18&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core/arc_mem_interface_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_19&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga_clk</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_20&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga_clk/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ipcore_dir/vga_clk.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_21&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MMU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/MMU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_22&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MMU/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/MMU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/MMU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_23&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/vga.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_24&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/vga/behaviour</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/vga.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_25&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_26&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_27&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/BLOCKRAM</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_28&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/BLOCKRAM/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_29&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CHARMAP</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CHARMAP.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARMAP.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_30&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CHARMAP/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CHARMAP.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARMAP.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_31&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CHARRAM</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CHARRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_32&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CHARRAM/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CHARRAM.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CHARRAM.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_33&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ClockDivider</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ClockDivider.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_34&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ClockDivider/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/ClockDivider.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ClockDivider.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_35&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_36&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CU/CU_1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/CU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_37&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Control_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_38&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Control_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_39&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_40&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_top/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_41&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_top_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_42&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_top_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_43&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_44&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_top/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_top.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_45&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_clk_dcm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_46&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_clk_dcm/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_clk_dcm.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_47&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_48&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_49&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_4572_50&quot; will remain.  System error message is:  File exists
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK2X_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Read_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Read_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Read_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Write_VHDL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot; line <arg fmt="%d" index="2">82</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">addr_out</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">13</arg>-bit wide.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Write_VHDL/Verhalten</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Write_VHDL.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_ctl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_cal_ctl/arc_cal_ctl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">478</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_controller_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_path_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_path_iobs_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">677</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">770</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">868</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_controller_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_read_controller_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_read_controller_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_write_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_data_write_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_data_write_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_iobs_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_infrastructure_iobs_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_tap_dly</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_tap_dly/arc_tap_dly</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_dqs_delay</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_dqs_delay/arc_dqs_delay</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_dqs_delay_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_0_wr_en_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_0_wr_en_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_0_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_1_wr_en_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_fifo_1_wr_en_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_fifo_1_wr_en_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_ram8d_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_ram8d_0/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_ram8d_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_rd_gray_cntr</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_rd_gray_cntr/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dm_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dm_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dm_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dqs_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dqs_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dqs_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dq_iob</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_s3_dq_iob/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_s3_dq_iob.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_wr_gray_cntr</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_wr_gray_cntr/arc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/DDR2_Ram_Core_parameters_0</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_parameters_0.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK2X_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_clk</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst90_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">434</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">cntrl0_sys_rst180_tb</arg>&apos; of component &apos;<arg fmt="%s" index="4">DDR2_Ram_Core</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ASCIIUNIT.vhd</arg>&quot; line <arg fmt="%d" index="2">82</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">addr_out</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">13</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">478</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">511</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">677</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">770</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">868</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/CU.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;err&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">108</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divUnsigned</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">108</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divUnsigned</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divSigned</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">divSigned</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">169</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">169</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">reg_data1</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">182</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">182</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1607" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">reg_data2</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">502</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">502</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">504</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">504</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">506</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">506</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">508</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">508</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">512</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">513</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">513</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">515</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">518</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">518</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">519</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">519</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">524</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">524</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">525</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">525</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="795" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">535</arg>: Size of operands are different : result is &lt;false&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram_wea</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ALU</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;m_rd&gt;, &lt;m_we&gt;, &lt;mrd&gt;, &lt;mwe&gt;</arg>
 </msg>
 
@@ -274,10 +403,10 @@
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">v_BANK</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Control_VHDL</arg>&gt; has a constant value of <arg fmt="%s" index="3">00</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_controller_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1132</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
@@ -286,7 +415,7 @@
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ddr_odt2</arg>&gt; in unit &lt;<arg fmt="%s" index="2">DDR2_Ram_Core_controller_0</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_rd_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="39" delta="old" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
@@ -325,7 +454,7 @@
 <msg type="warning" file="Xst" num="39" delta="old" >Property &quot;<arg fmt="%s" index="1">equivalent_register_removal</arg>&quot; not applicable on a <arg fmt="%s" index="2">instance</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">syn_useioff</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
