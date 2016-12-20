@@ -130,6 +130,23 @@ architecture Behavioral of MMU is
 				auto_ref_req : in std_logic
 	);
 	END COMPONENT DDR2_Control_VHDL;
+	
+	-- IO RAM --
+	COMPONENT IORAM is
+	Port(
+	
+		clk : in std_logic;
+		rst : in std_logic;
+	
+		pin_in : in std_logic_vector(15 downto 0);
+		pin_out : out std_logic_vector(15 downto 0);
+		
+		addr_in : in std_logic_vector(1 downto 0); --2 bit for 32 bit IO access
+		data_in : in std_logic_vector(7 downto 0);
+		data_out: out std_logic_vector(7 downto 0);
+		write_enable : in std_logic
+	);
+	END COMPONENT IORAM;
 
 	type MMU_STATE_T is (
 			MMU_WAITING,
@@ -152,13 +169,16 @@ architecture Behavioral of MMU is
 	
 	
 	--Intern signals to be conncted to asram
-
 	signal cr_addr_in :  std_logic_vector(10 downto 0);
 	signal cr_data_in : std_logic_vector(7 downto 0);
 	signal cr_data_out :	std_logic_vector(7 downto 0);
 	signal cr_write_enable : std_logic := '0';
 	
-
+	--Intern signals to be connected to ioram
+	signal io_addr_in : std_logic_vector(1 downto 0);
+	signal io_data_in : std_logic_vector(7 downto 0);
+	signal io_data_out : std_logic_vector(7 downto 0);
+	signal io_write_enable : std_logic := '0';
 	
 	--Intern signals to be conncted to bram
 	signal br_data_in : std_logic_vector(7 downto 0);
@@ -262,6 +282,15 @@ architecture Behavioral of MMU is
 										cr_write_enable <= cmd_in(2);
 										ddr2_accessed <= '0';
 										MMU_STATE <= MMU_WAITING;
+										
+									when "0011" =>
+										--Prefix 0x03 : IORAM acess
+										io_addr_in <= addr_in(1 downto 0);
+										io_data_in <= data_in(7 downto 0);
+										io_write_enable <= cmd_in(2);
+										ddr2_accessed <= '0';
+										MMU_STATE <= MMU_WAITING;
+										
 									
 									when others => NULL;
 										
@@ -278,6 +307,7 @@ architecture Behavioral of MMU is
 								ddr2_write_enable <= '0';
 								br_write_enable <= '0';
 								cr_write_enable <= '0';
+								io_write_enable <= '0';
 								MMU_STATE <= MMU_DATA_VALID;
 								
 							end if;
@@ -307,6 +337,7 @@ architecture Behavioral of MMU is
 								when "0000" => read_data (31 downto 24) <= br_data_out(7 downto 0);
 								when "0001" => read_data (31 downto 24) <= ddr2_data_out(7 downto 0);
 								when "0010" => read_data (31 downto 24) <= cr_data_out(7 downto 0);
+								when "0011" => read_data (31 downto 24) <= io_data_out(7 downto 0);
 								when others => NULL;
 							
 							end case;
@@ -320,6 +351,8 @@ architecture Behavioral of MMU is
 									when "0001" => ddr2_addr_in(15 downto 0) <= addr_in_buf(15 downto 0);
 														ddr2_read_enable <= '1';
 									when "0010" => cr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
+									when "0011" => io_addr_in(1 downto 0) <= addr_in_buf(1 downto 0);
+									
 									when others => NULL;
 								
 								end case;
@@ -351,6 +384,11 @@ architecture Behavioral of MMU is
 										cr_data_in(7 downto 0) <= data_in_buf(7 downto 0);
 										cr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
 										cr_write_enable <= '1';
+										
+									when "0011" =>
+										io_data_in(7 downto 0) <= data_in_buf(7 downto 0);
+										io_addr_in(1 downto 0) <= addr_in_buf(1 downto 0);
+										io_write_enable <= '1';
 									
 									when others => NULL;
 								
@@ -411,7 +449,21 @@ architecture Behavioral of MMU is
 		);
 		
 		
+		INST_IORAM : IORAM
+		PORT MAP(
 		
+			clk => clk_in,
+			rst => reset_in,
+		
+			pin_in => pins_in,
+			pin_out => pins_out,
+			
+			addr_in => io_addr_in,
+			data_in => io_data_in,
+			data_out => io_data_out,
+			write_enable => io_write_enable
+		);
+
 		
 		INST_DDR2_Control_VHDL : DDR2_Control_VHDL
 		PORT MAP (
@@ -439,6 +491,8 @@ architecture Behavioral of MMU is
 			 burst_done => burst_done, --out
 			 auto_ref_req => auto_ref_req --in
 	);
+	
+	
 
 end Behavioral;
 	

@@ -166,7 +166,7 @@ PORT (
 		char_addr_in : in std_logic_vector( 10 downto 0);
 		
 		pins_in : in std_logic_vector(15 downto 0);
-		pins_out : out std_logic_vector(7 downto 0);
+		pins_out : out std_logic_vector(15 downto 0);
 		
 		mmu_state_out : out std_logic_vector(31 downto 0);
 		ddr2_cntrl_state_out : out std_logic_vector(31 downto 0)
@@ -219,7 +219,7 @@ signal reset    : std_logic;
 signal slow     : std_logic;
 signal debug_en : std_logic;
 signal pins_in  : std_logic_vector(15 downto 0);
-signal pins_out : std_logic_vector(7 downto 0);
+signal pins_out : std_logic_vector(15 downto 0);
 
 -- VGA ----------------------------------------------------------
 signal clk25 : std_logic;
@@ -437,7 +437,7 @@ PORT MAP (
 	char_addr_in => ascii_addr_out,
 	
 	pins_in(15 downto 0) => pins_in,
-	pins_out(7 downto 0) => pins_out,
+	pins_out(15 downto 0) => pins_out,
 	
 	mmu_state_out => mmu_state_out,
 	ddr2_cntrl_state_out => mmu_ddr2_state_out
