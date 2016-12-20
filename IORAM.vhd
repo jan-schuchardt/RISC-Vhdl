@@ -72,7 +72,7 @@ begin
 			--No reset -> standard usage
 				if write_enable = '1' then
 					case addr_in is
-						when "11" => rw_pins(15 downto 8) <= data_in;
+						--when "11" => rw_pins(15 downto 8) <= data_in; zero bits
 						when "10" => rw_pins(7 downto 0) <= data_in;
 						when others=>NULL; --Write only allowed to adresses 2,3
 					end case;
@@ -81,7 +81,7 @@ begin
 					case addr_in is
 						when "01" => data_out <= ro_pins(15 downto 8);
 						when "00" => data_out <= ro_pins(7 downto 0);
-						when "11" => data_out <= rw_pins(15 downto 8);
+						when "11" => data_out <= (others=>'0'); --rw_pins(15 downto 8); zero bits
 						when "10" => data_out <= rw_pins(7 downto 0);
 						when others =>NULL;
 					end case;

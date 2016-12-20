@@ -5,6 +5,9 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLParsers" num="0" delta="new" >Cannot rename dependency database for library &quot;work&quot;, file is &quot;xst/work/hdpdeps.ref&quot;, Temporary database file &quot;D:\RISC-Vhdl\xst\work\xil_8304_30&quot; will remain.  System error message is:  File exists
+</msg>
+
 <msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/toplevel.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clk133m_dcm</arg>&apos;.
 </msg>
 
@@ -127,6 +130,30 @@
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram_wea</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ALU</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;15&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;14&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;13&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;12&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;11&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;9&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">rw_pins&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">IORAM</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
 <msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/RISC-Vhdl/DDR2_Control_VHDL.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:

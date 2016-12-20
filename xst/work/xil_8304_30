@@ -88,69 +88,69 @@ FL D:/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/RISC-Vhdl-0bd48d7e30d8f
 FL D:/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/toplevel.vhd 2016/12/14.11:06:06 P.20131013
 FL D:/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/vga.vhd 2016/12/14.11:06:06 P.20131013
 FL D:/RISC-Vhdl/ALU.vhd 2016/12/20.16:52:57 P.20131013
-EN work/ALU 1482268198 FL D:/RISC-Vhdl/ALU.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/ALU 1482266428 FL D:/RISC-Vhdl/ALU.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/ALU/Behavioral 1482268199 \
-      FL D:/RISC-Vhdl/ALU.vhd EN work/ALU 1482268198 CP divUnsigned CP divSigned
+AR work/ALU/Behavioral 1482266429 \
+      FL D:/RISC-Vhdl/ALU.vhd EN work/ALU 1482266428 CP divUnsigned CP divSigned
 FL D:/RISC-Vhdl/ASCIIUNIT.vhd 2016/12/14.11:06:06 P.20131013
-EN work/ASCIIUNIT 1482268208 FL D:/RISC-Vhdl/ASCIIUNIT.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/ASCIIUNIT 1482266438 FL D:/RISC-Vhdl/ASCIIUNIT.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/ASCIIUNIT/Behavioral 1482268209 \
-      FL D:/RISC-Vhdl/ASCIIUNIT.vhd EN work/ASCIIUNIT 1482268208 CP CHARMAP
+AR work/ASCIIUNIT/Behavioral 1482266439 \
+      FL D:/RISC-Vhdl/ASCIIUNIT.vhd EN work/ASCIIUNIT 1482266438 CP CHARMAP
 FL D:/RISC-Vhdl/BLOCKRAM.vhd 2016/12/20.20:45:06 P.20131013
-EN work/BLOCKRAM 1482268188 FL D:/RISC-Vhdl/BLOCKRAM.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/BLOCKRAM 1482266418 FL D:/RISC-Vhdl/BLOCKRAM.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/BLOCKRAM/Behavioral 1482268189 \
-      FL D:/RISC-Vhdl/BLOCKRAM.vhd EN work/BLOCKRAM 1482268188
+AR work/BLOCKRAM/Behavioral 1482266419 \
+      FL D:/RISC-Vhdl/BLOCKRAM.vhd EN work/BLOCKRAM 1482266418
 FL D:/RISC-Vhdl/CHARMAP.vhd 2016/12/20.20:45:06 P.20131013
-EN work/CHARMAP 1482268202 FL D:/RISC-Vhdl/CHARMAP.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/CHARMAP 1482266432 FL D:/RISC-Vhdl/CHARMAP.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/CHARMAP/Behavioral 1482268203 \
-      FL D:/RISC-Vhdl/CHARMAP.vhd EN work/CHARMAP 1482268202
+AR work/CHARMAP/Behavioral 1482266433 \
+      FL D:/RISC-Vhdl/CHARMAP.vhd EN work/CHARMAP 1482266432
 FL D:/RISC-Vhdl/CHARRAM.vhd 2016/12/20.20:45:06 P.20131013
-EN work/CHARRAM 1482268190 FL D:/RISC-Vhdl/CHARRAM.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/CHARRAM 1482266420 FL D:/RISC-Vhdl/CHARRAM.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/CHARRAM/Behavioral 1482268191 \
-      FL D:/RISC-Vhdl/CHARRAM.vhd EN work/CHARRAM 1482268190
+AR work/CHARRAM/Behavioral 1482266421 \
+      FL D:/RISC-Vhdl/CHARRAM.vhd EN work/CHARRAM 1482266420
 FL D:/RISC-Vhdl/clk133m_dcm.vhd 2016/12/14.11:06:06 P.20131013
-EN work/clk133m_dcm 1482268206 FL D:/RISC-Vhdl/clk133m_dcm.vhd \
+EN work/clk133m_dcm 1482266436 FL D:/RISC-Vhdl/clk133m_dcm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/clk133m_dcm/BEHAVIORAL 1482268207 \
-      FL D:/RISC-Vhdl/clk133m_dcm.vhd EN work/clk133m_dcm 1482268206 CP BUFG \
+AR work/clk133m_dcm/BEHAVIORAL 1482266437 \
+      FL D:/RISC-Vhdl/clk133m_dcm.vhd EN work/clk133m_dcm 1482266436 CP BUFG \
       CP IBUFG CP DCM_SP
 FL D:/RISC-Vhdl/ClockDivider.vhd 2016/12/14.11:06:06 P.20131013
-EN work/ClockDivider 1482268200 FL D:/RISC-Vhdl/ClockDivider.vhd \
+EN work/ClockDivider 1482266430 FL D:/RISC-Vhdl/ClockDivider.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/ClockDivider/Behavioral 1482268201 \
-      FL D:/RISC-Vhdl/ClockDivider.vhd EN work/ClockDivider 1482268200
+AR work/ClockDivider/Behavioral 1482266431 \
+      FL D:/RISC-Vhdl/ClockDivider.vhd EN work/ClockDivider 1482266430
 FL D:/RISC-Vhdl/Clock_VHDL.vhd 2016/12/14.11:06:06 P.20131013
-EN work/Clock_VHDL 1482268204 FL D:/RISC-Vhdl/Clock_VHDL.vhd \
+EN work/Clock_VHDL 1482266434 FL D:/RISC-Vhdl/Clock_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Clock_VHDL/Verhalten 1482268205 \
-      FL D:/RISC-Vhdl/Clock_VHDL.vhd EN work/Clock_VHDL 1482268204
+AR work/Clock_VHDL/Verhalten 1482266435 \
+      FL D:/RISC-Vhdl/Clock_VHDL.vhd EN work/Clock_VHDL 1482266434
 FL D:/RISC-Vhdl/CPU.vhd 2016/12/14.11:06:06 P.20131013
-EN work/CPU 1482268214 FL D:/RISC-Vhdl/CPU.vhd PB ieee/std_logic_1164 1381692176
-AR work/CPU/CPU_1 1482268215 \
-      FL D:/RISC-Vhdl/CPU.vhd EN work/CPU 1482268214 CP work/CU CP work/ALU \
+EN work/CPU 1482266444 FL D:/RISC-Vhdl/CPU.vhd PB ieee/std_logic_1164 1381692176
+AR work/CPU/CPU_1 1482266445 \
+      FL D:/RISC-Vhdl/CPU.vhd EN work/CPU 1482266444 CP work/CU CP work/ALU \
       CP work/ClockDivider
 FL D:/RISC-Vhdl/CU.vhd 2016/12/20.16:32:47 P.20131013
-EN work/CU 1482268196 FL D:/RISC-Vhdl/CU.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/CU 1482266426 FL D:/RISC-Vhdl/CU.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/CU/CU_1 1482268197 \
-      FL D:/RISC-Vhdl/CU.vhd EN work/CU 1482268196
+AR work/CU/CU_1 1482266427 \
+      FL D:/RISC-Vhdl/CU.vhd EN work/CU 1482266426
 FL D:/RISC-Vhdl/DDR2_Control_VHDL.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Control_VHDL 1482268194 FL D:/RISC-Vhdl/DDR2_Control_VHDL.vhd \
+EN work/DDR2_Control_VHDL 1482266424 FL D:/RISC-Vhdl/DDR2_Control_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Control_VHDL/Verhalten 1482268195 \
-      FL D:/RISC-Vhdl/DDR2_Control_VHDL.vhd EN work/DDR2_Control_VHDL 1482268194 \
+AR work/DDR2_Control_VHDL/Verhalten 1482266425 \
+      FL D:/RISC-Vhdl/DDR2_Control_VHDL.vhd EN work/DDR2_Control_VHDL 1482266424 \
       CP DDR2_Write_VHDL CP DDR2_Read_VHDL
 FL D:/RISC-Vhdl/DDR2_Ram_Core.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Ram_Core 1482268218 FL D:/RISC-Vhdl/DDR2_Ram_Core.vhd LB UNISIM \
+EN work/DDR2_Ram_Core 1482266448 FL D:/RISC-Vhdl/DDR2_Ram_Core.vhd LB UNISIM \
       PB ieee/std_logic_1164 1381692176 PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core/arc_mem_interface_top 1482268219 \
-      FL D:/RISC-Vhdl/DDR2_Ram_Core.vhd EN work/DDR2_Ram_Core 1482268218 \
+AR work/DDR2_Ram_Core/arc_mem_interface_top 1482266449 \
+      FL D:/RISC-Vhdl/DDR2_Ram_Core.vhd EN work/DDR2_Ram_Core 1482266448 \
       CP DDR2_Ram_Core_top_0 CP DDR2_Ram_Core_infrastructure_top
 FL D:/RISC-Vhdl/DDR2_Ram_Core_cal_ctl.vhd 2016/12/14.11:06:06 P.20131013
 EN work/DDR2_Ram_Core_cal_ctl 1482268152 \
@@ -276,13 +276,13 @@ AR work/DDR2_Ram_Core_infrastructure_iobs_0/arc 1482268157 \
       FL D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_iobs_0.vhd \
       EN work/DDR2_Ram_Core_infrastructure_iobs_0 1482268156 CP FDDRRSE CP OBUFDS
 FL D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Ram_Core_infrastructure_top 1482268186 \
+EN work/DDR2_Ram_Core_infrastructure_top 1482266416 \
       FL D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd LB UNISIM \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PH unisim/VCOMPONENTS 1381692182 PH work/DDR2_Ram_Core_parameters_0 1482268133
-AR work/DDR2_Ram_Core_infrastructure_top/arc 1482268187 \
+AR work/DDR2_Ram_Core_infrastructure_top/arc 1482266417 \
       FL D:/RISC-Vhdl/DDR2_Ram_Core_infrastructure_top.vhd \
-      EN work/DDR2_Ram_Core_infrastructure_top 1482268186 CP IBUFGDS_LVDS_25 \
+      EN work/DDR2_Ram_Core_infrastructure_top 1482266416 CP IBUFGDS_LVDS_25 \
       CP IBUFG CP DDR2_Ram_Core_clk_dcm CP DDR2_Ram_Core_cal_top
 FL D:/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd 2016/12/14.11:06:06 P.20131013
 EN work/DDR2_Ram_Core_iobs_0 1482268178 FL D:/RISC-Vhdl/DDR2_Ram_Core_iobs_0.vhd \
@@ -343,11 +343,11 @@ AR work/DDR2_Ram_Core_tap_dly/arc_tap_dly 1482268155 \
       FL D:/RISC-Vhdl/DDR2_Ram_Core_tap_dly.vhd EN work/DDR2_Ram_Core_tap_dly 1482268154 \
       CP LUT4 CP FDR
 FL D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Ram_Core_top_0 1482268184 FL D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd \
+EN work/DDR2_Ram_Core_top_0 1482266414 FL D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd \
       LB UNISIM PB ieee/std_logic_1164 1381692176 \
       PH work/DDR2_Ram_Core_parameters_0 1482268133 PH unisim/VCOMPONENTS 1381692182
-AR work/DDR2_Ram_Core_top_0/arc 1482268185 \
-      FL D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd EN work/DDR2_Ram_Core_top_0 1482268184 \
+AR work/DDR2_Ram_Core_top_0/arc 1482266415 \
+      FL D:/RISC-Vhdl/DDR2_Ram_Core_top_0.vhd EN work/DDR2_Ram_Core_top_0 1482266414 \
       CP DDR2_Ram_Core_controller_0 CP DDR2_Ram_Core_data_path_0 \
       CP DDR2_Ram_Core_infrastructure CP DDR2_Ram_Core_iobs_0
 FL D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd 2016/12/14.11:06:06 P.20131013
@@ -359,43 +359,43 @@ AR work/DDR2_Ram_Core_wr_gray_cntr/arc 1482268147 \
       FL D:/RISC-Vhdl/DDR2_Ram_Core_wr_gray_cntr.vhd \
       EN work/DDR2_Ram_Core_wr_gray_cntr 1482268146 CP FDCE
 FL D:/RISC-Vhdl/DDR2_Read_VHDL.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Read_VHDL 1482268182 FL D:/RISC-Vhdl/DDR2_Read_VHDL.vhd \
+EN work/DDR2_Read_VHDL 1482266412 FL D:/RISC-Vhdl/DDR2_Read_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Read_VHDL/Verhalten 1482268183 \
-      FL D:/RISC-Vhdl/DDR2_Read_VHDL.vhd EN work/DDR2_Read_VHDL 1482268182
+AR work/DDR2_Read_VHDL/Verhalten 1482266413 \
+      FL D:/RISC-Vhdl/DDR2_Read_VHDL.vhd EN work/DDR2_Read_VHDL 1482266412
 FL D:/RISC-Vhdl/DDR2_Write_VHDL.vhd 2016/12/14.11:06:06 P.20131013
-EN work/DDR2_Write_VHDL 1482268180 FL D:/RISC-Vhdl/DDR2_Write_VHDL.vhd \
+EN work/DDR2_Write_VHDL 1482266410 FL D:/RISC-Vhdl/DDR2_Write_VHDL.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DDR2_Write_VHDL/Verhalten 1482268181 \
-      FL D:/RISC-Vhdl/DDR2_Write_VHDL.vhd EN work/DDR2_Write_VHDL 1482268180
-FL D:/RISC-Vhdl/IORAM.vhd 2016/12/20.22:08:47 P.20131013
-EN work/IORAM 1482268192 FL D:/RISC-Vhdl/IORAM.vhd PB ieee/std_logic_1164 1381692176
-AR work/IORAM/Behavioral 1482268193 \
-      FL D:/RISC-Vhdl/IORAM.vhd EN work/IORAM 1482268192
+AR work/DDR2_Write_VHDL/Verhalten 1482266411 \
+      FL D:/RISC-Vhdl/DDR2_Write_VHDL.vhd EN work/DDR2_Write_VHDL 1482266410
+FL D:/RISC-Vhdl/IORAM.vhd 2016/12/20.21:38:57 P.20131013
+EN work/IORAM 1482266422 FL D:/RISC-Vhdl/IORAM.vhd PB ieee/std_logic_1164 1381692176
+AR work/IORAM/Behavioral 1482266423 \
+      FL D:/RISC-Vhdl/IORAM.vhd EN work/IORAM 1482266422
 FL D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd 2016/12/14.11:06:08 P.20131013
-EN work/vga_clk 1482268212 FL D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd \
+EN work/vga_clk 1482266442 FL D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/vga_clk/BEHAVIORAL 1482268213 \
-      FL D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd EN work/vga_clk 1482268212 CP BUFG \
+AR work/vga_clk/BEHAVIORAL 1482266443 \
+      FL D:/RISC-Vhdl/ipcore_dir/vga_clk.vhd EN work/vga_clk 1482266442 CP BUFG \
       CP DCM_SP
 FL D:/RISC-Vhdl/MMU.vhd 2016/12/20.21:28:24 P.20131013
-EN work/MMU 1482268216 FL D:/RISC-Vhdl/MMU.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/MMU 1482266446 FL D:/RISC-Vhdl/MMU.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/MMU/Behavioral 1482268217 \
-      FL D:/RISC-Vhdl/MMU.vhd EN work/MMU 1482268216 CP BLOCKRAM CP CHARRAM CP IORAM \
+AR work/MMU/Behavioral 1482266447 \
+      FL D:/RISC-Vhdl/MMU.vhd EN work/MMU 1482266446 CP BLOCKRAM CP CHARRAM CP IORAM \
       CP DDR2_Control_VHDL
 FL D:/RISC-Vhdl/toplevel.vhd 2016/12/20.21:34:55 P.20131013
-EN work/toplevel 1482268220 FL D:/RISC-Vhdl/toplevel.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/toplevel 1482266450 FL D:/RISC-Vhdl/toplevel.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/toplevel/behaviour 1482268221 \
-      FL D:/RISC-Vhdl/toplevel.vhd EN work/toplevel 1482268220 CP Clock_VHDL \
+AR work/toplevel/behaviour 1482266451 \
+      FL D:/RISC-Vhdl/toplevel.vhd EN work/toplevel 1482266450 CP Clock_VHDL \
       CP clk133m_dcm CP OBUF CP ASCIIUNIT CP vga CP vga_clk CP work/cpu CP MMU \
       CP DDR2_Ram_Core
 FL D:/RISC-Vhdl/vga.vhd 2016/12/14.11:06:06 P.20131013
-EN work/vga 1482268210 FL D:/RISC-Vhdl/vga.vhd PB ieee/std_logic_1164 1381692176 \
+EN work/vga 1482266440 FL D:/RISC-Vhdl/vga.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/vga/behaviour 1482268211 \
-      FL D:/RISC-Vhdl/vga.vhd EN work/vga 1482268210
+AR work/vga/behaviour 1482266441 \
+      FL D:/RISC-Vhdl/vga.vhd EN work/vga 1482266440
