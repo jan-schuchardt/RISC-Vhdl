@@ -7,26 +7,23 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/toplevel - behaviour C:|Users|Florian|Documents|Uni|ERA|RISCV|RISCV_FPGA|RISCV|toplevel.vhd/INST_DDR2_Control_VHDL - DDR2_Control_VHDL - Verhalten</ClosedNode>
-         <ClosedNode>/toplevel - behaviour C:|Users|Florian|Documents|Uni|ERA|RISCV|RISCV_FPGA|RISCV|toplevel.vhd/INST_DDR2_RAM_CORE - DDR2_Ram_Core - arc_mem_interface_top</ClosedNode>
+         <ClosedNode>/toplevel - behaviour D:|RISC-Vhdl|toplevel.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>toplevel - behaviour (D:/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/toplevel.vhd)</SelectedItem>
+         <SelectedItem>INST_BLOCKRAM - BLOCKRAM - Behavioral (C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000055f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000055f0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000003d8000000020000000000000000000000000200000064ffffffff000000810000000300000002000003d80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>toplevel - behaviour (D:/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec/toplevel.vhd)</CurrentItem>
+      <CurrentItem>INST_BLOCKRAM - BLOCKRAM - Behavioral (C:/Users/riege/gpgit/RISC-Vhdl/RISC-Vhdl/BLOCKRAM.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
-         <ClosedNode>Implement Design/Map</ClosedNode>
-         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
-         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
@@ -35,7 +32,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -46,9 +43,9 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000fc00000001000000000000009d0000000100000000000000660000000100000000000001930000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002d2000000040101000100000000000000000000000064ffffffff0000008100000000000000040000013f00000001000000000000009d0000000100000000000000660000000100000000000000900000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>D:\RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec\RISC-Vhdl-0bd48d7e30d8f8b239e80e83ffcee580636728ec\ALU.vhd</CurrentItem>
+      <CurrentItem>C:\Users\riege\gpgit\RISC-Vhdl\RISC-Vhdl\ALU.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -62,47 +59,20 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff000000000000000200000107000000d901000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
-   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>User Constraints</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem/>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000105000000010000000100000000000000000000000064ffffffff000000810000000000000001000001050000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
-   </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Utilities</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002ba000000010000000100000000000000000000000064ffffffff000000810000000000000001000002ba0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Utilities</CurrentItem>
-   </ItemView>
-   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_NGC" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem/>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014f0000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>
