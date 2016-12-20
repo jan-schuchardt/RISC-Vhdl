@@ -30,10 +30,9 @@ port (
     clk_50mhz   : in   std_logic;
     
     -- User Interface --
-    reset       : in    std_logic;
-    slow        : in    std_logic;
-    leds        : out   std_logic_vector(7 downto 0) ;
-	 debug_en : in std_logic;
+    sw   : in std_logic_vector(3 downto 0);
+    btn  : in std_logic_vector(4 downto 0);
+    leds : out std_logic_vector(7 downto 0) ;
 
     -- DDR2 SDRAM-Port-Pins --
     cntrl0_ddr2_a       : out std_logic_vector(12 downto 0) := (others => '0');
@@ -88,14 +87,14 @@ end component clk133m_dcm;
 
 
 component ASCIIUNIT
-    Port ( 
-				clk: in std_logic;
-				char_in : in  STD_LOGIC_VECTOR(7 downto 0);
-           x_in : in  std_logic_vector(9 downto 0);
-           y_in : in  std_logic_vector(9 downto 0);
-           pixel_out : out  STD_LOGIC;
-           addr_out : out  STD_LOGIC_VECTOR(10 downto 0)
-			  );
+Port ( 
+    clk: in std_logic;
+    char_in : in  STD_LOGIC_VECTOR(7 downto 0);
+    x_in : in  std_logic_vector(9 downto 0);
+    y_in : in  std_logic_vector(9 downto 0);
+    pixel_out : out  STD_LOGIC;
+    addr_out : out  STD_LOGIC_VECTOR(10 downto 0)
+);
 end component;
 
 
@@ -166,6 +165,9 @@ PORT (
 		char_out: out std_logic_vector(7 downto 0);	
 		char_addr_in : in std_logic_vector( 10 downto 0);
 		
+		pins_in : in std_logic_vector(15 downto 0);
+		pins_out : out std_logic_vector(7 downto 0);
+		
 		mmu_state_out : out std_logic_vector(31 downto 0);
 		ddr2_cntrl_state_out : out std_logic_vector(31 downto 0)
 );
@@ -211,6 +213,13 @@ PORT (
 END COMPONENT DDR2_Ram_Core;
 
 signal reset_n  : std_logic;
+
+-- User interface -----------------------------------------------
+signal reset    : std_logic;
+signal slow     : std_logic;
+signal debug_en : std_logic;
+signal pins_in  : std_logic_vector(15 downto 0);
+signal pins_out : std_logic_vector(7 downto 0);
 
 -- VGA ----------------------------------------------------------
 signal clk25 : std_logic;
@@ -285,16 +294,20 @@ begin
 -----------------------------------------------------------------------------
 -- Reset & LEDs
 -----------------------------------------------------------------------------
+
+reset <= sw(0);
+slow <= sw(1);
+debug_en <= sw(2);
+pins_in <= sw(3 downto 0) & btn(4 downto 0) & "0000000";
+--leds <= pins_out;
 reset_n <= not reset;
 
 --leds <= debug2signal;
+leds(7 downto 3) <= (others => '0') when sw(3) = '1' else pins_out(7 downto 3);
+leds(2) <= err_out when sw(3) = '1' else pins_out(2);
+leds(1) <= slow when sw(3) = '1' else pins_out(1);
+leds(0) <= ddr2_led when sw(3) = '1' else pins_out(0);
 
-
-leds(7 downto 3) <= (others => '0');
-leds(2) <= err_out;
-leds(1) <= slow;
-leds(0) <= ddr2_led;
---  
 -----------------------------------------------------------------------------
 -- Clock Generator
 -----------------------------------------------------------------------------
@@ -346,8 +359,8 @@ Inst_vga: vga PORT MAP(
     v => vsync,
     reg_data_in => debug,
     reg_adr_in => debug_adr,
-	 pc_in => pc,
-	 ir_in => ir,
+	 pc_in => mmu_ddr2_state_out,
+	 ir_in => mmu_state_out,
 	 
 	 debug_on => debug_en,
     x_out   => ascii_x_in,
@@ -420,10 +433,12 @@ PORT MAP (
 	burst_done => burst_done, --out
 	auto_ref_req => auto_ref_req, --in
 	
-	
-		
 	char_out =>	ascii_char_in,
 	char_addr_in => ascii_addr_out,
+	
+	pins_in(15 downto 0) => pins_in,
+	pins_out(7 downto 0) => pins_out,
+	
 	mmu_state_out => mmu_state_out,
 	ddr2_cntrl_state_out => mmu_ddr2_state_out
 

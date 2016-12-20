@@ -60,11 +60,12 @@ port (
 		char_out: out std_logic_vector(7 downto 0);	
 		char_addr_in : in std_logic_vector( 10 downto 0);
 		
+		pins_in  : in  std_logic_vector(15 downto 0);
+		pins_out : out std_logic_vector(15 downto 0);
+		
 		mmu_state_out : out std_logic_vector(31 downto 0);
 		ddr2_cntrl_state_out : out std_logic_vector(31 downto 0)
-		
 	);
-
 end MMU;
 
 
