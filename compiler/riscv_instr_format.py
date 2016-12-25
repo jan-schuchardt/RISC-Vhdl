@@ -63,7 +63,7 @@ def sb_imm_split(imm):
 	return (int(imm1), int(imm2))
 	
 def jal_imm_split(imm):
-	print(imm)
+	#print(imm)
 	imm_o = int(imm) #original immediate value
 	bit_19_to_12 = rshift(imm_o & 0xFFFFF, 12)
 	imm = compile_bitfield(0, 8, bit_19_to_12, 0)
@@ -72,7 +72,7 @@ def jal_imm_split(imm):
 	bit_10_to_1 = rshift(imm_o & 0x7FF, 1)
 	imm = compile_bitfield(9, 19, bit_10_to_1, imm)
 	bit_20 = rshift(imm_o & 0x100000, 20)
-	print(bit_20)
+	#print(bit_20)
 	imm = compile_bitfield(19, 20, bit_20, imm)
-	print(imm)
+	#print(imm)
 	return imm

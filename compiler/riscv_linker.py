@@ -397,7 +397,7 @@ inst_dict = { \
 }
 
 def linker(symbols, object):
-	print("Symbol table : "+str(symbols))
+	#print("Symbol table : "+str(symbols))
 	bytecode = []
 	comment_list = []
 	for obj in object:
