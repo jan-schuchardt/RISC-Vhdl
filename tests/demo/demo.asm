@@ -44,6 +44,22 @@
 	dw 0x2D2D2800
 	dw 0x00000029
 	
+.str_player_turn
+	dw 0x65697053
+	dw 0x2072656C
+	dw 0x73692031
+	dw 0x6D612074
+	dw 0x67755A20
+	dw 0x0000002E
+	
+.str_player_won
+	dw 0x65697053
+	dw 0x2072656C
+	dw 0x65672031
+	dw 0x6E6E6977
+	dw 0x00002E74
+	
+	
 // void setup_border(), setup borders for game into cram
 .setup_border
 	addi x2, x2, -8
@@ -188,13 +204,18 @@
 //void set_turn(char turn) //sets the turn variable
 	lui x26, 0x10000
 	sb x26, x18, 0
-	//LED update
+	//LED update, Screen set String
 	lui x26, 0x30000
+	lui x28, 0x20000
+	addi x28, x28, 0x400
 	addi x27, x0, 0
+	addi x29, x0, 0x31
 	beq x18, x0, set_turn_set_led
 	addi x27, x0, 1
+	addi x29, x29, 1
 	.set_turn_set_led
 	sb x26, x27, 2
+	sb x28, x29, 8
 	jalr x0, x1, 0
 	
 .get_turn
@@ -206,7 +227,7 @@
 .matrix_init
 //void matrix_init() initializes the matrix (3x3) = 9 bytes
 	lui x26, 0x10000
-	addi x27, x0, -1 //initialize with 0xFF
+	addi x27, x0, -4 //initialize with 0xFC
 	sw x26, x27, 4
 	sw x26, x27, 8
 	sb x26, x27, 12
@@ -230,6 +251,20 @@
 	
 
 .main
+	
+	lui x3, 0x20000
+	addi x3, x3, 0x400 //offset of state text
+	addi x18, x0, 0
+	addi x19, x3, 0
+	addi x20, x0, 64 //one line
+	jal x1, memfill
+	
+	addi x19, x3, 0
+	addi x18, x0, str_player_turn
+	addi x20, x0, 24
+	jal x1, memcpy
+	
+	
 	
 	//Var setup
 	addi x18, x0, 0 //player 0 is allowed to start
@@ -281,7 +316,20 @@
 	jal x1, print_element
 	xori x18, x5, 1
 	jal x1, set_turn
+	
 	jal x0, idle_loop
+	//jal x1, player_won
+	blt x18, x0, idle_loop
+	
+	addi x3, x18, 0
+	addi x18, x0, str_player_won
+	lui x19, 0x20000
+	addi x19, x19, 0x400
+	addi x20, x0, 20
+	jal x1, memcpy
+	lui x19 0x20000
+	addi x19, x19, 0x400
+	sb x19, x3, 8
 	
 .btn_north
 	addi x4, x4, 2 //-1 in y direction
@@ -310,6 +358,43 @@
 	jal x0, idle_loop	
 	
 		
+.player_won
+	lui x26, 0x10000
+	addi x27, x26, 0
+	addi x28, x0, 2 //iterator
+	addi x18, x0, -1 //result
+	.player_won_hv_loop
+		blt x28, x0, end_player_won_hv_loop
+		addi x29, x0, 3 //inner iterator
+		addi x30, x0, 0 //hsum
+		addi x31, x0, 0 //vsum
+		
+		add x19, x26, x28 //vertical start index
+		addi x20, x0, 3
+		mul x20, x28, x20 //horizonta lstart index
+		add x20, x26, x20
+		
+		.player_won_inner
+			beq x29, x0, end_player_won_inner
+			lb x21, x19, 4
+			add x31, x31, x21
+			lb x21, x20, 4
+			add x30, x30, x21
+			addi x20, x20, -1
+			jal x0, player_won_inner
+
+		.end_player_won_inner
+		addi x28, x28, -1
+		bge x30, x0, player_won_hsum
+		blt x31, x0, player_won_hv_loop
+		addi x30, x31, 0
+		.player_won_hsum
+		addi x19, x0, 3
+		div x18, x30, x19 //when player 1 : 3 / 3 = 1, when player 0 : 0 / 3 = 0
+	.end_player_won_hv_loop
+	jalr x0, x1, 0
+	
+		
 // void memcpy (void *src, void *dst, int size), bytewise memcpy		
 .memcpy
 	beq x20, x0, end_memcpy
@@ -323,7 +408,15 @@
 	jalr x0, x1, 0
 
 
-		
+//void memfill(char src, void *dst, int size), bytewise memfill
+.memfill
+	beq x20, x0, end_memfill
+	sb x19, x18, 0
+	addi x19, x19, 1
+	addi x20, x20, -1
+	jal x0, memfill
+.end_memfill
+	jalr x0, x1, 0	
 
 	
 	
