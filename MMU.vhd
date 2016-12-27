@@ -60,7 +60,7 @@ port (
 		char_out: out std_logic_vector(7 downto 0);	
 		char_addr_in : in std_logic_vector( 10 downto 0);
 		
-		pins_in  : in  std_logic_vector(15 downto 0);
+		pins_in  : in  std_logic_vector(31 downto 0);
 		pins_out : out std_logic_vector(15 downto 0);
 		
 		mmu_state_out : out std_logic_vector(31 downto 0);
@@ -89,6 +89,18 @@ architecture Behavioral of MMU is
 	);
 	end component CHARRAM;
 
+	-- PROGRAMRAM Control --
+	component PRAM is
+	Port(
+			clk : in std_logic;
+			rst : in std_logic;
+			addr_in : in std_logic_vector(10 downto 0); --11 bit for adressing 8-bit cells
+			data_in : in std_logic_vector(7 downto 0);
+			data_out: out std_logic_vector(7 downto 0);
+			write_enable : in std_logic
+		
+	);
+	end component PRAM;
 
 	-- BLOCKRAM Control --
 	component BLOCKRAM is
@@ -138,10 +150,10 @@ architecture Behavioral of MMU is
 		clk : in std_logic;
 		rst : in std_logic;
 	
-		pin_in : in std_logic_vector(15 downto 0);
+		pin_in : in std_logic_vector(31 downto 0);
 		pin_out : out std_logic_vector(15 downto 0);
 		
-		addr_in : in std_logic_vector(1 downto 0); --2 bit for 32 bit IO access
+		addr_in : in std_logic_vector(2 downto 0); --2 bit for 64 bit IO access
 		data_in : in std_logic_vector(7 downto 0);
 		data_out: out std_logic_vector(7 downto 0);
 		write_enable : in std_logic
@@ -175,7 +187,7 @@ architecture Behavioral of MMU is
 	signal cr_write_enable : std_logic := '0';
 	
 	--Intern signals to be connected to ioram
-	signal io_addr_in : std_logic_vector(1 downto 0);
+	signal io_addr_in : std_logic_vector(2 downto 0);
 	signal io_data_in : std_logic_vector(7 downto 0);
 	signal io_data_out : std_logic_vector(7 downto 0);
 	signal io_write_enable : std_logic := '0';
@@ -185,6 +197,12 @@ architecture Behavioral of MMU is
 	signal br_data_out : std_logic_vector(7 downto 0);
 	signal br_write_enable : std_logic := '0';
 	signal br_addr_in : std_logic_vector(10 downto 0);
+	
+	--Intern signals to be connected to pram
+	signal pr_data_in : std_logic_vector(7 downto 0);
+	signal pr_data_out : std_logic_vector(7 downto 0);
+	signal pr_write_enable : std_logic := '0';
+	signal pr_addr_in : std_logic_vector(10 downto 0);
 	
 	--Intern signals to be connected to ddr2sdram
 	signal ddr2_addr_in : std_logic_vector(15 downto 0);
@@ -276,7 +294,7 @@ architecture Behavioral of MMU is
 										MMU_STATE <= MMU_WAITING;
 									
 									when "0010" =>
-										--Prefix 0x02 : CRAM access
+										--Prefix 0x2 : CRAM access
 										cr_addr_in <= addr_in(10 downto 0);
 										cr_data_in <= data_in(7 downto 0);
 										cr_write_enable <= cmd_in(2);
@@ -284,12 +302,20 @@ architecture Behavioral of MMU is
 										MMU_STATE <= MMU_WAITING;
 										
 									when "0011" =>
-										--Prefix 0x03 : IORAM acess
-										io_addr_in <= addr_in(1 downto 0);
+										--Prefix 0x3 : IORAM acess
+										io_addr_in <= addr_in(2 downto 0);
 										io_data_in <= data_in(7 downto 0);
 										io_write_enable <= cmd_in(2);
 										ddr2_accessed <= '0';
 										MMU_STATE <= MMU_WAITING;
+										
+									when "0100" =>
+										--Prefix 0x4 : BRAM access
+										pr_addr_in(10 downto 0) <= addr_in(10 downto 0);
+										pr_write_enable <= cmd_in(2);
+										pr_data_in(7 downto 0) <= data_in(7 downto 0);
+										ddr2_accessed <= '0';
+										MMU_STATE <= MMU_WAITING;	
 										
 									
 									when others => NULL;
@@ -308,6 +334,7 @@ architecture Behavioral of MMU is
 								br_write_enable <= '0';
 								cr_write_enable <= '0';
 								io_write_enable <= '0';
+								pr_write_enable <= '0';
 								MMU_STATE <= MMU_DATA_VALID;
 								
 							end if;
@@ -338,6 +365,7 @@ architecture Behavioral of MMU is
 								when "0001" => read_data (31 downto 24) <= ddr2_data_out(7 downto 0);
 								when "0010" => read_data (31 downto 24) <= cr_data_out(7 downto 0);
 								when "0011" => read_data (31 downto 24) <= io_data_out(7 downto 0);
+								when "0100" => read_data (31 downto 24) <= pr_data_out(7 downto 0);
 								when others => NULL;
 							
 							end case;
@@ -351,7 +379,8 @@ architecture Behavioral of MMU is
 									when "0001" => ddr2_addr_in(15 downto 0) <= addr_in_buf(15 downto 0);
 														ddr2_read_enable <= '1';
 									when "0010" => cr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
-									when "0011" => io_addr_in(1 downto 0) <= addr_in_buf(1 downto 0);
+									when "0011" => io_addr_in(2 downto 0) <= addr_in_buf(2 downto 0);
+									when "0100" => pr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
 									
 									when others => NULL;
 								
@@ -387,8 +416,13 @@ architecture Behavioral of MMU is
 										
 									when "0011" =>
 										io_data_in(7 downto 0) <= data_in_buf(7 downto 0);
-										io_addr_in(1 downto 0) <= addr_in_buf(1 downto 0);
+										io_addr_in(2 downto 0) <= addr_in_buf(2 downto 0);
 										io_write_enable <= '1';
+										
+									when "0100" =>
+										pr_data_in(7 downto 0) <= data_in_buf(7 downto 0);
+										pr_addr_in(10 downto 0) <= addr_in_buf(10 downto 0);
+										pr_write_enable <= '1';
 									
 									when others => NULL;
 								
@@ -429,6 +463,17 @@ architecture Behavioral of MMU is
 				data_in => br_data_in,
 				data_out => br_data_out,
 				write_enable => br_write_enable
+		);
+		
+		--Instanciate Programram 
+		INST_PRAM : PRAM
+		PORT MAP (
+				clk => clk_in,
+				rst => reset_in,
+				addr_in => pr_addr_in,
+				data_in => pr_data_in,
+				data_out => pr_data_out,
+				write_enable => pr_write_enable
 		);
 		
 		--Instanciate CHARRAM
