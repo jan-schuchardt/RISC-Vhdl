@@ -4,14 +4,13 @@ use ieee.numeric_std.all;
 
 entity uart is
 port(
- clk  : in  std_logic;
- rst  : in  std_logic;
- rx   : in  std_logic;
+ clk   : in  std_logic;
+ rst   : in  std_logic;
+ rx    : in  std_logic;
 
- valid: out std_logic;
- data : out std_logic_vector(7 downto 0);
-
- debug : out std_logic_vector(7 downto 0) 
+ err   : out std_logic;
+ valid : out std_logic;
+ data  : out std_logic_vector(7 downto 0)
 );
 end entity;
 
@@ -30,11 +29,15 @@ begin
   cnt2 <= "000";
   baud_rate <= x"1458";
   reg <= x"00";
+  err <= '0';
+  valid <= '0';
+  data <= x"00";
   state <= "000";
  elsif rising_edge(clk) then
   case state is
   when "000" =>
    if rx = '0' then
+	 valid <= '0';
     cnt1 <= x"0000";
     cnt2 <= "000";
 	 state <= "001";
@@ -62,9 +65,10 @@ begin
     cnt1 <= x"0000";
 	 if rx = '1' then
 	  state <= "000";
-	  debug <= reg;
+	  data <= reg;
+	  valid <= '1';
 	 else
-	  debug <= "11111111";
+	  err <= '1';
 	 end if;
 	else
 	 cnt1 <= cnt1 + 1;
