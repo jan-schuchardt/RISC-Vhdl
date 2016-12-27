@@ -85,6 +85,16 @@ port ( CLKIN_IN        : in    std_logic;
     LOCKED_OUT      : out   std_logic);
 end component clk133m_dcm;
 
+component UART
+Port (
+	 clk  : in  std_logic;
+	 rst  : in  std_logic;
+	 rx   : in  std_logic;
+
+	 valid: out std_logic;
+	 data : out std_logic_vector(7 downto 0));
+end component UART;
+
 
 component ASCIIUNIT
 Port ( 
@@ -165,7 +175,7 @@ PORT (
 		char_out: out std_logic_vector(7 downto 0);	
 		char_addr_in : in std_logic_vector( 10 downto 0);
 		
-		pins_in : in std_logic_vector(15 downto 0);
+		pins_in : in std_logic_vector(31 downto 0);
 		pins_out : out std_logic_vector(15 downto 0);
 		
 		mmu_state_out : out std_logic_vector(31 downto 0);
@@ -218,7 +228,7 @@ signal reset_n  : std_logic;
 signal reset    : std_logic;
 signal slow     : std_logic;
 signal debug_en : std_logic;
-signal pins_in  : std_logic_vector(15 downto 0);
+signal pins_in  : std_logic_vector(31 downto 0);
 signal pins_out : std_logic_vector(15 downto 0);
 
 -- VGA ----------------------------------------------------------
@@ -275,14 +285,16 @@ signal	 mmu_ack_out :  std_logic;
 signal	 mmu_state_out : std_logic_vector(31 downto 0);
 signal 	 mmu_ddr2_state_out : std_logic_vector(31 downto 0);
 
+-- Asci unit signals
 signal ascii_char_in : std_logic_vector(7 downto 0);
-
-   signal        ascii_x_in :  std_logic_vector(9 downto 0);
-   signal        ascii_y_in :  std_logic_vector(9 downto 0);
-   signal        ascii_pixel_out :  STD_LOGIC;
-   signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
+signal        ascii_x_in :  std_logic_vector(9 downto 0);
+signal        ascii_y_in :  std_logic_vector(9 downto 0);
+signal        ascii_pixel_out :  STD_LOGIC;
+signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
 	
-
+--Uart connection
+signal uart_data : std_logic_vector(7 downto 0);
+signal uart_valid : std_logic;
 	
 
 
@@ -298,7 +310,7 @@ begin
 reset <= sw(0);
 slow <= sw(1);
 debug_en <= sw(2);
-pins_in <= sw(3 downto 0) & btn(4 downto 0) & "0000000";
+pins_in <= "0000000" & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000";
 --leds <= pins_out;
 reset_n <= not reset;
 
@@ -436,7 +448,7 @@ PORT MAP (
 	char_out =>	ascii_char_in,
 	char_addr_in => ascii_addr_out,
 	
-	pins_in(15 downto 0) => pins_in,
+	pins_in(31 downto 0) => pins_in,
 	pins_out(15 downto 0) => pins_out,
 	
 	mmu_state_out => mmu_state_out,
