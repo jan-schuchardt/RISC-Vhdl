@@ -359,8 +359,8 @@ Inst_vga: vga PORT MAP(
     v => vsync,
     reg_data_in => debug,
     reg_adr_in => debug_adr,
-	 pc_in => mmu_ddr2_state_out,
-	 ir_in => mmu_state_out,
+	 pc_in => pc,
+	 ir_in => ir,
 	 
 	 debug_on => debug_en,
     x_out   => ascii_x_in,
