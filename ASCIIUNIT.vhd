@@ -56,7 +56,7 @@ signal curr_addr: unsigned (2047 downto 0);
 signal curr_bitfield : std_logic_vector(0 to 63);
 signal curr_pixel : std_logic;
 --signal curr_addr_out : std_logic_vector(9 downto 0) :="0000000000";
-signal const : std_logic_vector(31 downto 0) := x"00000003";
+signal const : std_logic_vector(31 downto 0) := x"00000002";
 
 signal temp_x : std_logic_vector( 31 downto 0);
 

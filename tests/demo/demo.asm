@@ -257,7 +257,7 @@
 	addi x18, x0, 0
 	addi x19, x3, 0
 	addi x20, x0, 64 //one line
-	//jal x1, memfill
+	jal x1, memfill
 	
 	addi x19, x3, 0
 	addi x18, x0, str_player_turn
