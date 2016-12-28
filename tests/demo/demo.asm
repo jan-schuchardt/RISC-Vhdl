@@ -73,6 +73,7 @@
 		addi x18, x0, vborder
 		slli x27, x3, 6 //row counter * 64
 		lui x19, 0x20000
+		addi x19, x19, 64
 		add x19, x19, x27
 		addi x26, x0, 15
 		beq x3, x26, phbord
@@ -123,6 +124,7 @@
 	beq x5, x0, end_print_element
 	addi x18, x4, 0
 	lui x19, 0x20000
+	addi x19, x19, 64
 	add x19, x19, x3
 	addi x20, x0, 6
 	jal x1, memcpy
@@ -153,6 +155,7 @@
 	slli x27, x27, 6 // 64 chars per line
 	
 	lui x28, 0x20000
+	addi x28, x28, 64
 	add x26, x26, x27 // x + y*64
 	add x26, x26, x28 //prefix
 	
@@ -207,7 +210,7 @@
 	//LED update, Screen set String
 	lui x26, 0x30000
 	lui x28, 0x20000
-	addi x28, x28, 0x400
+	addi x28, x28, 0x440
 	addi x27, x0, 0
 	addi x29, x0, 0x31
 	beq x18, x0, set_turn_set_led
@@ -253,7 +256,7 @@
 .main
 	
 	lui x3, 0x20000
-	addi x3, x3, 0x400 //offset of state text
+	addi x3, x3, 0x440 //offset of state text
 	addi x18, x0, 0
 	addi x19, x3, 0
 	addi x20, x0, 64 //one line
@@ -324,11 +327,11 @@
 	addi x3, x18, 0
 	addi x18, x0, str_player_won
 	lui x19, 0x20000
-	addi x19, x19, 0x400
+	addi x19, x19, 0x440
 	addi x20, x0, 20
 	jal x1, memcpy
 	lui x19 0x20000
-	addi x19, x19, 0x400
+	addi x19, x19, 0x440
 	sb x19, x3, 8
 	
 .btn_north
