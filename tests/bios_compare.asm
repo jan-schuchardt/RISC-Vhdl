@@ -16,7 +16,9 @@
 	bne x5, x0, flush_pram_loop //data is not valid
 	
 	lbu x5, x4, 4 //uart data
-	sb x3, x5, 0
+	lbu x6, x3, 0
+	bne x5, x6, bios_error
+	
 	addi x3, x3, 1 //next byte
 	
 	//wait for data to become invalid
@@ -31,10 +33,12 @@
 		beq x5, x0, flush_pram_loop
 		
 		jal x0, wait_for_new_data
-
+		
 .pram_start
 	lui x1, 0x40000
 	jalr x0, x1, 0
 	
 .bios_error
+	addi x31, x0, -1
+	addi x3, x3, 0
 	jal x0, bios_error

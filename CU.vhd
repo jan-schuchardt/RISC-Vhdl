@@ -59,11 +59,13 @@ begin
    case state is
    when "1101" =>
     if pc = std_logic_vector(to_unsigned(0,pc'length)) then
-     mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
-     mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
-     mmu_com_out  <= "0" & "00";
-     mmu_work_out <= '1';
-     state <= "1110";
+	  if mmu_ack_in = '1' then
+      mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));
+      mmu_adr_out  <= std_logic_vector(to_unsigned(0,mmu_adr_out'length));
+      mmu_com_out  <= "0" & "00";
+      mmu_work_out <= '1';
+      state <= "1110";
+	  end if;
     else
      pc <= std_logic_vector(unsigned(pc) + 1);
     end if;

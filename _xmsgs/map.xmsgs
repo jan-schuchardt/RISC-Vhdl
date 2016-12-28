@@ -20,6 +20,9 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
+<msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">clk_50mhz</arg> are pushed forward through input buffer.
+</msg>
+
 <msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=3007 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en&lt;0&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
 </msg>
 
@@ -107,7 +110,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="Pack" num="249" delta="old" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.
-	<arg fmt="%s" index="1">CPU/CDU/Mcompar_counter_cmp_ge0000_cy&lt;12&gt;</arg>
+	<arg fmt="%s" index="1">CPU/CDU/Mcompar_mode_cmp_ge0000_cy&lt;12&gt;</arg>
 	<arg fmt="%s" index="2">CPU/CDU/Mcount_counter_cy&lt;0&gt;</arg>
 </msg>
 

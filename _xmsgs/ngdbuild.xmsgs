@@ -16,6 +16,9 @@
 <arg fmt="%s" index="7">CLK90</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm = PERIOD &quot;INST_DDR2_RAM_CORE_infrastructure_top0_clk_dcm0_clk90dcm&quot; TS_SYS_CLK PHASE 1.879675 ns HIGH 50%&gt;</arg>
 </msg>
 
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;CLK_50MHZ&quot; period = 20.0ns high 40% ;&gt; [pinning.ucf(1)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
 <msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">DCM_SP</arg> to <arg fmt="%s" index="4">7.518700</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_SYS_CLK&quot; = PERIOD &quot;SYS_CLK&quot;  7.5187  ns HIGH 50 %;&gt; [ddr2_pinning.ucf(43)]</arg>).
 </msg>
 

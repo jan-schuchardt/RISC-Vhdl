@@ -41,7 +41,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- 0x6 : 0 (read only)
 -- 0x7 : 0 (read only)
 
--- RO (read only) : "0000000" & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000"
+-- RO (read only) : "000000" & uart_err & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000";
 -- RW (read/write): "00000000" & leds(7 downto 0)
 
 

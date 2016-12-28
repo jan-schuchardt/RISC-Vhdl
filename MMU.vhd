@@ -229,7 +229,11 @@ architecture Behavioral of MMU is
 					ddr2_write_enable <= '0';
 					br_write_enable <= '0'; --Prevent additional data write during skipped cycle
 					cr_write_enable <= '0';
+					pr_write_enable <= '0';
 					MMU_STATE <= MMU_RESET;
+					data_out <= (others => '0');
+					addr_in_buf <= (others => '0');
+					
 				
 				else
 					
@@ -240,7 +244,6 @@ architecture Behavioral of MMU is
 							mmu_state_out <= x"11111111";
 							-- ensure that we can handle ddr2 requests after a reset
 							if ddr2_ready = '1' then
-								ack_out <= '1';
 								MMU_STATE <= MMU_IDLE;
 							end if;
 					
@@ -321,6 +324,11 @@ architecture Behavioral of MMU is
 									when others => NULL;
 										
 								end case;
+							
+							else
+							
+							
+								ack_out <= '1';
 							
 							end if;
 						

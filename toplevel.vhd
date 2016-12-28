@@ -57,7 +57,10 @@ port (
     g           : out   std_logic_vector(3 downto 0);
     b           : out   std_logic_vector(3 downto 0);
     hsync       : out   std_logic;
-    vsync       : out   std_logic
+    vsync       : out   std_logic;
+	 
+	 -- UART --
+	 rx 			 : in std_logic
   );
 end toplevel;
 
@@ -90,7 +93,8 @@ Port (
 	 clk  : in  std_logic;
 	 rst  : in  std_logic;
 	 rx   : in  std_logic;
-
+	 
+	 err   : out std_logic;
 	 valid: out std_logic;
 	 data : out std_logic_vector(7 downto 0));
 end component UART;
@@ -295,13 +299,13 @@ signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
 --Uart connection
 signal uart_data : std_logic_vector(7 downto 0);
 signal uart_valid : std_logic;
+signal uart_err : std_logic;
 	
 
 
 signal debug2signal:  std_logic_vector(7 downto 0);
 	
 begin
-
 
 -----------------------------------------------------------------------------
 -- Reset & LEDs
@@ -310,7 +314,7 @@ begin
 reset <= sw(0);
 slow <= sw(1);
 debug_en <= sw(2);
-pins_in <= "0000000" & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000";
+pins_in <= "000000" & uart_err & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000";
 --leds <= pins_out;
 reset_n <= not reset;
 
@@ -411,6 +415,22 @@ CPU: entity work.cpu PORT MAP(
 	 
 	 debug2 => debug2signal
 ); 
+  
+-----------------------------------------------------------------------------
+-- UART
+-----------------------------------------------------------------------------  
+
+INST_UART : UART
+PORT MAP (
+	 clk  => clk_cpu,
+	 rst  => reset,
+	 rx   => rx,
+	 
+	 err   => uart_err,
+	 valid => uart_valid,
+	 data => uart_data
+);
+
   
 -----------------------------------------------------------------------------
 -- DDR2

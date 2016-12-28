@@ -39,18 +39,20 @@ architecture Behavioral of ClockDivider is
 
 signal counter:unsigned(31 downto 0);
 signal clk_sgn: std_logic;
-
+signal mode : std_logic;
 begin
 
-clk_out <= clk_sgn when slow_in = '1' else clk_in;
+clk_out <= clk_sgn when mode = '1' else clk_in;
 
 process(clk_in, rst_in)
 begin
 	if rst_in = '1' then
+	   mode <= slow_in;
 		clk_sgn <= '0';
 		counter <= (others => '0');
 	elsif rising_edge(clk_in) then
-		if counter >= x"989680" then
+		if counter >= x"195E240" then
+		   mode <= slow_in;
 			counter <= (others => '0');
 			clk_sgn <= not clk_sgn;
 		else
