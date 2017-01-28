@@ -4,11 +4,15 @@ die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Dazu verwaltet
 das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
 
 \Section{\"Uberblick}
-Im Prozessor wurden die durch das RV32I Base Integer Instruction Set
-und durch die RV32M Standard Extension for Integer Multiplication and Division
-definierten Befehle implementiert.
+Im Prozessor wurden die durch das \ISAname{RV32I Base Integer Instruction Set}
+und durch die \ISAname{RV32M Standard Extension for Integer Multiplication and
+Division} definierten Befehle implementiert. Besondere Aufmerksamkeit wurde
+dabei mehr auf Robustheit und weniger auf maximale Geschwindigkeit gelegt.
 
-Skript das VHDL-code erstellt.
+Um den Implementierungsaufwand bei \"Anderungen von Befehlen zu minimieren
+wurde ein Compiler-Skript erstellt, das mehrere Makros bereitstellt, aus denen
+dann die Befehle zusammengebaut werden k\"onnen. Das Skript kompiliert dann
+eine Eingabe aus diesen Makros in VHDL-Code.
 
 \Section{Conditional Jumps}
 
@@ -20,10 +24,15 @@ Skript das VHDL-code erstellt.
 
 \Section{Integer Rechenbefehle}
 Der Prozessor wurde auf die in RV32I und RV32M definierten Rechenbefehle
-optimiert. Dadurch k\"onnen diese RISC-typischen Befehle mit 3 Takten sehr
+optimiert. Dadurch k\"onnen diese RISC-typischen Befehle mit drei Takten sehr
 schnell ausgef\"uhrt werden.
 
-Division
+\Subsection{Division}
+Da bei der Division unm\"oglich zu garantieren ist, dass diese immer nach drei
+Takten beendet ist, muss das Leitwerk hier auf eine Best\"atigung der ALU
+warten. Diese sieht vor, dass das Rechenwerk die Leitungen \Vhdl{alu\_data\_in}
+auf 0 setzt.
+
 
 \Section{Timer und Counter}
 Wie in der RISC-V-ISA gefordert gibt es einen Counter, der die Anzahl der
@@ -34,9 +43,11 @@ bereitstellt, wurde auch hierf\"ur der Taktz\"ahler verwendet.
 Ausgelesen werden k\"onnen diese Counter durch die Befehle \Instr{RDINSTRET[H]}\nolinebreak{},
 \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
 
-\Statechart{
-\node [state] (s1) {MMU: N\"achsten Befehl holen \\ ALU: R[\Ipart{dest}] := \(counter\)};
-\node [point,right of=s1] (p2) {};
+\Statemachine{170pt}{
+\State{s1}{}{MMU: N\"achsten Befehl holen \\ ALU: R[\Ipart{dest}] := \(counter\)}
+\State{s2}{right of=s1}{2 Takte warten}
+\State{s3}{right of=s2}{PC := PC + 1 \\ IR := Neuer Befehl}
 }{
-(s1) -> (p2)
+\Edge{->}{s1}{s2}{}
+\Edge{->}{s2}{s3}{\Vhdl{mmu\_ack\_in='1'}}
 }

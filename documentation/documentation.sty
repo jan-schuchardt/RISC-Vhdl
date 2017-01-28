@@ -2,39 +2,39 @@
 
 \usepackage[ngerman]{babel}
 \usepackage{tikz}
-\usetikzlibrary{arrows,positioning,shapes.geometric}
+\usetikzlibrary{arrows,arrows.meta,positioning}
 \usepackage{etoolbox}
+\usepackage[left=50pt,right=50pt]{geometry}
 
 \newcommand{\Chapter}[1]{\ifdef{\chapter}{\chapter{#1}}{\section{#1}}}
 \newcommand{\Section}[1]{\ifdef{\chapter}{\section{#1}}{\subsection{#1}}}
 \newcommand{\Subsection}[1]{\ifdef{\chapter}{\subsection{#1}}{\subsubsection{#1}}}
 
+% RISC-V Instruction
 \newcommand{\Instr}[1]{\textbf{#1}}
+% part of a RISC-V Instruction (dest, offset, ...)
 \newcommand{\Ipart}[1]{\emph{#1}}
 
-\newcommand{\Statechart}[2]{%
-\begin{tikzpicture}[auto,>=latex']
-\tikzset{state/.style={draw,shape=rectangle,rounded corners=5pt,align=center,minimum width=2cm,minimum height=1cm},point/.style={circle, inner sep={.75\pgflinewidth}, opacity=1, draw, solid, fill=white}}
-#1
-\path[draw,->] #2;
-%        \node [rblock]  (start) {Start};
-%        \node [block, right =2cm of start] (acquire) {Acquire Image};
-%        \node [block, right =2cm of acquire] (rgb2gray) {RGB to Gray};
-%        \node [block, right =2cm of rgb2gray] (otsu) {Localized OTSU \\ Thresholding};
-%        \node [block, below right =2cm and -0.5cm of start] (gchannel) {Subtract the \\ Green Channel};
-%        \node [block, right =2cm of gchannel] (closing) {Morphological \\ Closing};
-%        \node [block, right =2cm of closing] (NN) {Sign Detection \\ Using NN};
-%        \node [block, right =2cm of NN] (limit) {Speed \\ Limit};
-%        \node [coordinate, below right =1cm and 1cm of otsu] (right) {};  %% Coordinate on right and middle
-%        \node [coordinate,above left =1cm and 1cm of gchannel] (left) {};  %% Coordinate on left and middle
+% name, defined by the ISA (RV32I, ...)
+\newcommand{\ISAname}[1]{\emph{#1}}
 
-%        \path[draw,->] (start) edge (acquire)
-%                    (acquire) edge (rgb2gray)
-%                    (rgb2gray) edge (otsu)
-%                    (otsu.east) -| (right) -- (left) |- (gchannel)
-%                    (gchannel) edge (closing)
-%                    (closing) edge (NN)
-%                    (NN) edge (limit)
-%                    ;
+% VHDL-Code
+\newcommand{\Vhdl}[1]{\texttt{#1}}
+
+% state in a statemachine
+\newcommand{\State}[3]{\node [state,#2] (#1) {\begin{tabular}{l}#3\end{tabular}};}
+
+% point in a statemachine
+\newcommand{\Point}[2]{\node [point,#2] (#1) {};}
+
+% edge in a statemachine
+\newcommand{\Edge}[4]{\draw[#1] (#2) -- node[above] {#4} (#3);}
+
+\newcommand{\Statemachine}[3]{%
+\vspace{15pt}
+\begin{tikzpicture}[auto,>={Latex[width=7pt,length=7pt]},node distance=#1]
+\tikzset{state/.style={draw,shape=rectangle,rounded corners=5pt,align=center,minimum width=2cm,minimum height=1cm},point/.style={coordinate}}
+#2
+#3
 \end{tikzpicture}
 }
