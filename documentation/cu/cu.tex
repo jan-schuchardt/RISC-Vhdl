@@ -1,0 +1,42 @@
+\Chapter{Das Leitwerk}
+Das Leitwerk ist die zentrale Steuereinheit des Prozessors. Es interpretiert
+die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Dazu verwaltet
+das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
+
+\Section{\"Uberblick}
+Im Prozessor wurden die durch das RV32I Base Integer Instruction Set
+und durch die RV32M Standard Extension for Integer Multiplication and Division
+definierten Befehle implementiert.
+
+Skript das VHDL-code erstellt.
+
+\Section{Conditional Jumps}
+
+\Section{Unconditional Jumps}
+
+\Section{Load Store}
+
+\Section{LUI AUPIC}
+
+\Section{Integer Rechenbefehle}
+Der Prozessor wurde auf die in RV32I und RV32M definierten Rechenbefehle
+optimiert. Dadurch k\"onnen diese RISC-typischen Befehle mit 3 Takten sehr
+schnell ausgef\"uhrt werden.
+
+Division
+
+\Section{Timer und Counter}
+Wie in der RISC-V-ISA gefordert gibt es einen Counter, der die Anzahl der
+bisher ausgef\"uhrten Befehle speichert. Au\ss{}erdem gibt es einen Timer, der
+die Anzahl der vergangenen Takte speichert. Da das FPGA keine Echtzeituhr
+bereitstellt, wurde auch hierf\"ur der Taktz\"ahler verwendet.
+
+Ausgelesen werden k\"onnen diese Counter durch die Befehle \Instr{RDINSTRET[H]}\nolinebreak{},
+\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
+
+\Statechart{
+\node [state] (s1) {MMU: N\"achsten Befehl holen \\ ALU: R[\Ipart{dest}] := \(counter\)};
+\node [point,right of=s1] (p2) {};
+}{
+(s1) -> (p2)
+}
