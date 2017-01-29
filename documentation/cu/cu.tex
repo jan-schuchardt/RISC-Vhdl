@@ -6,26 +6,43 @@ das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
 \Section{\"Uberblick}
 Im Prozessor wurden die durch das \ISAname{RV32I Base Integer Instruction Set}
 und durch die \ISAname{RV32M Standard Extension for Integer Multiplication and
-Division} definierten Befehle implementiert. Besondere Aufmerksamkeit wurde
-dabei mehr auf Robustheit und weniger auf maximale Geschwindigkeit gelegt.
+Division} definierten Befehle implementiert. Eine Ausnahme bilden dabei alle
+Befehle, die Multitasking erm\"oglichen sollen, also \Instr{SCALL}
+\nolinebreak{}, \Instr{SBREAK}\nolinebreak{}, \Instr{FENCE} und
+\Instr{FENCE.I}. Besondere Aufmerksamkeit wurde dabei mehr auf Robustheit und
+weniger auf maximale Geschwindigkeit gelegt.
+
+Das Leitwerk besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche
+ausgef\"uhrt wird h\"angt allein vom Inhalt des Instruction-Register ab. Daher
+muss jeder Befehl als letztes das IR mit dem folgenden Befehl neu laden. Wann
+dieser neue Befehl geladen wird kann nun in jedem Befehl einzeln optimiert
+werden.
 
 Um den Implementierungsaufwand bei \"Anderungen von Befehlen zu minimieren
 wurde ein Compiler-Skript erstellt, das mehrere Makros bereitstellt, aus denen
 dann die Befehle zusammengebaut werden k\"onnen. Das Skript kompiliert dann
 eine Eingabe aus diesen Makros in VHDL-Code.
 
-\Section{Conditional Jumps}
-
-\Section{Unconditional Jumps}
-
-\Section{Load Store}
-
-\Section{LUI AUPIC}
+\Subsection{Legende}
+Da jeder Befehl eine eigene Zustandsmaschine besitzt wird hier f\"ur jeden
+Befehl ein eigenes Zustands\-\"uber\-gangs\-dia\-gramm gezeigt. Die Pr\"afixe
+``MMU:'' und ``ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
+jeweiligen Einheit ausgef\"uhrt wird und das Leitwerk lediglich eine Anweisung
+gibt.
 
 \Section{Integer Rechenbefehle}
 Der Prozessor wurde auf die in RV32I und RV32M definierten Rechenbefehle
 optimiert. Dadurch k\"onnen diese RISC-typischen Befehle mit drei Takten sehr
 schnell ausgef\"uhrt werden.
+
+\Statemachine{img/integer_rechenbefehle.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{ADD[I]}, \Instr{SUB},
+\Instr{SLT[I][U]}, \Instr{AND[I]}, \Instr{OR[I]}, \Instr{XOR[I]},
+\Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]}, \Instr{MUL[W]} und
+\Instr{MULH[[S]U]}. \(op2\) ist entweder das Register, das mit \Ipart{rs2}
+angegeben ist, oder eine Immediate (\Ipart{imm}). ``\(\circ\)'' repr\"asentiert die
+jeweilige Operation (\(+\), \(-\), \dots{}).
+}
 
 \Subsection{Division}
 Da bei der Division unm\"oglich zu garantieren ist, dass diese immer nach drei
@@ -33,6 +50,18 @@ Takten beendet ist, muss das Leitwerk hier auf eine Best\"atigung der ALU
 warten. Diese sieht vor, dass das Rechenwerk die Leitungen \Vhdl{alu\_data\_in}
 auf 0 setzt.
 
+\Statemachine{img/division.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
+``\(\diamond\)'' repr\"asentiert die jeweilige Operation (\(/\), \(\bmod\), \dots{}).
+}
+
+\Section{LUI und AUPIC}
+
+\Section{Bedingte Spr\"unge}
+
+\Section{Unbedingte Spr\"unge}
+
+\Section{Speicherzugriffsbefehle}
 
 \Section{Timer und Counter}
 Wie in der RISC-V-ISA gefordert gibt es einen Counter, der die Anzahl der
@@ -40,14 +69,11 @@ bisher ausgef\"uhrten Befehle speichert. Au\ss{}erdem gibt es einen Timer, der
 die Anzahl der vergangenen Takte speichert. Da das FPGA keine Echtzeituhr
 bereitstellt, wurde auch hierf\"ur der Taktz\"ahler verwendet.
 
-Ausgelesen werden k\"onnen diese Counter durch die Befehle \Instr{RDINSTRET[H]}\nolinebreak{},
-\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
+Ausgelesen werden k\"onnen diese Counter durch die Befehle
+\Instr{RDINSTRET[H]}\nolinebreak{}, \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
 
-\Statemachine{170pt}{
-\State{s1}{}{MMU: N\"achsten Befehl holen \\ ALU: R[\Ipart{dest}] := \(counter\)}
-\State{s2}{right of=s1}{2 Takte warten}
-\State{s3}{right of=s2}{PC := PC + 1 \\ IR := Neuer Befehl}
-}{
-\Edge{->}{s1}{s2}{}
-\Edge{->}{s2}{s3}{\Vhdl{mmu\_ack\_in='1'}}
+\Statemachine{img/timer_und_counter.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
+\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}. \(counter\) sind die oberen bzw.
+unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.
 }

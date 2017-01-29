@@ -1,40 +1,14 @@
 \ProvidesPackage{documentation}
 
-\usepackage[ngerman]{babel}
-\usepackage{tikz}
-\usetikzlibrary{arrows,arrows.meta,positioning}
-\usepackage{etoolbox}
+\usepackage{style}
+
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage[left=50pt,right=50pt]{geometry}
 
-\newcommand{\Chapter}[1]{\ifdef{\chapter}{\chapter{#1}}{\section{#1}}}
-\newcommand{\Section}[1]{\ifdef{\chapter}{\section{#1}}{\subsection{#1}}}
-\newcommand{\Subsection}[1]{\ifdef{\chapter}{\subsection{#1}}{\subsubsection{#1}}}
-
-% RISC-V Instruction
-\newcommand{\Instr}[1]{\textbf{#1}}
-% part of a RISC-V Instruction (dest, offset, ...)
-\newcommand{\Ipart}[1]{\emph{#1}}
-
-% name, defined by the ISA (RV32I, ...)
-\newcommand{\ISAname}[1]{\emph{#1}}
-
-% VHDL-Code
-\newcommand{\Vhdl}[1]{\texttt{#1}}
-
-% state in a statemachine
-\newcommand{\State}[3]{\node [state,#2] (#1) {\begin{tabular}{l}#3\end{tabular}};}
-
-% point in a statemachine
-\newcommand{\Point}[2]{\node [point,#2] (#1) {};}
-
-% edge in a statemachine
-\newcommand{\Edge}[4]{\draw[#1] (#2) -- node[above] {#4} (#3);}
-
-\newcommand{\Statemachine}[3]{%
-\vspace{15pt}
-\begin{tikzpicture}[auto,>={Latex[width=7pt,length=7pt]},node distance=#1]
-\tikzset{state/.style={draw,shape=rectangle,rounded corners=5pt,align=center,minimum width=2cm,minimum height=1cm},point/.style={coordinate}}
-#2
-#3
-\end{tikzpicture}
+\newcommand{\Statemachine}[2]{%
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{#1}
+\caption{#2}
+\end{figure}
 }
