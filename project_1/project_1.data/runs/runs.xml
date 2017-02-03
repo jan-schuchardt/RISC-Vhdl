@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="8">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc3s700afg484-4" LaunchPart="xc3s700afg484-4" ConstrsSet="constrs_1" Description="PlanAhead Defaults (XST defaults with hierarchy)" State="current" Dir="$PRUNDIR/synth_1" LaunchTime="1484855366">
+		<File Type="XST-NGC" Name="toplevel.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="XST-SRP" Name="toplevel.srp"/>
+		<File Type="PA-XST" Name="toplevel.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="toplevel.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc3s700afg484-4" LaunchPart="xc3s700afg484-4" ConstrsSet="constrs_1" Description="ISE Defaults, including packing registers in IOs off" State="current" Dir="$PRUNDIR/impl_1" LaunchTime="1484855491">
+		<File Type="MAP-PSR" Name="toplevel.psr"/>
+		<File Type="PA-EDIF" Name="toplevel.edf"/>
+		<File Type="PAR-NCD" Name="toplevel_routed.ncd"/>
+		<File Type="PA-UCF" Name="toplevel.ucf"/>
+		<File Type="PAR-PAD" Name="toplevel_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="toplevel_routed.par"/>
+		<File Type="PAR-UNR" Name="toplevel_routed.unroutes"/>
+		<File Type="BG-BIT" Name="toplevel.bit"/>
+		<File Type="BG-DRC" Name="toplevel.drc"/>
+		<File Type="PA-CONSTRSDIR" Name=".constrs"/>
+		<File Type="BG-BGN" Name="toplevel.bgn"/>
+		<File Type="TRCE-TWR" Name="toplevel.twr"/>
+		<File Type="TRCE-TWX" Name="toplevel.twx"/>
+		<File Type="XDL-XDL" Name="toplevel_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+		<File Type="NGDB-NGD" Name="toplevel.ngd"/>
+		<File Type="NGDB-BLD" Name="toplevel.bld"/>
+		<File Type="MAP-NCD" Name="toplevel.ncd"/>
+		<File Type="MAP-PCF" Name="toplevel.pcf"/>
+		<File Type="MAP-MRP" Name="toplevel.mrp"/>
+		<File Type="MAP-MAP" Name="toplevel.map"/>
+	</Run>
+</Runs>
+

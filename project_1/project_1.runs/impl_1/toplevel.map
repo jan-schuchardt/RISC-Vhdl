@@ -1,0 +1,391 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'toplevel'
+
+Design Information
+------------------
+Command Line   : map -intstyle pa -w -ntd toplevel.ngd 
+Target Device  : xc3s700a
+Target Package : fg484
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Thu Jan 19 20:52:10 2017
+
+Mapping design into LUTs...
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[5]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[6]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[7]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[4]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[4]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[6]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[7]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[5]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[0]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[2]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[3]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[0]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=580 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in[1]" has been discarded, because
+   the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_clk_tb/INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_C
+   LK0" (output signal=clk_tb) has a mix of clock and non-clock loads. The
+   non-clock loads are:
+   Pin I0 of INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/l0
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol "physical_group_clk_cpu/Inst_vga_clk/CLK0_BUFG_INST" (output
+   signal=clk_cpu) has a mix of clock and non-clock loads. The non-clock loads
+   are:
+   Pin I1 of CPU/CDU/clk_out1
+Running directed packing...
+WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
+   slice components.  The resulting carry chain will have suboptimal timing.
+   	CPU/CDU/Mcompar_mode_cmp_ge0000_cy<12>
+   	CPU/CDU/Mcount_counter_cy<0>
+WARNING:Pack:266 - The function generator
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<5>111 failed
+   to merge with F5 multiplexer
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<4>11_f5. 
+   There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1[0] is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0[0] is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   96
+Logic Utilization:
+  Number of Slice Flip Flops:         3,988 out of  11,776   33%
+  Number of 4 input LUTs:             6,963 out of  11,776   59%
+Logic Distribution:
+  Number of occupied Slices:          5,111 out of   5,888   86%
+    Number of Slices containing only related logic:   5,111 out of   5,111 100%
+    Number of Slices containing unrelated logic:          0 out of   5,111   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       7,258 out of  11,776   61%
+    Number used as logic:             6,912
+    Number used as a route-thru:        295
+    Number used for Dual Port RAMs:      16
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      35
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 81 out of     372   21%
+    IOB Flip Flops:                      18
+    IOB Master Pads:                      3
+    IOB Slave Pads:                       3
+  Number of ODDR2s used:                 24
+    Number of DDR_ALIGNMENT = NONE       24
+    Number of DDR_ALIGNMENT = C0          0
+    Number of DDR_ALIGNMENT = C1          0
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         3 out of       8   37%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+  Number of RAMB16BWEs:                   7 out of      20   35%
+
+  Number of RPM macros:            1
+Average Fanout of Non-Clock Nets:                3.38
+
+Peak Memory Usage:  381 MB
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion:   11 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "toplevel.mrp" for details.

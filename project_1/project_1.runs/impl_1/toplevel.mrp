@@ -1,0 +1,1164 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'toplevel'
+
+Design Information
+------------------
+Command Line   : map -intstyle pa -w -ntd toplevel.ngd 
+Target Device  : xc3s700a
+Target Package : fg484
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Thu Jan 19 20:52:10 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   96
+Logic Utilization:
+  Number of Slice Flip Flops:         3,988 out of  11,776   33%
+  Number of 4 input LUTs:             6,963 out of  11,776   59%
+Logic Distribution:
+  Number of occupied Slices:          5,111 out of   5,888   86%
+    Number of Slices containing only related logic:   5,111 out of   5,111 100%
+    Number of Slices containing unrelated logic:          0 out of   5,111   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       7,258 out of  11,776   61%
+    Number used as logic:             6,912
+    Number used as a route-thru:        295
+    Number used for Dual Port RAMs:      16
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      35
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 81 out of     372   21%
+    IOB Flip Flops:                      18
+    IOB Master Pads:                      3
+    IOB Slave Pads:                       3
+  Number of ODDR2s used:                 24
+    Number of DDR_ALIGNMENT = NONE       24
+    Number of DDR_ALIGNMENT = C0          0
+    Number of DDR_ALIGNMENT = C1          0
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         3 out of       8   37%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+  Number of RAMB16BWEs:                   7 out of      20   35%
+
+  Number of RPM macros:            1
+Average Fanout of Non-Clock Nets:                3.38
+
+Peak Memory Usage:  381 MB
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion:   11 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[5]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[6]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[7]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[4]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[4]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[6]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[7]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[5]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[0]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[2]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[3]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=6390 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[0]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=580 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in[1]" has been discarded, because
+   the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col0/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay5" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay3" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay4" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay1" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=190 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_
+   delay_col1/delay2" has been discarded, because the net was optimized out of
+   the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=3007 pS" on net
+   "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[1]" has been discarded,
+   because the net was optimized out of the design.
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_clk_tb/INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_C
+   LK0" (output signal=clk_tb) has a mix of clock and non-clock loads. The
+   non-clock loads are:
+   Pin I0 of INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/l0
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol "physical_group_clk_cpu/Inst_vga_clk/CLK0_BUFG_INST" (output
+   signal=clk_cpu) has a mix of clock and non-clock loads. The non-clock loads
+   are:
+   Pin I1 of CPU/CDU/clk_out1
+WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
+   slice components.  The resulting carry chain will have suboptimal timing.
+   	CPU/CDU/Mcompar_mode_cmp_ge0000_cy<12>
+   	CPU/CDU/Mcount_counter_cy<0>
+WARNING:Pack:266 - The function generator
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<5>111 failed
+   to merge with F5 multiplexer
+   INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor<4>11_f5. 
+   There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1[0] is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0[0] is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00001>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<inst_asciiunit/inst_charmap/Mrom__varindex00002>:<RAMB16BWE_RAMB16BWE>
+   .
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network CPU/ALU/dividerSigned/blk00000003/sig00000670 has
+   no load.
+INFO:LIT:395 - The above info message is repeated 61 more times for the
+   following (max. 5 shown):
+   CPU/ALU/dividerSigned/blk00000003/sig00000671,
+   CPU/ALU/dividerSigned/blk00000003/blk00000760/Q,
+   CPU/ALU/dividerSigned/blk00000003/blk0000075d/Q,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_b
+   it0/SPO,
+   INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_b
+   it0/DPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal clk_50mhz are pushed forward
+   through input buffer.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp clk133/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 126 block(s) removed
+  46 block(s) optimized away
+  92 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "CPU/ALU/dividerSigned/blk00000003/blk000002d8" (MUX) removed.
+Loadless block "CPU/ALU/dividerSigned/blk00000003/blk0000031a" (MUX) removed.
+Loadless block "CPU/ALU/dividerSigned/blk00000003/blk0000035c" (MUX) removed.
+Loadless block "CPU/ALU/dividerSigned/blk00000003/blk0000039e" (MUX) removed.
+Loadless block "CPU/ALU/dividerUnsigned/blk00000003/blk00000210" (MUX) removed.
+Loadless block "CPU/ALU/dividerUnsigned/blk00000003/blk00000252" (MUX) removed.
+Loadless block "CPU/ALU/dividerUnsigned/blk00000003/blk00000294" (MUX) removed.
+Loadless block "CPU/ALU/dividerUnsigned/blk00000003/blk000002d6" (MUX) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[0]" is loadless
+and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/bit0" (FF) removed.
+   The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[0]" is loadless
+and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_
+wr_en_inst/dout1" (ROM) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in12" (ROM) removed.
+     The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[1]" is loadless
+and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/bit1" (FF) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in111" (ROM) removed.
+         The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[2]" is loadless
+and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/bit2" (FF) removed.
+           The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in21" (ROM) removed.
+             The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[3]" is loadless
+and has been removed.
+              Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/bit3" (FF) removed.
+               The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
+                Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_
+0_wr_addr_inst/Mrom_d_in31" (ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[0]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_0" (FF)
+removed.
+   The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr[0]" is
+loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit0" (SFF)
+removed.
+     The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in"
+is loadless and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in12"
+(ROM) removed.
+       The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr[1]" is
+loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit1" (SFF)
+removed.
+         The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in1"
+is loadless and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in111
+" (ROM) removed.
+           The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr[2]" is
+loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit2" (SFF)
+removed.
+             The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in2"
+is loadless and has been removed.
+              Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in21"
+(ROM) removed.
+               The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr[3]" is
+loadless and has been removed.
+                Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit3" (SFF)
+removed.
+                 The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in3"
+is loadless and has been removed.
+                  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_inst/Mrom_d_in31"
+(ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[1]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_1" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[2]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_2" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[3]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_3" (FF)
+removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit2"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit3"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit4"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit5"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit6"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit7"
+(RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1[1]" is
+loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/one" (ROM) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/high" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/XST_VCC" (ONE) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/delay5" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/five" (ROM) removed.
+     The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/delay4" is loadless and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/two" (ROM) removed.
+       The signal "INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in[1]" is loadless and has
+been removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/delay3" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/six" (ROM) removed.
+         The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/delay2" is loadless and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/three" (ROM) removed.
+           The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/delay1" is loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col1/four" (ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[8]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_IBUF
+" (BUF) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[4]" is loadless
+and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/bit0" (FF) removed.
+   The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en[1]" is loadless
+and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_
+wr_en_inst/dout1" (ROM) removed.
+     The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_
+wr_en_inst/din_delay" is loadless and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_
+wr_en_inst/delay_ff" (FF) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/dqs_delayed_col1_n[1]" is
+loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/dqs_delayed_col1_n_1
+_not00001_INV_0" (BUF) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in12" (ROM) removed.
+     The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[5]" is loadless
+and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/bit1" (FF) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in111" (ROM) removed.
+         The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[6]" is loadless
+and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/bit2" (FF) removed.
+           The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in21" (ROM) removed.
+             The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr[7]" is loadless
+and has been removed.
+              Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/bit3" (FF) removed.
+               The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
+                Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+0_wr_addr_inst/Mrom_d_in31" (ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[4]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_4" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[5]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_5" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[6]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_6" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r[7]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo0_rd_addr_r_7" (FF)
+removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0[1]" is
+loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/one" (ROM) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/high" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/XST_VCC" (ONE) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/delay5" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/five" (ROM) removed.
+     The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/delay4" is loadless and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/two" (ROM) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/delay3" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/six" (ROM) removed.
+         The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/delay2" is loadless and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/three" (ROM) removed.
+           The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/delay1" is loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_del
+ay_col0/four" (ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[9]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DQ_IBUF
+" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit2"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[10]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit3"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[11]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit4"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[12]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit5"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[13]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit6"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[14]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit7"
+(RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/dq[15]" is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DQ_IBU
+F" (BUF) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+0" (RAM16X1D) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[4]" is loadless
+and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/bit0" (FF) removed.
+   The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en[1]" is loadless
+and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_
+wr_en_inst/dout1" (ROM) removed.
+     The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_
+wr_en_inst/din_delay" is loadless and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_
+wr_en_inst/delay_ff_1" (FF) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_
+wr_en_inst/dout0" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_
+wr_en_inst/dout01" (ROM) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/dqs_delayed_col0_n[1]" is
+loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/dqs_delayed_col0_n_1
+_not00001_INV_0" (BUF) removed.
+   The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
+    Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in12" (ROM) removed.
+     The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[5]" is loadless
+and has been removed.
+      Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/bit1" (FF) removed.
+       The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
+        Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in111" (ROM) removed.
+         The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[6]" is loadless
+and has been removed.
+          Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/bit2" (FF) removed.
+           The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
+            Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in21" (ROM) removed.
+             The signal "INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr[7]" is loadless
+and has been removed.
+              Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/bit3" (FF) removed.
+               The signal
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
+                Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_wr_addr[1].fifo_
+1_wr_addr_inst/Mrom_d_in31" (ROM) removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r[4]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r_4" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r[5]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r_5" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r[6]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r_6" (FF)
+removed.
+ The signal "INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r[7]"
+is loadless and has been removed.
+  Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/fifo1_rd_addr_r_7" (FF)
+removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+1" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+2" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+3" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+4" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+5" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+6" (RAM16X1D) removed.
+Loadless block
+"INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit
+7" (RAM16X1D) removed.
+Loadless block "clk133/CLK2X_BUFG_INST" (CKBUF) removed.
+ The signal "clk133/CLK2X_BUF" is loadless and has been removed.
+The signal "CPU/ALU/dividerSigned/blk00000003/sig000005f0" is sourceless and has
+been removed.
+ Sourceless block "CPU/ALU/dividerSigned/blk00000003/blk00000423" (MUX) removed.
+  The signal "CPU/ALU/dividerSigned/blk00000003/sig000005f1" is sourceless and has
+been removed.
+   Sourceless block "CPU/ALU/dividerSigned/blk00000003/blk00000460" (MUX) removed.
+    The signal "CPU/ALU/dividerSigned/blk00000003/sig0000066b" is sourceless and has
+been removed.
+     Sourceless block "CPU/ALU/dividerSigned/blk00000003/blk00000485" (SFF) removed.
+      The signal "CPU/ALU/dividerSigned/blk00000003/sig00000670" is sourceless and has
+been removed.
+   Sourceless block "CPU/ALU/dividerSigned/blk00000003/blk00000461" (XOR) removed.
+    The signal "CPU/ALU/dividerSigned/blk00000003/sig0000066c" is sourceless and has
+been removed.
+     Sourceless block "CPU/ALU/dividerSigned/blk00000003/blk00000486" (SFF) removed.
+      The signal "CPU/ALU/dividerSigned/blk00000003/sig00000671" is sourceless and has
+been removed.
+The signal "CPU/ALU/dividerSigned/blk00000003/sig0000066a" is sourceless and has
+been removed.
+The signal "CPU/ALU/dividerSigned/blk00000003/blk00000760/Q" is sourceless and
+has been removed.
+The signal "CPU/ALU/dividerSigned/blk00000003/blk0000075d/Q" is sourceless and
+has been removed.
+The signal "CPU/ALU/dividerUnsigned/blk00000003/sig000004e8" is sourceless and
+has been removed.
+ Sourceless block "CPU/ALU/dividerUnsigned/blk00000003/blk0000035b" (MUX)
+removed.
+  The signal "CPU/ALU/dividerUnsigned/blk00000003/sig000004e9" is sourceless and
+has been removed.
+   Sourceless block "CPU/ALU/dividerUnsigned/blk00000003/blk00000398" (MUX)
+removed.
+    The signal "CPU/ALU/dividerUnsigned/blk00000003/sig00000563" is sourceless and
+has been removed.
+     Sourceless block "CPU/ALU/dividerUnsigned/blk00000003/blk000003bd" (SFF)
+removed.
+      The signal "CPU/ALU/dividerUnsigned/blk00000003/sig00000568" is sourceless and
+has been removed.
+   Sourceless block "CPU/ALU/dividerUnsigned/blk00000003/blk00000399" (XOR)
+removed.
+    The signal "CPU/ALU/dividerUnsigned/blk00000003/sig00000564" is sourceless and
+has been removed.
+     Sourceless block "CPU/ALU/dividerUnsigned/blk00000003/blk000003be" (SFF)
+removed.
+      The signal "CPU/ALU/dividerUnsigned/blk00000003/sig00000569" is sourceless and
+has been removed.
+The signal "CPU/ALU/dividerUnsigned/blk00000003/sig00000562" is sourceless and
+has been removed.
+Unused block "CPU/ALU/dividerSigned/blk00000001" (ONE) removed.
+Unused block "CPU/ALU/dividerSigned/blk00000002" (ZERO) removed.
+Unused block "CPU/ALU/dividerSigned/blk00000003/blk00000464" (AND) removed.
+Unused block "CPU/ALU/dividerSigned/blk00000003/blk00000465" (AND) removed.
+Unused block "CPU/ALU/dividerUnsigned/blk00000001" (ONE) removed.
+Unused block "CPU/ALU/dividerUnsigned/blk00000002" (ZERO) removed.
+Unused block "CPU/ALU/dividerUnsigned/blk00000003/blk0000039c" (AND) removed.
+Unused block "CPU/ALU/dividerUnsigned/blk00000003/blk0000039d" (AND) removed.
+Unused block
+"INST_DDR2_RAM_CORE/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dqs_iob_inst/U4"
+(IBUFDS) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		CPU/ALU/dividerSigned/blk00000003/blk00000004
+VCC 		CPU/ALU/dividerSigned/blk00000003/blk0000075c
+GND 		CPU/ALU/dividerUnsigned/blk00000003/blk00000004
+FDSE 		INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs_val_0
+   optimized to 1
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_de
+lay_col0/XST_VCC
+VCC
+		INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_de
+lay_col1/XST_VCC
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[11].iob_addr
+   optimized to 0
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/gen_addr[12].iob_addr
+   optimized to 0
+FD 		INST_DDR2_RAM_CORE/top_00/iobs0/controller_iobs0/iob_odt
+   optimized to 0
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLKB_130M                          | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| b[0]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| b[1]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| b[2]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| b[3]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| btn[0]                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| btn[1]                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| btn[2]                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| btn[3]                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| btn[4]                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| clk_50mhz                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| cntrl0_ddr2_a[0]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[1]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[2]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[3]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[4]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[5]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[6]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[7]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[8]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[9]                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[10]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[11]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_a[12]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ba[0]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ba[1]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cas_n                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ck[0]                  | DIFFM            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ck_n[0]                | DIFFS            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cke                    | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_cs_n                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dm[0]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dm[1]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_dq[0]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[1]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[2]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[3]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[4]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[5]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[6]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[7]                  | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[8]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[9]                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[10]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[11]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[12]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[13]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[14]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dq[15]                 | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs[0]                 | DIFFM            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs[1]                 | DIFFM            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs_n[0]               | DIFFS            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_dqs_n[1]               | DIFFS            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| cntrl0_ddr2_odt                    | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_ras_n                  | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_ddr2_we_n                   | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| cntrl0_rst_dqs_div_in              | IBUF             | INPUT     | SSTL18_I             |       |          |         |              |          | 0 / 0    |                  |
+| cntrl0_rst_dqs_div_out             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| g[0]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| g[1]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| g[2]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| g[3]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| leds[0]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[1]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[2]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[3]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[4]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[5]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[6]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| leds[7]                            | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| r[0]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| r[1]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| r[2]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| r[3]                               | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
+| rx                                 | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
+| sw[0]                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| sw[1]                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| sw[2]                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| sw[3]                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+delay_calibration_chain                 
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+Area Group "cal_ctl"
+  No COMPRESSION specified for Area Group "cal_ctl"
+  RANGE: SLICE_X26Y8:SLICE_X37Y21
+  Area Group Logic Utilization:
+  Number of Slice Flip Flops:               94 out of    336   27%
+  Logic Distribution:
+    Number of occupied Slices:              66 out of    168   39%
+      Number of Slices containing only related logic:     66 out of     66 100%
+  Total Number of 4 input LUTs:             82 out of    336   24%
+    Number used as logic:                   82
+
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
