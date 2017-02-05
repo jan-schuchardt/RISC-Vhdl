@@ -24,5 +24,18 @@
 \BOOKMARK [1][-]{section.2.6}{Reset}{chapter.2}% 24
 \BOOKMARK [0][-]{chapter.3}{Die MMU}{}% 25
 \BOOKMARK [1][-]{section.3.1}{\334berblick}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Aufbau des Speichers}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.3}{Memory-Mapped I/O}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.2}{Interface}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.2.1}{Kommunikation mit dem Leitwerk}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{Durch die MMU geleitete Signale an andere Komponenten}{section.3.2}% 29
+\BOOKMARK [1][-]{section.3.3}{Aufbau des Speichers}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.4}{Memory-Mapped I/O}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.5}{Implementierung als State Machine}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.5.1}{MMU-IDLE}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{MMU-WAITING}{section.3.5}% 34
+\BOOKMARK [2][-]{subsection.3.5.3}{MMU-DATA-VALID}{section.3.5}% 35
+\BOOKMARK [2][-]{subsection.3.5.4}{MMU-READ-NEXT}{section.3.5}% 36
+\BOOKMARK [2][-]{subsection.3.5.5}{MMU-READ-DONE}{section.3.5}% 37
+\BOOKMARK [2][-]{subsection.3.5.6}{MMU-WRITE-NEXT}{section.3.5}% 38
+\BOOKMARK [2][-]{subsection.3.5.7}{MMU-WRITE-DONE}{section.3.5}% 39
+\BOOKMARK [2][-]{subsection.3.5.8}{MMU-RESET}{section.3.5}% 40
+\BOOKMARK [1][-]{section.3.6}{Zugrifssdauer}{chapter.3}% 41
