@@ -43,3 +43,32 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert.
 
 \section{Memory-Mapped I/O}
+
+Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
+
+\begin{center}
+	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
+	\hline
+	Speicherzelle & Zugriffsmodus (R/W) & Bit 7 & Bit 6 & Bit 5 & Bit 4 & Bit 3 & Bit 2 & Bit 1 & Bit 0 \\ \hline
+	0x0 & Read-Only & BTN 0 & - & - & - & - & - & - & - \\ \hline
+	0x1 & Read-Only & SW 3 & SW 2 & SW 1 & SW 0 & BTN 4 & BTN 3 & BTN 2 & BTN 1 \\ \hline
+	0x2 & Read/Write & LED 7 & LED 6 & LED 5 & LED 4 & LED 3 & LED 2 & LED 1 & LED 0 \\ \hline
+	0x3 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
+	0x4 & Read-Only & UART 7 & UART 6 & UART 5 & UART 4 & UART 3 & UART 2 & UART 1 & UART 0 \\ \hline
+	0x5 & Read-Only & - & - & - & - & - & - & UART VALID & UART ERR \\ \hline
+	0x6 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
+	0x7 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
+	\end{tabular}
+\end{center}
+
+Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht schnell genug taktet, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird.
+
+Die folgende Abbildung zeigt, wo sich welches Ein-/Ausgabesignal auf der Hardware wiederfindet.
+\begin{figure}
+	\centering
+		\includegraphics[scale=0.1\textwidth]{pinning.png}
+	\caption{Verteilung der I/O-Signale}
+	\label{fig:pinning}
+\end{figure}
+
+
