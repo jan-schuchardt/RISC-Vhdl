@@ -16,6 +16,10 @@
 % edge in a statemachine
 \newcommand{\Edge}[4]{\draw[#1] (#2) -- node[above] {#4} (#3);}
 
+% another edge in a statemachine
+\newcommand{\Longedge}[9]{\draw[#1] (#2) |- node[#6] {#7} (#3);
+\draw[#5] (#3) -| node[#8] {#9} (#4);}
+
 % statemachine
 \newcommand{\Statemachine}[2]{%
 \vspace{15pt}
