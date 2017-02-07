@@ -1,5 +1,5 @@
 \Chapter{Die ASCII-Unit}
-\label{ch:asciiunit}
++\label{ch:asciiunit}
 Die ASCII-Unit ist f\"ur die Textausgabe auf dem Monitor zust\"andig.
 \Section{\"Uberblick}
 Die ASCII-Unit gibt auf dem Monitor mittels Memory-Mapping den Inhalt des CHARRAMs gem{\"a}{\ss} ASCII-Kodierung aus. Dazu wird den Zeichen-Stellen auf dem Monitor jeweils eine Adresse zugeordnet: Die Stelle im Eck oben links erh\"alt die 0, nach rechts wird bis zum Zeilenende durchinkrementiert, dann wird jeweils in der n\"achsten Zeile fortgefahren, sodass sich insgesamt 32 Zeilen \`a 64 Zeichen ergeben und die letzte Stelle rechts unten die Adresse 2047 erh\"alt. Diese Adressen beziehen sich auf die 2048 Byte des CHARRAMs in der MMU, die eben jeweils genau ein Zeichen repr\"asentieren.\\
@@ -13,7 +13,7 @@ Die ASCII-Unit ist wie die VGA-Unit auf 25 MHz getaktet. Denn die VGA-Unit sende
 
 
 \Section{Interface}
-Neben dem bereits erw\"ahnten Takteingang gibt es jeweils einen Eingang f\"ur die x- und y- Koordinate des aktuellen Pixels (bzw. des Fadenstrahls) aus der VGA-Unit, welche mit jedem Takt aktualisiert werden und ein Ausgangssignal an die VGA-Einheit, welches angibt, ob das aktuelle Pixel gesetzt werden soll oder nicht.\\ Au{\ss}erdem gibt es zur Kommunikation mit dem CHARRAM in der MMU einen Ausgang, welcher die Adresse des aktuell zu berechnenden Pixels angibt sowie einen Eingang, der im darauffolgenden Takt die ASCII-Nummer des zugeh\"örigen Zeichens erh\"alt.\\
+Neben dem bereits erw\"ahnten Takteingang gibt es jeweils einen Eingang f\"ur die x- und y- Koordinate des aktuellen Pixels (bzw. des Fadenstrahls) aus der VGA-Unit, welche mit jedem Takt aktualisiert werden und ein Ausgangssignal an die VGA-Einheit, welches angibt, ob das aktuelle Pixel gesetzt werden soll oder nicht.\\ Au{\ss}erdem gibt es zur Kommunikation mit dem CHARRAM in der MMU einen Ausgang, welcher die Adresse des aktuell zu berechnenden Pixels angibt sowie einen Eingang, der im darauffolgenden Takt die ASCII-Nummer des zugeh\"origen Zeichens erh\"alt.\\
 Zur CHARMAP, die als ROM fungieret, wird der Takt durchgeleitet und ebenso die aus dem CHARRAM kommende ASCII-Nummer des aktuellen Zeichens, die hierbei als Adresse fungiert. Aus der CHARMAP kommt im darauffolgendem Takt der oben erw\"ahnte 64-Bit-Vektor der das jeweilige Zeichen repr\"asentiert.
 
 
