@@ -75,44 +75,45 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit  {Rot} = Kommunikation mit Leitwerk, \textit  {Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit  {Violett} = Verbindung mit DDR2-SDRAM, \textit  {Gelb} = Sonstige}}{15}{figure.4.1}}
 \newlabel{fig:interface}{{4.1}{15}{Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit {Rot} = Kommunikation mit Leitwerk, \textit {Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit {Violett} = Verbindung mit DDR2-SDRAM, \textit {Gelb} = Sonstige}{figure.4.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Kommunikation mit dem Leitwerk}{15}{subsection.4.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Durch die MMU geleitete Signale an andere Komponenten}{15}{subsection.4.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Aufbau des Speichers}{15}{section.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Memory-Mapped I/O}{16}{section.4.4}}
-\newlabel{sec:mmuio}{{4.4}{16}{Memory-Mapped I/O}{section.4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Verteilung der I/O-Signale}}{17}{figure.4.2}}
-\newlabel{fig:pinning}{{4.2}{17}{Verteilung der I/O-Signale}{figure.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Implementierung als State Machine}{17}{section.4.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}MMU-IDLE}{17}{subsection.4.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}MMU-WAITING}{18}{subsection.4.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}MMU-DATA-VALID}{18}{subsection.4.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}MMU-READ-NEXT}{18}{subsection.4.5.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}MMU-READ-DONE}{18}{subsection.4.5.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.6}MMU-WRITE-NEXT}{18}{subsection.4.5.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.7}MMU-WRITE-DONE}{18}{subsection.4.5.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.8}MMU-RESET}{18}{subsection.4.5.8}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Zugrifssdauer}{19}{section.4.6}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Die ASCII-Unit}{20}{chapter.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Durch die MMU geleitete Signale an andere Komponenten}{16}{subsection.4.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Aufbau des Speichers}{16}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Memory-Mapped I/O}{17}{section.4.4}}
+\newlabel{sec:mmuio}{{4.4}{17}{Memory-Mapped I/O}{section.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Verteilung der I/O-Signale}}{18}{figure.4.2}}
+\newlabel{fig:pinning}{{4.2}{18}{Verteilung der I/O-Signale}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Implementierung als State Machine}{18}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces  Zustands\"ubergangsdiagramm der MMU. \"Uberg\"ange zum Zustand \textbf  {MMU-RESET}, die von jedem anderen Zustand durch \texttt  {rst\_in = '1'} ausgel\"ost werden, sind der \"Ubersicht halber ausgelassen. }}{19}{figure.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}MMU-IDLE}{19}{subsection.4.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}MMU-WAITING}{19}{subsection.4.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}MMU-DATA-VALID}{19}{subsection.4.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}MMU-READ-NEXT}{19}{subsection.4.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}MMU-READ-DONE}{20}{subsection.4.5.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.6}MMU-WRITE-NEXT}{20}{subsection.4.5.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.7}MMU-WRITE-DONE}{20}{subsection.4.5.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.8}MMU-RESET}{20}{subsection.4.5.8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Zugrifssdauer}{20}{section.4.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Die ASCII-Unit}{21}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:asciiunit}{{5}{20}{Die ASCII-Unit}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}\"Uberblick}{20}{section.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Interface}{21}{section.5.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Funktionsweise}{21}{section.5.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Benutzerschnittstelle}{22}{chapter.6}}
+\newlabel{ch:asciiunit}{{5}{21}{Die ASCII-Unit}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}\"Uberblick}{21}{section.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Interface}{22}{section.5.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Funktionsweise}{22}{section.5.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Benutzerschnittstelle}{23}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Initialisierung}{22}{section.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Initialisierung durch BIOS und serielle Schnitstelle}{22}{subsection.6.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{22}{subsection.6.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Der Reset}{23}{section.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Graphische Oberfl\"achen}{23}{section.6.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Debugging-Modus}{23}{subsection.6.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}}{23}{figure.6.1}}
-\newlabel{fig:debuggingui}{{6.1}{23}{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}{figure.6.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}ASCII-Modus}{24}{subsection.6.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Benutzereingabe}{24}{section.6.4}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Entwicklung eines Demo-Programms}{25}{chapter.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Initialisierung}{23}{section.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Initialisierung durch BIOS und serielle Schnitstelle}{23}{subsection.6.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{23}{subsection.6.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Der Reset}{24}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Graphische Oberfl\"achen}{24}{section.6.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Debugging-Modus}{24}{subsection.6.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}}{25}{figure.6.1}}
+\newlabel{fig:debuggingui}{{6.1}{25}{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}{figure.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}ASCII-Modus}{25}{subsection.6.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Benutzereingabe}{25}{section.6.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Entwicklung eines Demo-Programms}{26}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{25}{section.7.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Umsetzung}{25}{subsection.7.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{26}{section.7.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Umsetzung}{26}{subsection.7.1.1}}

@@ -15,7 +15,7 @@ Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Ko
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.1\textwidth]{interface.png}
+		\includegraphics[width=0.5\textwidth]{interface.png}
 	\caption{Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit{Rot} = Kommunikation mit Leitwerk, \textit{Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit{Violett} = Verbindung mit DDR2-SDRAM, \textit{Gelb} = Sonstige}
 	\label{fig:interface}
 \end{figure}
@@ -99,7 +99,7 @@ Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabe
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.1\textwidth]{pinning.png}
+		\includegraphics[width=0.5\textwidth]{pinning.png}
 	\caption{Verteilung der I/O-Signale}
 	\label{fig:pinning}
 \end{figure}
@@ -111,7 +111,9 @@ Aufgrund der identisch aufgebauten Controller f\"ur die meisten Speicherbl\"ocke
 
 Das nachfolgende Zustands\"ubergangsdiagramm veranschaulicht die durch einen Lese- oder Schreibzugriff entstehende Prozedur.
 
-TODO: Einf\"ugen der State Machine.
+\Statemachine{./mmu/mmu_state.pdf}{
+Zustands\"ubergangsdiagramm der MMU. \"Uberg\"ange zum Zustand \textbf{MMU-RESET}, die von jedem anderen Zustand durch \Vhdl{rst\_in = '1'} ausgel\"ost werden, sind der \"Ubersicht halber ausgelassen.
+}
 
 \subsection{MMU-IDLE}
 
