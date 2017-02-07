@@ -1,24 +1,16 @@
 \Chapter{Projektablauf}
-
 \Section{Aufgabe}
-
 Die Aufgabe bestand darin, einen funktionsf\"ahigen Prozessor auf Basis der RISC-V Instruction Set Architecture zu entwickeln, der auf dem FPGA des gegebenen Entwicklungsboards (Spartan-3A FPGA Starter Kit) l\"auft. 
-
-
-
-(Bild vom Board (evtl. mitsamt Monitor))
-
-
-\Section{Basisziele (Pflichtangebot)}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.1\textwidth]{Board.png}
+	\caption{Das verwendete Entwicklungsboard von oben  (ANDERES BILD?)}
+	\label{fig:board}
+\end{figure}
+\Section{Basisziele \footnote{Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16}}
 Als Mindestanforderung sollte ein Prozessor mit Kompatibilit\"at zur "RV32I Base Integer Instruction Set" implementiert werden. Ausgenommen davon sind die Befehle FENCE, FENCE.I, SCALL und SBREAK, da keine Hardwareunterst\"utzung f\"ur den Multitaskingbetrieb ben\"otigt wird.
 Um die Funktionsf\"ahigkeit des Prozessors auch nach au{\ss}en sichtbar zu machen und keine Black-Box zu erstellen soll die M\"oglichkeit der Interaktion \"uber die Schnittstellen und Pins des Boards bestehen. Insbesondere soll zum Debugging eine grafische Registerausgabe \"uber den VGA-Port an einem Monitor m\"oglich sein.
-
-
-
-Siehe Anlage (Abgegebenes)
-
-
-\Section{Erweiterungsziele (Erweitwerungsangebot)}
+\Section{Erweiterungsziele}
 Aufgrund der Modularit\"at von RISC-V bietet es sich an mindestens eine Erweiterung zu implementieren, n\"amlich die "RV32M Standard Extension for Integer Multiplication and Division", die Multiplikations- und Divisionsbefehle beinhaltet. Zudem soll die rudiment\"are Ausgabe um einen Textmodus erweitert werden, sodass mittels Memory-Mapping ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Zum Demonstrieren der Funktionalit\"at soll au{\ss}erdem ein auf dem Prozessor lauff\"ahiges Spiel entwickelt werden. Um auch Daten\"ubertragung mit der Au{\ss}enwelt zu erm\"oglichen soll die serielle Schnittstelle genutzt werden.
 
 \Section{Projektablauf}
@@ -54,13 +46,13 @@ Version & Zeitraum & Ziele                                                      
 
 \Section{Verwendete Tools}
 Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwareprogrammierungssprache gute Kenntnisse hatten.\\
-Zur Entwicklung wurden haupts\"achlich Xilinx' "ISE Project Navigator" verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte "Core Generator" wurde benutzt um einzelne Module zu erstellen.\\
-
-
-(Abbildung ISE)
-
-
-
+Zur Entwicklung wurden haupts\"achlich Xilinx' "ISE Project Navigator" in Version 14.7 verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte "Core Generator" wurde benutzt um einzelne Module zu erstellen.\\
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.1\textwidth]{ISE.png}
+	\caption{Der Xilinx ISE Project Navigator}
+	\label{fig:tool}
+\end{figure}
 Mittels Xilinx‘ "impact" in Kombination mit dem "Cable-Server" wurde das Board \"uber USB gem\"a{\ss} den Programming-Files beschrieben.\\
 Zur Versionsverwaltung wurde auf ein Github Repository gesetzt.\\ 
 Um nicht jedes zu testende Programm per Hand assemblieren zu m\"ussen wurde ein Assemblierer auf Python-Basis erstellt.\\

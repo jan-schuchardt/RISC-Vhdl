@@ -1248,11 +1248,7 @@ begin
 		
 			
 			
-				data <= cells(to_integer(unsigned(addr)));
-			
-			
-			
-			
+				data <= cells(to_integer(unsigned(addr))); -- always send out bitfield according to current address
 			
 			
 		end if;
