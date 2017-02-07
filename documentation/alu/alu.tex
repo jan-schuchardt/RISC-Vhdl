@@ -20,9 +20,9 @@ Aktiviert wird die ALU vom Leitwerk \"uber \Vhdl{Cu\_work\_in}, innerhalb von dr
 
 \Section{Interne Befehle}
 Zur Auswahl der gew\"unschten Operation bietet die ALU einen 7 Bit breiten Befehls-Eingang an.
-Jeder Befehle besteht dabei aus drei Sektionen\vspace{10}:
+Jeder Befehle besteht dabei aus drei Sektionen\vspace{10pt}:
 
-\Instr{Reg1|Reg2|OpC}\vspace{5}
+\Instr{Reg1|Reg2|OpC}\vspace{5pt}
 
 Das oberste Bit \Ipart{Reg1} entscheidet dar\"uber, ob der erste Operand als Immediate vom Dateneingang \Vhdl{ Cu\_data\_in1} genommen, oder aus dem durch \Vhdl{Cu\_data\_in1} adressierten Register.
 Analog entscheidet \Ipart{Reg2} dar\"uber, ob auf \Vhdl{Cu\_Data\_in2} eine Adresse oder ein Immediate anliegt.
@@ -49,18 +49,18 @@ Anschließend werden auf Grundlage des IN SEKTION (…) BESCHRIEBENEN Befehls zw
 \Subsection{State 2 - Operatonsausf\"uhrung}
 State 2 dient der eigentlichen Befehlsausf\"uhrung. Realisiert ist er als Case-Statement \"uber den internen OpCode. Innerhalb jedes Cases wird zwischen den vier m\"oglichen Kombinationen auf Immediate- und Register-Operanden unterschieden.
 Dies ist n\"otig, da das Ergebnis eines m\"oglichen Register-Zugriffs erst in diesem Takt anlegt und deshalb nicht einfach die \Vhdl{s\_op1} und \Vhdl{s\_op2}-Signale f\"ur Immediate-Operationen \"uberschrieben werden k\"onnen.
-Die Operation wird auf den jeweiligen Operanden durchgef\"uhrt und in einem Akkumulator gespeichert.\vspace{10}
+Die Operation wird auf den jeweiligen Operanden durchgef\"uhrt und in einem Akkumulator gespeichert.\vspace{10pt}
 
 Ein Großteil der Operationen ist \"uber die \Vhdl{IEEE.NUMERIC\_STD.ALL} Operatoren realisiert und innerhalb dieses Taktes vollständig abgeschlossen.
-Da die Standard-Multiplikation von 32-Bit-Werten zu einem 64 Bit langen Ergebnis f\"uhrt, werden Multiplikationsergebnisse nicht im normalen Akkumulator-Signal \Vhdl{acc}, sondern im Zusatzsignal \Vhdl{Mult-Result} gespeichert. Der VHDL-Compiler erlaubte es nicht, unmittelbar auf das Ergebnis zuzugreifen und entweder die oberen oder unteren 32 Bit in \Vhdl{acc} zu speichern.\vspace{10}
+Da die Standard-Multiplikation von 32-Bit-Werten zu einem 64 Bit langen Ergebnis f\"uhrt, werden Multiplikationsergebnisse nicht im normalen Akkumulator-Signal \Vhdl{acc}, sondern im Zusatzsignal \Vhdl{Mult-Result} gespeichert. Der VHDL-Compiler erlaubte es nicht, unmittelbar auf das Ergebnis zuzugreifen und entweder die oberen oder unteren 32 Bit in \Vhdl{acc} zu speichern.\vspace{10pt}
 
-Da der Standard-Operator \Vhdl{sar} nicht durch die gegebenen Entwicklungsumgebung synthetisierbar ist, wird bei einem arithmetischen Rechtsshift um {n} Stellen zusätzlich das oberste Bit des ersten Operanden zwischengespeichert, um im Nachfolgenden State – wenn n\"otig – die oberen {n} Bits auf {1} zu setzen.\vspace{10}
+Da der Standard-Operator \Vhdl{sar} nicht durch die gegebenen Entwicklungsumgebung synthetisierbar ist, wird bei einem arithmetischen Rechtsshift um {n} Stellen zusätzlich das oberste Bit des ersten Operanden zwischengespeichert, um im Nachfolgenden State – wenn n\"otig – die oberen {n} Bits auf {1} zu setzen.\vspace{10pt}
 
 Im Falle einer Modulo- oder Unsigned-Division wird in State 2 der \"Ubergang in State 4 bzw. 5 eingeleitet. Ansonsten erfolgt ein direkter \"Ubergang in State 3.
 
 \Subsection{State 3 - Write-Back}
 In State 3 werden die akkumulierten Ergebnisse in das von der ALU adressierte Register geschrieben.
-Im Großteil der Operationen erfolgt dies unmittelbar. Bei Multiplikationsoperationen muss jedoch zuerst an Hand des OpCodes entschiedene werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abhängig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellenwerden, wie oben beschrieben, wenn n\"otig die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10}
+Im Großteil der Operationen erfolgt dies unmittelbar. Bei Multiplikationsoperationen muss jedoch zuerst an Hand des OpCodes entschiedene werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abhängig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellenwerden, wie oben beschrieben, wenn n\"otig die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
 
 Neben dem Speichern des Ergebnisses werden zwei zusätzliche Ausgänge belegt:
 
@@ -79,9 +79,9 @@ Die Umsetzung ist analog zu State 4, abgesehen davon, dass eine Einheit zur Durc
 \Section{Die Register}
 Insgesamt stellt die ALU 32 Register mit 32 Bit Breite bereit, wobei Register 0 konstant den Wert 0 liefert und nicht \"uberschreibbar ist. Dies ist n\"utzlich zum unveränderten Laden eines Registers.
 
-Implementiert wurden die Register als Dual-Port-Block-Ram. Dies erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was bei Register-Register-Operationen vorkommt. Zusätzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte BlockRam-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10}
+Implementiert wurden die Register als Dual-Port-Block-Ram. Dies erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was bei Register-Register-Operationen vorkommt. Zusätzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte BlockRam-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10pt}
 
-Die Umsetzung erfolgte dabei nicht \"uber eine Core-Generierte Variante, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte std_logic_vector-Array automatisch in einen BlockRam umsetzt.
+Die Umsetzung erfolgte dabei nicht \"uber eine Core-Generierte Variante, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte std\_logic\_vector-Array automatisch in einen BlockRam umsetzt.
 
 Voraussetzung daf\"ur ist, dass nicht direkt auf Register-Inhalten operiert wird, sondern sie zuerst in einem Signal zwischengespeichert und im nächsten Takt verwendet werden. Dies garantiert die 3-stufige State-Machine der ALU.
 

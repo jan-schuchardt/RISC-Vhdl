@@ -1,4 +1,4 @@
-\Chapter{Projektmanagement}
+\Chapter{Projektablauf}
 
 \Section{Aufgabe}
 
@@ -21,6 +21,37 @@ Siehe Anlage (Abgegebenes)
 \Section{Erweiterungsziele (Erweitwerungsangebot)}
 Aufgrund der Modularit\"at von RISC-V bietet es sich an mindestens eine Erweiterung zu implementieren, n\"amlich die "RV32M Standard Extension for Integer Multiplication and Division", die Multiplikations- und Divisionsbefehle beinhaltet. Zudem soll die rudiment\"are Ausgabe um einen Textmodus erweitert werden, sodass mittels Memory-Mapping ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Zum Demonstrieren der Funktionalit\"at soll au{\ss}erdem ein auf dem Prozessor lauff\"ahiges Spiel entwickelt werden. Um auch Daten\"ubertragung mit der Au{\ss}enwelt zu erm\"oglichen soll die serielle Schnittstelle genutzt werden.
 
+\Section{Projektablauf}
+\Subsection{Zeitlicher Verlauf}
+W\"ahrend den zwei Semestern Praktikumsdauer wurden insgesamt drei Versionen des Prozessors gebaut:
+
+
+\begin{tabular}{|l|l|p{180pt}|l|}
+\hline                                                                                                                                               
+Version & Zeitraum & Ziele                                                                            & davon nicht erreicht                          \\
+\hline                                                                                                                                               
+1       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
+                     \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
+                     \item Pr\"ufung der Arbeitsaufteilung
+                     \item Verst\"andnis der Tools
+                     \item Ausf\"uhrung einiger einfacher Befehle
+                     \end{itemize}                                                                    &                                               \\
+\hline
+2       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
+                     \item Implementierung der RV32I-Spezifikation
+                     \item Lese- und Schreibzugriff auf den DDR2-RAM
+                     \item Debugging-Ausgabe
+                     \end{itemize}                                                                    & Lese- und Schreibzugriff auf den DDR2-RAM     \\
+\hline
+3       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
+                     \item Implementierung der RV32M-Spezifikation
+                     \item Lese- und Schreibzugriff auf den DDR2-RAM
+                     \item ASCII-Ausgabe
+                     \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
+                     \item serielle Schnittstelle (UART)
+                     \end{itemize}                                                                    & serielle Schnittstelle (nur teilweise)        \\
+\end{tabular}
+
 \Section{Verwendete Tools}
 Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwareprogrammierungssprache gute Kenntnisse hatten.\\
 Zur Entwicklung wurden haupts\"achlich Xilinx' "ISE Project Navigator" verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte "Core Generator" wurde benutzt um einzelne Module zu erstellen.\\
@@ -34,5 +65,3 @@ Mittels Xilinx‘ "impact" in Kombination mit dem "Cable-Server" wurde das Board
 Zur Versionsverwaltung wurde auf ein Github Repository gesetzt.\\ 
 Um nicht jedes zu testende Programm per Hand assemblieren zu m\"ussen wurde ein Assemblierer auf Python-Basis erstellt.\\
 Da die Generierung eines Programming-Files mit anschlie{\ss}endem Beschreiben des FPGAs mehrere Minuten in Anspruch nimmt wurden zum Testen Simulatoren verwendet. Um den VHDL-Code zu verifizieren wurde so auf GHDL in Kombination mit GTKWave gesetzt. Auch zur Assemblerprogrammierung wurde ein Simulator mitsamt Textausgabe entwickelt um schneller debuggen zu k\"onnen.
-
-
