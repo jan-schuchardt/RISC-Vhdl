@@ -39,7 +39,7 @@ Der Prozessor wurde auf die in RV32I und RV32M definierten Rechenbefehle
 optimiert. Dadurch k\"onnen diese RISC-typischen Befehle sehr schnell
 ausgef\"uhrt werden.
 
-\Statemachine{img/integer_rechenbefehle.pdf}{
+\Statemachine{./cu/img/integer_rechenbefehle.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{ADD[I]}, \Instr{SUB},
 \Instr{SLT[I][U]}, \Instr{AND[I]}, \Instr{OR[I]}, \Instr{XOR[I]},
 \Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]}, \Instr{MUL[W]} und
@@ -54,7 +54,7 @@ Takten beendet ist, muss das Leitwerk hier auf eine Best\"atigung der ALU
 warten. Diese sieht vor, dass das Rechenwerk die Leitungen \Vhdl{alu\_data\_in}
 auf 0 setzt.
 
-\Statemachine{img/division.pdf}{
+\Statemachine{./cu/img/division.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
 ``\(\circ\)'' repr\"asentiert die jeweilige Operation (\(/\), \(\bmod\), \dots{}).
 }
@@ -64,7 +64,7 @@ Da durch die Integer Rechenbefehle keine 32-Bit Immediates direkt geladen werden
 k\"onnen, definiert die RISC-V-ISA die Befehle \Instr{LUI} und \Instr{AUPIC}, die
 diesen Mangel beheben. Auch diese Befehle wurden auf Geschwindigkeit optimiert.
 
-\Statemachine{img/lui_und_aupic.pdf}{
+\Statemachine{./cu/img/lui_und_aupic.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 \(op2\) ist entweder 0 (bei \Instr{LUI}) oder der aktuelle Program-Counter
 (bei \Instr{AUPIC}.
@@ -77,13 +77,13 @@ werden kann, wurde auf eine einfache Branch-Prediction g\"anzlich verzichtet.
 Dadurch sind die bedingten Spr\"unge unter den teuersten Befehlen des
 Prozessors.
 
-\Statemachine{img/beq_und_bgeu.pdf}{
+\Statemachine{./cu/img/beq_und_bgeu.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.
 ``\(\circ\)'' ist bei \Instr{BEQ} ``\(-\)'', bei \Instr{BGE} die SLT-Operation
 und bei \Instr{BGEU} die SLTU-Operation.
 }
 
-\Statemachine{img/bne_und_bltu.pdf}{
+\Statemachine{./cu/img/bne_und_bltu.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{BNE} und \Instr{BLT[U]}.             
 ``\(\circ\)'' ist bei \Instr{BNE} ``\(-\)'', bei \Instr{BLT} die SLT-Operation
 und bei \Instr{BLTU} die SLTU-Operation.
@@ -95,7 +95,7 @@ Sprungzeil immer vorhergesagt werden, wodurch das schreiben der Return-Adresse
 und das holen des n\"achsten Befehls parallelisiert werden kann, was zu einer
 merklichen Geschwindigkeitssteigerung f\"uhrt.
 
-\Statemachine{img/unbedingte_spruenge.pdf}{
+\Statemachine{./cu/img/unbedingte_spruenge.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}.
 }
 
@@ -107,7 +107,7 @@ allerdings herausgestellt, dass diese Entscheidung derzeit nur Nachteile mit
 sich bringt. Die Ausf\"uhrung des Befehls ist durchschnittlich und wird in der
 Praxis haupts\"achlich von der Speichergeschwindigkeit bestimmt.
 
-\Statemachine{img/load.pdf}{
+\Statemachine{./cu/img/load.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
 \Instr{LW}. \(width\) ist je nach Befehl 1,~2~oder~4.
 }
@@ -119,7 +119,7 @@ ist. Da dieser Befehl jedoch generell auf RISC-Architekturen sehr langsam
 ausgef\"uhrt wird, versuchen Compiler und Programmierer ohnehin
 schreibende Speicherzugriffe zu vermeiden.
 
-\Statemachine{img/store.pdf}{
+\Statemachine{./cu/img/store.pdf}{
 Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.
 \(width\) ist je nach Befehl 1, 2 oder 4.
 }
@@ -133,7 +133,7 @@ bereitstellt, wurde auch hierf\"ur der Taktz\"ahler verwendet.
 Ausgelesen werden k\"onnen diese Counter durch die Befehle
 \Instr{RDINSTRET[H]}\nolinebreak{}, \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
 
-\Statemachine{img/timer_und_counter.pdf}{
+\Statemachine{./cu/img/timer_und_counter.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
 \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}. \(counter\) sind die oberen bzw.
 unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.

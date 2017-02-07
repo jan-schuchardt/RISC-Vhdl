@@ -1,4 +1,5 @@
 \Chapter{Die ASCII-Unit}
+\label{ch:asciiunit}
 Die ASCII-Unit ist f\"ur die Textausgabe auf dem Monitor zust\"andig.
 \Section{\"Uberblick}
 Die ASCII-Unit gibt auf dem Monitor mittels Memory-Mapping den Inhalt des CHARRAMs gem{\"a}{\ss} ASCII-Kodierung aus. Dazu wird den Zeichen-Stellen auf dem Monitor jeweils eine Adresse zugeordnet: Die Stelle im Eck oben links erh\"alt die 0, nach rechts wird bis zum Zeilenende durchinkrementiert, dann wird jeweils in der n\"achsten Zeile fortgefahren, sodass sich insgesamt 32 Zeilen \`a 64 Zeichen ergeben und die letzte Stelle rechts unten die Adresse 2047 erh\"alt. Diese Adressen beziehen sich auf die 2048 Byte des CHARRAMs in der MMU, die eben jeweils genau ein Zeichen repr\"asentieren.\\

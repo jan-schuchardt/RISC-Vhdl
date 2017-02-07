@@ -9,12 +9,16 @@ Der adressierbare Speicher innerhalb des Prozessors ist blockweise organisiert. 
 Sie ist aufgrund der \"uberwiegend sehr \"ahnlichen Adressierungsprozeduren intern durch eine Statemachine realisiert, welche anhand einer Speicheradresse die jeweiligen Speicheranfragen an den dem RAM-Block entsprechenden Controller weiterleitet.
 
 Um eine reibungslose Kommunikation mit diesen Controllern zu gew\"ahrleisten, ist die MMU mit einer vom restlichen Prozessor unterschiedlichen Frequenz, 133 MHz, getaktet. Dies ist vor allem im Bezug auf den integrierten DDR2-SDRAM\footnote{Genauer handelt es sich um einen Micron Technology DDR2-SDRAM (MT47H32M1)}, welcher mit eben diesem Takt versorgt werden muss, um Daten halten zu k\"onnen, begr\"undet: Die Tatsache, dass die Integration dieser Komponente besonders zeitaufw\"andig verlief, rechtfertigt diese Designentscheidung. Daraus resultieren zus\"atzlich ben\"otigte Synchronisations- und Kommunkationsmechanismen mit dem \"ubergeordneten Leitwerk.
-
+\newpage
 \section{Interface}
-
 Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Komponenten: Einerseits Signale zur Kommunikation mit dem Leitwerk, andererseits durch das Toplevel-Modul nach oben geleitete Signale zur Adressierung des DDR2-SDRAMs, welche vom in der MMU verwalteten Controller generiert werden, und zuletzt nach oben geleitete Daten- und Adressleitungen, die die ASCII-Einheit konstant mit Daten versorgt.
 
-TODO: Einf\"ugen des Schaubilds zum Interface??
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.1\textwidth]{interface.png}
+	\caption{Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit{Rot} = Kommunikation mit Leitwerk, \textit{Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit{Violett} = Verbindung mit DDR2-SDRAM, \textit{Gelb} = Sonstige}
+	\label{fig:interface}
+\end{figure}
 
 \subsection{Kommunikation mit dem Leitwerk}
 
@@ -52,7 +56,7 @@ Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherb
 	\end{tabular}
 \end{center}
 
-Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit großen Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
+Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
 
 \begin{center}
 	\begin{tabular}{| l | l | l | l |}
@@ -68,16 +72,16 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 
 Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert.
 
-Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was insbesondere bei 16 Bit beziehungsweise 32 Bit Zugriffen ber\"ucksichtigt werden muss.
+Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was insbesondere bei 16-Bit beziehungsweise 32-Bit Zugriffen ber\"ucksichtigt werden muss.
 
 \section{Memory-Mapped I/O}
-
+\label{sec:mmuio}
 Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
 
 \begin{center}
 	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
 	\hline
-	Zelle & Zugriff (R/W) & Bit 7 & Bit 6 & Bit 5 & Bit 4 & Bit 3 & Bit 2 & Bit 1 & Bit 0 \\ \hline
+	Zelle & R/W & Bit 7 & Bit 6 & Bit 5 & Bit 4 & Bit 3 & Bit 2 & Bit 1 & Bit 0 \\ \hline
 	0x0 & Read-Only & BTN 0 & - & - & - & - & - & - & - \\ \hline
 	0x1 & Read-Only & SW 3 & SW 2 & SW 1 & SW 0 & BTN 4 & BTN 3 & BTN 2 & BTN 1 \\ \hline
 	0x2 & Read/Write & LED 7 & LED 6 & LED 5 & LED 4 & LED 3 & LED 2 & LED 1 & LED 0 \\ \hline
@@ -93,17 +97,13 @@ Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht
 
 Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabesignal auf der Hardware wiederfindet. Dabei entsprechen die Bezeichner denen aus der zuvor abgebildeten Tabelle.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
-%               urspruenglich:
-%		\includegraphics[scale=0.1\textwidth]{pinning.png}
-%               ganzes Bild um 0.1 skaliert:
-%		\includegraphics[scale=0.1]{pinning.png}
-%               ganzes Bild auf breite 0.1*textbreite skaliert:
 		\includegraphics[width=0.1\textwidth]{pinning.png}
 	\caption{Verteilung der I/O-Signale}
 	\label{fig:pinning}
 \end{figure}
+
 
 \section{Implementierung als State Machine}
 
@@ -115,7 +115,7 @@ TODO: Einf\"ugen der State Machine.
 
 \subsection{MMU-IDLE}
 
-Im Zustand MMU-IDLE wartet die Einheit auf das eingehen eines Befehls \"uber das cmd\_in Signal. Solange dies nicht erfolgt, wird das Synchronisationssignal ack\_out mit dem Wert 1 belegt. Anderenfalls wird die Eingabeadresse ausgewertet, die durchzuf\"uhrende Operation an den entsprechenden RAM-Controller weitergeleitet und die Einheit in den Zustand MMU-WAITING \"uberf\"uhrt.
+Im Zustand MMU-IDLE wartet die Einheit auf das eingehen eines Befehls \"uber das \Vhdl{cmd\_in} Signal. Solange dies nicht erfolgt, wird das Synchronisationssignal \Vhdl{ack\_out} mit dem Wert 1 belegt. Anderenfalls wird die Eingabeadresse ausgewertet, die durchzuf\"uhrende Operation an den entsprechenden RAM-Controller weitergeleitet und die Einheit in den Zustand MMU-WAITING \"uberf\"uhrt.
 
 \subsection{MMU-WAITING}
 
@@ -132,7 +132,7 @@ Sofern noch weitere 8-Bit Zellen gelesen werden m\"ussen, wird eine neue lesende
 
 \subsection{MMU-READ-DONE}
 
-Alle gelesenen und zwischengespeicherten Daten werden gem\"a\ss{} dem Little-Endian-Encoding zusammengesetzt und auf der Datenausgabeleitung an das Leitwerk \"ubergeben. Damit einher geht das Setzen des Acknowledgements-Signals ack\_out auf den Wert 1 sowie der Zustandswechsel nach MMU-IDLE.
+Alle gelesenen und zwischengespeicherten Daten werden gem\"a\ss{} dem Little-Endian-Encoding zusammengesetzt und auf der Datenausgabeleitung an das Leitwerk \"ubergeben. Damit einher geht das Setzen des Acknowledgements-Signals \Vhdl{ack\_out} auf den Wert 1 sowie der Zustandswechsel nach MMU-IDLE.
 
 \subsection{MMU-WRITE-NEXT}
 
@@ -140,7 +140,7 @@ Sollte der vom Leitwerk geforderte Schreibzugriff weitere schreibende 8-Bit Zugr
 
 \subsection{MMU-WRITE-DONE}
 
-Da nach einem erfolgreichen Schreibzugriff keinerlei Ausgabedaten \"ubermittelt werden m\"ussen, wird in diesem Zustand lediglich das Acknowledgement-Signals ack\_out auf den Wert 1 gesetzt sowie die Einheit zur\"uck in den Zustand MMU-IDLE \"uberf\"uhrt.
+Da nach einem erfolgreichen Schreibzugriff keinerlei Ausgabedaten \"ubermittelt werden m\"ussen, wird in diesem Zustand lediglich das Acknowledgement-Signals \Vhdl{ack\_out} auf den Wert 1 gesetzt sowie die Einheit zur\"uck in den Zustand MMU-IDLE \"uberf\"uhrt.
 
 \subsection{MMU-RESET}
 
