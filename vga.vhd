@@ -77,6 +77,8 @@ x <=  std_logic_vector(x_cnt) when offs_int = '0' else
 y <=  std_logic_vector(y_cnt) when offs_int = '0' else
         (others => '0');
 			
+			
+			--debug_on = 0 then r,g and b = pixel -> asciimode
 			--rot, wenn gerade Zeile und ungerade Spalte oder ungerade Spalte und gerade Zeile
 r <=     "1111" when debug_on='0' and pixel ='1' else "0000" when debug_on = '0' and pixel ='0' else
 			"1111" when offs_int = '0' and reg_counterx(0) /= reg_countery(0) and currentreg(to_integer(bit_counter)) = '1' else
