@@ -1,13 +1,16 @@
 \Chapter{Die ASCII-Unit}
-+\label{ch:asciiunit}
+
+\label{ch:asciiunit}
 Die ASCII-Unit ist f\"ur die Textausgabe auf dem Monitor zust\"andig.
-\begin{figure}[H]
+
+\begin{figure}
 	\centering
-		\includegraphics[width=0.1\textwidth]{Display.png}
-	\caption{Beispiel für Textausgabe; jedes darstellbare Zeichen wird abgebildet}
+	\includegraphics[width=0.9\textwidth]{asciiunitexample.png}
 	\label{fig:exampletext}
 \end{figure}
+
 \Section{\"Uberblick}
+
 Die ASCII-Unit gibt auf dem Monitor mittels Memory-Mapping den Inhalt des CHARRAMs gem{\"a}{\ss} ASCII-Kodierung aus. Dazu wird den Zeichen-Stellen auf dem Monitor jeweils eine Adresse zugeordnet: Die Stelle im Eck oben links erh\"alt die 0, nach rechts wird bis zum Zeilenende durchinkrementiert, dann wird jeweils in der n\"achsten Zeile fortgefahren, sodass sich insgesamt 32 Zeilen \`a 64 Zeichen ergeben und die letzte Stelle rechts unten die Adresse 2047 erh\"alt. Diese Adressen beziehen sich auf die 2048 Byte des CHARRAMs in der MMU, die eben jeweils genau ein Zeichen repr\"asentieren.\\
 Um jedem Zeichen neben seiner ASCII-Nummer auch das entsprechende Aussehen zuordnen zu k\"onnen wurde auf eine CHARMAP gesetzt, die zu jedem der 256 ASCII Zeichen einen 64-Bit-Vektor abgespeichert hat, der eben das 8*8 Pixelfeld eines jeden Zeichens repr\"asentiert, wobei die Zeilen eines jeden Zeichens dazu konkateniert wurden. Von diesen 8*8 Bit sind jeweils nur 6*6 f\"ur das Zeichen reserviert, die Restlichen sind immer ungesetzt, sodass auf dem Monitor ein Abstand von 2 freien Pixeln zwischen zwei nebeneinanderliegenden Zeichen bleibt. Diese Entscheidung auf Kosten der Speichervergeudung erm\"oglichte eine einfachere Implementierung, da f\"ur die Berechnungen ASCII-Unit Divisionen und Multiplikationen notwendig sind und diese mit Zweierpotenzen (hier 8, 32 bzw. 64) erheblich einfacher zu realisieren sind.\\
 Da eine Darstellung von Kleinbuchstaben auf einem 6*6 Bitfeld kaum sinnvoll zu realisieren ist, eine Unterscheidung ohnehin schwierig w\"are und der Fokus nicht auf \"Asthetik lag wurden diese durch Gro{\ss}buchstaben ersetzt.
@@ -17,9 +20,10 @@ Die ASCII-Unit ist wie die VGA-Unit auf 25 MHz getaktet. Denn die VGA-Unit sende
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.1\textwidth]{Bildschirm.pdf}
-	\caption{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgezählt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) gehört wird wie folgt berechnet: \begin{math} \lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64 \end{math}// Aus dem 64-Bitvektor berechnet man das Bit für das aktuelle Pixel so: \begin{math}(x mod 8) + (y mod 8) * 8 }\end{math}
+	\caption{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgezählt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) gehört wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$// Aus dem 64-Bitvektor berechnet man das Bit für das aktuelle Pixel so: $(x mod 8) + (y mod 8) * 8$}
 	\label{fig:pixels}
 \end{figure}
+
 
 \Section{Interface}
 Neben dem bereits erw\"ahnten Takteingang gibt es jeweils einen Eingang f\"ur die x- und y- Koordinate des aktuellen Pixels (bzw. des Fadenstrahls) aus der VGA-Unit, welche mit jedem Takt aktualisiert werden und ein Ausgangssignal an die VGA-Einheit, welches angibt, ob das aktuelle Pixel gesetzt werden soll oder nicht.\\ Au{\ss}erdem gibt es zur Kommunikation mit dem CHARRAM in der MMU einen Ausgang, welcher die Adresse des aktuell zu berechnenden Pixels angibt sowie einen Eingang, der im darauffolgenden Takt die ASCII-Nummer des zugeh\"origen Zeichens erh\"alt.\\
@@ -43,3 +47,4 @@ Die CHARMAP liefert im n\"achsten Takt wiederum den aktuellen 64-Bitvektor aus d
 	\caption{Übersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse für CHARRAM, dann Durchleiten in CHARMAP anschließend Berechnung des Pixels}
 	\label{fig:pixels}
 \end{figure}
+

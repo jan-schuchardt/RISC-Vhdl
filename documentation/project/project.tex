@@ -1,5 +1,7 @@
 \Chapter{Projektablauf}
+
 \Section{Aufgabe}
+
 Die Aufgabe bestand darin, einen funktionsf\"ahigen Prozessor auf Basis der RISC-V Instruction Set Architecture zu entwickeln, der auf dem FPGA des gegebenen Entwicklungsboards (Spartan-3A FPGA Starter Kit) l\"auft. 
 \begin{figure}[H]
 	\centering
@@ -7,10 +9,14 @@ Die Aufgabe bestand darin, einen funktionsf\"ahigen Prozessor auf Basis der RISC
 	\caption{Das verwendete Entwicklungsboard von oben  (ANDERES BILD?)}
 	\label{fig:board}
 \end{figure}
-\Section{Basisziele \footnote{Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16}}
+\Section{Basisziele(Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16)}
+
 Als Mindestanforderung sollte ein Prozessor mit Kompatibilit\"at zur "RV32I Base Integer Instruction Set" implementiert werden. Ausgenommen davon sind die Befehle FENCE, FENCE.I, SCALL und SBREAK, da keine Hardwareunterst\"utzung f\"ur den Multitaskingbetrieb ben\"otigt wird.
+
 Um die Funktionsf\"ahigkeit des Prozessors auch nach au{\ss}en sichtbar zu machen und keine Black-Box zu erstellen soll die M\"oglichkeit der Interaktion \"uber die Schnittstellen und Pins des Boards bestehen. Insbesondere soll zum Debugging eine grafische Registerausgabe \"uber den VGA-Port an einem Monitor m\"oglich sein.
+
 \Section{Erweiterungsziele}
+
 Aufgrund der Modularit\"at von RISC-V bietet es sich an mindestens eine Erweiterung zu implementieren, n\"amlich die "RV32M Standard Extension for Integer Multiplication and Division", die Multiplikations- und Divisionsbefehle beinhaltet. Zudem soll die rudiment\"are Ausgabe um einen Textmodus erweitert werden, sodass mittels Memory-Mapping ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Zum Demonstrieren der Funktionalit\"at soll au{\ss}erdem ein auf dem Prozessor lauff\"ahiges Spiel entwickelt werden. Um auch Daten\"ubertragung mit der Au{\ss}enwelt zu erm\"oglichen soll die serielle Schnittstelle genutzt werden.
 
 \Section{Projektablauf}

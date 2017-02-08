@@ -30,13 +30,13 @@ Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ung
 
 \section{Der Reset}
 
-Nachdem das FPGA mit entsprechender Methodik initialisiert wurde oder aber nachdem eine Programmausf\"uhrung terminiert hat, muss der Prozessor zur\"uckgesetzt werden. Dies geschieht durch das kurzzeitige Halten des Reset-Signals, welches auf den Hardware-Switch \textit{SW 0} (siehe Abbildung \ref{fig:interface}) gemappt ist.
+Nachdem das FPGA mit entsprechender Methodik initialisiert wurde oder aber nachdem eine Programmausf\"uhrung terminiert hat, muss der Prozessor zur\"uckgesetzt werden. Dies geschieht durch das kurzzeitige Halten des Reset-Signals, welches auf den Hardware-Switch \textit{SW 0} (siehe Abbildung \ref{fig:pinning}) gemappt ist.
 
 Zu beachten ist, dass der Reset nur im verlangsamten Ausf\"uhrungsmodus (5 Hz) verl\"asslich funktioniert. Ob ein Reset im schnellen Ausf\"uhrungsmodus (50 MHz) erfolgreich verl\"auft, ist nicht deterministisch und daher auch nicht zu empfehlen.
 
 \section{Graphische Oberfl\"achen}
 
-Im Allgemeinen existieren zwei Methoden die Programmausf\"uhrung graphisch darzustellen: Einerseits existiert der Debugging-Modus, in welchem die Werte aller verf\"ugbaren Register sowie des Programmz\"ahlers und des Instruktionsregisters ausgegeben werden. Andererseits wird gleichzeitig der Speicherbereich des CHARRAM-Blocks auf eine ASCII-Darstellung gemappt. Mittels des Hardware-Switches \textit{SW 2} (siehe Abbildung \ref{fig:interface}) wird bestimmt, welcher der beiden Modi auf dem VGA-Ausgang ausgegeben wird. Dabei bedeutet ein Halten des Switches die Darstellung \"uber ASCII und ein Loslassen die direkte Ausgabe der Register innerhalb der CPU.
+Im Allgemeinen existieren zwei Methoden die Programmausf\"uhrung graphisch darzustellen: Einerseits existiert der Debugging-Modus, in welchem die Werte aller verf\"ugbaren Register sowie des Programmz\"ahlers und des Instruktionsregisters ausgegeben werden. Andererseits wird gleichzeitig der Speicherbereich des CHARRAM-Blocks auf eine ASCII-Darstellung gemappt. Mittels des Hardware-Switches \textit{SW 2} (siehe Abbildung \ref{fig:pinning}) wird bestimmt, welcher der beiden Modi auf dem VGA-Ausgang ausgegeben wird. Dabei bedeutet ein Halten des Switches die Darstellung \"uber ASCII und ein Loslassen die direkte Ausgabe der Register innerhalb der CPU.
 
 \subsection{Debugging-Modus}
 

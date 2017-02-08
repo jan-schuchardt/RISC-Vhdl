@@ -1,65 +1,65 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Projektablauf}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Aufgabe}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Basisziele (Pflichtangebot)}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Erweiterungsziele (Erweitwerungsangebot)}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Projektablauf}{3}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Zeitlicher Verlauf}{3}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.2}Basisziele(Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16)}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Erweiterungsziele}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Projektablauf}{4}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Zeitlicher Verlauf}{4}{subsection.1.4.1}
 \contentsline {section}{\numberline {1.5}Verwendete Tools}{4}{section.1.5}
-\contentsline {chapter}{\numberline {2}Das Leitwerk}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}\"Uberblick}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Legende}{5}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Integer Rechenbefehle}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Division und Modulo}{6}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}LUI und AUPIC}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Bedingte Spr\"unge}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Unbedingte Spr\"unge}{7}{section.2.5}
-\contentsline {section}{\numberline {2.6}LOAD}{8}{section.2.6}
-\contentsline {section}{\numberline {2.7}STORE}{8}{section.2.7}
-\contentsline {section}{\numberline {2.8}Timer und Counter}{9}{section.2.8}
-\contentsline {section}{\numberline {2.9}Minimale Taktanzahl}{9}{section.2.9}
-\contentsline {chapter}{\numberline {3}Die Arithmetische Logische Einheit}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}\"Uberblick}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Das Interface}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Interne Befehle}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Befehlsausf\"uhrung}{11}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}State 1 - Selektion der Operanden}{11}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}State 2 - Operatonsausf\"uhrung}{11}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}State 3 - Write-Back}{12}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}State 4 - Division Unsigned}{12}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}State 5 - Division Signed}{12}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Die Register}{12}{section.3.5}
-\contentsline {section}{\numberline {3.6}Reset}{13}{section.3.6}
-\contentsline {chapter}{\numberline {4}Die MMU}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}\"Uberblick}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}Interface}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Kommunikation mit dem Leitwerk}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Durch die MMU geleitete Signale an andere Komponenten}{16}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Aufbau des Speichers}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Memory-Mapped I/O}{17}{section.4.4}
-\contentsline {section}{\numberline {4.5}Implementierung als State Machine}{18}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}MMU-IDLE}{19}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}MMU-WAITING}{19}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}MMU-DATA-VALID}{19}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}MMU-READ-NEXT}{19}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}MMU-READ-DONE}{20}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}MMU-WRITE-NEXT}{20}{subsection.4.5.6}
-\contentsline {subsection}{\numberline {4.5.7}MMU-WRITE-DONE}{20}{subsection.4.5.7}
-\contentsline {subsection}{\numberline {4.5.8}MMU-RESET}{20}{subsection.4.5.8}
-\contentsline {section}{\numberline {4.6}Zugrifssdauer}{20}{section.4.6}
-\contentsline {chapter}{\numberline {5}Die ASCII-Unit}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}\"Uberblick}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Interface}{22}{section.5.2}
-\contentsline {section}{\numberline {5.3}Funktionsweise}{22}{section.5.3}
-\contentsline {chapter}{\numberline {6}Benutzerschnittstelle}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}Initialisierung}{23}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Initialisierung durch BIOS und serielle Schnitstelle}{23}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{23}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Der Reset}{24}{section.6.2}
-\contentsline {section}{\numberline {6.3}Graphische Oberfl\"achen}{24}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Debugging-Modus}{24}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}ASCII-Modus}{25}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Benutzereingabe}{25}{section.6.4}
-\contentsline {chapter}{\numberline {7}Entwicklung eines Demo-Programms}{26}{chapter.7}
-\contentsline {section}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{26}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Umsetzung}{26}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {2}Das Leitwerk}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}\"Uberblick}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Legende}{6}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Integer Rechenbefehle}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Division und Modulo}{7}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}LUI und AUPIC}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Bedingte Spr\"unge}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Unbedingte Spr\"unge}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}LOAD}{9}{section.2.6}
+\contentsline {section}{\numberline {2.7}STORE}{9}{section.2.7}
+\contentsline {section}{\numberline {2.8}Timer und Counter}{10}{section.2.8}
+\contentsline {section}{\numberline {2.9}Minimale Taktanzahl}{10}{section.2.9}
+\contentsline {chapter}{\numberline {3}Die Arithmetische Logische Einheit}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}\"Uberblick}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Das Interface}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Interne Befehle}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Befehlsausf\"uhrung}{12}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}State 1 - Selektion der Operanden}{12}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}State 2 - Operatonsausf\"uhrung}{12}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}State 3 - Write-Back}{13}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}State 4 - Division Unsigned}{13}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}State 5 - Division Signed}{13}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Die Register}{13}{section.3.5}
+\contentsline {section}{\numberline {3.6}Reset}{14}{section.3.6}
+\contentsline {chapter}{\numberline {4}Die MMU}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}\"Uberblick}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Interface}{16}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Kommunikation mit dem Leitwerk}{16}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Durch die MMU geleitete Signale an andere Komponenten}{17}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Aufbau des Speichers}{17}{section.4.3}
+\contentsline {section}{\numberline {4.4}Memory-Mapped I/O}{18}{section.4.4}
+\contentsline {section}{\numberline {4.5}Implementierung als State Machine}{19}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}MMU-IDLE}{20}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}MMU-WAITING}{20}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}MMU-DATA-VALID}{20}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}MMU-READ-NEXT}{20}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}MMU-READ-DONE}{21}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}MMU-WRITE-NEXT}{21}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.7}MMU-WRITE-DONE}{21}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.8}MMU-RESET}{21}{subsection.4.5.8}
+\contentsline {section}{\numberline {4.6}Zugrifssdauer}{21}{section.4.6}
+\contentsline {chapter}{\numberline {5}Die ASCII-Unit}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}\"Uberblick}{22}{section.5.1}
+\contentsline {section}{\numberline {5.2}Interface}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Funktionsweise}{24}{section.5.3}
+\contentsline {chapter}{\numberline {6}Benutzerschnittstelle}{26}{chapter.6}
+\contentsline {section}{\numberline {6.1}Initialisierung}{26}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Initialisierung durch BIOS und serielle Schnitstelle}{26}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{26}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Der Reset}{27}{section.6.2}
+\contentsline {section}{\numberline {6.3}Graphische Oberfl\"achen}{27}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Debugging-Modus}{27}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}ASCII-Modus}{28}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Benutzereingabe}{28}{section.6.4}
+\contentsline {chapter}{\numberline {7}Entwicklung eines Demo-Programms}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{29}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Umsetzung}{29}{subsection.7.1.1}
