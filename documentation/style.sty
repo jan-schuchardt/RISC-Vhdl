@@ -3,9 +3,9 @@
 \usepackage[ngerman]{babel}
 \usepackage{etoolbox}
 
-\newcommand{\Chapter}[1]{\ifdef{\chapter}{\chapter{#1}}{\section{#1}}}
-\newcommand{\Section}[1]{\ifdef{\chapter}{\section{#1}}{\subsection{#1}}}
-\newcommand{\Subsection}[1]{\ifdef{\chapter}{\subsection{#1}}{\subsubsection{#1}}}
+\newcommand{\Chapter}[1]{\section{#1}}
+\newcommand{\Section}[1]{\subsection{#1}}
+\newcommand{\Subsection}[1]{\subsubsection{#1}}
 
 % RISC-V Instruction
 \newcommand{\Instr}[1]{\textbf{#1}}

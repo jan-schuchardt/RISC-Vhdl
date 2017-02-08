@@ -162,9 +162,13 @@ DEFINE_PORT mmu_ack_in    1  in
 ENTITY CU
 
 
+# Program-Counter
 DEFINE_SIGNAL pc        30 std_logic_vector(to_unsigned(1073741800,pc'length))
+# Instruction-Register
 DEFINE_SIGNAL ir        30
+# Error-Signal
 DEFINE_SIGNAL err       1
+# Timer und Counter (siehe ISA)
 DEFINE_SIGNAL cycle_ctr 64
 DEFINE_SIGNAL time_ctr  64
 DEFINE_SIGNAL instr_ctr 64
