@@ -23,8 +23,8 @@
 \@writefile{lot}{\select@language{ngerman}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Projektablauf}{2}{section.0.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Aufgabe}{2}{subsection.0.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Das verwendete Entwicklungsboard von oben (ANDERES BILD?)}}{2}{figure.0.1}}
-\newlabel{fig:board}{{1}{2}{Das verwendete Entwicklungsboard von oben (ANDERES BILD?)}{figure.0.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral (ANDERES BILD?)}}{2}{figure.0.1}}
+\newlabel{fig:board}{{1}{2}{Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral (ANDERES BILD?)}{figure.0.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Basisziele}{2}{subsection.0.1.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Erweiterungsziele}{2}{subsection.0.1.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Projektablauf}{3}{subsection.0.1.4}}
@@ -93,29 +93,29 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}}{17}{figure.0.15}}
 \newlabel{fig:exampletext}{{15}{17}{Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}{figure.0.15}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}\"Uberblick}{17}{subsection.0.5.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\delimiter "4262304 \frac  {x}{8} \delimiter "5263305 + \delimiter "4262304 \frac  {y}{8} \delimiter "5263305 * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) + (y\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) * 8$}}{19}{figure.0.16}}
-\newlabel{fig:pixels}{{16}{19}{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac {x}{8} \rfloor + \lfloor \frac {y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\: mod\: 8) + (y\: mod\: 8) * 8$}{figure.0.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichenfeldes zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\delimiter "4262304 \frac  {x}{8} \delimiter "5263305 + \delimiter "4262304 \frac  {y}{8} \delimiter "5263305 * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) + (y\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) * 8$}}{18}{figure.0.16}}
+\newlabel{fig:pixels}{{16}{18}{Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichenfeldes zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac {x}{8} \rfloor + \lfloor \frac {y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\: mod\: 8) + (y\: mod\: 8) * 8$}{figure.0.16}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Interface}{19}{subsection.0.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Das Interface der Ascii-Unit}}{20}{figure.0.17}}
-\newlabel{fig:interface}{{17}{20}{Das Interface der Ascii-Unit}{figure.0.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Funktionsweise}{20}{subsection.0.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces \"Ubersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse f\"ur CHARRAM, dann Durchleiten in CHARMAP, anschlie\ss {}end Berechnung des Pixels}}{20}{figure.0.18}}
-\newlabel{fig:pixels}{{18}{20}{\"Ubersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse f\"ur CHARRAM, dann Durchleiten in CHARMAP, anschlie\ss {}end Berechnung des Pixels}{figure.0.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Das Interface der ASCII-Unit}}{19}{figure.0.17}}
+\newlabel{fig:interface}{{17}{19}{Das Interface der ASCII-Unit}{figure.0.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Funktionsweise}{19}{subsection.0.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces \"Ubersicht: Beginn bei x- bzw. y-Koordinate; Verrechnung dieser zur Adresse f\"ur CHARRAM; dann Durchleiten in CHARMAP; anschlie\ss {}end Berechnung des Pixels; letztendlich Zurücksenden an VGA-Unit}}{20}{figure.0.18}}
+\newlabel{fig:pixels}{{18}{20}{\"Ubersicht: Beginn bei x- bzw. y-Koordinate; Verrechnung dieser zur Adresse f\"ur CHARRAM; dann Durchleiten in CHARMAP; anschlie\ss {}end Berechnung des Pixels; letztendlich Zurücksenden an VGA-Unit}{figure.0.18}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Benutzerschnittstelle}{20}{section.0.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Initialisierung}{21}{subsection.0.6.1}}
-\@writefile{toc}{\contentsline {subsubsection}{Initialisierung durch BIOS und serielle Schnitstelle}{21}{section*.20}}
-\@writefile{toc}{\contentsline {subsubsection}{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{21}{section*.21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Initialisierung}{20}{subsection.0.6.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Initialisierung durch BIOS und serielle Schnitstelle}{20}{section*.20}}
+\@writefile{toc}{\contentsline {subsubsection}{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{20}{section*.21}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Der Reset}{21}{subsection.0.6.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Graphische Oberfl\"achen}{21}{subsection.0.6.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Debugging-Modus}{22}{section*.22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}}{22}{figure.0.19}}
-\newlabel{fig:debuggingui}{{19}{22}{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}{figure.0.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Debugging-Modus}{21}{section*.22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}}{21}{figure.0.19}}
+\newlabel{fig:debuggingui}{{19}{21}{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}{figure.0.19}{}}
 \@writefile{toc}{\contentsline {subsubsection}{ASCII-Modus}{22}{section*.23}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Benutzereingabe}{22}{subsection.0.6.4}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Entwicklung eines Demo-Programms}{22}{section.0.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{23}{subsection.0.7.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}}{23}{figure.0.20}}
-\newlabel{fig:pinning}{{20}{23}{Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}{figure.0.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Assemblierer und Simulator}{24}{subsection.0.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Struktur und Funktion des Demo-Programms}{22}{subsection.0.7.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}}{22}{figure.0.20}}
+\newlabel{fig:pinning}{{20}{22}{Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}{figure.0.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Assemblierer und Simulator}{23}{subsection.0.7.2}}
 \@writefile{toc}{\contentsline {subsubsection}{Assemblierer}{24}{section*.24}}
 \@writefile{toc}{\contentsline {subsubsection}{Simulator}{24}{section*.25}}

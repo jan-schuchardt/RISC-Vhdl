@@ -6,7 +6,7 @@ Die Aufgabe bestand darin, einen funktionsf\"ahigen Prozessor auf Basis der RISC
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.3\textwidth]{Board.png}
-	\caption{Das verwendete Entwicklungsboard von oben  (ANDERES BILD?)}
+	\caption{Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral  (ANDERES BILD?)}
 	\label{fig:board}
 \end{figure}
 \Section{Basisziele}
@@ -60,14 +60,14 @@ Projektmanagment meistens im Plenum besprochen und getroffen.
 
 \Section{Verwendete Tools}
 Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwareprogrammierungssprache gute Kenntnisse hatten.\\
-Zur Entwicklung wurden haupts\"achlich Xilinx' \textit{ISE Project Navigator} in Version 14.7 verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte \textit{Core Generator} wurde benutzt um einzelne Module zu erstellen.\\
+Zur Entwicklung wurde haupts\"achlich Xilinx' \textit{ISE Project Navigator} in Version 14.7 verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte \textit{Core Generator} wurde dabei benutzt um einzelne Module zu erstellen.\\
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{ISE.png}
 	\caption{Der Xilinx ISE Project Navigator}
 	\label{fig:tool}
 \end{figure}
-Mittels Xilinx' \textit{impact} in Kombination mit dem \textit{Cable-Server} wurde das Board \"uber USB gem\"a{\ss} den Programming-Files beschrieben.\\
-Zur Versionsverwaltung wurde auf ein \textit{Github Repository} gesetzt.\\ 
+Mittels Xilinx' \textit{impact} in Kombination mit dem \textit{Cable-Server} wurde das Board dann \"uber USB gem\"a{\ss} den Programming-Files beschrieben.\\
+Zur Versionsverwaltung wurde dabei auf ein \textit{Github Repository} gesetzt.\\ 
 Um nicht jedes zu testende Programm per Hand assemblieren zu m\"ussen wurde ein Assemblierer auf Python-Basis erstellt.\\
-Da die Generierung eines Programming-Files mit anschlie{\ss}endem Beschreiben des FPGAs mehrere Minuten in Anspruch nimmt wurden zum schnelleren Testen Simulatoren verwendet. Um den VHDL-Code zu verifizieren wurde so \textit{GHDL} in Kombination mit \textit{GTKWave} verwendet. Auch zur Assemblerprogrammierung wurde ein Simulator mitsamt Textausgabe entwickelt um schneller debuggen zu k\"onnen.
+Da die Generierung eines Programming-Files mit anschlie{\ss}endem Beschreiben des FPGAs selbst dann noch jedes Mal mehrere Minuten in Anspruch nimmt, wurden zum schnelleren Testen Simulatoren verwendet. Um den VHDL-Code zu verifizieren wurde so \textit{GHDL} in Kombination mit \textit{GTKWave} verwendet. Auch zur Assemblerprogrammierung wurde ein Simulator mitsamt Textausgabe entwickelt um schneller debuggen zu k\"onnen.

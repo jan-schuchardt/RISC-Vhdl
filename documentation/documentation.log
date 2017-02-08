@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.4)  8 FEB 2017 21:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  8 FEB 2017 23:51
 entering extended mode
 **./documentation.tex
 (documentation.tex
 LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-(D:\weitere\Programme\MiKTeX\tex\latex\base\report.cls
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(D:\weitere\Programme\MiKTeX\tex\latex\base\size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,58 +26,58 @@ Package: documentation
 
 (style.sty
 Package: style 
- (D:\weitere\Programme\MiKTeX\tex\generic\babel\babel.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(D:\weitere\Programme\MiKTeX\tex\latex\arabi\bblopts.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\babel-german\ngerman.ldf
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
 Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\babel-german\ngermanb.ldf
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
 Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
 
-(D:\weitere\Programme\MiKTeX\tex\generic\babel\babel.def
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 125.
 )))
-(D:\weitere\Programme\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count89
 ))
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics\graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics\keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics\graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics\trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics-def\pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -85,7 +85,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\float\float.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count91
 \float@exts=\toks15
@@ -93,17 +93,17 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks16
 \@floatcapt=\box27
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\geometry\geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\ifvtex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(D:\weitere\Programme\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count92
@@ -119,8 +119,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen113
 \Gm@dimlist=\toks17
 
-(D:\weitere\Programme\MiKTeX\tex\latex\geometry\geometry.cfg))
-(D:\weitere\Programme\MiKTeX\tex\latex\enumitem\enumitem.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip43
 \enit@outerparindent=\dimen114
@@ -128,7 +128,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box28
 \enitdp@description=\count95
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\tools\array.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen115
 \extrarowheight=\dimen116
@@ -136,14 +136,14 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip44
 \backup@length=\skip45
 ))
-(D:\weitere\Programme\MiKTeX\tex\latex\hyperref\hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
 
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -181,22 +181,22 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\auxhook.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen117
 \Hy@linkcounter=\count96
 \Hy@pagecounter=\count97
 
-(D:\weitere\Programme\MiKTeX\tex\latex\hyperref\pd1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count98
 
-(D:\weitere\Programme\MiKTeX\tex\latex\00miktex\hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4486.
@@ -208,7 +208,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
 \c@Hy@tempcnt=\count99
 
-(D:\weitere\Programme\MiKTeX\tex\latex\url\url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -233,25 +233,25 @@ LaTeX Info: Redefining \pageref on input line 6416.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\hyperref\hpdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
 \Fld@listcount=\count104
 \c@bookmark@seq@number=\count105
 
-(D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip46
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\pdfpages\pdfpages.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
 Package: pdfpages 2017/01/14 v0.5h Insert pages of external PDF documents (AM)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\base\ifthen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\tools\calc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count106
 \calc@Bcount=\count107
@@ -264,13 +264,13 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count108
 \calc@Cskip=\skip49
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\eso-pic\eso-pic.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\xcolor\xcolor.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics-cfg\color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -287,7 +287,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \AM@pagewidth=\dimen123
 \AM@pageheight=\dimen124
 
-(D:\weitere\Programme\MiKTeX\tex\latex\pdfpages\pppdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
 File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box29
@@ -296,12 +296,12 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count109
 \AM@templatesizebox=\box30
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\mdwtools\footnote.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\footnote.sty"
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box31
 \fn@width=\dimen125
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\listings\listings.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count110
 \lst@gtempboxa=\box32
 \lst@token=\toks22
@@ -315,18 +315,18 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \lst@lineno=\count115
 \lst@maxwidth=\dimen129
 
-(D:\weitere\Programme\MiKTeX\tex\latex\listings\lstmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box33
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\listings\listings.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks23
 \symAMSa=\mathgroup4
@@ -334,24 +334,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\amsmath\amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(D:\weitere\Programme\MiKTeX\tex\latex\amsmath\amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(D:\weitere\Programme\MiKTeX\tex\latex\amsmath\amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen130
 ))
-(D:\weitere\Programme\MiKTeX\tex\latex\amsmath\amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen131
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\amsmath\amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count118
@@ -392,13 +392,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\cancel\cancel.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\mathcomp\mathcomp.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathcomp\mathcomp.sty"
 Package: mathcomp 2001/01/07 v0.1f (TBo)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\base\textcomp.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2017/01/24 v2.0c Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -413,7 +413,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\base\ts1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -511,12 +511,12 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
- (D:\weitere\Programme\MiKTeX\tex\latex\base\ts1cmr.fd
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 22.
 
-(D:\weitere\Programme\MiKTeX\tex\context\base\supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
 \scratchdimen=\dimen139
@@ -529,10 +529,10 @@ LaTeX Font Info:    ... okay on input line 22.
 \MPnumerator=\count134
 \makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks30
-) (D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\grfext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -578,10 +578,10 @@ G,.JBIG2,.JB2,.eps]
 
 \AtBeginShipoutBox=\box37
 Package hyperref Info: Link coloring OFF on input line 22.
-(D:\weitere\Programme\MiKTeX\tex\latex\hyperref\nameref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(D:\weitere\Programme\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count136
@@ -595,10 +595,10 @@ LaTeX Info: Redefining \nameref on input line 22.
 \openout3 = `documentation.out'.
 
 
-(D:\weitere\Programme\MiKTeX\tex\latex\oberdiek\pdflscape.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-(D:\weitere\Programme\MiKTeX\tex\latex\graphics\lscape.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -606,12 +606,12 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \c@lstlisting=\count137
 LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\amsfonts\umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\amsfonts\umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -624,8 +624,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 24.
  [1
 
-{C:/Users/Domi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (documentati
-on.toc
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (documentation.toc
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 63.
 Package babel Info: Redefining ngerman shorthand "~
@@ -638,7 +637,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ... des Demo-Programms}{23}{subsection.0.7.1}
+l.63 ... des Demo-Programms}{22}{subsection.0.7.1}
                                                    [1
 
 ])
@@ -724,6 +723,12 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 70.
 [3]) (cu/cu.tex
+Overfull \hbox (2.17357pt too wide) in paragraph at lines 70--1
+[]\OT1/cmr/m/n/10 Mittels Xi-linx' \OT1/cmr/m/it/10 im-pact \OT1/cmr/m/n/10 in 
+Kom-bi-na-ti-on mit dem \OT1/cmr/m/it/10 Cable-Server \OT1/cmr/m/n/10 wur-de da
+s Board dann []uber USB gem[]a den Programming-
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -740,7 +745,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 20.
- [4 <./project/ISE.png>]
+[4 <./project/ISE.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1117,85 +1122,80 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<./asciiunit/asciiunitexample.png, id=499, 3522.15875pt x 2178.1375pt>
+<./asciiunit/asciiunitexample.png, id=499, 2113.29526pt x 1306.8825pt>
 File: ./asciiunit/asciiunitexample.png Graphic file (type png)
 
 <use ./asciiunit/asciiunitexample.png>
 Package pdftex.def Info: ./asciiunit/asciiunitexample.png used on input line 8.
 
-(pdftex.def)             Requested size: 360.00493pt x 222.61244pt.
+(pdftex.def)             Requested size: 360.00493pt x 222.62573pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 13.
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¼ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
-
- []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
-[17 <./asciiunit/asciiunitexample.png (PNG copy)>]
-<./asciiunit/Bildschirm.png, id=505, 967.81575pt x 517.935pt>
+(babel)             in language  on input line 17.
+ [17 <./asciiunit/asciiunitexample.png>]
+<./asciiunit/Bildschirm.png, id=506, 787.743pt x 423.38174pt>
 File: ./asciiunit/Bildschirm.png Graphic file (type png)
 
 <use ./asciiunit/Bildschirm.png>
-Package pdftex.def Info: ./asciiunit/Bildschirm.png used on input line 23.
-(pdftex.def)             Requested size: 514.295pt x 275.2234pt.
+Package pdftex.def Info: ./asciiunit/Bildschirm.png used on input line 20.
+(pdftex.def)             Requested size: 514.295pt x 276.42879pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
- [18]
+(babel)             in language  on input line 28.
+ [18 <./asciiunit/Bildschirm.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 31.
 
-<./asciiunit/Asciiunit.png, id=511, 596.2275pt x 404.712pt>
+<./asciiunit/Asciiunit.png, id=515, 596.2275pt x 404.712pt>
 File: ./asciiunit/Asciiunit.png Graphic file (type png)
 
 <use ./asciiunit/Asciiunit.png>
-Package pdftex.def Info: ./asciiunit/Asciiunit.png used on input line 35.
+Package pdftex.def Info: ./asciiunit/Asciiunit.png used on input line 37.
 (pdftex.def)             Requested size: 154.29005pt x 104.7286pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
- [19 <./asciiunit/Bildschirm.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no Ÿ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
 
-<./asciiunit/ASCII.png, id=519, 464.33475pt x 108.405pt>
+<./asciiunit/ASCII.png, id=516, 458.31226pt x 107.2005pt>
 File: ./asciiunit/ASCII.png Graphic file (type png)
 
 <use ./asciiunit/ASCII.png>
-Package pdftex.def Info: ./asciiunit/ASCII.png used on input line 47.
-(pdftex.def)             Requested size: 514.295pt x 120.0729pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--50
-
- []
-
-) (ui/ui.tex
+Package pdftex.def Info: ./asciiunit/ASCII.png used on input line 50.
+(pdftex.def)             Requested size: 514.295pt x 120.31071pt.
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 54.
+ [19 <./asciiunit/Asciiunit.png>]) (ui/ui.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1204,19 +1204,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
- [20 <./asciiunit/Asciiunit.png> <./asciiunit/ASCII.png>]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no Ÿ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no Ÿ in font cmr10!
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+
+[20 <./asciiunit/ASCII.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1225,16 +1226,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 37.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 45.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 45.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 45.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 45.
- [21]
-<./ui/debugui.png, id=538, 1052.43187pt x 573.64313pt>
+
+<./ui/debugui.png, id=535, 1052.43187pt x 573.64313pt>
 File: ./ui/debugui.png Graphic file (type png)
  <use ./ui/debugui.png>
 Package pdftex.def Info: ./ui/debugui.png used on input line 48.
@@ -1245,7 +1238,15 @@ Overfull \hbox (6.8724pt too wide) in paragraph at lines 56--57
 e-riert die Wer-te der Spei-cher-zel-len in-ner-halb des CHARRAM-
  []
 
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+[21 <./ui/debugui.png>]
 Overfull \hbox (8.17812pt too wide) in paragraph at lines 58--59
 \OT1/cmr/m/n/10 schnel-len Ausf[]uhrungsmodus auf-grund der Sel-ten-heit von sc
 hrei-ben-den Spei-cher-zu-grif-fen im ent-spre-chen-den CHARRAM-
@@ -1272,15 +1273,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
- [22 <./ui/debugui.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -1295,8 +1287,7 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¤ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-
-<./demo/gameplay.png, id=550, 1278.7775pt x 699.61375pt>
+ <./demo/gameplay.png, id=546, 1278.7775pt x 699.61375pt>
 File: ./demo/gameplay.png Graphic file (type png)
 
 <use ./demo/gameplay.png>
@@ -1307,28 +1298,36 @@ Missing character: There is no ¶ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¤ in font cmr10!
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
- [23 <./demo/gameplay.png (PNG copy)>]
+(babel)             in language  on input line 18.
+ [22 <./demo/gameplay.png (PNG copy)>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
-
-(D:\weitere\Programme\MiKTeX\tex\latex\listings\lstlang1.sty
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 64.
+ [23]
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(D:\weitere\Programme\MiKTeX\tex\latex\listings\lstlang1.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
 
-(D:\weitere\Programme\MiKTeX\tex\latex\base\omscmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -1339,15 +1338,7 @@ Overfull \hbox (7.71031pt too wide) in paragraph at lines 70--71
 ][][][] 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
-[24]
+
 Overfull \hbox (7.71031pt too wide) in paragraph at lines 80--81
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
@@ -1363,7 +1354,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 33.
- [25]
+ [24]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
  (documentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
@@ -1376,34 +1367,34 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 10731 strings out of 493333
- 155245 string characters out of 3139224
- 299533 words of memory out of 3000000
+ 10730 strings out of 493333
+ 155288 string characters out of 3139195
+ 300012 words of memory out of 3000000
  13878 multiletter control sequences out of 15000+200000
  14818 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,51p,881b,1634s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,16n,51p,879b,1246s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
- <C:\Users\Domi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcr
-m1000.pk><D:/weitere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-><D:/weitere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/wei
-tere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/weitere/Pro
-gramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/weitere/Programme/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/weitere/Programme/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><D:/weitere/Programme/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><D:/weitere/Programme/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr17.pfb><D:/weitere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr6.pfb><D:/weitere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<D:/weitere/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/weiter
-e/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/weitere/Progra
-mme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/weitere/Programme/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/weitere/Programme/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on documentation.pdf (26 pages, 17821415 bytes).
+ <C:\Users\riege\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tc
+rm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on documentation.pdf (25 pages, 7930715 bytes).
 PDF statistics:
- 677 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 674 PDF objects out of 1000 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 
