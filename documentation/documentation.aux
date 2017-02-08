@@ -28,12 +28,12 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Das verwendete Entwicklungsboard von oben (ANDERES BILD?)}}{3}{figure.1.1}}
 \newlabel{fig:board}{{1.1}{3}{Das verwendete Entwicklungsboard von oben (ANDERES BILD?)}{figure.1.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Basisziele(Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16)}{3}{section.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Erweiterungsziele}{3}{section.1.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Erweiterungsziele}{4}{section.1.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Projektablauf}{4}{section.1.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Zeitlicher Verlauf}{4}{subsection.1.4.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Verwendete Tools}{4}{section.1.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Der Xilinx ISE Project Navigator}}{4}{figure.1.2}}
-\newlabel{fig:tool}{{1.2}{4}{Der Xilinx ISE Project Navigator}{figure.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Der Xilinx ISE Project Navigator}}{5}{figure.1.2}}
+\newlabel{fig:tool}{{1.2}{5}{Der Xilinx ISE Project Navigator}{figure.1.2}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Das Leitwerk}{6}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -100,16 +100,17 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:asciiunit}{{5}{22}{Die ASCII-Unit}{chapter.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}}{22}{figure.5.1}}
+\newlabel{fig:exampletext}{{5.1}{22}{Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}{figure.5.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}\"Uberblick}{22}{section.5.1}}
-\newlabel{fig:exampletext}{{5}{23}{Die ASCII-Unit}{chapter.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgezählt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) gehört wird wie folgt berechnet: $\delimiter "4262304 \frac  {x}{8} \delimiter "5263305 + \delimiter "4262304 \frac  {y}{8} \delimiter "5263305 * 64$// Aus dem 64-Bitvektor berechnet man das Bit für das aktuelle Pixel so: $(x mod 8) + (y mod 8) * 8$}}{24}{figure.5.1}}
-\newlabel{fig:pixels}{{5.1}{24}{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgezählt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) gehört wird wie folgt berechnet: $\lfloor \frac {x}{8} \rfloor + \lfloor \frac {y}{8} \rfloor * 64$// Aus dem 64-Bitvektor berechnet man das Bit für das aktuelle Pixel so: $(x mod 8) + (y mod 8) * 8$}{figure.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\delimiter "4262304 \frac  {x}{8} \delimiter "5263305 + \delimiter "4262304 \frac  {y}{8} \delimiter "5263305 * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) + (y\tmspace  +\medmuskip {.2222em} mod\tmspace  +\medmuskip {.2222em} 8) * 8$}}{24}{figure.5.2}}
+\newlabel{fig:pixels}{{5.2}{24}{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac {x}{8} \rfloor + \lfloor \frac {y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\: mod\: 8) + (y\: mod\: 8) * 8$}{figure.5.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Interface}{24}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Das Interface der Ascii-Unit}}{24}{figure.5.2}}
-\newlabel{fig:interface}{{5.2}{24}{Das Interface der Ascii-Unit}{figure.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Funktionsweise}{24}{section.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Übersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse für CHARRAM, dann Durchleiten in CHARMAP anschließend Berechnung des Pixels}}{25}{figure.5.3}}
-\newlabel{fig:pixels}{{5.3}{25}{Übersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse für CHARRAM, dann Durchleiten in CHARMAP anschließend Berechnung des Pixels}{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Das Interface der Ascii-Unit}}{25}{figure.5.3}}
+\newlabel{fig:interface}{{5.3}{25}{Das Interface der Ascii-Unit}{figure.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Funktionsweise}{25}{section.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \"Ubersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse f\"ur CHARRAM, dann Durchleiten in CHARMAP, anschlie\ss {}end Berechnung des Pixels}}{25}{figure.5.4}}
+\newlabel{fig:pixels}{{5.4}{25}{\"Ubersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse f\"ur CHARRAM, dann Durchleiten in CHARMAP, anschlie\ss {}end Berechnung des Pixels}{figure.5.4}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Benutzerschnittstelle}{26}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}

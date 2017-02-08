@@ -3,9 +3,10 @@
 \label{ch:asciiunit}
 Die ASCII-Unit ist f\"ur die Textausgabe auf dem Monitor zust\"andig.
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{asciiunitexample.png}
+	\includegraphics[width=0.7\textwidth]{asciiunitexample.png}
+	\caption{Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}
 	\label{fig:exampletext}
 \end{figure}
 
@@ -19,8 +20,8 @@ Die ASCII-Unit ist wie die VGA-Unit auf 25 MHz getaktet. Denn die VGA-Unit sende
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.1\textwidth]{Bildschirm.pdf}
-	\caption{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgezählt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) gehört wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$// Aus dem 64-Bitvektor berechnet man das Bit für das aktuelle Pixel so: $(x mod 8) + (y mod 8) * 8$}
+		\includegraphics[width=1.0\textwidth]{Bildschirm.png}	\caption{Veranschaulichung der Adressberechnung anhand des Pixelfelds: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichens zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\:  mod\:  8) + (y\:  mod\:  8) * 8$}
+ 	
 	\label{fig:pixels}
 \end{figure}
 
@@ -31,7 +32,7 @@ Zur CHARMAP, die als ROM fungieret, wird der Takt durchgeleitet und ebenso die a
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.1\textwidth]{Asciiunit.png}
+		\includegraphics[width=0.3\textwidth]{Asciiunit.png}
 	\caption{Das Interface der Ascii-Unit}
 	\label{fig:interface}
 \end{figure}
@@ -43,8 +44,8 @@ Von dort wird im n\"achsten Takt die ASCII-Nummer des aktuellen Zeichens geliefe
 Die CHARMAP liefert im n\"achsten Takt wiederum den aktuellen 64-Bitvektor aus dem mittels der aktuellen x- und y-Koordinate berechnet wird, ob das Pixel zu setzen ist oder nicht.\\
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.1\textwidth]{ASCII.png}
-	\caption{Übersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse für CHARRAM, dann Durchleiten in CHARMAP anschließend Berechnung des Pixels}
+		\includegraphics[width=1.0\textwidth]{ASCII.png}
+	\caption{\"Ubersicht: Beginn bei X- bzw. Y-Koordinate, Verrechnung dieser zur Adresse f\"ur CHARRAM, dann Durchleiten in CHARMAP, anschlie\ss{}end Berechnung des Pixels}
 	\label{fig:pixels}
 \end{figure}
 
