@@ -22,34 +22,41 @@ Aufgrund der Modularit\"at von RISC-V bietet es sich an mindestens eine Erweiter
 
 \Section{Projektablauf}
 \Subsection{Zeitlicher Verlauf}
-W\"ahrend den zwei Semestern Praktikumsdauer wurden insgesamt drei Versionen des Prozessors gebaut:
-
+W\"ahrend den zwei Semestern Praktikumsdauer wurden insgesamt drei Versionen
+des Prozessors gebaut:
 
 \begin{tabular}{|l|l|p{180pt}|l|}
-\hline                                                                                                                                               
-Version & Zeitraum & Ziele                                                                            & davon nicht erreicht                          \\
-\hline                                                                                                                                               
-1       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
-                     \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
-                     \item Pr\"ufung der Arbeitsaufteilung
-                     \item Verst\"andnis der Tools
-                     \item Ausf\"uhrung einiger einfacher Befehle
-                     \end{itemize}                                                                    &                                               \\
 \hline
-2       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
-                     \item Implementierung der RV32I-Spezifikation
-                     \item Lese- und Schreibzugriff auf den DDR2-RAM
-                     \item Debugging-Ausgabe
-                     \end{itemize}                                                                    & Lese- und Schreibzugriff auf den DDR2-RAM     \\
+Version & Zeitraum                     & Ziele                                                                            & davon nicht erreicht                          \\
 \hline
-3       & ???      & \begin{itemize}[noitemsep,topsep=0pt]
-                     \item Implementierung der RV32M-Spezifikation
-                     \item Lese- und Schreibzugriff auf den DDR2-RAM
-                     \item ASCII-Ausgabe
-                     \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
-                     \item serielle Schnittstelle (UART)
-                     \end{itemize}                                                                    & serielle Schnittstelle (nur teilweise)        \\
+1       & April 2016 - Juni 2016       & \begin{itemize}[noitemsep,topsep=0pt]
+                                         \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
+                                         \item Pr\"ufung der Arbeitsaufteilung
+                                         \item Verst\"andnis der Tools
+                                         \item Ausf\"uhrung einiger einfacher Befehle
+                                         \end{itemize}                                                                    &                                               \\
+\hline
+2       & Juni 2016 - September 2016   & \begin{itemize}[noitemsep,topsep=0pt]
+                                         \item Implementierung der RV32I-Spezifikation
+                                         \item Lese- und Schreibzugriff auf den DDR2-RAM
+                                         \item Debugging-Ausgabe
+                                         \end{itemize}                                                                    & Lese- und Schreibzugriff auf den DDR2-RAM     \\
+\hline
+3       & September 2016 - Januar 2017 & \begin{itemize}[noitemsep,topsep=0pt]
+                                         \item Implementierung der RV32M-Spezifikation
+                                         \item Lese- und Schreibzugriff auf den DDR2-RAM
+                                         \item ASCII-Ausgabe
+                                         \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
+                                         \item serielle Schnittstelle (UART)
+                                         \end{itemize}                                                                    & serielle Schnittstelle (nur teilweise)        \\
 \end{tabular}
+
+Da die Aufteilung eines Prozessors in Leitwerk, ALU und MMU Nahe lag, wurde
+f\"ur jede dieser Einheiten durchg\"angig eine Kleingruppe verantwortlich
+gemacht. Dennoch wurde entschieden, dass ein Treffen pro Woche sinnvoll zum
+Testen und Integrieren der einzelnen Einheiten ist. Im Allgemeinen wurden
+gr\"ossere Entscheidungen \"uber das Design des Prozessors oder das
+Projektmanagment meistens im Plenum besprochen und getroffen.
 
 \Section{Verwendete Tools}
 Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwareprogrammierungssprache gute Kenntnisse hatten.\\
