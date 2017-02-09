@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    11:51:36 04/20/2016 
--- Design Name: 
--- Module Name:    toplevel - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -28,7 +9,7 @@ entity toplevel is
 port (
     -- Clocks --
     clk_50mhz   : in   std_logic;
-    
+
     -- User Interface --
     sw   : in std_logic_vector(3 downto 0);
     btn  : in std_logic_vector(4 downto 0);
@@ -51,17 +32,17 @@ port (
     cntrl0_ddr2_dq      : inout std_logic_vector(15 downto 0) := (others => '0');
     cntrl0_rst_dqs_div_in   : in std_logic;
     cntrl0_rst_dqs_div_out  : out std_logic;	
-  
+
     -- VGA --
     r           : out   std_logic_vector(3 downto 0);
     g           : out   std_logic_vector(3 downto 0);
     b           : out   std_logic_vector(3 downto 0);
     hsync       : out   std_logic;
     vsync       : out   std_logic;
-	 
-	 -- UART --
-	 rx 			 : in std_logic
-  );
+
+    -- UART --
+    rx : in std_logic
+);
 end toplevel;
 
 
@@ -89,19 +70,19 @@ port ( CLKIN_IN        : in    std_logic;
 end component clk133m_dcm;
 
 component UART
-Port (
+port (
 	 clk  : in  std_logic;
 	 rst  : in  std_logic;
 	 rx   : in  std_logic;
 	 
 	 err   : out std_logic;
-	 valid: out std_logic;
-	 data : out std_logic_vector(7 downto 0));
+	 valid : out std_logic;
+	 data  : out std_logic_vector(7 downto 0));
 end component UART;
 
 
 component ASCIIUNIT
-Port ( 
+port ( 
     clk: in std_logic;
     char_in : in  STD_LOGIC_VECTOR(7 downto 0);
     x_in : in  std_logic_vector(9 downto 0);
@@ -129,15 +110,14 @@ PORT(
     v : OUT std_logic;
     reg_data_in : in std_logic_vector(31 downto 0);
     reg_adr_in  : in std_logic_vector(5 downto 0);
-	 pc_in : in std_logic_vector(31 downto 0);
-	 ir_in : in std_logic_vector(31 downto 0);
+    pc_in : in std_logic_vector(31 downto 0);
+    ir_in : in std_logic_vector(31 downto 0);
 	 
-	 debug_on	: in std_logic; --debug : regs else ascii				
-	 x_out        : out std_logic_vector(9 downto 0);
-    y_out        : out std_logic_vector(9 downto 0);
-	 pixel		: in std_logic
-	 
-	 );
+    debug_on    : in std_logic; --debug : regs else ascii				
+    x_ou        : out std_logic_vector(9 downto 0);
+    y_out       : out std_logic_vector(9 downto 0);
+    pixel       : in std_logic
+);
 END COMPONENT;
 
 COMPONENT vga_clk
@@ -280,31 +260,27 @@ signal CLKB_130M : std_logic;
 signal CLK50M : std_logic;
 
 -- Signals to connect CPU with MMU (declaration follows MMUs interface)
-signal 	 mmu_data_in:  std_logic_vector(31 downto 0);
+signal   mmu_data_in:  std_logic_vector(31 downto 0);
 signal	 mmu_data_out:  std_logic_vector(31 downto 0);
 signal	 mmu_addr_in:  std_logic_vector(31 downto 0);
 signal	 mmu_cmd_in:  std_logic_vector(2 downto 0);
 signal	 mmu_work_in :  std_logic;
 signal	 mmu_ack_out :  std_logic;
 signal	 mmu_state_out : std_logic_vector(31 downto 0);
-signal 	 mmu_ddr2_state_out : std_logic_vector(31 downto 0);
+signal   mmu_ddr2_state_out : std_logic_vector(31 downto 0);
 
 -- Asci unit signals
 signal ascii_char_in : std_logic_vector(7 downto 0);
-signal        ascii_x_in :  std_logic_vector(9 downto 0);
-signal        ascii_y_in :  std_logic_vector(9 downto 0);
-signal        ascii_pixel_out :  STD_LOGIC;
-signal        ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
+signal ascii_x_in :  std_logic_vector(9 downto 0);
+signal ascii_y_in :  std_logic_vector(9 downto 0);
+signal ascii_pixel_out :  STD_LOGIC;
+signal ascii_addr_out :  STD_LOGIC_VECTOR(10 downto 0);
 	
 --Uart connection
 signal uart_data : std_logic_vector(7 downto 0);
 signal uart_valid : std_logic;
 signal uart_err : std_logic;
-	
 
-
-signal debug2signal:  std_logic_vector(7 downto 0);
-	
 begin
 
 -----------------------------------------------------------------------------
@@ -315,10 +291,8 @@ reset <= sw(0);
 slow <= sw(1);
 debug_en <= sw(2);
 pins_in <= "000000" & uart_err & uart_valid & uart_data(7 downto 0) & sw(3 downto 0) & btn(4 downto 0) & "0000000";
---leds <= pins_out;
 reset_n <= not reset;
 
---leds <= debug2signal;
 leds(7 downto 3) <= (others => '0') when sw(3) = '1' else pins_out(7 downto 3);
 leds(2) <= err_out when sw(3) = '1' else pins_out(2);
 leds(1) <= slow when sw(3) = '1' else pins_out(1);
@@ -347,14 +321,14 @@ port map(
 clk_obuf : OBUF port map ( I => CLK_130M, O => CLKB_130M ); 
   
   
- inst_asciiunit : ASCIIUNIT PORT MAP(
-			clk => clk25,
-         char_in => ascii_char_in,
-           x_in => ascii_x_in,
-           y_in => ascii_y_in,
-           pixel_out => ascii_pixel_out,
-           addr_out => ascii_addr_out
-			  );
+inst_asciiunit : ASCIIUNIT PORT MAP(
+ clk => clk25,
+ char_in => ascii_char_in,
+ x_in => ascii_x_in,
+ y_in => ascii_y_in,
+ pixel_out => ascii_pixel_out,
+ addr_out => ascii_addr_out
+);
   
   
 -----------------------------------------------------------------------------
@@ -375,13 +349,13 @@ Inst_vga: vga PORT MAP(
     v => vsync,
     reg_data_in => debug,
     reg_adr_in => debug_adr,
-	 pc_in => pc,
-	 ir_in => ir,
+    pc_in => pc,
+    ir_in => ir,
 	 
-	 debug_on => debug_en,
+    debug_on => debug_en,
     x_out   => ascii_x_in,
     y_out   => ascii_y_in,
-	 pixel   => ascii_pixel_out
+    pixel   => ascii_pixel_out
 );
 	
 Inst_vga_clk: vga_clk PORT MAP(
@@ -406,14 +380,12 @@ CPU: entity work.cpu PORT MAP(
 	cpu_slow_in => slow,
 	cpu_err_out => err_out,		
 
-    cpu_mmu_data_in  => mmu_data_out,
-	 cpu_mmu_data_out => mmu_data_in,
-	 cpu_mmu_adr_out  => mmu_addr_in,
-	 cpu_mmu_com_out  => mmu_cmd_in,
-	 cpu_mmu_work_out => mmu_work_in,
-	 cpu_mmu_ack_in   => mmu_ack_out,
-	 
-	 debug2 => debug2signal
+	cpu_mmu_data_in  => mmu_data_out,
+	cpu_mmu_data_out => mmu_data_in,
+	cpu_mmu_adr_out  => mmu_addr_in,
+	cpu_mmu_com_out  => mmu_cmd_in,
+	cpu_mmu_work_out => mmu_work_in,
+	cpu_mmu_ack_in   => mmu_ack_out,
 ); 
   
 -----------------------------------------------------------------------------
@@ -439,7 +411,7 @@ PORT MAP (
 maddr <= '0' & cart_a_s(14 downto 0);
 rd_rise <= '0';
 we_rise <= '0';
- 	
+
 INST_MMU : MMU
 PORT MAP (
 	reset_in => Reset,
@@ -476,8 +448,7 @@ PORT MAP (
 
 
 );
---debug_adr <= "000100";
---debug <= mmu_data_out;	  
+
 INST_DDR2_RAM_CORE : DDR2_Ram_Core
 PORT MAP (
     sys_clk_in => CLKB_130M,
@@ -514,7 +485,5 @@ PORT MAP (
     cntrl0_ddr2_odt => cntrl0_ddr2_odt,		
     cntrl0_rst_dqs_div_in => cntrl0_rst_dqs_div_in,
     cntrl0_rst_dqs_div_out => cntrl0_rst_dqs_div_out);	 
-
-
 
 end behaviour;

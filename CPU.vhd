@@ -25,8 +25,6 @@ port(
 	cpu_mmu_com_out  : out std_logic_vector(2 downto 0);
 	cpu_mmu_work_out : out std_logic;
 	cpu_mmu_ack_in   : in  std_logic;
-	
-	debug2: out std_logic_vector(7 downto 0)
 );
 end entity;
 
@@ -85,12 +83,7 @@ ALU: entity work.ALU port map(
 	-- DU
 	debug_data_out => cpu_debug_data_out,
 	debug_adr_out => cpu_debug_adr_out,
-	
-	debug2 => debug2
 );
-
---cpu_debug_data_out <= x"00000000";
---cpu_debug_adr_out <= "000000";
 
 CDU: entity work.ClockDivider port map(
 	clk_in  => cpu_clk_in,
