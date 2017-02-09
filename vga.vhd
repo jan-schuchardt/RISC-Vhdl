@@ -7,10 +7,10 @@ entity vga is
     port(   clk     : in std_logic;
             rst     : in std_logic;
 
-            rgb    : in std_logic_vector(11 downto 0);
+            rgb     : in std_logic_vector(11 downto 0);
 
-            x        : out std_logic_vector(9 downto 0);
-            y        : out std_logic_vector(9 downto 0);
+            x       : out std_logic_vector(9 downto 0);
+            y       : out std_logic_vector(9 downto 0);
             offs    : out std_logic;
 
             r        : out std_logic_vector(3 downto 0);
@@ -18,32 +18,25 @@ entity vga is
             b        : out std_logic_vector(3 downto 0);
             h        : out std_logic;
             v        : out std_logic;
-				
-				reg_data_in : in std_logic_vector(31 downto 0);
-				reg_adr_in  : in std_logic_vector(5 downto 0);
-				pc_in       : in std_logic_vector(31 downto 0);
-				ir_in       :  in std_logic_vector(31 downto 0);
-				
-				debug_on	: in std_logic; --debug : regs else ascii				
-				x_out        : out std_logic_vector(9 downto 0);
-            y_out        : out std_logic_vector(9 downto 0);
-				pixel		: in std_logic
-				
-				
+
+	reg_data_in : in std_logic_vector(31 downto 0);
+	reg_adr_in  : in std_logic_vector(5 downto 0);
+	pc_in       : in std_logic_vector(31 downto 0);
+	ir_in       :  in std_logic_vector(31 downto 0);
+
+	debug_on	: in std_logic; --debug : regs else ascii				
+	x_out		: out std_logic_vector(9 downto 0);
+	y_out		: out std_logic_vector(9 downto 0);
+	pixel		: in std_logic
          );
 end vga;
 
 
- architecture behaviour of vga is
-
-
-
-
+architecture behaviour of vga is
 signal x_cnt : unsigned(9 downto 0) := (others => '0');
 signal y_cnt : unsigned(9 downto 0) := (others => '0');
 
 type regbank is array (0 to 3) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
-
 
 type  regarray is array(0 to 16) of regbank;
 signal regs : regarray;
@@ -186,17 +179,6 @@ if rising_edge(clk) then
 		reg_counterx <= (others => '0');
 		reg_countery <= (others => '0');
 		bit_counter <= (others => '0');
-		
---		regs <= (others => (others=> (others=>'0')));
-		
---		             0123456789ABCDEF0123456789ABCDEF
---		regs(1)(1) <= "10011111111111111111111110111101";
---		regs(0)(0) <= "10011111111111111111111111110101";
---		regs(3)(3) <= "10011111111111111101111111110101";
---		regs(0)(3) <= "10011111111111111111111111101101";
---		regs(9)(1) <= "00011111111111111111111101111100";
---		regs(1)(0) <= "10011111111111111111111111111101";
---		regs(16)(0) <= "00000000000000000000000000000000";
 	else
 		regs(to_integer(unsigned(reg_adr_in(5 downto 2))))(to_integer(unsigned(reg_adr_in(1 downto 0)))) <= reg_data_in;
 	
@@ -236,6 +218,5 @@ if rising_edge(clk) then
 end if;
 
 end process;
-
 
 end behaviour;
