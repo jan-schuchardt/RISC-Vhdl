@@ -53,8 +53,8 @@ auf 0 setzt.
 
 \Statemachine{./cu/img/division.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
-``\(\circ\)'' repr\"asentiert die jeweilige Operation (\(/\), \(\bmod\), \dots{}).
-}
+}{``\(\circ\)'' repr\"asentiert die jeweilige Operation (\(/\), \(\bmod\),
+\dots{}).}
 
 \Section{LUI und AUPIC}
 Da durch die Integer Rechenbefehle keine 32-Bit Immediates direkt geladen werden
@@ -63,9 +63,9 @@ diesen Mangel beheben. Auch diese Befehle wurden auf Geschwindigkeit optimiert.
 
 \Statemachine{./cu/img/lui_und_aupic.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
-\(op2\) ist entweder 0 (bei \Instr{LUI}) oder der aktuelle Program-Counter
-(bei \Instr{AUPIC}).
-}
+}{\(op2\) ist entweder 0 (bei \Instr{LUI}) oder der aktuelle Program-Counter
+(bei \Instr{AUPIC}).}
+
 
 \Section{Bedingte Spr\"unge}
 Da bei dem DDR2-Speicher des benutzten Boards nicht garantiert werden
@@ -78,13 +78,13 @@ Prozessors.
 Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.
 ``\(\circ\)'' ist bei \Instr{BEQ} ``\(-\)'', bei \Instr{BGE} die SLT-Operation
 und bei \Instr{BGEU} die SLTU-Operation.
-}
+}{}
 
 \Statemachine{./cu/img/bne_und_bltu.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{BNE} und \Instr{BLT[U]}.             
 ``\(\circ\)'' ist bei \Instr{BNE} ``\(-\)'', bei \Instr{BLT} die SLT-Operation
 und bei \Instr{BLTU} die SLTU-Operation.
-}
+}{}
 
 \Section{Unbedingte Spr\"unge}
 Anders als bei bedingten Spr\"ungen, kann bei unbedingten Spr\"ungen das
@@ -96,7 +96,7 @@ merklichen Geschwindigkeitssteigerung f\"uhrt.
 Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\)
 ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
 welches durch \Ipart{rs1} adressiert wird.
-}
+}{}
 
 \Section{LOAD}
 Der LOAD-Befehl l\"adt aus dem Speicher immer einen 32-Bit Wert, den das
@@ -109,7 +109,7 @@ Praxis haupts\"achlich von der Speichergeschwindigkeit bestimmt.
 \Statemachine{./cu/img/load.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
 \Instr{LW}. \(width\) ist je nach Befehl 1,~2~oder~4.
-}
+}{}
 
 \Section{STORE}
 Der Store-Befehl ist mit nur einer ALU und nur einer MMU nicht zu
@@ -121,7 +121,7 @@ schreibende Speicherzugriffe zu vermeiden.
 \Statemachine{./cu/img/store.pdf}{
 Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.
 \(width\) ist je nach Befehl 1, 2 oder 4.
-}
+}{}
 
 \Section{Timer und Counter}
 Wie in der RISC-V-ISA gefordert gibt es einen Counter, der die Anzahl der
@@ -136,4 +136,4 @@ Ausgelesen werden k\"onnen diese Counter durch die Befehle
 Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
 \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}. \(counter\) sind die oberen bzw.
 unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.
-}
+}{}

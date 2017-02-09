@@ -4,7 +4,6 @@
 
 \usepackage{standalone}
 \usepackage{tikz}
-%\usetikzlibrary{arrows,arrows.meta,positioning}
 \usetikzlibrary{arrows,positioning}
 
 % state in a statemachine
@@ -23,8 +22,7 @@
 % statemachine
 \newcommand{\Statemachine}[2]{%
 \vspace{15pt}
-%\begin{tikzpicture}[auto,>={Latex[width=7pt,length=7pt]}]
-\begin{tikzpicture}[auto,>=latex']
+\begin{tikzpicture}[auto,>=triangle 45]
 \tikzset{state/.style={draw,shape=rectangle,rounded corners=5pt,align=center,minimum width=2cm,minimum height=1cm},point/.style={coordinate}}
 #1
 #2
