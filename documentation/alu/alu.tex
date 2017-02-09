@@ -1,4 +1,4 @@
-\Chapter{Die Arithmetische Logische Einheit}
+\Chapter{Die arithmetisch-logische Einheit}
 Die Arithmetisch Logische Einheit ist verantwortlich f\"ur die Durchf\"uhrung aller f\"ur die Befehlsausf\"uhrung durch das Leitwerk relevanten Rechenoperationen. Zusätzlich verwaltet sie die Register des Prozessors.
 
 \Section{\"Uberblick}
@@ -40,18 +40,22 @@ Darauf folgt der f\"unf Bit umfassende interne OpCode. Zur Verf\"ugung stehen Op
 \end{itemize}
 
 \Section{Befehlsausf\"uhrung}
+
+\Statemachine{./alu/img/states.pdf}{
+Zustands\"ubergangsdiagramm für die Befehlsausführung innerhalb der ALU
+}
 Die Ausf\"uhrung von Befehlen ist \"uber eine State-Machine mit drei zentralen Zuständen, sowie zwei Zusatzzuständen f\"ur Signed- und Unsigned-Division bzw. Modulo-Operationen. In jedem der drei zentralen Zustände wird dabei jeweils nur f\"ur einen Takt verblieben.
 
 \Subsection{State 1 - Selektion der Operanden}
 Die ALU verbleibt in State 1, bis vom Leitwerk das entsprechende Work-Signal gesendet wird.
-Anschließend werden auf Grundlage des IN SEKTION (…) BESCHRIEBENEN Befehls zwei Operanden-Signale \Vhdl{s\_op1} und \Vhdl{s\_op2} mit einem Immediate vom Daten-Eingang belegt, oder es wird ein Register-Lesezugriff angestoßen, dessen Ergebnis im nächsten Takt zur Verf\"ugung steht.
+Anschlie"send werden auf Grundlage die zwei Operanden-Signale \Vhdl{s\_op1} und \Vhdl{s\_op2} mit einem Immediate vom Daten-Eingang belegt, oder es wird ein Register-Lesezugriff angesto"sen, dessen Ergebnis im nächsten Takt zur Verf\"ugung steht.
 
 \Subsection{State 2 - Operatonsausf\"uhrung}
 State 2 dient der eigentlichen Befehlsausf\"uhrung. Realisiert ist er als Case-Statement \"uber den internen OpCode. Innerhalb jedes Cases wird zwischen den vier m\"oglichen Kombinationen auf Immediate- und Register-Operanden unterschieden.
 Dies ist n\"otig, da das Ergebnis eines m\"oglichen Register-Zugriffs erst in diesem Takt anlegt und deshalb nicht einfach die \Vhdl{s\_op1} und \Vhdl{s\_op2}-Signale f\"ur Immediate-Operationen \"uberschrieben werden k\"onnen.
 Die Operation wird auf den jeweiligen Operanden durchgef\"uhrt und in einem Akkumulator gespeichert.\vspace{10pt}
 
-Ein Großteil der Operationen ist \"uber die \Vhdl{IEEE.NUMERIC\_STD.ALL} Operatoren realisiert und innerhalb dieses Taktes vollständig abgeschlossen.
+Ein Gro"steil der Operationen ist \"uber die \Vhdl{IEEE.NUMERIC\_STD.ALL} Operatoren realisiert und innerhalb dieses Taktes vollständig abgeschlossen.
 Da die Standard-Multiplikation von 32-Bit-Werten zu einem 64 Bit langen Ergebnis f\"uhrt, werden Multiplikationsergebnisse nicht im normalen Akkumulator-Signal \Vhdl{acc}, sondern im Zusatzsignal \Vhdl{Mult-Result} gespeichert. Der VHDL-Compiler erlaubte es nicht, unmittelbar auf das Ergebnis zuzugreifen und entweder die oberen oder unteren 32 Bit in \Vhdl{acc} zu speichern.\vspace{10pt}
 
 Da der Standard-Operator \Vhdl{sar} nicht durch die gegebenen Entwicklungsumgebung synthetisierbar ist, wird bei einem arithmetischen Rechtsshift um {n} Stellen zusätzlich das oberste Bit des ersten Operanden zwischengespeichert, um im Nachfolgenden State – wenn n\"otig – die oberen {n} Bits auf {1} zu setzen.\vspace{10pt}
@@ -60,7 +64,7 @@ Im Falle einer Modulo- oder Unsigned-Division wird in State 2 der \"Ubergang in 
 
 \Subsection{State 3 - Write-Back}
 In State 3 werden die akkumulierten Ergebnisse in das von der ALU adressierte Register geschrieben.
-Im Großteil der Operationen erfolgt dies unmittelbar. Bei Multiplikationsoperationen muss jedoch zuerst an Hand des OpCodes entschiedene werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abhängig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellenwerden, wie oben beschrieben, wenn n\"otig die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
+Im Gro"steil der Operationen erfolgt dies unmittelbar. Bei Multiplikationsoperationen muss jedoch zuerst an Hand des OpCodes entschiedene werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abhängig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellenwerden, wie oben beschrieben, wenn n\"otig die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
 
 Neben dem Speichern des Ergebnisses werden zwei zusätzliche Ausgänge belegt:
 
@@ -70,8 +74,8 @@ Auch die Debug-Schnittstelle erhält \"uber \Vhdl{debug\_signal} den entsprechen
 \Subsection{State 4 - Division Unsigned}
 Um die Anzahl an n\"otigen Takten zu reduzieren, wird bei der Umsetzung der Unsigned Division eine durch den Xilinx-Core-Generator erstellte Divisionseinheit genutzt, welche eine gepipelinte Variante der SRT-Division durchf\"uhrt. Obwohl der Prozessor keinen unmittelbaren Nutzen aus dem Pipelining zieht, kann durch die effiziente Implementierung die Anzahl an n\"otigen Takten reduziert werden. Zusätzlich liefert die Einheit sowohl den Rest, als auch das Divisionsergebnis, weshalb die beiden Operationen gleich behandelt werden k\"onnen.
 
-Hierzu werden bei Betreten des States die Operanden angelegt. Anschließend wird mit einem Zähler gewartet, bis das Ergebnis der Operation anliegt.
-Anschließend werden entweder der Rest oder das Ergebnis in den Akkumulator eingelesen und in State 3 \"ubergegangen.
+Hierzu werden bei Betreten des States die Operanden angelegt. Anschlie"send wird mit einem Zähler gewartet, bis das Ergebnis der Operation anliegt.
+Anschlie"send werden entweder der Rest oder das Ergebnis in den Akkumulator eingelesen und in State 3 \"ubergegangen.
 
 \Subsection{State 5 - Division Signed}
 Die Umsetzung ist analog zu State 4, abgesehen davon, dass eine Einheit zur Durchf\"uhrung von Signed-Divisionen verwendet wird.
