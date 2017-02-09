@@ -67,14 +67,14 @@ diesen Mangel beheben. Auch diese Befehle wurden auf Geschwindigkeit optimiert.
 \Statemachine{./cu/img/lui_und_aupic.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 \(op2\) ist entweder 0 (bei \Instr{LUI}) oder der aktuelle Program-Counter
-(bei \Instr{AUPIC}.
+(bei \Instr{AUPIC}).
 }
 
 \Section{Bedingte Spr\"unge}
 Da bei dem DDR2-Speicher des benutzten Boards nicht garantiert werden
 konnte, dass ein Speicherzugriff ohne Zeit- und Datenverlust abgebrochen
 werden kann, wurde auf eine einfache Branch-Prediction g\"anzlich verzichtet.
-Dadurch sind die bedingten Spr\"unge unter den teuersten Befehlen des
+Dadurch geh\"ören die bedingten Spr\"unge zu den teuersten Befehlen des
 Prozessors.
 
 \Statemachine{./cu/img/beq_und_bgeu.pdf}{
@@ -91,8 +91,8 @@ und bei \Instr{BLTU} die SLTU-Operation.
 
 \Section{Unbedingte Spr\"unge}
 Anders als bei bedingten Spr\"ungen, kann bei unbedingten Spr\"ungen das
-Sprungzeil immer vorhergesagt werden, wodurch das schreiben der Return-Adresse
-und das holen des n\"achsten Befehls parallelisiert werden kann, was zu einer
+Sprungzeil immer vorhergesagt werden, wodurch das Schreiben der Return-Adresse
+und das Holen des n\"achsten Befehls parallelisiert werden kann, was zu einer
 merklichen Geschwindigkeitssteigerung f\"uhrt.
 
 \Statemachine{./cu/img/unbedingte_spruenge.pdf}{
