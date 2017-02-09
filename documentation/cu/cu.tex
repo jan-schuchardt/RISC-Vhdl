@@ -22,7 +22,7 @@ eine Eingabe aus diesen Makros in VHDL-Code.
 \Subsection{Legende}
 Da jeder Befehl eine eigene Zustandsmaschine besitzt wird hier f\"ur jeden
 Befehl ein eigenes Zustands\-\"uber\-gangs\-dia\-gramm gezeigt. Die Pr\"afixe
-"`MMU:'' und "`ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
+``MMU:'' und ``ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
 jeweiligen Einheit ausgef\"uhrt wird und das Leitwerk lediglich eine Anweisung
 gibt.
 
@@ -94,7 +94,8 @@ merklichen Geschwindigkeitssteigerung f\"uhrt.
 
 \Statemachine{./cu/img/unbedingte_spruenge.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\)
-ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} 
+ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
+welches durch \Ipart{rs1} adressiert wird.
 }
 
 \Section{LOAD}
