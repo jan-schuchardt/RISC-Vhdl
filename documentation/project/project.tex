@@ -25,31 +25,36 @@ Aufgrund der Modularit\"at von RISC-V bietet es sich an mindestens eine Erweiter
 W\"ahrend den zwei Semestern Praktikumsdauer wurden insgesamt drei Versionen
 des Prozessors gebaut:
 
-\begin{tabular}{|l|l|p{180pt}|l|}
+\begin{figure}[H]
+\begin{tabular}{|p{50pt}|p{100pt}|p{180pt}|p{100pt}|}
 \hline
 Version & Zeitraum                     & Ziele                                                                            & davon nicht erreicht                          \\
 \hline
-1       & April 2016 - Juni 2016       & \begin{itemize}[noitemsep,topsep=0pt]
+1       & \mbox{April 2016 -} \mbox{Juni 2016}       & \begin{itemize}[noitemsep,topsep=0pt]
                                          \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
                                          \item Pr\"ufung der Arbeitsaufteilung
                                          \item Verst\"andnis der Tools
                                          \item Ausf\"uhrung einiger einfacher Befehle
                                          \end{itemize}                                                                    &                                               \\
 \hline
-2       & Juni 2016 - September 2016   & \begin{itemize}[noitemsep,topsep=0pt]
+2       & \mbox{Juni 2016 -} \mbox{September 2016}   & \begin{itemize}[noitemsep,topsep=0pt]
                                          \item Implementierung der RV32I-Spezifikation
                                          \item Lese- und Schreibzugriff auf den DDR2-RAM
                                          \item Debugging-Ausgabe
                                          \end{itemize}                                                                    & Lese- und Schreibzugriff auf den DDR2-RAM     \\
 \hline
-3       & September 2016 - Januar 2017 & \begin{itemize}[noitemsep,topsep=0pt]
+3       & \mbox{September 2016 -} \mbox{Januar 2017} & \begin{itemize}[noitemsep,topsep=0pt]
                                          \item Implementierung der RV32M-Spezifikation
                                          \item Lese- und Schreibzugriff auf den DDR2-RAM
                                          \item ASCII-Ausgabe
                                          \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
                                          \item serielle Schnittstelle (UART)
                                          \end{itemize}                                                                    & serielle Schnittstelle (nur teilweise)        \\
+\hline
 \end{tabular}
+\caption{blabla}
+\label{tab:projektablaufuebersicht}
+\end{figure}
 
 Da die Aufteilung eines Prozessors in Leitwerk, ALU und MMU Nahe lag, wurde
 f\"ur jede dieser Einheiten durchg\"angig eine Kleingruppe verantwortlich
