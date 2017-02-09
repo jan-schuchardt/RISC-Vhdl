@@ -174,11 +174,15 @@ DEFINE_SIGNAL time_ctr  64
 DEFINE_SIGNAL instr_ctr 64
 
 
+# LUI rd,imm
 NEW_COMMAND LUI 01101
+# ALU: R[rd] := (imm << 12) + 0
+# MMU: Naechsten Befehl holen
 NEW_STATE LUI {
 FETCH_NEXT_COMMAND
 ALU_LTK_LTK {ir(29 downto 10) & "000000000000"} [ZERO alu_data_out2] {ir(9 downto 5)} $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE LUI {
 NOP
 }
@@ -190,11 +194,15 @@ NOP
 }
 
 
+# AUPIC rd,imm
 NEW_COMMAND AUPIC 00101
+# ALU: R[rd] := (imm << 12) + PC
+# MMU: Naechsten Befehl holen
 NEW_STATE AUPIC {
 FETCH_NEXT_COMMAND
 ALU_LTK_LTK {ir(29 downto 10) & "000000000000"} [CURRENT_PC] {ir(9 downto 5)} $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE AUPIC {
 NOP
 }
@@ -205,10 +213,14 @@ NEW_STATE AUPIC {
 NOP
 }
 
+
+# JAL rd,imm
 NEW_COMMAND JAL 11011
+# ALU: R[0] := imm + PC
 NEW_STATE JAL {
 ALU_LTK_LTK [SIGN_EXTEND alu_data_out1 {ir(29 downto 29) & ir(17 downto 10) & ir(18 downto 18) & ir(28 downto 19) & "0"}] [CURRENT_PC] [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE JAL {
 NOP
 }
@@ -218,11 +230,15 @@ NOP
 NEW_STATE JAL {
 NOP
 }
+# ALU: R[rd] := PC + 4
+# MMU: Befehl an Addresse alu_data_in holen
+# PC := alu_data_in
 NEW_STATE JAL {
 ALU_LTK_LTK [NEXT_PC] [ZERO alu_data_out2] {ir(9 downto 5)} $::ALU_ADD
 SET_PC alu_data_in
 FETCH_COMMAND_FROM alu_data_in
 }
+# 3 Takte warten
 NEW_STATE JAL {
 NOP
 }
@@ -233,11 +249,15 @@ NEW_STATE JAL {
 NOP
 }
 
+
+# JALR rd,rs1,imm
 NEW_COMMAND JALR 11001
+# ALU: R[0] := R[rs1] + imm
 NEW_STATE JALR {
 CHECK {ir(12 downto 10)/="000"}
 ALU_REG_LTK {ir(17 downto 13)} [SIGN_EXTEND alu_data_out2 {ir(29 downto 18)}] [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE JALR {
 NOP
 }
@@ -247,11 +267,15 @@ NOP
 NEW_STATE JALR {
 NOP
 }
+# ALU: R[rd] := PC + 4
+# MMU: Befehl an Addresse alu_data_in holen
+# PC := alu_data_in
 NEW_STATE JALR {
 ALU_LTK_LTK [NEXT_PC] [ZERO alu_data_out2] {ir(9 downto 5)} $::ALU_ADD
 SPECIAL_SET_PC alu_data_in
 FETCH_COMMAND_FROM {alu_data_in(31 downto 1) & "0"}
 }
+# 3 Takte warten
 NEW_STATE JALR {
 NOP
 }
@@ -261,6 +285,7 @@ NOP
 NEW_STATE JALR {
 NOP
 }
+
 
 NEW_COMMAND BRANCH 11000
 NEW_STATE BRANCH {
@@ -324,6 +349,7 @@ NEW_STATE BRANCH {
 NOP
 }
 
+
 NEW_COMMAND OP-IMM 00100
 NEW_STATE OP-IMM {
 FETCH_NEXT_COMMAND
@@ -357,6 +383,7 @@ NOP
 NEW_STATE OP-IMM {
 NOP
 }
+
 
 NEW_COMMAND OP 01100
 NEW_STATE OP {
@@ -426,6 +453,7 @@ IF_STATE {ir(29 downto 23)/="0000001" or ir(12 downto 12)/="1" or alu_data_in=st
 NEW_STATE OP {
 NOP
 }
+
 
 NEW_COMMAND STORE 01000
 NEW_STATE STORE {
@@ -513,6 +541,7 @@ NEW_STATE LOAD {
 NOP
 }
 
+
 NEW_COMMAND SYSTEM 11100
 NEW_STATE SYSTEM {
 FETCH_NEXT_COMMAND
@@ -535,6 +564,7 @@ NOP
 NEW_STATE SYSTEM {
 NOP
 }
+
 
 NEW_COMMAND MISC-MEM 00011
 NEW_STATE MISC-MEM {
