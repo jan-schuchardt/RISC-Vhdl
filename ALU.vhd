@@ -27,9 +27,8 @@ entity ALU is
 	--out
 	cu_data_out: out std_logic_vector(31 downto 0);
 	debug_data_out:out std_logic_vector(31 downto 0);
-	debug_adr_out: out std_logic_vector(5 downto 0);
+	debug_adr_out: out std_logic_vector(5 downto 0)
 	
-	debug2: out std_logic_vector(7 downto 0)
 	);
 	
 end ALU;
@@ -60,6 +59,7 @@ architecture Behavioral of ALU is
 	);
 	end component divSigned;
 	
+	--Opcode related signals
 	signal s_op1, s_op2: STD_LOGIC_VECTOR(31 downto 0);
 	signal s_opc: STD_LOGIC_VECTOR(6 downto 0);
 	signal s_op3: STD_LOGIC_VECTOR(4 downto 0);
@@ -68,17 +68,11 @@ architecture Behavioral of ALU is
 	signal debug_signal: STD_LOGIC_VECTOR(31 downto 0);
 	signal debug_adr_signal: STD_LOGIC_VECTOR(5 downto 0);
 	
-	signal ram_wea : std_logic_vector(0 downto 0);
-	signal ram_web : std_logic_vector(0 downto 0);
-	signal ram_addra : std_logic_vector(4 downto 0);
-	signal ram_addrb : std_logic_vector(4 downto 0);
-	signal ram_dina: std_logic_vector(31 downto 0);
-	signal ram_dinb: std_logic_vector(31 downto 0);
+	--Register related signals
 	signal ram_douta: std_logic_vector(31 downto 0);
 	signal ram_doutb: std_logic_vector(31 downto 0);
 		 
-		 
-		 
+	--Division related signals
 	signal alu_dividend: std_logic_vector(31 downto 0);
 	signal alu_divisor: std_logic_vector(31 downto 0);
 	signal alu_remainderU: std_logic_vector(31 downto 0);
@@ -89,22 +83,19 @@ architecture Behavioral of ALU is
 	signal alu_rfd: std_logic;
 	signal division_flank_counter: unsigned(3 downto 0);
 	signal division_sclr:std_logic;
-	signal zero : std_logic_vector(31 downto 0);
 		 
 	signal mult_result: std_logic_vector(63 downto 0);
 	signal shift_ar: std_logic;
 	signal ones : unsigned(31 downto 0);
 
-
-
+	--32x32 Bit array to store our registers
 	type regs is array (1 to 31) of std_logic_vector(31 downto 0); -- 31 free Registers, Register 0 is always 0
 		signal reg_data1: regs;
 		signal reg_data2: regs;
-		
-	
 	
 	begin
 	
+	--Component mapping
 	dividerUnsigned: divUnsigned port map(
 	 rfd => alu_rfdU,
     clk => clk_in,
@@ -125,14 +116,9 @@ architecture Behavioral of ALU is
 	 sclr => '0'
 	);
 	
-	zero <= x"00000000";
 	debug_data_out <= debug_signal;
 	debug_adr_out <= debug_adr_signal;
-		
-	debug2(0) <= alu_rfd;
-	debug2(3 downto 1) <= std_logic_vector(division_flank_counter(2 downto 0));
-	debug2(7 downto 4) <= state;	
-	
+
 	ones <= x"FFFFFFFF";
 	
 process (clk_in, rst_in) 
@@ -153,7 +139,6 @@ begin
 			division_sclr <= '0';
 			s_op3 <= cu_adr_in;
 			s_opc <= cu_com_in;
-			ram_wea <= "0";
 			shift_ar <= '0';
 			
 			
@@ -236,7 +221,6 @@ begin
 			
 			--OR
 			when "00011" =>
-			
 			
 				if s_opc(6)='0' and s_opc(5)='0' then
 					acc <= std_logic_vector(unsigned(s_op1) or unsigned(s_op2));
@@ -325,7 +309,6 @@ begin
 				
 			--Shift arithmetic right
 			when "00111" =>
-			
 			
 				if s_opc(6)='0' and s_opc(5)='0' then
 						if s_op2(4 downto 0)="00000" then
@@ -474,12 +457,11 @@ begin
 				cu_data_out <= x"00000400";	
 				
 			when others =>
-			
-			
 				
 			end case;
 			
 			
+			--Move to writeback state, unless a division has to be performed
 			if s_opc(4 downto 0) /= "01110"
 				and s_opc(4 downto 0) /= "10000"
 				and s_opc(4 downto 0) /= "01111"
@@ -493,10 +475,11 @@ begin
 		--state3: write back
 		if(state = "0010") then
 		
-					
 			if s_op3 /= std_logic_vector(to_unsigned(0,s_op3'length)) then
+			
+				--Special Writebacks
 				
-				
+				--Arithmetic shift
 				if s_opc(4 downto 0) ="00111" and shift_ar='1' then
 					if s_opc(4) = '0' then
 						reg_data1(to_integer(unsigned(s_op3))) <= acc or std_logic_vector(shift_left(ones, 32-to_integer(unsigned(s_op2(4 downto 0)))));
@@ -530,6 +513,8 @@ begin
 				debug_adr_signal <= "0" & s_op3;
 				
 			end if;
+			
+			--Output of result to CU
 			
 			--Multiply lower
 			if s_opc="01010" then						
@@ -598,8 +583,6 @@ begin
 	end if;
 end process;
 
-	
-	--test <= '1' when reg_data(1) = "00101010101010101010000000000000" else '0';
 end Behavioral;
 
 
