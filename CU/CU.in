@@ -123,7 +123,7 @@
 #     Es sind nur die Werte 00, 01 und 11 erlaubt.
 #     siehe rw
 
-source [file dirname [info script]]/leitwerk.tcl
+source [file dirname [info script]]/CU.tcl
 
 IMPORTS
 
@@ -287,13 +287,26 @@ NOP
 }
 
 
+# BEQ rs1,rs2,imm
+# BNE rs1,rs2,imm
+# BLT rs1,rs2,imm
+# BGE rs1,rs2,imm
+# BLTU rs1,rs2,imm
+# BGEU rs1,rs2,imm
 NEW_COMMAND BRANCH 11000
+# BEQ,BNE:
+# ALU: R[0] := rs1 - rs2
+# BLT,BGE:
+# ALU: R[0] := SLT(rs1,rs2)
+# BLTU,BGEU:
+# ALU: R[0] := SLTU(rs1,rs2)
 NEW_STATE BRANCH {
 CASE {ir(12 downto 11)}\
 00 {ALU_REG_REG {ir(17 downto 13)} {ir(22 downto 18)} [ZERO alu_adr_out] $::ALU_SUB}\
 10 {ALU_REG_REG {ir(17 downto 13)} {ir(22 downto 18)} [ZERO alu_adr_out] $::ALU_SLT}\
 11 {ALU_REG_REG {ir(17 downto 13)} {ir(22 downto 18)} [ZERO alu_adr_out] $::ALU_SLTU}
 }
+# 3 Takte warten
 NEW_STATE BRANCH {
 NOP
 }
@@ -303,6 +316,16 @@ NOP
 NEW_STATE BRANCH {
 NOP
 }
+# BEQ,BGE,BGEU:
+# Wenn alu_data_in=0 dann
+# ALU: R[0] := PC + imm
+# sonst
+# ALU: R[0] := (PC + 4) + 0
+# BLT,BLT,BLTU:
+# Wenn alu_data_in=0 dann
+# ALU: R[0] := (PC + 4) + 0
+# sonst
+# ALU: R[0] := PC + imm
 NEW_STATE BRANCH {
 CASE {ir(12 downto 12)}\
  0 {CASE {ir(10 downto 10)}\
@@ -326,6 +349,7 @@ CASE {ir(12 downto 12)}\
        }\
    }
 }
+# 3 Takte warten
 NEW_STATE BRANCH {
 NOP
 }
@@ -335,10 +359,13 @@ NOP
 NEW_STATE BRANCH {
 NOP
 }
+# MMU: Befehl an Adresse alu_data_in holen
+# PC := alu_data_in
 NEW_STATE BRANCH {
 FETCH_COMMAND_FROM alu_data_in
 SET_PC alu_data_in
 }
+# warten
 NEW_STATE BRANCH {
 NOP
 }
@@ -350,7 +377,18 @@ NOP
 }
 
 
+# ADDI rd,rs1,imm
+# SLTI rd,rs1,imm
+# SLTIU rd,rs1,imm
+# XORI rd,rs1,imm
+# ORI rd,rs1,imm
+# ANDI rd,rs1,imm
+# SLLI rd,rs1,shamt
+# SRLI rd,rs1,shamt
+# SRAI rd,rs1,shamt
 NEW_COMMAND OP-IMM 00100
+# ALU: R[rd] := rs1 op imm
+# op ist die jeweilige Operation
 NEW_STATE OP-IMM {
 FETCH_NEXT_COMMAND
 CASE {ir(12 downto 10)}\
@@ -374,6 +412,7 @@ CASE {ir(12 downto 10)}\
        }\
      }
 }
+# 3 Takte warten
 NEW_STATE OP-IMM {
 NOP
 }
@@ -385,7 +424,27 @@ NOP
 }
 
 
+# ADD rd,rs1,rs2
+# SUB rd,rs1,rs2
+# SLL rd,rs1,rs2
+# SLT rd,rs1,rs2
+# SLTU rd,rs1,rs2
+# XOR rd,rs1,rs2
+# SRL rd,rs1,rs2
+# SRA rd,rs1,rs2
+# OR rd,rs1,rs2
+# AND rd,rs1,rs2
+# MUL rd,rs1,rs2
+# MULH rd,rs1,rs2
+# MULHSU rd,rs1,rs2
+# MULHU rd,rs1,rs2
+# DIV rd,rs1,rs2
+# DIVU rd,rs1,rs2
+# REM rd,rs1,rs2
+# REMU rd,rs1,rs2
 NEW_COMMAND OP 01100
+# ALU: R[rd] := rs1 op rs2
+# op ist die jeweilige Operation
 NEW_STATE OP {
 FETCH_NEXT_COMMAND
 IF {ir(29 downto 23)="0000001"}\
@@ -444,10 +503,12 @@ IF {ir(29 downto 23)="0000001"}\
       }\
 }
 }
+# 3 Takte warten
 NEW_STATE OP {
 NOP
 }
 NEW_STATE OP {
+# bei einer Division oder Modulo Rechnung muss zusaetzlich auf das ACK der ALU gewartet werden
 IF_STATE {ir(29 downto 23)/="0000001" or ir(12 downto 12)/="1" or alu_data_in=std_logic_vector(to_unsigned(0,alu_data_in'length))}
 }
 NEW_STATE OP {
@@ -455,10 +516,15 @@ NOP
 }
 
 
+# SB rs1,rs2,imm
+# SH rs1,rs2,imm
+# SW rs1,rs2,imm
 NEW_COMMAND STORE 01000
+# ALU: R[0] := imm + rs1
 NEW_STATE STORE {
 ALU_LTK_REG [SIGN_EXTEND alu_data_out1 {ir(29 downto 23) & ir(9 downto 5)}] {ir(17 downto 13)} [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE STORE {
 NOP
 }
@@ -468,10 +534,13 @@ NOP
 NEW_STATE STORE {
 NOP
 }
+# Daten von alu_data_in auf mmu_adr_out zwischenspeichern
+# ALU: R[0] := rs2 + 0
 NEW_STATE STORE {
 SPECIAL {mmu_adr_out  <= alu_data_in;}
 ALU_LTK_REG [ZERO alu_data_out1] {ir(22 downto 18)} [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE STORE {
 NOP
 }
@@ -481,6 +550,7 @@ NOP
 NEW_STATE STORE {
 NOP
 }
+# MMU: alu_data_in passend zugeschnitten an zwischengespeicherte Adresse speichern
 NEW_STATE STORE {
 CASE {ir(12 downto 10)}\
  000 {SPECIAL {mmu_data_out <= std_logic_vector(resize(unsigned(alu_data_in(7 downto 0)),mmu_data_out'length)); mmu_com_out(2 downto 0) <= "100";}}\
@@ -491,9 +561,11 @@ SPECIAL {mmu_work_out <= '1';}
 NEW_STATE STORE {
 SPECIAL {mmu_work_out <= '0';}
 }
+# MMU: Naechsten Befehl holen
 NEW_STATE STORE {
 WAIT_FOR_MMU {FETCH_NEXT_COMMAND}
 }
+# warten
 NEW_STATE STORE {
 NOP
 }
@@ -501,10 +573,18 @@ NEW_STATE STORE {
 NOP
 }
 
+
+# LB rd,rs1,imm
+# LH rd,rs1,imm
+# LW rd,rs1,imm
+# LBU rd,rs1,imm
+# LHU rd,rs1,imm
 NEW_COMMAND LOAD 00000
+# ALU: R[0] := rs1 + imm
 NEW_STATE LOAD {
 ALU_LTK_REG [SIGN_EXTEND alu_data_out1 {ir(29 downto 18)}] {ir(17 downto 13)} [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE LOAD {
 NOP
 }
@@ -514,12 +594,15 @@ NOP
 NEW_STATE LOAD {
 NOP
 }
+# MMU: 32 Bit von Adresse alu_data_in lesen
 NEW_STATE LOAD {
 MMU_READ alu_data_in
 }
 NEW_STATE LOAD {
 NOP
 }
+# ALU: R[rd] := passend zugeschnittene Daten 
+# MMU: Naechsten Befehl holen
 NEW_STATE LOAD {
 WAIT_FOR_MMU {
 CASE {ir(12 downto 10)}\
@@ -531,6 +614,7 @@ CASE {ir(12 downto 10)}\
 FETCH_NEXT_COMMAND
 }
 }
+# 3 Takte warten
 NEW_STATE LOAD {
 NOP
 }
@@ -541,8 +625,19 @@ NEW_STATE LOAD {
 NOP
 }
 
-
+# RDCYCLE rd
+# RDCYCLEH rd
+# RDTIME rd
+# RDTIMEH rd
+# RDINSTRET rd
+# RDINSTRETH rd
+# SCALL
+# SBREAK
 NEW_COMMAND SYSTEM 11100
+# RDCYCLE,RDCYCLEH,RDTIME,RDTIMEH,RDINSTRET,RDINSTRETH:
+# ALU: R[rd] := counter + 0
+# SCALL,SBREAK:
+# ALU: R[0] = 0 + 0
 NEW_STATE SYSTEM {
 FETCH_NEXT_COMMAND
 CASE {ir(29 downto 10)}\
@@ -555,6 +650,7 @@ CASE {ir(29 downto 10)}\
  00000000000000000000 {ALU_LTK_LTK [ZERO alu_data_out1] [ZERO alu_data_out2] [ZERO alu_adr_out] $::ALU_ADD}\
  00000000000000000001 {ALU_LTK_LTK [ZERO alu_data_out1] [ZERO alu_data_out2] [ZERO alu_adr_out] $::ALU_ADD}
 }
+# 3 Takte warten
 NEW_STATE SYSTEM {
 NOP
 }
@@ -566,12 +662,16 @@ NOP
 }
 
 
+# FENCE
+# FENCE.I
 NEW_COMMAND MISC-MEM 00011
+# ALU: R[0] := 0 + 0
 NEW_STATE MISC-MEM {
  FETCH_NEXT_COMMAND
  CHECK {(ir(29 downto 26) /= "0000" or ir(17 downto 5) /= "0000000000000") and ir(29 downto 5) /= "0000000000000000000100000"}
  ALU_LTK_LTK [ZERO alu_data_out1] [ZERO alu_data_out2] [ZERO alu_adr_out] $::ALU_ADD
 }
+# 3 Takte warten
 NEW_STATE MISC-MEM {
 NOP
 }

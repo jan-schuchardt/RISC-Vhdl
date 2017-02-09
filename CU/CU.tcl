@@ -1,3 +1,4 @@
+# einige Konstanten
 set __MMU_8B  "00"
 set __MMU_16B "01"
 set __MMU_32B "11"
@@ -24,6 +25,7 @@ set ALU_DIV_UNSIGN            "01111"
 set ALU_REM_SIGN              "10000"
 set ALU_REM_UNSIGN            "10001"
 
+# einige Variablen
 array set signals {}
 array set inits {}
 array set ports {}
@@ -37,6 +39,7 @@ set set_pc 0
 set wait_for_mmu ""
 set if_state ""
 
+# IEEE-imports
 proc IMPORTS {} {
  puts "library ieee;"
  puts "use ieee.std_logic_1164.all;"
@@ -44,6 +47,7 @@ proc IMPORTS {} {
  puts ""
 }
 
+# definiert ein Signal
 proc DEFINE_SIGNAL {name length {init ""}} {
  if [__IS_DEFINED $name] {
   puts "'$name' is defined!"
@@ -57,6 +61,7 @@ proc DEFINE_SIGNAL {name length {init ""}} {
  }
 }
 
+# definiert einen Port
 proc DEFINE_PORT {name length direction} {
  if [expr ! [string match "in" $direction] && ! [string match "out" $direction]] {
   puts "'direction' should be \"in\" or \"out\"!"
@@ -69,11 +74,13 @@ proc DEFINE_PORT {name length direction} {
  set ::ports($name) "$length $direction"
 }
 
+# erzeugt die Entity
 proc ENTITY {name} {
  set ::entity_name $name
  puts "entity $name is"
  puts "port("
  set i 1
+ # alle Ports durchgehen und passend deklarieren
  foreach {name length_direction} [array get ::ports] {
   if [expr $i == [array size ::ports]] {
    if [expr [lindex $length_direction 0] == 1] {
@@ -95,18 +102,23 @@ proc ENTITY {name} {
  puts ""
 }
 
+# erzeugt die Architecture
 proc ARCHITECTURE {name} {
  set digits 1
+ # max. Anzahl der Zustaende pro Befehl bestimmen
  foreach {command states} [array get ::commands] {
   if [expr $digits < [llength $states]] {
    set digits [llength $states]
   }
  }
+ # aus max. Anzahl der Zustaende pro Befehl die Laenge des Zustandssignals berechnen
  set max_state $digits
  set digits [expr $digits + 3]
  set digits [expr int([expr ceil([expr [expr log($digits)] / [expr log(2)]])])]
+ # Signal, das den Zustand enthaelt deklarieren
  DEFINE_SIGNAL state $digits "\"[__BINARY $max_state $digits]\""
  puts "architecture $name of $::entity_name is"
+ # Signale deklarieren
  foreach {name length} [array get ::signals] {
   puts " signal $name: std_logic_vector([expr [lindex $length 0] - 1] downto 0);"
  }
@@ -114,6 +126,7 @@ proc ARCHITECTURE {name} {
  puts "process(rst_in,clk_in)"
  puts "begin"
  puts " if rst_in='1' then"
+ # im Reset-Zustand alle Signale und out-Ports auf Initialwerte setzen
  foreach {name length} [array get ::signals] {
   puts "  $name <= [lindex [array get ::inits $name] 1];"
  }
@@ -131,6 +144,9 @@ proc ARCHITECTURE {name} {
  puts " elsif err=\"1\" then"
  puts ""
  puts " elsif rising_edge(clk_in) then"
+ # bootup-Sequenz: wird nach jedem Reset ausgefuehrt
+ # wartet einige Takte, damit sich die ALU initialisieren kann
+ # und wartet auf ACK der MMU
  puts "  if state >= \"[__BINARY $max_state $digits]\" then"
  puts "   case state is"
  puts "   when \"[__BINARY $max_state $digits]\" =>"
@@ -161,15 +177,19 @@ proc ARCHITECTURE {name} {
  puts "   end case;"
  puts "  else"
  puts "   case ir(4 downto 0) is"
+ # Befehle durchgehen und zu jedem den Zustandsautomaten generieren
  foreach {command states} [array get ::commands] {
   puts "-- $command"
   puts "   when \"[lindex [array get ::opcodes $command] 1]\" =>"
   puts "    case state is"
   set i 0
+  # Zustaende durchgehen
   foreach {state} $states {
+   # gibt es eine Bedingung, bei der der alte Zustand nicht weitergeschaltet werden soll?
    if [expr ! [string match $::if_state ""]] {
     puts "if $::if_state then"
    }
+   # Zustand weiterschalten
    if [expr $i != 0] {
     puts "     state <= \"[__BINARY $i $digits]\";"
    }
@@ -181,7 +201,9 @@ proc ARCHITECTURE {name} {
     set ::wait_for_mmu ""
     puts "end if;"
    }
+   # neuer Zustand
    puts "    when \"[__BINARY $i $digits]\" =>"
+   # wurden im alten Zustand die ALU oder MMU beschaeftigt?
    if [expr $::alu_invoked == 1] {
     set ::alu_invoked 0
     puts "     alu_work_out <= '0';"
@@ -190,13 +212,17 @@ proc ARCHITECTURE {name} {
     set ::mmu_invoked 0
     puts "     mmu_work_out <= '0';"
    }
+   # das, was in den Zustand getan werden soll ausfuehren
    eval $state
+   # muss auf die MMU gewartet werden?
    if [expr ! [string match $::wait_for_mmu ""]] {
     puts "if mmu_ack_in='1' then"
     eval $::wait_for_mmu
    }
    incr i
   }
+  # im letzten Zustand:
+  # wurde das IR geladen?
   if [expr $::ir_loaded == 0] {
    puts "     if mmu_ack_in='1' then"
    puts "      if mmu_data_in(1 downto 0)/=\"11\" then"
@@ -204,12 +230,15 @@ proc ARCHITECTURE {name} {
    puts "      end if;"
    puts "      ir(29 downto 0) <= mmu_data_in(31 downto 2);"
   }
+  # Instruction-Counter weiterschalten
   puts "      instr_ctr <= std_logic_vector(unsigned(instr_ctr) + 1);"
+  # wurde der PC geladen?
   if [expr ! $::set_pc] {
    puts "      pc <= std_logic_vector(unsigned(pc) + 1);"
   } else {
    set ::set_pc 0
   }
+  # der Zustand ist nun wieder 0
   puts "      state <= \"[__BINARY 0 $digits]\";"
   if [expr $::ir_loaded == 0] {
    puts "     end if;"
@@ -223,6 +252,7 @@ proc ARCHITECTURE {name} {
  puts "   when others =>"
  puts "    err <= \"1\";"
  puts "   end case;"
+ # Taktzaehler weiterschalten
  puts "   cycle_ctr <= std_logic_vector(unsigned(cycle_ctr) + 1);"
  puts "   time_ctr <= std_logic_vector(unsigned(time_ctr) + 1);"
  puts "  end if;"
@@ -234,21 +264,26 @@ proc ARCHITECTURE {name} {
  puts "end architecture;"
 }
 
+# 0
 proc ZERO {name} {
  return "std_logic_vector(to_unsigned(0,$name'length))"
 }
 
+# NOP
 proc NOP {} {
 }
 
+# auf die MMU muss gewartet werden
 proc WAIT_FOR_MMU {process} {
  set ::wait_for_mmu $process
 }
 
+# besonderes ...
 proc SPECIAL {str} {
  puts "$str"
 }
 
+# Laedt und ueberprueft das IR
 proc LOAD_IR {} {
  set ::ir_loaded 1
  puts "     if mmu_data_in(1 downto 0)/=\"11\" then"
@@ -257,6 +292,7 @@ proc LOAD_IR {} {
  puts "     ir(29 downto 0) <= mmu_data_in(31 downto 2);"
 }
 
+# CASE-statement
 proc CASE {args} {
  if [expr [llength $args] == 0] {
   puts "'CASE' must be called with at least 1 argument!"
@@ -273,6 +309,7 @@ proc CASE {args} {
  puts "end case;"
 }
 
+# IF-statement
 proc IF {condition then else} {
  puts "if $condition then"
  eval $then
@@ -281,28 +318,34 @@ proc IF {condition then else} {
  puts "end if;"
 }
 
+# Adresse des aktuellen Befehls
 proc CURRENT_PC {} {
  return "pc & \"00\""
 }
 
+# Adresse des naechsten Befehls
 proc NEXT_PC {} {
  return "std_logic_vector(unsigned(pc) + 1) & \"00\""
 }
 
+# ueberprueft einen Bedingung
 proc CHECK {condition} {
  puts "if $condition then"
  puts " err <= \"1\";"
  puts "end if;"
 }
 
+# nur extension (mit 0)
 proc EXTEND {dest src} {
  return "std_logic_vector(resize(unsigned($src),$dest'length))"
 }
 
+# sign-extension
 proc SIGN_EXTEND {dest src} {
  return "std_logic_vector(resize(signed($src),$dest'length))"
 }
 
+# der PC soll gesetzt und ueberprueft werden
 proc SET_PC {data} {
  set ::set_pc 1
  puts "if $data\(1 downto 0\)/=\"00\" then"
@@ -311,6 +354,7 @@ proc SET_PC {data} {
  puts "pc <= $data\(31 downto 2\);"
 }
 
+# der PC soll gesetzt und speziell ueberprueft werden
 proc SPECIAL_SET_PC {data} {
  set ::set_pc 1
  puts "if $data\(1 downto 1\)/=\"0\" then"
@@ -319,10 +363,12 @@ proc SPECIAL_SET_PC {data} {
  puts "pc <= $data\(31 downto 2\);"
 }
 
+# der Zustand soll nur weitergeschaltet werden, wenn die Bedingung gilt
 proc IF_STATE {condition} {
  set ::if_state "$condition"
 }
 
+# die MMU soll 32 Bit lesen
 proc MMU_READ {address} {
  set ::mmu_invoked 1
  puts "mmu_data_out <= std_logic_vector(to_unsigned(0,mmu_data_out'length));"
@@ -331,18 +377,22 @@ proc MMU_READ {address} {
  puts "mmu_work_out <= '1';"
 }
 
+# die MMU soll einen Befehl von einer bestimmten Adresse holen
 proc FETCH_COMMAND_FROM {address} {
  MMU_READ "$address"
 }
 
+# die MMU soll den aktuellen Befehl holen
 proc FETCH_CURRENT_COMMAND {} {
  MMU_READ "pc & \"00\""
 }
 
+# die MMU soll den naechsten Befehl holen
 proc FETCH_NEXT_COMMAND {} {
  MMU_READ "std_logic_vector(unsigned(pc) + 1) & \"00\""
 }
 
+# die MMU soll Daten speichern
 proc MMU_WRITE {address data} {
  set ::mmu_invoked 1
  puts "mmu_data_out <= $data;"
@@ -360,6 +410,7 @@ proc MMU_WRITE {address data} {
  puts "mmu_work_out <= '1';"
 }
 
+# die ALU soll mit zwei Registern rechnen
 proc ALU_REG_REG {src1 src2 dest com} {
  set ::alu_invoked 1
  puts "alu_data_out1 <= std_logic_vector(resize(unsigned($src1),alu_data_out1'length));"
@@ -369,6 +420,7 @@ proc ALU_REG_REG {src1 src2 dest com} {
  puts "alu_work_out  <= '1';"
 }
 
+# die ALU soll mit einer Immediate und einem Register rechnen
 proc ALU_LTK_REG {src1 src2 dest com} {
  set ::alu_invoked 1
  puts "alu_data_out1 <= $src1;"
@@ -378,6 +430,7 @@ proc ALU_LTK_REG {src1 src2 dest com} {
  puts "alu_work_out  <= '1';"
 }
 
+# die ALU soll mit einem Register und einer Immediate rechnen
 proc ALU_REG_LTK {src1 src2 dest com} {
  set ::alu_invoked 1
  puts "alu_data_out1 <= std_logic_vector(resize(unsigned($src1),alu_data_out1'length));"
@@ -387,6 +440,7 @@ proc ALU_REG_LTK {src1 src2 dest com} {
  puts "alu_work_out  <= '1';"
 }
 
+# die ALU soll mit zwei Immediates rechnen
 proc ALU_LTK_LTK {src1 src2 dest com} {
  set ::alu_invoked 1
  puts "alu_data_out1 <= $src1;"
@@ -396,13 +450,15 @@ proc ALU_LTK_LTK {src1 src2 dest com} {
  puts "alu_work_out  <= '1';"
 }
 
+# erzeugt einen neuen Befehl
 proc NEW_COMMAND {command opcode} {
  set ::commands($command) [list]
  set ::opcodes($command) $opcode
 }
 
+# erzeugt einen neuen Zustand zu einem Befehl
 proc NEW_STATE {command process} {
- if [expr ! [__IS_COMMAND $command]] {
+ if [expr ! [llength [array names ::commands -exact $command]]] {
   puts "'$command' isn't a command!"
   ERROR
  }
@@ -411,46 +467,12 @@ proc NEW_STATE {command process} {
  set ::commands($command) $lst
 }
 
-proc __IS_COMMAND {command} {
- return [llength [array names ::commands -exact $command]]
-}
-
+# gibt es ein Signal mit diesem Namen?
 proc __IS_DEFINED {name} {
- return [expr [__IS_SIGNAL $name] || [__IS_PORT $name]]
+ return [expr [llength [array names ::signals -exact $name]] || [llength [array names ::ports -exact $name]]]
 }
 
-proc __IS_SIGNAL {name} {
- return [llength [array names ::signals -exact $name]]
-}
-
-proc __IS_PORT {name} {
- return [llength [array names ::ports -exact $name]]
-}
-
-proc __IS_IN {name} {
- if [__IS_SIGNAL $name] {
-  return 1
- }
- if [__IS_PORT $name] {
-  return [string match [lindex [lindex [array get ::signals $name] 1] 1] "in"]
- } else {
-  puts "'$name' isn't defined!"
-  ERROR
- }
-}
-
-proc __IS_OUT {name} {
- if [__IS_SIGNAL $name] {
-  return 1
- }
- if [__IS_PORT $name] {
-  return [string match [lindex [lindex [array get ::signals $name] 1] 1] "out"]
- } else {
-  puts "'$name' isn't defined!"
-  ERROR
- }
-}
-
+# gibt die Laenge des Signals/Ports zurueck
 proc __LENGTH {name} {
  if [__IS_SIGNAL $name] {
   return [lindex [lindex [array get ::signals $name] 1] 0]
@@ -462,6 +484,7 @@ proc __LENGTH {name} {
  }
 }
 
+# wandelt eine Zahl in ihre binaere Darstellung um
 proc __BINARY {var digits} {
  set tmp $var
  set ret ""
