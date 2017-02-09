@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0/SPO</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">61</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0/DPO,
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1/SPO,
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1/DPO,
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit2/SPO,
+INST_DDR2_RAM_CORE/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit2/DPO</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">clk_50mhz</arg> are pushed forward through input buffer.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=3007 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en&lt;0&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;0&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;1&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;2&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;3&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=3007 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_en&lt;1&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;4&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;5&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;6&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_0_wr_addr&lt;7&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=3007 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_en&lt;1&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr&lt;4&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr&lt;5&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr&lt;6&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=6390 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/fifo_1_wr_addr&lt;7&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay5</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=580 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/dqs_int_delay_in&lt;1&gt;</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay4</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay2</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay4</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="39" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">MAXDELAY=190 pS</arg>&quot; on net &quot;<arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay2</arg>&quot; has been discarded, because the net was optimized out of the design.
+</msg>
+
+<msg type="warning" file="LIT" num="176" delta="old" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_clk_tb/INST_DDR2_RAM_CORE/infrastructure_top0/clk_dcm0/BUFG_CLK0&quot; (output signal=clk_tb)</arg> has a mix of clock and non-clock loads. The non-clock loads are:
+<arg fmt="%s" index="2">Pin I0 of INST_DDR2_RAM_CORE/infrastructure_top0/cal_top0/tap_dly0/l0</arg>
+</msg>
+
+<msg type="warning" file="LIT" num="176" delta="old" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_clk_cpu/Inst_vga_clk/CLK0_BUFG_INST&quot; (output signal=clk_cpu)</arg> has a mix of clock and non-clock loads. The non-clock loads are:
+<arg fmt="%s" index="2">Pin I1 of CPU/CDU/clk_out1</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="249" delta="old" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.
+	<arg fmt="%s" index="1">CPU/CDU/Mcompar_mode_cmp_ge0000_cy&lt;12&gt;</arg>
+	<arg fmt="%s" index="2">CPU/CDU/Mcount_counter_cy&lt;0&gt;</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;5&gt;111</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">INST_DDR2_RAM_CORE/top_00/controller0/Mcount_init_pre_count_xor&lt;4&gt;11_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col1&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">INST_DDR2_RAM_CORE/top_00/data_path0/dqs_delayed_col0&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clk133/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA0</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA1</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA2</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA3</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA4</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA5</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA6</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA7</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA8</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA9</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA10</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA11</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA12</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA13</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA14</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA15</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA16</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA17</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA18</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA19</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA20</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA21</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA22</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA23</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA24</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA25</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA26</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA27</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA28</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA29</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA30</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA31</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00001</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA0</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA1</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA2</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA3</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA4</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA5</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA6</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA7</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA8</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA9</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA10</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA11</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA12</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA13</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA14</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA15</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA16</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA17</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA18</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA19</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA20</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA21</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA22</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA23</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA24</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA25</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA26</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA27</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA28</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA29</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA30</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA31</arg>&gt; on block:&lt;<arg fmt="%s" index="2">inst_asciiunit/inst_charmap/Mrom__varindex00002</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
+</msg>
+
+</messages>
+
