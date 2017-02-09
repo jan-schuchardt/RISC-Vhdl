@@ -114,7 +114,7 @@ PORT(
     ir_in : in std_logic_vector(31 downto 0);
 	 
     debug_on    : in std_logic; --debug : regs else ascii				
-    x_ou        : out std_logic_vector(9 downto 0);
+    x_out        : out std_logic_vector(9 downto 0);
     y_out       : out std_logic_vector(9 downto 0);
     pixel       : in std_logic
 );
@@ -385,7 +385,7 @@ CPU: entity work.cpu PORT MAP(
 	cpu_mmu_adr_out  => mmu_addr_in,
 	cpu_mmu_com_out  => mmu_cmd_in,
 	cpu_mmu_work_out => mmu_work_in,
-	cpu_mmu_ack_in   => mmu_ack_out,
+	cpu_mmu_ack_in   => mmu_ack_out
 ); 
   
 -----------------------------------------------------------------------------
