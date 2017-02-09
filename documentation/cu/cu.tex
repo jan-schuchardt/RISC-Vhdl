@@ -6,8 +6,8 @@ das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
 \Section{\"Uberblick}
 Im Prozessor wurden die durch das \ISAname{RV32I Base Integer Instruction Set}
 und die \ISAname{RV32M Standard Extension for Integer Multiplication and
-Division} definierten Befehle implementiert. Besondere Aufmerksamkeit wurde
-dabei mehr auf Robustheit und weniger auf maximale Geschwindigkeit gelegt.
+Division} definierten Befehle implementiert. Besondere Aufmerksamkeit wurde dabei mehr auf Robustheit und
+weniger auf maximale Geschwindigkeit gelegt.
 
 Das Leitwerk besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche
 ausgef\"uhrt wird h\"angt allein vom Inhalt des Instruction-Register ab. Daher
@@ -22,7 +22,7 @@ eine Eingabe aus diesen Makros in VHDL-Code.
 \Subsection{Legende}
 Da jeder Befehl eine eigene Zustandsmaschine besitzt wird hier f\"ur jeden
 Befehl ein eigenes Zustands\-\"uber\-gangs\-dia\-gramm gezeigt. Die Pr\"afixe
-``MMU:'' und ``ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
+"`MMU:'' und "`ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
 jeweiligen Einheit ausgef\"uhrt wird und das Leitwerk lediglich eine Anweisung
 gibt.
 
@@ -93,8 +93,7 @@ und das Holen des n\"achsten Befehls parallelisiert werden kann, was zu einer
 merklichen Geschwindigkeitssteigerung f\"uhrt.
 
 \Statemachine{./cu/img/unbedingte_spruenge.pdf}{
-Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\)
-ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
+Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\) ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
 welches durch \Ipart{rs1} adressiert wird.
 }{}
 
