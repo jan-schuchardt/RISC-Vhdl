@@ -1,40 +1,62 @@
-\Chapter{Abstract}
-
-Die folgende Arbeit beschreibt die Struktur und den Entwicklungsprozess einer Implementierung
-der RISC-V-ISA auf einem FPGA. Dabei wurden die logischen Bausteine in der
-Hardwarebeschreibungssprache VHDL implementiert. Die Projektdauer beläuft sich auf zwei Semester, in denen
-die vier Gruppenmitglieder simultan an den einzelnen Komponenten gearbeitet haben. Der Arbeit liegen selbstverst\"andlich der entstandene VHDL-Code sowie einige demonstrative Programme, die vom Prozessor korrekt ausgef\"uhrt werden k\"onnen, bei. Des Weiteren sind auch ein Assemblierer f\"ur das implementierte Instruction-Set sowie ein Simulator, der auf spezielle Umgebung der VHDL-Implementierung angepasst ist, enthalten.
-
-\newpage
-
 \Chapter{Projektablauf}
-
-Zu Beginn des Projekts wurde eine Unterteilung der Anforderungen in einerseits ein Basisangebot sowie ein daran ankn\"upfendes Erweiterungsangebot vollzogen. W\"ahrend innerhalb des ersten Semesters vor allem der Fokus auf die Eingew\"ohnung in die Entwicklungsumgebung und Realisierung der Basisziele lag, sah die Planung f\"ur das zweite Semester eine eine Erweiterung des dann bereits lauff\"ahigen Prozessors um zus\"atzliche Module vor. 
+Zu Beginn des Projekts wurde eine Unterteilung der Anforderungen in einerseits
+ein Basisangebot sowie ein daran ankn\"upfendes Erweiterungsangebot vollzogen.
+W\"ahrend innerhalb des ersten Semesters vor allem der Fokus auf die
+Eingew\"ohnung in die Entwicklungsumgebung und Realisierung der Basisziele lag,
+sah die Planung f\"ur das zweite Semester eine Erweiterung des dann bereits
+lauff\"ahigen Prozessors um zus\"atzliche Module vor. 
 
 \Section{Aufgabe}
+Die Hauptaufgabe bestand darin, eine Implementierung eines funktionsf\"ahigen
+Prozessor auf Basis der
+\href{https://riscv.org/specifications/}{RISC-V Instruction Set Architecture}
+anzufertigen, welche auf dem zur Verf\"ugung gestellten Entwicklungsboard
+(\textit{Spartan-3A FPGA Starter Kit}) lauff\"ahig sein sollte.
 
-Die Hauptaufgabe bestand darin, eine Implementierung eines funktionsf\"ahigen Prozessor auf Basis der \href{https://riscv.org/specifications/}{RISC-V Instruction Set Architecture} anzufertigen, welche auf dem zur Verf\"ugung gestellten Entwicklungsboard (\textit{Spartan-3A FPGA Starter Kit}) lauff\"ahig ist.
 \begin{figure}[H]
-	\centering
-		\includegraphics[width=0.3\textwidth]{Board.png}
-	\caption{Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral}
-	\label{fig:board}
+\centering
+\includegraphics[width=0.3\textwidth]{Board.png}
+\caption{Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral}
+\label{fig:board}
 \end{figure}
+
 \Section{Basisziele}
+Als Mindestanforderung sollte dabei die Kompatibilit\"at zur
+\textit{RV32I Base Integer Instruction Set} gew\"ahrleistet werden. Ausgenommen
+davon waren die speziell f\"ur Aspekte des Multithreadings auf
+Mehrkernprozessoren enthaltenen Befehle \Instr{FENCE}, \Instr{FENCE.I},
+\Instr{SCALL} und \Instr{SBREAK}, da die geforderte Implementierung lediglich
+einen Rechenkern besitzen sollte.
 
-
-Als Mindestanforderung sollte dabei die Kompatibilit\"at zur \textit{RV32I Base Integer Instruction Set} gew\"ahrleistet werden. Ausgenommen davon waren die speziell f\"ur Aspekte des Multithreadings auf Mehrkernprozessoren enthaltenen Befehle FENCE, FENCE.I, SCALL und SBREAK, da die geforderte Implementierung lediglich einen Rechenkern besitzen sollte.
-
-Um die Funktionsf\"ahigkeit des Prozessors auch nach au{\ss}en hin sichtbar zu machen und damit einhergehend keine Black-Box Komponente zu entwickeln, sollte eine M\"oglichkeit zur Benutzerinteraktion \"uber geeignete, auf dem Entwicklungsboard vorhandene Bausteine wie etwa Schalter bestehen. Insbesondere zu Zwecken des Debuggings wurde auch eine grafische Ausgabe der internen Register \"uber die VGA-Schnittstelle zu einem angeschlossenen Monitor m\"oglich inkludiert.\footnote{Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16}
+Um die Funktionsf\"ahigkeit des Prozessors auch nach au\ss{}en hin sichtbar zu
+machen und damit einhergehend keine Black-Box Komponente zu entwickeln, sollte
+eine M\"oglichkeit zur Benutzerinteraktion \"uber geeignete, auf dem
+Entwicklungsboard vorhandene Bausteine wie etwa Schalter bestehen. Insbesondere
+zu Zwecken des Debuggings wurde auch eine grafische Ausgabe der internen
+Register \"uber die VGA-Schnittstelle zu einem angeschlossenen Monitor
+inkludiert.
+\footnote{Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16}
 
 \Section{Erweiterungsziele}
-
-
-Die Modularit\"at der RISC-V ISA legt einige sinnvolle Erweiterungen nahe, darunter auch die \textit{RV32M Standard Extension for Integer Multiplication and Division}, welche Multiplikations- und Divisionsbefehle beinhaltet. Zudem sollte die rudiment\"are Ausgabe der internen Register um einen Textmodus erweitert werden, sodass mittels Memory-Mapping nun auch ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Weiterhin wurde, um eine bessere Interaktion mit dem Programmierer zu erm\"oglichen, auch die Umsetzung einer seriellen Schnittstelle in den geplanten Erweiterungsrahmen miteinbezogen. Zuletzt stellt auch das Entwerfen eines demonstrativen Programms, genauer eines einfachen Spiels, ma\ss{}geblich einen Bestandteil des Erweiterungsangebots dar, sodass die endg\"ultige Implementierung adäquat pr\"asentieren sein sollte.
+Die Modularit\"at der RISC-V ISA legt einige sinnvolle Erweiterungen nahe,
+darunter auch die
+\textit{RV32M Standard Extension for Integer Multiplication and Division},
+welche Multiplikations- und Divisionsbefehle beinhaltet. Zudem sollte die
+rudiment\"are Ausgabe der internen Register um einen Textmodus erweitert
+werden, sodass mittels Memory-Mapping nun auch ASCII-Zeichen auf dem Monitor
+ausgegeben werden k\"onnen. Weiterhin wurde, um eine bessere Interaktion mit
+dem Programmierer zu erm\"oglichen, auch die Umsetzung einer seriellen
+Schnittstelle in den geplanten Erweiterungsrahmen miteinbezogen. Zuletzt
+stellt auch das Entwerfen eines demonstrativen Programms, genauer eines
+einfachen Spiels, ma\ss{}geblich einen Bestandteil des Erweiterungsangebots
+dar, sodass die endg\"ultige Implementierung ad\"aquat zu pr\"asentieren sein
+sollte.\footnote{Siehe Fu\ss{}note 1}
 
 \Section{Projektablauf}
 \Subsection{Chronologischer Verlauf}
-Wie eingangs erw\"ahnt umfasste die Dauer des Praktikums zwei Semester, in denen im Allgemeinen drei verschiedene Implementierungsversionen angefertigt wurden.
+Wie eingangs erw\"ahnt umfasste die Dauer des Praktikums zwei Semester, in
+denen im Allgemeinen drei verschiedene Implementierungsversionen angefertigt
+wurden.
 
 \begin{table}[H]
 \begin{tabular}{|p{50pt}|p{80pt}|p{220pt}|p{110pt}|}
@@ -66,22 +88,51 @@ Version & Zeitraum                                   & Ziele                    
 \caption{\"Ubersicht \"uber den Projektablauf}
 \end{table}
 
-Gem\"a\ss{} den vier Prinzipien der Von-Neumann-Architektur wurde die Implementierung grob in die Hauptkomponenten Leit-, Rechen-, Ein-/Ausgabewerk und Speicher gegliedert, was sich konkret in den drei Subkomponenten CU, ALU und MMU widerspiegelt. F\"ur jeden dieser Bausteine war durchg\"angig eine unabh\"angige Kleingruppe verantwortlich, wobei es trotzdem f\"ur sinnvoll erachtet wurde, w\"ochentliche Treffen zu Zwecken der Planung und Integration der Komponenten sowie zum Testen, zu veranschlagen. Entscheidungen von gr\"o\ss{}erer Tragweite, besonders im Hinblick auf generelle Designentscheidungen wurden meist im Plenum besprochen.
+\Subsection{Arbeitsteilung und Entscheidungsprozesse}
+Gem\"a\ss{} den vier Prinzipien der Von-Neumann-Architektur wurde die
+Implementierung grob in die Hauptkomponenten Leit-, Rechen-,
+Ein-/Ausgabewerk und Speicher gegliedert, was sich konkret in den drei
+Subkomponenten CU, ALU und MMU widerspiegelt. F\"ur jeden dieser
+Bausteine war durchg\"angig eine unabh\"angige Kleingruppe verantwortlich,
+wobei es trotzdem f\"ur sinnvoll erachtet wurde, w\"ochentliche Treffen zu
+Zwecken der Planung und Integration der Komponenten sowie zum Testen, zu
+veranschlagen. Entscheidungen von gr\"o\ss{}erer Tragweite, besonders im
+Hinblick auf generelle Designentscheidungen wurden meist im Plenum besprochen.
 
 \Section{Verwendete Tools}
+Das Projekt wurde in der Hardwarebeschreibungssprache VHDL implementiert, was
+sich darin begr\"undet, dass diese Themenkomplex der zugrundeliegenden
+Lehrveranstaltung war und die Gruppenmitglieder daher auf einem
+einigerma\ss{}en gleichwertigen Kenntnisstand waren.
 
-Das Projekt wurde in der Hardwarebeschreibungssprache VHDL implementiert, was sich darin begr\"undet, dass diese Themenkomplex der zugrundeliegenden Lehrveranstaltung war und die Gruppenmitglieder daher auf einem einigerma\ss{}en gleichwertigen Kenntnisstand waren.
+Zur Entwicklung wurde haupts\"achlich die Entwicklungsumgebung Xilinx'
+\textit{ISE Project Navigator} in Version 14.7 verwendet. Diese erm\"oglichte
+einerseits das Editieren des VHDL-Codes und beinhaltete andererseits auch eine
+integrierte Toolchain, um den VHDL-Code in ein Programming-File zu
+\"ubersetzen. Dieses wurde dann benutzt, um das Board zu programmieren. Der
+zus\"atzlich enthaltene \textit{Core Generator} wurde dabei verwendet, um
+einzelne Subkomponenten wie beispielsweise eine Divisionseinheit zu generieren.
 
-Zur Entwicklung wurde haupts\"achlich die Entwicklungsumgebung Xilinx' \textit{ISE Project Navigator} in Version 14.7 verwendet. Diese erm\"oglichte einerseits das Editieren des VHDL-Codes und beinhaltete andererseits auch eine integrierte Toolchain, um den VHDL-Code in ein Programming-File zu übersetzen. Dieses wurde dann benutzt, um das Board zu programmieren. Der zus\"atzlich enthaltene \textit{Core Generator} wurde dabei verwendet, um einzelne Subkomponenten wie beispielsweise eine Divisionseinheit zu generieren.\\
 \begin{figure}[H]
-	\centering
-		\includegraphics[width=1.0\textwidth]{ISE.png}
-	\caption{Der Xilinx ISE Project Navigator}
-	\label{fig:tool}
+\centering
+\includegraphics[width=1.0\textwidth]{ISE.png}
+\caption{Der Xilinx ISE Project Navigator}
+\label{fig:tool}
 \end{figure}
-Mittels des Tools \textit{impact}, welches ebenfalls vom Anbieter der Entwicklungsumgebung Xilinx stammt, konnte in Kombination mit einem \textit{Cable-Server} das Board mit \"uber USB gem\"a{\ss} den erstellten Programming-Files beschrieben werden.\\
-Zur Versionsverwaltung wurde dabei auf ein \textit{Git- Repository} gesetzt.\\ 
 
-Um sich die doch recht umfassende Arbeit des Assemblierens eines Programms nicht h\"andisch erledigen zu m\"ussen, wurde, wie sp\"ater genauer erl\"autert wird, ein automatischer Assemblierer in der Scriptsprache Python entwickelt.
-Um nicht jedes zu testende Programm per Hand assemblieren zu m\"ussen wurde ein Assemblierer auf Python-Basis erstellt.\\
-Da die Generierung eines Programming-Files und das anschlie{\ss}ende Beschreiben des FPGAs nichtsdestotrotz jedes Mal mehrere Minuten in Anspruch genommen hatte, wurden entsprechende Simulatoren verwendet. Zur Verifikation des VHDL-Codes beispielsweise wurde so das Tool \textit{GHDL} in Kombination mit \textit{GTKWave} benutzt. Auch zum Testen der Assemblerprogramme wurde ein Simulator auf Python-Basis, der die Umgebung des Boards emuliert, entworfen und in den Arbeitsprozess mit eingebunden.
+Mittels des Tools \textit{impact}, welches ebenfalls vom Anbieter der
+Entwicklungsumgebung Xilinx stammt, konnte in Kombination mit einem
+\textit{Cable-Server} das Board \"uber USB gem\"a{\ss} den erstellten
+Programming-Files beschrieben werden. Zur Versionsverwaltung wurde dabei
+auf ein \textit{Git-Repository} gesetzt.
+
+Um die doch recht umfassende Arbeit des Assemblierens eines Programms nicht
+h\"andisch erledigen zu m\"ussen, wurde, wie sp\"ater genauer erl\"autert wird,
+ein automatischer Assemblierer in der Skriptsprache Python entwickelt. Da die
+Generierung eines Programming-Files und das anschlie\ss{}ende Beschreiben des
+FPGAs nichtsdestotrotz jedes Mal mehrere Minuten in Anspruch genommen hatte,
+wurden entsprechende Simulatoren verwendet. Zur Verifikation des VHDL-Codes
+beispielsweise wurde das Tool \textit{GHDL} in Kombination mit \textit{GTKWave}
+benutzt. Auch zum Testen der Assemblerprogramme wurde ein Simulator auf
+Python-Basis, der die Umgebung des Boards emuliert, entworfen und in den
+Arbeitsprozess mit eingebunden.
