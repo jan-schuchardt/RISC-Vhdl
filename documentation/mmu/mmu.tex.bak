@@ -1,8 +1,9 @@
-\chapter{Die MMU}
+\Chapter{Die MMU}
+\label{ch:mmu}
 
 Die MMU (Memory Management Unit) verwaltet den in Bl\"ocke gegliederten Speicherbereich und die darauf erfolgenden Zugriffe. Die Einheit bietet dabei eine Schnittstelle für lesende und schreibende Speicheranfragen, welche in unterschiedlichen Zeitintervallen bearbeitet werden.
 
-\section{\"Uberblick}
+\Section{\"Uberblick}
 
 Der adressierbare Speicher innerhalb des Prozessors ist blockweise organisiert. Die MMU verwaltet einerseits die einzelnen Controller für die jeweiligen RAM-Bl\"ocke und taktet andererseits die angefragten Zugriffe auf diese.
 
@@ -10,7 +11,7 @@ Sie ist aufgrund der \"uberwiegend sehr \"ahnlichen Adressierungsprozeduren inte
 
 Um eine reibungslose Kommunikation mit diesen Controllern zu gew\"ahrleisten, ist die MMU mit einer vom restlichen Prozessor unterschiedlichen Frequenz, 133 MHz, getaktet. Dies ist vor allem im Bezug auf den integrierten DDR2-SDRAM\footnote{Genauer handelt es sich um einen Micron Technology DDR2-SDRAM (MT47H32M1)}, welcher mit eben diesem Takt versorgt werden muss, um Daten halten zu k\"onnen, begr\"undet: Die Tatsache, dass die Integration dieser Komponente besonders zeitaufw\"andig verlief, rechtfertigt diese Designentscheidung. Daraus resultieren zus\"atzlich ben\"otigte Synchronisations- und Kommunkationsmechanismen mit dem \"ubergeordneten Leitwerk.
 \newpage
-\section{Interface}
+\Section{Interface}
 Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Komponenten: Einerseits Signale zur Kommunikation mit dem Leitwerk, andererseits durch das Toplevel-Modul nach oben geleitete Signale zur Adressierung des DDR2-SDRAMs, welche vom in der MMU verwalteten Controller generiert werden, und zuletzt nach oben geleitete Daten- und Adressleitungen, die die ASCII-Einheit konstant mit Daten versorgt.
 
 \begin{figure}[H]
@@ -20,7 +21,7 @@ Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Ko
 	\label{fig:mmuinterface}
 \end{figure}
 
-\subsection{Kommunikation mit dem Leitwerk}
+\Subsection{Kommunikation mit dem Leitwerk}
 
 Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal cmd\_in die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des work\_in Signals mit der Bearbeitung der Anfrage. Der 3-Bit Vektor cmd\_in ist wie folgt aufgebaut:
 
@@ -36,11 +37,11 @@ Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement ack\_out
 
 Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im cmd\_in definierten Datenbreite 32-Bit  lie\ss{}t. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
 
-\subsection{Durch die MMU geleitete Signale an andere Komponenten}
+\Subsection{Durch die MMU geleitete Signale an andere Komponenten}
 
 Wie eingangs erw\"ahnt lassen sich die \"ubrigen Signale dem Weiterleiten von Signalen aus einerseits dem Controller der DDR2-SDRAM-Komponente sowie den kontinuierlichen lesenden Anfragen der ASCII-Einheit an den entsprechenden CHARRAM-Block (die parallel und unabh\"angig von der Funktionalit\"at der MMU laufen) zuordnen und werden hier nicht weiter vertieft.
 
-\section{Aufbau des Speichers}
+\Section{Aufbau des Speichers}
 
 Wie bereits geschildert wird der Speicher in verschiedene Bereiche unterschiedlicher Gr\"o\ss{}e untergliedert. Jeder dieser Bereiche wird von einem Controller verwaltet, welcher bei einer eingehenden Anfrage durch die MMU angesprochen wird. Dabei h\"angt die Bearbeitungsdauer ma\ss{}geblich vom adressierten Speicherblock ab.
 
@@ -77,7 +78,7 @@ Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA v
 
 Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was insbesondere bei 16-Bit beziehungsweise 32-Bit Zugriffen ber\"ucksichtigt werden muss.
 
-\section{Memory-Mapped I/O}
+\Section{Memory-Mapped I/O}
 \label{sec:mmuio}
 Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
 
@@ -108,7 +109,7 @@ Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabe
 \end{figure}
 
 
-\section{Implementierung als State Machine}
+\Section{Implementierung als State Machine}
 
 Aufgrund der identisch aufgebauten Controller f\"ur die meisten Speicherbl\"ocke ist die MMU durch eine State Machine realisiert. Dabei die MMU zwar im State MMU-IDLE initialisiert, wechselt bei einem Reset den Zustand aber sofort zu MMU-RESET.
 
@@ -118,40 +119,40 @@ Das nachfolgende Zustands\"ubergangsdiagramm veranschaulicht die durch einen Les
 Zustands\"ubergangsdiagramm der MMU. \"Uberg\"ange zum Zustand \textbf{MMU-RESET}, die von jedem anderen Zustand durch \Vhdl{rst\_in = '1'} ausgel\"ost werden, sind der \"Ubersicht halber ausgelassen.
 }
 
-\subsection{MMU-IDLE}
+\Subsection{MMU-IDLE}
 
 Im Zustand MMU-IDLE wartet die Einheit auf das eingehen eines Befehls \"uber das \Vhdl{cmd\_in} Signal. Solange dies nicht erfolgt, wird das Synchronisationssignal \Vhdl{ack\_out} mit dem Wert 1 belegt. Anderenfalls wird die Eingabeadresse ausgewertet, die durchzuf\"uhrende Operation an den entsprechenden RAM-Controller weitergeleitet und die Einheit in den Zustand MMU-WAITING \"uberf\"uhrt.
 
-\subsection{MMU-WAITING}
+\Subsection{MMU-WAITING}
 
 Durch diesen Zustand wird die Ausf\"uhrung eines Lese- oder Schreibzugriffs solange verz\"ogert, bis der entsprechende RAM-Controller die 8-Bit Anfrage erfolgreich bearbeitet hat. Im Fall des DDR2-SDRAM-Controllers erfolgt dies \"uber ein Synchronisationssignal, anderenfalls kann mit einer festen Wartedauer von einem Takt gerechnet werden. W\"ahrend des Wartevorgangs werden die Befehle, die am entsprechenden RAM-Controller anliegen, entfernt.
 
 Sollte der Controller bereit sein, eine neue 8-Bit Anfrage zu verarbeiten, wird die MMU in den Zustand MMU-DATA-VALID \"uberf\"uhrt.
 
-\subsection{MMU-DATA-VALID}
+\Subsection{MMU-DATA-VALID}
 In diesem Zustand werden, sofern es sich bei der zuletzt durchgef\"uhrten Operation um einen Lesezugriff gehandelt hat, die gelesenen Daten mittels eines Buffer-Signals zwischengespeichert. Au\ss{}erdem wird die Einheit je nach Zugriffsmodus in den Zustand MMU-READ-NEXT beziehungsweise MMU-WRITE-NEXT \"uberf\"uhrt.
 
-\subsection{MMU-READ-NEXT}
+\Subsection{MMU-READ-NEXT}
 
 Sofern noch weitere 8-Bit Zellen gelesen werden m\"ussen, wird eine neue lesende Anfrage an den entsprechenden RAM-Controller weitergeleitet und  die Einheit wieder in den Zustand MMU-WAITING \"uberf\"uhrt. Anderenfalls wechselt die MMU in den Zustand MMU-READ-DONE.
 
-\subsection{MMU-READ-DONE}
+\Subsection{MMU-READ-DONE}
 
 Alle gelesenen und zwischengespeicherten Daten werden gem\"a\ss{} dem Little-Endian-Encoding zusammengesetzt und auf der Datenausgabeleitung an das Leitwerk \"ubergeben. Damit einher geht das Setzen des Acknowledgements-Signals \Vhdl{ack\_out} auf den Wert 1 sowie der Zustandswechsel nach MMU-IDLE.
 
-\subsection{MMU-WRITE-NEXT}
+\Subsection{MMU-WRITE-NEXT}
 
 Sollte der vom Leitwerk geforderte Schreibzugriff weitere schreibende 8-Bit Zugriffe erfordern, wird in diesem Zustand der der Adresse entsprechende RAM-Controller mit neuen Daten und einer inkrementierten Adresse angesprochen und die MMU-Einheit in den Zustand MMU-WAITING \"uberf\"uhrt. Anderenfalls wechselt die MMU in den Zustand MMU-WRITE-DONE.
 
-\subsection{MMU-WRITE-DONE}
+\Subsection{MMU-WRITE-DONE}
 
 Da nach einem erfolgreichen Schreibzugriff keinerlei Ausgabedaten \"ubermittelt werden m\"ussen, wird in diesem Zustand lediglich das Acknowledgement-Signals \Vhdl{ack\_out} auf den Wert 1 gesetzt sowie die Einheit zur\"uck in den Zustand MMU-IDLE \"uberf\"uhrt.
 
-\subsection{MMU-RESET}
+\Subsection{MMU-RESET}
 
 Bei einem Reset wechselt die MMU ungeachtet ihres derzeitigen Zustands in den MMU-RESET Zustand und unterbricht alle derzeitigen Anfragen ausnahmslos. Da die Einheit das eingehende Reset-Signal an alle RAM-Controller weitergeleitet, wird in diesem Zustand lediglich auf  die Beendigung der Resets jedes einzelnen Controllers gewartet. Sollten diese wieder bereit f\"ur neue Anfragen sein, wechselt die MMU wieder in den MMU-IDLE Zustand.
 
-\section{Zugrifssdauer}
+\Section{Zugrifssdauer}
 
 Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lassen sich nun f\"ur die einzelnen Speicherbl\"ocke die exakten Zugriffsdauern beziehungsweise im Fall des DDR2-SDRAMs, welcher unter Umst\"anden durch einen periodisch auftretenden Auto-Refresh eine erh\"ohte Zugriffszeit ben\"ontigt, eine Mindestzugriffsdauer errechnen.
 

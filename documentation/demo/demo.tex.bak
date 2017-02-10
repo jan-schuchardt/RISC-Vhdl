@@ -1,8 +1,8 @@
-\chapter{Entwicklung eines Demo-Programms}
+\Chapter{Entwicklung eines Demo-Programms}
 
 Das folgende Kapitel erläutert die Struktur, Motivation und Vorgehensweise hinter dem zu demonstrativen Zwecken entwickelten, auf dem Prozessor lauffähigen Tic-Tac-Toe Programms. Dieses vereint alle zentralen Funktionalitäten der Prozessor-Implementierung auf dem FPGA.
 
-\section{Struktur und Funktion des Demo-Programms}
+\Section{Struktur und Funktion des Demo-Programms}
 
 Wie eingangs geschildert bietet das entwickelte Demo-Programm die Möglichkeit, über die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio} das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite manövriert. Mittels des Buttons BTN 4 (siehe Kapitel)\ref{sec:mmuio} setzt der Zugspieler seine Markierung an der zuvor ausgewählten Position, sofern dies regelkonform ist. Das Spiel enthält keinen internen Reset und muss daher über einen Hard-Reset durch das FPGA erfolgen.
 
@@ -10,7 +10,7 @@ Wie eingangs geschildert bietet das entwickelte Demo-Programm die Möglichkeit, 
 	\centering
 		\includegraphics[width=0.5\textwidth]{gameplay.png}
 	\caption{Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}
-	\label{fig:pinning}
+	\label{fig:gameplay}
 \end{figure}
 
 Um möglichst viel der implementierten Funktionalität abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine als Array von vorzeichenbehafteten 8-Bit Werten realisierte Matrix $M$ wie folgt initialisiert.
@@ -58,11 +58,11 @@ Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu 
 
 Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementierung bei, wurde aber aufgrund des unverh\"altnissm\"a\ss{}igen Umfangs an dieser Stelle ausgelassen und durch den obigen Ausschnitt ersetzt.
 
-\section{Assemblierer und Simulator}
+\Section{Assemblierer und Simulator}
 
 Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction Sets und der projektspezifischen RAM-Struktur wurde der Beschluss gefasst, beim Assemblieren des Programmcodes auf einen im Rahmen des Projekts programmierten Assemblierer zur\"uckzugreifen. Auch das Debugging erfolgte durch ein eigenes Tool, welches beispielsweise Aspekte des Memory-Mapped-I/O ber\"ucksichtigen und entsprechend simulieren kann. Die beiden Programme wurden in der Scriptsprache Python entwickelt und gen\"ugen den Anspr\"uchen des Projekts insofern, dass ein Assemblerprogramm entsprechend assembliert und simuliert werden kann, die Software allerdings keineswegs ausgiebig auf Stabilit\"at oder dergleichen getestet wurde, zumal dies nicht als Schwerpunkt f\"ur das Projekt gesetzt war.
 
-\subsection{Assemblierer}
+\Subsection{Assemblierer}
 
 Der Assemblierer ist dabei in der Lage aus einem Eingabeprogrammcode, welches Spr\"unge, Labels und Kommentare enthalten kann, einerseits Bytecode sowie eine Symboltabelle zu erstellen. Des Weiteren wird der assemblierte Programmcode auch in korrekter VHDL-Syntax ausgegeben, sodass dieser zur Initialisierung einer Dual-Port-Blockram Komponente direkt eingebunden werden kann. Dabei wird der Assemblierer als Python-Script mit den Eingabewerten als Parametern aufgerufen:
 
@@ -72,7 +72,7 @@ Der Assemblierer ist dabei in der Lage aus einem Eingabeprogrammcode, welches Sp
 
 Die Symboltabelle gibt dabei Auskunft \"uber die Speicheradresse eines im Programmcode definierten Labels. Aufgrund des modularen Aufbaus des Assemblierers k\"onnen Erweiterungen des Befehlssatzes sowie andere syntaktische Feinheiten dem Parsing- und Compilingprozess problemlos hinzugef\"ugt werden.
 
-\subsection{Simulator}
+\Subsection{Simulator}
  
 Der Simulator ist als Backend-Erweiterung zum Assemblierer gedacht, da dieser mithilfe der Ausgabedateien den Programmablauf simulieren kann. Analog zu bekannten Debugging-Umgebungen unterst\"utzt der Simulator das Setzen von Breakpoints sowie das Schrittweise Ausf\"uhren eines Befehls, w\"ahrend die verf\"ugbaren Register direkt im Blick behalten werden k\"onnen. Ferner ist es aber auch m\"oglich, den Programmablauf nach einem bestimmten Zeitintervall automatisch zu unterbrechen oder aber bestimmte Eingabesignale zu stimulieren (auch hier kann mit einem beliebigen Zeitintervall gearbeitet werden). Das Python-Script des Simulators wird in Verbindung mit dem Assemblierer wie folgt aufgerufen:
 

@@ -1,0 +1,36 @@
+\documentclass{report}
+\usepackage{documentation}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{footnote}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathcomp}
+
+\graphicspath{{./mmu/}{./cu/img/}{./alu/img/}{./ui/}{./demo/}{./project/}{./asciiunit/}}
+
+\title{\large \textbf{Rechnerarchitekturgro\ss{}praktikum} \\[10pt] Entwicklung eines RISC-V-Prozessors \\[10pt] \Huge Dokumentation}
+\author{Dominik Fuchsgruber \\ Charlie Groh \\ Franz Rieger \\ Jan Schuchardt}
+\date{\today}
+
+\setlength{\parindent}{0pt}
+\makesavenoteenv{tabular}
+\begin{document}
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{project/project}
+\input{cu/cu}
+\input{alu/alu}
+\input{mmu/mmu}
+\input{asciiunit/asciiunit}
+\input{ui/ui}
+\input{demo/demo}
+\end{document}
+\end{tabluar}
