@@ -1,0 +1,129 @@
+\Chapter{Das Leitwerk}
+Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es interpretiert
+die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Dazu verwaltet
+das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
+
+\Section{\"Uberblick}
+Im Prozessor wurden die durch das \ISAname{RV32I Base Integer Instruction Set}
+und die \ISAname{RV32M Standard Extension for Integer Multiplication and
+Division} definierten Befehle implementiert. Insbesondere lag der Fokus dabei mehr auf Robustheit und
+weniger auf Aspekten der Performanz.
+
+Das Leitwerk besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche dieser Zustandsmaschinen bei der Interpretation eines Befehls
+ausgef\"uhrt wird, h\"angt dabei vom Inhalt des Instruction-Registers ab. Deshalb
+muss jede m\"ogliche Zustandsabfolge zuletzt seinerseits das IR mit dem nachfolgenden Befehl belegen. Wann
+dieser Befehl geladen wird kann nun innerhalb jedes Befehls einzeln implementiert und optimiert werden.
+
+Um den Implementierungsaufwand bei \"Anderungen von Befehlen zu minimieren und gerade weil sich die Zustandsmaschinen im Einzelnen \"au\ss{}erst \"ahnlich sind,
+wurde ein Compiler-Skript erstellt, das mehrere Makros bereitstellt, aus denen
+dann die Befehlsimplementierungen zusammengebaut werden k\"onnen. Dieses Skript konvertiert dann
+eine Abfolge, welche aus diesen Makros besteht, zu validem VHDL-Code.
+
+\Subsection{Legende}
+Da jeder Befehl wie bereits beschrieben durch eine eigene Zustandsmaschine ausgef\"uhrt wird, sind hier f\"ur jeden
+Befehl ein separate Zustands\-\"uber\-gangs\-dia\-gramme gezeigt. Die Pr\"afixe
+"`MMU:'' und "`ALU:'' werden genutzt, um anzuzeigen, dass eine Operation an die 
+jeweiligen Einheit delegiert wird und das Leitwerk lediglich eine Anfrage an die entsprechende Komponente sendet.
+
+Obwohl zwar in der der RISC-V ISA regelm\"a\ss{}ig verlangt wird, dass Operanden sign-extended werden, wurde dies in den Zustands\-\"uber\-gangs\-dia\-grammen der \"Ubersicht halber
+ausgelassen. Die Implementierung allerdings umfasst diese Funktionalit\"aten selbstverst\"andlich wie in der ISA
+beschrieben.
+
+\Section{Integer Rechenbefehle}
+Die Implementierung des Leitwerks wurde auf die in RV32I und RV32M definierten Rechenbefehle
+optimiert, wodurch diese RISC-typischen Befehle sehr schnell
+ausgef\"uhrt werden k\"onnen.
+
+\Statemachine{./cu/img/integer_rechenbefehle.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{ADD[I]}, \Instr{SUB},
+\Instr{SLT[I][U]}, \Instr{AND[I]}, \Instr{OR[I]}, \Instr{XOR[I]},
+\Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]}, \Instr{MUL[W]} und
+\Instr{MULH[[S]U]}. \(op2\) ist entweder das Register, das mit \Ipart{rs2}
+angegeben ist, oder eine Immediate (\Ipart{imm}). ``\(\circ\)'' repr\"asentiert die
+jeweilige Operation (\(+\), \(-\), \dots{}).
+}
+
+\Subsection{Division und Modulo}
+Da bei der Division unm\"oglich zu garantieren ist, dass diese immer innerhalb von drei
+Takten erfolgreich beendet wird, muss das Leitwerk hier auf eine Best\"atigung der ALU
+warten. Diese sieht vor, dass das Rechenwerk die Leitungen \Vhdl{alu\_data\_in}
+auf 0 setzt.
+
+\Statemachine{./cu/img/division.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
+}{``\(\circ\)'' repr\"asentiert die jeweilige Operation (\(/\), \(\bmod\),
+\dots{}).}
+
+\Section{LUI und AUPIC}
+Da durch die Integer Rechenbefehle keine 32-Bit Immediates direkt geladen werden
+k\"onnen, definiert die RISC-V-ISA die Befehle \Instr{LUI} und \Instr{AUPIC}, um
+diesen Mangel beheben. Auch bei der Implementierung dieser Befehle wurde besonderer Fokus auf Performanz gelegt.
+
+\Statemachine{./cu/img/lui_und_aupic.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
+}{\(op2\) ist entweder 0 (bei \Instr{LUI}) oder der aktuelle Program-Counter
+(bei \Instr{AUPIC}).}
+
+
+\Section{Bedingte Spr\"unge}
+Da bei Speicherzugriffen auf den DDR2-SDRAM Block der MMU\ref{ch:mmu}, dass ein Speicherzugriff ohne Zeit- und Datenverlust abgebrochen
+werden kann, wurde auf eine einfache Branch-Prediction g\"anzlich verzichtet.
+Dadurch geh\"ören die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den teuersten Befehlen des
+Prozessors.
+
+\Statemachine{./cu/img/beq_und_bgeu.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.
+``\(\circ\)'' ist bei \Instr{BEQ} ``\(-\)'', bei \Instr{BGE} die SLT-Operation
+und bei \Instr{BGEU} die SLTU-Operation.
+}{}
+
+\Statemachine{./cu/img/bne_und_bltu.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{BNE} und \Instr{BLT[U]}.             
+``\(\circ\)'' ist bei \Instr{BNE} ``\(-\)'', bei \Instr{BLT} die SLT-Operation
+und bei \Instr{BLTU} die SLTU-Operation.
+}{}
+
+\Section{Unbedingte Spr\"unge}
+Anders als bei bedingten Spr\"ungen, kann bei unbedingten Spr\"ungen das
+Zieladresse immer vorhergesagt werden, wodurch das Schreiben der R\"ucksprung-Adresse
+und das Holen des n\"achsten Befehls parallel erfolgen kann, was letztlich zu einer
+merklichen Geschwindigkeitssteigerung f\"uhrt.
+
+\Statemachine{./cu/img/unbedingte_spruenge.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\) ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
+welches durch \Ipart{rs1} adressiert wird.
+}{}
+
+\Section{LOAD}
+Der LOAD-Befehl l\"adt aus dem Speicher immer einen 32-Bit Wert, den das
+Leitwerk dann entsprechend beschneidet. Dies sollte urspr\"unglich die Implementierung der
+MMU vereinfachen und aligned-Speicherzugriffe beschleunigen, wobei sich erst durch sp\"ater ver\"anderte Designentscheidungen ein nachteiliger Charakter in eben diesem Vorgehen offenbart hat. Die Ausf\"uhrungsdauer des Befehls f\"allt durchschnittlich hoch aus und wird in der
+Praxis haupts\"achlich von der adressierten Speicherkomponente bestimmt.
+
+\Statemachine{./cu/img/load.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
+\Instr{LW}. \(width\) ist je nach Befehl 1,~2~oder~4.
+}{}
+
+\Section{STORE}
+Der Store-Befehl ist mit nur einem Rechen- und Speicherwerk nicht zu
+parallelisieren, was dazu f\"uhrt, dass er den langsamsten Befehl des Prozessors
+darstellt. Da Schreibzugriffe jedoch generell auf RISC-Architekturen traditionell sehr hohe Kosten hinsichtlich der ben\"otigten Rechenzeit aufweisen, sind Compiler und Programmierer ohnehin dazu angehalten, schreibende Speicherzugriffe wo m\"oglich zu vermeiden.
+
+\Statemachine{./cu/img/store.pdf}{
+Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.
+\(width\) ist je nach Befehl 1, 2 oder 4.
+}{}
+
+\Section{Timer und Counter}
+Wie in der RISC-V-ISA gefordert existiert des Weiteren ein Counter, der die Anzahl der bisher ausgef\"uhrten Befehle z\"ahlt. Au\ss{}erdem umfasst die Implementierung auch einen Timer, der analog dazu die Anzahl der bereits vergangenen Takte speichert. Da das Entwicklungsboard allerdings keine Echtzeituhr
+bereitstellt, greift die Implementierung dieser Funktionalit\"at auf den Taktz\"ahler zur\"uck.
+
+Ausgelesen werden k\"onnen diese Counter durch die Befehle
+\Instr{RDINSTRET[H]}\nolinebreak{}, \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.
+
+\Statemachine{./cu/img/timer_und_counter.pdf}{
+Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
+\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}. \(counter\) sind die oberen bzw.
+unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.
+}{}
