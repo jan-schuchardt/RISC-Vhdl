@@ -21,9 +21,13 @@
 \makesavenoteenv{tabular}
 \begin{document}
 \maketitle
+\begingroup
+\let\clearpage\relax
 \tableofcontents
-\listoffigures
 \listoftables
+\listoffigures
+\endgroup
+\clearpage{}
 
 \input{project/project}
 \input{cu/cu}
