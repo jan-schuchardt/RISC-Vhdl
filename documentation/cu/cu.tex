@@ -1,5 +1,4 @@
 \Chapter{Das Leitwerk}
-<<<<<<< HEAD
 Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es interpretiert
 die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Dazu verwaltet
 das Leitwerk den Program-Counter (PC) und das Instruction-Register (IR).
@@ -14,20 +13,6 @@ Das Leitwerk besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche die
 ausgef\"uhrt wird, h\"angt dabei vom Inhalt des Instruction-Registers ab. Deshalb
 muss jede m\"ogliche Zustandsabfolge zuletzt seinerseits das IR mit dem nachfolgenden Befehl belegen. Wann
 dieser Befehl geladen wird kann nun innerhalb jedes Befehls einzeln implementiert und optimiert werden.
-=======
-
-\Section{\"Uberblick}
-Das Leitwerk ist die zentrale Steuereinheit des Prozessors. Es interpretiert
-die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Besondere
-Aufmerksamkeit wurde dabei mehr auf Robustheit und weniger auf maximale
-Geschwindigkeit gelegt. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter
-(PC) und das Instruction-Register~(IR).
-
-Es besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche
-ausgef\"uhrt wird h\"angt allein vom Inhalt des Instruction-Register ab. Daher
-muss jeder Befehl als letztes das IR mit dem folgenden Befehl belegen. Wann
-dieser Befehl geladen wird kann nun in jedem Befehl einzeln optimiert werden.
->>>>>>> 5cd12b5445c8244076e68c39fe8701ec2b29a6a9
 
 Um den Implementierungsaufwand bei \"Anderungen von Befehlen zu minimieren und gerade weil sich die Zustandsmaschinen im Einzelnen \"au\ss{}erst \"ahnlich sind,
 wurde ein Compiler-Skript erstellt, das mehrere Makros bereitstellt, aus denen
@@ -53,9 +38,9 @@ ausgef\"uhrt werden k\"onnen.
 Zustands\"ubergangsdiagramm der Befehle \Instr{ADD[I]}, \Instr{SUB},
 \Instr{SLT[I][U]}, \Instr{AND[I]}, \Instr{OR[I]}, \Instr{XOR[I]},
 \Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]}, \Instr{MUL[W]} und
-\Instr{MULH[[S]U]}.}{\(op2\) ist entweder das Register, das mit \Ipart{rs2}
-angegeben ist, oder eine Immediate (\Ipart{imm}). ``\(\circ\)'' repr\"asentiert
-die jeweilige Operation (\(+\), \(-\), \dots{}).
+\Instr{MULH[[S]U]}. \(op2\) ist entweder das Register, das mit \Ipart{rs2}
+angegeben ist, oder eine Immediate (\Ipart{imm}). ``\(\circ\)'' repr\"asentiert die
+jeweilige Operation (\(+\), \(-\), \dots{}).
 }
 
 \Subsection{Division und Modulo}
@@ -81,29 +66,22 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 
 
 \Section{Bedingte Spr\"unge}
-<<<<<<< HEAD
 Da bei Speicherzugriffen auf den DDR2-SDRAM Block der MMU\ref{ch:mmu}, dass ein Speicherzugriff ohne Zeit- und Datenverlust abgebrochen
 werden kann, wurde auf eine einfache Branch-Prediction g\"anzlich verzichtet.
 Dadurch geh\"ören die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den teuersten Befehlen des
 Prozessors.
-=======
-Da bei dem DDR2-Speicher des benutzten Boards nicht garantiert werden
-konnte, dass ein Speicherzugriff ohne Zeit- und Datenverlust abgebrochen werden
-kann, wurde auf eine Branch-Prediction g\"anzlich verzichtet. Dadurch geh\"oren
-die bedingten Spr\"unge zu den teuersten Befehlen des Prozessors.
->>>>>>> 5cd12b5445c8244076e68c39fe8701ec2b29a6a9
 
 \Statemachine{./cu/img/beq_und_bgeu.pdf}{
-Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.}
-{``\(\circ\)'' ist bei \Instr{BEQ} ``\(-\)'', bei \Instr{BGE} die SLT-Operation
+Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.
+``\(\circ\)'' ist bei \Instr{BEQ} ``\(-\)'', bei \Instr{BGE} die SLT-Operation
 und bei \Instr{BGEU} die SLTU-Operation.
-}
+}{}
 
 \Statemachine{./cu/img/bne_und_bltu.pdf}{
-Zustands\"ubergangsdiagramm der Befehle \Instr{BNE} und \Instr{BLT[U]}.}
-{``\(\circ\)'' ist bei \Instr{BNE} ``\(-\)'', bei \Instr{BLT} die SLT-Operation
+Zustands\"ubergangsdiagramm der Befehle \Instr{BNE} und \Instr{BLT[U]}.             
+``\(\circ\)'' ist bei \Instr{BNE} ``\(-\)'', bei \Instr{BLT} die SLT-Operation
 und bei \Instr{BLTU} die SLTU-Operation.
-}
+}{}
 
 \Section{Unbedingte Spr\"unge}
 Anders als bei bedingten Spr\"ungen, kann bei unbedingten Spr\"ungen das
@@ -112,10 +90,9 @@ und das Holen des n\"achsten Befehls parallel erfolgen kann, was letztlich zu ei
 merklichen Geschwindigkeitssteigerung f\"uhrt.
 
 \Statemachine{./cu/img/unbedingte_spruenge.pdf}{
-Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}.}
-{\(op2\) ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das
-Register, welches durch \Ipart{rs1} adressiert wird.
-}
+Zustands\"ubergangsdiagramm der Befehle \Instr{JAL} und \Instr{JALR}. \(op2\) ist bei \Instr{JAL} der Program-Counter und bei \Instr{JALR} das Register,
+welches durch \Ipart{rs1} adressiert wird.
+}{}
 
 \Section{LOAD}
 Der LOAD-Befehl l\"adt aus dem Speicher immer einen 32-Bit Wert, den das
@@ -125,8 +102,8 @@ Praxis haupts\"achlich von der adressierten Speicherkomponente bestimmt.
 
 \Statemachine{./cu/img/load.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
-\Instr{LW}.}{\(width\) ist je nach Befehl 1,~2~oder~4.
-}
+\Instr{LW}. \(width\) ist je nach Befehl 1,~2~oder~4.
+}{}
 
 \Section{STORE}
 Der Store-Befehl ist mit nur einem Rechen- und Speicherwerk nicht zu
@@ -134,9 +111,9 @@ parallelisieren, was dazu f\"uhrt, dass er den langsamsten Befehl des Prozessors
 darstellt. Da Schreibzugriffe jedoch generell auf RISC-Architekturen traditionell sehr hohe Kosten hinsichtlich der ben\"otigten Rechenzeit aufweisen, sind Compiler und Programmierer ohnehin dazu angehalten, schreibende Speicherzugriffe wo m\"oglich zu vermeiden.
 
 \Statemachine{./cu/img/store.pdf}{
-Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.}
-{\(width\) ist je nach Befehl 1, 2 oder 4.
-}
+Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.
+\(width\) ist je nach Befehl 1, 2 oder 4.
+}{}
 
 \Section{Timer und Counter}
 Wie in der RISC-V-ISA gefordert existiert des Weiteren ein Counter, der die Anzahl der bisher ausgef\"uhrten Befehle z\"ahlt. Au\ss{}erdem umfasst die Implementierung auch einen Timer, der analog dazu die Anzahl der bereits vergangenen Takte speichert. Da das Entwicklungsboard allerdings keine Echtzeituhr
@@ -147,6 +124,6 @@ Ausgelesen werden k\"onnen diese Counter durch die Befehle
 
 \Statemachine{./cu/img/timer_und_counter.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
-\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.}{\(counter\) sind die oberen bzw.
+\Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}. \(counter\) sind die oberen bzw.
 unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.
-}
+}{}
