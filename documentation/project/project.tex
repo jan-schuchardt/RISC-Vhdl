@@ -12,20 +12,20 @@ Die Aufgabe bestand darin, einen funktionsf\"ahigen Prozessor auf Basis der RISC
 \Section{Basisziele}
 
 
-Als Mindestanforderung sollte ein Prozessor mit Kompatibilit\"at zur \Externalname{RV32I Base Integer Instruction Set} implementiert werden. Ausgenommen davon sind die Befehle FENCE, FENCE.I, SCALL und SBREAK, da keine Hardwareunterst\"utzung f\"ur den Multitaskingbetrieb ben\"otigt wird.
+Als Mindestanforderung sollte ein Prozessor mit Kompatibilit\"at zur \Externalname{RV32I Base Integer Instruction Set} implementiert werden. Ausgenommen davon sind die Befehle FENCE, FENCE.I, SCALL und SBREAK, da keine Hardwareunterst\"utzung f\"ur den Multitaskingbetrieb bereitgestellt werden soll.
 
-Um die Funktionsf\"ahigkeit des Prozessors auch nach au{\ss}en sichtbar zu machen und keine Black-Box zu erstellen soll die M\"oglichkeit der Interaktion \"uber die Schnittstellen und Pins des Boards bestehen. Insbesondere soll zum Debugging eine grafische Registerausgabe \"uber den VGA-Port an einem Monitor m\"oglich sein.\footnote{Siehe dazu auch Pflichtenheft vom 02.06.16 bzw. 12.11.16}
+Um die Funktionsf\"ahigkeit des Prozessors auch nach au{\ss}en sichtbar zu machen und keine Black-Box zu erstellen soll die M\"oglichkeit der Interaktion \"uber die Schnittstellen und Pins des Boards bestehen. Insbesondere soll zum Debugging eine grafische Registerausgabe \"uber den VGA-Port an einem Monitor m\"oglich sein.\footnote{Siehe dazu auch Pflichtenhefte vom 02.06.16 bzw. 12.11.16}
 
 \Section{Erweiterungsziele}
 
-Aufgrund der Modularit\"at von RISC-V bietet es sich an die Erweiterung \Externalname{RV32M Standard Extension for Integer Multiplication and Division} zu implementieren. Zudem soll die rudiment\"are Ausgabe um einen Textmodus erweitert werden, sodass mittels Memory-Mapping ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Zum Demonstrieren der Funktionalit\"at soll au{\ss}erdem ein auf dem Prozessor lauff\"ahiges Spiel entwickelt werden. Um auch Daten\"ubertragung mit der Au{\ss}enwelt zu erm\"oglichen soll die serielle Schnittstelle genutzt werden.
+Aufgrund der Modularit\"at von RISC-V bietet es sich an die Erweiterung \Externalname{RV32M Standard Extension for Integer Multiplication and Division} zu implementieren, welche Multiplikations- und Divisionsbefehle beinhaltet. Zudem soll die rudiment\"are Ausgabe um einen Textmodus erweitert werden, sodass mittels Memory-Mapping ASCII-Zeichen auf dem Monitor ausgegeben werden k\"onnen. Zum Demonstrieren der Funktionalit\"at soll au{\ss}erdem ein auf dem Prozessor lauff\"ahiges Spiel entwickelt werden. Um auch Daten\"ubertragung mit der Au{\ss}enwelt zu erm\"oglichen soll die serielle Schnittstelle genutzt werden.
 
 \Section{Projektablauf}
 \Subsection{Zeitlicher Verlauf}
 W\"ahrend den zwei Semestern Praktikumsdauer wurden insgesamt drei Versionen
 des Prozessors gebaut:
 
-\begin{table}
+\begin{table}[H]
 \begin{tabular}{|p{50pt}|p{80pt}|p{220pt}|p{110pt}|}
 \hline
 Version & Zeitraum                                   & Ziele                                                                            & davon nicht erreicht                          \\
@@ -58,12 +58,12 @@ Version & Zeitraum                                   & Ziele                    
 Da die Aufteilung eines Prozessors in Leitwerk, ALU und MMU nahe lag, wurde
 f\"ur jede dieser Einheiten durchg\"angig eine Kleingruppe verantwortlich
 gemacht. Dennoch wurde entschieden, dass ein Treffen pro Woche sinnvoll zum
-Testen und Integrieren der einzelnen Einheiten ist. Im Allgemeinen wurden
-gr\"ossere Entscheidungen \"uber das Design des Prozessors oder das
-Projektmanagment meistens im Plenum besprochen und getroffen.
+Testen und Integrieren der einzelnen Einheiten ist. Es hat sich jedoch
+herausgestellt, dass bei diesen Treffen meistens nur die Gruppen zweier
+Einheiten ??????????????????
 
 \Section{Verwendete Tools}
-Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwareprogrammierungssprache gute Kenntnisse hatten.\\
+Das Projekt wurde in VHDL implementiert, da s\"amtliche Programmierer ausschlie{\ss}lich in dieser Hardwarebeschreibungssprache gute Kenntnisse hatten.\\
 Zur Entwicklung wurde haupts\"achlich Xilinx' \Externalname{ISE Project Navigator} in Version 14.7 verwendet. Dieser diente zugleich als Editor f\"ur den VHDL-Code und auch als Werkzeug um daraus die Programming-Files, mit welchen das FPGA beschrieben wird, zu generieren. Der integrierte \Externalname{Core Generator} wurde dabei benutzt um einzelne Module zu erstellen.\\
 \begin{figure}[H]
 	\centering
