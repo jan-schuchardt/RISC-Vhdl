@@ -1,11 +1,12 @@
+
 \Chapter{Das Leitwerk}
 
 \Section{\"Uberblick}
-Das Leitwerk ist die zentrale Steuereinheit des Prozessors. Es interpretiert
-die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU. Besondere
-Aufmerksamkeit wurde dabei mehr auf Robustheit und weniger auf maximale
-Geschwindigkeit gelegt. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter
-(PC) und das Instruction-Register~(IR).
+Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es
+interpretiert die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU.
+Der Fokus lag dabei mehr auf Robustheit und weniger auf Aspekten der
+Performanz. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter~(PC) und
+das Instruction-Register~(IR).
 
 Es besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine. Welche
 ausgef\"uhrt wird h\"angt allein vom Inhalt des Instruction-Register ab. Daher
@@ -20,13 +21,13 @@ eine Eingabe aus diesen Makros in VHDL-Code.
 \Subsection{Legende}
 Da jeder Befehl eine eigene Zustandsmaschine besitzt wird hier f\"ur jeden
 Befehl ein eigenes Zustands\-\"uber\-gangs\-dia\-gramm gezeigt. Die Pr\"afixe
-"`MMU:'' und "`ALU:'' werden genutzt um anzuzeigen, dass eine Aktion von der
-jeweiligen Einheit ausgef\"uhrt wird und das Leitwerk lediglich eine Anweisung
-gibt.
+``MMU:'' und ``ALU:'' werden genutzt, um anzuzeigen, dass eine Operation an die
+jeweiligen Einheit delegiert wird und das Leitwerk lediglich eine Anfrage an
+die entsprechende Komponente sendet.
 
-In der ISA wird regelm\"a\ss{}ig verlangt, dass Operanden sign-extended werden.
-Dies wird in den Zustands\-\"uber\-gangs\-dia\-grammen der \"Ubersicht halber
-weggelassen. Im Prozessor ist es selbstverst\"andlich wie in der ISA
+Obwohl in ISA regelm\"a\ss{}ig verlangt wird, dass Operanden sign-extended
+werden, wurde dies in den Zustands\-\"uber\-gangs\-dia\-grammen der \"Ubersicht
+halber weggelassen. Im Prozessor ist es selbstverst\"andlich wie in der ISA
 beschrieben implementiert.
 
 \Section{Integer Rechenbefehle}
@@ -44,10 +45,10 @@ die jeweilige Operation (\(+\), \(-\), \dots{}).
 }
 
 \Subsection{Division und Modulo}
-Da bei der Division unm\"oglich zu garantieren ist, dass diese immer nach drei
-Takten beendet ist, muss das Leitwerk hier auf eine Best\"atigung der ALU
-warten. Diese sieht vor, dass das Rechenwerk die Leitungen \Vhdl{alu\_data\_in}
-auf 0 setzt.
+Da bei der Division unm\"oglich zu garantieren ist, dass diese immer innerhalb
+von drei Takten erfolgreich beendet wird, muss das Leitwerk hier auf eine
+Best\"atigung der ALU warten. Diese sieht vor, dass das Rechenwerk die
+Leitungen \Vhdl{alu\_data\_in} auf 0 setzt.
 
 \Statemachine{./cu/img/division.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
@@ -57,7 +58,7 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.
 \Section{LUI und AUPIC}
 Da durch die Integer Rechenbefehle keine 32-Bit Immediates direkt geladen werden
 k\"onnen, definiert die RISC-V-ISA die Befehle \Instr{LUI} und \Instr{AUPIC}, die
-diesen Mangel beheben. Auch diese Befehle wurden auf Geschwindigkeit optimiert.
+diesen Mangel beheben.
 
 \Statemachine{./cu/img/lui_und_aupic.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
@@ -66,10 +67,11 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 
 
 \Section{Bedingte Spr\"unge}
-Da bei dem DDR2-Speicher des benutzten Boards nicht garantiert werden
-konnte, dass ein Speicherzugriff ohne Zeit- und Datenverlust abgebrochen werden
-kann, wurde auf eine Branch-Prediction g\"anzlich verzichtet. Dadurch geh\"oren
-die bedingten Spr\"unge zu den teuersten Befehlen des Prozessors.
+Da bei Speicherzugriffen auf den DDR2-SDRAM Block der MMU\ref{ch:mmu}, dass ein
+Speicherzugriff ohne Zeit- und Datenverlust abgebrochen werden kann, wurde auf
+eine einfache Branch-Prediction g\"anzlich verzichtet. Dadurch geh\"ören die
+bedingten Spr\"unge im Hinblick auf Rechenzeit zu den teuersten Befehlen des
+Prozessors.
 
 \Statemachine{./cu/img/beq_und_bgeu.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{BEQ} und \Instr{BGE[U]}.}
@@ -100,8 +102,8 @@ Der LOAD-Befehl l\"adt aus dem Speicher immer einen 32-Bit Wert, den das
 Leitwerk dann zuschneidet. Dies sollte urspr\"unglich die Implementierung der
 MMU vereinfachen und aligned-Speicherzugriffe beschleunigen, es hat sich
 allerdings herausgestellt, dass diese Entscheidung derzeit nur Nachteile mit
-sich bringt. Die Ausf\"uhrung des Befehls ist durchschnittlich und wird in der
-Praxis haupts\"achlich von der Speichergeschwindigkeit bestimmt.
+sich bringt. Die Ausf\"uhrungsdauer des Befehls wird in der Praxis
+haupts\"achlich von der adressierten Speicherkomponente bestimmt.
 
 \Statemachine{./cu/img/load.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
@@ -109,11 +111,13 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
 }
 
 \Section{STORE}
-Der Store-Befehl ist mit nur einer ALU und nur einer MMU nicht zu
-parallelisieren, was dazu f\"uhrt, dass er der langsamste Befehl des Prozessors
-ist. Da dieser Befehl jedoch generell auf RISC-Architekturen sehr langsam
-ausgef\"uhrt wird, versuchen Compiler und Programmierer ohnehin
-schreibende Speicherzugriffe zu vermeiden.
+Der Store-Befehl ist mit nur einem Rechen- und Speicherwerk nicht zu
+parallelisieren, was dazu f\"uhrt, dass er den langsamsten Befehl des
+Prozessors darstellt. Da Schreibzugriffe jedoch generell auf
+RISC-Architekturen traditionell sehr hohe Kosten hinsichtlich der
+ben\"otigten Rechenzeit aufweisen, sind Compiler und Programmierer
+ohnehin dazu angehalten, schreibende Speicherzugriffe wo m\"oglich zu
+vermeiden.
 
 \Statemachine{./cu/img/store.pdf}{
 Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.}
@@ -121,6 +125,12 @@ Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.}
 }
 
 \Section{Timer und Counter}
+Wie in der RISC-V-ISA gefordert existiert des Weiteren ein Counter, der die
+Anzahl der bisher ausgef\"uhrten Befehle z\"ahlt. Au\ss{}erdem gibt es einen
+Timer, der analog dazu die Anzahl der bereits vergangenen Takte speichert. Da
+das Entwicklungsboard allerdings keine Echtzeituhr bereitstellt, greift die
+Implementierung dieser Funktionalit\"at auf den Taktz\"ahler zur\"uck.
+
 Wie in der RISC-V-ISA gefordert gibt es einen Counter, der die Anzahl der
 bisher ausgef\"uhrten Befehle speichert. Au\ss{}erdem gibt es einen Timer, der
 die Anzahl der vergangenen Takte speichert. Da das FPGA keine Echtzeituhr
