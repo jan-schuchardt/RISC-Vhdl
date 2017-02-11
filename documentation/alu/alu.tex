@@ -14,7 +14,12 @@ Aus diesem Grund werden grunds\"atzlich alle Befehle (exklusive der Division) mi
 Um die Komplexit\"at des Leitwerks zu reduzieren, wurde die Low-Level-Verwaltung der Register in die ALU ausgelagert. Diese wurden als Dual-Port-Blockram realisiert, um die Anzahl an belegten Slices auf dem FPGA zu reduzieren.
 
 \Section{Das Interface}
-HIER KOMMT EIN BILD VOM INTERFACE ODER S\"O
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{interface.jpg}
+	\caption[Schnittstelle der ALU-Einheit]{Schnittstelle der ALU mit Portnamen und -breiten}
+	\label{fig:aluinterface}
+\end{figure}
 
 Neben zwei 32-Bit-Eing\"angen f\"ur Operanden, gibt es einen dedizierten Eingang f\"ur Registeradressen sowie einen zur Auswahl der gew\"unschten Operation. 
 Der Adresseingang dient hierbei lediglich zur Adressierung des Zielregisters. Da alle Befehle nur aus zwei Operanden bestehen, werden die Operanden-Eing\"ange entweder zur \"Ubermittlung von Immediates, oder zur Adressierung der Operanden-Register verwendet, was die Anzahl der Eing\"ange reduziert.
