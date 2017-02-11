@@ -1,11 +1,11 @@
 \Chapter{Die MMU}
 \label{ch:mmu}
 
-Die MMU (Memory Management Unit) verwaltet den in Bl\"ocke gegliederten Speicherbereich und die darauf erfolgenden Zugriffe. Die Einheit bietet dabei eine Schnittstelle für lesende und schreibende Speicheranfragen, welche in unterschiedlichen Zeitintervallen bearbeitet werden.
+Die MMU (Memory Management Unit) verwaltet den in Bl\"ocke gegliederten Speicherbereich und die darauf erfolgenden Zugriffe. Die Einheit bietet dabei eine Schnittstelle f\"ur lesende und schreibende Speicheranfragen, welche in unterschiedlichen Zeitintervallen bearbeitet werden.
 
 \Section{\"Uberblick}
 
-Der adressierbare Speicher innerhalb des Prozessors ist blockweise organisiert. Die MMU verwaltet einerseits die einzelnen Controller für die jeweiligen RAM-Bl\"ocke und taktet andererseits die angefragten Zugriffe auf diese.
+Der adressierbare Speicher innerhalb des Prozessors ist blockweise organisiert. Die MMU verwaltet einerseits die einzelnen Controller f\"ur die jeweiligen RAM-Bl\"ocke und taktet andererseits die angefragten Zugriffe auf diese.
 
 Sie ist aufgrund der \"uberwiegend sehr \"ahnlichen Adressierungsprozeduren intern durch eine Statemachine realisiert, welche anhand einer Speicheradresse die jeweiligen Speicheranfragen an den dem RAM-Block entsprechenden Controller weiterleitet.
 
@@ -23,19 +23,19 @@ Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Ko
 
 \Subsection{Kommunikation mit dem Leitwerk}
 
-Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal cmd\_in die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des work\_in Signals mit der Bearbeitung der Anfrage. Der 3-Bit Vektor cmd\_in ist wie folgt aufgebaut:
+Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal \Vhdl{cmd\_in} die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des \Vhdl{work\_in} Signals mit der Bearbeitung der Anfrage. Der 3-Bit-Vektor \Vhdl{cmd\_in} ist wie folgt aufgebaut:
 
 \begin{center}
 	\begin{tabular}{| l | l |}
 		\hline
-		Bit 2 & 1 Bit 1 - 0 \\ \hline
+		Bit 2 & Bit 1 - 0 \\ \hline
 		0 := Read, 1 := Write & 0 := 8 Bit, 1 := 16 Bit, 3 := 32 Bit \\ 		\hline
 	\end{tabular}
 \end{center}
 
-Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement ack\_out, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang data\_out korrekt belegt wurde.
+Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement \Vhdl{ack\_out}, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang \Vhdl{data\_out} korrekt belegt wurde.
 
-Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im cmd\_in definierten Datenbreite 32-Bit  lie\ss{}t. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
+Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit lie\ss{}t. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
 
 \Subsection{Durch die MMU geleitete Signale an andere Komponenten}
 
@@ -45,7 +45,7 @@ Wie eingangs erw\"ahnt lassen sich die \"ubrigen Signale dem Weiterleiten von Si
 
 Wie bereits geschildert wird der Speicher in verschiedene Bereiche unterschiedlicher Gr\"o\ss{}e untergliedert. Jeder dieser Bereiche wird von einem Controller verwaltet, welcher bei einer eingehenden Anfrage durch die MMU angesprochen wird. Dabei h\"angt die Bearbeitungsdauer ma\ss{}geblich vom adressierten Speicherblock ab.
 
-Aus der durch den Prozessor implementierten Wortgr\"o\ss{}e von 32 Bit ergibt sich ein Adressraum, potenziell $2^{32}$ potenzielle Speicherzellen mit einer Gr\"o\ss{}e von je 8 Bit umfasst. Dass nicht jeder dadurch zur Verf\"ugung stehende Bereich auch tats\"achlich auch nutzbar ist, l\"asst sich auf die vom FPGA zur Verf\"ugung gestellten Speicherressourcen zur\"uckf\"uhren.
+Aus der durch den Prozessor implementierten Wortgr\"o\ss{}e von 32 Bit ergibt sich ein Adressraum, der potenziell $2^{32}$ Speicherzellen mit einer Gr\"o\ss{}e von je 8 Bit umfasst. Dass nicht jeder dadurch zur Verf\"ugung stehende Bereich auch tats\"achlich auch nutzbar ist, l\"asst sich auf die vom FPGA zur Verf\"ugung gestellten Speicherressourcen zur\"uckf\"uhren.
 
 Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherbereich bestimmt, und ein Offset innerhalb dieses Speicherblocks wie folgt unterteilt:
 
@@ -74,7 +74,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 	\label{tab:ramlayout}
 \end{table}
 
-Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert.
+Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
 
 Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was insbesondere bei 16-Bit beziehungsweise 32-Bit Zugriffen ber\"ucksichtigt werden muss.
 
@@ -97,7 +97,7 @@ Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnitts
 	\end{tabular}
 \end{center}
 
-Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht schnell genug taktet, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird. Bits, die nicht genutzt und in der Tabelle mit - vermerkt sind, entsprechen stets dem konstanten Wert 0 und bieten daher auch keinerlei Speicherqualit\"at.
+Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht schnell genug taktet, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird. Bits, die nicht genutzt und in der Tabelle mit `-' vermerkt sind, entsprechen stets dem konstanten Wert 0 und bieten daher auch keinerlei Speicherf\"ahigkeit.
 
 Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabesignal auf der Hardware wiederfindet. Dabei entsprechen die Bezeichner denen aus der zuvor abgebildeten Tabelle.
 
