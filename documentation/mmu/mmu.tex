@@ -53,7 +53,7 @@ Aus der durch den Prozessor implementierten Wortgr\"o\ss{}e von 32 Bit ergibt si
 
 Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherbereich bestimmt, und ein Offset innerhalb dieses Speicherblocks wie folgt unterteilt:
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| l | l |}
 		\hline
@@ -66,7 +66,7 @@ Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherb
 
 Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
 
-\begin{table}[h]
+\begin{table}[H]
 	\begin{center}
 	\begin{tabular}{| l | l | l | l |}
 		\hline
@@ -90,7 +90,7 @@ Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was i
 \label{sec:mmuio}
 Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
 	\hline
@@ -167,7 +167,7 @@ Bei einem Reset wechselt die MMU ungeachtet ihres derzeitigen Zustands in den MM
 
 Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lassen sich nun f\"ur die einzelnen Speicherbl\"ocke die exakten Zugriffsdauern beziehungsweise im Fall des DDR2-SDRAMs, welcher unter Umst\"anden durch einen periodisch auftretenden Auto-Refresh eine erh\"ohte Zugriffszeit ben\"ontigt, eine Mindestzugriffsdauer errechnen.
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| l | l | l | l |}
 		\hline

@@ -12,4 +12,13 @@ Divisionseinheit, als n\"otig w\"are.
 k\"onnte man hier eine Geschwindigkeitssteigerung erzielen.
 \item[Leitwerk] Das Leitwerk wartet am Ende einiger Befehle noch 3 Takte auf
 die ALU, ohne, dass diese vorher gestartet wurde.
+\item[MMU,allgemein] Die Buttons und Switches werden nicht entprellt.
+\item[UART] Die UART-Einheit korrigiert keine Fehler in der \"Ubertragung,
+weshalb nur eine sehr begrenzte Datenmenge fehlerfrei \"ubertragen werden kann.
+Dadurch k\"onnen bei einer Programmierung durch die serielle Schnittstelle nur
+sehr kleine Programme zum Einsatz kommen.
+\item[UART] Die serielle Schnittstelle kann w\"ahrend der normalen
+Codeausf\"uhrung des Prozessors nicht zuverl\"assig genutzt werden, da die
+Refresh-Zyklen des DDR2-RAMs die Befehlsausf\"uhrung behindern und damit
+\"ubertragene Bytes verpasst werden.
 \end{description}
