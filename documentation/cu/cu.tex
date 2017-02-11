@@ -1,5 +1,6 @@
 
 \Chapter{Das Leitwerk}
+\label{ch:cu}
 
 \Section{\"Uberblick}
 Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es
@@ -47,8 +48,8 @@ die jeweilige Operation (\(+\), \(-\), \dots{}).
 \Subsection{Division und Modulo}
 Da bei der Division unm\"oglich zu garantieren ist, dass diese immer innerhalb
 von drei Takten erfolgreich beendet wird, muss das Leitwerk hier auf eine
-Best\"atigung der ALU warten. Diese sieht vor, dass das Rechenwerk die
-Leitungen \Vhdl{alu\_data\_in} auf 0 setzt.
+Best\"atigung der ALU\ref{ch:alu} warten. Diese sieht vor, dass das Rechenwerk
+die Leitungen \Vhdl{alu\_data\_in} auf 0 setzt.
 
 \Statemachine{./cu/img/division.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U][W]} und \Instr{REM[U][W]}.

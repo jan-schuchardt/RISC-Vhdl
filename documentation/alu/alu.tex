@@ -1,5 +1,6 @@
-\newpage
 \Chapter{Die Arithmetische Logische Einheit}
+\label{ch:alu}
+
 Die Arithmetisch Logische Einheit ist verantwortlich f\"ur die Durchf\"uhrung aller f\"ur die Befehlsausf\"uhrung durch das Leitwerk relevanten Rechenoperationen. Zus\"atzlich verwaltet sie die Register des Prozessors.
 
 
@@ -45,15 +46,15 @@ Darauf folgt der f\"unf Bit umfassende interne OpCode. Zur Verf\"ugung stehen Op
 
 
 \Statemachine{./alu/img/states.pdf}{
-Zustands\"ubergangsdiagramm für die Befehlsausführung innerhalb der ALU
-}
+Zustands\"ubergangsdiagramm f\"ur die Befehlsausf\"uhrung innerhalb der ALU
+}{}
 
 Die Ausf\"uhrung von Befehlen ist \"uber eine State-Machine mit drei zentralen Zust\"anden, sowie zwei Zusatzzust\"anden f\"ur Signed- und Unsigned-Division bzw. Modulo-Operationen. In jedem der drei zentralen Zust\"ande wird dabei jeweils nur f\"ur einen Takt verblieben.
 
 
 \Subsection{State 1 - Selektion der Operanden}
 Die ALU wartet in State 1, bis vom Leitwerk das entsprechende Work-Signal gesendet wird.
-Anschlie"send werden auf Grundlage des IN SEKTION (…) BESCHRIEBENEN Befehls zwei Operanden-Signale \Vhdl{s\_op1} und \Vhdl{s\_op2} mit einem Immediate vom Daten-Eingang belegt, oder oder aber es wird ein Register-Lesezugriff angesto"sen, dessen Ergebnis dann im nächsten Takt zur Verf\"ugung steht.
+Anschlie\ss{}end werden auf Grundlage des IN SEKTION (…) BESCHRIEBENEN Befehls zwei Operanden-Signale \Vhdl{s\_op1} und \Vhdl{s\_op2} mit einem Immediate vom Daten-Eingang belegt, oder oder aber es wird ein Register-Lesezugriff angesto"sen, dessen Ergebnis dann im nächsten Takt zur Verf\"ugung steht.
 
 
 \Subsection{State 2 - Operatonsausf\"uhrung}
