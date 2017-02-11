@@ -70,7 +70,8 @@
 	.setup_border_loop
 		blt x3, x0, end_setup_border
 		//pick the right border to print (usually we pick vborder)
-		addi x18, x0, vborder
+		lui x18, 0x40000
+		addi x18, x18, vborder
 		slli x27, x3, 6 //row counter * 64
 		lui x19, 0x20000
 		addi x19, x19, 64
@@ -83,7 +84,8 @@
 		beq x3, x26, phbord
 		bne x3, x0, wboard
 		.phbord
-			addi x18, x0, hborder
+			lui x18, 0x40000
+			addi x18, x18, hborder
 		.wboard
 		addi x20, x0, 32
 		jal x1, memcpy
@@ -116,9 +118,11 @@
 	
 	addi x5, x0, 4 //cnt
 	
-	addi x4, x0, cross
+	lui x4, 0x40000
+	addi x4, x4, cross
 	beq x20, x0, do_print_element
-	addi x4, x0, dot
+	lui x4, 0x40000
+	addi x4, x4, dot
 	
 	.do_print_element
 	beq x5, x0, end_print_element
@@ -263,7 +267,8 @@
 	jal x1, memfill
 	
 	addi x19, x3, 0
-	addi x18, x0, str_player_turn
+	lui x18, 0x40000
+	addi x18, x18, str_player_turn
 	addi x20, x0, 24
 	jal x1, memcpy
 	
@@ -325,7 +330,8 @@
 	blt x18, x0, idle_loop
 	
 	addi x3, x18, 0
-	addi x18, x0, str_player_won
+	lui x18, 0x40000
+	addi x18, x18, str_player_won
 	lui x19, 0x20000
 	addi x19, x19, 0x440
 	addi x20, x0, 20

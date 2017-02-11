@@ -25,13 +25,17 @@ Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Ko
 
 Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal \Vhdl{cmd\_in} die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des \Vhdl{work\_in} Signals mit der Bearbeitung der Anfrage. Der 3-Bit-Vektor \Vhdl{cmd\_in} ist wie folgt aufgebaut:
 
+	\begin{table}
 \begin{center}
+
 	\begin{tabular}{| l | l |}
 		\hline
 		Bit 2 & Bit 1 - 0 \\ \hline
 		0 := Read, 1 := Write & 0 := 8 Bit, 1 := 16 Bit, 3 := 32 Bit \\ 		\hline
 	\end{tabular}
+	\caption{Aufbau des Kommunikationssignals zwischen Leitwerk und MMU}
 \end{center}
+\end{table}
 
 Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement \Vhdl{ack\_out}, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang \Vhdl{data\_out} korrekt belegt wurde.
 
@@ -49,6 +53,7 @@ Aus der durch den Prozessor implementierten Wortgr\"o\ss{}e von 32 Bit ergibt si
 
 Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherbereich bestimmt, und ein Offset innerhalb dieses Speicherblocks wie folgt unterteilt:
 
+\begin{table}
 \begin{center}
 	\begin{tabular}{| l | l |}
 		\hline
@@ -56,6 +61,8 @@ Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherb
 		Pr\"afix & Offset \\ \hline
 	\end{tabular}
 \end{center}
+\caption{Aufbau des Adressvektors}
+\end{table}
 
 Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
 
@@ -72,6 +79,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 	\end{tabular}
 	\end{center}
 	\label{tab:ramlayout}
+	\caption{Aufbau des Speichers als Bl\"ocke}
 \end{table}
 
 Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
@@ -82,6 +90,7 @@ Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was i
 \label{sec:mmuio}
 Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
 
+\begin{table}
 \begin{center}
 	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
 	\hline
@@ -96,6 +105,8 @@ Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnitts
 	0x7 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
 	\end{tabular}
 \end{center}
+\caption{Memory-Mapped I/O im Detail}
+\end{table}
 
 Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht schnell genug taktet, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird. Bits, die nicht genutzt und in der Tabelle mit `-' vermerkt sind, entsprechen stets dem konstanten Wert 0 und bieten daher auch keinerlei Speicherf\"ahigkeit.
 
@@ -156,6 +167,7 @@ Bei einem Reset wechselt die MMU ungeachtet ihres derzeitigen Zustands in den MM
 
 Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lassen sich nun f\"ur die einzelnen Speicherbl\"ocke die exakten Zugriffsdauern beziehungsweise im Fall des DDR2-SDRAMs, welcher unter Umst\"anden durch einen periodisch auftretenden Auto-Refresh eine erh\"ohte Zugriffszeit ben\"ontigt, eine Mindestzugriffsdauer errechnen.
 
+\begin{table}
 \begin{center}
 	\begin{tabular}{| l | l | l | l |}
 		\hline
@@ -165,6 +177,8 @@ Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lass
 		32-Bit & 13 Takte \\ \hline
 	\end{tabular}
 \end{center}
+\caption{Zugriffsdauer einzelner Speicherzugriffe}
+\end{table}
 
 Aufgrund der identischen Struktur der RAM-Controller f\"ur als Dual-Port-Blockram realisierte Speicherbereiche ergeben sich f\"ur jene Speicherbl\"ocke identische Zugriffszeiten sowohl f\"ur lesende und schreibende Zugriffe, wobei eine 8-Bit Anfrage immer genau einen Takt kostet. Da der DDR2-SDRAM f\"ur seine Zugriffsdauer im Bezug auf lesende und schreibende Operationen nicht nach oben hin abgesch\"atzt werden kann, jedoch keinesfalls weniger als einen Takt brauchen wird, entsprechen die Mindestzugriffszeiten ebenfalls der oben dargestellten Tabelle.
 

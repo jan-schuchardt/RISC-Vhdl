@@ -17,13 +17,14 @@ bram = [0] * 2048
 cram = [0] * 2048
 ddr2ram = [0] * 0x10000
 ioram = [0]*4
+pram = [0] * 2048
 
-ram = {0:bram, 1:cram, 2:ddr2ram, 3:ioram}
+ram = {0:bram, 1:cram, 2:ddr2ram, 3:ioram, 4:pram}
 
 reg_last_set = []
 ram_last_set = []
 
-breakpoints = set([0])
+breakpoints = set([0x40000000])
 
 symbols = {}
 
@@ -143,7 +144,8 @@ def print_regs():
 def load_binary(binary):
     try:
         for i in range(0, len(binary)):
-            bram[i] = binary[i]
+            #bram[i] = binary[i]
+            pram[i] = binary[i]
     except Exception as e:
         print("Bram does not provide enough space to store %d bytes", len(binary))
         raise e
@@ -564,8 +566,8 @@ def debug():
     global pc
     global branch
     global timer_expired
-    pc = 0
-    next_breakpoint = 0
+    pc = 0x40000000
+    next_breakpoint = 0x40000000
     try:
         while True:
             
