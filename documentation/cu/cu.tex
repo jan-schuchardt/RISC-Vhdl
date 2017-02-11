@@ -9,7 +9,7 @@ Der Fokus lag dabei mehr auf Robustheit und weniger auf Aspekten der
 Performanz. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter~(PC) und
 das Instruction-Register~(IR).
 
-Es besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine, dessen Ausf\"uhrung
+Es besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine, deren Verhalten 
 durch den Inhalt des Instruction-Register gesteuert wird. Daher muss jeder
 Befehl als letztes das IR mit dem Opcode des folgenden Befehl laden. Wann dies
 geschieht kann in jedem Befehl einzeln optimiert werden.
@@ -20,13 +20,13 @@ dann die Befehle zusammengebaut werden k\"onnen. Das Skript kompiliert dann
 eine Eingabe aus diesen Makros in VHDL-Code.
 
 \Subsection{Legende}
-Da jeder Befehl eine eigene Zustandsmaschine besitzt wird hier f\"ur jeden
+Da jeder Befehl eine eigene Zustandsmaschine besitzt, wird hier f\"ur jeden
 Befehl ein eigenes Zustands\-\"uber\-gangs\-dia\-gramm gezeigt. Die Pr\"afixe
 ``MMU:'' und ``ALU:'' werden genutzt, um anzuzeigen, dass eine Operation an die
 jeweiligen Einheit delegiert wird und das Leitwerk lediglich eine Anfrage an
 die entsprechende Komponente sendet.
 
-Obwohl in ISA regelm\"a\ss{}ig verlangt wird, dass Operanden sign-extended
+Obwohl in der ISA regelm\"a\ss{}ig verlangt wird, dass Operanden sign-extended
 werden, wurde dies in den Zustands\-\"uber\-gangs\-dia\-grammen der \"Ubersicht
 halber weggelassen. Im Prozessor ist es selbstverst\"andlich wie in der ISA
 beschrieben implementiert.
@@ -101,7 +101,7 @@ Register, welches durch \Ipart{rs1} adressiert wird.
 \Section{LOAD}
 Der LOAD-Befehl l\"adt aus dem Speicher immer einen 32-Bit Wert, den das
 Leitwerk dann zuschneidet. Dies sollte urspr\"unglich die Implementierung der
-MMU vereinfachen und aligned-Speicherzugriffe beschleunigen, es hat sich
+MMU vereinfachen und aligned-Speicherzugriffe beschleunigen. Es hat sich
 allerdings herausgestellt, dass diese Entscheidung derzeit nur Nachteile mit
 sich bringt. Die Ausf\"uhrungsdauer des Befehls wird in der Praxis
 haupts\"achlich von der adressierten Speicherkomponente bestimmt.

@@ -1,12 +1,12 @@
-\Chapter{Die Arithmetische Logische Einheit}
+\Chapter{Die arithmetisch-logische Einheit}
 \label{ch:alu}
 
-Die Arithmetisch Logische Einheit ist verantwortlich f\"ur die Durchf\"uhrung aller f\"ur die Befehlsausf\"uhrung durch das Leitwerk relevanten Rechenoperationen. Zus\"atzlich verwaltet sie die Register des Prozessors.
+Die arithmetisch-logische Einheit \textit{ALU} ist verantwortlich f\"ur die Durchf\"uhrung aller f\"ur die Befehlsausf\"uhrung durch das Leitwerk relevanten Rechenoperationen. Zus\"atzlich verwaltet sie die Register des Prozessors.
 
 
 \Section{\"Uberblick}
 Zentrale Design-Idee hinter der ALU ist es, mehr als einen reinen Multiplexer f\"ur Befehle zu entwickeln. Stattdessen bietet sie dem Leitwerk ein Interface,
-\"uber das Operationen auf Registern oder Immediates angefragt werden k\"onnen, wozu eine Menge von Prozessor-internen Opcodes definiert wurden.
+\"uber das Operationen auf Registern oder Immediates angefragt werden k\"onnen. Hierzu wurde eine Menge von Prozessor-internen Opcodes definiert.
 
 Da die ALU auch zur Ausf\"uhrung von nicht-arithmetischen Maschinenbefehlen, beispielsweise bei Spr\"ungen, oft beansprucht wird, sollte der Synchronisations- und Kommunikationsaufwand zwischen ALU und Leitwerk m\"oglichst reduziert werden.
 Aus diesem Grund werden grunds\"atzlich alle Befehle (exklusive der Division) mittels einer Zustandsmaschine innerhalb von drei Takten ausgef\"uhrt, wodurch kein Synchronisations-Protokoll zwischen ALU und Leitwerk von N\"oten ist.
@@ -54,7 +54,7 @@ Darauf folgt der f\"unf Bit umfassende interne OpCode. Zur Verf\"ugung stehen Op
 Zustands\"ubergangsdiagramm der Befehlsausf\"uhrung innerhalb der ALU
 }{}
 
-Die Ausf\"uhrung von Befehlen ist \"uber eine State-Machine mit drei zentralen Zust\"anden, sowie zwei Zusatzzust\"anden f\"ur Signed- und Unsigned-Division bzw. Modulo-Operationen. In jedem der drei zentralen Zust\"ande wird dabei jeweils nur f\"ur einen Takt verblieben.
+Die Ausf\"uhrung von Befehlen ist \"uber eine State-Machine mit drei zentralen Zust\"anden, sowie zwei Zusatzzust\"anden f\"ur Signed- und Unsigned-Division bzw. Modulo-Operationen realisiert. In jedem der drei zentralen Zust\"ande wird dabei nur f\"ur einen Takt verblieben.
 
 
 \Subsection{State 1 - Selektion der Operanden}
@@ -79,7 +79,7 @@ Im Falle einer Modulo- oder Unsigned-Division wird in State 2 der \"Ubergang in 
 \Subsection{State 3 - Write-Back}
 In State 3 werden die akkumulierten Ergebnisse in das von der ALU adressierte Register geschrieben.
 
-Bei den meisten der Operationen kann dies unmittelbar erfolgen. Bei Multiplikationsoperationen allerdings muss jedoch zuerst an Hand des OpCodes entschiedene werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abh\"angig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellen werden, wie oben beschrieben, gegebenenfalls die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
+Bei den meisten der Operationen kann dies unmittelbar erfolgen. Bei Multiplikationsoperationen allerdings muss jedoch zuerst an Hand des OpCodes entschieden werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abh\"angig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellen werden, wie oben beschrieben, gegebenenfalls die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
 
 
 Neben dem Speichern des Ergebnisses werden zwei zus\"atzliche Ausg\"ange belegt:
@@ -98,7 +98,7 @@ Anschlie\ss{}end werden je nach Anfrage entweder der Rest oder das Ergebnis in d
 Die Implementierung verl\"auft analog zu State 4, abgesehen davon, dass eine Einheit zur Durchf\"uhrung von Signed-Divisionen verwendet wird.
 
 \Section{Die Register}
-Insgesamt stellt die ALU 32 Register der Breite 32 Bit bereit, wobei Register x0 konstant durch den Wert 0 belegt und daher nicht \"uberschreibbar ist. Dies ist zum Beispiel \"au\ss{}erst n\"utzlich beim unver\"anderten Laden eines Registers.
+Insgesamt stellt die ALU 32 Register der Breite 32 Bit bereit, wobei Register x0 konstant mit dem Wert 0 belegt und nicht \"uberschreibbar ist. Dies ist zum Beispiel n\"utzlich beim unver\"anderten Laden eines Registers.
 
 Implementiert wurden die Register als Dual-Port-Blockram. Dieses Vorgehen erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was gerade bei Register-Register-Operationen von Vorteil ist. Zus\"atzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte Block-Ram-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10pt}
 

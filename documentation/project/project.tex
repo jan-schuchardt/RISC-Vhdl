@@ -1,8 +1,8 @@
 \Chapter{Projektablauf}
-Zu Beginn des Projekts wurde eine Unterteilung der Anforderungen in einerseits
-ein Basisangebot sowie ein daran ankn\"upfendes Erweiterungsangebot vollzogen.
-W\"ahrend innerhalb des ersten Semesters vor allem der Fokus auf die
-Eingew\"ohnung in die Entwicklungsumgebung und Realisierung der Basisziele lag,
+Zu Beginn des Projekts wurde eine Unterteilung der Anforderungen in ein
+Basisangebot sowie ein daran ankn\"upfendes Erweiterungsangebot vollzogen.
+W\"ahrend innerhalb des ersten Semesters vor allem der
+Eingew\"ohnung in die Entwicklungsumgebung und Realisierung der Basisziele diente,
 sah die Planung f\"ur das zweite Semester eine Erweiterung des dann bereits
 lauff\"ahigen Prozessors um zus\"atzliche Module vor. 
 
@@ -16,7 +16,7 @@ anzufertigen, welche auf dem zur Verf\"ugung gestellten Entwicklungsboard
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{Board.png}
-\caption{Das verwendete Entwicklungsboard von oben, der FPGA liegt zentral}
+\caption{Das verwendete Entwicklungsboard von oben, das FPGA liegt zentral}
 \label{fig:board}
 \end{figure}
 
@@ -48,9 +48,9 @@ ausgegeben werden k\"onnen. Weiterhin wurde, um eine bessere Interaktion mit
 dem Programmierer zu erm\"oglichen, auch die Umsetzung einer seriellen
 Schnittstelle in den geplanten Erweiterungsrahmen miteinbezogen. Zuletzt
 stellt auch das Entwerfen eines demonstrativen Programms, genauer eines
-einfachen Spiels, ma\ss{}geblich einen Bestandteil des Erweiterungsangebots
-dar, sodass die endg\"ultige Implementierung ad\"aquat zu pr\"asentieren sein
-sollte.\footnote{Siehe Fu\ss{}note 1}
+einfachen Spiels, einen ma\ss{}geblichen Bestandteil des Erweiterungsangebots
+dar, mit dem Ziel die endg\"ultige Implementierung ad\"aquat pr\"asentieren zu können.
+\footnote{Siehe Fu\ss{}note 1}
 
 \Section{Projektablauf}
 \Subsection{Chronologischer Verlauf}
@@ -102,7 +102,7 @@ Designentscheidungen wurden meist im Plenum besprochen.
 
 \Section{Verwendete Tools}
 Das Projekt wurde in der Hardwarebeschreibungssprache VHDL implementiert, was
-sich darin begr\"undet, dass diese Themenkomplex der zugrundeliegenden
+sich darin begr\"undet, dass dieser Themenkomplex Teil der zugrundeliegenden
 Lehrveranstaltung war und die Gruppenmitglieder daher auf einem
 einigerma\ss{}en gleichwertigen Kenntnisstand waren.
 
@@ -131,9 +131,9 @@ Um die doch recht umfassende Arbeit des Assemblierens eines Programms nicht
 h\"andisch erledigen zu m\"ussen, wurde, wie sp\"ater genauer erl\"autert wird,
 ein automatischer Assemblierer in der Skriptsprache Python entwickelt. Da die
 Generierung eines Programming-Files und das anschlie\ss{}ende Beschreiben des
-FPGAs nichtsdestotrotz jedes Mal mehrere Minuten in Anspruch genommen hatte,
+FPGAs nichtsdestotrotz jedes Mal mehrere Minuten in Anspruch nahm,
 wurden entsprechende Simulatoren verwendet. Zur Verifikation des VHDL-Codes
-beispielsweise wurde das Tool \textit{GHDL} in Kombination mit \textit{GTKWave}
+wurde beispielsweise das Tool \textit{GHDL} in Kombination mit \textit{GTKWave}
 benutzt. Auch zum Testen der Assemblerprogramme wurde ein Simulator auf
 Python-Basis, der die Umgebung des Boards emuliert, entworfen und in den
 Arbeitsprozess mit eingebunden.
