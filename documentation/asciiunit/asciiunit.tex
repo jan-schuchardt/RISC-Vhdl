@@ -6,7 +6,7 @@ Die ASCII-Unit ist f\"ur die Textausgabe auf dem Monitor zust\"andig.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{asciiunitexample.png}
-	\caption[Beispiel Textausgabe]{Beispiel f\"ur Textausgabe: jedes darstellbare Zeichen wird abgebildet}
+	\caption[Beispiel f\"ur die Textausgabe]{Beispiel f\"ur die Textausgabe: jedes darstellbare Zeichen wird abgebildet}
 	\label{fig:exampletext}
 \end{figure}
 
@@ -17,8 +17,8 @@ Um jedem Zeichen neben seiner ASCII-Nummer auch das entsprechende Aussehen zuord
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1.0\textwidth]{Bildschirm.png}	\caption[Berechnung ASCII-Unit]{Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichenfeldes zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\:  mod\:  8) + (y\:  mod\:  8) * 8$}
- 	
+		\includegraphics[width=1.0\textwidth]{Bildschirm.png}
+	\caption[Veranschaulichung der Adressberechnung der ASCII-Unit]{Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichenfeldes zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\:  mod\:  8) + (y\:  mod\:  8) * 8$}
 	\label{fig:pixels}
 \end{figure}
 
@@ -35,7 +35,7 @@ Zur CHARMAP, die als ROM fungieret, wird der Takt durchgeleitet und ebenso die a
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.3\textwidth]{Asciiunit.png}
-	\caption[Interface ASCII-Unit]{Das Interface der ASCII-Unit}
+	\caption[Interface der ASCII-Unit]{Das Interface der ASCII-Unit}
 	\label{fig:interface}
 \end{figure}
 
@@ -48,7 +48,7 @@ Diese Information wird dann im letzten Takt an die VGA-Unit zurückgesandt.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{ASCII.png}
-	\caption[\"Ubersicht ASCII-Unit]{\"Ubersicht: Beginn bei x- bzw. y-Koordinate; Verrechnung dieser zur Adresse f\"ur CHARRAM; dann Durchleiten in CHARMAP; anschlie\ss{}end Berechnung des Pixels; letztendlich Zur\"ucksenden an VGA-Unit}
+	\caption[\"Ubersicht \"uber die ASCII-Unit]{\"Ubersicht: Beginn bei x- bzw. y-Koordinate; Verrechnung dieser zur Adresse f\"ur CHARRAM; dann Durchleiten in CHARMAP; anschlie\ss{}end Berechnung des Pixels; letztendlich Zur\"ucksenden an VGA-Unit}
 	\label{fig:overview}
 \end{figure}
 

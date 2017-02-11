@@ -67,7 +67,7 @@ Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction S
 Der Assemblierer ist dabei in der Lage aus einem Eingabeprogrammcode, welches Spr\"unge, Labels und Kommentare enthalten kann, einerseits Bytecode sowie eine Symboltabelle zu erstellen. Des Weiteren wird der assemblierte Programmcode auch in korrekter VHDL-Syntax ausgegeben, sodass dieser zur Initialisierung einer Dual-Port-Blockram Komponente direkt eingebunden werden kann. Dabei wird der Assemblierer als Python-Script mit den Eingabewerten als Parametern aufgerufen:
 
 \begin{lstlisting}[language=bash]
-	$ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
+   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
 \end{lstlisting}
 
 Die Symboltabelle gibt dabei Auskunft \"uber die Speicheradresse eines im Programmcode definierten Labels. Aufgrund des modularen Aufbaus des Assemblierers k\"onnen Erweiterungen des Befehlssatzes sowie andere syntaktische Feinheiten dem Parsing- und Compilingprozess problemlos hinzugef\"ugt werden.
@@ -77,9 +77,8 @@ Die Symboltabelle gibt dabei Auskunft \"uber die Speicheradresse eines im Progra
 Der Simulator ist als Backend-Erweiterung zum Assemblierer gedacht, da dieser mithilfe der Ausgabedateien den Programmablauf simulieren kann. Analog zu bekannten Debugging-Umgebungen unterst\"utzt der Simulator das Setzen von Breakpoints sowie das Schrittweise Ausf\"uhren eines Befehls, w\"ahrend die verf\"ugbaren Register direkt im Blick behalten werden k\"onnen. Ferner ist es aber auch m\"oglich, den Programmablauf nach einem bestimmten Zeitintervall automatisch zu unterbrechen oder aber bestimmte Eingabesignale zu stimulieren (auch hier kann mit einem beliebigen Zeitintervall gearbeitet werden). Das Python-Script des Simulators wird in Verbindung mit dem Assemblierer wie folgt aufgerufen:
 
 \begin{lstlisting}
-	$ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
-	$ python riscv_simulation.py -s {symbols} -b {binary}
-
+   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
+   $ python riscv_simulation.py -s {symbols} -b {binary}
 \end{lstlisting}
 
 Dabei startet der Simulator an der Programmeinsprungsadresse und unterst\"utzt die folgenden Befehle:
