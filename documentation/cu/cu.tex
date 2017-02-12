@@ -3,7 +3,7 @@
 \label{ch:cu}
 
 \Section{\"Uberblick}
-Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es
+Das Leitwerk \textit{CU} stellt die zentrale Steuereinheit des Prozessors dar. Es
 interpretiert die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU.
 Der Fokus lag dabei mehr auf Robustheit und weniger auf Aspekten der
 Performanz. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter~(PC) und
@@ -71,7 +71,7 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 Da bei Speicherzugriffen auf den DDR2-SDRAM Block der MMU\ref{ch:mmu} nicht
 garantiert werden kann, dass ein Speicherzugriff ohne Zeit- und Datenverlust
 abgebrochen werden kann, wurde auf Branch-Prediction g\"anzlich verzichtet.
-Dadurch geh\"ören die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den
+Dadurch geh\"oren die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den
 teuersten Befehlen des Prozessors.
 
 \Statemachine{./cu/img/beq_und_bgeu.pdf}{

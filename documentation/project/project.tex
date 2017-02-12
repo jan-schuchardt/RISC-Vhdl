@@ -43,7 +43,7 @@ darunter auch die
 \textit{RV32M Standard Extension for Integer Multiplication and Division},
 welche Multiplikations- und Divisionsbefehle beinhaltet. Zudem sollte die
 rudiment\"are Ausgabe der internen Register um einen Textmodus erweitert
-werden, sodass mittels Memory-Mapping nun auch ASCII-Zeichen auf dem Monitor
+werden, sodass mittels Memory-Mapping auch ASCII-Zeichen auf dem Monitor
 ausgegeben werden k\"onnen. Weiterhin wurde, um eine bessere Interaktion mit
 dem Programmierer zu erm\"oglichen, auch die Umsetzung einer seriellen
 Schnittstelle in den geplanten Erweiterungsrahmen miteinbezogen. Zuletzt
@@ -89,6 +89,7 @@ Version                                  & Zeitraum                             
                                                                                                                                                                    \item auf den DDR2-RAM
                                                                                                                                                                    \end{description}                        \\
 \hline
+
 \begin{description}[noitemsep,topsep=0pt]
 \item 3
 \end{description}                        & \begin{description}[noitemsep,topsep=0pt]
@@ -98,12 +99,13 @@ Version                                  & Zeitraum                             
                                                                                       \item Implementierung der RV32M-Spezifikation
                                                                                       \item Lese- und Schreibzugriff auf den DDR2-RAM
                                                                                       \item ASCII-Ausgabe
-                                                                                      \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
+                                                                                      \item Zugriff auf Buttons, LEDs, \dots{} des Boards durch Memory-Mapped-I/O
                                                                                       \item serielle Schnittstelle (UART)
                                                                                       \end{itemize}                                                              & \begin{description}[noitemsep,topsep=0pt]
                                                                                                                                                                    \item serielle Schnittstelle
                                                                                                                                                                    \item (nur teilweise)
                                                                                                                                                                    \end{description}                        \\
+
 \hline
 \end{tabular}
 \caption{\"Ubersicht \"uber den Projektablauf}

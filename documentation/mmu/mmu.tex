@@ -39,7 +39,7 @@ Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adres
 
 Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement \Vhdl{ack\_out}, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang \Vhdl{data\_out} korrekt belegt wurde.
 
-Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit lie\ss{}t. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
+Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit liest. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
 
 \Subsection{Durch die MMU geleitete Signale an andere Komponenten}
 
@@ -72,7 +72,8 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 		\hline
 		Pr\"afix & K\"urzel & Gr\"o\ss{}e in Bytes & Kurzbeschreibung \\ \hline
 		0x0 & BIOS & $2^{11}$ & Programmeinsprungspunkt \\ \hline
-		0x1 & SDRAM & $2^{16}$\footnotemark{} & DDR2-SDRAM \\ \hline
+
+		0x1 & SDRAM & $2^{16}$\footnotemark{} & DDR2-SDRAM\footnote{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich} \\ \hline
 		0x2 & CHARRAM & $2^{11}$ & Character-Anzeige \\ \hline
 		0x3 & IORAM & $2^{3}$ & Memory-Mapped I/O \\ \hline
 		0x4 & SERIALRAM & $2^{11}$ & Serielle Schnittstelle \\ \hline
