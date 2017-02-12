@@ -4,7 +4,7 @@ Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hin
 
 \Section{Struktur und Funktion des Demo-Programms}
 
-Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio} das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite manövriert. Mittels des Buttons BTN 4 (siehe Kapitel)\ref{sec:mmuio} setzt der Zugspieler seine Markierung an der zuvor ausgewählten Position, sofern dies regelkonform ist. Das Spiel enthält keinen internen Reset und muss daher über einen Hard-Reset durch das FPGA erfolgen.
+Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio}) das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel \ref{sec:mmuio}) setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enth\"alt keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
 
 \begin{figure}[H]
 	\centering
@@ -13,7 +13,7 @@ Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit
 	\label{fig:gameplay}
 \end{figure}
 
-Um möglichst viel der implementierten Funktionalität abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert.
+Um m\"oglichst viel der implementierten Funktionalit\"at abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert:
 
 \[ M = \begin{pmatrix} -4 & -4 & -4\\ -4 & -4 & -4\\ -4 & -4 & -4  \end{pmatrix}\;
  m_{i,j} = \begin{cases}
@@ -25,7 +25,7 @@ Um möglichst viel der implementierten Funktionalität abzudecken, wurde bei der
 
 Wobei sich anhand dieser Definition durch Spalten-, Zeilen- und Diagonalsummen sofort der Zustand des Spiels ermitteln l\"asst.
 
-Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM(siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden zwangsl\"aufig Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
+Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM (siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden zwangsl\"aufig Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
 
 Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu bestreiten, nutzt das Demo-Programm auch die zuvor beschriebenen Memory-Mapped-I/O Funktionalit\"aten aus. Dazu wird, wie im folgenden Ausschnitt des Programmcodes gezeigt, in einer Endlosschleife nach neuen Eingaben auf den f\"unf verwendeten Buttons gesucht, indem durch Puffern des letzten Zustands und bitweise Verkn\"upfungen des gerade losgelassenen Buttons ermittelt wird und die Button-Nummer als R\"uckgabewert liefert. Nebeneffekte des Prellens werden hierbei allerdings nicht ber\"ucksichtigt.
 
@@ -56,11 +56,11 @@ Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu 
 	jalr x0, x1, 0
 \end{lstlisting}
 
-Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementierung bei, wurde aber aufgrund des unverh\"altnissm\"a\ss{}igen Umfangs an dieser Stelle ausgelassen und durch den obigen Ausschnitt ersetzt.
+Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementierung bei, wurde aber aufgrund des unverh\"altnism\"a\ss{}igen Umfangs an dieser Stelle ausgelassen und durch den obigen Ausschnitt ersetzt.
 
 \Section{Assemblierer und Simulator}
 
-Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction Sets und der projektspezifischen RAM-Struktur wurde der Beschluss gefasst, beim Assemblieren des Programmcodes auf einen im Rahmen des Projekts programmierten Assemblierer zur\"uckzugreifen. Auch das Debugging erfolgte durch ein eigenes Tool, welches beispielsweise Aspekte des Memory-Mapped-I/O ber\"ucksichtigen und entsprechend simulieren kann. Die beiden Programme wurden in der Scriptsprache Python entwickelt und gen\"ugen den Anspr\"uchen des Projekts insofern, als dass ein Assemblerprogramm entsprechend assembliert und simuliert werden kann, die Software allerdings keineswegs ausgiebig auf Stabilit\"at oder dergleichen getestet wurde, zumal dies nicht als Schwerpunkt f\"ur das Projekt gesetzt war.
+Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction Sets und der projektspezifischen RAM-Struktur wurde der Beschluss gefasst, beim Assemblieren des Programmcodes auf einen im Rahmen des Projekts programmierten Assemblierer zur\"uckzugreifen. Auch das Debugging erfolgte durch ein eigenes Tool, welches beispielsweise Aspekte des Memory-Mapped-I/O ber\"ucksichtigen und entsprechend simulieren kann. Die beiden Programme wurden in der Skriptsprache Python entwickelt und gen\"ugen den Anspr\"uchen des Projekts insofern, als dass ein Assemblerprogramm entsprechend assembliert und simuliert werden kann, die Software allerdings keineswegs ausgiebig auf Stabilit\"at oder dergleichen getestet wurde, zumal dies nicht als Schwerpunkt f\"ur das Projekt gesetzt war.
 
 \Subsection{Assemblierer}
 

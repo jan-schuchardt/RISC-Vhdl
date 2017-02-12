@@ -18,7 +18,7 @@ Die Programm-Einsprungsadresse, bei welcher die CPU die Ausf\"uhrung nach Beendi
 
 Dieser Programmcode f\"uhrt  die Ausf\"uhrung in einem anderen RAM-Block fort, dem SERIALRAM, welcher durch das Pr\"afix 0x4 auf die Speicheradresse \textit{0x40000000} gemappt ist. Der Programmierer muss zuvor also gew\"ahrleisten, dass dieser Speicherbereich, welcher durch die serielle Schnittstelle UART gef\"ullt wird, mit ausf\"uhrbarem Programmcode initialisiert wurde.
 
-Indem der Programmierer nach einem Reset den Programmstart bei oben erw\"ahnter Einsprungsadresse durch das Halten des entsprechenden Blockadesignals auf Switch 4 (siehe Abbildung\ref{fig:pinning}) verz\"ogert, bleibt Zeit w\"ahrenddessen \"uber die UART Schnittstelle den SERIALRAM-Speicherblock zu initialisieren. Indem das Signal auf Switch 4 wieder entfernt wird, beginnt der Programmablauf wie eingangs erw\"ahnt im BIOS-RAM.
+Indem der Programmierer nach einem Reset den Programmstart bei oben erw\"ahnter Einsprungsadresse durch das Halten des entsprechenden Blockadesignals auf Switch 4 (siehe Abbildung \ref{fig:pinning}) verz\"ogert, bleibt Zeit w\"ahrenddessen \"uber die UART Schnittstelle den SERIALRAM-Speicherblock zu initialisieren. Indem das Signal auf Switch 4 wieder entfernt wird, beginnt der Programmablauf wie eingangs erw\"ahnt im BIOS-RAM.
 Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und fehlerfrei funktioniert, k\"onnen keine gr\"oßeren Programme auf diese Weise ausgef\"uhrt werden.
 
 \Subsection{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}
