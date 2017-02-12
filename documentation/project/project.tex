@@ -8,16 +8,16 @@ lauff\"ahigen Prozessors um zus\"atzliche Module vor.
 
 \Section{Aufgabe}
 Die Hauptaufgabe bestand darin, eine Implementierung eines funktionsf\"ahigen
-Prozessor auf Basis der
-\href{https://riscv.org/specifications/}{RISC-V Instruction Set Architecture}
+Prozessor auf Basis der \textit{RISC-V Instruction Set Architecture}
+\footnote{\url{https://riscv.org/specifications/}}
 anzufertigen, welche auf dem zur Verf\"ugung gestellten Entwicklungsboard
 (\textit{Spartan-3A FPGA Starter Kit}) lauff\"ahig sein sollte.
 
 \begin{figure}[H]
 \centering
+\label{fig:board}
 \includegraphics[width=0.3\textwidth]{Board.png}
 \caption{Das verwendete Entwicklungsboard von oben, das FPGA liegt zentral}
-\label{fig:board}
 \end{figure}
 
 \Section{Basisziele}
@@ -114,13 +114,12 @@ Version                                  & Zeitraum                             
 Gem\"a\ss{} den vier Prinzipien der Von-Neumann-Architektur wurde die
 Implementierung grob in die Hauptkomponenten Leit-, Rechen-,
 Ein-/Ausgabewerk und Speicher gegliedert, was sich konkret in den drei
-Subkomponenten CU\ref{ch:cu}, ALU\ref{ch:alu} und MMU\ref{ch:mmu}
-widerspiegelt. F\"ur jeden dieser Bausteine war durchg\"angig eine
-unabh\"angige Kleingruppe verantwortlich, wobei es trotzdem f\"ur sinnvoll
-erachtet wurde, w\"ochentliche Treffen zu Zwecken der Planung und Integration
-der Komponenten sowie zum Testen, zu veranschlagen. Entscheidungen von
-gr\"o\ss{}erer Tragweite, besonders im Hinblick auf generelle
-Designentscheidungen wurden meist im Plenum besprochen.
+Subkomponenten CU, ALU und MMU widerspiegelt. F\"ur jeden dieser Bausteine
+war durchg\"angig eine unabh\"angige Kleingruppe verantwortlich, wobei es
+trotzdem f\"ur sinnvoll erachtet wurde, w\"ochentliche Treffen zu Zwecken der
+Planung und Integration der Komponenten sowie zum Testen, zu veranschlagen.
+Entscheidungen von gr\"o\ss{}erer Tragweite, besonders im Hinblick auf
+generelle Designentscheidungen wurden meist im Plenum besprochen.
 
 \Section{Verwendete Tools}
 Das Projekt wurde in der Hardwarebeschreibungssprache VHDL implementiert, was
@@ -138,9 +137,9 @@ einzelne Subkomponenten wie beispielsweise eine Divisionseinheit zu generieren.
 
 \begin{figure}[H]
 \centering
+\label{fig:tool}
 \includegraphics[width=1.0\textwidth]{ISE.png}
 \caption{Der Xilinx \textit{ISE Project Navigator}}
-\label{fig:tool}
 \end{figure}
 
 Mittels des Tools \textit{impact}, welches ebenfalls vom Anbieter der

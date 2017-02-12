@@ -114,11 +114,10 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
 \Section{STORE}
 Der Store-Befehl ist mit nur einem Rechen- und Speicherwerk nicht zu
 parallelisieren, was dazu f\"uhrt, dass er den langsamsten Befehl des
-Leitwerks darstellt. Da Schreibzugriffe jedoch generell auf
-RISC-Architekturen traditionell sehr hohe Kosten hinsichtlich der
-ben\"otigten Rechenzeit aufweisen, sind Compiler und Programmierer
-ohnehin dazu angehalten, schreibende Speicherzugriffe m\"oglichst zu
-vermeiden.
+Leitwerks darstellt. Da Schreibzugriffe jedoch generell auf RISC-Architekturen
+sehr hohe Kosten hinsichtlich der ben\"otigten Rechenzeit aufweisen, sind
+Compiler und Programmierer ohnehin dazu angehalten, schreibende
+Speicherzugriffe m\"oglichst zu vermeiden.
 
 \Statemachine{./cu/img/store.pdf}{
 Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.}

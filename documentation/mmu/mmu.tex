@@ -15,17 +15,17 @@ Um eine reibungslose Kommunikation mit diesen Controllern zu gew\"ahrleisten, is
 Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Komponenten: Einerseits Signale zur Kommunikation mit dem Leitwerk, andererseits durch das Toplevel-Modul nach oben geleitete Signale zur Adressierung des DDR2-SDRAMs, welche vom in der MMU verwalteten Controller generiert werden, und zuletzt nach oben geleitete Daten- und Adressleitungen, die die ASCII-Einheit konstant mit Daten versorgt.
 
 \begin{figure}[H]
+	\label{fig:mmuinterface}
 	\centering
 		\includegraphics[width=0.5\textwidth]{interface.png}
 	\caption[Schnittstelle der MMU-Einheit]{Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit{Rot} = Kommunikation mit Leitwerk, \textit{Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit{Violett} = Verbindung mit DDR2-SDRAM, \textit{Gelb} = Sonstige}
-	\label{fig:mmuinterface}
 \end{figure}
 
 \Subsection{Kommunikation mit dem Leitwerk}
 
 Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal \Vhdl{cmd\_in} die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des \Vhdl{work\_in} Signals mit der Bearbeitung der Anfrage. Der 3-Bit-Vektor \Vhdl{cmd\_in} ist wie folgt aufgebaut:
 
-	\begin{table}
+\begin{table}
 \begin{center}
 
 	\begin{tabular}{| l | l |}
@@ -68,6 +68,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 
 \begin{table}[H]
 	\begin{center}
+	\label{tab:ramlayout}
 	\begin{tabular}{| l | l | l | l |}
 		\hline
 		Pr\"afix & K\"urzel & Gr\"o\ss{}e in Bytes & Kurzbeschreibung \\ \hline
@@ -79,7 +80,6 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 		0x4 & SERIALRAM & $2^{11}$ & Serielle Schnittstelle \\ \hline
 	\end{tabular}
 	\end{center}
-	\label{tab:ramlayout}
 	\caption{Aufbau des Speichers als Bl\"ocke}
 \end{table}
 \footnotetext{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich}
@@ -117,9 +117,9 @@ Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabe
 
 \begin{figure}[H]
 	\centering
+	\label{fig:pinning}
 		\includegraphics[width=0.5\textwidth]{pinning.png}
 	\caption{Verteilung der I/O-Signale}
-	\label{fig:pinning}
 \end{figure}
 
 
