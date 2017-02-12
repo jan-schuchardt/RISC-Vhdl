@@ -49,7 +49,7 @@ dem Programmierer zu erm\"oglichen, auch die Umsetzung einer seriellen
 Schnittstelle in den geplanten Erweiterungsrahmen miteinbezogen. Zuletzt
 stellt auch das Entwerfen eines demonstrativen Programms, genauer eines
 einfachen Spiels, einen ma\ss{}geblichen Bestandteil des Erweiterungsangebots
-dar, mit dem Ziel die endg\"ultige Implementierung ad\"aquat pr\"asentieren zu können.
+dar, mit dem Ziel die endg\"ultige Implementierung ad\"aquat pr\"asentieren zu k\"onnen.
 \footnote{Siehe Fu\ss{}note 1}
 
 \Section{Projektablauf}
@@ -59,30 +59,51 @@ denen im Allgemeinen drei verschiedene Implementierungsversionen angefertigt
 wurden.
 
 \begin{table}[H]
-\begin{tabular}{|p{50pt}|p{80pt}|p{220pt}|p{110pt}|}
+\begin{tabular}{|p{45pt}|p{80pt}|p{220pt}|p{115pt}|}
 \hline
-Version & Zeitraum                                   & Ziele                                                                            & davon nicht erreicht                          \\
+Version                                  & Zeitraum                                 & Ziele                                                                      & davon nicht erreicht                     \\
 \hline
-1       & \mbox{April 2016 -} \mbox{Juni 2016}       & \begin{itemize}[noitemsep,topsep=0pt]
-                                                       \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
-                                                       \item Pr\"ufung der Arbeitsaufteilung
-                                                       \item Verst\"andnis der Tools
-                                                       \item Ausf\"uhrung einiger einfacher Befehle
-                                                       \end{itemize}                                                                    &                                               \\
+\begin{description}[noitemsep,topsep=0pt]
+\item 1
+\end{description}                        & \begin{description}[noitemsep,topsep=0pt]
+                                           \item April 2016 -
+                                           \item Juni 2016
+                                           \end{description}                        & \begin{itemize}[noitemsep,topsep=0pt]
+                                                                                      \item Pr\"ufung der Strukturierung des Prozessors in ALU, Leitwerk und MMU
+                                                                                      \item Pr\"ufung der Arbeitsaufteilung
+                                                                                      \item Verst\"andnis der Tools
+                                                                                      \item Ausf\"uhrung einiger einfacher Befehle
+                                                                                      \end{itemize}                                                              &                                          \\
 \hline
-2       & \mbox{Juni 2016 -} \mbox{September 2016}   & \begin{itemize}[noitemsep,topsep=0pt]
-                                                       \item Implementierung der RV32I-Spezifikation
-                                                       \item Lese- und Schreibzugriff auf den DDR2-RAM
-                                                       \item Debugging-Ausgabe
-                                                       \end{itemize}                                                                    & Lese- und Schreibzugriff auf den DDR2-RAM     \\
+\begin{description}[noitemsep,topsep=0pt]
+\item 2
+\end{description}                        & \begin{description}[noitemsep,topsep=0pt]
+                                           \item Juni 2016 -
+                                           \item September 2016
+                                           \end{description}                        & \begin{itemize}[noitemsep,topsep=0pt,itemindent=0pt]
+                                                                                      \item Implementierung der RV32I-Spezifikation
+                                                                                      \item Lese- und Schreibzugriff auf den DDR2-RAM
+                                                                                      \item Debugging-Ausgabe
+                                                                                      \end{itemize}                                                              & \begin{description}[noitemsep,topsep=0pt]
+                                                                                                                                                                   \item Lese- und Schreibzugriff
+                                                                                                                                                                   \item auf den DDR2-RAM
+                                                                                                                                                                   \end{description}                        \\
 \hline
-3       & \mbox{September 2016 -} \mbox{Januar 2017} & \begin{itemize}[noitemsep,topsep=0pt]
-                                                       \item Implementierung der RV32M-Spezifikation
-                                                       \item Lese- und Schreibzugriff auf den DDR2-RAM
-                                                       \item ASCII-Ausgabe
-                                                       \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
-                                                       \item serielle Schnittstelle (UART)
-                                                       \end{itemize}                                                                    & serielle Schnittstelle (nur teilweise)        \\
+\begin{description}[noitemsep,topsep=0pt]
+\item 3
+\end{description}                        & \begin{description}[noitemsep,topsep=0pt]
+                                           \item September 2016 -
+                                           \item Januar 2017
+                                           \end{description}                        & \begin{itemize}[noitemsep,topsep=0pt]
+                                                                                      \item Implementierung der RV32M-Spezifikation
+                                                                                      \item Lese- und Schreibzugriff auf den DDR2-RAM
+                                                                                      \item ASCII-Ausgabe
+                                                                                      \item Zugriff auf Buttons, LEDS, \dots{} des Boards durch Memory-Mapped-I/O
+                                                                                      \item serielle Schnittstelle (UART)
+                                                                                      \end{itemize}                                                              & \begin{description}[noitemsep,topsep=0pt]
+                                                                                                                                                                   \item serielle Schnittstelle
+                                                                                                                                                                   \item (nur teilweise)
+                                                                                                                                                                   \end{description}                        \\
 \hline
 \end{tabular}
 \caption{\"Ubersicht \"uber den Projektablauf}
