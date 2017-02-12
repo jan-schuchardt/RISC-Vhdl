@@ -19,19 +19,19 @@ Die Programm-Einsprungsadresse, bei welcher die CPU die Ausf\"uhrung nach Beendi
 Dieser Programmcode f\"uhrt  die Ausf\"uhrung in einem anderen RAM-Block fort, dem SERIALRAM, welcher durch das Pr\"afix 0x4 auf die Speicheradresse \textit{0x40000000} gemappt ist. Der Programmierer muss zuvor also gew\"ahrleisten, dass dieser Speicherbereich, welcher durch die serielle Schnittstelle UART gef\"ullt wird, mit ausf\"uhrbarem Programmcode initialisiert wurde.
 
 Indem der Programmierer nach einem Reset den Programmstart bei oben erw\"ahnter Einsprungsadresse durch das Halten des entsprechenden Blockadesignals auf Switch 4 (siehe Abbildung \ref{fig:pinning}) verz\"ogert, bleibt Zeit w\"ahrenddessen \"uber die UART Schnittstelle den SERIALRAM-Speicherblock zu initialisieren. Indem das Signal auf Switch 4 wieder entfernt wird, beginnt der Programmablauf wie eingangs erw\"ahnt im BIOS-RAM.
-Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und fehlerfrei funktioniert, k\"onnen keine gr\"oßeren Programme auf diese Weise ausgef\"uhrt werden.
+Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und fehlerfrei funktioniert, k\"onnen keine gr\"o\ss{}eren Programme auf diese Weise ausgef\"uhrt werden.
 
 \Subsection{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}
 
 Alternativ besteht auch die M\"oglichkeit, den BIOS-RAM Block direkt beim Beschreiben des FPGAs mit dem auszuf\"uhrenden Programmcode zu initialisieren. Da der BIOS-RAM-Block als Dual-Port-Blockram realisiert wurde, kann dies ohne zeitlichen Aufwand bei einem Reset erfolgen.
 
-Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"oßere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
+Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"o\ss{}fere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
 
 \Section{Der Reset}
 
 Nachdem das FPGA mit entsprechender Methodik initialisiert wurde oder aber nachdem eine Programmausf\"uhrung terminiert hat, muss der Prozessor zur\"uckgesetzt werden. Dies geschieht durch das kurzzeitige Halten des Reset-Signals, welches auf den Hardware-Switch \textit{SW 0} (siehe Abbildung \ref{fig:pinning}) gemappt ist.
 
-Zu beachten ist, dass der Reset nur im verlangsamten Ausf\"uhrungsmodus (5 Hz) verl\"asslich funktioniert. Ob ein Reset im schnellen Ausf\"uhrungsmodus (50 MHz) erfolgreich verl\"auft, ist nichtdeterministisch und daher auch nicht zu empfehlen.
+Zu beachten ist, dass der Reset nur im verlangsamten Ausf\"uhrungsmodus (5 Hz) verl\"asslich funktioniert. Ob ein Reset im schnellen Ausf\"uhrungsmodus (50 MHz) erfolgreich verl\"auft, ist nicht deterministisch und daher auch nicht zu empfehlen.
 
 \Section{Graphische Oberfl\"achen}
 
