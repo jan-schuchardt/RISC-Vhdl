@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass{article}
 \usepackage{documentation}
 \usepackage{hyperref}
 \usepackage{pdfpages}
@@ -13,7 +13,7 @@
 
 \graphicspath{{./mmu/}{./cu/img/}{./alu/img/}{./ui/}{./demo/}{./project/}{./asciiunit/}{./appendix/img/}}
 
-\title{\large \textbf{Rechnerarchitekturgro\ss{}praktikum} \\[10pt] Entwicklung eines RISC-V-Prozessors \\[10pt] \Huge Dokumentation}
+\title{\vspace{50pt}\large \textbf{Rechnerarchitekturgro\ss{}praktikum} \\[10pt] Entwicklung eines RISC-V-Prozessors \\[10pt] \Huge Dokumentation}
 \author{Dominik Fuchsgruber \\ Charlie Groh \\ Franz Rieger \\ Jan Schuchardt}
 \date{\today}
 
@@ -21,8 +21,9 @@
 \makesavenoteenv{tabular}
 \begin{document}
 \maketitle
+\vspace{50pt}
 \begin{abstract}
-Die folgende Arbeit beschreibt die Struktur und den Entwicklungsprozess einer
+\noindent Die folgende Arbeit beschreibt die Struktur und den Entwicklungsprozess einer
 Implementierung eines Prozessors auf Basis der \textit{RISC-V-ISA} auf einem FPGA. Dabei wurden die logischen
 Bausteine in der Hardwarebeschreibungssprache VHDL implementiert. Die
 Projektdauer bel\"auft sich auf zwei Semester, in denen die vier
@@ -33,6 +34,7 @@ k\"onnen, bei. Des Weiteren sind auch ein Assemblierer f\"ur das implementierte
 Instruction-Set sowie ein Simulator, der auf die spezielle Umgebung der
 VHDL-Implementierung angepasst ist, enthalten.
 \end{abstract}
+\clearpage{}
 \begingroup
 \let\clearpage\relax
 \let\textbf\relax
