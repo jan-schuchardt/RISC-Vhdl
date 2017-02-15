@@ -10,7 +10,7 @@ Der adressierbare Speicher innerhalb des Prozessors ist blockweise organisiert. 
 Sie ist aufgrund der \"uberwiegend sehr \"ahnlichen Adressierungsprozeduren intern durch eine Statemachine realisiert, welche anhand einer Speicheradresse die jeweiligen Speicheranfragen an den dem RAM-Block entsprechenden Controller weiterleitet.
 
 Um eine reibungslose Kommunikation mit diesen Controllern zu gew\"ahrleisten, ist die MMU mit einer vom restlichen Prozessor unterschiedlichen Frequenz, 133 MHz, getaktet. Dies ist vor allem im Bezug auf den integrierten DDR2-SDRAM\footnote{Genauer handelt es sich um einen Micron Technology DDR2-SDRAM (MT47H32M1)}, welcher mit eben diesem Takt versorgt werden muss, um Daten halten zu k\"onnen, begr\"undet: Die Tatsache, dass die Integration dieser Komponente besonders zeitaufw\"andig verlief, rechtfertigt diese Designentscheidung. Daraus resultieren zus\"atzlich ben\"otigte Synchronisations- und Kommunkationsmechanismen mit dem \"ubergeordneten Leitwerk.
-\newpage
+
 \Section{Interface}
 Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Komponenten: Einerseits Signale zur Kommunikation mit dem Leitwerk, andererseits durch das Toplevel-Modul nach oben geleitete Signale zur Adressierung des DDR2-SDRAMs, welche vom in der MMU verwalteten Controller generiert werden, und zuletzt nach oben geleitete Daten- und Adressleitungen, die die ASCII-Einheit konstant mit Daten versorgt.
 
@@ -25,7 +25,7 @@ Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Ko
 
 Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal \Vhdl{cmd\_in} die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des \Vhdl{work\_in} Signals mit der Bearbeitung der Anfrage. Der 3-Bit-Vektor \Vhdl{cmd\_in} ist wie folgt aufgebaut:
 
-	\begin{table}
+	\begin{table}[H]
 \begin{center}
 
 	\begin{tabular}{| l | l |}
@@ -47,13 +47,13 @@ Wie eingangs erw\"ahnt lassen sich die \"ubrigen Signale dem Weiterleiten von Si
 
 \Section{Aufbau des Speichers}
 
-Wie bereits geschildert wird der Speicher in verschiedene Bereiche unterschiedlicher Gr\"o\ss{}e untergliedert. Jeder dieser Bereiche wird von einem Controller verwaltet, welcher bei einer eingehenden Anfrage durch die MMU angesprochen wird. Dabei h\"angt die Bearbeitungsdauer ma\ss{}geblich vom adressierten Speicherblock ab.
+Wie bereits geschildert, wird der Speicher in verschiedene Bereiche unterschiedlicher Gr\"o\ss{}e untergliedert. Jeder dieser Bereiche wird von einem Controller verwaltet, welcher bei einer eingehenden Anfrage durch die MMU angesprochen wird. Dabei h\"angt die Bearbeitungsdauer ma\ss{}geblich vom adressierten Speicherblock ab.
 
 Aus der durch den Prozessor implementierten Wortgr\"o\ss{}e von 32 Bit ergibt sich ein Adressraum, der potenziell $2^{32}$ Speicherzellen mit einer Gr\"o\ss{}e von je 8 Bit umfasst. Dass nicht jeder dadurch zur Verf\"ugung stehende Bereich auch tats\"achlich auch nutzbar ist, l\"asst sich auf die vom FPGA zur Verf\"ugung gestellten Speicherressourcen zur\"uckf\"uhren.
 
 Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherbereich bestimmt, und ein Offset innerhalb dieses Speicherblocks wie folgt unterteilt:
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| l | l |}
 		\hline
@@ -72,7 +72,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 		\hline
 		Pr\"afix & K\"urzel & Gr\"o\ss{}e in Bytes & Kurzbeschreibung \\ \hline
 		0x0 & BIOS & $2^{11}$ & Programmeinsprungspunkt \\ \hline
-		0x1 & SDRAM & $2^{16}$\footnote{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich} & DDR2-SDRAM \\ \hline
+		0x1 & SDRAM & $2^{16}$ bzw. $512$ MBit\footnote{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich} & DDR2-SDRAM \\ \hline
 		0x2 & CHARRAM & $2^{11}$ & Character-Anzeige \\ \hline
 		0x3 & IORAM & $2^{3}$ & Memory-Mapped I/O \\ \hline
 		0x4 & SERIALRAM & $2^{11}$ & Serielle Schnittstelle \\ \hline
@@ -88,9 +88,9 @@ Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was i
 
 \Section{Memory-Mapped I/O}
 \label{sec:mmuio}
-Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind folgende sechs nutzbar:
+Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnittstelle zwischen Benutzer und Programmcode dar. Dabei sind einige der auf dem FPGA verf\"ugbaren Ein- und Ausgabem\"oglichkeiten direkt auf einzelne Bits innerhalb der Speicherzellen des IORAMs gemappt. Aus den acht verf\"ugbaren Speicherzellen sind effektiv sechs nutzbar:
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
 	\hline
@@ -108,7 +108,7 @@ Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnitts
 \caption{Memory-Mapped I/O im Detail}
 \end{table}
 
-Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht schnell genug taktet, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird. Bits, die nicht genutzt und in der Tabelle mit `-' vermerkt sind, entsprechen stets dem konstanten Wert 0 und bieten daher auch keinerlei Speicherf\"ahigkeit.
+Dabei steht BTN jeweils f\"ur entsprechende Buttons auf dem Board, SW entspricht einem Schalter und LED den Ausgabe-LEDs. Au\ss{}erdem sind die Eingabedaten der seriellen Schnittstelle in Form eines 8-Bit Vektors sowie einem Best\"atigungssignal, dass dieser vollst\"andig \"ubertragen wurde und einem Fehlersignal, das ebenfalls von der seriellen Schnittstelle ausgeht, ebenfalls auf den IORAM gemappt. Angemerkt sei an dieser Stelle aber, dass der Prozessor nicht konsistent schnell genug arbeitet\footnote{Die h\"aufige Synchronisation mit dem DDR2-SDRAM Block verursacht nicht deterministisch auftretende Abweichungen im Bezug auf Speicherzugriffszeiten}, um diese Funktionalit\"at wirklich sinnvoll zu nutzen, weswegen zur Initialisierung des Programmspeichers auch eine andere Methode verwendet wird. Bits, die nicht genutzt und in der Tabelle mit `-' vermerkt sind, entsprechen stets dem konstanten Wert 0 und bieten daher auch keinerlei Speicherf\"ahigkeit.
 
 Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabesignal auf der Hardware wiederfindet. Dabei entsprechen die Bezeichner denen aus der zuvor abgebildeten Tabelle.
 
@@ -167,7 +167,7 @@ Bei einem Reset wechselt die MMU ungeachtet ihres derzeitigen Zustands in den MM
 
 Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lassen sich nun f\"ur die einzelnen Speicherbl\"ocke die exakten Zugriffsdauern beziehungsweise im Fall des DDR2-SDRAMs, welcher unter Umst\"anden durch einen periodisch auftretenden Auto-Refresh eine erh\"ohte Zugriffszeit ben\"ontigt, eine Mindestzugriffsdauer errechnen.
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
 	\begin{tabular}{| l | l | l | l |}
 		\hline
@@ -182,4 +182,5 @@ Aus dem geschilderten detaillierten Ablauf eines Zugriffs innerhalb der MMU lass
 
 Aufgrund der identischen Struktur der RAM-Controller f\"ur als Dual-Port-Blockram realisierte Speicherbereiche ergeben sich f\"ur jene Speicherbl\"ocke identische Zugriffszeiten sowohl f\"ur lesende und schreibende Zugriffe, wobei eine 8-Bit Anfrage immer genau einen Takt kostet. Da der DDR2-SDRAM f\"ur seine Zugriffsdauer im Bezug auf lesende und schreibende Operationen nicht nach oben hin abgesch\"atzt werden kann, jedoch keinesfalls weniger als einen Takt brauchen wird, entsprechen die Mindestzugriffszeiten ebenfalls der oben dargestellten Tabelle.
 
+\newpage
 
