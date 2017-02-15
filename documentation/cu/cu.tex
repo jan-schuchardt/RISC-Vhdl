@@ -3,7 +3,7 @@
 \label{ch:cu}
 
 \Section{\"Uberblick}
-Das Leitwerk stellt die zentrale Steuereinheit des Prozessors dar. Es
+Das Leitwerk \textit{CU} stellt die zentrale Steuereinheit des Prozessors dar. Es
 interpretiert die Befehle und \"uberwacht ihre Ausf\"uhrung durch ALU und MMU.
 Der Fokus lag dabei mehr auf Robustheit und weniger auf Aspekten der
 Performanz. Au\ss{}erdem verwaltet das Leitwerk den Program-Counter~(PC) und
@@ -32,14 +32,14 @@ halber weggelassen. Im Prozessor ist es selbstverst\"andlich wie in der ISA
 beschrieben implementiert.
 
 \Section{Integer Rechenbefehle}
-Der Prozessor wurde auf die in RV32I und RV32M definierten Rechenbefehle
+Der Prozessor wurde auf die in \textit{RV32I} und \textit{RV32M} definierten Rechenbefehle
 optimiert. Dadurch k\"onnen diese RISC-typischen Befehle sehr schnell
 ausgef\"uhrt werden.
 
 \Statemachine{./cu/img/integer_rechenbefehle.pdf}{
-Zustands\"ubergangsdiagramm der Befehle \Instr{ADD[I]}, \Instr{SUB},
-\Instr{SLT[I][U]}, \Instr{AND[I]}, \Instr{OR[I]}, \Instr{XOR[I]},
-\Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]}, \Instr{MUL} und
+Zu\-stands\-\"uber\-gangs\-dia\-gramm der Befehle \Instr{AND[I]},
+\Instr{OR[I]}, \Instr{XOR[I]}, \Instr{SLL[I]}, \Instr{SRL[I]}, \Instr{SRA[I]},
+\Instr{ADD[I]}, \Instr{SUB}, \Instr{SLT[I][U]}, \Instr{MUL} und
 \Instr{MULH[[S]U]}.}{\(op2\) ist entweder das Register, das mit \Ipart{rs2}
 angegeben ist, oder eine Immediate (\Ipart{imm}). ``\(\circ\)'' repr\"asentiert
 die jeweilige Operation (\(+\), \(-\), \dots{}).
@@ -71,7 +71,7 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LUI} und \Instr{AUPIC}.
 Da bei Speicherzugriffen auf den DDR2-SDRAM Block der MMU(\ref{ch:mmu}) nicht
 garantiert werden kann, dass ein Speicherzugriff ohne Zeit- und Datenverlust
 abgebrochen werden kann, wurde auf Branch-Prediction g\"anzlich verzichtet.
-Dadurch geh\"ören die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den
+Dadurch geh\"oren die bedingten Spr\"unge im Hinblick auf Rechenzeit zu den
 teuersten Befehlen des Prozessors.
 
 \Statemachine{./cu/img/beq_und_bgeu.pdf}{
@@ -113,11 +113,10 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{LB[U]}, \Instr{LH[U]} und
 \Section{STORE}
 Der Store-Befehl ist mit nur einem Rechen- und Speicherwerk nicht zu
 parallelisieren, was dazu f\"uhrt, dass er den langsamsten Befehl des
-Leitwerks darstellt. Da Schreibzugriffe jedoch generell auf
-RISC-Architekturen traditionell sehr hohe Kosten hinsichtlich der
-ben\"otigten Rechenzeit aufweisen, sind Compiler und Programmierer
-ohnehin dazu angehalten, schreibende Speicherzugriffe m\"oglichst zu
-vermeiden.
+Leitwerks darstellt. Da Schreibzugriffe jedoch generell auf RISC-Architekturen
+sehr hohe Kosten hinsichtlich der ben\"otigten Rechenzeit aufweisen, sind
+Compiler und Programmierer ohnehin dazu angehalten, schreibende
+Speicherzugriffe m\"oglichst zu vermeiden.
 
 \Statemachine{./cu/img/store.pdf}{
 Zustands\"ubergangsdiagramm des Befehle \Instr{SB}, \Instr{SH} und \Instr{SW}.}

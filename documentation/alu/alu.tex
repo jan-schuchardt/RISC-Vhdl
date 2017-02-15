@@ -16,9 +16,9 @@ Um die Komplexit\"at des Leitwerks zu reduzieren, wurde die Low-Level-Verwaltung
 \Section{Das Interface}
 \begin{figure}[H]
 	\centering
+	\label{fig:aluinterface}
 		\includegraphics[width=0.7\textwidth]{interface.jpg}
 	\caption[Schnittstelle der ALU-Einheit]{Schnittstelle der ALU mit Portnamen und -breiten}
-	\label{fig:aluinterface}
 \end{figure}
 
 Neben zwei 32-Bit-Eing\"angen f\"ur Operanden, gibt es einen dedizierten Eingang f\"ur Registeradressen sowie einen zur Auswahl der gew\"unschten Operation. 
@@ -102,7 +102,7 @@ Insgesamt stellt die ALU 32 Register der Breite 32 Bit bereit, wobei Register x0
 
 Implementiert wurden die Register als Dual-Port-Blockram. Dieses Vorgehen erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was gerade bei Register-Register-Operationen von Vorteil ist. Zus\"atzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte Block-Ram-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10pt}
 
-Die Umsetzung erfolgte dabei nicht \"uber eine Core-Generierte Variante, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte std\_logic\_vector-Array automatisch in einen Blockram umsetzt.
+Die Umsetzung erfolgte dabei nicht \"uber eine Core-Generierte Variante, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte \textit{std\_logic\_vector}-Array automatisch in einen Blockram umsetzt.
 
 Voraussetzung daf\"ur ist, dass nicht direkt auf Register-Inhalten operiert wird, sondern sie zuerst in einem Signal zwischengespeichert und im n\"achsten Takt verwendet werden. Dies ist aber ohnehin durch die 3-stufige State-Machine der ALU garantiert.
 

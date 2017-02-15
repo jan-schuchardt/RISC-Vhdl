@@ -16,16 +16,16 @@ Die Programm-Einsprungsadresse, bei welcher die CPU die Ausf\"uhrung nach Beendi
 	jalr x0, x1, 0
 \end{lstlisting}
 
-Dieser Programmcode f\"uhrt  die Ausf\"uhrung in einem anderen RAM-Block fort, dem SERIALRAM, welcher durch das Pr\"afix 0x4 auf die Speicheradresse \textit{0x40000000} gemappt ist. Der Programmierer muss zuvor also gew\"Ahrleisten, dass dieser Speicherbereich, welcher durch die serielle Schnittstelle UART gef\"ullt wird, mit ausf\"uhrbarem Programmcode initialisiert wurde.
+Dieser Programmcode f\"uhrt  die Ausf\"uhrung in einem anderen RAM-Block fort, dem SERIALRAM, welcher durch das Pr\"afix 0x4 auf die Speicheradresse \textit{0x40000000} gemappt ist. Der Programmierer muss zuvor also gew\"ahrleisten, dass dieser Speicherbereich, welcher durch die serielle Schnittstelle UART gef\"ullt wird, mit ausf\"uhrbarem Programmcode initialisiert wurde.
 
-Indem der Programmierer nach einem Reset den Programmstart bei oben erw\"Ahnter Einsprungsadresse durch das Halten des entsprechenden Blockadesignals auf Switch 4 (siehe Abbildung YYY) verz\"ogert, bleibt Zeit w\"Ahrenddessen \"uber die UART Schnittstelle den SERIALRAM-Speicherblock zu initialisieren. Indem das Signal auf Switch 4 wieder entfernt wird, beginnt der Programmablauf wie eingangs erw\"ahnt im BIOS-RAM.
-Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und fehlerfrei funktioniert, k\"onnen keine gr\"oßeren Programme auf diese Weise ausgef\"uhrt werden.
+Indem der Programmierer nach einem Reset den Programmstart bei oben erw\"ahnter Einsprungsadresse durch das Halten des entsprechenden Blockadesignals auf Switch 4 (siehe Abbildung \ref{fig:pinning}) verz\"ogert, bleibt Zeit w\"ahrenddessen \"uber die UART Schnittstelle den SERIALRAM-Speicherblock zu initialisieren. Indem das Signal auf Switch 4 wieder entfernt wird, beginnt der Programmablauf wie eingangs erw\"ahnt im BIOS-RAM.
+Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und fehlerfrei funktioniert, k\"onnen keine gr\"o\ss{}eren Programme auf diese Weise ausgef\"uhrt werden.
 
 \Subsection{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}
 
 Alternativ besteht auch die M\"oglichkeit, den BIOS-RAM Block direkt beim Beschreiben des FPGAs mit dem auszuf\"uhrenden Programmcode zu initialisieren. Da der BIOS-RAM-Block als Dual-Port-Blockram realisiert wurde, kann dies ohne zeitlichen Aufwand bei einem Reset erfolgen.
 
-Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"oßere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
+Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"o\ss{}fere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
 
 \Section{Der Reset}
 
@@ -39,26 +39,30 @@ Im Allgemeinen existieren zwei Methoden die Programmausf\"uhrung graphisch darzu
 
 \Subsection{Debugging-Modus}
 
-Der Debugging-Modus zeichnet die verf\"ugbaren 32 Register x0-x31 bitweise auf das VGA-Ausgabeger\"at. Dabei werden die Register farblich voneinander getrennt und zeilenweise fortlaufend durchnummeriert (pro Zeile vier Register). Gesetzte Balken entsprechen einem gesetzten Bit innerhalb des Registerwerts, wobei das am \textit{least significant Bit} links, und das \textit{most significant Bit} rechts dargestellt wird.
-Die beiden separat dargestellten Register sind jeweils der Programmz\"ahler (links) sowie das Instruktionsregister (rechts), ebenfalls bitweise abgebildet.
+Der Debugging-Modus zeichnet die verf\"ugbaren 32 Register x0-x31 bitweise auf das VGA-Ausgabeger\"at. Dabei werden die Register farblich voneinander getrennt und zeilenweise fortlaufend durchnummeriert (pro Zeile vier Register). Gesetzte Balken entsprechen einem gesetzten Bit innerhalb des Registerwerts, wobei das \textit{least significant Bit} links, und das \textit{most significant Bit} rechts dargestellt wird.
+Die beiden separat dargestellten Register sind der Programmz\"ahler (links) sowie das Instruktionsregister (rechts), ebenfalls bitweise abgebildet.
 
 \begin{figure}[H]
 	\centering
+	\label{fig:debuggingui}
 		\includegraphics[width=0.5\textwidth]{debugui.png}
 	\caption[VGA-Ausgabe im Debugging-Modus]{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}
-	\label{fig:debuggingui}
 \end{figure}
 
+<<<<<<< HEAD
 Da die VGA-Ausgabe mit 25 MHz getaktet wird, der Prozessor im schnellen Ausf\"uhrungsmodus dagegen den sechsfachen Takt erh\"alt, wechseln die Registerwerte unter Umst\"anden schneller, als sie dargestellt werden k\"onnen, wodurch es zu signifikanten Darstellungsfehlern kommen kann. Der Debugging-Modus ist dementsprechend, wie der Name bereits suggeriert lediglich f\"ur Debugging-Zwecke im langsamen Ausf\"uhrungsmodus sinnvoll nutzbar.
+=======
+Da die VGA-Ausgabe mit 25 MHz getaktet wird, der Prozessor im schnellen Ausf\"uhrungsmodus dagegen den dreifachen Takt erh\"alt, wechseln die Registerwerte unter Umst\"anden schneller, als sie dargestellt werden k\"onnen, wodurch es zu erheblichen Darstellungsfehlern kommen kann. Der Debugging-Modus ist dementsprechend, wie der Name bereits suggeriert lediglich f\"ur Debugging-Zwecke im langsamen Ausf\"uhrungsmodus sinnvoll nutzbar.
+>>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \Subsection{ASCII-Modus}
-Der ASCII-Modus stellt zeilenweise fortlaufend durchnummeriert die Werte der Speicherzellen innerhalb des CHARRAM-Blocks als ASCII-Zeichen dar. Die genaue Abbildungsmethodik wird im entsprechenden Kapitel \ref{ch:asciiunit} n\"aher erl\"autert.
+Der ASCII-Modus stellt zeilenweise fortlaufend durchnummeriert die Werte der Speicherzellen innerhalb des CHAR\-RAM-Blocks als ASCII-Zeichen dar. Die genaue Abbildungsmethodik wird im entsprechenden Kapitel \ref{ch:asciiunit} n\"aher erl\"autert.
 
-Um das Demo-Programm sinnvoll zu benutzten, wird dieser Ausf\"uhrungsmodus empfohlen, da er einerseits auch im schnellen Ausf\"uhrungsmodus aufgrund der Seltenheit von schreibenden Speicherzugriffen im entsprechenden CHARRAM-Block konsistenter Daten anzeigt, und andererseits das Programm so konzipiert ist, dass das Tic-Tac-Toe Spiel die ASCII-Schnittstelle zur Benutzerinteraktion vorsieht.
+Um das Demo-Programm sinnvoll zu benutzten, wird dieser Ausf\"uhrungsmodus empfohlen, da er einerseits auch im schnellen Ausf\"uhrungsmodus aufgrund der Seltenheit von schreibenden Speicherzugriffen im entsprechenden CHAR\-RAM-Block konsistenter Daten anzeigt, und andererseits das Programm so konzipiert ist, dass das Tic-Tac-Toe Spiel die ASCII-Schnittstelle zur Benutzerinteraktion vorsieht.
 
 \Section{Benutzereingabe}
 
-Analog zur Ausgabe von Daten bietet der Prozessor auch eine M\"oglichkeit zur Dateneingabe durch den Benutzer. Wie im entsprechenden Kapitel \ref{sec:mmuio} genauer erläutert wird, sind alle Buttons, Switches und LEDs auf Speicherzellen gemappt. Ein Halten oder Loslassen der entsprechenden Komponente f\"uhrt zu einem Wechsel des Bits an entsprechender Speicheradresse.
+Analog zur Ausgabe von Daten bietet der Prozessor auch eine M\"oglichkeit zur Dateneingabe durch den Benutzer. Wie im entsprechenden Kapitel \ref{sec:mmuio} genauer erl\"autert wird, sind alle Buttons, Switches und LEDs auf Speicherzellen gemappt. Ein Halten oder Loslassen der entsprechenden Komponente f\"uhrt zu einem Wechsel des Bits an entsprechender Speicheradresse.
 
 Programmierer haben so die M\"oglichkeit Benutzereingaben abzufragen oder auf diese zu reagieren, m\"ussen das aber innerhalb ihrer Implementierung selbst tun, da keinerlei Interrupts oder dergleichen bereitgestellt werden.
 
