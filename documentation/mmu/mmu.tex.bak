@@ -15,19 +15,18 @@ Um eine reibungslose Kommunikation mit diesen Controllern zu gew\"ahrleisten, is
 Das Interface der MMU untergliedert sich haupts\"achlich in drei verschiedene Komponenten: Einerseits Signale zur Kommunikation mit dem Leitwerk, andererseits durch das Toplevel-Modul nach oben geleitete Signale zur Adressierung des DDR2-SDRAMs, welche vom in der MMU verwalteten Controller generiert werden, und zuletzt nach oben geleitete Daten- und Adressleitungen, die die ASCII-Einheit konstant mit Daten versorgt.
 
 \begin{figure}[H]
+	\label{fig:mmuinterface}
 	\centering
 		\includegraphics[width=0.5\textwidth]{interface.png}
 	\caption[Schnittstelle der MMU-Einheit]{Schnittstelle der MMU-Einheit, Signale farblich gruppiert: \textit{Rot} = Kommunikation mit Leitwerk, \textit{Gr\"un} = Character-Ausgabe an ASCII-Einheit, \textit{Violett} = Verbindung mit DDR2-SDRAM, \textit{Gelb} = Sonstige}
-	\label{fig:mmuinterface}
 \end{figure}
 
 \Subsection{Kommunikation mit dem Leitwerk}
 
 Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adress- und Synchronisationsleitungen untergliedern. Dabei sendet das Leitwerk \"uber das Signal \Vhdl{cmd\_in} die angefragte Operation. Die MMU reagiert allerdings erst auf ein Setzen des \Vhdl{work\_in} Signals mit der Bearbeitung der Anfrage. Der 3-Bit-Vektor \Vhdl{cmd\_in} ist wie folgt aufgebaut:
 
-	\begin{table}[H]
-\begin{center}
-
+\begin{table}[H]
+	\begin{center}
 	\begin{tabular}{| l | l |}
 		\hline
 		Bit 2 & Bit 1 - 0 \\ \hline
@@ -39,7 +38,7 @@ Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adres
 
 Als Ausgabe liefert die MMU dem Leitwerk einerseits ein Acknowledgement \Vhdl{ack\_out}, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang \Vhdl{data\_out} korrekt belegt wurde.
 
-Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit lie\ss{}t. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
+Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit liest. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
 
 \Subsection{Durch die MMU geleitete Signale an andere Komponenten}
 
@@ -66,8 +65,9 @@ Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherb
 
 Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
 
-\begin{table}[h]
+\begin{table}[H]
 	\begin{center}
+	\label{tab:ramlayout}
 	\begin{tabular}{| l | l | l | l |}
 		\hline
 		Pr\"afix & K\"urzel & Gr\"o\ss{}e in Bytes & Kurzbeschreibung \\ \hline
@@ -78,11 +78,11 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 		0x4 & SERIALRAM & $2^{11}$ & Serielle Schnittstelle \\ \hline
 	\end{tabular}
 	\end{center}
-	\label{tab:ramlayout}
 	\caption{Aufbau des Speichers als Bl\"ocke}
 \end{table}
+\footnotetext{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich}
 
-Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA verf\"ugbaren Dual-Port-Blockram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von \href{http://opencores.org/project,ddr2_sdram}{Opencores}\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
+Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA ver\-f\"ug\-baren Dual-Port-Block\-ram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von Opencores\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
 
 Jeder Speicherbereich wird von der MMU im Little-Endian-Format adressiert, was insbesondere bei 16-Bit beziehungsweise 32-Bit Zugriffen ber\"ucksichtigt werden muss.
 
@@ -100,7 +100,8 @@ Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnitts
 	0x2 & Read/Write & LED 7 & LED 6 & LED 5 & LED 4 & LED 3 & LED 2 & LED 1 & LED 0 \\ \hline
 	0x3 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
 	0x4 & Read-Only & UART 7 & UART 6 & UART 5 & UART 4 & UART 3 & UART 2 & UART 1 & UART 0 \\ \hline
-	0x5 & Read-Only & - & - & - & - & - & - & UART VALID & UART ERR \\ \hline
+	0x5 & Read-Only & - & - & - & - & - & - & UART & UART \\
+	 &  &   &   &   &   &   &   & VALID & ERR \\ \hline
 	0x6 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
 	0x7 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
 	\end{tabular}
@@ -114,9 +115,9 @@ Die nachfolgende Abbildung~\ref{fig:pinning} zeigt, wo sich welches Ein-/Ausgabe
 
 \begin{figure}[H]
 	\centering
+	\label{fig:pinning}
 		\includegraphics[width=0.5\textwidth]{pinning.png}
 	\caption{Verteilung der I/O-Signale}
-	\label{fig:pinning}
 \end{figure}
 
 

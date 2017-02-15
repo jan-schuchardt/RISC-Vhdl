@@ -1,19 +1,31 @@
 \Chapter{Entwicklung eines Demo-Programms}
 
+<<<<<<< HEAD
 Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hinter dem zu demonstrativen Zwecken entwickelten, auf dem Prozessor lauffähigen Tic-Tac-Toe Programms. Dieses vereint alle zentralen Funktionalitäten der Prozessor-Implementierung auf dem FPGA.
 
 \Section{Struktur und Funktion des Demo-Programms}
 
 Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio} das Steuerkreuz \"uber die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel)\ref{sec:mmuio} setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enthält keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
+=======
+Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hinter dem zu demonstrativen Zwecken entwickelten, auf dem Prozessor lauff\"ahigen Tic-Tac-Toe Programms. Dieses vereint alle zentralen Funktionalit\"aten der Prozessor-Implementierung auf dem FPGA.
+
+\Section{Struktur und Funktion des Demo-Programms}
+
+Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio}) das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel \ref{sec:mmuio}) setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enth\"alt keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
+>>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \begin{figure}[H]
 	\centering
+	\label{fig:gameplay}
 		\includegraphics[width=0.5\textwidth]{gameplay.png}
 	\caption{Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}
-	\label{fig:gameplay}
 \end{figure}
 
+<<<<<<< HEAD
 Um m\"oglichst viel der implementierten Funktionalität abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert.
+=======
+Um m\"oglichst viel der implementierten Funktionalit\"at abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert:
+>>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \[ M = \begin{pmatrix} -4 & -4 & -4\\ -4 & -4 & -4\\ -4 & -4 & -4  \end{pmatrix}\;
  m_{i,j} = \begin{cases}
@@ -25,7 +37,7 @@ Um m\"oglichst viel der implementierten Funktionalität abzudecken, wurde bei de
 
 Wobei sich anhand dieser Definition durch Spalten-, Zeilen- und Diagonalsummen sofort der Zustand des Spiels ermitteln l\"asst: Ist diese gleich 0 oder 3, so hat einer der Kontrahenten das Spiel f\"ur sich entschieden.
 
-Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM(siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden zwangsl\"aufig Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
+Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM (siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden zwangsl\"aufig Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
 
 Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu bestreiten, nutzt das Demo-Programm auch die zuvor beschriebenen Memory-Mapped-I/O Funktionalit\"aten aus. Dazu wird, wie im folgenden Ausschnitt des Programmcodes gezeigt, in einer Endlosschleife nach neuen Eingaben auf den f\"unf verwendeten Buttons gesucht, indem durch Puffern des letzten Zustands und bitweise Verkn\"upfungen des gerade losgelassenen Buttons ermittelt wird und die Button-Nummer als R\"uckgabewert liefert. Nebeneffekte des Prellens werden hierbei allerdings nicht ber\"ucksichtigt.
 
@@ -60,7 +72,7 @@ Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementie
 
 \Section{Assemblierer und Simulator}
 
-Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction Sets und der projektspezifischen RAM-Struktur wurde der Beschluss gefasst, beim Assemblieren des Programmcodes auf einen im Rahmen des Projekts programmierten Assemblierer zur\"uckzugreifen. Auch das Debugging erfolgte durch ein eigenes Tool, welches beispielsweise Aspekte des Memory-Mapped-I/O ber\"ucksichtigen und entsprechend simulieren kann. Die beiden Programme wurden in der Scriptsprache Python entwickelt und gen\"ugen den Anspr\"uchen des Projekts insofern, als dass ein Assemblerprogramm entsprechend assembliert und simuliert werden kann, die Software allerdings keineswegs ausgiebig auf Stabilit\"at oder dergleichen getestet wurde, zumal dies nicht als Schwerpunkt f\"ur das Projekt gesetzt war.
+Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction Sets und der projektspezifischen RAM-Struktur wurde der Beschluss gefasst, beim Assemblieren des Programmcodes auf einen im Rahmen des Projekts programmierten Assemblierer zur\"uckzugreifen. Auch das Debugging erfolgte durch ein eigenes Tool, welches beispielsweise Aspekte des Memory-Mapped-I/O ber\"ucksichtigen und entsprechend simulieren kann. Die beiden Programme wurden in der Skriptsprache Python entwickelt und gen\"ugen den Anspr\"uchen des Projekts insofern, als dass ein Assemblerprogramm entsprechend assembliert und simuliert werden kann, die Software allerdings keineswegs ausgiebig auf Stabilit\"at oder dergleichen getestet wurde, zumal dies nicht als Schwerpunkt f\"ur das Projekt gesetzt war.
 
 \Subsection{Assemblierer}
 

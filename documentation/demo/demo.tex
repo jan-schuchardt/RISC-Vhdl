@@ -1,18 +1,10 @@
 \Chapter{Entwicklung eines Demo-Programms}
 
-<<<<<<< HEAD
-Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hinter dem zu demonstrativen Zwecken entwickelten, auf dem Prozessor lauffähigen Tic-Tac-Toe Programms. Dieses vereint alle zentralen Funktionalitäten der Prozessor-Implementierung auf dem FPGA.
-
-\Section{Struktur und Funktion des Demo-Programms}
-
-Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio} das Steuerkreuz \"uber die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel)\ref{sec:mmuio} setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enthält keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
-=======
 Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hinter dem zu demonstrativen Zwecken entwickelten, auf dem Prozessor lauff\"ahigen Tic-Tac-Toe Programms. Dieses vereint alle zentralen Funktionalit\"aten der Prozessor-Implementierung auf dem FPGA.
 
 \Section{Struktur und Funktion des Demo-Programms}
 
 Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio}) das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel \ref{sec:mmuio}) setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enth\"alt keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
->>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \begin{figure}[H]
 	\centering
@@ -21,11 +13,7 @@ Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit
 	\caption{Bildschirmausgabe w\"ahrend der Ausf\"uhrung des Demo-Programms}
 \end{figure}
 
-<<<<<<< HEAD
-Um m\"oglichst viel der implementierten Funktionalität abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert.
-=======
 Um m\"oglichst viel der implementierten Funktionalit\"at abzudecken, wurde bei der Implementierung darauf geachtet, die meisten Komponenten zu beanspruchen. So wird bei Programmstart im DDR2-SDRAM-Block eine, als Array von vorzeichenbehafteten 8-Bit Werten realisierte, Matrix $M$ wie folgt initialisiert:
->>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \[ M = \begin{pmatrix} -4 & -4 & -4\\ -4 & -4 & -4\\ -4 & -4 & -4  \end{pmatrix}\;
  m_{i,j} = \begin{cases}
@@ -68,11 +56,7 @@ Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu 
 	jalr x0, x1, 0
 \end{lstlisting}
 
-<<<<<<< HEAD
 Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementierung bei, wurde aber aufgrund des unverh\"altnissm\"a\ss{}igen Umfangs an dieser Stelle ausgelassen und durch den obigen Ausschnitt repr\"asentativ ersetzt.
-=======
-Der gesamte Programmcode umfasst circa 400 Zeilen und liegt der VHDL-Implementierung bei, wurde aber aufgrund des unverh\"altnism\"a\ss{}igen Umfangs an dieser Stelle ausgelassen und durch den obigen Ausschnitt ersetzt.
->>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 
 \Section{Assemblierer und Simulator}
 

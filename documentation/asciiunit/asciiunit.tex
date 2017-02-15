@@ -12,7 +12,6 @@ Die ASCII-Unit stellt die grafische Schnittstelle zwischen Prozessor und Benutze
 
 \Section{\"Uberblick}
 
-<<<<<<< HEAD
 Die ASCII-Unit gibt auf dem Monitor, der \"uber die VGA-Schnittstelle des Entwicklungsboards angeschlossen wird, mittels Memory-Mapping den Inhalt des CHARRAM-Blocks in Form von ASCII-Zeichen wieder. Dazu wird jeweils eine Speicheradresse auf eine bestimmte Position auf dem Monitor wie folgt abgebildet: Das Offset 0 repr\"astentiert das erste Zeichen (linkes oberes Eck), wobei mit jedem Schritt nach rechts das zugrundeliegende Offset inkrementell anw\"achst. Auf den letzten Buchstaben in einer Zeile folgt direkt der erste Buchstabe der darunter liegenden. So ergibt sich - analog zu einem zweidimensionalen Array ein Zeilenumbruch nicht durch ein entsprechendes Steuerzeichen, sondern ist durch den Offset automatisch implizit gegeben. Es ergeben sich auf diese Weise 32 Zeilen mit je 16 Buchstaben, sodass insgesamt 2048 verschiedene ASCII-Character dargestellt werden k\"onnen. Die Basisadresse f\"ur den beschriebenen Speicherbereich stellt direkt die Basisadresse des CHARRAM-Blocks der MMU (\ref{ch:mmu}) dar.
 
 Um ein Zeichen anhand seiner ASCII-Nummer darzustellen, wurde eine CHARMAP implementiert, die zu jedem der 256 ASCII Zeichen einen 64-Bit-Vektor bereitstellt hat. Dieser ist wiederum schlicht eine 8*8 Bitmap der Farbtiefe 1BPP, sodass ein Character theoretisch den gesamten f\"ur ihn reservierten Bildschirmbereich erfassen kann. Allerdings  werden von diesen 64 Bit jeweils immer nur nur 6*6 tats\"achlich benutzt, woraus ein Zeilenabstand von 2 Pixeln resultiert. Diese im Bezug auf Ausnutzung des vorhandene Speicherplatzes zwar nicht optimale Umsetzung, erm\"oglichte allerdings eine einfache Implementierung; Positionelle Berechnungen, die unter anderen auf arithmetische Operationen wie Multiplikation und Division (welche aber nicht vom Rechenwerk \"ubernommen werden k\"onnen) zur\"uckgreifen, sind auf nat\"urlichen Potenzen von 2 erheblich einfacher und weniger zeitintensiv zu realisieren.
@@ -21,16 +20,6 @@ Um ein Zeichen anhand seiner ASCII-Nummer darzustellen, wurde eine CHARMAP imple
 	\centering
 		\includegraphics[width=1.0\textwidth]{Bildschirm.png}
 	\caption[Veranschaulichung der Adressberechnung der ASCII-Unit]{Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts inkrementell iteriert. Die Adresse des Zeichenfeldes, das auf die Position (x,y) abbildet, errechnet sich wie folgt: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor wird man das Bit f\"ur den aktuelle Pixel bestimmt: $(x\:  mod\:  8) + (y\:  mod\:  8) * 8$}
-=======
-Die ASCII-Unit gibt auf dem Monitor mittels Memory-Mapping den Inhalt des CHARRAMs gem{\"a}{\ss} ASCII-Kodierung aus. Dazu wird den Zeichen-Stellen auf dem Monitor jeweils eine Adresse zugeordnet: Die Stelle im Eck oben links erh\"alt die 0, nach rechts wird bis zum Zeilenende durchinkrementiert, dann wird jeweils in der n\"achsten Zeile fortgefahren, sodass sich insgesamt 32 Zeilen \`a 64 Zeichen ergeben und die letzte Stelle rechts unten die Adresse 2047 erh\"alt. Diese Adressen beziehen sich auf die 2048 Byte des CHARRAMs in der MMU, die eben jeweils genau ein Zeichen repr\"asentieren.\\
-Um jedem Zeichen neben seiner ASCII-Nummer auch das entsprechende Aussehen zuordnen zu k\"onnen, wurde auf eine CHARMAP gesetzt, die zu jedem der 256 ASCII Zeichen einen 64-Bit-Vektor abgespeichert hat, der das 8*8 Pixelfeld eines jeden Zeichens repr\"asentiert, wobei die Zeilen eines jeden Zeichens dazu konkateniert wurden. Von diesen 8*8 Bit sind jeweils nur 6*6 f\"ur das Zeichen reserviert, die Restlichen sind immer ungesetzt, sodass auf dem Monitor ein Abstand von 2 freien Pixeln zwischen zwei nebeneinanderliegenden Zeichen bleibt. Diese Entscheidung auf Kosten der Speichervergeudung erm\"oglichte eine einfachere Implementierung, da f\"ur die Berechnungen ASCII-Unit Divisionen und Multiplikationen notwendig sind und diese mit Zweierpotenzen (hier 8 bzw. 64) erheblich einfacher zu realisieren sind.
-
-\begin{figure}[H]
-	\centering
->>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
-	\label{fig:pixels}
-		\includegraphics[width=1.0\textwidth]{Bildschirm.png}
-	\caption[Veranschaulichung der Adressberechnung der ASCII-Unit]{Veranschaulichung der Adressberechnung anhand des Pixelfelds des Monitors: Links oben wird von 0 ab nach rechts zeilenweise hochgez\"ahlt. Die Adresse des Zeichenfeldes zu dem ein Pixel mit Position (x,y) geh\"ort wird wie folgt berechnet: $\lfloor \frac{x}{8} \rfloor + \lfloor \frac{y}{8} \rfloor * 64$. Aus dem 64-Bit-Vektor berechnet man das Bit f\"ur das aktuelle Pixel so: $(x\:  mod\:  8) + (y\:  mod\:  8) * 8$.}
 \end{figure}
 
 Da eine Darstellung von Kleinbuchstaben innerhalb einer 6*6 Bitmap nur wenig Unterschied zur analogen Implementierung von Gro\ss{}buchstaben aufweist und eine Unterscheidung deshalb ohnehin nur schwerlich m\"oglich w\"are, greifen auch diese auf die Bitmaps der entsprechenden Gro\ss{}buchstaben zur\"uck. Aus der oben beschriebenen Implementierung geht sinnvollerweise hervor, dass Steuerzeichen wie Tabulatoren oder Zeilenumbr\"uche keinerlei Effekt haben und deswegen auf leere Zeichen gemappt sind. Dies hat allerdings zur Folge, dass die Textformatierung durch entsprechende Software \"ubernommen werden muss.
@@ -49,7 +38,6 @@ Zur CHARMAP, die als ROM fungieret, wird der Takt durchgeleitet und ebenso die a
 \end{figure}
 
 \Section{Funktionsweise}
-<<<<<<< HEAD
 
 Da die stufenweise Berechnung der zu einer Position geh\"orenden Farbinformation mehr als einen Takt ben\"otigt, errechnet die ASCI-Unit diese bereits zwei Takte im Voraus: Dazu wird zun\"achst die Position des n\"achsten zu zeichnenden Bildschirmpixels eingelesen und die X-Koordinate um den Wert Zwei inkrementiert. Dann beginnt die eigentliche Berechnung, die dann genau rechtzeitig beendet sein wird, wenn die VGA-Unit die entsprechende Bildschirmposition erreicht.
 
@@ -59,13 +47,6 @@ Um anhand des ASCII-Codes einer Speicheradresse die der Position entsprechende F
 
 Zuletzt wird die resultierende Farbinformation dann an die VGA-Unit, welche nun erst die errechnete Bildschirmposition erreicht hat, weitergeleitet, wobei im Hintergrund bereits, \"ahnlich einer Pipeline, die Verarbeitung der folgenden Pixel im Gange ist.
 
-=======
-Die stufenweise Berechnung f\"ur jedes Pixel beginnt mit der Verrechnung der x- und y-Koordinate aus der VGA-Einheit. Dazu wird zuerst die x-Koordinate um 2 erh\"oht und in ein internes Signal gespeichert, sodass quasi im Vorraus berechnet wird, ob ein Pixel gesetzt werden wird oder nicht.\\
-Im n\"achsten Takt wird daraus die Adresse des aktuellen Zeichen-Platzes berechnet, welche dann durch die MMU in den CHARRAM geleitet wird.\\
-Von dort wird im anschlie\ss{}enden Takt die ASCII-Nummer des aktuellen Zeichens geliefert, welche direkt in die CHARMAP weitergeleitet wird. Dies ist auch problemlos bei gleichzeitigem Zugriff der MMU auf den CHARRAM m\"oglich, da dieser als Dual-Port-Blockram realisiert wird. Auch die schnellere Taktung der MMU stellt keine Herausforderung dar: Der jeweilige Lesezugriff erfolgt einfach mehrmals hintereinander. Lediglich falls zwischen den insgesamt 64 Zugriffen pro Frame der ASCII-Unit auf eine Adresse im CHARRAM eben diese Zelle von der MMU \"uberschrieben wird kann es zu einer kurzzeitigen St\"orung kommen: Dieses Zeichen w\"urde dann m\"oglicherweise in diesem Frame falsch dargestellt, was sich im Betrieb allerdings kaum bemerkbar macht.\\
-Die CHARMAP liefert im folgenden Takt wiederum den aktuellen 64-Bitvektor aus dem mittels der aktuellen x- und y-Koordinate berechnet wird, ob das Pixel zu setzen ist oder nicht.\\
-Diese Information wird dann im letzten Takt an die VGA-Unit zurückgesandt.
->>>>>>> 6aa17fad13ca339fda93b34148e8aa0056a99ab2
 \begin{figure}[H]
 	\centering
 	\label{fig:overview}
