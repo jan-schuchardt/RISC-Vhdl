@@ -77,7 +77,7 @@ Die Symboltabelle gibt dabei Auskunft \"uber die Speicheradresse eines im Progra
 Der Simulator ist als Backend-Erweiterung zum Assemblierer gedacht, da dieser mithilfe der Ausgabedateien den Programmablauf simulieren kann. Analog zu bekannten Debugging-Umgebungen unterst\"utzt der Simulator das Setzen von Breakpoints sowie das Schrittweise Ausf\"uhren eines Befehls, w\"ahrend die verf\"ugbaren Register direkt im Blick behalten werden k\"onnen. Ferner ist es aber auch m\"oglich, den Programmablauf nach einem bestimmten Zeitintervall automatisch zu unterbrechen oder aber bestimmte Eingabesignale zu stimulieren (auch hier kann mit einem beliebigen Zeitintervall gearbeitet werden). Das Python-Script des Simulators wird in Verbindung mit dem Assemblierer wie folgt aufgerufen:
 
 \begin{lstlisting}
-   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
+   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} -b {binary}
    $ python riscv_simulation.py -s {symbols} -b {binary}
 \end{lstlisting}
 
