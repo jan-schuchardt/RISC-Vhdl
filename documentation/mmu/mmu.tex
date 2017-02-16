@@ -63,7 +63,7 @@ Stattdessen wird die Adresse in ein Pr\"afix, welches den adressierten Speicherb
 \caption{Aufbau des Adressvektors}
 \end{table}
 
-Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell 28-Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
+Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zugriffe auf nicht g\"ultige Speicherpr\"afixe nicht verarbeitet werden. Zudem unterscheiden sich die Gr\"o\ss{}en der jeweiligen Speicherbl\"ocke von dem potenziell $2^{28}$ Bit gro\ss{}en Raum innerhalb eines Blocks. Aufgrund der Tatsache aber, dass diese sich stets als nat\"urliche Potenz von 2 darstellen lassen, kann durch Spiegelung des tats\"achlich nutzbaren Speicherraums der gesamte vom Offset darstellbare Bereich adressiert werden. Im Endeffekt wird der Offset also lediglich in seiner wirksamen Gr\"o\ss{}e entsprechend des Speicherblocks beschnitten. Die folgende Tabelle zeigt die implementierten Speicherbl\"ocke sowie deren nutzbare Gr\"o\ss{}e.
 
 \begin{table}[H]
 	\begin{center}
@@ -72,7 +72,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 		\hline
 		Pr\"afix & K\"urzel & Gr\"o\ss{}e in Bytes & Kurzbeschreibung \\ \hline
 		0x0 & BIOS & $2^{11}$ & Programmeinsprungspunkt \\ \hline
-		0x1 & SDRAM & $2^{16}$ bzw. $512$ MBit\footnote{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich} & DDR2-SDRAM \\ \hline
+		0x1 & SDRAM & $2^{16}$ bzw. $512$ MBit & DDR2-SDRAM\\ \hline
 		0x2 & CHARRAM & $2^{11}$ & Character-Anzeige \\ \hline
 		0x3 & IORAM & $2^{3}$ & Memory-Mapped I/O \\ \hline
 		0x4 & SERIALRAM & $2^{11}$ & Serielle Schnittstelle \\ \hline
@@ -80,7 +80,6 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 	\end{center}
 	\caption{Aufbau des Speichers als Bl\"ocke}
 \end{table}
-\footnotetext{Von 512 MBit verf\"ugbarem Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich}
 
 Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA ver\-f\"ug\-baren Dual-Port-Block\-ram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von Opencores\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
 
@@ -102,8 +101,8 @@ Einer der geschilderten Speicherbl\"ocke, genauer der IORAM, stellt die Schnitts
 	0x4 & Read-Only & UART 7 & UART 6 & UART 5 & UART 4 & UART 3 & UART 2 & UART 1 & UART 0 \\ \hline
 	0x5 & Read-Only & - & - & - & - & - & - & UART & UART \\
 	 &  &   &   &   &   &   &   & VALID & ERR \\ \hline
-	0x6 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
-	0x7 & Read/Write & - & - & - & - & - & - & - & - \\ \hline
+	0x6 & Unused & - & - & - & - & - & - & - & - \\ \hline
+	0x7 & Unused & - & - & - & - & - & - & - & - \\ \hline
 	\end{tabular}
 \end{center}
 \caption{Memory-Mapped I/O im Detail}

@@ -1,0 +1,72 @@
+\BOOKMARK [1][-]{section.1}{Projektablauf}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Aufgabe}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Basisziele}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Erweiterungsziele}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Projektablauf}{section.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Chronologischer Verlauf}{subsection.1.4}% 6
+\BOOKMARK [3][-]{subsubsection.1.4.2}{Arbeitsteilung und Entscheidungsprozesse}{subsection.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.5}{Verwendete Tools}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Das Leitwerk}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{\334berblick}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Legende}{subsection.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Integer Rechenbefehle}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Division und Modulo}{subsection.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.3}{LUI und AUPIC}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.4}{Bedingte Spr\374nge}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.5}{Unbedingte Spr\374nge}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.6}{LOAD}{section.2}% 17
+\BOOKMARK [2][-]{subsection.2.7}{STORE}{section.2}% 18
+\BOOKMARK [2][-]{subsection.2.8}{Timer und Counter}{section.2}% 19
+\BOOKMARK [1][-]{section.3}{Die arithmetisch-logische Einheit}{}% 20
+\BOOKMARK [2][-]{subsection.3.1}{\334berblick}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.2}{Das Interface}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.3}{Interne Befehle}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.4}{Befehlsausf\374hrung}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.4.1}{State 1 - Selektion der Operanden}{subsection.3.4}% 25
+\BOOKMARK [3][-]{subsubsection.3.4.2}{State 2 - Operationsausf\374hrung}{subsection.3.4}% 26
+\BOOKMARK [3][-]{subsubsection.3.4.3}{State 3 - Write-Back}{subsection.3.4}% 27
+\BOOKMARK [3][-]{subsubsection.3.4.4}{State 4 - Division Unsigned}{subsection.3.4}% 28
+\BOOKMARK [3][-]{subsubsection.3.4.5}{State 5 - Division Signed}{subsection.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.5}{Die Register}{section.3}% 30
+\BOOKMARK [2][-]{subsection.3.6}{Reset}{section.3}% 31
+\BOOKMARK [1][-]{section.4}{Die MMU}{}% 32
+\BOOKMARK [2][-]{subsection.4.1}{\334berblick}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.2}{Interface}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Kommunikation mit dem Leitwerk}{subsection.4.2}% 35
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Durch die MMU geleitete Signale an andere Komponenten}{subsection.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.3}{Aufbau des Speichers}{section.4}% 37
+\BOOKMARK [2][-]{subsection.4.4}{Memory-Mapped I/O}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.5}{Implementierung als State Machine}{section.4}% 39
+\BOOKMARK [3][-]{subsubsection.4.5.1}{MMU-IDLE}{subsection.4.5}% 40
+\BOOKMARK [3][-]{subsubsection.4.5.2}{MMU-WAITING}{subsection.4.5}% 41
+\BOOKMARK [3][-]{subsubsection.4.5.3}{MMU-DATA-VALID}{subsection.4.5}% 42
+\BOOKMARK [3][-]{subsubsection.4.5.4}{MMU-READ-NEXT}{subsection.4.5}% 43
+\BOOKMARK [3][-]{subsubsection.4.5.5}{MMU-READ-DONE}{subsection.4.5}% 44
+\BOOKMARK [3][-]{subsubsection.4.5.6}{MMU-WRITE-NEXT}{subsection.4.5}% 45
+\BOOKMARK [3][-]{subsubsection.4.5.7}{MMU-WRITE-DONE}{subsection.4.5}% 46
+\BOOKMARK [3][-]{subsubsection.4.5.8}{MMU-RESET}{subsection.4.5}% 47
+\BOOKMARK [2][-]{subsection.4.6}{Zugrifssdauer}{section.4}% 48
+\BOOKMARK [1][-]{section.5}{Die ASCII-Unit}{}% 49
+\BOOKMARK [2][-]{subsection.5.1}{\334berblick}{section.5}% 50
+\BOOKMARK [2][-]{subsection.5.2}{Interface}{section.5}% 51
+\BOOKMARK [2][-]{subsection.5.3}{Funktionsweise}{section.5}% 52
+\BOOKMARK [1][-]{section.6}{Benutzerschnittstelle}{}% 53
+\BOOKMARK [2][-]{subsection.6.1}{Initialisierung}{section.6}% 54
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Initialisierung durch BIOS und serielle Schnitstelle}{subsection.6.1}% 55
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Initialisierung durch initiales Beschreiben des BIOS-RAM Blocks}{subsection.6.1}% 56
+\BOOKMARK [2][-]{subsection.6.2}{Der Reset}{section.6}% 57
+\BOOKMARK [2][-]{subsection.6.3}{Graphische Oberfl\344chen}{section.6}% 58
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Debugging-Modus}{subsection.6.3}% 59
+\BOOKMARK [3][-]{subsubsection.6.3.2}{ASCII-Modus}{subsection.6.3}% 60
+\BOOKMARK [2][-]{subsection.6.4}{Benutzereingabe}{section.6}% 61
+\BOOKMARK [1][-]{section.7}{Entwicklung eines Demo-Programms}{}% 62
+\BOOKMARK [2][-]{subsection.7.1}{Struktur und Funktion des Demo-Programms}{section.7}% 63
+\BOOKMARK [2][-]{subsection.7.2}{Assemblierer und Simulator}{section.7}% 64
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Assemblierer}{subsection.7.2}% 65
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Simulator}{subsection.7.2}% 66
+\BOOKMARK [1][-]{appendix.A}{Anhang}{}% 67
+\BOOKMARK [2][-]{subsection.A.1}{\334bersicht \374ber die zentralen Einheiten des Prozessors}{appendix.A}% 68
+\BOOKMARK [2][-]{subsection.A.2}{Known Bugs}{appendix.A}% 69
+\BOOKMARK [2][-]{subsection.A.3}{Ausf\374hrungsdauer der Befehle}{appendix.A}% 70
+\BOOKMARK [2][-]{subsection.A.4}{1. Pflichtenheft vom 02.06.2016}{appendix.A}% 71
+\BOOKMARK [2][-]{subsection.A.5}{2. Pflichtenheft vom 19.11.2016}{appendix.A}% 72
