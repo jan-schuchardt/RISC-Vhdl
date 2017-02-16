@@ -10,7 +10,7 @@ der Fokus mehr auf Robustheit und weniger auf Aspekten der
 Performanz lag.
 
 Es besitzt f\"ur jeden Befehl eine eigene Zustandsmaschine, deren Verhalten 
-durch den Inhalt des Instruction-Register gesteuert wird. Daher muss jeder
+durch den Inhalt des Instruction-Registers gesteuert wird. Daher muss jeder
 Befehl als letztes das IR mit dem Opcode des folgenden Befehl laden, was dann
 in jedem Befehl einzeln optimiert werden kann.
 
@@ -58,7 +58,7 @@ Zustands\"ubergangsdiagramm der Befehle \Instr{DIV[U]} und \Instr{REM[U]}.
 
 \Section{LUI und AUPIC}
 Da durch die Integer Rechenbefehle keine 32-Bit Immediates direkt geladen werden
-k\"onnen, definiert die RISC-V-ISA die Befehle \Instr{LUI} und \Instr{AUPIC}, die
+k\"onnen, definiert die \textit{RISC-V-ISA} die Befehle \Instr{LUI} und \Instr{AUPIC}, die
 diesen Mangel beheben.
 
 \Statemachine{./cu/img/lui_und_aupic.pdf}{
@@ -136,7 +136,7 @@ Ausgelesen werden k\"onnen diese Counter durch die Befehle
 \Statemachine{./cu/img/timer_und_counter.pdf}{
 Zustands\"ubergangsdiagramm der Befehle \Instr{RDINSTRET[H]},
 \Instr{RDCYCLE[H]} und \Instr{RDTIME[H]}.}{\(counter\) sind die oberen bzw.
-unteren 32 Bit des jeweiligen 64 Bit Z\"ahlers.
+unteren 32 Bit des jeweiligen 64-Bit-Z\"ahlers.
 }
 
 \newpage

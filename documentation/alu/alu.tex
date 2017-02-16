@@ -24,7 +24,7 @@ Um die Komplexit\"at des Leitwerks zu reduzieren, wurde die Low-Level-Verwaltung
 Neben zwei 32-Bit-Eing\"angen f\"ur Operanden, gibt es einen dedizierten Eingang f\"ur Registeradressen sowie einen zur Auswahl der gew\"unschten Operation. 
 Der Adresseingang dient hierbei lediglich zur Adressierung des Zielregisters. Da alle Befehle nur aus zwei Operanden bestehen, werden die Operanden-Eing\"ange entweder zur \"Ubermittlung von Immediates, oder zur Adressierung der Operanden-Register verwendet, was die Anzahl der Eing\"ange reduziert.
 
-Aktiviert wird die ALU vom Leitwerk \"uber \Vhdl{cu\_work\_in}; innerhalb von drei Takten liegt dann auf \Vhdl{cu\_data\_out} das entsprechende Ergebnis an.
+Aktiviert wird die ALU vom Leitwerk \"uber \Vhdl{cu\_work\_in} und innerhalb von drei Takten liegt dann auf \Vhdl{cu\_data\_out} das entsprechende Ergebnis an.
 
 \Section{Interne Befehle}
 Zur Auswahl der gew\"unschten Operation bietet die ALU einen 7 Bit breiten Befehls-Eingang an.
