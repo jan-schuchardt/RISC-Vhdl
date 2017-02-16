@@ -38,7 +38,7 @@ Die Kommunikation mit dem Leitwerk l\"asst sich im Wesentlichen in Daten-, Adres
 
 Als Ausgabe liefert die MMU dem Leitwerk ein Acknowledgement \Vhdl{ack\_out}, welches signalisiert, dass die MMU bereit ist, eine neue Anfrage zu bearbeiten und indirekt damit auch Auskunft dar\"uber gibt, ob die bereits gesendete Anfrage erfolgreich bearbeitet wurde. Im Falle eines lesenden Speicherzugriffs wird, sofern das Acknowledgement-Signal den Wert 1 angenommen hat, gew\"ahrleistet, dass der Datenausgang \Vhdl{data\_out} korrekt belegt wurde.
 
-Es sei angemerkt, dass w\"ahrend im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit liest. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
+Es sei angemerkt, dass im Zuge der Entwicklung und der stark \"uberwiegenden Zahl der 32-Bit Lesezugriffe (vor allem im Zuge des Ladens eines Befehls) beschlossen wurde, dass jeder lesende Speicherzugriff ungeachtet der im \Vhdl{cmd\_in} definierten Datenbreite 32-Bit liest. Theoretisch bietet die MMU allerdings auch die M\"oglichkeit, 8-Bit oder 16-Bit Lesezugriffe durchzuf\"uhren.
 
 \Subsection{Durch die MMU geleitete Signale an andere Komponenten}
 
@@ -80,7 +80,7 @@ Insgesamt existieren f\"unf zul\"assige Werte f\"ur das 4-Bit Pr\"afix, wobei Zu
 	\end{center}
 	\caption{Aufbau des Speichers als Bl\"ocke}
 \end{table}
-\footnotetext{Von 512 MBit verf\"ugbaren Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich}
+\footnotetext{Von 512 MBit verf\"ugbarem Speicherplatz macht der genutzte Controller nur $2^{16}$ Bytes zug\"anglich}
 
 Dabei sind alle Bl\"ocke, ausgenommen der DDR2-SDRAM-Block, durch auf dem FPGA ver\-f\"ug\-baren Dual-Port-Block\-ram realisiert, sodass die implementierten Controller im Groben gleich sind. Angemerkt sei an dieser Stelle, dass - in Absprache mit dem Betreuer - der Controller f\"ur den DDR2-SDRAM eine Implementierung von Opencores\footnote{\url{http://opencores.org/project,ddr2_sdram}} verwendet und entsprechend den Anforderungen abge\"andert wurde.
 
@@ -133,7 +133,7 @@ Zustands\"ubergangsdiagramm der MMU.}
 
 \Subsection{MMU-IDLE}
 
-Im Zustand MMU-IDLE wartet die Einheit auf das eingehen eines Befehls \"uber das \Vhdl{cmd\_in} Signal. Solange dies nicht erfolgt, wird das Synchronisationssignal \Vhdl{ack\_out} mit dem Wert 1 belegt. Anderenfalls wird die Eingabeadresse ausgewertet, die durchzuf\"uhrende Operation an den entsprechenden RAM-Controller weitergeleitet und die Einheit in den Zustand MMU-WAITING \"uberf\"uhrt.
+Im Zustand MMU-IDLE wartet die Einheit auf das Eingehen eines Befehls \"uber das \Vhdl{cmd\_in} Signal. Solange dies nicht erfolgt, wird das Synchronisationssignal \Vhdl{ack\_out} mit dem Wert 1 belegt. Anderenfalls wird die Eingabeadresse ausgewertet, die durchzuf\"uhrende Operation an den entsprechenden RAM-Controller weitergeleitet und die Einheit in den Zustand MMU-WAITING \"uberf\"uhrt.
 
 \Subsection{MMU-WAITING}
 

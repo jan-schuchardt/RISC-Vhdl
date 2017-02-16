@@ -72,23 +72,23 @@ Ein Gro"steil der Operationen ist \"uber die \Vhdl{IEEE.NUMERIC\_STD.ALL} Operat
 
 Da die Standard-Multiplikation von 32-Bit-Werten zu einem 64 Bit langen Ergebnis f\"uhrt, werden Multiplikationsergebnisse nicht im normalen Akkumulator-Signal \Vhdl{acc}, sondern im Zusatzsignal \Vhdl{mult-result} gespeichert. Der VHDL-Compiler erlaubte es nicht, unmittelbar auf das Ergebnis zuzugreifen und entweder die oberen oder unteren 32 Bit in \Vhdl{acc} zu speichern.\vspace{10pt}
 
-Da der Standard-Operator \Vhdl{sar} nicht durch die gegebene Entwicklungsumgebung synthetisierbar ist, wird bei einem arithmetischen Rechtsshift um {n} Stellen zus\"atzlich das oberste Bit des ersten Operanden zwischengespeichert, um im nachfolgenden State – wenn n\"otig – die oberen {n} Bits auf {1} zu setzen.\vspace{10pt}
+Da der Standard-Operator \Vhdl{sar} nicht durch die gegebene Entwicklungsumgebung synthetisierbar ist, wird bei einem arithmetischen Rechtsshift um {n} Stellen zus\"atzlich das oberste Bit des ersten Operanden zwischengespeichert, um im nachfolgenden State, wenn n\"otig, die oberen {n} Bits auf {1} zu setzen.\vspace{10pt}
 
 Im Falle einer Modulo- oder Unsigned-Division wird in State 2 der \"Ubergang in State 4 bzw. 5 eingeleitet. Ansonsten erfolgt ein direkter \"Ubergang in State 3.
 
 \Subsection{State 3 - Write-Back}
 In State 3 werden die akkumulierten Ergebnisse in das von der ALU adressierte Register geschrieben.
 
-Bei den meisten der Operationen kann dies unmittelbar erfolgen. Bei Multiplikationsoperationen allerdings muss jedoch zuerst an Hand des OpCodes entschieden werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abh\"angig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellen werden, wie oben beschrieben, gegebenenfalls die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
+Bei den meisten der Operationen kann dies unmittelbar erfolgen. Bei Multiplikationsoperationen allerdings muss jedoch zuerst anhand des OpCodes entschieden werden, ob die oberen oder unteren 32 Bit des Ergebnisses gespeichert werden sollen. Abh\"angig vom Status-Bit f\"ur arithmetische Shifts um {n} Stellen werden, wie oben beschrieben, gegebenenfalls die oberen n Bits des Ergebnisses auf {1} gesetzt.\vspace{10pt}
 
 
 Neben dem Speichern des Ergebnisses werden zwei zus\"atzliche Ausg\"ange belegt:
 
 Auf \Vhdl{cu\_data\_out} wird das Ergebnis angelegt. Einzige Ausnahme stellt die Division bzw. Modulorechnung dar, bei der als Synchronisationssignal der Daten-Ausgang mit 0 belegt wird. Das ist n\"otig, da die Division vom normalen 3-Takte-Schema abweicht.
-Auch die Debug-Schnittstelle erh\"alt \"uber \Vhdl{debug\_signal} den entsprechenden Wert sowie das relevante Register \"uber \Vhdl{debug\_adr\_signal}.
+Auch die Debug-Schnittstelle erh\"alt \"uber \Vhdl{debug\_data\_out} den entsprechenden Wert sowie das relevante Register \"uber \Vhdl{debug\_adr\_out}.
 
 \Subsection{State 4 - Division Unsigned}
-Um die Anzahl an n\"otigen Takten zu reduzieren, wird bei der Umsetzung der Unsigned Division eine durch den Xilinx-Core-Generator erstellte Divisionseinheit genutzt, welche eine gepipelinte Variante der SRT-Division durchf\"uhrt. Obwohl der Prozessor keinen unmittelbaren Nutzen aus dem Pipelining zieht, kann durch die effiziente Implementierung die Anzahl an n\"otigen Takten reduziert werden. Zus\"atzlich liefert die Einheit sowohl den Rest, als auch das Divisionsergebnis, weshalb die beiden Operationen gleich behandelt werden k\"onnen.
+Um die Anzahl an n\"otigen Takten zu reduzieren, wird bei der Umsetzung der Unsigned Division eine durch den \textit{Core-Generator} erstellte Divisionseinheit genutzt, welche eine gepipelinte Variante der SRT-Division durchf\"uhrt. Obwohl der Prozessor keinen unmittelbaren Nutzen aus dem Pipelining zieht, kann durch die effiziente Implementierung die Anzahl an n\"otigen Takten reduziert werden. Zus\"atzlich liefert die Einheit sowohl den Rest, als auch das Divisionsergebnis, weshalb die beiden Operationen gleich behandelt werden k\"onnen.
 
 
 Hierzu werden bei Betreten des States die Operanden angelegt. Danach wird mit einem Z\"ahler gewartet, bis das Ergebnis der Operation anliegt.
@@ -100,9 +100,9 @@ Die Implementierung verl\"auft analog zu State 4, abgesehen davon, dass eine Ein
 \Section{Die Register}
 Insgesamt stellt die ALU 32 Register der Breite 32 Bit bereit, wobei Register x0 konstant mit dem Wert 0 belegt und nicht \"uberschreibbar ist. Dies ist zum Beispiel n\"utzlich beim unver\"anderten Laden eines Registers.
 
-Implementiert wurden die Register als Dual-Port-Blockram. Dieses Vorgehen erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was gerade bei Register-Register-Operationen von Vorteil ist. Zus\"atzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte Block-Ram-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10pt}
+Implementiert wurden die Register als Dual-Port-Blockram. Dieses Vorgehen erm\"oglicht den zeitgleichen Zugriff auf zwei verschiedene Speicherinhalte, was gerade bei Register-Register-Operationen von Vorteil ist. Zus\"atzlich wird dadurch die Anzahl an verwendeten Slices reduziert, da dedizierte Blockram-Bausteine logisch zum Registersatz zusammengef\"ugt werden.\vspace{10pt}
 
-Die Umsetzung erfolgte dabei nicht \"uber eine Core-Generierte Variante, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte \textit{std\_logic\_vector}-Array automatisch in einen Blockram umsetzt.
+Die Umsetzung erfolgte dabei nicht \"uber eine Variante aus dem \textit{Core-Generator}, sondern durch die Einhaltung eines speziellen Verwendungsprotokolls, sodass der Compiler das definierte \textit{std\_logic\_vector}-Array automatisch in einen Blockram umsetzt.
 
 Voraussetzung daf\"ur ist, dass nicht direkt auf Register-Inhalten operiert wird, sondern sie zuerst in einem Signal zwischengespeichert und im n\"achsten Takt verwendet werden. Dies ist aber ohnehin durch die 3-stufige State-Machine der ALU garantiert.
 
