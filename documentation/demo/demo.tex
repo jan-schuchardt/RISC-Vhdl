@@ -4,7 +4,7 @@ Das folgende Kapitel erl\"autert die Struktur, Motivation und Vorgehensweise hin
 
 \Section{Struktur und Funktion des Demo-Programms}
 
-Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio}) das Steuerkreuz über die das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel \ref{sec:mmuio}) setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enth\"alt keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
+Wie eingangs geschildert, bietet das entwickelte Demo-Programm die M\"oglichkeit, \"uber die Buttons des FPGAs gegeneinander Tic-Tac-Toe zu spielen. Dabei wird mittels der Buttons BTN 0 bis BTN 3 (siehe Kapitel \ref{sec:mmuio}) \"uber das Spielbrett navigiert. Dabei ist das Brett zyklisch angeordnet, sodass eine Linksbewegung des Steuerkreuzes an den linken Rand dieses an die rechte Brettseite man\"ovriert. Mittels des Buttons BTN 4 (siehe Kapitel \ref{sec:mmuio}) setzt der Zugspieler seine Markierung an der zuvor ausgew\"ahlten Position, sofern dies regelkonform ist. Das Spiel enth\"alt keinen internen Reset und muss daher \"uber einen Hard-Reset durch das FPGA erfolgen.
 
 \begin{figure}[H]
 	\centering
@@ -25,7 +25,7 @@ Um m\"oglichst viel der implementierten Funktionalit\"at abzudecken, wurde bei d
 
 Wobei sich anhand dieser Definition durch Spalten-, Zeilen- und Diagonalsummen sofort der Zustand des Spiels ermitteln l\"asst: Ist diese gleich 0 oder 3, so hat einer der Kontrahenten das Spiel f\"ur sich entschieden.
 
-Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM (siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden zwangsl\"aufig Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
+Au\ss{}erdem werden die Komponenten der grafischen Oberfl\"ache mittels Schleifen und geeigneten Subroutinen im CHARRAM (siehe \ref{tab:ramlayout}) in ihren initialen Zustand versetzt. Dabei werden Sprungbefehle verwendet und auf diese Weise in die Demonstration miteinbezogen.
 
 Da der Benutzer zwangsl\"aufig mit dem Board interagieren muss, um ein Spiel zu bestreiten, nutzt das Demo-Programm auch die zuvor beschriebenen Memory-Mapped-I/O Funktionalit\"aten aus. Dazu wird, wie im folgenden Ausschnitt des Programmcodes gezeigt, in einer Endlosschleife nach neuen Eingaben auf den f\"unf verwendeten Buttons gesucht, indem durch Puffern des letzten Zustands und bitweise Verkn\"upfungen des gerade losgelassenen Buttons ermittelt wird und die Button-Nummer als R\"uckgabewert liefert. Nebeneffekte des Prellens werden hierbei allerdings nicht ber\"ucksichtigt.
 

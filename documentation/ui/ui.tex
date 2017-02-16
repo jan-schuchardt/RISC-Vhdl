@@ -25,7 +25,7 @@ Da die serielle Schnittstelle nur f\"ur begrenzte Datenmengen verl\"asslich und 
 
 Alternativ besteht auch die M\"oglichkeit, den BIOS-RAM Block direkt beim Beschreiben des FPGAs mit dem auszuf\"uhrenden Programmcode zu initialisieren. Da der BIOS-RAM-Block als Dual-Port-Blockram realisiert wurde, kann dies ohne zeitlichen Aufwand bei einem Reset erfolgen.
 
-Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"o\ss{}fere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
+Das BIOS wird auf diese Weise zweckentfremdet und der SERIALRAM Block bleibt ungenutzt. Auch muss das FPGA zur Ausf\"uhrung eines anderen Programms jedes Mal neu beschrieben werden. Trotz der genannten Nachteile aber bleibt diese Methode vorerst die einzig verl\"assliche Vorgehensweise, auch gr\"o\ss{}ere Datenmengen auf das Board zu \"ubertragen. Sie findet beispielsweise im Fall des sp\"ater beschriebenen Demoprogramms Anwendung.
 
 \Section{Der Reset}
 
@@ -45,11 +45,11 @@ Die beiden separat dargestellten Register sind der Programmz\"ahler (links) sowi
 \begin{figure}[H]
 	\centering
 	\label{fig:debuggingui}
-		\includegraphics[width=0.5\textwidth]{debugui.png}
+		\includegraphics[width=0.4\textwidth]{debugui.png}
 	\caption[VGA-Ausgabe im Debugging-Modus]{VGA-Ausgabe im Debugging-Modus: PC und IR liegen zentral}
 \end{figure}
 
-Da die VGA-Ausgabe mit 25 MHz getaktet wird, der Prozessor im schnellen Ausf\"uhrungsmodus dagegen den sechsfachen Takt erh\"alt, wechseln die Registerwerte unter Umst\"anden schneller, als sie dargestellt werden k\"onnen, wodurch es zu signifikanten Darstellungsfehlern kommen kann. Der Debugging-Modus ist dementsprechend, wie der Name bereits suggeriert lediglich f\"ur Debugging-Zwecke im langsamen Ausf\"uhrungsmodus sinnvoll nutzbar.
+Da die VGA-Ausgabe mit 25 MHz getaktet wird, der Prozessor im schnellen Ausf\"uhrungsmodus dagegen den vielfachen Takt erh\"alt, wechseln die Registerwerte unter Umst\"anden schneller, als sie dargestellt werden k\"onnen, wodurch es zu signifikanten Darstellungsfehlern kommen kann. Der Debugging-Modus ist dementsprechend, wie der Name bereits suggeriert lediglich f\"ur Debugging-Zwecke im langsamen Ausf\"uhrungsmodus sinnvoll nutzbar.
 
 \Subsection{ASCII-Modus}
 Der ASCII-Modus stellt zeilenweise fortlaufend durchnummeriert die Werte der Speicherzellen innerhalb des CHAR\-RAM-Blocks als ASCII-Zeichen dar. Die genaue Abbildungsmethodik wird in Kapitel \ref{ch:asciiunit} n\"aher erl\"autert.
