@@ -67,7 +67,7 @@ Aufgrund der eben erw\"ahnten Programmgr\"o\ss{}e, des reduzierten Instruction S
 Der Assemblierer ist dabei in der Lage aus einem Eingabeprogrammcode, welches Spr\"unge, Labels und Kommentare enthalten kann, einerseits Bytecode sowie eine Symboltabelle zu erstellen. Des Weiteren wird der assemblierte Programmcode auch in korrekter VHDL-Syntax ausgegeben, sodass dieser zur Initialisierung einer Dual-Port-Blockram Komponente direkt eingebunden werden kann. Dabei wird der Assemblierer als Python-Script mit den Eingabewerten als Parametern aufgerufen:
 
 \begin{lstlisting}[language=bash]
-   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} file -b {binary}
+   $ python riscv_as.py -i {input} -o {output(vhdl)} -s {symbols} -b {binary}
 \end{lstlisting}
 
 Die Symboltabelle gibt dabei Auskunft \"uber die Speicheradresse eines im Programmcode definierten Labels. Aufgrund des modularen Aufbaus des Assemblierers k\"onnen Erweiterungen des Befehlssatzes sowie andere syntaktische Feinheiten dem Parsing- und Compilingprozess problemlos hinzugef\"ugt werden.
